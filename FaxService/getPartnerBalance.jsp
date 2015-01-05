@@ -9,19 +9,15 @@
 <%@ include file="common.jsp" %>
 
 <%@page import="com.popbill.api.PopbillException"%>
-<%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType KeyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-01";				// 세금계산서 연동관리번호
-
-	boolean isInUse;
+	String testCorpNum = "1231212312";			//회원 사업자번호("-"제외)
+	double remainPoint;	
 
 	try {
 
-		isInUse = taxinvoiceService.checkMgtKeyInUse(testCorpNum,KeyType,mgtKey);
-		
+		remainPoint = faxService.getPartnerBalance(testCorpNum);
+
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
@@ -33,9 +29,9 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동관리번호 사용중 여부 확인 결과</legend>
+				<legend>파트너 잔여포인트 확인 결과</legend>
 				<ul>
-					<li>사용중 여부 : <%=isInUse ? "사용중" : "미 사용중"%></li>
+					<li>잔여포인트 : <%=remainPoint%></li>
 				</ul>
 			</fieldset>
 		 </div>

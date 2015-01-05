@@ -21,11 +21,11 @@
 				<fieldset class="fieldset2">
 					<legend>회원사 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/BaseService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
-						<li><a href="${pageContext.request.contextPath}/BaseService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-						<li><a href="${pageContext.request.contextPath}/BaseService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/BaseService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/BaseService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 					</ul>
 				</fieldset>
 
@@ -98,14 +98,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEmailPublicKeys.jsp">getEmailPublicKeys</a> - Email 유통을 위한 대용량 연계사업자 이메일 목록 확인</li>
 					</ul>
 				</fieldset>
-
-
 			</fieldset>
-
-			
-
 		 </div>
-
 	</body>
-
 </html>
