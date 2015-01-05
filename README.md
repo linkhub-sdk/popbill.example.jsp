@@ -1,4 +1,4 @@
-popbill.example.jsp - 작업중
+popbill.example.jsp 
 =========================
 
 팝빌 통합 SDK Example for jsp.
