@@ -14,6 +14,8 @@
 				<legend>팝빌 API 목록</legend>
 					<ul>
 						<li><a href="TaxinvoiceService">TaxinvoiceService</a> - 세금계산서 API</li>
+						<li><a href="StatementService">StatementService</a> - 전자명세서 API</li>
+						<li><a href="CashbillService">CashbillService</a> - 현금영수증 API</li>
 						<li><a href="MessageService">MessageService</a> - 문자메시지 API</li>
 						<li><a href="FaxService">FaxService</a> - 팩스 API</li>
 						
