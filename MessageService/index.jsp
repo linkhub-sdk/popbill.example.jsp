@@ -53,13 +53,20 @@
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>단/장문 문자 전송</legend>
+					<legend>단/장문 자동인식 문자 전송</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/sendXMS.jsp">sendXMS</a> - 단/장문 문자메시지 1건 전송</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/sendXMS_Multi.jsp">sendXMS</a> - 단/장문 문자메시지 다량(최대1000건) 전송</li>
 					</ul>
 				</fieldset>
 
+				<fieldset class="fieldset2">
+					<legend>멀티 문자 전송</legend>
+					<ul>
+						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS.jsp">sendMMS</a> - 멀티 문자메시지 1건 전송</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 멀티 문자메시지 다량(최대1000건) 전송</li>
+					</ul>
+				</fieldset>
 
 				<fieldset class="fieldset2">
 					<legend>전송결과/예약취소</legend>
