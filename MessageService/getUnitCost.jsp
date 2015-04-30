@@ -12,8 +12,8 @@
 <%@page import="com.popbill.api.message.MessageType"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호("-"제외)
-	MessageType msgType = MessageType.SMS;		// 문자메시지 타입. SMS(단문), LMS(장문)
+	String testCorpNum = "1234567890";			// 회원 사업자번호("-"제외)
+	MessageType msgType = MessageType.MMS;		// 문자메시지 타입. SMS(단문), LMS(장문), MMS(멀티)
 
 	float unitCost;
 
