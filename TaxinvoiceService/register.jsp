@@ -16,7 +16,7 @@
 <%
 	Taxinvoice taxinvoice = new Taxinvoice();
 
-	taxinvoice.setWriteDate("20141224");		// 필수, 기재상 작성일자(yyyyMMdd)
+	taxinvoice.setWriteDate("20150616");		// 필수, 기재상 작성일자(yyyyMMdd)
 	taxinvoice.setIssueType("정발행");			// 필수, {정발행, 역발행, 위수탁}
 	taxinvoice.setChargeDirection("정과금");	// 필수, {정과금, 역과금}
 	taxinvoice.setPurposeType("영수");			// 필수, {영수, 청구}
@@ -24,10 +24,10 @@
 	taxinvoice.setTaxType("과세");				// 필수, {과세, 비과세}
 
 	//공급자 정보
-	taxinvoice.setInvoicerCorpNum("1231212312");				// 공급자 사업자번호, "-"제외
+	taxinvoice.setInvoicerCorpNum("1234567890");				// 공급자 사업자번호, "-"제외
 	taxinvoice.setInvoicerTaxRegID("1234");						// 종사업자 식별번호. 필요시 기재. 형식은 숫자 4자리.
 	taxinvoice.setInvoicerCorpName("공급자 상호");				// 필수
-	taxinvoice.setInvoicerMgtKey("20141230-12");				// 공급자 연동문서 관리번호. 최대 25자리 공급자 발행까지 API로 발행하고자 할경우 정발행과 동일한 형태로 추가 기재.
+	taxinvoice.setInvoicerMgtKey("20150616-03");				// 공급자 연동문서 관리번호. 최대 25자리 공급자 발행까지 API로 발행하고자 할경우 정발행과 동일한 형태로 추가 기재.
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");		// 필수
 	taxinvoice.setInvoicerAddr("공급자 주소");
 	taxinvoice.setInvoicerBizClass("공급자 업종");
@@ -111,8 +111,8 @@
 
 	try {
 
-		String testCorpNum = "1231212312";		// 정발행 시 - 공급자 사업자번호, 아이디 입력 
-		String userID = "userid";				// 역발행 시 - 공급받는자 사업자번호, 아이디 입력
+		String testCorpNum = "1234567890";		// 정발행 시 - 공급자 사업자번호, 아이디 입력 
+		String userID = "testkorea";				// 역발행 시 - 공급받는자 사업자번호, 아이디 입력
 
 		CheckResponse = taxinvoiceService.register(testCorpNum, taxinvoice, userID);
 

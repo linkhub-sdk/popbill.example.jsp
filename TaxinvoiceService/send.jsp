@@ -12,16 +12,18 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";		// 회원 사업자번호
+	String testCorpNum = "1234567890";		// 회원 사업자번호
 	MgtKeyType keyType = MgtKeyType.SELL;   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-12";			// 세금계산서 연동관리번호
+	String mgtKey = "20150616-03";			// 세금계산서 연동관리번호
 	String memo = "발행예정 메모";			// 전송메일과 이력정보에 기재되는 메모
+	String userId = "testkorea";			// 팝빌회원 아이디 
+	String emailSubject = "제목쓸꺼야!!!";				// 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
 
 	Response CheckResponse = null;
 
 	try {
 
-		CheckResponse = taxinvoiceService.send(testCorpNum, keyType, mgtKey, memo);
+		CheckResponse = taxinvoiceService.send(testCorpNum, keyType, mgtKey, memo, emailSubject, userId);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
