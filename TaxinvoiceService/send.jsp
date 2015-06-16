@@ -17,7 +17,7 @@
 	String mgtKey = "20150616-03";			// 세금계산서 연동관리번호
 	String memo = "발행예정 메모";			// 전송메일과 이력정보에 기재되는 메모
 	String userId = "testkorea";			// 팝빌회원 아이디 
-	String emailSubject = "제목쓸꺼야!!!";				// 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
+	String emailSubject = "";				// 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
 
 	Response CheckResponse = null;
 
