@@ -18,6 +18,7 @@
 						<li><a href="CashbillService">CashbillService</a> - 현금영수증 API</li>
 						<li><a href="MessageService">MessageService</a> - 문자메시지 API</li>
 						<li><a href="FaxService">FaxService</a> - 팩스 API</li>
+						<li><a href="ClosedownService">ClosedownService</a> - 팩스 API</li>
 						
 					</ul>
 			</fieldset>
