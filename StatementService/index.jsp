@@ -49,6 +49,7 @@
 						<li><a href="${pageContext.request.contextPath}/StatementService/registIssue.jsp">registIssue</a> - 전자명세서 즉시발행</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/register.jsp">register</a> - 전자명세서 등록</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/update.jsp">update</a> - 전자명세서 수정</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/search.jsp">search</a> - 전자명세서 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getInfo.jsp">getInfo</a> - 전자명세서 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getInfos.jsp">getInfos</a> - 다량(최대 1000건)의 전자명세서 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getDetailInfo.jsp">getDetailInfo</a> - 전자명세서 상세 정보 확인</li>

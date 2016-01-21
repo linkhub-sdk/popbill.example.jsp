@@ -49,6 +49,7 @@
 						<li><a href="${pageContext.request.contextPath}/CashbillService/registIssue.jsp">registIssue</a> - 현금영수증 즉시발행</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/register.jsp">register</a> - 현금영수증 등록</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/update.jsp">update</a> - 현금영수증 수정</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/search.jsp">search</a> - 현금영수증 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getInfo.jsp">getInfo</a> - 현금영수증 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getInfos.jsp">getInfos</a> - 다량(최대 1000건)의 현금영수증 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getDetailInfo.jsp">getDetailInfo</a> - 현금영수증 상세 정보 확인</li>
