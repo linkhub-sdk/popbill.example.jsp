@@ -58,7 +58,7 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>FaxResult : [ <%=i+1%> / < <%=searchResult.getList().size()%>]</legend>
+					<legend>FaxResult : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
 					<ul>
 						<li>sendState : <%=faxResult.getSendState()%></li>
 						<li>convState : <%=faxResult.getConvState()%></li>
@@ -74,6 +74,19 @@
 						<li>sendDT : <%=faxResult.getSendDT()%></li>
 						<li>resultDT : <%=faxResult.getResultDT()%></li>
 						<li>sendResult : <%=faxResult.getSendResult()%></li>
+						<%
+							String fileNames = "";
+							int namesLength = faxResult.getFileNames().length;
+
+							for(int j = 0; j < namesLength ; j++){
+								if ( namesLength == 1 || j == faxResult.getFileNames().length -1 ) {
+									fileNames += faxResult.getFileNames()[j];
+								} else {
+									fileNames += faxResult.getFileNames()[j]+", ";
+								}
+							}
+						%>
+						<li>fileNames : <%=fileNames%></li>
 					</ul>
 				</fieldset>
 				<%
