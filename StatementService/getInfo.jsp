@@ -54,8 +54,11 @@
 						<li>writeDate : <%= statementInfo.getWriteDate()%></li>
 						<li>senderCorpName : <%= statementInfo.getSenderCorpName()%></li>
 						<li>senderCorpNum : <%= statementInfo.getSenderCorpNum()%></li>
+						<li>senderPrintYN : <%= statementInfo.isSenderPrintYN()%></li>
+
 						<li>receiverCorpName : <%= statementInfo.getReceiverCorpName()%></li>
 						<li>receiverCorpNum : <%= statementInfo.getReceiverCorpNum()%></li>
+						<li>receiverPrintYN : <%= statementInfo.isReceiverPrintYN()%></li>
 
 						<li>supplyCostTotal : <%= statementInfo.getSupplyCostTotal()%></li>
 						<li>taxTotal : <%= statementInfo.getTaxTotal()%></li>

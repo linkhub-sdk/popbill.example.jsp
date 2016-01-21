@@ -46,12 +46,15 @@
 						<li>invoicerCorpName : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
 						<li>invoicerCorpNum : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
 						<li>invoicerMgtKey : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
+						<li>invoicerPrintYN : <%= taxinvoiceInfo.isInvoicerPrintYN() %></li>
 						<li>invoiceeCorpName : <%= taxinvoiceInfo.getInvoiceeCorpName() %></li>
 						<li>invoiceeCorpNum : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
 						<li>invoiceeMgtKey : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
+						<li>invoiceePrintYN : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
 						<li>trusteeCorpName : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 						<li>trusteeCorpNum : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
 						<li>trusteeMgtKey : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
+						<li>trusteePrintYN : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>
 						<li>supplyCostTotal : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
 						<li>taxTotal : <%= taxinvoiceInfo.getTaxTotal() %></li>
 						<li>purposeType : <%= taxinvoiceInfo.getPurposeType() %></li>
