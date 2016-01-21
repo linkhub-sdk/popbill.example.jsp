@@ -72,6 +72,8 @@
 				<fieldset class="fieldset2">
 					<legend>부가 기능</legend>
 					<ul>
+						<li><a href="${pageContext.request.contextPath}/StatementService/attachStatement.jsp">attachStatement</a> - 다른 전자명세서 첨부</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/detachStatement.jsp">detachStatement</a> - 다른 전자명세서 첨부해제</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/sendEmail.jsp">sendEmail</a> - 처리 프로세스에 대한 이메일 재전송 요청</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/sendSMS.jsp">sendSMS</a> - 알림 문자메시지 재전송 요청</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/sendFAX.jsp">sendFAX</a> - 전자명세서에 대한 팩스 전송 요청</li>
