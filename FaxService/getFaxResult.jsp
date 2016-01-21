@@ -53,6 +53,7 @@
 						<li>failPageCnt : <%=faxResult.getFailPageCnt()%></li>
 						<li>refundPageCnt : <%=faxResult.getRefundPageCnt()%></li>
 						<li>cancelPageCnt : <%=faxResult.getCancelPageCnt()%></li>
+						<li>receiptDT : <%=faxResult.getReceiptDT()%></li>
 						<li>reserveDT : <%=faxResult.getReserveDT()%></li>
 						<li>sendDT : <%=faxResult.getSendDT()%></li>
 						<li>resultDT : <%=faxResult.getResultDT()%></li>
