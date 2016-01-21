@@ -7,19 +7,28 @@
 	</head>
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
-<%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
+<%@page import="com.popbill.api.taxinvoice.TISearchResult"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceInfo"%>
+<%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";				// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;			// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String[] MgtKeyList = new String[] {"20141230-01","20141230-02"};	// 세금계산서 연동관리번호 배열 (최대 1000건)
-
-	TaxinvoiceInfo[] taxinvoiceInfos = null;
-
+	String testCorpNum = "1234567890";			// 연동회원 사업자번호 
+	String DType = "I";							// 일자유형, R-등록일자, W-작성일자, I-발행일자
+	String SDate = "20160101";					// 시작일자
+	String EDate = "20160114";					// 종료일자
+	String[] State = {"100", "2**", "3**"};		// 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+	String[] Type = {"N", "M"};					// 문서유형 배열, N-일반세금계산서, M-수정세금계산서
+	String[] TaxType = {"T","Z"};				// 과세형태 배열, T-과세, N-면세, Z-영세
+	Boolean LateOnly = null;					// 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
+	int Page = 1;								// 페이지번호 
+	int PerPage = 30;							// 페이지당 검색개수, 최대 1000건
+	String Order = "D";							// 정렬방향, A-오름차순, D-내림차순
+			
+	TISearchResult searchResult = new TISearchResult();		
+		
 	try {
 
-		taxinvoiceInfos = taxinvoiceService.getInfos(testCorpNum, keyType, MgtKeyList);
+		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType, SDate, EDate, State, Type, TaxType, LateOnly, Page, PerPage, Order);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -33,16 +42,24 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>다량 세금계산서 상태/요약 정보 확인</legend>
+				<legend>세금계산서 목록 조회</legend>
+				<ul>	
+					<li>code (응답코드) : <%= searchResult.getCode()%></li>
+					<li>message (응답메시지) : <%= searchResult.getMessage()%></li>
+					<li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
+					<li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
+					<li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
+					<li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
+				</ul>
 
 					<%
 						TaxinvoiceInfo taxinvoiceInfo = null;
-						for(int i=0; i< taxinvoiceInfos.length; i++){
-							taxinvoiceInfo = taxinvoiceInfos[i];
+						for(int i=0; i< searchResult.getList().size(); i++){
+							taxinvoiceInfo = searchResult.getList().get(i);
 					%>
 					
 						<fieldset class="fieldset2">
-							<legend>TaxinvoiceInfos</legend>
+							<legend>TaxinvoiceInfos [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
 								<ul>	
 									<li>itemKey : <%= taxinvoiceInfo.getItemKey()%></li>
 									<li>taxType : <%= taxinvoiceInfo.getTaxType()%></li>

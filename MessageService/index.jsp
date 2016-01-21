@@ -22,10 +22,16 @@
 					<legend>회원사 정보</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/registContact.jsp">registContact</a> - 담당자 등록</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
 					</ul>
 				</fieldset>
 
@@ -71,6 +77,7 @@
 				<fieldset class="fieldset2">
 					<legend>전송결과/예약취소</legend>
 					<ul>
+						<li><a href="${pageContext.request.contextPath}/MessageService/search.jsp">search</a> - 문자전송내역 조회 </li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 접수번호에 해당하는 문제메시지 전송결과 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약문자메시지의 예약취소. 예약시간 10분전까지만 가능.</li>
 					</ul>

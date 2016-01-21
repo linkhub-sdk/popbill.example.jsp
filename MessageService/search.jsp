@@ -10,17 +10,26 @@
 
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.message.SentMessage"%>
+<%@page import="com.popbill.api.message.MSGSearchResult"%>
 
 <%
-	String testCorpNum= "1231212312";			// 회원 사업자번호
-	String receiptNum = "014123015000000007";	// 문자전송(sendSMS)시 발급받은 접수번호
+	String testCorpNum= "1234567890";		// 팝빌회원 사업자번호
+	String SDate = "20151201";				// 시작일자, yyyyMMdd
+	String EDate = "20160115";				// 종료일자, yyyyMMdd
+	String[] State = {"1","2","3","4"};		// 전송상태, 1-대기, 2-성공, 3-실패, 4-취소 
+	String[] Item = {"SMS", "LMS", "MMS"};	// 전송유형, SMS-단문, LMS-장문, MMS-포토 
+	Boolean ReserveYN = false;				// 예약전송 여부, true-예약전송조회, false-전체조회
+	Boolean SenderYN = false;				// 개인조회 여부, true-개인조회, false-전체조회
+	int Page = 1;							// 페이지 번호
+	int PerPage = 20;						// 페이지당 검색개수, 최대 1000개 
+	String Order = "D";						// 정렬방향, A-오름차순, D-내림차순
 
-	SentMessage[] sentMessages = null;
+	MSGSearchResult searchResult = null;
 
 	try {
 	
-		sentMessages = messageService.getMessages(testCorpNum, receiptNum);
-
+		searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order);
+	
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
@@ -33,13 +42,22 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>메시지 전송결과 조회</legend>
+				<ul>	
+					<li>code (응답코드) : <%=searchResult.getCode()%></li>
+					<li>message (응답메시지) : <%=searchResult.getMessage()%></li>
+					<li>total (총 검색결과 건수) : <%=searchResult.getTotal()%></li>
+					<li>perPage (페이지당 검색개수) : <%=searchResult.getPerPage()%></li>
+					<li>pageNum (페이지번호) : <%=searchResult.getPageNum()%></li>
+					<li>pageCount (페이지 개수) : <%=searchResult.getPageCount()%></li>
+
+				</ul>
 				<% 
-					for(int i=0; i<sentMessages.length; i++){
-						SentMessage sentMsg = sentMessages[i];
+					for(int i=0; i < searchResult.getList().size(); i++){
+						SentMessage sentMsg = searchResult.getList().get(i);
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>SentMessage : <%=i+1%></legend>
+					<legend>SentMessage : [ <%=i+1%> / <%=searchResult.getList().size() %> ]</legend>
 					<ul>
 						<li>sendState : <%=sentMsg.getState()%> </li>
 						<li>subject : <%=sentMsg.getSubject()%></li>
@@ -52,7 +70,7 @@
 						<li>sendDT : <%=sentMsg.getSendDT()%></li>
 						<li>resultDT : <%=sentMsg.getResultDT()%></li>
 						<li>sendResult : <%=sentMsg.getSendResult()%></li>
-						<li>tranNet : <%=sentMsg.getTranNet()%></li>
+						<li>tranNet :<%=sentMsg.getTranNet()%></li>
 					</ul>
 				</fieldset>
 				<%

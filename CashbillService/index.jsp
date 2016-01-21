@@ -22,10 +22,16 @@
 					<legend>회원사 정보</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
 					</ul>
 				</fieldset>
 
@@ -40,6 +46,7 @@
 					<legend>등록/수정/확인/삭제</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서관리번호의 등록/사용여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/registIssue.jsp">registIssue</a> - 현금영수증 즉시발행</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/register.jsp">register</a> - 현금영수증 등록</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/update.jsp">update</a> - 현금영수증 수정</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getInfo.jsp">getInfo</a> - 현금영수증 상태/요약 정보 확인</li>

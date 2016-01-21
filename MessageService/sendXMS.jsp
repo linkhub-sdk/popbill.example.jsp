@@ -13,13 +13,14 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	String testUserID = "userid";				// 회원 아이디
-	String sender = "111222333";				// 발신번호
+	String testCorpNum = "1234567890";			// 회원 사업자번호
+	String testUserID = "testkorea";				// 회원 아이디
+	String sender = "07075103710";				// 발신번호
 	String receiver = "01043245117";			// 수신번호
 	String receiverName = "수신자명";			// 수신자명
 	String subject = "장문 문자 메시지 제목";
 	String content = "문자메시지 내용";			// 문자메시지의 길이에 따라 90Byte를 기준으로 단문과 장문을 자동 선택하여 전송함.
+	Boolean adsYN = false;						// 광고문자 전송여부 
 
 	Date reserveDT = null;						// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 
@@ -32,7 +33,7 @@
 
 	try {
 
-		receiptNum = messageService.sendXMS(testCorpNum, sender, receiver, receiverName, subject, content, reserveDT, testUserID);
+		receiptNum = messageService.sendXMS(testCorpNum, sender, receiver, receiverName, subject, content, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -13,7 +13,7 @@
 <%@page errorPage="/exception.jsp" %>
 <jsp:useBean id="taxinvoiceService" scope="application" class="com.popbill.api.taxinvoice.TaxinvoiceServiceImp"/>
 
-<%-- 연동아이디 --%>
+<%-- 링크아이디 --%>
 <jsp:setProperty name="taxinvoiceService" property="linkID" value="TESTER"/>
 
 <%-- 발급받은 비밀키, 사용자 인증에 사용되는 정보이므로 유출에 주의 --%>

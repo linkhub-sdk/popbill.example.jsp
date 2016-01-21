@@ -22,10 +22,17 @@
 					<legend>회원사 정보</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
+
 					</ul>
 				</fieldset>
 
@@ -39,9 +46,11 @@
 				<fieldset class="fieldset2">
 					<legend>등록/수정/확인/삭제</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 연동관리번호의 등록/사용여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 파트너 관리번호의 등록/사용여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registIssue.jsp">registIssue</a> - 세금계산서 즉시발행</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/register.jsp">register</a> - 세금계산서 등록</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">update</a> - 세금계산서 수정</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/search.jsp">search</a> - 세금계산서 목록 조회</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo.jsp">getInfo</a> - 세금계산서 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">getInfos</a> - 다량(최대 1000건)의 세금계산서 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">getDetailInfo</a> - 세금계산서 상세 정보 확인</li>

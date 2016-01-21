@@ -22,6 +22,7 @@
 	String subject = "멀티 문자메시지 제목";	
 	String content = "멀티 문자메시지 내용";			
 	Date reserveDT = null;						// 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송
+	Boolean adsYN = false;						// 광고문자 전송여부 
 
 	File file = new File((application.getRealPath("/resources/test.jpg")));
 
@@ -34,7 +35,7 @@
 
 	try {
 
-		receiptNum = messageService.sendMMS(testCorpNum, sender, receiver, receiverName, subject, content, file, reserveDT, testUserID);
+		receiptNum = messageService.sendMMS(testCorpNum, sender, receiver, receiverName, subject, content, file, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
