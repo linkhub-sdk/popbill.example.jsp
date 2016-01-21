@@ -86,6 +86,7 @@
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080수신거부목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getURL.jsp">getURL</a> - 문자메시지 관련 SSO URL 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 문자메시지 전송 단가 확인</li>
 					</ul>

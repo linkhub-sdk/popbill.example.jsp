@@ -66,6 +66,7 @@
 						<li>sendNum : <%=sentMsg.getSendNum()%></li>
 						<li>receiveNum : <%=sentMsg.getReceiveNum()%></li>
 						<li>receiveName : <%=sentMsg.getReceiveName()%></li>
+						<li>receiptDT : <%=sentMsg.getReceiptDT()%></li>
 						<li>reserveDT : <%=sentMsg.getReserveDT()%></li>
 						<li>sendDT : <%=sentMsg.getSendDT()%></li>
 						<li>resultDT : <%=sentMsg.getResultDT()%></li>
