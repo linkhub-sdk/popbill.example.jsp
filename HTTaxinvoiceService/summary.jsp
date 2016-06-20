@@ -14,13 +14,13 @@
 <%
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
   String jobID = "016062011000000001";  // 수집 요청시 발급받은 작업아이디
-  String[] Type = {"N", "M"};
-  String[] TaxType = {"T", "Z", "N"};
-  String[] PurposeType = {"R", "C", "N"};
+  String[] Type = {"N", "M"};           // 문서형태, N-일반, M-수정
+  String[] TaxType = {"T", "Z", "N"};   // 과세형태, T-과세, N-면세, Z-영세
+  String[] PurposeType = {"R", "C", "N"}; // 영수/청구 R-영수, C-청구, N-없음
 
-  Boolean TaxRegIDYN = false;
-  String TaxRegIDType = "S";
-  String[] TaxRegID = null;
+  Boolean TaxRegIDYN = false;     // 종사업장 유무
+  String TaxRegIDType = "S";      // 종사업장 유형, S-공급자, B-공급받는자, T-수탁자
+  String[] TaxRegID = null;       // 종사업장번호 ex) {"1234","4321"};
 
   HTTaxinvoiceSummary result = null;
 

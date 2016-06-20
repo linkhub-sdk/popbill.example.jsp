@@ -12,10 +12,10 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String jobID = "testkorea";  // 수집 요청시 발급받은 작업아이디
-  String[] TradeUsage = {"P", "C"};
-  String[] TradeType = {"N", "C"};
+  String testCorpNum = "1234567890";		// 연동회원 사업자번호
+  String jobID = "016062015000000001";  // 수집 요청시 발급받은 작업아이디
+  String[] TradeUsage = {"P", "C"};     // 거래용도, P-소득공제용, C-지출증빙용
+  String[] TradeType = {"N", "C"};      // 거래유형, N-일반 현금영수증, C-취소현금영수증
 
   HTCashbillSummary result = null;
 

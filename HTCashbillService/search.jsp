@@ -13,13 +13,13 @@
 
 <%
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String jobID = "016062014000000006";  // 수집 요청시 발급받은 작업아이디
-  String[] TradeUsage = {"P", "C"};
-  String[] TradeType = {"N", "C"};
+  String jobID = "016062015000000001";  // 수집 요청시 발급받은 작업아이디
+  String[] TradeUsage = {"P", "C"};     // 거래용도, P-소득공제용, C-지출증빙용
+  String[] TradeType = {"N", "C"};      // 거래유형, N-일반 현금영수증, C-취소현금영수증
 
-  int Page = 1;
-  int PerPage = 50;
-  String Order = "D";
+  int Page = 1;                         // 페이지번호
+  int PerPage = 15;                     // 페이지당 목록개수
+  String Order = "D";                   // 정렬방향, 내림차순-D, 오름차순-A
 
   HTCashbillSearchResult result = null;
 
@@ -47,17 +47,34 @@
           <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
           <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
         </ul>
+
         <%
           if ( result != null ){
             for(int i=0; i < result.getList().size(); i++){
         %>
+
           <fieldset class="fieldset2">
           <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
           <ul>
-            <li>ntsconfirmNum (국세청 승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
-
+            <li>ntsconfirmNum (국세청승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
+            <li>tradeDT (거래일시) : <%= result.getList().get(i).getTradeDT() %></li>
+            <li>tradeUsage (거래유형) : <%= result.getList().get(i).getTradeUsage() %></li>
+            <li>tradeType (현금영수증 형태) : <%= result.getList().get(i).getTradeType() %></li>
+            <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
+            <li>tax (세액) : <%= result.getList().get(i).getTax() %></li>
+            <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>
+            <li>totalAmount (거래금액) : <%= result.getList().get(i).getTotalAmount() %></li>
+            <li>franchiseCorpNum (발행자 사업자번호) : <%= result.getList().get(i).getFranchiseCorpNum() %></li>
+            <li>franchiseCorpName (발행자 상호) : <%= result.getList().get(i).getFranchiseCorpName() %></li>
+            <li>franchiseCorpType (발행자 사업자유형) : <%= result.getList().get(i).getFranchiseCorpType() %></li>
+            <li>identityNum (거래처 식별번호) : <%= result.getList().get(i).getIdentityNum() %></li>
+            <li>identityNumType (식별번호유형) : <%= result.getList().get(i).getIdentityNumType() %></li>
+            <li>customerName (식별번호유형) : <%= result.getList().get(i).getCustomerName() %></li>
+            <li>cardOwnerName (카드소유자명) : <%= result.getList().get(i).getCardOwnerName() %></li>
+            <li>deductionType (공제유형) : <%= result.getList().get(i).getDeductionType() %></li>
           </ul>
           </fieldset>
+
         <%
       	    }
           }
