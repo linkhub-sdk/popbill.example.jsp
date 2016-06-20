@@ -12,8 +12,8 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "4108600477";		// 연동회원 사업자번호
-	String testUserId = "innoposttest";			// 연동회원 아이디
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+	String testUserId = "testkorea";			// 연동회원 아이디
 
   QueryType CashbillType = QueryType.SELL;   // SELL-매출연계, BUY-매입연계
   String SDate = "20160501";                // 시작일자, 표시형식(yyyyMMdd)

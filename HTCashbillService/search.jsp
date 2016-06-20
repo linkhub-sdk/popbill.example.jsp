@@ -12,7 +12,7 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "4108600477";		// 연동회원 사업자번호
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
   String jobID = "016062014000000006";  // 수집 요청시 발급받은 작업아이디
   String[] TradeUsage = {"P", "C"};
   String[] TradeType = {"N", "C"};

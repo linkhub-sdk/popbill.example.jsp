@@ -12,9 +12,9 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "4108600477";		// 연동회원 사업자번호
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
   String ntsConfirmNum = "20160615410000290000020d";  // 국세청 승인번호
-  String testUserID = "innoposttest";			// 연동회원 아이디
+  String testUserID = "testkorea";			// 연동회원 아이디
 
   HTTaxinvoice taxinvoiceInfo = null;
 

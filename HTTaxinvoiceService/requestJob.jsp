@@ -12,8 +12,8 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "4108600477";		// 연동회원 사업자번호
-	String testUserId = "innoposttest";			// 연동회원 아이디
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+	String testUserId = "testkorea";			// 연동회원 아이디
 
   QueryType TaxinvoiceType = QueryType.SELL;   // SELL-매출연계, BUY-매입연계, TRUSTEE-수탁연계
   String DType = "W";                       // 일자유형 유형 W-작성일자, I-발행일자, S-전송일자
