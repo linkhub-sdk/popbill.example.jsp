@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		
+
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
 	<body>
@@ -19,7 +19,8 @@
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-						<li><a href="${pageContext.request.contextPath}/ClosedownService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/getUnitCost.jsp">getUnitCost</a> - 조회단가 확인</li>

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		
+
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
 
@@ -12,7 +12,7 @@
 		<div id="content">
 
 			<p class="heading1">팝빌 문자메시지 Api SDK jsp Example.</p>
-			
+
 			<br/>
 
 			<fieldset class="fieldset1">
@@ -24,6 +24,7 @@
 						<li><a href="${pageContext.request.contextPath}/MessageService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
@@ -36,12 +37,12 @@
 				</fieldset>
 
 			</fieldset>
-			
+
 			<br />
-			
+
 			<fieldset class="fieldset1">
 				<legend>문제메시지 관련 API</legend>
-				
+
 				<fieldset class="fieldset2">
 					<legend>단문 문자 전송</legend>
 					<ul>
@@ -49,7 +50,7 @@
 						<li><a href="${pageContext.request.contextPath}/MessageService/sendSMS_Multi.jsp">sendSMS</a> - 단문 문자메시지 다량(최대1000건) 전송</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>장문 문자 전송</legend>
 					<ul>
@@ -82,7 +83,7 @@
 						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약문자메시지의 예약취소. 예약시간 10분전까지만 가능.</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>

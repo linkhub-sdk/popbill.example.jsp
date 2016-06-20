@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		
+
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
 
@@ -12,7 +12,7 @@
 		<div id="content">
 
 			<p class="heading1">팝빌 세금계산서 SDK jsp Example.</p>
-			
+
 			<br/>
 
 			<fieldset class="fieldset1">
@@ -24,9 +24,9 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
@@ -37,12 +37,12 @@
 				</fieldset>
 
 			</fieldset>
-			
+
 			<br />
-			
+
 			<fieldset class="fieldset1">
 				<legend>전자세금계산서 관련 API</legend>
-				
+
 				<fieldset class="fieldset2">
 					<legend>등록/수정/확인/삭제</legend>
 					<ul>
@@ -61,7 +61,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deleteFile.jsp">deleteFile</a> - 세금계산서 첨부파일 1개 삭제</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>처리 프로세스</legend>
 					<ul>
@@ -77,7 +77,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendToNTS.jsp">sendToNTS</a> - 발행된 세금계산서의 국세청 즉시전송 요청.</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>부가 기능</legend>
 					<ul>
@@ -89,7 +89,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendFAX.jsp">sendFAX</a> - 세금계산서에 대한 팩스 전송 요청..</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>팝빌 세금계산서 SSO URL 기능</legend>
 					<ul>
@@ -101,7 +101,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMailURL.jsp">getMailURL</a> - 해당 세금계산서의 전송메일상의 "보기" 버튼에 해당하는 URL 확인</li>
 					</ul>
 				</fieldset>
-				
+
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>

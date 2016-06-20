@@ -12,7 +12,7 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호 
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
 	String testUserID = "testkorea";		// 연동회원 아이디
 
 	ContactInfo contactInfo = new ContactInfo();
@@ -24,7 +24,7 @@
 	contactInfo.setHp("010-1234-1234");		// 담당자 휴대폰 (최대 20자)
 	contactInfo.setFax("070-1234-1234");	// 담당자 팩스 (최대 20자)
 	contactInfo.setEmail("test@test.com");	// 담당자 이메일 (최대 70자)
-	contactInfo.setSearchAllAllowYN(true);	// 회사 조회권한여부 
+	contactInfo.setSearchAllAllowYN(true);	// 회사 조회권한여부
 	contactInfo.setMgrYN(false);			// 관리자 권한여부(true-관리자, false-사용자)
 
 	Response CheckResponse = null;
