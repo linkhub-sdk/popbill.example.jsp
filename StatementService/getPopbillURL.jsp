@@ -13,11 +13,11 @@
 <%
 	// 팝빌 관련 URL 확인[로그인, 포인트 충전]
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호 
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
 	String userID = "testkorea";			// 연동회원 아이디
-	String TOGO = "CHRG";					// TOGO - CHRG : 포인트 충전, LOGIN : 팝빌 로그인
+	String TOGO = "CHRG";					// TOGO - CHRG : 포인트 충전, LOGIN : 팝빌 로그인, SEAL : 인감 및 첨부문서 등록
 
-	String url = null;	
+	String url = null;
 
 	try {
 

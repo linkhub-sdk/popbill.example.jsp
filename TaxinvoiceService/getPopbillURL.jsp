@@ -10,9 +10,9 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312";		// 회원 사업자번호 
-	String userID = "userid";				// 회원 아이디
-	String TOGO = "CHRG";					// CHRG : 포인트 충전, LOGIN : 메인, CERT : 공인인증서 등록
+	String testCorpNum = "1234567890";		// 회원 사업자번호
+	String userID = "testkorea";				// 회원 아이디
+	String TOGO = "CHRG";					// CHRG : 포인트 충전, LOGIN : 메인, CERT : 공인인증서 등록, SEAL : 인감 및 첨부문서 등록
 	String url = null;
 
 	try {
