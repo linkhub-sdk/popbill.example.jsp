@@ -18,9 +18,9 @@
   String[] TaxType = {"T", "Z", "N"};   // 과세형태, T-과세, N-면세, Z-영세
   String[] PurposeType = {"R", "C", "N"}; // 영수/청구 R-영수, C-청구, N-없음
 
-  Boolean TaxRegIDYN = false;     // 종사업장 유무
-  String TaxRegIDType = "S";      // 종사업장 유형, S-공급자, B-공급받는자, T-수탁자
-  String[] TaxRegID = null;       // 종사업장번호 ex) {"1234","4321"};
+  String TaxRegIDYN = "";     // 종사업장 유무, 공백-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음
+  String TaxRegIDType = "S";  // 종사업장 유형, S-공급자, B-공급받는자, T-수탁자
+  String TaxRegID = "";       // 종사업장번호, 다수 기재시 콤마(",")로 구분하여 구성 ex) "0001,0002"
 
   int Page = 1;
   int PerPage = 10;
