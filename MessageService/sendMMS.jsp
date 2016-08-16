@@ -17,12 +17,13 @@
 	String testCorpNum = "1234567890";			// 회원 사업자번호
 	String testUserID = "testkorea";			// 회원 아이디
 	String sender = "07075103710";				// 발신번호
-	String receiver = "01043245117";			// 수신번호
+  String senderName = "발신자명";         // 발신자명
+	String receiver = "010111222";			// 수신번호
 	String receiverName = "수신자명";			// 수신자명
-	String subject = "멀티 문자메시지 제목";	
-	String content = "멀티 문자메시지 내용";			
+	String subject = "멀티 문자메시지 제목";
+	String content = "멀티 문자메시지 내용";
 	Date reserveDT = null;						// 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송
-	Boolean adsYN = false;						// 광고문자 전송여부 
+	Boolean adsYN = false;						// 광고문자 전송여부
 
 	File file = new File((application.getRealPath("/resources/test.jpg")));
 
@@ -31,11 +32,11 @@
 //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 //	reserveDT = formatter.parse(reserveDTtxt);
 
-	String receiptNum = null;			
+	String receiptNum = null;
 
 	try {
 
-		receiptNum = messageService.sendMMS(testCorpNum, sender, receiver, receiverName, subject, content, file, reserveDT, adsYN, testUserID);
+		receiptNum = messageService.sendMMS(testCorpNum, sender, senderName, receiver, receiverName, subject, content, file, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

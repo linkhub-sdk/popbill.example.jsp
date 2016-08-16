@@ -16,25 +16,28 @@
 <%
 	String testCorpNum = "1234567890";		// 팝빌회원 사업자번호
 	String testUserID = "testkorea";		// 팝빌회원 아이디
-	String sender = "07075103710";			// 대량전송 발신번호 
+	String sender = "07075103710";			// 대량전송 발신번호
+  String senderName = "발신자명";       // 발신자명
 	String subject = "대량문자 제목";		// 대량전송 제목
 	String content = "대량문자 내용";		// 대량전송 문자내용
 
-	Boolean adsYN = false;					// 광고문자 전송여부 
+	Boolean adsYN = false;					// 광고문자 전송여부
 
 	//문자메시지 전송정보 최대 1000건
 	Message msg1 = new Message();
 	msg1.setSender("07075103710");			//발신번호
-	msg1.setReceiver("01043245117");		//수신번호
+  msg1.setSenderName("발신자명_XMS");       //발신자명
+	msg1.setReceiver("010111222");		//수신번호
 	msg1.setReceiverName("수신자명");
 	msg1.setContent("메시지 내용1");
 
 	Message msg2 = new Message();
 	msg2.setSender("07075103710");			//발신번호
-	msg2.setReceiver("01043245117");		//수신번호
+  msg2.setSenderName("발신자명_XMS2");
+	msg2.setReceiver("010111222");		//수신번호
 	msg2.setReceiverName("수신자명");
 	msg2.setSubject("장문메시지 제목");
-	msg2.setContent("장문으로 전송되는 메시지 테스트 내용입니다. 단/장문 메시지 자동전송의 경우 메시지의 길이가 90Byte 이상이 될 경우 장문(LMS)로 전송됩니다. 메시지의 길이가 90Byte 미만인경우 단문(SMS)로 전송됩니다."); 
+	msg2.setContent("장문으로 전송되는 메시지 테스트 내용입니다. 단/장문 메시지 자동전송의 경우 메시지의 길이가 90Byte 이상이 될 경우 장문(LMS)로 전송됩니다. 메시지의 길이가 90Byte 미만인경우 단문(SMS)로 전송됩니다.");
 	//장문으로 전송되는 메시지
 
 	Message[] messages = new Message[] {msg1, msg2};	// 메시지 전송정보배열 최대 1000건
@@ -50,7 +53,7 @@
 
 	try {
 
-		receiptNum = messageService.sendXMS(testCorpNum, sender, subject, content, messages, reserveDT, adsYN, testUserID);
+		receiptNum = messageService.sendXMS(testCorpNum, sender, senderName, subject, content, messages, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

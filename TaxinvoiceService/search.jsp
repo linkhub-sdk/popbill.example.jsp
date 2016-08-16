@@ -12,23 +12,27 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호 
-	String DType = "I";							// 일자유형, R-등록일자, W-작성일자, I-발행일자
-	String SDate = "20160101";					// 시작일자
-	String EDate = "20160114";					// 종료일자
+	String testCorpNum = "1234567890";			// 연동회원 사업자번호
+	String DType = "W";							// 일자유형, R-등록일자, W-작성일자, I-발행일자
+	String SDate = "20160701";					// 시작일자
+	String EDate = "20160831";					// 종료일자
 	String[] State = {"100", "2**", "3**"};		// 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
 	String[] Type = {"N", "M"};					// 문서유형 배열, N-일반세금계산서, M-수정세금계산서
 	String[] TaxType = {"T","Z"};				// 과세형태 배열, T-과세, N-면세, Z-영세
 	Boolean LateOnly = null;					// 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
-	int Page = 1;								// 페이지번호 
+  String TaxRegIDType = "S";      // 종사업장 식별번호 유형, S-공급자, B-공급받는자, T-수탁자
+  String TaxRegID = "";           // 종사업장번호, 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
+  String TaxRegIDYN = "";         // 종사업장번호 조회 여부, 공백-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음.
+  String QString = "";        // 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재, 공백시 전체조회
+	int Page = 1;								// 페이지번호
 	int PerPage = 30;							// 페이지당 검색개수, 최대 1000건
 	String Order = "D";							// 정렬방향, A-오름차순, D-내림차순
-			
-	TISearchResult searchResult = new TISearchResult();		
-		
+
+	TISearchResult searchResult = new TISearchResult();
+
 	try {
 
-		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType, SDate, EDate, State, Type, TaxType, LateOnly, Page, PerPage, Order);
+		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType, SDate, EDate, State, Type, TaxType, LateOnly, TaxRegIDType, TaxRegID, TaxRegIDYN, QString, Page, PerPage, Order);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -43,7 +47,7 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>세금계산서 목록 조회</legend>
-				<ul>	
+				<ul>
 					<li>code (응답코드) : <%= searchResult.getCode()%></li>
 					<li>message (응답메시지) : <%= searchResult.getMessage()%></li>
 					<li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
@@ -57,10 +61,10 @@
 						for(int i=0; i< searchResult.getList().size(); i++){
 							taxinvoiceInfo = searchResult.getList().get(i);
 					%>
-					
+
 						<fieldset class="fieldset2">
 							<legend>TaxinvoiceInfos [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
-								<ul>	
+								<ul>
 									<li>itemKey : <%= taxinvoiceInfo.getItemKey()%></li>
 									<li>taxType : <%= taxinvoiceInfo.getTaxType()%></li>
 									<li>writeDate : <%= taxinvoiceInfo.getWriteDate()%></li>
@@ -96,9 +100,9 @@
 									<li>ntsresultDT : <%= taxinvoiceInfo.getNTSResultDT() %></li>
 									<li>ntssendErrCode : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
 								</ul>
-						</fieldset>		
-						
-					<%			
+						</fieldset>
+
+					<%
 						}
 					%>
 

@@ -13,14 +13,15 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
+	String testCorpNum = "1234567890";		// 연동회원 사업자번호
 	String testUserID = "testkorea";			// 연동회원 아이디
 	String sender = "07075103710";				// 발신번호
-	String receiver = "01043245117";			// 수신번호
+  String senderName = "발신자명_SMS";         // 발신자명
+	String receiver = "010111222";			// 수신번호
 	String receiverName = "수신자명";			// 수신자명
 	String content = "문자메세지 테스트1";		// 단문문자메시지는 90Byte초과시 90Byte이후 내용은 전송되지 않음.
 	Date reserveDT = null;						// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-	Boolean adsYN = false;						// 광고문자 전송여부 
+	Boolean adsYN = false;						// 광고문자 전송여부
 
 //	예약전송시 아래의 코드 참조
 //	String reserveDTtxt ="20141230190000";
@@ -31,7 +32,7 @@
 
 	try {
 
-		receiptNum = messageService.sendSMS(testCorpNum, sender, receiver, receiverName, content, reserveDT, adsYN, testUserID);
+		receiptNum = messageService.sendSMS(testCorpNum, sender, senderName, receiver, receiverName, content, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
