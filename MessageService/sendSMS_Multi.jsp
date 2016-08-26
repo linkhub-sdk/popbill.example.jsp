@@ -17,7 +17,6 @@
 	String testCorpNum = "1234567890";		// 회원 사업자번호
 	String testUserID = "testkorea";			// 회원 아이디
 	String sender = "07012341234";				// 대량전송 발신번호
-  String senderName = "발신자명";         // 발신자명
 	String content = "대량전송 메시지내용";		// 대량전송 메시지내용
 
 	//개별문자 메시지 전송정보 최대 1000건
@@ -49,7 +48,7 @@
 
 	try {
 
-		receiptNum = messageService.sendSMS(testCorpNum, sender, senderName, content, messages, reserveDT, adsYN, testUserID);
+		receiptNum = messageService.sendSMS(testCorpNum, sender, content, messages, reserveDT, adsYN, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
