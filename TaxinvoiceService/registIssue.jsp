@@ -15,16 +15,16 @@
 
 <%
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	Boolean writeSpecification = true;		// 거래명세서 동시작성 여부 
-	String memo = "즉시발행 메모";			// 즉시발행 메모 
-	Boolean forceIssue = false;				// 지연발행 강제여부 
+	Boolean writeSpecification = true;		// 거래명세서 동시작성 여부
+	String memo = "즉시발행 메모";			// 즉시발행 메모
+	Boolean forceIssue = false;				// 지연발행 강제여부
 	String dealInvoiceKey = "";				// 거래명세서 동시작성시 명세서 관리번호. 미기재시 공급자 관리번호 동일하게 구성
-	String emailSubject = "";				// 발행안내 메일 제목, 미기재시 기본양식으로 전송 
-	String userID = "testkorea";			// 연동회원 아이디 
+	String emailSubject = "";				// 발행안내 메일 제목, 미기재시 기본양식으로 전송
+	String userID = "testkorea";			// 연동회원 아이디
 
 	Taxinvoice taxinvoice = new Taxinvoice();
 
-	taxinvoice.setWriteDate("20160121");		// 필수, 기재상 작성일자(yyyyMMdd)
+	taxinvoice.setWriteDate("20161125");		// 필수, 기재상 작성일자(yyyyMMdd)
 	taxinvoice.setIssueType("정발행");			// 필수, {정발행, 역발행, 위수탁}
 	taxinvoice.setChargeDirection("정과금");	// 필수, {정과금, 역과금}
 	taxinvoice.setPurposeType("영수");			// 필수, {영수, 청구}
@@ -35,7 +35,7 @@
 	taxinvoice.setInvoicerCorpNum("1234567890");				// 공급자 사업자번호, "-"제외
 	taxinvoice.setInvoicerTaxRegID("1234");						// 종사업자 식별번호. 필요시 기재. 형식은 숫자 4자리.
 	taxinvoice.setInvoicerCorpName("공급자 상호");				// 필수
-	taxinvoice.setInvoicerMgtKey("20160121-04");				// 공급자 연동문서 관리번호. 최대 25자리 공급자 발행까지 API로 발행하고자 할경우 정발행과 동일한 형태로 추가 기재.
+	taxinvoice.setInvoicerMgtKey("20161125-02");				// 공급자 연동문서 관리번호. 최대 25자리 공급자 발행까지 API로 발행하고자 할경우 정발행과 동일한 형태로 추가 기재.
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");		// 필수
 	taxinvoice.setInvoicerAddr("공급자 주소");
 	taxinvoice.setInvoicerBizClass("공급자 업종");
@@ -60,7 +60,7 @@
 	taxinvoice.setInvoiceeEmail1("frenchofkiss@gmail.com");
 	taxinvoice.setInvoiceeTEL1("070-1234-1234");
 	taxinvoice.setInvoiceeHP1("010-000-1111");
-	
+
 	taxinvoice.setSupplyCostTotal("200000");				// 필수 공급가액 합계
 	taxinvoice.setTaxTotal("20000");						// 필수 세액 합계
 	taxinvoice.setTotalAmount("220000");					// 필수 합계금액. 공급가액 + 세액
@@ -86,7 +86,7 @@
 
 	detail.setSerialNum((short) 1);						 // 일련번호
 	detail.setPurchaseDT("20141219");					 // 거래일자
-	detail.setItemName("품목명");
+	detail.setItemName("[품목명]");
 	detail.setSpec("규격");
 	detail.setQty("1");									// 수량
 	detail.setUnitCost("100000");						// 단가
@@ -99,7 +99,7 @@
 	detail = new TaxinvoiceDetail();
 
 	detail.setSerialNum((short) 2);
-	detail.setPurchaseDT("20141219");	
+	detail.setPurchaseDT("20141219");
 	detail.setItemName("품목명");
 	detail.setSpec("규격");
 	detail.setQty("1");									// 수량
@@ -109,15 +109,15 @@
 	detail.setRemark("품목비고");
 
 	taxinvoice.getDetailList().add(detail);
-	
+
 	taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
-	
+
 	TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
 	addContact.setSerialNum(1);
 	addContact.setContactName("추가 담당자명");
 	addContact.setEmail("test2@test.com");
 	taxinvoice.getAddContactList().add(addContact);
-	
+
 	Response CheckResponse = null;
 
 	try {
