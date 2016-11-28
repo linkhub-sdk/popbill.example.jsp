@@ -7,22 +7,27 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.statement.StatementInfo"%>
 
 <%
-	/*
-		전자명세서 상태/요약 정보 확인
-		상태정보 항목에 대한 설명은 [전자명세서 API 연동매뉴얼 > 4.2 전자명세서 상태정보 구성] 참조
-	*/
+  /**
+  * 1건의 전자명세서 상태/요약 정보를 확인합니다.
+  * - 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼] > 3.3.1.
+  *   GetInfo (상태 확인)"을 참조하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";			// 전자명세서 문서관리번호
-	
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20150319-01";
+
 	StatementInfo statementInfo = null;
-	
+
 	try {
 
 		statementInfo = statementService.getInfo(testCorpNum, itemCode, mgtKey);

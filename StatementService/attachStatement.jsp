@@ -5,20 +5,31 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 다른 전자명세서 첨부 
+  /**
+  * 전자명세서에 다른 전자명세서 1건을 첨부합니다.
+  */
+  
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int 
-	String mgtKey = "20160121-02";			// 전자명세서 문서관리번호
+  // 명세서 종류코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int
+	int itemCode = 121;
 
-	int subItemCode = 121;					// 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int 
-	String subMgtKey = "20160121-01";		// 첨부할 전자명세서 관리번호 
+  // 전자명세서 문서관리번호
+	String mgtKey = "20160121-02";
+
+
+  // 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int
+	int subItemCode = 121;
+
+  // 첨부할 전자명세서 관리번호
+	String subMgtKey = "20160121-01";
 
 	Response CheckResponse = null;
 
@@ -37,7 +48,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 첨부 확인</legend>
+				<legend>다른 전자명세서 첨부</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

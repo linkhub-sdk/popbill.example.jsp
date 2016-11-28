@@ -8,23 +8,31 @@
 
 <%@ include file="common.jsp" %>
 <%@page import="java.util.ArrayList"%>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.statement.Statement"%>
 <%@page import="com.popbill.api.statement.StatementDetail"%>
 
 <%
 	/*
-		전자명세서 상세정보확인
-		전자명세서 항목에 관한 설명은 [전자명세서 API 연동매뉴얼 > 4.1 전자명세서 구성] 참조
+  * 전자명세서 1건의 상세정보를 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[전자명세서 API 연동매뉴얼] > 4.1. 전자명세서 구성" 을
+  *   참조하시기 바랍니다.
 	*/
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";			// 전자명세서 문서관리번호
-	String testUserId = "testkorea";		// 연동회원 아이디
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 팝빌회원 아이디
+	String testUserId = "testkorea";
 
 	Statement statement = null;
-	
+
 	try {
 
 		statement = statementService.getDetailInfo(testCorpNum, itemCode, mgtKey, testUserId);
@@ -113,8 +121,8 @@
 									<li>tax : <%=detail.getTax() %></li>
 									<li>remark : <%=detail.getRemark() %></li>
 								</ul>
-								
-						<% 
+
+						<%
 								}
 							}
 						%>
@@ -124,18 +132,15 @@
 							<legend>propertyBag</legend>
 							<ul>
 							<%
-								if(statement.getPropertyBag() !=null){
-									for(String key : statement.getPropertyBag().keySet()){
-
+								if ( statement.getPropertyBag() != null ) {
+									for(String key : statement.getPropertyBag().keySet()) {
 							%>
-
 									<li><%=key%> : <%=statement.getPropertyBag().get(key)%></li>
-						
 							<%
 									}
 								}
 							%>
-							</ul>					
+							</ul>
 
 						</fieldset>
 					</ul>

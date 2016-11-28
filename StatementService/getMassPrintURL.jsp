@@ -7,26 +7,31 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		다량 전자명세서 인쇄 화면 URL 확인, 최대 100건
-	*/
+	/**
+  * 다수건의 전자명세서 인쇄팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	// 문서관리번호 배열, 최대 100건
-	String[] MgtKeyList = new String[] {"20150318-01", "20150318-01", "20150318-02", "20150319-01"}; 
-	
+	String[] mgtKeyList = new String[] {"20150318-01", "20150318-01", "20150318-02", "20150319-01"};
+
 	String url = null;
 
 	try {
 
-		url = statementService.getMassPrintURL(testCorpNum, itemCode, MgtKeyList, userID);
+		url = statementService.getMassPrintURL(testCorpNum, itemCode, mgtKeyList, userID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

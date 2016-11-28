@@ -7,18 +7,25 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		전자명세서 내용 보기 URL 확인
-	*/
+	/**
+  * 1건의 전자명세서 보기 팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150318-01";			// 전자명세서 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20150318-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	String url = null;
 

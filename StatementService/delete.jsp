@@ -5,19 +5,26 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		전자명세서 삭제, [등록(임시저장)], [발행취소] 상태만 삭제가능
-	*/
+	/**
+  * 1건의 전자명세서를 삭제합니다.
+  * - 전자명세서를 삭제하면 사용된 문서관리번호(mgtKey)를 재사용할 수 있습니다.
+  * - 삭제가능한 문서 상태 : [임시저장], [발행취소]
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int 
-	String mgtKey = "20150319-01";			// 문서관리번호
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
 
 	Response CheckResponse = null;
 
@@ -36,7 +43,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 삭제 확인</legend>
+				<legend>전자명세서 삭제</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

@@ -7,17 +7,22 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		전자명세서 관련 팝빌 URL 확인 - [임시문서함, 발행문서함]
-	*/
+	/**
+  * 팝빌 전자명세서 문서함 관련 팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String userID = "testkorea";			// 연동회원 아이디
-	String TOGO = "SBOX";					// TBOX : 임시문서함, SBOX : 발행문서함
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // TBOX : 임시문서함, SBOX : 발행문서함
+	String TOGO = "SBOX";
 
 	String url = null;
 

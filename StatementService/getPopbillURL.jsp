@@ -7,15 +7,22 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 팝빌 관련 URL 확인[로그인, 포인트 충전]
+	/**
+  * 팝빌 관련 팝업 URL을 반환합니다.
+  * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String userID = "testkorea";			// 연동회원 아이디
-	String TOGO = "CHRG";					// TOGO - CHRG : 포인트 충전, LOGIN : 팝빌 로그인, SEAL : 인감 및 첨부문서 등록
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // TOGO - CHRG : 포인트 충전, LOGIN : 팝빌 로그인, SEAL : 인감 및 첨부문서 등록
+	String TOGO = "CHRG";
 
 	String url = null;
 

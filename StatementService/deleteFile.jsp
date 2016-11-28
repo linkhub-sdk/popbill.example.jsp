@@ -7,21 +7,27 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 
 <%
-	/*
-		첨부파일 삭제 
-		첨부파일 목록 조회(getFiles)시 응답전문의 attachedFile 값을 
-		삭제시 FileID로 기재하여 삭제가능
-	*/
+	/**
+  * 전자명세서에 첨부된 파일을 삭제합니다.
+  * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
+  *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+  */
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	int itemCode = 121;							// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";				// 전자명세서 문서관리번호.
-	String FileID= "8AF56E45-6D03-401F-AF78-B1D446BB04F1.PBF";	// 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+	String FileID= "8AF56E45-6D03-401F-AF78-B1D446BB04F1.PBF";
 
 	Response CheckResponse = null;
 
@@ -34,7 +40,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

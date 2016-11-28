@@ -5,105 +5,199 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
-
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.statement.Statement"%>
 <%@page import="com.popbill.api.statement.StatementDetail"%>
 
 <%
-	/*
-		전자명세서 등록(임시저장)
-		전자명세서 구성항목에 대한 설명은 [전자명세서 API 연동매뉴얼 > 4.1 전자명세서 구성] 참조
-	*/
+  /**
+  * 전자명세서 1건을 임시저장 처리합니다.
+  * - 임시저장후 발행(Issue API)를 호출해야 공급받는자에게 메일로 전달됩니다.
+  */
+
+
+  // 팝빌회원 사업자번호, '-'제외 10자리
+  String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+  String userID = "testkorea";
+
+  /***************************************************************************
+  *                               전자명세서 정보
+  ****************************************************************************/
 
 	Statement statement = new Statement();
-	
-	statement.setWriteDate("20150318");				// [필수] 작성일자, 형태 yyyyMmdd
-	statement.setPurposeType("영수");				// [필수] {영수, 청구} 중 기재
-	statement.setTaxType("과세");					// [필수] {과세, 영세, 면세} 중 기재
-	statement.setFormCode("");						// 맞춤양식코드, 미기재시 기본양식으로 처리
-	statement.setItemCode((short) 121);				// [필수] 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int 
-	statement.setMgtKey("20150319-01");				// [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_'로 구성
-	statement.setSenderCorpNum("1234567890");		// [필수] 공급자 사업자번호
+
+  // [필수] 작성일자, 날짜형식(yyyyMMdd)
+	statement.setWriteDate("20161128");
+
+  // [필수] {영수, 청구} 중 기재
+	statement.setPurposeType("영수");
+
+  // [필수] 과세형태, {과세, 영세, 면세} 중 기재
+	statement.setTaxType("과세");
+
+  // 맞춤양식코드, 미기재시 기본양식으로 처리
+	statement.setFormCode("");
+
+  // [필수] 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	statement.setItemCode((short) 121);
+
+  // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
+	statement.setMgtKey("20161128-01");
+
+
+  /***************************************************************************
+  *                               공급자 정보
+  ****************************************************************************/
+
+  // 공급자 사업자번호
+	statement.setSenderCorpNum("1234567890");
+
+  // 공급자 상호
 	statement.setSenderCorpName("공급자 상호");
+
+  // 공급자 주소
 	statement.setSenderAddr("공급자 주소");
+
+  // 공급자 대표자 성명
 	statement.setSenderCEOName("공급자 대표자 성명");
+
+  // 공급자 종사업장 식별번호
 	statement.setSenderTaxRegID("");
-	statement.setSenderBizClass("업종");
+
+  // 공급자 종목
+	statement.setSenderBizClass("종목");
+
+  // 공급자 업태
 	statement.setSenderBizType("업태");
+
+  // 공급자 담당자명
 	statement.setSenderContactName("공급자 담당자명");
+
+  // 공급자 담당자 메일주소
 	statement.setSenderEmail("test@test.com");
+
+  // 공급자 담당자 연락처
 	statement.setSenderTEL("070-7070-0707");
+
+  // 공급자 담당자 휴대폰번호
 	statement.setSenderHP("010-000-2222");
 
-	statement.setReceiverCorpNum("8888888888");		// [필수] 공급받는자 사업자번호
+
+  /***************************************************************************
+  *                             공급받는자 정보
+  ****************************************************************************/
+
+  // 공급자받는자 사업자번호
+	statement.setReceiverCorpNum("8888888888");
+
+  // 공급자받는자 상호
 	statement.setReceiverCorpName("공급받는자 상호");
+
+  // 공급자받는자 대표자성명
 	statement.setReceiverCEOName("공급받는자 대표자 성명");
+
+  // 공급자받는자 주소
 	statement.setReceiverAddr("공급받는자 주소");
+
+  // 공급자받는자 종목
 	statement.setReceiverBizClass("공급받는자 업종");
+
+  // 공급자받는자 업태
 	statement.setReceiverBizType("공급받는자 업태");
+
+  // 공급자받는자 담당자명
 	statement.setReceiverContactName("공급받는자 담당자명");
+
+  // 공급자받는자 담당자 메일주소
 	statement.setReceiverEmail("test@receiver.com");
 
-	statement.setSupplyCostTotal("400000");         // [필수] 공급가액 합계
-	statement.setTaxTotal("40000");                 // [필수] 세액 합계
-	statement.setTotalAmount("440000");             // [필수] 합계금액.  공급가액 + 세액
+  // 공급자받는자 담당자 연락처
+	statement.setReceiverTEL("010-111-1111");
 
-	statement.setSerialNum("123");                  // 기재상 일련번호 항목
+  // 공급자받는자 담당자 휴대폰번호
+	statement.setReceiverHP("010-1234-1234");
+
+
+  /***************************************************************************
+  *                               전자명세서 기재정보
+  ****************************************************************************/
+
+  // [필수] 공급가액 합계
+	statement.setSupplyCostTotal("400000");
+
+  // [필수] 세액 합계
+	statement.setTaxTotal("40000");
+
+  // [필수] 합계금액.  공급가액 + 세액
+	statement.setTotalAmount("440000");
+
+  // 기재상 일련번호 항목
+	statement.setSerialNum("123");
+
+  // 기재상 비고 항목
 	statement.setRemark1("비고1");
 	statement.setRemark2("비고2");
 	statement.setRemark3("비고3");
 
-	statement.setBusinessLicenseYN(false);			// 사업자등록증 이미지 첨부시 설정.
-	statement.setBankBookYN(false);					// 통장사본 이미지 첨부시 설정.
-			
+  // 사업자등록증 이미지 첨부여부
+	statement.setBusinessLicenseYN(false);
 
-	// 추가속성, 추가속성에 관한 정보는 [전자명세서 API 연동매뉴얼 > [5.2 기본양식 추가속성 테이블] 참조
-	Map<String, String> propertyBag = new HashMap<String, String>();
-	
-	propertyBag.put("Balance", "15000");			// 전잔액
-	propertyBag.put("Deposit", "5000");				// 입금액
-	propertyBag.put("CBalance", "20000");			// 현잔액
+  // 통장사본 이미지 첨부여부
+	statement.setBankBookYN(false);
 
-	statement.setPropertyBag(propertyBag);
 
-	
+  // 상세항목(품목) 배열
 	statement.setDetailList(new ArrayList<StatementDetail>());
-	
-	StatementDetail detail = new StatementDetail();		// 상세항목(품목) 배열
 
-	detail.setSerialNum((short) 1);					// 일련번호, 1부터 순차기재
-	detail.setItemName("품명");						// 품목명
-	detail.setPurchaseDT("20150317");				// 거래일자
+	StatementDetail detail = new StatementDetail();
+
+	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
+	detail.setItemName("품명");				 // 품목명
+	detail.setPurchaseDT("20150317");	// 거래일자
 	detail.setQty("1");								// 수량
-	detail.setSupplyCost("200000");					// 공급가액
-	detail.setTax("20000");							// 세액
+	detail.setSupplyCost("200000");		// 공급가액
+	detail.setTax("20000");						// 세액
 
 	statement.getDetailList().add(detail);
 
 	detail = new StatementDetail();		// 상세항목(품목) 배열
 
-	detail.setSerialNum((short) 2);					// 일련번호 1부터 순차기재
-	detail.setItemName("품명");						// 품목명
-	detail.setPurchaseDT("20150317");				// 거래일자
-	detail.setQty("1");								// 수량
-	detail.setSupplyCost("200000");					// 공급가액
-	detail.setTax("20000");							// 세액
+	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
+	detail.setItemName("품명");					// 품목명
+	detail.setPurchaseDT("20150317");	 // 거래일자
+	detail.setQty("1");								 // 수량
+	detail.setSupplyCost("200000");		 // 공급가액
+	detail.setTax("20000");						 // 세액
 
 	statement.getDetailList().add(detail);
-		
-	Response CheckResponse = null;
+
+
+  /***************************************************************************
+  *                               추가속성 정보
+  * - 추가속성에 관한 자세한 사항은 "[전자명세서 API 연동매뉴얼] > 5.2. 기본양식 추가속성 테이블"
+  *   을 참조하시기 바랍니다.
+  ****************************************************************************/
+
+  // 추가속성, 추가속성에 관한 정보는 [전자명세서 API 연동매뉴얼 > [5.2 기본양식 추가속성 테이블] 참조
+  Map<String, String> propertyBag = new HashMap<String, String>();
+
+  propertyBag.put("Balance", "15000");			// 전잔액
+  propertyBag.put("Deposit", "5000");				// 입금액
+  propertyBag.put("CBalance", "20000");			// 현잔액
+
+  statement.setPropertyBag(propertyBag);
+
+  Response CheckResponse = null;
 
 	try {
-
-		String testCorpNum = "1234567890";			// 연동회원 사업자번호, '-'제외 10자리 
-		String userID = "testkorea";				// 연동회원 아이디
 
 		CheckResponse = statementService.register(testCorpNum, statement, userID);
 

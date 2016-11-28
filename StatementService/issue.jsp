@@ -11,14 +11,21 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		등록된 전자명세서 발행
-	*/
+	/**
+  * 1건의 [임시저장] 상태의 전자명세서를 발행처리합니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int 
-	String mgtKey = "20150319-01";			// 전자명세서 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]	int
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 

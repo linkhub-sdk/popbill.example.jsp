@@ -12,16 +12,20 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
+  /**
+  * 연동회원의 회사정보를 수정합니다
+  */
+
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserId = "testkorea";		// 연동회원 아이디 
-	
+	String testUserId = "testkorea";		// 연동회원 아이디
+
 	CorpInfo corpInfo = new CorpInfo();
-	corpInfo.setCeoname("대표자명");		// 대표자 성명, 최대 30자 
-	corpInfo.setCorpName("상호");			// 상호, 최대 70자 
+	corpInfo.setCeoname("대표자명");		// 대표자 성명, 최대 30자
+	corpInfo.setCorpName("상호");			// 상호, 최대 70자
 	corpInfo.setAddr("주소");				// 주소, 최대 300자
 	corpInfo.setBizType("업태");			// 업태, 최대 40자
 	corpInfo.setBizClass("업종");			// 업종, 최대 40자
-	
+
 	Response CheckResponse = null;
 
 	try {

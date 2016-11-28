@@ -19,13 +19,13 @@
 				<legend>팝빌 기본 API</legend>
 
 				<fieldset class="fieldset2">
-					<legend>회원사 정보</legend>
+					<legend>회원정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/StatementService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/registContact.jsp">registContact</a> - 담당자 등록</li>
@@ -52,7 +52,7 @@
 						<li><a href="${pageContext.request.contextPath}/StatementService/update.jsp">update</a> - 전자명세서 수정</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/search.jsp">search</a> - 전자명세서 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getInfo.jsp">getInfo</a> - 전자명세서 상태/요약 정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getInfos.jsp">getInfos</a> - 다량(최대 1000건)의 전자명세서 상태/요약 정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getInfos.jsp">getInfos</a> - 전자명세서 상태/요약 정보(대량) 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getDetailInfo.jsp">getDetailInfo</a> - 전자명세서 상세 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/delete.jsp">delete</a> - 전자명세서 삭제</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getLogs.jsp">getLogs</a> - 전자명세서 문서이력 확인</li>
@@ -66,7 +66,7 @@
 					<legend>처리 프로세스</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/StatementService/issue.jsp">issue</a> - 전자명세서 발행 처리</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/cancelIssue.jsp">cancelIssue</a> - 전자명세서 발행취소 처리</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/cancel.jsp">cancel</a> - 전자명세서 발행취소 처리</li>
 					</ul>
 				</fieldset>
 
@@ -75,9 +75,9 @@
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/StatementService/attachStatement.jsp">attachStatement</a> - 다른 전자명세서 첨부</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/detachStatement.jsp">detachStatement</a> - 다른 전자명세서 첨부해제</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/sendEmail.jsp">sendEmail</a> - 처리 프로세스에 대한 이메일 재전송 요청</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/sendSMS.jsp">sendSMS</a> - 알림 문자메시지 재전송 요청</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/sendFAX.jsp">sendFAX</a> - 전자명세서에 대한 팩스 전송 요청</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/sendEmail.jsp">sendEmail</a> - 안내메일 재전송</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/sendSMS.jsp">sendSMS</a> - 알림문자 전송</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/sendFAX.jsp">sendFAX</a> - 팩스 전송</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/FAXSend.jsp">FAXSend</a> - 전자명세서 선팩스 전송</li>
 					</ul>
 				</fieldset>
@@ -86,11 +86,11 @@
 					<legend>팝빌 전자명세서 SSO URL 기능</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getURL.jsp">getURL</a> - 전자명세서 관련 SSO URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getPopUpURL.jsp">getPopUpURL</a> - 해당 전자명세서의 팝빌 화면을 표시하는 URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getPrintURL.jsp">getPrintURL</a> - 해당 전자명세서의 팝빌 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getMassPrintURL.jsp">getMassPrintURL</a> - 다량(최대100건)의 전자명세서 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getEPrintURL.jsp">getEPrintURL</a> - 해당 전자명세서의 공급받는자용 팝빌 인쇄 화면을 표시하는 URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getMailURL.jsp">getMailURL</a> - 해당 전자명세서의 전송메일상의 "보기" 버튼에 해당하는 URL 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getPopUpURL.jsp">getPopUpURL</a> - 전자명세서 보기 팝업 URL</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getPrintURL.jsp">getPrintURL</a> - 전자명세서 인쇄 팝업 URL</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getMassPrintURL.jsp">getMassPrintURL</a> - 전자명세서 인쇄 팝업 URL - 대량</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getEPrintURL.jsp">getEPrintURL</a> - 전자명세서 인쇄 팝업 URL - 공급받는자용</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getMailURL.jsp">getMailURL</a> - 공급받는자 메일링크 URL</li>
 					</ul>
 				</fieldset>
 

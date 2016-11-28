@@ -7,28 +7,38 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.io.IOException"%>
 <%@page import="java.io.InputStream"%>
 <%@page import="java.io.FileInputStream"%>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 
 <%
 	/*
-		전자명세서 파일 첨부는 [등록(임시저장)] 상태인 경우만 가능
+  * 전자명세서에 첨부파일을 등록합니다.
+  * - 첨부파일 등록은 전자명세서가 [임시저장] 상태인 경우에만 가능합니다.
+  * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
 	*/
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";			// 전자명세서 문서관리번호
-	String fileName = "첨부파일.jpg";		// 첨부파일 표시명
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 종류코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 첨부파일 표시명
+	String fileName = "첨부파일.jpg";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
-	InputStream stream = new FileInputStream(application.getRealPath("/resources/사업자등록증.jpg"));	// 파일 스트림
+  // 파일 스트림
+	InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
 	try {
 
@@ -39,18 +49,18 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	} finally {
-		if(stream != null) 
+		if(stream != null)
 			try {
 					stream.close();
 			} catch(IOException e) {}
 	}
-			
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 파일첨부 확인</legend>
+				<legend>전자명세서 파일첨부 등록</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

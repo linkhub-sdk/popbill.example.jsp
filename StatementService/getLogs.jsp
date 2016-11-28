@@ -5,18 +5,26 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.statement.StatementLog"%>
 
 <%
+  /**
+  * 전자명세서 상태 변경이력을 확인합니다.
+  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼]
+  *  > 3.3.4 GetLogs (상태 변경이력 확인)" 을 참조하시기 바랍니다.
+  */
 
-	// 전자명세서 문서이력 확인
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	int itemCode = 121;							// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";				// 전자명세서 문서관리번호.
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20150319-01";
 
 	StatementLog[] statementLogs = null;
 
@@ -38,7 +46,8 @@
 				<legend>전자명세서 문서이력 확인</legend>
 				<%
 						StatementLog statementLog = new StatementLog();
-						for(int i=0; i<statementLogs.length; i++){
+
+            for ( int i = 0; i < statementLogs.length; i++ ) {
 							statementLog = statementLogs[i];
 				%>
 				<fieldset class="fieldset2">

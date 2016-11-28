@@ -5,22 +5,36 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		전자명세서 팩스전송
-	*/
+	/**
+  * 전자명세서를 팩스전송합니다.
+  * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역]
+  *   메뉴에서 전송결과를 확인할 수 있습니다.
+  */
 
-	String testCorpNum = "1234567890";			// 팝빌회원 사업자번호
-	int itemCode = 121;							// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String mgtKey = "20150319-01";				// 전자명세서 문서관리번호
-	String sender = "07075103710";				// 발신자 번호
-	String receiver = "070111222";				// 수신자 팩스번호
-	String userID = "testkorea";				// 팝빌회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
+
+  // 전자명세서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 발신번호
+	String sender = "07043042991";
+
+  // 수신팩스번호
+	String receiver = "070111222";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 

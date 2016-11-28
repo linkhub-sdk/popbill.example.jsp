@@ -7,19 +7,21 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		전자명세서 발행단가 확인
-	*/
+	/**
+  * 전자명세서 발행단가를 확인합니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호 
-	int itemCode = 121;						// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int itemCode = 121;
 
 	float unitCost;
-	
+
 	try {
 
 		unitCost = statementService.getUnitCost(testCorpNum, itemCode);
