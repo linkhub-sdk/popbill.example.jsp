@@ -5,35 +5,47 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String userID = "userid";					// 회원 아이디
-	String[] MgtKeyList = new String[]{"20141230-01", "20141230-04", "20141230-04"}; // 세금계산서 배열, 최대 1000건
+  /**
+  * 다수건의 전자세금계산서 인쇄팝업 URL을 반환합니다.
+  * 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // 세금계산서 배열, 최대 1000건
+	String[] mgtKeyList = new String[]{"20141230-01", "20141230-04", "20141230-04"};
 
 	String url = null;
 
 	try {
 
-		url = taxinvoiceService.getMassPrintURL(testCorpNum, MgtKeyType.SELL, MgtKeyList, userID);
+		url = taxinvoiceService.getMassPrintURL(testCorpNum, keyType, mgtKeyList, userID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>다량 세금계산서 인쇄화면 URL</legend>
+				<legend>세금계산서 인쇄 팝업 URL - 대량</legend>
 				<ul>
 					<li>url : <%=url%></li>
 				</ul>

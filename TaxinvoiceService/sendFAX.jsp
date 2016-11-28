@@ -5,18 +5,34 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-03";				// 세금계산서 연동관리번호
-	String senderNum = "010-1111-2222";			// 발신자 번호
-	String receiverNum = "070-7510-3710";		// 수신자 팩스 번호
+  /**
+  * 전자세금계산서를 팩스전송합니다.
+  * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역]
+  * 메뉴에서 전송결과를 확인할 수 있습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161128-03";
+
+  // 발신번호
+	String senderNum = "010-1111-2222";
+
+  // 수신팩스 번호
+	String receiverNum = "070-111-222";
 
 	Response CheckResponse = null;
 
@@ -29,7 +45,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

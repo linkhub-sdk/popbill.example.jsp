@@ -5,18 +5,29 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312";	// 회원 사업자번호 
-	String userid = "userid";			// 회원 아이디
-	String TOGO = "TBOX";				// TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
+  /**
+  * 팝빌 > 매입 문서함 팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userid = "userid";
+
+  // TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
+	String TOGO = "TBOX";
+  
 	String url = null;
 
 	try {
-			
+
 		url = taxinvoiceService.getURL(testCorpNum, userid, TOGO);
 
 	} catch (PopbillException pe) {
@@ -24,7 +35,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

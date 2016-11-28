@@ -5,18 +5,36 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";		// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-03";			// 세금계산서 연동관리번호
-	String senderNum = "010-1111-2222";		// 발신자 번호
-	String receiverNum = "010-4324-5117";	// 수신자 번호
-	String msg = "문자 메시지 내용";		// 문자메시지 내용, 최대 90Byte 초과된 내용은 전송되지 않음
+  /**
+  * 알림문자를 전송합니다. (단문/SMS- 한글 최대 45자)
+  * - 알림문자 전송시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [전송내역] 탭에서 전송결과를 확인할 수 있습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 발신번호
+	String senderNum = "010-1111-2222";
+
+  // 수신번호
+	String receiverNum = "010-4324-5117";
+
+  // 문자메시지 내용, 최대 90Byte 초과된 내용은 삭제되어 전송됨
+	String msg = "문자 메시지 내용";
 
 	Response CheckResponse = null;
 
@@ -29,7 +47,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

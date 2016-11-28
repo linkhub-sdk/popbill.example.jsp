@@ -7,12 +7,16 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.ChargeInfo" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+  /**
+  * 연동회원의 전자세금계산서 API 서비스 과금정보를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
 	ChargeInfo chargeInfo = null;
 
@@ -33,7 +37,7 @@
       <fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
-					<li>unitCost (단가) : <%=chargeInfo.getUnitCost() %> </li>
+					<li>unitCost (발행단가) : <%=chargeInfo.getUnitCost() %> </li>
 					<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
 					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
 				</ul>

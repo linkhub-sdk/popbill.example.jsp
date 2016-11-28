@@ -5,15 +5,28 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceLog"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-12";				// 세금계산서 연동관리번호.
+  /**
+  * 세금계산서 상태 변경이력을 확인합니다.
+  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
+  *   "[전자세금계산서 API 연동매뉴얼] > 3.6.4 상태 변경이력 확인"
+  *   을 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
 
 	TaxinvoiceLog[] taxinvoiceLogs = null;
 
@@ -32,15 +45,13 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 문서이력 확인</legend>
-				
+				<legend>세금계산서 상태변경 이력</legend>
 				<%
 						TaxinvoiceLog taxinvoiceLog = new TaxinvoiceLog();
-						for(int i=0; i<taxinvoiceLogs.length; i++){
+
+						for(int i=0; i<taxinvoiceLogs.length; i++) {
 							taxinvoiceLog = taxinvoiceLogs[i];
 				%>
-
-
 				<fieldset class="fieldset2">
 					<legend>TaxinvoiceLog.docLogType : <%= taxinvoiceLog.getDocLogType() %></legend>
 					<ul>
@@ -53,11 +64,9 @@
 						<li>ip : <%=taxinvoiceLog.getIP() %></li>
 					</ul>
 				</fieldset>
-
 				<%
 					}
 				%>
-
 			</fieldset>
 		 </div>
 	</body>

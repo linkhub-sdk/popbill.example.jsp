@@ -7,23 +7,34 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20160121-04";			// 세금계산서 관리번호
-	
-	int subItemCode = 121;					// 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
-	String subMgtKey = "20160121-02";		// 첨부할 전자명세서 관리번호 
+  /**
+  * 1건의 전자명세서를 세금계산서에 첨부합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
+
+  // 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	int subItemCode = 121;
+
+  // 첨부할 전자명세서 문서관리번호
+	String subMgtKey = "20160121-02";
 
 	Response CheckResponse = null;
 
 	try {
-		
+
 		CheckResponse = taxinvoiceService.attachStatement(testCorpNum, keyType, mgtKey, subItemCode, subMgtKey);
 
 	} catch (PopbillException pe) {
@@ -31,7 +42,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

@@ -5,10 +5,9 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+
 <%@ include file="common.jsp" %>
-
 <%@page import="java.util.ArrayList"%>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 <%@page import="com.popbill.api.taxinvoice.Taxinvoice"%>
@@ -16,9 +15,20 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-01";				// 세금계산서 연동관리번호
+  /**
+  * 1건의 세금계산서 상세항목을 확인합니다.
+  * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼]
+  *   > 4.1 (세금)계산서 구성" 을 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
 
 	Taxinvoice taxinvoice = null;
 
@@ -48,7 +58,7 @@
 						<li>issueType : <%=taxinvoice.getIssueType() %></li>
 						<li>issueTiming : <%=taxinvoice.getIssueTiming() %></li>
 						<li>taxType : <%=taxinvoice.getTaxType() %></li>
-						
+
 						<li>invoicerCorpNum : <%=taxinvoice.getInvoicerCorpNum() %></li>
 						<li>invoicerCorpName : <%=taxinvoice.getInvoicerCorpName() %></li>
 						<li>invoicerMgtKey : <%=taxinvoice.getInvoicerMgtKey() %></li>
@@ -63,7 +73,7 @@
 						<li>invoicerHP : <%=taxinvoice.getInvoicerHP() %></li>
 						<li>invoicerEmail : <%=taxinvoice.getInvoicerEmail() %></li>
 						<li>invoicerSMSSendYN : <%=taxinvoice.getInvoicerSMSSendYN() %></li>
-						
+
 						<li>invoiceeType : <%=taxinvoice.getInvoiceeType() %></li>
 						<li>invoiceeCorpNum : <%=taxinvoice.getInvoiceeCorpNum() %></li>
 						<li>invoiceeMgtKey : <%=taxinvoice.getInvoiceeMgtKey() %></li>
@@ -84,7 +94,7 @@
 						<li>invoiceeHP2 : <%=taxinvoice.getInvoiceeHP2() %></li>
 						<li>invoiceeEmail2 : <%=taxinvoice.getInvoiceeEmail2() %></li>
 						<li>invoiceeSMSSendYN : <%=taxinvoice.getInvoiceeSMSSendYN() %></li>
-						
+
 						<li>trusteeCorpNum : <%=taxinvoice.getTrusteeCorpNum() %></li>
 						<li>trusteeCorpName : <%=taxinvoice.getTrusteeCorpName() %></li>
 						<li>trusteeMgtKey : <%=taxinvoice.getTrusteeMgtKey() %></li>
@@ -99,28 +109,28 @@
 						<li>trusteeHP : <%=taxinvoice.getTrusteeHP() %></li>
 						<li>trusteeEmail : <%=taxinvoice.getTrusteeEmail() %></li>
 						<li>trusteeSMSSendYN : <%=taxinvoice.getTrusteeSMSSendYN() %></li>
-						
+
 						<li>supplyCostTotal : <%=taxinvoice.getSupplyCostTotal() %></li>
 						<li>taxTotal : <%=taxinvoice.getTaxTotal() %></li>
 						<li>totalAmount : <%=taxinvoice.getTotalAmount() %></li>
-						
+
 						<li>modifyCode : <%=taxinvoice.getModifyCode() %></li>
 						<li>orgNTSConfirmNum : <%=taxinvoice.getOrgNTSConfirmNum() %></li>
 						<li>purposeType : <%=taxinvoice.getPurposeType() %></li>
-						
+
 						<li>serialNum : <%=taxinvoice.getSerialNum() %></li>
 						<li>cash : <%=taxinvoice.getCash() %></li>
 						<li>chkBill : <%=taxinvoice.getChkBill() %></li>
 						<li>credit : <%=taxinvoice.getCredit() %></li>
 						<li>note : <%=taxinvoice.getNote() %></li>
-						
+
 						<li>remark1 : <%=taxinvoice.getRemark1() %></li>
 						<li>remark2 : <%=taxinvoice.getRemark2() %></li>
 						<li>remark3 : <%=taxinvoice.getRemark3() %></li>
-						
+
 						<li>kwon : <%=taxinvoice.getKwon() %></li>
 						<li>ho : <%=taxinvoice.getHo() %></li>
-						
+
 						<li>businessLicenseYN : <%=taxinvoice.getBusinessLicenseYN() %></li>
 						<li>bankBookYN : <%=taxinvoice.getBankBookYN() %></li>
 						<li>NTSConfirmNum : <%=taxinvoice.getNTSConfirmNum() %></li>
@@ -131,10 +141,10 @@
 						<legend>detailList</legend>
 
 						<%
-							
+
 							if(taxinvoice.getDetailList() != null ){
 								for(int i=0; i<taxinvoice.getDetailList().size(); i++){
-									TaxinvoiceDetail detail = taxinvoice.getDetailList().get(i);				
+									TaxinvoiceDetail detail = taxinvoice.getDetailList().get(i);
 						%>
 
 						<legend>SerialNum :  <%= detail.getSerialNum() %> </legend>
@@ -150,19 +160,19 @@
 						</ul>
 
 						<%		}
-							}	
+							}
 						%>
 
-				
+
 						</fieldset>
 						<fieldset class="fieldset3">
 							<legend>addContactList</legend>
 
 						<%
-							
+
 							if(taxinvoice.getAddContactList() != null ){
 								for(int i=0; i<taxinvoice.getAddContactList().size(); i++){
-									TaxinvoiceAddContact addContactList = taxinvoice.getAddContactList().get(i);				
+									TaxinvoiceAddContact addContactList = taxinvoice.getAddContactList().get(i);
 						%>
 
 						<legend>SerialNum :  <%= addContactList.getSerialNum() %> </legend>
@@ -173,14 +183,12 @@
 						</ul>
 
 						<%		}
-							}	
+							}
 						%>
 						</fieldset class="fieldset3">
 
 					</ul>
 				</fieldset>
-				
-				
 			</fieldset>
 		 </div>
 	</body>

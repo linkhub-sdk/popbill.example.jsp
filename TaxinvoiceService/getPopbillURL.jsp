@@ -10,9 +10,20 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 회원 사업자번호
-	String userID = "testkorea";				// 회원 아이디
-	String TOGO = "CHRG";					// CHRG : 포인트 충전, LOGIN : 메인, CERT : 공인인증서 등록, SEAL : 인감 및 첨부문서 등록
+  /**
+  * 팝빌 관련 팝업 URL을 반환합니다.
+  * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // CHRG : 포인트 충전, CERT : 공인인증서 등록, LOGIN : 로그인, SEAL : 인감 및 첨부문서 등록
+	String TOGO = "CHRG";
+
 	String url = null;
 
 	try {

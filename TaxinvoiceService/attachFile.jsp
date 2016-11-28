@@ -7,22 +7,36 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.io.IOException"%>
 <%@page import="java.io.InputStream"%>
 <%@page import="java.io.FileInputStream"%>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-01";				// 세금계산서 연동관리번호
-	String fileName = "첨부파일.jpg";			// 첨부파일 표시명
-	Response CheckResponse = null;
-	InputStream stream = new FileInputStream(application.getRealPath("/resources/사업자등록증.jpg"));	// 파일 스트림
+  /**
+  * 세금계산서에 첨부파일을 등록합니다.
+  * - [임시저장] 상태의 세금계산서만 파일을 첨부할수 있습니다.
+  * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
+
+  // 첨부파일 표시명
+	String fileName = "test.jpg";
+
+  // 첨부할 파일스트림
+	InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
+
+  Response CheckResponse = null;
 
 	try {
 
@@ -33,18 +47,18 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	} finally {
-		if(stream != null) 
+		if(stream != null)
 			try {
 					stream.close();
 			} catch(IOException e) {}
 	}
-			
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 파일첨부 확인</legend>
+				<legend>세금계산서 첨부파일 등록</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

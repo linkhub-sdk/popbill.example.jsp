@@ -7,28 +7,57 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.JoinForm"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
+  /**
+  * 파트너의 연동회원으로 회원가입을 요청합니다.
+  */
+
 	JoinForm joinInfo = new JoinForm();
 
-	joinInfo.setLinkID("TESTER");			// 연동아이디
-	joinInfo.setCorpNum("1308648589");		// 사업자번호 "-" 제외
+  // 링크아이디
+	joinInfo.setLinkID("TESTER");
+
+  // 사업자번호 "-" 제외
+	joinInfo.setCorpNum("1234567890");
+
+  // 대표자명
 	joinInfo.setCEOName("대표자성명");
+
+  // 상호
 	joinInfo.setCorpName("상호");
+
+  // 주소
 	joinInfo.setAddr("주소");
-	joinInfo.setZipCode("500-100");			// 우편번호
-	joinInfo.setBizType("업태");			// 업태
-	joinInfo.setBizClass("업종");			// 업종
-	joinInfo.setID("user1234");				// 아이디, 6자 이상 20자 미만
-	joinInfo.setPWD("12345678");			// 비밀번호, 6자 이상 20자 미만
-	joinInfo.setContactName("담당자명");	
+
+  // 업태
+	joinInfo.setBizType("업태");
+
+  // 종목
+	joinInfo.setBizClass("종목");
+
+  // 아이디, 최대 20자
+	joinInfo.setID("testkorea");
+
+  // 비밀번호, 최대 20자
+	joinInfo.setPWD("12345678");
+
+  // 담당자명
+	joinInfo.setContactName("담당자명");
+
+  // 담당자 연락처
 	joinInfo.setContactTEL("02-999-9999");
-	joinInfo.setContactHP("010-1234-5678");
+
+  // 담당자 휴대폰번호
+	joinInfo.setContactHP("010-000-1234");
+
+  // 담당자 팩스번호
 	joinInfo.setContactFAX("02-999-9999");
+
+  // 담당자 메일주소
 	joinInfo.setContactEmail("code@linkhub.co.kr");
 
 	Response CheckResponse = null;
@@ -48,7 +77,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동회원가입 요청 결과</legend>
+				<legend>연동회원가입 요청</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

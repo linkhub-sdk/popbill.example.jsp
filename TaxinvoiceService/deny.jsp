@@ -5,15 +5,28 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+  
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";		// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.BUY;	// 세금계산서 유형 SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-08";			// 세금계산서 연동관리번호
+  /**
+  * 발행예정 세금계산서를 [거부]처리 합니다.
+  * - [거부]처리된 세금계산서를 삭제(Delete API)하면 등록된 문서관리번호를 재사용할 수 있습니다
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형 SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.BUY;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
+
+  // 메모
 	String memo = "발행예정 거부 메모";
 
 	Response CheckResponse = null;
@@ -27,13 +40,13 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>발행예정 거부 확인</legend>
+				<legend>발행예정 거부</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

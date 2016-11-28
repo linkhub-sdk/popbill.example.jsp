@@ -7,20 +7,30 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.AttachedFile"%>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";				// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;			// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-01";					// 세금계산서 연동관리번호
+  /**
+  * 세금계산서에 첨부된 파일의 목록을 확인합니다.
+  * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API) 호출시 이용할 수 있습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
+
 	AttachedFile[] attachedFiles = null;
 
 	try {
 
-		attachedFiles = taxinvoiceService.getFiles(testCorpNum, keyType, mgtKey);		
+		attachedFiles = taxinvoiceService.getFiles(testCorpNum, keyType, mgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

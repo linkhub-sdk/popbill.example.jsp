@@ -5,17 +5,28 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";				// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;			// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-03";					// 세금계산서 연동관리번호
-	String emailAddr = "weicome@innopost.com";		// 메일주소
+  /*
+  * 발행 안내메일을 재전송합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 메일주소
+	String emailAddr = "test@test.com";
 
 	Response CheckResponse = null;
 
@@ -33,7 +44,7 @@
 			<p class="heading1">Respones</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>메일 재전송 결과 확인</legend>
+				<legend>안내메일 재전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

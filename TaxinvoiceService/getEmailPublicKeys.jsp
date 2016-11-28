@@ -7,12 +7,17 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.EmailPublicKey"%>
 
 <%
-	String testCorpNum = "1231212312";			//회원 사업자번호
+  /**
+  * 대용량 연계사업자 메일주소 목록을 반환합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
 	EmailPublicKey[] emailPublicKeyList = null;
 
 	try {
@@ -24,7 +29,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
@@ -32,19 +37,18 @@
 			<fieldset class="fieldset1">
 				<legend>연계사업자 이메일 목록</legend>
 				<%
-					for(int i=0; i<emailPublicKeyList.length; i++){
+					for(int i=0; i<emailPublicKeyList.length; i++) {
 						EmailPublicKey emailPublicKey = emailPublicKeyList[i];
 				%>
-				<fieldset class="fieldset2">
-					<legend>ConfirmNum : <%= emailPublicKey.getConfirmNum() %></legend>
-						<ul>
-							<li>email : <%= emailPublicKey.getEmail() %></li>
-						</ul>
-				</fieldset>
+  				<fieldset class="fieldset2">
+  					<legend>ConfirmNum : <%= emailPublicKey.getConfirmNum() %></legend>
+  						<ul>
+  							<li>email : <%= emailPublicKey.getEmail() %></li>
+  						</ul>
+  				</fieldset>
 					<%
 						}
 					%>
-
 			</fieldset>
 		 </div>
 </html>

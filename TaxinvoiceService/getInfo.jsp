@@ -7,18 +7,28 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceInfo"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;		// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-12";				// 세금계산서 연동관리번호
+  /**
+  * 1건의 세금계산서 상태/요약 정보를 확인합니다.
+  * - 세금계산서 상태정보(GetInfo API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
+  *   > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161125-01";
 
 	TaxinvoiceInfo taxinvoiceInfo = null;
-	
+
 	try {
 
 		taxinvoiceInfo = taxinvoiceService.getInfo(testCorpNum, keyType, mgtKey);

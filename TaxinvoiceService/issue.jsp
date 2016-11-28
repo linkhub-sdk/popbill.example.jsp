@@ -5,17 +5,33 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";		// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-04";			// 세금계산서 연동관리번호
+  /**
+  * [발행완료] 상태의 세금계산서를 [발행취소] 처리합니다.
+  * - [발행취소]는 국세청 전송전에만 가능합니다.
+  * - 발행취소된 세금계산서는 국세청에 전송되지 않습니다.
+  * - 발행취소 세금계산서에 기재된 문서관리번호를 재사용 하기 위해서는
+  *   삭제(Delete API)를 호출하여 [삭제] 처리 하셔야 합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 연동관리번호
+	String mgtKey = "20161128-01";
+
+  // 메모
 	String memo = "발행 메모";
+  
 	Response CheckResponse = null;
 
 	try {
@@ -27,7 +43,7 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

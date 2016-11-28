@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.TISearchResult"%>
@@ -12,27 +13,65 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	String DType = "W";							// 일자유형, R-등록일자, W-작성일자, I-발행일자
-	String SDate = "20160701";					// 시작일자
-	String EDate = "20160831";					// 종료일자
-	String[] State = {"100", "2**", "3**"};		// 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
-	String[] Type = {"N", "M"};					// 문서유형 배열, N-일반세금계산서, M-수정세금계산서
-	String[] TaxType = {"T","Z"};				// 과세형태 배열, T-과세, N-면세, Z-영세
-	Boolean LateOnly = null;					// 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
-  String TaxRegIDType = "S";      // 종사업장 식별번호 유형, S-공급자, B-공급받는자, T-수탁자
-  String TaxRegID = "";           // 종사업장번호, 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
-  String TaxRegIDYN = "";         // 종사업장번호 조회 여부, 공백-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음.
-  String QString = "";        // 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재, 공백시 전체조회
-	int Page = 1;								// 페이지번호
-	int PerPage = 30;							// 페이지당 검색개수, 최대 1000건
-	String Order = "D";							// 정렬방향, A-오름차순, D-내림차순
+  /**
+  * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] >
+  *   4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 일자유형, R-등록일자, W-작성일자, I-발행일자
+	String DType = "W";
+
+  // 시작일자, 날짜형식(yyyyMMdd)
+	String SDate = "20161001";
+
+  // 종료일자, 날짜형식(yyyyMMdd)
+	String EDate = "20161231";
+
+  // 세금계산서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+	String[] State = {"100", "2**", "3**"};
+
+  // 문서유형 배열, N-일반세금계산서, M-수정세금계산서
+	String[] Type = {"N", "M"};
+
+  // 과세형태 배열, T-과세, N-면세, Z-영세
+	String[] TaxType = {"T","Z"};
+
+  // 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
+	Boolean LateOnly = null;
+
+
+  // 종사업장 식별번호 유형, S-공급자, B-공급받는자, T-수탁자
+  String TaxRegIDType = "S";
+
+  // 종사업장번호, 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
+  String TaxRegID = "";
+
+  // 종사업장번호 조회 여부, 빈문자열-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음.
+  String TaxRegIDYN = "";
+
+  // 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재, 공백시 전체조회
+  String QString = "";
+
+
+  // 페이지번호
+	int Page = 1;
+
+  // 페이지당 검색개수, 최대 1000건
+	int PerPage = 30;
+
+  // 정렬방향, A-오름차순, D-내림차순
+	String Order = "D";
 
 	TISearchResult searchResult = new TISearchResult();
 
 	try {
-
-		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType, SDate, EDate, State, Type, TaxType, LateOnly, TaxRegIDType, TaxRegID, TaxRegIDYN, QString, Page, PerPage, Order);
+		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType,
+      SDate, EDate, State, Type, TaxType, LateOnly, TaxRegIDType, TaxRegID,
+      TaxRegIDYN, QString, Page, PerPage, Order);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -40,13 +79,12 @@
 		throw pe;
 	}
 %>
-
 	<body>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 목록 조회</legend>
+				<legend>세금계산서 목록조회</legend>
 				<ul>
 					<li>code (응답코드) : <%= searchResult.getCode()%></li>
 					<li>message (응답메시지) : <%= searchResult.getMessage()%></li>
@@ -55,10 +93,10 @@
 					<li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
 					<li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
 				</ul>
-
 					<%
 						TaxinvoiceInfo taxinvoiceInfo = null;
-						for(int i=0; i< searchResult.getList().size(); i++){
+
+						for ( int i = 0; i< searchResult.getList().size(); i++ ) {
 							taxinvoiceInfo = searchResult.getList().get(i);
 					%>
 
@@ -101,11 +139,9 @@
 									<li>ntssendErrCode : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
 								</ul>
 						</fieldset>
-
 					<%
 						}
 					%>
-
 			</fieldset>
 		 </div>
 	</body>

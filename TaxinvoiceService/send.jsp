@@ -5,19 +5,37 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1234567890";		// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20150616-03";			// 세금계산서 연동관리번호
-	String memo = "발행예정 메모";			// 전송메일과 이력정보에 기재되는 메모
-	String userId = "testkorea";			// 팝빌회원 아이디 
-	String emailSubject = "";				// 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
+  /**
+  * 1건의 [임시저장] 상태의 세금계산서를 [발행예정] 처리합니다.
+  * - 발행예정이란 공급자와 공급받는자 사이에 세금계산서 확인 후 발행하는 방법입니다.
+  * - "[전자세금계산서 API 연동매뉴얼] > 1.3.1. 정발행 프로세스 흐름도> 다. 임시저장 발행예정"
+  *   에 작성된 프로세스를 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 메모
+	String memo = "발행예정 메모";
+
+  // 팝빌회원 아이디
+	String userId = "testkorea";
+
+  // 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
+	String emailSubject = "";
 
 	Response CheckResponse = null;
 

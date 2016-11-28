@@ -5,15 +5,27 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+  
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceInfo"%>
 
 <%
-	String testCorpNum = "1231212312";				// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;			// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String[] MgtKeyList = new String[] {"20141230-01","20141230-02"};	// 세금계산서 연동관리번호 배열 (최대 1000건)
+  /**
+  * 다량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
+  * - 세금계산서 상태정보(GetInfos API) 응답항목에 대한 자세한 정보는
+  *  "[전자세금계산서 API 연동매뉴얼] > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 연동관리번호 배열 (최대 1000건)
+	String[] MgtKeyList = new String[] {"20141230-01","20141230-02"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;
 
@@ -40,10 +52,10 @@
 						for(int i=0; i< taxinvoiceInfos.length; i++){
 							taxinvoiceInfo = taxinvoiceInfos[i];
 					%>
-					
+
 						<fieldset class="fieldset2">
 							<legend>TaxinvoiceInfos</legend>
-								<ul>	
+								<ul>
 									<li>itemKey : <%= taxinvoiceInfo.getItemKey()%></li>
 									<li>taxType : <%= taxinvoiceInfo.getTaxType()%></li>
 									<li>writeDate : <%= taxinvoiceInfo.getWriteDate()%></li>
@@ -79,9 +91,9 @@
 									<li>ntsresultDT : <%= taxinvoiceInfo.getNTSResultDT() %></li>
 									<li>ntssendErrCode : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
 								</ul>
-						</fieldset>		
-						
-					<%			
+						</fieldset>
+
+					<%
 						}
 					%>
 

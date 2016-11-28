@@ -7,16 +7,15 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.CorpInfo"%>
 
 <%
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserId = "testkorea";			// 연동회원 아이디 
-	
+	String testUserId = "testkorea";			// 연동회원 아이디
+
 	CorpInfo corpInfo = null;
-	
+
 	try {
 
 		corpInfo = taxinvoiceService.getCorpInfo(testCorpNum, testUserId);

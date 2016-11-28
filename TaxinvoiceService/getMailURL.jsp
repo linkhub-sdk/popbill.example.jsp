@@ -5,28 +5,41 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-	String testCorpNum = "1231212312";		// 회원 사업자번호
-	MgtKeyType keyType = MgtKeyType.SELL;   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	String mgtKey = "20141230-12";			// 세금계산서 연동관리번호
-	String userID = "userid";
+  /**
+  * 공급받는자 메일링크 URL을 반환합니다.
+  * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+  */
+  
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	MgtKeyType keyType = MgtKeyType.SELL;
+
+  // 세금계산서 연동관리번호
+	String mgtKey = "20161125-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
 	String url = null;
 
 	try {
 
-			url = taxinvoiceService.getMailURL(testCorpNum, keyType, mgtKey, userID);
+		url = taxinvoiceService.getMailURL(testCorpNum, keyType, mgtKey, userID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
