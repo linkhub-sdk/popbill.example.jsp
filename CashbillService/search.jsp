@@ -7,35 +7,61 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.CashbillInfo"%>
 <%@page import="com.popbill.api.cashbill.CBSearchResult"%>
 
 <%
-	// 현금영수증 목록 조회
+	/**
+  * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성"
+  *   을 참조하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-	String DType = "R";						// 검색일자 유형, R-등록일자, T-거래일자, I-발행일자
-	String SDate = "20160701";				// 시작일자, yyyyMMdd
-	String EDate = "20160731";				// 종료일자, yyyyMMdd
+  // 검색일자 유형, R-등록일자, T-거래일자, I-발행일자ㄴ
+	String DType = "R";
 
-	String[] State = {"100", "2**", "3**"};	// 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
-	String[] TradeType = {"N", "C"};		// 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
-	String[] TradeUsage = {"P", "C"};		// 거래용도 배열, P-소득공제용, C-지출증빙용
-	String[] TaxationType = {"T", "N"};		// 과세형태 배열, T-과세, N-비과세
-  String QString = "1234";            // 식별번호조회
+  // 시작일자, 날짜형태(yyyyMMdd)
+	String SDate = "20161001";
 
-	int Page = 1;							// 페이지 번호
-	int PerPage = 20;						// 페이지당 검색개수, 최대 1000개
-	String Order = "D";						// 정렬방향, D-내림차순, A-오름차순
+  // 종료일자, 날짜형태(yyyyMMdd)
+	String EDate = "20160731";
+
+  // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+	String[] State = {"100", "2**", "3**"};
+
+  // 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
+	String[] TradeType = {"N", "C"};
+
+  // 거래용도 배열, P-소득공제용, C-지출증빙용
+	String[] TradeUsage = {"P", "C"};
+
+  // 과세형태 배열, T-과세, N-비과세
+	String[] TaxationType = {"T", "N"};
+
+  // 현금영수증 식별번호 조회
+  String QString = "";
+
+  // 페이지 번호
+	int Page = 1;
+
+  // 페이지당 검색개수, 최대 1000개
+	int PerPage = 20;
+
+  // 정렬방향, D-내림차순, A-오름차순
+	String Order = "D";
 
 	CBSearchResult searchResult = null;
 
-	// 현금영수증 상태정보 항목에 대한 설명은 [현금영수증 API 연동매뉴얼 - 4.2 현금영수증 상태정보 구성] 참조
+
 	try {
-		searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State, TradeType, TradeUsage, TaxationType, QString, Page, PerPage, Order);
+
+    searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
+      TradeType, TradeUsage, TaxationType, QString, Page, PerPage, Order);
+
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
@@ -59,7 +85,8 @@
 
 				<%
 					CashbillInfo cashbillInfo = null;
-					for(int i=0; i< searchResult.getList().size(); i++){
+
+          for ( int i = 0; i < searchResult.getList().size(); i++ ) {
 						cashbillInfo = searchResult.getList().get(i);
 				%>
 

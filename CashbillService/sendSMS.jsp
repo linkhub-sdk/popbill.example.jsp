@@ -5,24 +5,35 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		알림문자 전송
-		문자전송내용이 90Byte를 초과한경우 길이가 조정되어 전송됨
-	*/
+	/**
+  * 알림문자를 전송합니다. (단문/SMS- 한글 최대 45자)
+  * - 알림문자 전송시 포인트가 차감됩니다. (전송실패시 환불처리)
+  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [전송내역] 탭에서 전송결과를 확인할 수 있습니다.
+  */
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	String mgtKey = "20150319-01";				// 현금영수증 문서관리번호
-	String userID = "testkorea";				// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-	String sender = "07075103710";				// 발신번호
-	String receiver = "01043245117";			// 수신번호 
-	String contents = "현금영수증 문자메시지 전송 테스트입니다.";		// 문자 전송 내용 (90Byte 초과시 길이가 조정되어 전송)
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // 발신번호
+	String sender = "07043042991";
+
+  // 수신번호
+	String receiver = "010111222";
+
+  // 문자 전송 내용 (90Byte 초과시 길이가 조정되어 전송)
+	String contents = "현금영수증 문자메시지 전송 테스트입니다.";
 
 	Response CheckResponse = null;
 

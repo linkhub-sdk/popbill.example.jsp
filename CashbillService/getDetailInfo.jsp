@@ -5,19 +5,23 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.Cashbill"%>
 
 <%
-	/*
-		현금영수증 상세정보 확인
-		현금영수증 항목에 대한 설명은 [현금영수증 API 연동매뉴얼 > 4.1 현금영수증 구성] 참조
-	*/
+	/**
+  * 현금영수증 1건의 상세정보를 조회합니다.
+  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.
+  *   현금영수증 구성" 을 참조하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	String mgtKey = "20150319-01";				// 현금영수증 문서관리번호
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
 
 	Cashbill cashbill = null;
 
@@ -37,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 조회 결과</legend>
+				<legend>현금영수증 상세정보 조회</legend>
 				<fieldset class="fieldset2">
 					<legend>Cashbill</legend>
 					<ul>
@@ -45,13 +49,13 @@
 						<li>tradeDate : <%=cashbill.getTradeDate() %></li>
 						<li>tradeUsage : <%=cashbill.getTradeUsage() %></li>
 						<li>tradeType : <%=cashbill.getTradeType() %></li>
-						
+
 						<li>taxationType : <%=cashbill.getTaxationType() %></li>
 						<li>supplyCost : <%=cashbill.getSupplyCost() %></li>
 						<li>tax : <%=cashbill.getTax() %></li>
 						<li>serviceFee : <%=cashbill.getServiceFee() %></li>
 						<li>totalAmount : <%=cashbill.getTotalAmount() %></li>
-						
+
 						<li>franchiseCorpNum : <%=cashbill.getFranchiseCorpNum() %></li>
 						<li>franchiseCorpName : <%=cashbill.getFranchiseCorpName() %></li>
 						<li>franchiseCEOName : <%=cashbill.getFranchiseCEOName() %></li>

@@ -7,17 +7,22 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		현금영수증 인쇄 팝업 URL 확인, 등록(임시저장) 상태의 문서는 표시되지 않음
-	*/
+	/**
+  * 1건의 현금영수증 인쇄팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String mgtKey = "20150319-01";			// 현금영수증 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	String url = null;
 

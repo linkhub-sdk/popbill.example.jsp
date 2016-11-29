@@ -5,20 +5,26 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		현금영수증 삭제
-		[등록(임시저장)], [발행취소] 상태의 현금영수증만 삭제가능	
-	*/
+	/**
+  * 1건의 현금영수증을 삭제합니다.
+  * - 현금영수증을 삭제하면 사용된 문서관리번호(mgtKey)를 재사용할 수 있습니다.
+  * - 삭제가능한 문서 상태 : [임시저장], [발행취소]
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String mgtKey = "20150319-01";			// 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
@@ -37,7 +43,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 삭제 확인</legend>
+				<legend>현금영수증 삭제</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

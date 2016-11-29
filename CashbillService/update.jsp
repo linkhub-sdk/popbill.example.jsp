@@ -12,48 +12,96 @@
 <%@page import="com.popbill.api.cashbill.Cashbill"%>
 
 <%
-	/*
-		현금영수증 수정, 기재 항목의 수정은 등록(임시저장) 한 경우에만 가능
-		현금영수증 입력항목에 관한 자세한 사항은 [현금영수증 API 연동매뉴얼> 4.1 현금영수증 구성] 참조
-	*/
+	/**
+  * 1건의 현금영수증을 수정합니다.
+  * - [임시저장] 상태의 현금영수증만 수정할 수 있습니다.
+  * - 국세청에 신고된 현금영수증은 수정할 수 없으며, 취소 현금영수증을 발행하여 취소처리 할 수 있습니다.
+  * - 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
+  */
 
-	
+
+  // 현금영수증 정보 객체
 	Cashbill cashbill = new Cashbill();
 
-	cashbill.setMgtKey("20150319-02");				// 수정(update)시 문서관리번호를 다르게 기재하더라도 문서관리번호는 변경되지 않음
-	cashbill.setTradeType("승인거래");				// 현금영수증 형태, {승인거래, 취소거래} 중 기재
-	cashbill.setTradeUsage("소득공제용");			// 거래유형, {소득공제용, 지출증빙용} 중 기재
-	cashbill.setTaxationType("과세");				// 과세형태, {과세, 비과세} 중 기재
-	
-	cashbill.setIdentityNum("01043245117");			// 거래처 식별번호, 거래유형(TradeUsage) : 소득공제용인 경우 - (주민등록/휴대폰/카드)번호 기재
-													//					거래유형(TradeUsage) : 지출증빙용인 경우 - 사업자번호 기재
+  // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+	cashbill.setMgtKey("20161129-01");
 
-	cashbill.setFranchiseCorpNum("1234567890");		// 발행자 사업자번호, '-'제외 10자리 
-	cashbill.setFranchiseCorpName("발행자 상호_수정");	
-	cashbill.setFranchiseCEOName("발행자 대표자_수정");
+  // 현금영수증 형태, {승인거래, 취소거래} 중 기재
+	cashbill.setTradeType("승인거래");
+
+  // 거래유형, {소득공제용, 지출증빙용} 중 기재
+	cashbill.setTradeUsage("소득공제용");
+
+  //거래처 식별번호, 거래유형에 따라 작성
+  //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
+  //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
+  cashbill.setIdentityNum("01043245117");
+
+  // 과세형태, {과세, 비과세} 중 기재
+  cashbill.setTaxationType("과세");
+
+  // 공급가액, 숫자만 가능
+  cashbill.setSupplyCost("10000");
+
+  // 세액, 숫자만 가능
+	cashbill.setTax("1000");
+
+  // 봉사료, 숫자만 가능
+	cashbill.setServiceFee("0");
+
+  // 합계금액, 숫자만 가능, 봉사료 + 공급가액 + 세액
+	cashbill.setTotalAmount("11000");
+
+
+  // 발행자 사업자번호, '-'제외 10자리
+	cashbill.setFranchiseCorpNum("1234567890");
+
+  // 발행자 상호
+	cashbill.setFranchiseCorpName("발행자 상호");
+
+  // 발행자 대표자성명
+	cashbill.setFranchiseCEOName("발행자 대표자");
+
+  // 발행자 주소
 	cashbill.setFranchiseAddr("발행자 주소");
-	cashbill.setFranchiseTEL("07075103710");	
-	cashbill.setSmssendYN(false);					// 발행시 알림문자 자동전송여부
 
+  // 발행자 연락처
+	cashbill.setFranchiseTEL("07043042991");
+
+  // 발행시 안내문자 전송여부
+	cashbill.setSmssendYN(false);
+
+
+  // 고객명
 	cashbill.setCustomerName("고객명");
-	cashbill.setItemName("상품명");
-	cashbill.setOrderNumber("주문번호");
-	cashbill.setEmail("test@test.com");
-	cashbill.setHp("01043245117");
-	cashbill.setFax("07075103710");
 
-	cashbill.setSupplyCost("100000");				// 공급가액, 숫자만 가능
-	cashbill.setTax("10000");						// 세액, 숫자만 가능
-	cashbill.setServiceFee("0");					// 봉사료, 숫자만 가능
-	cashbill.setTotalAmount("110000");				// 합계금액, 숫자만 가능, 봉사료 + 공급가액 + 세액
-		
+  // 상품명
+	cashbill.setItemName("상품명");
+
+  // 주문번호
+	cashbill.setOrderNumber("주문번호");
+
+  // 고객 메일주소
+	cashbill.setEmail("test@test.com");
+
+  // 고객 휴대폰번호
+	cashbill.setHp("01043245117");
+
+  // 고객 팩스번호
+	cashbill.setFax("070111222");
+
 	Response CheckResponse = null;
 
 	try {
 
-		String testCorpNum = "1234567890";		// 팝빌회원 사업자번호
-		String userID = "testkorea";			// 팝빌회원 아이디
-		String mgtKey = "20150319-01";			// 수정할 현금영수증 문서관리번호
+    // 팝빌회원 사업자번호
+		String testCorpNum = "1234567890";
+
+    // 팝빌회원 아이디
+		String userID = "testkorea";
+
+    // 현금영수증 문서관리번호
+		String mgtKey = "20150319-01";
 
 		CheckResponse = cashbillService.update(testCorpNum, mgtKey, cashbill, userID);
 
@@ -68,7 +116,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 수정 확인</legend>
+				<legend>임시저장 현금영수증 수정</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

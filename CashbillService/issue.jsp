@@ -5,17 +5,26 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 현금영수증 발행
+  /**
+  * [발행완료] 상태의 현금영수증을 [발행취소] 합니다.
+  * - 발행취소는 국세청 전송전에만 가능합니다.
+  * - 발행취소된 형금영수증은 국세청에 전송되지 않습니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String mgtKey = "20150318-02";			// 현금영수증 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150318-02";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 

@@ -5,20 +5,25 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
 	/*
-		현금영수증 발행취소 
+		현금영수증 발행취소
 		[발행완료] 국세청 전송전까지 가능, 발행취소 시 국세청으로 전송되지 않음
 	*/
-	
-	String testCorpNum = "1234567890";		// 팝빌회원 사업자번호
-	String mgtKey = "20150318-02";			// 현금영수증 문서관리번호
-	String userID = "testkorea";			// 팝빌회원 아이디
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20161128-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
@@ -37,7 +42,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 발행취소 처리</legend>
+				<legend>현금영수증 발행취소</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

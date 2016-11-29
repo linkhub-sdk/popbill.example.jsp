@@ -10,14 +10,19 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		현금영수증 관련 팝빌 URL 확인 - 임시문서함, 발행문서함
-		반환된 URL은 AccessToken이 포함되어 30초의 후 만료됨.
-	*/
+	/**
+  * 팝빌 현금영수증 문서함 관련 팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String userID = "testkorea";			// 연동회원 아이디
-	String TOGO = "PBOX";					// TBOX : 임시문서함, PBOX : 발행문서함
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // TBOX : 임시문서함, PBOX : 발행문서함
+	String TOGO = "PBOX";
 
 	String url = null;
 
@@ -36,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 관련 URL 확인</legend>
+				<legend>현금영수증 문서함 관련 URL 확인</legend>
 				<ul>
 					<li>URL : <%=url%></li>
 				</ul>

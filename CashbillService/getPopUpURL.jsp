@@ -7,17 +7,22 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/*
-		현금영수증의 팝빌 화면을 표시하는 URL 확인
-	*/
+	/**
+  * 1건의 현금영수증 보기 팝업 URL을 반환합니다.
+  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String mgtKey = "20150319-01";			// 현금영수증 문서관리번호
-	String userID = "testkorea";			// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	String url = null;
 
@@ -36,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 내용 보기 URL 확인</legend>
+				<legend>현금영수증 보기 팝업 URL 확인</legend>
 				<ul>
 					<li>URL : <%=url%></li>
 				</ul>

@@ -5,18 +5,27 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 알림메일 재전송 요청
+	/**
+  * 발행 안내메일을 재전송합니다.
+  */
 
-	String testCorpNum = "1234567890";				// 연동회원 사업자번호
-	String mgtKey = "20150318-02";					// 현금영수증 문서관리번호
-	String receiver = "test@test.com";		// 수신자 이메일주소
-	String userID = "testkorea";					// 연동회원 아이디
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150318-02";
+
+  // 수신메일주소
+	String receiver = "test@test.com";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
@@ -35,7 +44,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 이메일 재전송</legend>
+				<legend>현금영수증 안내메일 재전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

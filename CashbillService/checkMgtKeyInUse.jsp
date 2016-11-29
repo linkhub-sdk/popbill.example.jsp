@@ -5,22 +5,28 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
-<%	
-	// 문서관리번호 사용여부 확인
+<%
+	/**
+  * 현금영수증 관리번호 중복여부를 확인합니다.
+  * - 관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+  */
 
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String mgtKey = "20150319-01";			// 문서관리번호
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
 
 	boolean isInUse;
 
 	try {
 
-		isInUse = cashbillService.checkMgtKeyInUse(testCorpNum,mgtKey);
-		
+		isInUse = cashbillService.checkMgtKeyInUse(testCorpNum, mgtKey);
+
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
@@ -32,7 +38,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>문서관리번호 사용여부 확인 결과</legend>
+				<legend>문서관리번호 사용여부 확인</legend>
 				<ul>
 					<li>사용중 여부 : <%=isInUse ? "사용중" : "미 사용중"%></li>
 				</ul>

@@ -7,25 +7,28 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.CashbillInfo"%>
 
 <%
-	/*
-		현금영수증 상태/요약 정보 확인
-		현금영수증 상태정보 항목에 대한 설명은 [현금영수증 API 연동매뉴얼 - 4.2 현금영수증 상태정보 구성] 참조
-	*/
+	/**
+  * 1건의 현금영수증 상태/요약 정보를 확인합니다.
+  * - 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼] > 4.2.
+  *   현금영수증 상태정보 구성"을 참조하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	String mgtKey = "20150319-01";				// 현금영수증 문서관리번호
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150319-01";
 
 	CashbillInfo cashbillInfo = null;
-	
+
 	try {
 
 		cashbillInfo = cashbillService.getInfo(testCorpNum, mgtKey);
-		
+
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.

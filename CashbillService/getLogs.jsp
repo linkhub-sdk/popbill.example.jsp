@@ -5,16 +5,23 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.CashbillLog"%>
 
 <%
-	// 현금영수증 문서이력 확인
+	/**
+  * 현금영수증 상태변경 이력을 확인합니다.
+  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼]
+  * > 3.4.4 상태 변경이력 확인" 을 참조하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";			// 연동회원 사업자번호
-	String mgtKey = "20150318-02";				// 현금영수증 문서관리번호.
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 현금영수증 문서관리번호
+	String mgtKey = "20150318-02";
 
 	CashbillLog[] cashbillLogs = null;
 
@@ -33,7 +40,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 문서이력 확인</legend>
+				<legend>현금영수증 상태변경 이력 확인</legend>
 				<%
 						CashbillLog cashbillLog = new CashbillLog();
 						for(int i=0; i<cashbillLogs.length; i++){

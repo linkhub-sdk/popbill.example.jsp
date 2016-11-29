@@ -7,26 +7,27 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.CashbillInfo"%>
 
 <%
-	// 다량 현금영수증 상태/요약정보 확인(최대 1000건)
+	/**
+  * 다수건의 현금영수증 상태/요약 정보를 확인합니다.
+  * - 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성"을
+  *   참조하시기 바랍니다.
+  */
 
-	// 연동회원 사업자번호
-	String testCorpNum = "1234567890";			
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서관리번호 배열 최대(1000건)
-	String[] mgtKeyList = new String[] {"20150317-01", "20150317-02", "20150318-02", "20150319-01"}; 
+	String[] mgtKeyList = new String[] {"20150317-01", "20150317-02", "20150318-02", "20150319-01"};
 
 	CashbillInfo[] cashbillInfos = null;
-	
+
 	try {
 
 		cashbillInfos = cashbillService.getInfos(testCorpNum, mgtKeyList);
-
-		// 현금영수증 상태정보 항목에 대한 설명은 [현금영수증 API 연동매뉴얼 - 4.2 현금영수증 상태정보 구성] 참조
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -39,9 +40,9 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>다량 현금영수증 상태/요약 정보 확인</legend>
+				<legend>현금영수증 상태/요약 정보 확인 - 대량</legend>
 
-				<% 
+				<%
 					CashbillInfo cashbillInfo = null;
 					for(int i=0; i< cashbillInfos.length; i++){
 						cashbillInfo = cashbillInfos[i];

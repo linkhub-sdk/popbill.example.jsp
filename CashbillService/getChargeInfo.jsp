@@ -7,12 +7,16 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.ChargeInfo" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+  /**
+  * 연동회원의 현금영수증 API 서비스 과금정보를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
 	ChargeInfo chargeInfo = null;
 
