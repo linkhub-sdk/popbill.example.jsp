@@ -7,13 +7,22 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.hometax.HTCashbillJobState" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserID = "testkorea";			// 연동회원 아이디
+  /**
+  * 수집 요청건들에 대한 상태 목록을 확인합니다.
+  * - 수집 요청 작업아이디(JobID)의 유효시간은 1시간 입니다.
+  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
+  *   > 3.2.3. ListActiveJob (수집 상태 목록 확인)" 을 참고하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String testUserID = "testkorea";
 
   HTCashbillJobState[] jobList = null;
 
@@ -33,8 +42,8 @@
 			<br/>
 			<fieldset class="fieldset1">
         <%
-          if ( jobList != null ){
-            for(int i=0; i<jobList.length; i++){
+          if ( jobList != null ) {
+            for ( int i = 0; i < jobList.length; i++ ) {
         %>
           <fieldset class="fieldset2">
           <legend>jobID (작업아이디) :  <%= jobList[i].getJobID() %> </legend>
@@ -52,8 +61,9 @@
             <li>regDT (수집 요청일시) : <%=jobList[i].getRegDT() %> </li>
           </ul>
           </fieldset>
-          <%		}
-            }
+          <%
+        	    }
+           }
           %>
 
 			</fieldset>

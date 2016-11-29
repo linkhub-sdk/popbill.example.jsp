@@ -7,17 +7,31 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.hometax.QueryType" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserId = "testkorea";			// 연동회원 아이디
+  /**
+  * 현금영수증 매출/매입 내역 수집을 요청합니다
+  * - 매출/매입 연계 프로세스는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
+  *   > 1.2. 프로세스 흐름도" 를 참고하시기 바랍니다.
+  * - 수집 요청후 반환받은 작업아이디(JobID)의 유효시간은 1시간 입니다.
+  */
 
-  QueryType CashbillType = QueryType.SELL;   // SELL-매출연계, BUY-매입연계
-  String SDate = "20160501";                // 시작일자, 표시형식(yyyyMMdd)
-  String EDate = "20160731";                // 종료일자, 표시형식(yyyyMMdd)
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String testUserId = "testkorea";
+
+  // 현금영수증 유형, SELL-매출, BUY-매입
+  QueryType CashbillType = QueryType.SELL;
+
+  // 시작일자, 날짜형식(yyyyMMdd)
+  String SDate = "20161001";
+
+  // 종료일자, 날짜형식(yyyyMMdd)
+  String EDate = "20161231";
 
 	String jobID = null;
 

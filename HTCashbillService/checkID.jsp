@@ -7,12 +7,16 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String userID = "testkorea1234";		// 조회할 아이디
+  /**
+  * 팝빌 회원아이디 중복여부를 확인합니다.
+  */
+
+  // 조회할 아이디
+	String userID = "testkorea1234";
 
 	Response CheckResponse = null;
 
@@ -31,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>아이디 중복확인 </legend>
+				<legend>아이디 중복확인</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

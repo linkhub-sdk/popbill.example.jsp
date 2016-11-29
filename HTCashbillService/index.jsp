@@ -17,15 +17,14 @@
 
 			<fieldset class="fieldset1">
 				<legend>팝빌 기본 API</legend>
-
 				<fieldset class="fieldset2">
 					<legend>회원사 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/HTCashbillService/checkIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTCashbillService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTCashbillService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/HTCashbillService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/HTCashbillService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인 </li>
-						<li><a href="${pageContext.request.contextPath}/HTCashbillService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTCashbillService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/HTCashbillService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인 </li>
+						<li><a href="${pageContext.request.contextPath}/HTCashbillService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTCashbillService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTCashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/HTCashbillService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
@@ -41,7 +40,6 @@
 
 			<fieldset class="fieldset1">
 				<legend>홈택스 현금영수증 관련 API</legend>
-
 				<fieldset class="fieldset2">
 					<legend>홈택스 현금영수증 매출/매입 내역 수집</legend>
 					<ul>

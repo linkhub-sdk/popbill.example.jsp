@@ -7,15 +7,27 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.hometax.HTCashbillSummary"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String jobID = "016062015000000001";  // 수집 요청시 발급받은 작업아이디
-  String[] TradeUsage = {"P", "C"};     // 거래용도, P-소득공제용, C-지출증빙용
-  String[] TradeType = {"N", "C"};      // 거래유형, N-일반 현금영수증, C-취소현금영수증
+  /**
+  * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
+  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
+  *   > 3.3.2. Summary (수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+  String testCorpNum = "1234567890";
+
+  // 수집 요청시 발급받은 작업아이디
+  String jobID = "016062015000000001";
+
+  // 거래용도 배열, P-소득공제용, C-지출증빙용
+  String[] TradeUsage = {"P", "C"};
+
+  // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
+  String[] TradeType = {"N", "C"};
 
   HTCashbillSummary result = null;
 

@@ -7,19 +7,36 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.hometax.HTCashbillSearchResult"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String jobID = "016062015000000001";  // 수집 요청시 발급받은 작업아이디
-  String[] TradeUsage = {"P", "C"};     // 거래용도, P-소득공제용, C-지출증빙용
-  String[] TradeType = {"N", "C"};      // 거래유형, N-일반 현금영수증, C-취소현금영수증
+  /**
+  * 검색조건을 사용하여 수집결과를 조회합니다.
+  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
+  *   > 3.3.1. Search (수집 결과 조회)" 을 참고하시기 바랍니다.
+  */
 
-  int Page = 1;                         // 페이지번호
-  int PerPage = 15;                     // 페이지당 목록개수
-  String Order = "D";                   // 정렬방향, 내림차순-D, 오름차순-A
+  // 팝빌 회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 수집 요청시 발급받은 작업아이디
+  String jobID = "016062015000000001";
+
+  // 거래용도 배열, P-소득공제용, C-지출증빙용
+  String[] TradeUsage = {"P", "C"};
+
+  // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
+  String[] TradeType = {"N", "C"};
+
+  // 페이지번호
+  int Page = 1;
+
+  // 페이지당 목록개수
+  int PerPage = 15;
+
+  // 정렬방향, 내림차순-D, 오름차순-A
+  String Order = "D";
 
   HTCashbillSearchResult result = null;
 
@@ -50,7 +67,7 @@
 
         <%
           if ( result != null ){
-            for(int i=0; i < result.getList().size(); i++){
+            for ( int i = 0; i < result.getList().size(); i++ ) {
         %>
 
           <fieldset class="fieldset2">
