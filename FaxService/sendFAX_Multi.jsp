@@ -7,39 +7,45 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.io.File"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.popbill.api.fax.Receiver"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testUserID = "userid";			// 회원 아이디
-	String testCorpNum = "1231212312";		// 회원 사업자번호
-	String sendNum = "07075103710";			// 발신자 번호
-	String receiveName = "수신자 명칭";		
 
-	String receiptNum = null;				// 접수번호 (전송결과 확인 시 사용)
-	Date reserveDT = null;					// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+  // 팝빌회원 사업자번호
+  String testCorpNum = "1234567890";
 
-	File file = new File((application.getRealPath("/resources/사업자등록증.jpg")));		// 전송할 팩스 이미지파일 경로
+  // 팝빌회원 아이디
+	String testUserID = "testkorea";
 
-	//수신자 정보, 최대 1000개
+  // 발신번호번호
+	String sendNum = "07075103710";
+
+	// 수신정보
 	Receiver receiver1 = new Receiver();
 	receiver1.setReceiveName("수신자1");
-	receiver1.setReceiveNum("0264429700");
+	receiver1.setReceiveNum("070111222");
 
 	Receiver receiver2 = new Receiver();
 	receiver2.setReceiveName("수신자2");
-	receiver2.setReceiveNum("0264429700");
+	receiver2.setReceiveNum("070222333");
 
-	Receiver[] receivers = new Receiver[] {receiver1, receiver2};  // 팩스 수신자 번호 목록, 최대 1000개
-	
+  // 전송할 팩스 이미지파일 경로
+  File file = new File((application.getRealPath("/resources/test.jpg")));
 
-//	예약전송 시 참조
-//	String reserveDTtxt = "20141229180000";		
-//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-//	reserveDT = formatter.parse(reserveDTtxt);
+  // 팩스 수신자 번호 목록, 최대 1000개
+	Receiver[] receivers = new Receiver[] {receiver1, receiver2};
+
+  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+  //	String reserveDTtxt = "20141229180000";
+  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+  //	reserveDT = formatter.parse(reserveDTtxt);
+	Date reserveDT = null;
+
+
+  String receiptNum = null;
 
 	try {
 

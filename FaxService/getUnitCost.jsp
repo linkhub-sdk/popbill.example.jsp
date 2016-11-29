@@ -7,15 +7,20 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312";			//회원 사업자번호
-	float unitCost;
+  /**
+  * 팩스 전송단가를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+	float unitCost = null;
 
 	try {
-	
+
 		unitCost = faxService.getUnitCost(testCorpNum);
 
 	} catch (PopbillException pe) {
@@ -29,9 +34,9 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스 발송 단가 확인</legend>
+				<legend>팩스 전송단가 확인</legend>
 				<ul>
-					<li>발송 단가 : <%=unitCost%></li>
+					<li>전송단가 : <%=unitCost%></li>
 				</ul>
 			</fieldset>
 		 </div>

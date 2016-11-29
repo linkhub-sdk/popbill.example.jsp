@@ -7,14 +7,20 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.fax.FaxResult"%>
 
 <%
-	String testCorpNum = "1231212312";			// 회원 사업자번호
-	String receiptNum = "014123117464200001";	// 전송요청(sendFAX)시 발급받은 접수번호
-	
+  /**
+  * 팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 전송요청(sendFAX)시 발급받은 접수번호
+	String receiptNum = "014123117464200001";
+
 	FaxResult[] faxResults = null;
 
 	try {
@@ -36,7 +42,7 @@
 				<%
 					FaxResult faxResult = new FaxResult();
 
-					for(int i=0; i<faxResults.length; i++){
+					for ( int i = 0; i < faxResults.length; i++ ) {
 						faxResult = faxResults[i];
 				%>
 
@@ -62,7 +68,7 @@
 							String fileNames = "";
 							int namesLength = faxResult.getFileNames().length;
 
-							for(int j = 0; j < namesLength ; j++){
+							for (int j = 0; j < namesLength ; j++){
 								if ( namesLength == 1 || j == faxResult.getFileNames().length -1 ) {
 									fileNames += faxResult.getFileNames()[j];
 								} else {

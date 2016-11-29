@@ -5,13 +5,17 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.ContactInfo"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserID = "testkorea";		// 연동회원 아이디	
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String testUserID = "testkorea";
 
 	ContactInfo[] contactInfos = null;
 
@@ -38,10 +42,10 @@
 						for(int i=0; i< contactInfos.length; i++){
 							contactInfo = contactInfos[i];
 					%>
-					
+
 						<fieldset class="fieldset2">
 							<legend>ContactInfos <%=i+1%> / <%=contactInfos.length%></legend>
-								<ul>	
+								<ul>
 									<li>id : <%= contactInfo.getId()%></li>
 									<li>personName : <%= contactInfo.getPersonName()%></li>
 									<li>email : <%= contactInfo.getEmail()%></li>
@@ -51,12 +55,12 @@
 									<li>regDT (등록일시): <%= contactInfo.getRegDT()%></li>
 									<li>searchAllAllowYN (회사조회 권한여부): <%= contactInfo.getSearchAllAllowYN()%></li>
 									<li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
-				
+
 
 								</ul>
-						</fieldset>		
-						
-					<%			
+						</fieldset>
+
+					<%
 						}
 					%>
 

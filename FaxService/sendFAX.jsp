@@ -7,32 +7,43 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.io.File"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testUserID = "userid";			// 회원 아이디
-	String testCorpNum = "1231212312";		// 회원 사업자번호
-	String sendNum = "07075103710";			// 발신자 번호
-	String receiveNum = "0264429700";		// 수신 팩스 번호
-	String receiveName = "수신자 명칭";		
+  // 팝빌회원 사업자번호
+  String testCorpNum = "1234567890";
 
-	String receiptNum = null;				// 접수번호 (전송결과 확인 시 사용)
-	Date reserveDT = null;					// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-	
+  // 팝빌회원 아이디
+	String testUserID = "testkorea";
+
+  // 발신번호
+	String sendNum = "07043042991";
+
+  // 수신자명
+	String receiveName = "수신자 명칭";
+
+  // 수신 팩스번호
+	String receiveNum = "070111222";
+
+  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전ㅌ
+  //	String reserveDTtxt = "20141230180000";
+  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+  //	reserveDT = formatter.parse(reserveDTtxt);
+	Date reserveDT = null;
+
+
+  // 팩스전송파일 경로
 	File file = new File((application.getRealPath("/resources/test.jpg")));
 
-//	예약전송시 아래의 코드참조
-//	String reserveDTtxt = "20141230180000";		
-//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-//	reserveDT = formatter.parse(reserveDTtxt);
+  String receiptNum = null;
 
 	try {
 
-		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName, file, reserveDT, testUserID);
+		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName,
+      file, reserveDT, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -45,7 +56,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스 전송요청 결과 확인</legend>
+				<legend>팩스전송 요청</legend>
 				<ul>
 					<li>receiptNum : <%=receiptNum%></li>
 				</ul>

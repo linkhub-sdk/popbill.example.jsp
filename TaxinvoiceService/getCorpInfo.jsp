@@ -39,7 +39,7 @@
 						<li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>
 						<li>Addr (주소) : <%=corpInfo.getAddr() %> </li>
 						<li>BizClass (업종) : <%=corpInfo.getBizClass() %> </li>
-						<li>BiaType (업태) : <%=corpInfo.getBizType() %> </li>
+						<li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
 					</ul>
 				</fieldset>
 			</fieldset>

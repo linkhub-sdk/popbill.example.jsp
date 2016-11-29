@@ -7,17 +7,27 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312";	// 회원 사업자번호 
-	String userid = "userid";			// 회원 아이디
-	String TOGO = "BOX";				// BOX : 팩스 전송 내역 조회 팝업
-	String url = null;	
-	
+  /**
+  * 팩스 전송내역 목록 팝업 URL을 반환합니다.
+  * 보안정책으로 인해 반환된 URL은 30초의 유효시간을 갖습니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1231212312";
+
+  // 팝빌회원 아이디
+	String userid = "userid";
+
+  // BOX : 팩스 전송 내역 조회 팝업
+	String TOGO = "BOX";
+
+	String url = null;
+
 	try {
-			
+
 		url = faxService.getURL(testCorpNum, userid, TOGO);
 
 	} catch (PopbillException pe) {
@@ -25,13 +35,13 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스전송 관련 SSO URL 확인</legend>
+				<legend>팩스 전송내역 목록 팝업 URL 확인</legend>
 				<ul>
 					<li>url : <%=url%></li>
 				</ul>

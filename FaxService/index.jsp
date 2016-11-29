@@ -18,13 +18,13 @@
 			<fieldset class="fieldset1">
 				<legend>팝빌 기본 API</legend>
 				<fieldset class="fieldset2">
-					<legend>회원사 정보</legend>
+					<legend>회원 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/FaxService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/FaxService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/FaxService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/registContact.jsp">registContact</a> - 담당자 등록</li>
@@ -50,11 +50,11 @@
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과/예약취소</legend>
+					<legend>전송결과 / 예약취소</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 팩스전송내역 조회</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 접수번호에 해당하는 팩스 전송결과 확인</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약전송 팩스의 예약 취소. 예약시간 10분전까지만 가능.</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 팩스전송 목록조회</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 팩스 전송결과 조회</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약팩스전송 취소</li>
 					</ul>
 				</fieldset>
 
@@ -62,9 +62,10 @@
 					<legend>기타</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/FaxService/getURL.jsp">getURL</a> - 팩스 관련 SSO URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/getUnitCost.jsp">getUnitCost</a> - 팩스 발송 단가 확인</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/getUnitCost.jsp">getUnitCost</a> - 팩스 발송단가 확인</li>
 					</ul>
 				</fieldset>
+
 			</fieldset>
 		 </div>
 	</body>

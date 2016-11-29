@@ -12,20 +12,38 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호 
-	String testUserID =  "testkorea";		// 연동회원 아이디
+  /**
+  * 연동회원의 담당자 정보를 수정합니다.
+  */
 
-	ContactInfo contactInfo = new ContactInfo();
+  // 팝빌회원 사업자번호
+  String testCorpNum = "1234567890";
 
-	contactInfo.setPersonName("담당자");	// 담당자명 (최대 30자)
-	contactInfo.setTel("02-1234-1234");		// 담당자 연락처 (최대 20자)
-	contactInfo.setHp("010-1234-1234");		// 담당자 휴대폰 (최대 20자)
-	contactInfo.setFax("070-1234-1234");	// 담당자 팩스 (최대 20자)
-	contactInfo.setEmail("test@test.com");	// 담당자 이메일 (최대 70자)
-	contactInfo.setSearchAllAllowYN(true);	// 회사 조회권한여부 
-	contactInfo.setMgrYN(false);			// 관리자 권한여부(true-관리자, false-사용자)
+  // 팝빌회원 아이디
+  String testUserID =  "testkorea";
 
-	Response CheckResponse = null;
+  // 담당자 정보객체
+  ContactInfo contactInfo = new ContactInfo();
+
+  // 담당자명 (최대 30자)
+  contactInfo.setPersonName("담당자");
+
+  // 담당자 연락처 (최대 20자)
+  contactInfo.setTel("02-1234-1234");
+
+  // 담당자 휴대폰번호 (최대 20자)
+  contactInfo.setHp("010-1234-1234");
+
+  // 담당자 팩스번호 (최대 20자)
+  contactInfo.setFax("070-1234-1234");
+
+  // 담당자 이메일주소 (최대 70자)
+  contactInfo.setEmail("test@test.com");
+
+  // 회사 조회권한여부, true-회사조회, false-개인조회
+  contactInfo.setSearchAllAllowYN(true);
+
+  Response CheckResponse = null;
 
 	try {
 
@@ -42,7 +60,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>담당자 정보 수정 요청 결과</legend>
+				<legend>담당자 정보 수정</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

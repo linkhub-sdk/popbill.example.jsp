@@ -13,10 +13,10 @@
 
 <%
 	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserId = "testkorea";			// 연동회원 아이디 
-	
+	String testUserId = "testkorea";			// 연동회원 아이디
+
 	CorpInfo corpInfo = null;
-	
+
 	try {
 
 		corpInfo = closedownService.getCorpInfo(testCorpNum, testUserId);
@@ -40,7 +40,7 @@
 						<li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>
 						<li>Addr (주소) : <%=corpInfo.getAddr() %> </li>
 						<li>BizClass (업종) : <%=corpInfo.getBizClass() %> </li>
-						<li>BiaType (업태) : <%=corpInfo.getBizType() %> </li>
+						<li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
 					</ul>
 				</fieldset>
 			</fieldset>
