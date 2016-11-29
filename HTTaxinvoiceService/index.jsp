@@ -21,11 +21,11 @@
 				<fieldset class="fieldset2">
 					<legend>회원사 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인 </li>
-						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인 </li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
@@ -57,7 +57,7 @@
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/search.jsp">search</a> - 수집 결과 조회</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/summary.jsp">summary</a> - 수집 결과 요약정보 조회</li>
-						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getTaxinvoice.jsp">getTaxinvoice</a> - 상세정보 확인 (JSON)</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getTaxinvoice.jsp">getTaxinvoice</a> - 상세정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getXML.jsp">getXML</a> - 상세정보 확인 (XML)</li>
 					</ul>
 				</fieldset>

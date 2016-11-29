@@ -7,12 +7,16 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.util.Date"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
+  /**
+  * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
   Date expireDate = null;
 

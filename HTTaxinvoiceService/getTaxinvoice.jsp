@@ -7,14 +7,24 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.hometax.HTTaxinvoice" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String ntsConfirmNum = "20160615410000290000020d";  // 국세청 승인번호
-  String testUserID = "testkorea";			// 연동회원 아이디
+  /**
+  * 수집된 전자(세금)계산서 1건의 상세정보를 확인합니다.
+  * - 응답항목에 관한 정보는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼]
+  *   > 4.1.2. GetTaxinvoice 응답전문 구성" 을 참고하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 전자세금계산서 국세청 승인번호
+  String ntsConfirmNum = "20160615410000290000020d";
+
+  // 팝빌회원 아이디
+  String testUserID = "testkorea";
 
   HTTaxinvoice taxinvoiceInfo = null;
 
@@ -33,7 +43,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>상세 정보 확인 - JSON</legend>
+				<legend>상세 정보 확인</legend>
 				<ul>
           <li>ntsconfirmNum (국세청승인번호) : <%=taxinvoiceInfo.getNtsconfirmNum() %> </li>
           <li>writeDate (작성일자) : <%=taxinvoiceInfo.getWriteDate() %> </li>

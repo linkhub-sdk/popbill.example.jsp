@@ -7,13 +7,19 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.FlatRateState"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  String testUserID = "testkorea";			// 연동회원 아이디
+  /**
+  * 연동회원의 정액제 서비스 이용상태를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+  String testUserID = "testkorea";
 
   FlatRateState flatRateInfo = null;
 
