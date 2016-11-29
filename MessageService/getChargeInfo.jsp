@@ -7,14 +7,20 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.ChargeInfo" %>
 <%@page import="com.popbill.api.message.MessageType"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-  MessageType msgType = MessageType.MMS;		// 문자메시지 타입. SMS(단문), LMS(장문), MMS(멀티)
+  /**
+  * 연동회원의 문자 API 서비스 과금정보를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 문자메시지 유형. SMS(단문), LMS(장문), MMS(멀티)
+  MessageType msgType = MessageType.MMS;
 
 	ChargeInfo chargeInfo = null;
 
@@ -35,7 +41,7 @@
       <fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
-					<li>unitCost (단가) : <%=chargeInfo.getUnitCost() %> </li>
+					<li>unitCost (전송단가) : <%=chargeInfo.getUnitCost() %> </li>
 					<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
 					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
 				</ul>

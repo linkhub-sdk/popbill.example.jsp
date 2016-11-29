@@ -7,18 +7,24 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.message.SentMessage"%>
 
 <%
-	String testCorpNum= "1231212312";			// 회원 사업자번호
-	String receiptNum = "014123015000000007";	// 문자전송(sendSMS)시 발급받은 접수번호
+  /**
+  * 문자전송요청에 대한 전송결과를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 문자전송 접수번호
+	String receiptNum = "014123015000000007";
 
 	SentMessage[] sentMessages = null;
 
 	try {
-	
+
 		sentMessages = messageService.getMessages(testCorpNum, receiptNum);
 
 	} catch (PopbillException pe) {
@@ -33,7 +39,7 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>메시지 전송결과 조회</legend>
-				<% 
+				<%
 					for(int i=0; i<sentMessages.length; i++){
 						SentMessage sentMsg = sentMessages[i];
 				%>

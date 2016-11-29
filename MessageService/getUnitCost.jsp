@@ -7,18 +7,24 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.message.MessageType"%>
 
 <%
-	String testCorpNum = "1234567890";			// 회원 사업자번호("-"제외)
-	MessageType msgType = MessageType.MMS;		// 문자메시지 타입. SMS(단문), LMS(장문), MMS(멀티)
+  /**
+  * 문자메시지 전송단가를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 문자전송 유형. SMS(단문), LMS(장문), MMS(포토)
+	MessageType msgType = MessageType.MMS;
 
 	float unitCost;
 
 	try {
-		
+
 		unitCost = messageService.getUnitCost(testCorpNum, msgType);
 
 	} catch (PopbillException pe) {

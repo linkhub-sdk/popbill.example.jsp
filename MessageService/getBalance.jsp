@@ -7,13 +7,20 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1231212312"; // 회원 사업자번호("-"제외)
-	double remainPoint;
-	
+  /**
+  * 연동회원의 잔여포인트를 확인합니다.
+  * - 과금방식이 파트너과금인 경우 파트너 잔여포인트(GetPartnerBalance API)를 통해
+  *   확인하시기 바랍니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+	double remainPoint = null;
+
 	try {
 			remainPoint = messageService.getBalance(testCorpNum);
 

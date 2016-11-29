@@ -11,7 +11,7 @@
 
 		<div id="content">
 
-			<p class="heading1">팝빌 문자메시지 Api SDK jsp Example.</p>
+			<p class="heading1">팝빌 문자 API SDK jsp Example.</p>
 
 			<br/>
 
@@ -19,13 +19,13 @@
 				<legend>팝빌 기본 API</legend>
 
 				<fieldset class="fieldset2">
-					<legend>회원사 정보</legend>
+					<legend>회원 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/MessageService/checkCorpIsMember.jsp">checkCorpIsMember</a> - 연동회원사 가입 여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/joinMember.jsp">joinMember</a> - 연동회원사 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원사 과금정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원사 잔여포인트 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/registContact.jsp">registContact</a> - 담당자 등록</li>
@@ -41,7 +41,7 @@
 			<br />
 
 			<fieldset class="fieldset1">
-				<legend>문제메시지 관련 API</legend>
+				<legend>문자 전송 관련 API</legend>
 
 				<fieldset class="fieldset2">
 					<legend>단문 문자 전송</legend>
@@ -70,26 +70,26 @@
 				<fieldset class="fieldset2">
 					<legend>멀티 문자 전송</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS.jsp">sendMMS</a> - 멀티 문자메시지 1건 전송</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 멀티 문자메시지 다량(최대1000건) 전송</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS.jsp">sendMMS</a> - 포토(멀티) 문자메시지 1건 전송</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 포토(멀티) 문자메시지 다량(최대1000건) 전송</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과/예약취소</legend>
+					<legend>전송결과 / 예약취소</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/search.jsp">search</a> - 문자전송내역 조회 </li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 접수번호에 해당하는 문제메시지 전송결과 확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약문자메시지의 예약취소. 예약시간 10분전까지만 가능.</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 문자메시지 전송결과 조회</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약문자메시지 취소</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080수신거부목록 확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getURL.jsp">getURL</a> - 문자메시지 관련 SSO URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 문자메시지 전송 단가 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080 수신거부목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getURL.jsp">getURL</a> - 문자전송 내역 보기 팝업 URL</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 문자메시지 전송단가 확인</li>
 					</ul>
 				</fieldset>
 			</fieldset>

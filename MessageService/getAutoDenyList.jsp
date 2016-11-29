@@ -7,12 +7,16 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.message.AutoDeny"%>
 
 <%
-	String testCorpNum = "1234567890";		// 팝빌회원 사업자번호
+  /**
+  * 080 서비스 수신거부 목록을 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
 	AutoDeny[] autoDenyList = null;
 
@@ -25,13 +29,13 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-		
+
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>080수신거부번호 목록</legend>
+				<legend>080 수신거부번호 목록</legend>
 				<%
 					for(int i=0; i<autoDenyList.length; i++){
 						AutoDeny autoDeny = autoDenyList[i];

@@ -7,25 +7,38 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserID = "testkorea";			// 연동회원 아이디
-	String sender = "07075103710";				// 발신번호
-	String receiver = "010111222";			// 수신번호
-	String receiverName = "수신자명";			// 수신자명
-	String content = "문자메세지 테스트1";		// 단문문자메시지는 90Byte초과시 90Byte이후 내용은 전송되지 않음.
-	Date reserveDT = null;						// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-	Boolean adsYN = false;						// 광고문자 전송여부
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-//	예약전송시 아래의 코드 참조
-//	String reserveDTtxt ="20141230190000";
-//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-//	reserveDT = formatter.parse(reserveDTtxt);
+  // 팝빌회원 아이디
+	String testUserID = "testkorea";
+
+  // 발신번호
+	String sender = "07043042991";
+
+  // 수신번호
+	String receiver = "010111222";
+
+  // 수신자명
+  String receiverName = "수신자명";
+
+  // 메시지 내용, 90Byte초과된 내용은 길이가 조정되어 전송됨
+	String content = "문자메세지 테스트1";
+
+  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+	Date reserveDT = null;
+  //	예약전송시 아래의 코드 참조
+  //	String reserveDTtxt ="20141230190000";
+  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+  //	reserveDT = formatter.parse(reserveDTtxt);
+
+  // 광고문자 전송여부
+	Boolean adsYN = false;
 
 	String receiptNum = null;
 
@@ -44,7 +57,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>단문 문자메시지 전송 요청</legend>
+				<legend>단문 문자메시지 전송</legend>
 				<ul>
 					<li>접수번호 : <%=receiptNum%></li>
 				</ul>

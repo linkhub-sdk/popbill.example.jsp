@@ -7,28 +7,51 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.message.SentMessage"%>
 <%@page import="com.popbill.api.message.MSGSearchResult"%>
 
 <%
-	String testCorpNum= "1234567890";		// 팝빌회원 사업자번호
-	String SDate = "20160801";				// 시작일자, yyyyMMdd
-	String EDate = "20160831";				// 종료일자, yyyyMMdd
-	String[] State = {"1","2","3","4"};		// 전송상태, 1-대기, 2-성공, 3-실패, 4-취소
-	String[] Item = {"SMS", "LMS", "MMS"};	// 전송유형, SMS-단문, LMS-장문, MMS-포토
-	Boolean ReserveYN = false;				// 예약전송 여부, true-예약전송조회, false-전체조회
-	Boolean SenderYN = false;				// 개인조회 여부, true-개인조회, false-전체조회
-	int Page = 1;							// 페이지 번호
-	int PerPage = 20;						// 페이지당 검색개수, 최대 1000개
-	String Order = "D";						// 정렬방향, A-오름차순, D-내림차순
+  /**
+  * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum= "1234567890";
+
+  // 시작일자, 날짜형태(yyyyMMdd)
+	String SDate = "20161001";
+
+  // 종료일자, 날짜형식(yyyyMMdd)
+	String EDate = "20161231";
+
+  // 문자 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
+	String[] State = {"1", "2", "3", "4"};
+
+  // 문자 전송여형 배열, SMS-단문, LMS-장문, MMS-포토
+	String[] Item = {"SMS", "LMS", "MMS"};
+
+  // 예약전송 여부, true-예약전송조회, false-전체조회
+	Boolean ReserveYN = false;
+
+  // 개인조회 여부, true-개인조회, false-전체조회
+	Boolean SenderYN = false;
+
+  // 페이지 번호
+	int Page = 1;
+
+  // 페이지당 검색개수, 최대 1000개
+	int PerPage = 20;
+
+  // 정렬방향, A-오름차순, D-내림차순
+	String Order = "D";
 
 	MSGSearchResult searchResult = null;
 
 	try {
 
-		searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order);
+		searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item,
+      ReserveYN, SenderYN, Page, PerPage, Order);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
