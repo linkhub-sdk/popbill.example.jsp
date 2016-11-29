@@ -7,18 +7,21 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 파트너 잔여포인트 확인 
+  /**
+  * 파트너의 잔여포인트를 확인합니다.
+  * - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를 이용하시기 바랍니다.
+  */
 
-	String testCorpNum = "1234567890";		// 팝빌회원 사업자번호, '-'제외 10자리
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-	double remainPoint;
+	double remainPoint = null;
 
 	try {
-	
+
 		remainPoint = closedownService.getPartnerBalance(testCorpNum);
 
 	} catch (PopbillException pe) {
@@ -32,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여포인트 확인 결과</legend>
+				<legend>파트너 잔여포인트 확인</legend>
 				<ul>
 					<li>잔여포인트 : <%=remainPoint%></li>
 				</ul>

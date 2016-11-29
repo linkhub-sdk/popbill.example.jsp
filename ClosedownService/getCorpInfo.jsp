@@ -7,13 +7,19 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.CorpInfo"%>
 
 <%
-	String testCorpNum = "1234567890";		// 연동회원 사업자번호
-	String testUserId = "testkorea";			// 연동회원 아이디
+  /**
+  * 연동회원의 회사정보를 확인합니다.
+  */
+
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String testUserId = "testkorea";
 
 	CorpInfo corpInfo = null;
 
@@ -39,7 +45,7 @@
 						<li>Ceoname (대표자명) : <%=corpInfo.getCeoname() %> </li>
 						<li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>
 						<li>Addr (주소) : <%=corpInfo.getAddr() %> </li>
-						<li>BizClass (업종) : <%=corpInfo.getBizClass() %> </li>
+						<li>BizClass (종목) : <%=corpInfo.getBizClass() %> </li>
 						<li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
 					</ul>
 				</fieldset>

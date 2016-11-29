@@ -5,17 +5,25 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	// 팝빌 관련 URL 호출 (로그인, 포인트 충전)
+  /**
+  * 팝빌 관련 SSO 팝업 URL을 반환합니다.
+  * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+  */
 
-	String testCorpNum = "1234567890";		// 팝빌회원 사업자번호
-	String userID = "testkorea";			// 팝빌회원 아이디
-	String TOGO = "LOGIN";					// CHRG : 포인트 충전, LOGIN : 팝빌 로그인
-	
+  // 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
+
+  // 팝빌회원 아이디
+	String userID = "testkorea";
+
+  // LOGIN : 팝빌 로그인, CHRG : 포인트 충전
+	String TOGO = "LOGIN";
+
 	String url = null;
 
 	try {
