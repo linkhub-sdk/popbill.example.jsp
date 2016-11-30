@@ -11,7 +11,7 @@
 
 <%
   /**
-  * 팝빌 > 매입 문서함 팝업 URL을 반환합니다.
+  * 팝빌 세금계산서 관련 문서함 팝업 URL을 반환합니다.
   * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
   */
 
@@ -19,11 +19,11 @@
 	String testCorpNum = "1234567890";
 
   // 팝빌회원 아이디
-	String userid = "userid";
+	String userid = "testkorea";
 
   // TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
 	String TOGO = "TBOX";
-  
+
 	String url = null;
 
 	try {

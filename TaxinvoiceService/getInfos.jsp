@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-  
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
@@ -25,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 연동관리번호 배열 (최대 1000건)
-	String[] MgtKeyList = new String[] {"20141230-01","20141230-02"};
+	String[] MgtKeyList = new String[] {"20161130-01","20161130-02"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;
 
@@ -45,11 +45,11 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>다량 세금계산서 상태/요약 정보 확인</legend>
+				<legend>세금계산서 상태/요약 정보 확인 - 대량</legend>
 
 					<%
 						TaxinvoiceInfo taxinvoiceInfo = null;
-						for(int i=0; i< taxinvoiceInfos.length; i++){
+						for ( int i = 0; i < taxinvoiceInfos.length; i++ ) {
 							taxinvoiceInfo = taxinvoiceInfos[i];
 					%>
 
@@ -92,11 +92,9 @@
 									<li>ntssendErrCode : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
 								</ul>
 						</fieldset>
-
 					<%
 						}
 					%>
-
 			</fieldset>
 		 </div>
 	</body>

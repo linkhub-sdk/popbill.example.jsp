@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-02";
 
 	AttachedFile[] attachedFiles = null;
 
@@ -44,12 +44,10 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>세금계산서 첨부파일 목록확인</legend>
-
 				<%
-					for(int i=0; i<attachedFiles.length; i++){
+					for ( int i = 0; i < attachedFiles.length; i++ ) {
 						AttachedFile attachedFile = attachedFiles[i];
 				%>
-
 				<fieldset class="fieldset2">
 					<legend>serialNum : <%= attachedFile.getSerialNum() %> </legend>
 					<ul>
@@ -58,11 +56,9 @@
 						<li>regDT : <%= attachedFile.getRegDT() %></li>
 					</ul>
 				</fieldset>
-
 				<%
 					}
 				%>
-
 			</fieldset>
 		 </div>
 	</body>

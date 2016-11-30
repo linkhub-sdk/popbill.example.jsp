@@ -15,7 +15,7 @@
   * 공급받는자 메일링크 URL을 반환합니다.
   * - 메일링크 URL은 유효시간이 존재하지 않습니다.
   */
-  
+
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
@@ -23,7 +23,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 연동관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-01";
 
   // 팝빌회원 아이디
 	String userID = "testkorea";

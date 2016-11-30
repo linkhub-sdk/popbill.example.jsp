@@ -34,9 +34,9 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>발행단가확인</legend>
+				<legend>발행단가 확인</legend>
 				<ul>
-					<li>unitCost : <%=unitCost%></li>
+					<li>발행단가 : <%=unitCost%></li>
 				</ul>
 			</fieldset>
 		 </div>

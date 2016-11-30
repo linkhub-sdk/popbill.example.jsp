@@ -28,7 +28,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-02";
 
 	Taxinvoice taxinvoice = null;
 
@@ -42,14 +42,12 @@
 		throw pe;
 	}
 %>
-
-
 <body>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 조회 결과</legend>
+				<legend>세금계산서 상세정보 확인</legend>
 				<fieldset class="fieldset2">
 					<legend>Taxinvoice</legend>
 					<ul>
@@ -138,7 +136,7 @@
 
 
 						<fieldset class="fieldset3">
-						<legend>detailList</legend>
+						<legend>상세 품목 정보</legend>
 
 						<%
 
@@ -166,12 +164,12 @@
 
 						</fieldset>
 						<fieldset class="fieldset3">
-							<legend>addContactList</legend>
+							<legend>추가 담당자 정보</legend>
 
 						<%
 
-							if(taxinvoice.getAddContactList() != null ){
-								for(int i=0; i<taxinvoice.getAddContactList().size(); i++){
+							if ( taxinvoice.getAddContactList() != null ) {
+								for ( int i = 0; i < taxinvoice.getAddContactList().size(); i++ ) {
 									TaxinvoiceAddContact addContactList = taxinvoice.getAddContactList().get(i);
 						%>
 
@@ -179,10 +177,9 @@
 						<ul>
 							<li>contactName : <%= addContactList.getContactName() %> </li>
 							<li>email : <%=addContactList.getEmail() %></li>
-
 						</ul>
-
-						<%		}
+						<%
+          	    }
 							}
 						%>
 						</fieldset class="fieldset3">

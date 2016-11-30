@@ -58,7 +58,7 @@
 	joinInfo.setContactFAX("02-999-9999");
 
   // 담당자 메일주소
-	joinInfo.setContactEmail("code@linkhub.co.kr");
+	joinInfo.setContactEmail("test@test.co.kr");
 
 	Response CheckResponse = null;
 
@@ -77,7 +77,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동회원가입 요청</legend>
+				<legend>연동회원 가입</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

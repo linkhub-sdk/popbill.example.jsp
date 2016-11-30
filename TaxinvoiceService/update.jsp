@@ -26,7 +26,7 @@
   String testCorpNum = "1234567890";
 
   // 세금계산서 문서관리번호
-  String mgtKey = "20161128-02";
+  String mgtKey = "20161130-02";
 
   // 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
   MgtKeyType keyType = MgtKeyType.SELL;
@@ -39,7 +39,7 @@
 
 
   // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-  taxinvoice.setWriteDate("20161128");
+  taxinvoice.setWriteDate("20161130");
 
   // 발행유형, {정발행, 역발행, 위수탁} 중 기재
   taxinvoice.setIssueType("정발행");
@@ -71,7 +71,7 @@
   taxinvoice.setInvoicerCorpName("공급자 상호_수정");
 
   // 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-  taxinvoice.setInvoicerMgtKey("20161128-02");
+  taxinvoice.setInvoicerMgtKey("20161130-02");
 
   // 공급자 대표자성명
   taxinvoice.setInvoicerCEOName("공급자 대표자 성명_수정");

@@ -39,7 +39,7 @@
 	corpInfo.setBizType("업태");
 
   // 종목, 최대 40자
-	corpInfo.setBizClass("업종");
+	corpInfo.setBizClass("종목");
 
 	Response CheckResponse = null;
 

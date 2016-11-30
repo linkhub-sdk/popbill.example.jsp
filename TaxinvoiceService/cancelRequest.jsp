@@ -21,10 +21,10 @@
 	String testCorpNum = "1234567890";
 
   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	MgtKeyType keyType = MgtKeyType.BUY;
+	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-10";
+	String mgtKey = "20161130-02";
 
   // 메모
 	String memo = "역발행요청 취소 메모";

@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-02";
 
   // 메모
 	String memo = "역발행요청 거부 메모";
@@ -46,7 +46,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>역)발행요청 거부 확인</legend>
+				<legend>역발행요청 거부 확인</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

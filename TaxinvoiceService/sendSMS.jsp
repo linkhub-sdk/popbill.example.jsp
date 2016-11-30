@@ -25,13 +25,13 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-01";
 
   // 발신번호
-	String senderNum = "010-1111-2222";
+	String senderNum = "070-4304-2991";
 
   // 수신번호
-	String receiverNum = "010-4324-5117";
+	String receiverNum = "010-111-222";
 
   // 문자메시지 내용, 최대 90Byte 초과된 내용은 삭제되어 전송됨
 	String msg = "문자 메시지 내용";
@@ -53,7 +53,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>문자알림 재전송 결과 확인</legend>
+				<legend>알림문자 전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

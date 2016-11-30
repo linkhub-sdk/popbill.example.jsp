@@ -14,8 +14,8 @@
 <%
   /**
   * [발행완료] 상태의 세금계산서를 국세청으로 즉시전송합니다.
-  * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 익일 오후 3시에
-  *   팝빌 시스템에서 일괄적으로 국세청으로 전송합니다.
+  * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 익일 오후 3시에 팝빌 시스템에서
+  *   일괄적으로 국세청으로 전송합니다.
   * - 익일전송시 전송일이 법정공휴일인 경우 다음 영업일에 전송됩니다.
   * - 국세청 전송에 관한 사항은 "[전자세금계산서 API 연동매뉴얼] > 1.4 국세청 전송 정책" 을 참조하시기 바랍니다.
   */
@@ -27,13 +27,13 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-02";
 
 	Response CheckResponse = null;
 
 	try {
 
-			CheckResponse = taxinvoiceService.sendToNTS(testCorpNum, keyType, mgtKey);
+		CheckResponse = taxinvoiceService.sendToNTS(testCorpNum, keyType, mgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -46,7 +46,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>국세청 즉시전송 결과 확인</legend>
+				<legend>국세청 즉시전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

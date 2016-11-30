@@ -101,7 +101,7 @@
 					%>
 
 						<fieldset class="fieldset2">
-							<legend>TaxinvoiceInfos [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
+							<legend>세금계산서 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
 								<ul>
 									<li>itemKey : <%= taxinvoiceInfo.getItemKey()%></li>
 									<li>taxType : <%= taxinvoiceInfo.getTaxType()%></li>

@@ -13,10 +13,9 @@
 
 <%
   /**
-  * 세금계산서 상태 변경이력을 확인합니다.
-  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
-  *   "[전자세금계산서 API 연동매뉴얼] > 3.6.4 상태 변경이력 확인"
-  *   을 참조하시기 바랍니다.
+  * 세금계산서 상태변경 이력을 확인합니다.
+  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
+  *   > 3.6.4 상태 변경이력 확인" 을 참조하시기 바랍니다.
   */
 
   // 팝빌회원 사업자번호
@@ -26,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-01";
 
 	TaxinvoiceLog[] taxinvoiceLogs = null;
 
@@ -49,7 +48,7 @@
 				<%
 						TaxinvoiceLog taxinvoiceLog = new TaxinvoiceLog();
 
-						for(int i=0; i<taxinvoiceLogs.length; i++) {
+						for ( int i = 0; i < taxinvoiceLogs.length; i++ ) {
 							taxinvoiceLog = taxinvoiceLogs[i];
 				%>
 				<fieldset class="fieldset2">

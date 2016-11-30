@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-  
+
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.Response"%>
@@ -21,10 +21,10 @@
 	String testCorpNum = "1234567890";
 
   // 세금계산서 유형 SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
-	MgtKeyType keyType = MgtKeyType.BUY;
+	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-02";
 
   // 메모
 	String memo = "발행예정 거부 메모";

@@ -25,10 +25,10 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161125-01";
+	String mgtKey = "20161130-02";
 
   // 파일 아이디, 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
-	String fileID= "E2BEAF58-45BB-4AA4-B859-174BF10F5E33.PBF";
+	String fileID = "3662614B-A90F-4957-991C-E2E4227A15FA.PBF";
 
 	Response CheckResponse = null;
 

@@ -14,7 +14,7 @@
   /**
   * 연동회원의 담당자 목록을 확인합니다.
   */
-  
+
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
@@ -43,12 +43,12 @@
 
 					<%
 						ContactInfo contactInfo = null;
-						for(int i=0; i< contactInfos.length; i++){
+						for ( int i = 0; i < contactInfos.length; i++ ) {
 							contactInfo = contactInfos[i];
 					%>
 
 						<fieldset class="fieldset2">
-							<legend>ContactInfos <%=i+1%> / <%=contactInfos.length%></legend>
+							<legend>담당자 정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
 								<ul>
 									<li>id : <%= contactInfo.getId()%></li>
 									<li>personName : <%= contactInfo.getPersonName()%></li>

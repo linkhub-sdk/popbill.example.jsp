@@ -25,8 +25,8 @@
   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 팝빌관리번호
-	String mgtKey = "20161128-01";
+  // 세금계산서 문서관리번호
+	String mgtKey = "20161130-02";
 
 	Response CheckResponse = null;
 

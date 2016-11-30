@@ -12,7 +12,7 @@
 
 <%
   /**
-  * 1건의 전자세금계산서 인쇄팝업 URL을 반환합니다.
+  * 1건의 전자세금계산서 인쇄 팝업 URL을 반환합니다.
   * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
   */
 
@@ -23,7 +23,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-01";
 
   // 팝빌회원 아이디
 	String userID = "testkorea";
@@ -45,7 +45,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>세금계산서 인쇄화면 보기 URL</legend>
+				<legend>세금계산서 인쇄 팝업 URL</legend>
 				<ul>
 					<li>url : <%=url%></li>
 				</ul>

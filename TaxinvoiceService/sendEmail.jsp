@@ -23,7 +23,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-01";
 
   // 메일주소
 	String emailAddr = "test@test.com";
@@ -44,7 +44,7 @@
 			<p class="heading1">Respones</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>안내메일 재전송</legend>
+				<legend>발행안내메일 재전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

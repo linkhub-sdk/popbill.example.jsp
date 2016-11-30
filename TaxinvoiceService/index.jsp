@@ -46,7 +46,7 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">getInfos</a> - 세금계산서 상태/요약 정보 확인 - 대량</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">getDetailInfo</a> - 세금계산서 상세정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/delete.jsp">delete</a> - 세금계산서 삭제</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getLogs.jsp">getLogs</a> - 세금계산서 문서이력 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getLogs.jsp">getLogs</a> - 세금계산서 상태변경 이력 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachFile.jsp">attachFile</a> - 세금계산서 첨부파일 추가</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getFiles.jsp">getFiles</a> - 세금계산서 첨부파일 목록확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deleteFile.jsp">deleteFile</a> - 세금계산서 첨부파일 삭제</li>

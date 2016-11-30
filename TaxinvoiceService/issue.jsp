@@ -27,11 +27,11 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 연동관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-02";
 
   // 메모
 	String memo = "발행 메모";
-  
+
 	Response CheckResponse = null;
 
 	try {
@@ -49,7 +49,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>발행결과 확인</legend>
+				<legend>세금계산서 발행</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
