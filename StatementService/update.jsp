@@ -31,7 +31,7 @@
   int itemCode = 121;
 
   // 수정할 전자명세서 문서관리번호
-  String mgtKey = "20150319-01";
+  String mgtKey = "20161130-04";
 
 
   /***************************************************************************
@@ -41,7 +41,7 @@
 	Statement statement = new Statement();
 
   // [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20161128");
+	statement.setWriteDate("20161130");
 
   // [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -67,10 +67,10 @@
 	statement.setSenderCorpNum("1234567890");
 
   // 공급자 상호
-	statement.setSenderCorpName("공급자 상호");
+	statement.setSenderCorpName("공급자 상호_수정");
 
   // 공급자 주소
-	statement.setSenderAddr("공급자 주소");
+	statement.setSenderAddr("공급자 주소_수정");
 
   // 공급자 대표자 성명
 	statement.setSenderCEOName("공급자 대표자 성명");

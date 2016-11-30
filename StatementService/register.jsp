@@ -35,7 +35,7 @@
 	Statement statement = new Statement();
 
   // [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20161128");
+	statement.setWriteDate("20161130");
 
   // [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -50,7 +50,7 @@
 	statement.setItemCode((short) 121);
 
   // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20161128-01");
+	statement.setMgtKey("20161130-05");
 
 
   /***************************************************************************
@@ -161,7 +161,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20150317");	// 거래일자
+	detail.setPurchaseDT("20161130");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -172,7 +172,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20150317");	 // 거래일자
+	detail.setPurchaseDT("20161130");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액
@@ -212,7 +212,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 등록 확인</legend>
+				<legend>전자명세서 임시저장</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

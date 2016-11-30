@@ -22,7 +22,7 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20150319-01";
+	String mgtKey = "20161130-05";
 
   // 수신메일주소
 	String receiver = "test@test.com";

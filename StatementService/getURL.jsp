@@ -11,7 +11,7 @@
 
 <%
 	/**
-  * 팝빌 전자명세서 문서함 관련 팝업 URL을 반환합니다.
+  * 팝빌 전자명세서 관련 문서함 팝업 URL을 반환합니다.
   * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
   */
 
@@ -22,7 +22,7 @@
 	String userID = "testkorea";
 
   // TBOX : 임시문서함, SBOX : 발행문서함
-	String TOGO = "SBOX";
+	String TOGO = "TBOX";
 
 	String url = null;
 
@@ -41,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 관련 URL 확인</legend>
+				<legend>전자명세서 관련 문서함 팝업 URL 확인</legend>
 				<ul>
 					<li>URL : <%=url%></li>
 				</ul>

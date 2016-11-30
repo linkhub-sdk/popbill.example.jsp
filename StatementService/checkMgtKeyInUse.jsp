@@ -22,7 +22,7 @@
 	int itemCode = 121;
 
   // 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-01";
 
 	boolean isInUse;
 

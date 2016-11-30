@@ -39,16 +39,14 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>담당자 목록 확인</legend>
-
 					<%
 						ContactInfo contactInfo = null;
 
 						for ( int i = 0; i < contactInfos.length; i++ ) {
 							contactInfo = contactInfos[i];
 					%>
-
 						<fieldset class="fieldset2">
-							<legend>ContactInfos <%=i+1%> / <%=contactInfos.length%></legend>
+							<legend>담당자정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
 								<ul>
 									<li>id : <%= contactInfo.getId()%></li>
 									<li>personName : <%= contactInfo.getPersonName()%></li>
@@ -59,11 +57,8 @@
 									<li>regDT (등록일시): <%= contactInfo.getRegDT()%></li>
 									<li>searchAllAllowYN (회사조회 권한여부): <%= contactInfo.getSearchAllAllowYN()%></li>
 									<li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
-
-
 								</ul>
 						</fieldset>
-
 					<%
 						}
 					%>

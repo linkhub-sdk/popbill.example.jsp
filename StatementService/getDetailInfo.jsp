@@ -26,7 +26,7 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-01";
 
   // 팝빌회원 아이디
 	String testUserId = "testkorea";

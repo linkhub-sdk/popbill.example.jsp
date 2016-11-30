@@ -27,10 +27,10 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-05";
 
   // 첨부파일 표시명
-	String fileName = "첨부파일.jpg";
+	String fileName = "test.jpg";
 
   // 팝빌회원 아이디
 	String userID = "testkorea";
@@ -49,10 +49,11 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	} finally {
-		if(stream != null)
+		if ( stream != null ) {
 			try {
 					stream.close();
 			} catch(IOException e) {}
+    }
 	}
 
 %>
@@ -60,7 +61,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 파일첨부 등록</legend>
+				<legend>전자명세서 첨부파일 등록</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

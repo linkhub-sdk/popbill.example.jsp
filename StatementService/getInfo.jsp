@@ -24,7 +24,7 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20150319-01";
+	String mgtKey = "20161130-01";
 
 	StatementInfo statementInfo = null;
 
@@ -43,7 +43,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 상태/요약 정보 확인</legend>
+				<legend>전자명세서 상태/요약 정보</legend>
 				<fieldset class="fieldset2">
 					<legend>StatementInfo</legend>
 					<ul>

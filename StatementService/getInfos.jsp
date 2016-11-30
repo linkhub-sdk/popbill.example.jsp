@@ -24,7 +24,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서관리번호 배열(최대 1000건)
-	String[] MgtKeyList = new String[] {"20150318-01", "20150318-02", "20150318-03", "20150319-01"};
+	String[] MgtKeyList = new String[] {"20161130-01", "20161130-02", "20161128-01", "20161128-01"};
 
 	StatementInfo[] statementInfos = null;
 

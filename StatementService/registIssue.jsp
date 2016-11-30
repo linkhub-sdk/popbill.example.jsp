@@ -48,7 +48,7 @@
 	statement.setItemCode((short) 121);
 
   // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20161128-01");
+	statement.setMgtKey("20161130-02");
 
 
   /***************************************************************************
@@ -159,7 +159,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20150317");	// 거래일자
+	detail.setPurchaseDT("20161130");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -170,7 +170,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20150317");	 // 거래일자
+	detail.setPurchaseDT("20161130");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액
@@ -210,7 +210,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>전자명세서 즉시발행 확인</legend>
+				<legend>전자명세서 즉시발행</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

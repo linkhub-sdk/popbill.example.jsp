@@ -46,13 +46,13 @@
 				<fieldset class="fieldset2">
 					<legend>등록/수정/확인/삭제</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/StatementService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서관리번호의 등록/사용여부 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서관리번호 사용여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/registIssue.jsp">registIssue</a> - 전자명세서 즉시발행</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/register.jsp">register</a> - 전자명세서 등록</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/update.jsp">update</a> - 전자명세서 수정</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/search.jsp">search</a> - 전자명세서 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getInfo.jsp">getInfo</a> - 전자명세서 상태/요약 정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/getInfos.jsp">getInfos</a> - 전자명세서 상태/요약 정보(대량) 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/getInfos.jsp">getInfos</a> - 전자명세서 상태/요약 정보 확인 - 대량</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getDetailInfo.jsp">getDetailInfo</a> - 전자명세서 상세 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/delete.jsp">delete</a> - 전자명세서 삭제</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/getLogs.jsp">getLogs</a> - 전자명세서 문서이력 확인</li>
@@ -65,8 +65,8 @@
 				<fieldset class="fieldset2">
 					<legend>처리 프로세스</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/StatementService/issue.jsp">issue</a> - 전자명세서 발행 처리</li>
-						<li><a href="${pageContext.request.contextPath}/StatementService/cancel.jsp">cancel</a> - 전자명세서 발행취소 처리</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/issue.jsp">issue</a> - 전자명세서 발행</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/cancel.jsp">cancel</a> - 전자명세서 발행취소</li>
 					</ul>
 				</fieldset>
 

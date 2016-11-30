@@ -24,10 +24,10 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20161128-01";
+	String mgtKey = "20161130-05";
 
   // 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
-	String FileID= "8AF56E45-6D03-401F-AF78-B1D446BB04F1.PBF";
+	String FileID = "8BA8ACEA-2247-44EA-90A3-C4248005D5FD.PBF";
 
 	Response CheckResponse = null;
 
@@ -40,13 +40,12 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-
 %>
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>첨부파일 삭제 확인</legend>
+				<legend>첨부파일 삭제</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
