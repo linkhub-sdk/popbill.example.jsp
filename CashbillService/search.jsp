@@ -22,16 +22,16 @@
 	String testCorpNum = "1234567890";
 
   // 검색일자 유형, R-등록일자, T-거래일자, I-발행일자ㄴ
-	String DType = "R";
+	String DType = "T";
 
   // 시작일자, 날짜형태(yyyyMMdd)
 	String SDate = "20161001";
 
   // 종료일자, 날짜형태(yyyyMMdd)
-	String EDate = "20160731";
+	String EDate = "20161231";
 
   // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
-	String[] State = {"100", "2**", "3**"};
+	String[] State = {"100", "2**", "3**", "4**"};
 
   // 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
 	String[] TradeType = {"N", "C"};
@@ -55,7 +55,6 @@
 	String Order = "D";
 
 	CBSearchResult searchResult = null;
-
 
 	try {
 
@@ -82,14 +81,12 @@
 					<li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
 					<li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
 				</ul>
-
 				<%
 					CashbillInfo cashbillInfo = null;
 
           for ( int i = 0; i < searchResult.getList().size(); i++ ) {
 						cashbillInfo = searchResult.getList().get(i);
 				%>
-
 				<fieldset class="fieldset2">
 					<legend>CashbillInfo [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
 					<ul>
@@ -118,13 +115,9 @@
 						<li>regDT : <%= cashbillInfo.getRegDT()%></li>
 					</ul>
 				</fieldset>
-
 				<%
 					}
 				%>
-
-
-
 			</fieldset>
 		 </div>
 	</body>

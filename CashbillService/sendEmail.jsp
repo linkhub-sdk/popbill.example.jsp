@@ -19,7 +19,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20150318-02";
+	String mgtKey = "20161130-01";
 
   // 수신메일주소
 	String receiver = "test@test.com";
@@ -44,7 +44,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 안내메일 재전송</legend>
+				<legend>현금영수증 발행 안내메일 재전송</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

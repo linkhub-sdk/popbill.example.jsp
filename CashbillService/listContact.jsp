@@ -47,7 +47,7 @@
 							contactInfo = contactInfos[i];
 					%>
 						<fieldset class="fieldset2">
-							<legend>ContactInfos <%=i+1%> / <%=contactInfos.length%></legend>
+							<legend>담당자정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
 								<ul>
 									<li>id : <%= contactInfo.getId()%></li>
 									<li>personName : <%= contactInfo.getPersonName()%></li>

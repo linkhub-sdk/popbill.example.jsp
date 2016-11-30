@@ -39,16 +39,13 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>회사정보 확인</legend>
-				<fieldset class="fieldset2">
-					<legend>CorpInfo</legend>
 					<ul>
 						<li>Ceoname (대표자명) : <%=corpInfo.getCeoname() %> </li>
 						<li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>
 						<li>Addr (주소) : <%=corpInfo.getAddr() %> </li>
-						<li>BizClass (업종) : <%=corpInfo.getBizClass() %> </li>
+						<li>BizClass (종목) : <%=corpInfo.getBizClass() %> </li>
 						<li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
 					</ul>
-				</fieldset>
 			</fieldset>
 		 </div>
 	</body>

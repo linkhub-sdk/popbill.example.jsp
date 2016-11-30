@@ -5,8 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
 		<title>팝빌 SDK jsp Example.</title>
 	</head>
-<%@ include file="common.jsp" %>
 
+<%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
@@ -41,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 문서함 관련 URL 확인</legend>
+				<legend>현금영수증 문서함 관련 팝업 URL 확인</legend>
 				<ul>
 					<li>URL : <%=url%></li>
 				</ul>

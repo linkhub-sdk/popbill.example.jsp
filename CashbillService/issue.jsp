@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20150318-02";
+	String mgtKey = "20161130-01";
 
   // 팝빌회원 아이디
 	String userID = "testkorea";
@@ -43,7 +43,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>현금영수증 발행 처리</legend>
+				<legend>현금영수증 발행</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

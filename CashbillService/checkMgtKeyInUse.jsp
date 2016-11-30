@@ -19,7 +19,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20150319-01";
+	String mgtKey = "20161130-01";
 
 	boolean isInUse;
 

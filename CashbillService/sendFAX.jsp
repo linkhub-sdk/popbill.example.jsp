@@ -22,7 +22,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20150318-02";
+	String mgtKey = "20161130-02";
 
   // 발신자 번호
 	String sender = "07043042991";

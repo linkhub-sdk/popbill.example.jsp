@@ -37,7 +37,7 @@
       <fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
-					<li>unitCost (단가) : <%=chargeInfo.getUnitCost() %> </li>
+					<li>unitCost (발행단가) : <%=chargeInfo.getUnitCost() %> </li>
 					<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
 					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
 				</ul>

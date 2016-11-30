@@ -22,7 +22,7 @@
 	String userID = "testkorea";
 
   // CHRG : 포인트 충전, LOGIN : 팝빌 로그인
-	String TOGO = "LOGIN";
+	String TOGO = "CHRG";
 
 	String url = null;
 

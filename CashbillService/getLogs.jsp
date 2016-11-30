@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20150318-02";
+	String mgtKey = "20161130-01";
 
 	CashbillLog[] cashbillLogs = null;
 
@@ -41,26 +41,25 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>현금영수증 상태변경 이력 확인</legend>
-				<%
+  				<%
 						CashbillLog cashbillLog = new CashbillLog();
-						for(int i=0; i<cashbillLogs.length; i++){
+
+						for ( int i = 0; i < cashbillLogs.length; i++ ) {
 							cashbillLog = cashbillLogs[i];
-				%>
-				<fieldset class="fieldset2">
-					<ul>
-						<li>docLogType : <%= cashbillLog.getDocLogType() %> </li>
-						<li>log : <%= cashbillLog.getLog() %> </li>
-						<li>procType : <%=cashbillLog.getProcType() %></li>
-						<li>procMemo : <%=cashbillLog.getProcMemo() %></li>
-						<li>regDT : <%=cashbillLog.getRegDT() %></li>
-						<li>ip : <%=cashbillLog.getIp() %></li>
-					</ul>
-				</fieldset>
-
-				<%
-					}
-				%>
-
+				  %>
+  				<fieldset class="fieldset2">
+  					<ul>
+  						<li>docLogType : <%= cashbillLog.getDocLogType()%></li>
+  						<li>log : <%= cashbillLog.getLog() %> </li>
+  						<li>procType : <%=cashbillLog.getProcType() %></li>
+  						<li>procMemo : <%=cashbillLog.getProcMemo() %></li>
+  						<li>regDT : <%=cashbillLog.getRegDT() %></li>
+  						<li>ip : <%=cashbillLog.getIp() %></li>
+  					</ul>
+  				</fieldset>
+  				<%
+  					}
+  				%>
 			</fieldset>
 		 </div>
 	</body>

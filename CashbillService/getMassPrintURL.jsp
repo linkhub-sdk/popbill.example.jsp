@@ -11,7 +11,7 @@
 
 <%
 	/**
-  * 다수건의 현금영수증 인쇄팝업 URL을 반환합니다.
+  * 다수건의 현금영수증 인쇄팝업 URL을 반환합니다. (최대 100건)
   * 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
   */
 
@@ -22,7 +22,7 @@
 	String userID = "testkorea";
 
 	// 현금영수증 문서관리번호 배열, 최대 100건
-	String[] MgtKeyList = new String[] {"20150317-01", "20150317-02", "20150318-02", "20150319-01"};
+	String[] MgtKeyList = new String[] {"20161130-01", "20150317-02", "20150318-02", "20150319-01"};
 
 	String url = null;
 
@@ -41,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>다량 현금영수증 인쇄 팝업 URL 확인</legend>
+				<legend>현금영수증 대량 인쇄 팝업 URL</legend>
 				<ul>
 					<li>URL : <%=url%></li>
 				</ul>

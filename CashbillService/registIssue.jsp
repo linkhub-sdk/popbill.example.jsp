@@ -27,12 +27,14 @@
   // 팝빌회원 아이디
   String userID = "testkorea";
 
+  // 메모
+  String memo = "발행 메모";
 
   // 현금영수증 정보 객체
   Cashbill cashbill = new Cashbill();
 
   // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-  cashbill.setMgtKey("20150319-01");
+  cashbill.setMgtKey("20161130-01");
 
   // 현금영수증 형태, {승인거래, 취소거래} 중 기재
   cashbill.setTradeType("승인거래");
@@ -43,7 +45,7 @@
   //거래처 식별번호, 거래유형에 따라 작성
   //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
   //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
-  cashbill.setIdentityNum("01043245117");
+  cashbill.setIdentityNum("01011112222");
 
   // 과세형태, {과세, 비과세} 중 기재
   cashbill.setTaxationType("과세");
@@ -93,7 +95,7 @@
   cashbill.setEmail("test@test.com");
 
   // 고객 휴대폰번호
-  cashbill.setHp("01043245117");
+  cashbill.setHp("010111222");
 
   // 고객 팩스번호
   cashbill.setFax("070111222");

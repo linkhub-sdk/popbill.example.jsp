@@ -12,7 +12,7 @@
 
 <%
 	/**
-  * 다수건의 현금영수증 상태/요약 정보를 확인합니다.
+  * 다수건의 현금영수증 상태/요약 정보를 확인합니다. (최대 1000건)
   * - 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성"을
   *   참조하시기 바랍니다.
   */
@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서관리번호 배열 최대(1000건)
-	String[] mgtKeyList = new String[] {"20150317-01", "20150317-02", "20150318-02", "20150319-01"};
+	String[] mgtKeyList = new String[] {"20161130-01", "20150317-02", "20150318-02", "20150319-01"};
 
 	CashbillInfo[] cashbillInfos = null;
 
@@ -41,14 +41,12 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>현금영수증 상태/요약 정보 확인 - 대량</legend>
-
 				<%
 					CashbillInfo cashbillInfo = null;
-					for(int i=0; i< cashbillInfos.length; i++){
+
+					for ( int i = 0; i < cashbillInfos.length; i++ ) {
 						cashbillInfo = cashbillInfos[i];
 				%>
-
-
 				<fieldset class="fieldset2">
 					<legend>CashbillInfo</legend>
 					<ul>
@@ -77,13 +75,9 @@
 						<li>regDT : <%= cashbillInfo.getRegDT()%></li>
 					</ul>
 				</fieldset>
-
 				<%
 					}
 				%>
-
-
-
 			</fieldset>
 		 </div>
 	</body>

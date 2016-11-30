@@ -15,9 +15,9 @@
 			<fieldset class="fieldset1">
 				<legend>팝빌 기본 API</legend>
 				<fieldset class="fieldset2">
-					<legend>회원사 정보</legend>
+					<legend>회원 정보</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
@@ -48,9 +48,9 @@
 						<li><a href="${pageContext.request.contextPath}/CashbillService/search.jsp">search</a> - 현금영수증 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getInfo.jsp">getInfo</a> - 현금영수증 상태/요약 정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getInfos.jsp">getInfos</a> - 현금영수증 상태/요약 정보 확인 - 대량</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/getDetailInfo.jsp">getDetailInfo</a> - 현금영수증 상세 정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/getDetailInfo.jsp">getDetailInfo</a> - 현금영수증 상세정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/delete.jsp">delete</a> - 현금영수증 삭제</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/getLogs.jsp">getLogs</a> - 현금영수증 문서 상태변경 이력 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/getLogs.jsp">getLogs</a> - 현금영수증 상태변경 이력 확인</li>
 					</ul>
 				</fieldset>
 
@@ -58,7 +58,7 @@
 					<legend>처리 프로세스</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/issue.jsp">issue</a> - 현금영수증 발행</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/cancelIssue.jsp">cancelIssue</a> - 현금영수증 발행취소 처리</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/cancelIssue.jsp">cancelIssue</a> - 현금영수증 발행취소</li>
 					</ul>
 				</fieldset>
 
@@ -77,8 +77,8 @@
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getURL.jsp">getURL</a> - 현금영수증 관련 SSO URL 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getPopUpURL.jsp">getPopUpURL</a> - 현금영수증 보기 팝업 URL 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getPrintURL.jsp">getPrintURL</a> - 현금영수증 인쇄 팝업 URL 확인</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/getMassPrintURL.jsp">getMassPrintURL</a> - 현금영수증 인쇄 인쇄 팝업 URL 확인 - 대량</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/getEPrintURL.jsp">getEPrintURL</a> - 현금영수증 인쇄 화면 URL - 공급받는자용</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/getMassPrintURL.jsp">getMassPrintURL</a> - 현금영수증 인쇄 팝업 URL 확인 - 대량</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/getEPrintURL.jsp">getEPrintURL</a> - 현금영수증 인쇄 팝업 URL - 공급받는자용</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getMailURL.jsp">getMailURL</a> - 현금영수증 메일링크 URL</li>
 					</ul>
 				</fieldset>
