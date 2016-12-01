@@ -33,7 +33,7 @@
 	corpInfo.setCorpName("상호");
 
   // 주소, 최대 300자
-	corpInfo.setAddr("주소");
+	corpInfo.setAddr("주소_JSP");
 
   // 업태, 최대 40자
 	corpInfo.setBizType("업태");

@@ -41,6 +41,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
+        <legend>수집 상태 목록 확인</legend>
         <%
           if ( jobList != null ) {
             for ( int i = 0; i < jobList.length; i++ ) {
@@ -61,11 +62,10 @@
             <li>regDT (수집 요청일시) : <%=jobList[i].getRegDT() %> </li>
           </ul>
           </fieldset>
-          <%
-        	    }
-           }
-          %>
-
+        <%
+      	    }
+          }
+        %>
 			</fieldset>
 		 </div>
 	</body>

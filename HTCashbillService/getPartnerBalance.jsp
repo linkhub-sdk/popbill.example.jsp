@@ -12,8 +12,7 @@
 <%
   /**
   * 파트너의 잔여포인트를 확인합니다.
-  * - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를
-  *   이용하시기 바랍니다.
+  * - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를 이용하시기 바랍니다.
   */
 
   // 팝빌회원 사업자번호
@@ -36,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>파트너 잔여포인트 확인 결과</legend>
+				<legend>파트너 잔여포인트 확인</legend>
 				<ul>
 					<li>잔여포인트 : <%=remainPoint%></li>
 				</ul>

@@ -24,7 +24,7 @@
 	String testUserID = "testkorea";
 
   // 수집 요청시 반환받은 작업아이디
-  String jobID = "016062014000000006";
+  String jobID = "016120111000000001";
 
   HTCashbillJobState jobState = null;
 

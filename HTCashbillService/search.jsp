@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 수집 요청시 발급받은 작업아이디
-  String jobID = "016062015000000001";
+  String jobID = "016120111000000001";
 
   // 거래용도 배열, P-소득공제용, C-지출증빙용
   String[] TradeUsage = {"P", "C"};

@@ -22,7 +22,7 @@
 	joinInfo.setLinkID("TESTER");
 
   // 사업자번호 "-" 제외
-	joinInfo.setCorpNum("1234567890");
+	joinInfo.setCorpNum("0000000016");
 
   // 대표자명
 	joinInfo.setCEOName("대표자성명");
@@ -58,7 +58,7 @@
 	joinInfo.setContactFAX("02-999-9999");
 
   // 담당자 메일주소
-	joinInfo.setContactEmail("code@linkhub.co.kr");
+	joinInfo.setContactEmail("test@test.co.kr");
 
 	Response CheckResponse = null;
 
