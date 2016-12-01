@@ -68,7 +68,7 @@
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>멀티 문자 전송</legend>
+					<legend>포토 문자 전송</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS.jsp">sendMMS</a> - 포토(멀티) 문자메시지 1건 전송</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 포토(멀티) 문자메시지 다량(최대1000건) 전송</li>

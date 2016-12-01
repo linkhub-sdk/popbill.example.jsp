@@ -75,7 +75,8 @@
 
 				</ul>
 				<%
-					for(int i=0; i < searchResult.getList().size(); i++){
+					for ( int i = 0; i < searchResult.getList().size(); i++ ) {
+            
 						SentMessage sentMsg = searchResult.getList().get(i);
 				%>
 

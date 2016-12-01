@@ -19,8 +19,8 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 문자메시지 유형. SMS(단문), LMS(장문), MMS(멀티)
-  MessageType msgType = MessageType.MMS;
+  // 문자메시지 유형. SMS(단문), LMS(장문), MMS(포토)
+  MessageType msgType = MessageType.LMS;
 
 	ChargeInfo chargeInfo = null;
 

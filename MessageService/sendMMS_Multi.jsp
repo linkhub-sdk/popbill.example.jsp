@@ -34,7 +34,7 @@
 
 	//포토 문자메시지 개별 전송정보 최대 1000건
 	Message msg1 = new Message();
-	msg1.setSender("07075103710");			// 발신번호
+	msg1.setSender("07043042991");			// 발신번호
   msg1.setSenderName("발신자명1");
 	msg1.setReceiver("010111222");		// 수신번호
 	msg1.setReceiverName("수신자명");
@@ -42,7 +42,7 @@
 	msg1.setContent("멀티 메시지 내용1");
 
 	Message msg2 = new Message();
-	msg2.setSender("07075103710");			// 발신번호
+	msg2.setSender("07043042991");			// 발신번호
   msg2.setSenderName("발신자명2");
 	msg2.setReceiver("010111222");		// 수신번호
 	msg2.setReceiverName("수신자명");
@@ -81,7 +81,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>멀티 문자메세지 대량 전송</legend>
+				<legend>포토 문자메세지 대량 전송</legend>
 				<ul>
 					<li>접수번호 : <%=receiptNum%></li>
 				</ul>

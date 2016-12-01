@@ -19,7 +19,7 @@
 	String testCorpNum = "1234567890";
 
   // 문자전송 접수번호
-	String receiptNum = "014123015000000007";
+	String receiptNum = "016120110000000001";
 
 	SentMessage[] sentMessages = null;
 

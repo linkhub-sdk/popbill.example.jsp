@@ -16,7 +16,7 @@
   */
 
   // 조회할 아이디
-	String userID = "testkorea1234";
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 

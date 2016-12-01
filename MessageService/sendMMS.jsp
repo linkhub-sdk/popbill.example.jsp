@@ -34,7 +34,7 @@
   // 메시지 내용
 	String content = "멀티 문자메시지 내용";
 
-  // 첨부이미지 파일스트림
+  // 첨부 이미지 파일스트림
 	File file = new File((application.getRealPath("/resources/test.jpg")));
 
   // 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송

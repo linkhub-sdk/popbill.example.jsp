@@ -27,14 +27,14 @@
 
 	//개별문자 메시지 전송정보 최대 1000건
 	Message msg1 = new Message();
-	msg1.setSender("07075103710");			// 발신번호
+	msg1.setSender("07043042991");			// 발신번호
   msg1.setSenderName("발신자명1");       // 발신자명
 	msg1.setReceiver("010111222");			// 수신번호
 	msg1.setReceiverName("수신자명");
 	msg1.setContent("메시지 내용1");
 
 	Message msg2 = new Message();
-	msg2.setSender("07075103710");			// 발신번호
+	msg2.setSender("07043042991");			// 발신번호
   msg2.setSenderName("발신자명2");       // 발신자명
 	msg2.setReceiver("010111222");		// 수신번호
 	msg2.setReceiverName("수신자명");

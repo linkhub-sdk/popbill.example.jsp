@@ -37,11 +37,11 @@
 			<fieldset class="fieldset1">
 				<legend>080 수신거부번호 목록</legend>
 				<%
-					for(int i=0; i<autoDenyList.length; i++){
+					for ( int i = 0; i < autoDenyList.length; i++ ) {
 						AutoDeny autoDeny = autoDenyList[i];
 				%>
 				<fieldset class="fieldset2">
-					<legend>AutoDenyList [ <%=i+1%> / <%=autoDenyList.length%>]</legend>
+					<legend>080수신거부 등록정보 [ <%=i+1%> / <%=autoDenyList.length%>]</legend>
 						<ul>
 							<li>number (수신거부번호) : <%= autoDeny.getNumber() %></li>
 							<li>regDT (등록일시) : <%= autoDeny.getRegDT() %></li>
