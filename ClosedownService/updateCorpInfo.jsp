@@ -36,10 +36,12 @@
 	corpInfo.setAddr("주소");
 
   // 업태, 최대 40자
-	corpInfo.setBizType("업태");
+	corpInfo.setBizType("업태_JSP");
 
   // 종목, 최대 40자
 	corpInfo.setBizClass("종목");
+
+  Response CheckResponse = null;
 
 	try {
 
@@ -56,7 +58,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>회사정보 수정 결과</legend>
+				<legend>회사정보 수정</legend>
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>

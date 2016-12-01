@@ -14,7 +14,7 @@
   * 휴폐업조회 단가를 확인합니다.
   */
 
-	String testCorpNum = "1234567890";		
+	String testCorpNum = "1234567890";
 
 	float unitCost;
 

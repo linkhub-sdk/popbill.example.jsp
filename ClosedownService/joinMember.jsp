@@ -43,7 +43,7 @@
   joinInfo.setID("testkorea");
 
   // 비밀번호, 최대 20자
-  joinInfo.setPWD("12345678");
+  joinInfo.setPWD("thisispassword");
 
   // 담당자명
   joinInfo.setContactName("담당자명");
@@ -58,7 +58,7 @@
   joinInfo.setContactFAX("02-999-9999");
 
   // 담당자 메일주소
-  joinInfo.setContactEmail("code@linkhub.co.kr");
+  joinInfo.setContactEmail("test@test.co.kr");
 
   Response CheckResponse = null;
 

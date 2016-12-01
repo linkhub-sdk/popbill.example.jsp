@@ -25,10 +25,10 @@
 	ContactInfo contactInfo = new ContactInfo();
 
   // 담당자 아이디, 최대 20자
-	contactInfo.setId("test010101");
+	contactInfo.setId("testkorea120109");
 
   // 비밀번호, 최대 20자
-	contactInfo.setPwd("popbill");
+	contactInfo.setPwd("thisospassword");
 
   // 담당자명 (최대 30자)
 	contactInfo.setPersonName("담당자");
