@@ -30,7 +30,7 @@
 	corpInfo.setCeoname("대표자명");
 
   // 상호, 최대 70자
-	corpInfo.setCorpName("상호");
+	corpInfo.setCorpName("상호_JSP");
 
   // 주소, 최대 300자
 	corpInfo.setAddr("주소");
@@ -39,7 +39,7 @@
 	corpInfo.setBizType("업태");
 
   // 종목, 최대 40자
-	corpInfo.setBizClass("업종");
+	corpInfo.setBizClass("종목");
 
 	Response CheckResponse = null;
 

@@ -58,7 +58,7 @@
 	joinInfo.setContactFAX("02-999-9999");
 
   // 담당자 메일주소
-	joinInfo.setContactEmail("code@linkhub.co.kr");
+	joinInfo.setContactEmail("test@test.co.kr");
 
 	Response CheckResponse = null;
 

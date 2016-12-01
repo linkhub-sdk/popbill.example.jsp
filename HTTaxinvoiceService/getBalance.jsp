@@ -35,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동회원 잔여포인트 확인결과</legend>
+				<legend>연동회원 잔여포인트</legend>
 				<ul>
 					<li>잔여포인트 : <%=remainPoint%> </li>
 				</ul>
