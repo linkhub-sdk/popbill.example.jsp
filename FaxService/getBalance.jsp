@@ -18,7 +18,7 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	double remainPoint = null;
+	double remainPoint;
 
 	try {
 
@@ -35,7 +35,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>연동회원 잔여포인트 확인결과</legend>
+				<legend>연동회원 잔여포인트 확인</legend>
 				<ul>
 					<li>잔여포인트 : <%=remainPoint%></li>
 				</ul>

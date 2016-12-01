@@ -22,7 +22,7 @@
   joinInfo.setLinkID("TESTER");
 
   // 사업자번호 "-" 제외
-  joinInfo.setCorpNum("1234567890");
+  joinInfo.setCorpNum("0000000012");
 
   // 대표자명
   joinInfo.setCEOName("대표자성명");
@@ -43,7 +43,7 @@
   joinInfo.setID("testkorea");
 
   // 비밀번호, 최대 20자
-  joinInfo.setPWD("12345678");
+  joinInfo.setPWD("thisispassword");
 
   // 담당자명
   joinInfo.setContactName("담당자명");

@@ -19,11 +19,11 @@
 	String testCorpNum = "1234567890";
 
   // 팝빌회원 아이디
-	String userID = "userid";
+	String userID = "testkorea";
 
   // CHRG : 포인트 충전, LOGIN : 메인
-	String TOGO = "CHRG";
-  
+	String TOGO = "LOGIN";
+
 	String url = null;
 
 	try {

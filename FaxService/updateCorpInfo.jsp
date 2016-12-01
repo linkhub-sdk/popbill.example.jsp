@@ -27,7 +27,7 @@
 	CorpInfo corpInfo = new CorpInfo();
 
   // 대표자 성명, 최대 30자
-	corpInfo.setCeoname("대표자명");
+	corpInfo.setCeoname("대표자명_JSP");
 
   // 상호, 최대 70자
 	corpInfo.setCorpName("상호");
@@ -39,7 +39,7 @@
 	corpInfo.setBizType("업태");
 
   // 종목, 최대 40자
-	corpInfo.setBizClass("업종");
+	corpInfo.setBizClass("종목");
 
 	Response CheckResponse = null;
 

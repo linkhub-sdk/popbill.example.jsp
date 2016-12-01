@@ -17,7 +17,7 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	float unitCost = null;
+	float unitCost;
 
 	try {
 

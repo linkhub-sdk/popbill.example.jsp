@@ -18,7 +18,7 @@
   // 팝빌회원 사업자번호, "-" 제외
 	String testCorpNum = "1234567890";
 
-	double remainPoint = null;
+	double remainPoint;
 
 	try {
 

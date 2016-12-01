@@ -16,10 +16,10 @@
   */
 
   // 팝빌회원 사업자번호
-	String testCorpNum = "1231212312";
+	String testCorpNum = "1234567890";
 
   // 팝빌회원 아이디
-	String userid = "userid";
+	String userid = "testkorea";
 
   // BOX : 팩스 전송 내역 조회 팝업
 	String TOGO = "BOX";

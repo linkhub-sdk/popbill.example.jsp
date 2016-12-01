@@ -21,7 +21,7 @@
 <%@page errorPage="/exception.jsp" %>
 <jsp:useBean id="messageService" scope="application" class="com.popbill.api.message.MessageServiceImp"/>
 
-<%-- 연동아이디 --%>
+<%-- 링크아이디 --%>
 <jsp:setProperty name="messageService" property="linkID" value="TESTER"/>
 
 <%-- 비밀키, 사용자 인증에 사용되는 정보이므로 유출에 주의 --%>

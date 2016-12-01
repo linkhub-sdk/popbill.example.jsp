@@ -13,7 +13,6 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-
   // 팝빌회원 사업자번호
   String testCorpNum = "1234567890";
 
@@ -21,7 +20,7 @@
 	String testUserID = "testkorea";
 
   // 발신번호번호
-	String sendNum = "07075103710";
+	String sendNum = "07043042991";
 
 	// 수신정보
 	Receiver receiver1 = new Receiver();

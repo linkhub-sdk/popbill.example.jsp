@@ -13,13 +13,15 @@
 <%
   /**
   * 팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.
+  * - 응답항목에 대한 정보는 팩스연동매뉴얼 3.3.1 GetFaxDetail(전송내역 및 전송상태 확인)을
+  *   참조하시기 바랍니다.
   */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
   // 전송요청(sendFAX)시 발급받은 접수번호
-	String receiptNum = "014123117464200001";
+	String receiptNum = "016120109412800001";
 
 	FaxResult[] faxResults = null;
 

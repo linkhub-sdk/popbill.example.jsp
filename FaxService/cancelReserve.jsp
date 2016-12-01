@@ -20,10 +20,10 @@
 	String testCorpNum = "1234567890";
 
   // 전송요청(sendFAX)시 발급받은 팩스접수번호
-	String receiptNum = "014123015555300001";
+	String receiptNum = "016120109412800001";
 
   // 팝빌회원 아이디
-	String testUserID = "userid";
+	String testUserID = "testkorea";
 
 	Response CheckResponse = null;
 
