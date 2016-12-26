@@ -25,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 문서관리번호
-	String mgtKey = "20141230-04";
+	String mgtKey = "20161221-03";
 
 	TaxinvoiceInfo taxinvoiceInfo = null;
 
@@ -61,6 +61,8 @@
 						<li>invoiceeCorpNum : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
 						<li>invoiceeMgtKey : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
 						<li>invoiceePrintYN : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
+            <li>closeDownState : <%= taxinvoiceInfo.getCloseDownState() %></li>
+            <li>closeDownStateDate : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
 						<li>trusteeCorpName : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 						<li>trusteeCorpNum : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
 						<li>trusteeMgtKey : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>

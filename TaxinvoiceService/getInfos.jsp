@@ -25,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 연동관리번호 배열 (최대 1000건)
-	String[] MgtKeyList = new String[] {"20161130-01","20161130-02"};
+	String[] MgtKeyList = new String[] {"20161221-03","20161130-02"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;
 
@@ -69,7 +69,9 @@
 									<li>invoiceeCorpNum : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
 									<li>invoiceeMgtKey : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
 									<li>invoiceePrintYN : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
-									<li>trusteeCorpName : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
+                  <li>closeDownState : <%= taxinvoiceInfo.getCloseDownState() %></li>
+                  <li>closeDownStateDate : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
+                  <li>trusteeCorpName : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 									<li>trusteeCorpNum : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
 									<li>trusteeMgtKey : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
 									<li>trusteePrintYN : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>

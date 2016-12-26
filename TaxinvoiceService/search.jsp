@@ -116,6 +116,8 @@
 									<li>invoiceeCorpNum : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
 									<li>invoiceeMgtKey : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
 									<li>invoiceePrintYN : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
+                  <li>closeDownState : <%= taxinvoiceInfo.getCloseDownState() %></li>
+                  <li>closeDownStateDate : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
 									<li>trusteeCorpName : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 									<li>trusteeCorpNum : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
 									<li>trusteeMgtKey : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
