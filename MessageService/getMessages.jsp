@@ -58,7 +58,7 @@
 						<li>reserveDT : <%=sentMsg.getReserveDT()%></li>
 						<li>sendDT : <%=sentMsg.getSendDT()%></li>
 						<li>resultDT : <%=sentMsg.getResultDT()%></li>
-						<li>sendResult : <%=sentMsg.getSendResult()%></li>
+						<li>result : <%=sentMsg.getResult()%></li>
 						<li>tranNet : <%=sentMsg.getTranNet()%></li>
 					</ul>
 				</fieldset>
