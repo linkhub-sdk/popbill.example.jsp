@@ -18,19 +18,16 @@
   */
 
   // 팝빌회원 사업자번호
-	String testCorpNum = "1234567890";
-
-  // 팝빌회원 아이디
-	String testUserID = "testkorea";
+	String testCorpNum = "6798700433";
 
   // 수집 요청시 반환받은 작업아이디
-  String jobID = "016120111000000001";
+  String jobID = "017030710000000003";
 
   HTCashbillJobState jobState = null;
 
 	try {
 
-		jobState = htCashbillService.getJobState(testCorpNum, jobID, testUserID);
+		jobState = htCashbillService.getJobState(testCorpNum, jobID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
