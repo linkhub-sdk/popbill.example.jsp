@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 수집 요청시 발급받은 작업아이디
-  String jobID = "016062011000000001";
+  String jobID = "017030710000000002";
 
   // 문서형태, N-일반, M-수정
   String[] Type = {"N", "M"};

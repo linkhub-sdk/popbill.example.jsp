@@ -21,9 +21,6 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-	String testUserId = "testkorea";
-
   // SELL-매출 세금계산서, BUY-매입 세금계산서, TRUSTEE-위수탁 세금계산서
   QueryType TaxinvoiceType = QueryType.SELL;
 
@@ -31,10 +28,10 @@
   String DType = "W";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-  String SDate = "20161001";
+  String SDate = "20170101";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-  String EDate = "20161231";
+  String EDate = "20170303";
 
 	String jobID = null;
 

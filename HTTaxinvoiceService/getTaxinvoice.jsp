@@ -21,16 +21,13 @@
 	String testCorpNum = "1234567890";
 
   // 전자세금계산서 국세청 승인번호
-  String ntsConfirmNum = "20160615410000290000020d";
-
-  // 팝빌회원 아이디
-  String testUserID = "testkorea";
+  String ntsConfirmNum = "201703034100020300001af2";
 
   HTTaxinvoice taxinvoiceInfo = null;
 
 	try {
 
-		taxinvoiceInfo = htTaxinvoiceService.getTaxinvoice(testCorpNum, ntsConfirmNum, testUserID);
+		taxinvoiceInfo = htTaxinvoiceService.getTaxinvoice(testCorpNum, ntsConfirmNum);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

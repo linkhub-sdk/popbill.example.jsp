@@ -21,10 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 전자세금계산서 국세청 승인번호
-  String ntsConfirmNum = "20160615410000290000020d";
-
-  // 팝빌회원 아이디
-  String testUserID = "testkorea";
+  String ntsConfirmNum = "201703034100020300001af2";
 
   HTTaxinvoiceXMLResponse xmlResponse = null;
 
@@ -32,7 +29,7 @@
 
 	try {
 
-		xmlResponse = htTaxinvoiceService.getXML(testCorpNum, ntsConfirmNum, testUserID);
+		xmlResponse = htTaxinvoiceService.getXML(testCorpNum, ntsConfirmNum);
 
     xmlData = xmlResponse.getRetObject();
     xmlData = xmlData.replaceAll("<","&lt;").replaceAll(">", "&gt;");
