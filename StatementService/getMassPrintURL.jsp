@@ -21,9 +21,6 @@
   // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
 	// 문서관리번호 배열, 최대 100건
 	String[] mgtKeyList = new String[] {"20150318-01", "20150318-01", "20150318-02", "20150319-01"};
 
@@ -31,7 +28,7 @@
 
 	try {
 
-		url = statementService.getMassPrintURL(testCorpNum, itemCode, mgtKeyList, userID);
+		url = statementService.getMassPrintURL(testCorpNum, itemCode, mgtKeyList);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

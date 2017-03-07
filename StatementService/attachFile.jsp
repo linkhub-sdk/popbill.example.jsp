@@ -27,22 +27,19 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20161130-05";
+	String mgtKey = "20170307-01";
 
   // 첨부파일 표시명
 	String fileName = "test.jpg";
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
-	Response CheckResponse = null;
-
   // 파일 스트림
 	InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
+	Response CheckResponse = null;
+
 	try {
 
-		CheckResponse = statementService.attachFile(testCorpNum, itemCode, mgtKey, fileName, stream, userID);
+		CheckResponse = statementService.attachFile(testCorpNum, itemCode, mgtKey, fileName, stream);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

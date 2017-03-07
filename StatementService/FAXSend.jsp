@@ -39,7 +39,7 @@
 	Statement statement = new Statement();
 
   // [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20161130");
+	statement.setWriteDate("20170307");
 
   // [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -54,7 +54,7 @@
 	statement.setItemCode((short) 121);
 
   // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20161130-06");
+	statement.setMgtKey("20170307-06");
 
 
   /***************************************************************************

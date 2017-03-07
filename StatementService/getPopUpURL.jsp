@@ -22,16 +22,13 @@
 	int itemCode = 121;
 
   // 전자명세서 문서관리번호
-	String mgtKey = "20161130-05";
+	String mgtKey = "20170307-01";
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
-	String url = null;
+  String url = null;
 
 	try {
 
-		url = statementService.getPopUpURL(testCorpNum, itemCode, mgtKey, userID);
+		url = statementService.getPopUpURL(testCorpNum, itemCode, mgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

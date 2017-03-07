@@ -24,12 +24,8 @@
   // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
-
   // 전자명세서 문서관리번호
-	String mgtKey = "20161130-02";
+	String mgtKey = "20170307-01";
 
   // 발신번호
   String sender = "07043042991";
@@ -45,7 +41,7 @@
 	try {
 
 		CheckResponse = statementService.sendSMS(testCorpNum, itemCode, mgtKey, sender,
-      receiver, contents, userID);
+      receiver, contents);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

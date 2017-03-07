@@ -24,14 +24,11 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
   String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-  String userID = "testkorea";
-
   // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
   int itemCode = 121;
 
   // 수정할 전자명세서 문서관리번호
-  String mgtKey = "20161130-04";
+  String mgtKey = "20170307-01";
 
 
   /***************************************************************************
@@ -41,7 +38,7 @@
 	Statement statement = new Statement();
 
   // [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20161130");
+	statement.setWriteDate("20170307");
 
   // [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -56,7 +53,7 @@
 	statement.setItemCode((short) 121);
 
   // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20161128-01");
+	statement.setMgtKey(mgtKey);
 
 
   /***************************************************************************
@@ -205,7 +202,7 @@
 
 	try {
 
-		CheckResponse = statementService.update(testCorpNum, itemCode, mgtKey, statement, userID);
+		CheckResponse = statementService.update(testCorpNum, itemCode, mgtKey, statement);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
