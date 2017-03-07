@@ -24,9 +24,6 @@
   // 팝빌회원 사업자번호, '-'제외 10자리
   String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-  String userID = "testkorea";
-
   // 메모
   String memo = "발행 메모";
 
@@ -34,7 +31,7 @@
   Cashbill cashbill = new Cashbill();
 
   // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-  cashbill.setMgtKey("20161130-01");
+  cashbill.setMgtKey("20170307-01");
 
   // 현금영수증 형태, {승인거래, 취소거래} 중 기재
   cashbill.setTradeType("승인거래");

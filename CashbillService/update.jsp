@@ -22,18 +22,15 @@
   // 팝빌회원 사업자번호
   String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-  String userID = "testkorea";
-
   // 현금영수증 문서관리번호
-  String mgtKey = "20161130-02";
+  String mgtKey = "20170307-02";
 
 
   // 현금영수증 정보 객체
 	Cashbill cashbill = new Cashbill();
 
   // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-	cashbill.setMgtKey("20161130-02");
+	cashbill.setMgtKey(mgtKey);
 
   // 현금영수증 형태, {승인거래, 취소거래} 중 기재
 	cashbill.setTradeType("승인거래");
@@ -104,7 +101,7 @@
 
 	try {
 
-		CheckResponse = cashbillService.update(testCorpNum, mgtKey, cashbill, userID);
+		CheckResponse = cashbillService.update(testCorpNum, mgtKey, cashbill);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

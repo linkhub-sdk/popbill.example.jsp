@@ -18,9 +18,6 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
 	// 현금영수증 문서관리번호 배열, 최대 100건
 	String[] MgtKeyList = new String[] {"20161130-01", "20150317-02", "20150318-02", "20150319-01"};
 
@@ -28,7 +25,7 @@
 
 	try {
 
-		url = cashbillService.getMassPrintURL(testCorpNum, MgtKeyList, userID);
+		url = cashbillService.getMassPrintURL(testCorpNum, MgtKeyList);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

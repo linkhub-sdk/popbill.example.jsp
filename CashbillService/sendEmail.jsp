@@ -19,19 +19,16 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20161130-01";
+	String mgtKey = "20170307-01";
 
   // 수신메일주소
 	String receiver = "test@test.com";
-
-  // 팝빌회원 아이디
-	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
 	try {
 
-		CheckResponse = cashbillService.sendEmail(testCorpNum, mgtKey, receiver, userID);
+		CheckResponse = cashbillService.sendEmail(testCorpNum, mgtKey, receiver);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
