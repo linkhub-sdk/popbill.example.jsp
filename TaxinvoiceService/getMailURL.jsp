@@ -23,16 +23,13 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
   // 세금계산서 연동관리번호
-	String mgtKey = "20161130-01";
-
-  // 팝빌회원 아이디
-	String userID = "testkorea";
+	String mgtKey = "20170307-01";
 
 	String url = null;
 
 	try {
 
-		url = taxinvoiceService.getMailURL(testCorpNum, keyType, mgtKey, userID);
+		url = taxinvoiceService.getMailURL(testCorpNum, keyType, mgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

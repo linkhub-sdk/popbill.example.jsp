@@ -22,17 +22,14 @@
   // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
   // 세금계산서 배열, 최대 100건
-	String[] mgtKeyList = new String[]{"20161130-04", "20161130-02"};
+	String[] mgtKeyList = new String[]{"20170307-01", "20161130-02"};
 
 	String url = null;
 
 	try {
 
-		url = taxinvoiceService.getMassPrintURL(testCorpNum, keyType, mgtKeyList, userID);
+		url = taxinvoiceService.getMassPrintURL(testCorpNum, keyType, mgtKeyList);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

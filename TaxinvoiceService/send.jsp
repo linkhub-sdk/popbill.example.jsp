@@ -31,9 +31,6 @@
   // 메모
 	String memo = "발행예정 메모";
 
-  // 팝빌회원 아이디
-	String userId = "testkorea";
-
   // 발행예정 전송메일 제목, 미기재시 기본제목으로 전송
 	String emailSubject = "";
 
@@ -41,7 +38,7 @@
 
 	try {
 
-		CheckResponse = taxinvoiceService.send(testCorpNum, keyType, mgtKey, memo, emailSubject, userId);
+		CheckResponse = taxinvoiceService.send(testCorpNum, keyType, mgtKey, memo, emailSubject);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

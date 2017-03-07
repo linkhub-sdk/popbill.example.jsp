@@ -39,7 +39,7 @@
 
 
   // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-  taxinvoice.setWriteDate("20161130");
+  taxinvoice.setWriteDate("20170307");
 
   // 발행유형, {정발행, 역발행, 위수탁} 중 기재
   taxinvoice.setIssueType("정발행");
@@ -71,7 +71,7 @@
   taxinvoice.setInvoicerCorpName("공급자 상호");
 
   // 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-  taxinvoice.setInvoicerMgtKey("20161130-02");
+  taxinvoice.setInvoicerMgtKey("20170307-03");
 
   // 공급자 대표자성명
   taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -261,7 +261,7 @@
 
   try {
 
-  	CheckResponse = taxinvoiceService.register(testCorpNum, taxinvoice, userID);
+  	CheckResponse = taxinvoiceService.register(testCorpNum, taxinvoice);
 
   } catch (PopbillException pe) {
   	//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
