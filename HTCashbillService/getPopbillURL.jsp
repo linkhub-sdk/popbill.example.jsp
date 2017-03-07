@@ -7,41 +7,25 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.Response"%>
-<%@page import="com.popbill.api.CorpInfo"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
   /**
-  * 연동회원의 회사정보를 수정합니다
+  * 팝빌 SSO 팝업 URL 을 반환합니다.
+  * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
   */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 회사정보 객체
-	CorpInfo corpInfo = new CorpInfo();
+  // CHRG : 포인트 충전, LOGIN : 메인
+	String TOGO = "LOGIN";
 
-  // 대표자 성명, 최대 30자
-	corpInfo.setCeoname("대표자명");
-
-  // 상호, 최대 70자
-	corpInfo.setCorpName("상호_JSP");
-
-  // 주소, 최대 300자
-	corpInfo.setAddr("주소");
-
-  // 업태, 최대 40자
-	corpInfo.setBizType("업태");
-
-  // 종목, 최대 40자
-	corpInfo.setBizClass("종목");
-
-	Response CheckResponse = null;
+	String url = null;
 
 	try {
 
-		CheckResponse = htTaxinvoiceService.updateCorpInfo(testCorpNum, corpInfo);
+		url = htCashbillService.getPopbillURL(testCorpNum, TOGO);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -51,13 +35,12 @@
 %>
 	<body>
 		<div id="content">
-			<p class="heading1">Response </p>
+			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>회사정보 수정</legend>
+				<legend>팝빌 SSO URL 확인</legend>
 				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+					<li>URL : <%=url%></li>
 				</ul>
 			</fieldset>
 		 </div>

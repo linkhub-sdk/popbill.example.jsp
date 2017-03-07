@@ -18,9 +18,6 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-	String userID = "testkorea";
-
   // CHRG : 포인트 충전, CERT : 공인인증서 등록, LOGIN : 로그인, SEAL : 인감 및 첨부문서 등록
 	String TOGO = "CHRG";
 
@@ -28,7 +25,7 @@
 
 	try {
 
-		url = taxinvoiceService.getPopbillURL(testCorpNum, userID, TOGO);
+		url = taxinvoiceService.getPopbillURL(testCorpNum, TOGO);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
