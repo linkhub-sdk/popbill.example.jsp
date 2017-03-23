@@ -108,6 +108,7 @@
 									<li>writeDate : <%= taxinvoiceInfo.getWriteDate()%></li>
 									<li>regDT : <%= taxinvoiceInfo.getRegDT()%> </li>
 									<li>lateIssueYN : <%= taxinvoiceInfo.getLateIssueYN() %></li>
+                  <li>interOPYN : <%= taxinvoiceInfo.getInterOPYN() %></li>
 									<li>invoicerCorpName : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
 									<li>invoicerCorpNum : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
 									<li>invoicerMgtKey : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
