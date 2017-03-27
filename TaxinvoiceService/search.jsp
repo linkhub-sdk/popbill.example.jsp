@@ -66,12 +66,15 @@
   // 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
+  // 연동/일반 문서유형, 공백-전체조회, 0-일반문서, 1-연동문서
+  String InterOPYN = "";
+
 	TISearchResult searchResult = new TISearchResult();
 
 	try {
 		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType,
       SDate, EDate, State, Type, TaxType, LateOnly, TaxRegIDType, TaxRegID,
-      TaxRegIDYN, QString, Page, PerPage, Order);
+      TaxRegIDYN, QString, Page, PerPage, Order, InterOPYN);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
