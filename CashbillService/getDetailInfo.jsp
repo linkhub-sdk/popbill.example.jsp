@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20161130-01";
+	String mgtKey = "20170316-02";
 
 	Cashbill cashbill = null;
 
@@ -45,36 +45,32 @@
 				<fieldset class="fieldset2">
 					<legend>Cashbill</legend>
 					<ul>
-						<li>mgtKey : <%=cashbill.getMgtKey() %></li>
-						<li>tradeDate : <%=cashbill.getTradeDate() %></li>
-						<li>tradeUsage : <%=cashbill.getTradeUsage() %></li>
-						<li>tradeType : <%=cashbill.getTradeType() %></li>
+						<li>mgtKey (문서관리번호) : <%=cashbill.getMgtKey() %></li>
+						<li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
+						<li>tradeUsage (거래유형) : <%=cashbill.getTradeUsage() %></li>
+						<li>tradeType (현금영수증 형태) : <%=cashbill.getTradeType() %></li>
+            <li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
+						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
 
-						<li>taxationType : <%=cashbill.getTaxationType() %></li>
-						<li>supplyCost : <%=cashbill.getSupplyCost() %></li>
-						<li>tax : <%=cashbill.getTax() %></li>
-						<li>serviceFee : <%=cashbill.getServiceFee() %></li>
-						<li>totalAmount : <%=cashbill.getTotalAmount() %></li>
+						<li>taxationType (과세형태) : <%=cashbill.getTaxationType() %></li>
+						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>
+						<li>tax (세액) : <%=cashbill.getTax() %></li>
+						<li>serviceFee (봉사료) : <%=cashbill.getServiceFee() %></li>
+						<li>totalAmount (거래금액) : <%=cashbill.getTotalAmount() %></li>
 
-						<li>franchiseCorpNum : <%=cashbill.getFranchiseCorpNum() %></li>
-						<li>franchiseCorpName : <%=cashbill.getFranchiseCorpName() %></li>
-						<li>franchiseCEOName : <%=cashbill.getFranchiseCEOName() %></li>
-						<li>franchiseAddr : <%=cashbill.getFranchiseAddr() %></li>
-						<li>franchiseTEL : <%=cashbill.getFranchiseTEL() %></li>
+						<li>franchiseCorpNum (발행자 사업자번호) : <%=cashbill.getFranchiseCorpNum() %></li>
+						<li>franchiseCorpName (발행자 상호) : <%=cashbill.getFranchiseCorpName() %></li>
+						<li>franchiseCEOName (발행자 대표자 성명) : <%=cashbill.getFranchiseCEOName() %></li>
+						<li>franchiseAddr (발행자 주소) : <%=cashbill.getFranchiseAddr() %></li>
+						<li>franchiseTEL (발행자 연락처) : <%=cashbill.getFranchiseTEL() %></li>
 
-						<li>identityNum : <%=cashbill.getIdentityNum() %></li>
-						<li>customerName : <%=cashbill.getCustomerName() %></li>
-						<li>itemName : <%=cashbill.getItemName() %></li>
-						<li>orderNumber : <%=cashbill.getOrderNumber() %></li>
-
-						<li>email : <%=cashbill.getEmail() %></li>
-						<li>hp : <%=cashbill.getHp() %></li>
-						<li>fax : <%=cashbill.getFax() %></li>
-						<li>faxsendYN : <%=cashbill.isFaxsendYN() %></li>
-						<li>smssendYN : <%=cashbill.isSmssendYN() %></li>
-
-						<li>confirmNum : <%=cashbill.getConfirmNum() %></li>
-						<li>orgConfirmNum : <%=cashbill.getOrgConfirmNum() %></li>
+						<li>identityNum (거래처 식별번호) : <%=cashbill.getIdentityNum() %></li>
+						<li>customerName (고객명) : <%=cashbill.getCustomerName() %></li>
+						<li>itemName (상품명) : <%=cashbill.getItemName() %></li>
+						<li>orderNumber (가맹점 주문번호) : <%=cashbill.getOrderNumber() %></li>
+						<li>email (고객 이메일) : <%=cashbill.getEmail() %></li>
+						<li>hp (고객 휴대폰번호) : <%=cashbill.getHp() %></li>
+						<li>smssendYN (알림문자 전송여부) : <%=cashbill.isSmssendYN() %></li>
 					</ul>
 			</fieldset>
 		</fieldset>
