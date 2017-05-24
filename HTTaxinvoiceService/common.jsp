@@ -3,7 +3,7 @@
 * 팝빌 홈택스 전자세금계산서 연계 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : http://http://blog.linkhub.co.kr/591/
-* - 업데이트 일자 : 2016-11-29
+* - 업데이트 일자 : 2017-05-24
 * - 연동 기술지원 연락처 : 1600-8536 / 070-4304-2991~2
 * - 연동 기술지원 이메일 : code@linkhub.co.kr
 *

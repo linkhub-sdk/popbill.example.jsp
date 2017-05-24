@@ -15,7 +15,7 @@
   /**
   * 연동회원의 담당자 정보를 수정합니다.
   */
-  
+
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
@@ -24,6 +24,9 @@
 
   // 담당자 정보객체
 	ContactInfo contactInfo = new ContactInfo();
+
+  // 담당자 아이디
+  contactInfo.setId(testUserID);
 
   // 담당자명 (최대 30자)
 	contactInfo.setPersonName("담당자");
