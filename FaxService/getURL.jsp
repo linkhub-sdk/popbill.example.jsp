@@ -18,8 +18,8 @@
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // BOX : 팩스 전송 내역 조회 팝업
-	String TOGO = "BOX";
+  // BOX-팩스 전송내역 목록 / SENDER-발신번호관리 팝업 URL
+	String TOGO = "SENDER";
 
 	String url = null;
 
@@ -38,7 +38,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>팩스 전송내역 목록 팝업 URL 확인</legend>
+				<legend>팩스 API 관련 팝업 URL 확인</legend>
 				<ul>
 					<li>url : <%=url%></li>
 				</ul>

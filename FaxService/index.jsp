@@ -63,8 +63,9 @@
 				<fieldset class="fieldset2">
 					<legend>기타</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/FaxService/getURL.jsp">getURL</a> - 팩스 관련 SSO URL 확인</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/getURL.jsp">getURL</a> - 팩스 API 관련 URL 확인</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/getUnitCost.jsp">getUnitCost</a> - 팩스 발송단가 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getSenderNumberList.jsp">getSenderNumberList</a> - 팩스 발신번호 목록 확인</li>
 					</ul>
 				</fieldset>
 

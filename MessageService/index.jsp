@@ -90,6 +90,7 @@
 						<li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080 수신거부목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getURL.jsp">getURL</a> - 문자전송 내역 보기 팝업 URL</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 문자메시지 전송단가 확인</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getSenderNumberList.jsp">getSenderNumberList</a> - 문자 발신번호 목록 확인</li>
 					</ul>
 				</fieldset>
 			</fieldset>
