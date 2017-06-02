@@ -26,24 +26,27 @@
 	String receiveName = "수신자 명칭";
 
   // 수신 팩스번호
-	String receiveNum = "070111222";
+	String receiveNum = "07043042991";
 
-  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전ㅌ
+  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
   //	String reserveDTtxt = "20141230180000";
   //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
   //	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
-
   // 팩스전송파일 경로
 	File file = new File((application.getRealPath("/resources/test.jpg")));
+
+  // 광고팩스 전송여부
+  Boolean adsYN = false;
+
 
   String receiptNum = null;
 
 	try {
 
 		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName,
-      file, reserveDT, testUserID);
+      file, reserveDT, testUserID, adsYN);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

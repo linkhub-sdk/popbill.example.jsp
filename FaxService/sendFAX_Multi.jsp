@@ -9,6 +9,7 @@
 <%@ include file="common.jsp" %>
 <%@page import="java.io.File"%>
 <%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.popbill.api.fax.Receiver"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
@@ -29,7 +30,7 @@
 
 	Receiver receiver2 = new Receiver();
 	receiver2.setReceiveName("수신자2");
-	receiver2.setReceiveNum("070222333");
+	receiver2.setReceiveNum("070111222");
 
   // 전송할 팩스 이미지파일 경로
   File file = new File((application.getRealPath("/resources/test.jpg")));
@@ -43,12 +44,15 @@
   //	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
+  // 광고팩스 전송여부
+  Boolean adsYN = false;
+
 
   String receiptNum = null;
 
 	try {
 
-		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receivers, file, reserveDT, testUserID);
+		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receivers, file, reserveDT, testUserID, adsYN);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
