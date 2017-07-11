@@ -31,10 +31,16 @@
   Cashbill cashbill = new Cashbill();
 
   // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-  cashbill.setMgtKey("20170307-01");
+  cashbill.setMgtKey("20170711-11");
 
   // 현금영수증 형태, {승인거래, 취소거래} 중 기재
   cashbill.setTradeType("승인거래");
+
+  // [취소거래 시 필수] 원본 현금영수증 승인번호
+  cashbill.setOrgConfirmNum("");
+
+  // [취소거래 시 필수] 원본 현금영수증 거래일자
+  cashbill.setOrgTradeDate("");
 
   // 거래유형, {소득공제용, 지출증빙용} 중 기재
   cashbill.setTradeUsage("소득공제용");
@@ -42,7 +48,7 @@
   //거래처 식별번호, 거래유형에 따라 작성
   //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
   //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
-  cashbill.setIdentityNum("01011112222");
+  cashbill.setIdentityNum("0101112222");
 
   // 과세형태, {과세, 비과세} 중 기재
   cashbill.setTaxationType("과세");
