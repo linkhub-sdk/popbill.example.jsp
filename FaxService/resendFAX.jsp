@@ -24,7 +24,7 @@
 	String testUserID = "testkorea";
 
   // 팩스 접수번호
-  String orgReceiptNum = "017022015395000001";
+  String orgReceiptNum = "017071710460900001";
 
   // 발신번호, 공백처리시 기존전송정보로 전송
 	String sendNum = "07043042991";
@@ -34,7 +34,7 @@
 
   // 수신자명, 수신번호를 모두 공백처리시 기존전송정보로 전송
   // 수신 팩스번호
-	String receiveNum = "";
+	String receiveNum = "070111222";
 
   // 수신자명
 	String receiveName = "";
@@ -45,12 +45,15 @@
   //	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
+  // 팩스제목
+  String title = "팩스전송 제목";
+
   String receiptNum = null;
 
 	try {
 
 		receiptNum = faxService.resendFAX(testCorpNum, orgReceiptNum, sendNum, sendName,
-      receiveNum, receiveName, reserveDT, testUserID);
+      receiveNum, receiveName, reserveDT, testUserID, title);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -65,7 +68,7 @@
 			<fieldset class="fieldset1">
 				<legend>팩스 재전송 요청</legend>
 				<ul>
-					<li>receiptNum : <%=receiptNum%></li>
+					<li>receiptNum (팩스전송 접수번호) : <%=receiptNum%></li>
 				</ul>
 			</fieldset>
 		 </div>

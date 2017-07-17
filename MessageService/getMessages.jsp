@@ -19,7 +19,7 @@
 	String testCorpNum = "1234567890";
 
   // 문자전송 접수번호
-	String receiptNum = "016120110000000001";
+	String receiptNum = "017071416000000002";
 
 	SentMessage[] sentMessages = null;
 
@@ -47,19 +47,19 @@
 				<fieldset class="fieldset2">
 					<legend>SentMessage : <%=i+1%></legend>
 					<ul>
-						<li>sendState : <%=sentMsg.getState()%> </li>
-						<li>subject : <%=sentMsg.getSubject()%></li>
-						<li>messageType : <%=sentMsg.getMessageType()%></li>
-						<li>content : <%=sentMsg.getContent()%></li>
-						<li>sendNum : <%=sentMsg.getSendNum()%></li>
-						<li>receiveNum : <%=sentMsg.getReceiveNum()%></li>
-						<li>receiveName : <%=sentMsg.getReceiveName()%></li>
-						<li>receiptDT : <%=sentMsg.getReceiptDT()%></li>
-						<li>reserveDT : <%=sentMsg.getReserveDT()%></li>
-						<li>sendDT : <%=sentMsg.getSendDT()%></li>
-						<li>resultDT : <%=sentMsg.getResultDT()%></li>
-						<li>result : <%=sentMsg.getResult()%></li>
-						<li>tranNet : <%=sentMsg.getTranNet()%></li>
+						<li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
+            <li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
+						<li>subject (메시지 제목) : <%=sentMsg.getSubject()%></li>
+						<li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
+						<li>content (메시지 내용) : <%=sentMsg.getContent()%></li>
+						<li>sendNum (발신번호) : <%=sentMsg.getSendNum()%></li>
+            <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
+						<li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
+						<li>receiptDT (접수일시) : <%=sentMsg.getReceiptDT()%></li>
+            <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
+						<li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
+						<li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
+						<li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
 					</ul>
 				</fieldset>
 				<%

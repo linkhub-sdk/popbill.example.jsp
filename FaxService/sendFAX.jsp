@@ -22,11 +22,14 @@
   // 발신번호
 	String sendNum = "07043042991";
 
+  // 발신자명
+  String senderName = "발신자명";
+
   // 수신자명
 	String receiveName = "수신자 명칭";
 
   // 수신 팩스번호
-	String receiveNum = "07043042991";
+	String receiveNum = "070111222";
 
   // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
   //	String reserveDTtxt = "20141230180000";
@@ -40,13 +43,15 @@
   // 광고팩스 전송여부
   Boolean adsYN = false;
 
+  // 팩스제목
+  String title = "팩스제목";
 
   String receiptNum = null;
 
 	try {
 
 		receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName,
-      file, reserveDT, testUserID, adsYN);
+      file, reserveDT, testUserID, adsYN, title);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -61,7 +66,7 @@
 			<fieldset class="fieldset1">
 				<legend>팩스전송 요청</legend>
 				<ul>
-					<li>receiptNum : <%=receiptNum%></li>
+					<li>receiptNum (팩스전송 접수번호) : <%=receiptNum%></li>
 				</ul>
 			</fieldset>
 		 </div>

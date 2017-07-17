@@ -51,6 +51,7 @@
 						<li>tradeType (현금영수증 형태) : <%=cashbill.getTradeType() %></li>
             <li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
 						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
+            <li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
 
 						<li>taxationType (과세형태) : <%=cashbill.getTaxationType() %></li>
 						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>

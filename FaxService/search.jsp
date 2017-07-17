@@ -20,10 +20,10 @@
 	String testCorpNum = "1234567890";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20161001";
+	String SDate = "20170601";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20161231";
+	String EDate = "20170801";
 
   // 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
@@ -81,21 +81,22 @@
 				<fieldset class="fieldset2">
 					<legend>FaxResult : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
 					<ul>
-						<li>sendState : <%=faxResult.getSendState()%></li>
-						<li>convState : <%=faxResult.getConvState()%></li>
-						<li>sendNum : <%=faxResult.getSendNum()%></li>
-						<li>receiveNum : <%=faxResult.getReceiveNum()%></li>
-						<li>receiveName : <%=faxResult.getReceiveName()%></li>
-						<li>sendPageCnt : <%=faxResult.getSendPageCnt()%></li>
-						<li>successPageCnt : <%=faxResult.getSuccessPageCnt()%></li>
-						<li>failPageCnt : <%=faxResult.getFailPageCnt()%></li>
-						<li>refundPageCnt : <%=faxResult.getRefundPageCnt()%></li>
-						<li>cancelPageCnt : <%=faxResult.getCancelPageCnt()%></li>
-						<li>receiptDT : <%=faxResult.getReceiptDT()%></li>
-						<li>reserveDT : <%=faxResult.getReserveDT()%></li>
-						<li>sendDT : <%=faxResult.getSendDT()%></li>
-						<li>resultDT : <%=faxResult.getResultDT()%></li>
-						<li>sendResult : <%=faxResult.getSendResult()%></li>
+
+            <li>state (전송상태 코드) : <%=faxResult.getState()%></li>
+            <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
+            <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
+						<li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
+						<li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
+						<li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
+						<li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
+						<li>successPageCnt (성공 페이지수) : <%=faxResult.getSuccessPageCnt()%></li>
+						<li>failPageCnt (실패 페이지수) : <%=faxResult.getFailPageCnt()%></li>
+						<li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>
+						<li>cancelPageCnt (취소 페이지수) : <%=faxResult.getCancelPageCnt()%></li>
+						<li>receiptDT (접수일시) : <%=faxResult.getReceiptDT()%></li>
+						<li>reserveDT (예약일시) : <%=faxResult.getReserveDT()%></li>
+						<li>sendDT (전송일시) : <%=faxResult.getSendDT()%></li>
+						<li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
 						<%
 							String fileNames = "";
 							int namesLength = faxResult.getFileNames().length;
@@ -108,7 +109,7 @@
 								}
 							}
 						%>
-						<li>fileNames : <%=fileNames%></li>
+						<li>fileNames (전송 파일명 리스트) : <%=fileNames%></li>
 					</ul>
 				</fieldset>
 				<%

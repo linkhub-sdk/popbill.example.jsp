@@ -24,7 +24,7 @@
   String testUserID = "testkorea";
 
   // 팩스 접수번호
-  String orgReceiptNum = "017022015395000001";
+  String orgReceiptNum = "017071710460900001";
 
   // 발신번호
   String sendNum = "07040342991";
@@ -56,13 +56,16 @@
   //	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
+  // 팩스전송 제목
+  String title = "팩스재전송 동보제목";
+
 
   String receiptNum = null;
 
 	try {
 
 		receiptNum = faxService.resendFAX(testCorpNum, orgReceiptNum, sendNum, sendName,
-      receivers, reserveDT, testUserID);
+      receivers, reserveDT, testUserID, title);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
