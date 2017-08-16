@@ -15,7 +15,7 @@
 	String testCorpNum = "1234567890";
 
 	// 조회할 사업자번호 배열, 최대 1000건
-	String[] corpNumList = new String[] {"1234567890", "6798700433", "105-87-36139"};
+	String[] corpNumList = new String[] {"1234567890", "6798700433", "401-03-94930"};
 
 	CorpState[] corpStates = null;
 
@@ -52,6 +52,7 @@
 							<li>type [사업 유형] : <%=corpState.getType()%></li>
 							<li>state [휴폐업 상태] : <%=corpState.getState()%></li>
 							<li>stateDate [휴폐업일자] : <%=corpState.getStateDate()%></li>
+              <li>typeDate [과세유형 전환일자] : <%=corpState.getTypeDate()%></li>
 							<li>checkDate [확인일자] : <%=corpState.getCheckDate()%></li>
 						</ul>
 					</fieldset>
