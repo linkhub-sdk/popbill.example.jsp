@@ -26,8 +26,9 @@
 						<li><a href="${pageContext.request.contextPath}/MessageService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/MessageService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>

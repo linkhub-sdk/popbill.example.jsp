@@ -22,9 +22,10 @@
 						<li><a href="${pageContext.request.contextPath}/CashbillService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
-						<li><a href="${pageContext.request.contextPath}/CashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
+					  <li><a href="${pageContext.request.contextPath}/CashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>

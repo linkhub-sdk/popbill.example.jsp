@@ -21,8 +21,9 @@
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/ClosedownService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/getUnitCost.jsp">getUnitCost</a> - 조회단가 확인</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/ClosedownService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>

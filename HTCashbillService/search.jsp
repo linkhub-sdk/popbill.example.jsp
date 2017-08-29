@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
   // 수집 요청시 발급받은 작업아이디
-  String jobID = "016120111000000001";
+  String jobID = "017082910000000001";
 
   // 거래용도 배열, P-소득공제용, C-지출증빙용
   String[] TradeUsage = {"P", "C"};
@@ -77,15 +77,19 @@
             <li>tradeDT (거래일시) : <%= result.getList().get(i).getTradeDT() %></li>
             <li>tradeUsage (거래유형) : <%= result.getList().get(i).getTradeUsage() %></li>
             <li>tradeType (현금영수증 형태) : <%= result.getList().get(i).getTradeType() %></li>
+            <li>invoiceType (구분) : <%= result.getList().get(i).getInvoiceType()  %> </li>
+
             <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
             <li>tax (세액) : <%= result.getList().get(i).getTax() %></li>
             <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>
             <li>totalAmount (거래금액) : <%= result.getList().get(i).getTotalAmount() %></li>
+
             <li>franchiseCorpNum (발행자 사업자번호) : <%= result.getList().get(i).getFranchiseCorpNum() %></li>
             <li>franchiseCorpName (발행자 상호) : <%= result.getList().get(i).getFranchiseCorpName() %></li>
             <li>franchiseCorpType (발행자 사업자유형) : <%= result.getList().get(i).getFranchiseCorpType() %></li>
             <li>identityNum (거래처 식별번호) : <%= result.getList().get(i).getIdentityNum() %></li>
             <li>identityNumType (식별번호유형) : <%= result.getList().get(i).getIdentityNumType() %></li>
+
             <li>customerName (식별번호유형) : <%= result.getList().get(i).getCustomerName() %></li>
             <li>cardOwnerName (카드소유자명) : <%= result.getList().get(i).getCardOwnerName() %></li>
             <li>deductionType (공제유형) : <%= result.getList().get(i).getDeductionType() %></li>

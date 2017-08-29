@@ -88,6 +88,7 @@
             <li>writeDate (작성일자) : <%= result.getList().get(i).getWriteDate()  %> </li>
             <li>issueDate (발행일자) : <%= result.getList().get(i).getIssueDate()  %> </li>
             <li>sendDate (전송일자) : <%= result.getList().get(i).getSendDate()  %> </li>
+            <li>invoiceType (구분) : <%= result.getList().get(i).getInvoiceType()  %> </li>
 
             <li>taxType (과세형태) : <%= result.getList().get(i).getTaxType()  %> </li>
             <li>purposeType (영수/청구) : <%= result.getList().get(i).getPurposeType()  %> </li>

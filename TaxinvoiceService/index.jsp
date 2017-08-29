@@ -21,8 +21,9 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 로그인/포인트충전/공인인증서 등록 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
