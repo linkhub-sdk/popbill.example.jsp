@@ -11,7 +11,7 @@
 
 <%
   /**
-  * 홈택스연계 공인인증서 등록 URL을 반환합니다.
+  * 홈택스연동 인증관리 팝업 URL을 반환합니다.
   * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
   */
 
@@ -35,7 +35,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>홈택스 공인인증서 등록 URL </legend>
+				<legend>홈택스연동 인증관리 팝업 URL</legend>
 				<ul>
           <li>url : <%=url%> </li>
 				</ul>
