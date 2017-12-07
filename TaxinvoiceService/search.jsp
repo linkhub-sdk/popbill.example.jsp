@@ -14,7 +14,7 @@
 
 <%
   /**
-  * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
+  * 검색조건을 사용하여 세금계산서 목록을 조회합니다.ㅎ
   * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] >
   *   4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
   */
@@ -26,19 +26,22 @@
 	String DType = "W";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20161001";
+	String SDate = "20171101";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20161231";
+	String EDate = "20171231";
 
   // 세금계산서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
-	String[] State = {"100", "2**", "3**"};
+	String[] State = {"3**", "4**", "6**"};
 
   // 문서유형 배열, N-일반세금계산서, M-수정세금계산서
 	String[] Type = {"N", "M"};
 
   // 과세형태 배열, T-과세, N-면세, Z-영세
-	String[] TaxType = {"T","Z"};
+	String[] TaxType = {"T", "N", "Z"};
+
+  // 발행형태, N-정발행, R-역발행, T-위수탁
+  String[] IssueType = {"N", "R", "T"};
 
   // 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
 	Boolean LateOnly = null;
@@ -73,7 +76,7 @@
 
 	try {
 		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType,
-      SDate, EDate, State, Type, TaxType, LateOnly, TaxRegIDType, TaxRegID,
+      SDate, EDate, State, Type, TaxType, IssueType, LateOnly, TaxRegIDType, TaxRegID,
       TaxRegIDYN, QString, Page, PerPage, Order, InterOPYN);
 
 	} catch (PopbillException pe) {
