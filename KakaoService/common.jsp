@@ -22,10 +22,10 @@
 <jsp:useBean id="kakaoService" scope="application" class="com.popbill.api.kakao.KakaoServiceImp"/>
 
 <%-- 링크아이디 --%>
-<jsp:setProperty name="messageService" property="linkID" value="TESTER"/>
+<jsp:setProperty name="kakaoService" property="linkID" value="TESTER"/>
 
 <%-- 비밀키, 사용자 인증에 사용되는 정보이므로 유출에 주의 --%>
-<jsp:setProperty name="messageService" property="secretKey" value="SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="/>
+<jsp:setProperty name="kakaoService" property="secretKey" value="SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="/>
 
 <%-- 연동환경 설정값, 개발용(true), 상업용(false) --%>
-<jsp:setProperty name="messageService" property="test" value="true"/>
+<jsp:setProperty name="kakaoService" property="test" value="true"/>
