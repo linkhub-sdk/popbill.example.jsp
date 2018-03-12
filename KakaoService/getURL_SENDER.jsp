@@ -21,11 +21,13 @@
     // PLUSFRIEND(플러스친구계정관리), SENDER(발신번호관리), TEMPLATE(알림톡템플릿관리), BOX(카카오톡전송내역)
     String TOGO = "SENDER";
 
+    String testUserId= "testkorea";
+
     String url = null;
 
     try {
 
-        url = kakaoService.getURL(testCorpNum, TOGO, testCorpNum);
+        url = kakaoService.getURL(testCorpNum, TOGO, testUserId);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

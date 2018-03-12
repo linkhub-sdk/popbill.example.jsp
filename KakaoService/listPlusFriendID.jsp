@@ -1,16 +1,58 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kimhyunjin
-  Date: 2018. 3. 10.
-  Time: AM 11:56
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen"/>
+    <title>팝빌 SDK jsp Example.</title>
 </head>
-<body>
 
-</body>
+<%@ include file="common.jsp" %>
+<%@page import="com.popbill.api.PopbillException" %>
+<%@page import="com.popbill.api.kakao.PlusFriendID" %>
+
+<%
+    /*
+    팝빌에 등록된 플러스친구 목록을 반환 합니다.
+     */
+
+    // 팝빌회원 사업자번호
+    String testCorpNum = "1234567890";
+
+    PlusFriendID[] plusFriendIDs = null;
+
+    try {
+
+        plusFriendIDs = kakaoService.listPlusFriendID(testCorpNum);
+
+    } catch (PopbillException pe) {
+        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        throw pe;
+    }
+
+%>
+<div id="content">
+    <p class="heading1">Response</p>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>플러스친구 목록 확인</legend>
+        <%
+            PlusFriendID plusFriendID = null;
+
+            for (int i = 0; i < plusFriendIDs.length; i++) {
+                plusFriendID = plusFriendIDs[i];
+        %>
+        <fieldset class="fieldset2">
+            <legend>플러스친구 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
+            <ul>
+                <li>plusFriendID (플러스친구 아이디) : <%=plusFriendID.getPlusFriendID()%></li>
+                <li>plusFreindName (플러스친구 이름) : <%=plusFriendID.getPlusFriendName()%></li>
+                <li>regDT (등록일시) : <%=plusFriendID.getRegDT()%></li>
+            </ul>
+        </fieldset>
+        <%
+            }
+        %>
+    </fieldset>
+</div>
 </html>
