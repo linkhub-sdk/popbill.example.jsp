@@ -1,35 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen"/>
     <title>팝빌 SDK jsp Example.</title>
 </head>
 
 <%@ include file="common.jsp" %>
-<%@page import="java.util.Date"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.popbill.api.PopbillException"%>
+<%@page import="java.util.Date" %>
+<%@page import="java.text.SimpleDateFormat" %>
+<%@page import="com.popbill.api.PopbillException" %>
 
 <%
+    /**
+     * 단건의 알림톡을 전송합니다
+     */
+
+    // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
-    String templateCode = "";
+    // 알림톡 템플릿코드
+    // 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetURL(TEMPLATE) API, 또는 팝빌사이트에서 확인 가능합니다.
+    String templateCode = "018020000001";
 
+    //발신번호 (팝빌에 등록된 발신번호만 이용가능)
     String senderNum = "07043042993";
 
-    String content = "[테스트] 테스트 템플릿입니다.d";
+    // 알림톡 내용 (최대 1000자)
+    String content = "[테스트] 테스트 템플릿입니다.";
 
+    // 대체문자 내용 (최대 2000byte)
     String altContent = "대체문자 내용";
 
+    // 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     String altSendType = "C";
 
-    String receiverNum = "01043245117";
+    // 수신번호
+    String receiverNum = "010111222";
 
+    // 수신자 이름
     String receiverName = "수신자명";
 
+    // 예약일시 (작성형식 : yyyyMMddHHmmss)
     String sndDT = "";
 
+    // 접수번호
     String receiptNum = null;
 
     try {
@@ -48,9 +63,10 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>단문 문자메시지 전송</legend>
+        <legend>알림톡 전송</legend>
         <ul>
-            <li>접수번호 : <%=receiptNum%></li>
+            <li>접수번호 : <%=receiptNum%>
+            </li>
         </ul>
     </fieldset>
 </div>
