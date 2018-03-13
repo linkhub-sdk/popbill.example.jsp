@@ -67,7 +67,7 @@
     Boolean adsYN = false;
 
     // 파일경로
-    // 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbyte / 가로/세로 1.5미만)
+    // 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbyte / 이미지 높이/너비 비율 : 1.333 이하, 1/2 이상)
     File file = new File((application.getRealPath("/resources/kakaofmstest.jpg")));
 
     // 이미지 링크 URL
