@@ -6,7 +6,7 @@
     <title>팝빌 SDK jsp Example.</title>
 </head>
 
-<%@ include file="common.jsp" %>
+<%@include file="common.jsp" %>
 <%@page import="com.popbill.api.Response" %>
 <%@page import="com.popbill.api.PopbillException" %>
 
@@ -41,10 +41,8 @@
     <fieldset class="fieldset1">
         <legend>연동회원 가입여부 확인</legend>
         <ul>
-            <li>Response.code : <%=CheckResponse.getCode()%>
-            </li>
-            <li>Response.message : <%=CheckResponse.getMessage()%>
-            </li>
+            <li>Response.code : <%=CheckResponse.getCode()%></li>
+            <li>Response.message : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>
 </div>

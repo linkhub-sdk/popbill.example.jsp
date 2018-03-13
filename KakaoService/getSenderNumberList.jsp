@@ -38,14 +38,13 @@
         <legend>문자 발신번호 목록</legend>
         <%
             for (int i = 0; i < senderNumberList.length; i++) {
-                SenderNumber info = senderNumberList[i];
         %>
         <fieldset class="fieldset2">
             <legend>발신번호 정보[<%=i + 1%>/<%=senderNumberList.length%>]</legend>
             <ul>
-                <li>number (발신번호) : <%= info.getNumber() %></li>
-                <li>representYN (대표번호 지정여부) : <%= info.getRepresentYN() %></li>
-                <li>state (등록상태) : <%= info.getState() %></li>
+                <li>number (발신번호) : <%= senderNumberList[i].getNumber() %></li>
+                <li>representYN (대표번호 지정여부) : <%= senderNumberList[i].getRepresentYN() %></li>
+                <li>state (등록상태) : <%= senderNumberList[i].getState() %></li>
             </ul>
         </fieldset>
         <%

@@ -10,9 +10,9 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-    /*
-     카카오톡전송내역 URL을 반환합니다.
-     - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+    /**
+     * 카카오톡전송내역 URL을 반환합니다.
+     * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
      */
 
     // 팝빌회원 사업자번호
@@ -21,6 +21,7 @@
     // PLUSFRIEND(플러스친구계정관리), SENDER(발신번호관리), TEMPLATE(알림톡템플릿관리), BOX(카카오톡전송내역)
     String TOGO = "BOX";
 
+    // 팝빌회원 아이디
     String testUserId= "testkorea";
 
     String url = null;

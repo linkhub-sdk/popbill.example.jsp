@@ -38,10 +38,9 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팝빌 포인트충전 URL</legend>
+        <legend>팝빌 연동회원 포인트충전 URL</legend>
         <ul>
-            <li>URL : <%=url%>
-            </li>
+            <li>URL : <%=url%></li>
         </ul>
     </fieldset>
 </div>

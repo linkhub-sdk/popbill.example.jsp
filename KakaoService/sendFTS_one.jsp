@@ -80,8 +80,7 @@
     <fieldset class="fieldset1">
         <legend>친구톡 텍스트 전송</legend>
         <ul>
-            <li>접수번호 : <%=receiptNum%>
-            </li>
+            <li>접수번호 : <%=receiptNum%></li>
         </ul>
     </fieldset>
 </div>

@@ -22,7 +22,6 @@
     // 팝빌회원 아이디
     String testUserID = "testkorea";
 
-
     // 담당자 정보객체
     ContactInfo contactInfo = new ContactInfo();
 
@@ -44,7 +43,7 @@
     // 담당자 이메일주소 (최대 70자)
     contactInfo.setEmail("test@test.com");
 
-    // 회사 조회권한여부, true-회사조회, false-개인조회
+    // 회사 조회권한여부 [true-회사조회, false-개인조회]
     contactInfo.setSearchAllAllowYN(true);
 
     Response CheckResponse = null;
@@ -66,10 +65,8 @@
     <fieldset class="fieldset1">
         <legend>담당자정보 수정</legend>
         <ul>
-            <li>Response.code : <%=CheckResponse.getCode()%>
-            </li>
-            <li>Response.message : <%=CheckResponse.getMessage()%>
-            </li>
+            <li>Response.code : <%=CheckResponse.getCode()%></li>
+            <li>Response.message : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>
 </div>

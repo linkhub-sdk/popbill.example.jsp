@@ -33,7 +33,7 @@
     String altContent = "대체문자 내용";
 
     // 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
-    String altSendType = "C";
+    String altSendType = "A";
 
     // 수신번호
     String receiverNum = "010111222";
@@ -65,8 +65,7 @@
     <fieldset class="fieldset1">
         <legend>알림톡 전송</legend>
         <ul>
-            <li>접수번호 : <%=receiptNum%>
-            </li>
+            <li>접수번호 : <%=receiptNum%></li>
         </ul>
     </fieldset>
 </div>

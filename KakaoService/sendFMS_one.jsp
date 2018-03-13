@@ -62,7 +62,7 @@
 
     // 파일경로
     // 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbyte / 가로/세로 1.5미만)
-    File file = new File("/Users/kimhyunjin/Workspace/popbill.example.jsp/KakaoService/test.jpg");
+    File file = new File((application.getRealPath("/resources/kakaofmstest.jpg")));
 
     // 이미지 링크 URL
     String imageURL = "http://www.linkhub.co.kr";
@@ -88,8 +88,7 @@
     <fieldset class="fieldset1">
         <legend>친구톡 이미지 전송</legend>
         <ul>
-            <li>접수번호 : <%=receiptNum%>
-            </li>
+            <li>접수번호 : <%=receiptNum%></li>
         </ul>
     </fieldset>
 </div>

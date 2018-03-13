@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen"/>
     <title>팝빌 SDK jsp Example.</title>
 </head>
 
-<%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.Response"%>
-<%@page import="com.popbill.api.PopbillException"%>
+<%@ nclude file="common.jsp" %>
+<%@page import="com.popbill.api.Response" %>
+<%@page import="com.popbill.api.PopbillException" %>
 
 <%
     /**
@@ -35,7 +35,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>아이디 중복확인 </legend>
+        <legend>아이디 중복확인</legend>
         <ul>
             <li>Response.code : <%=CheckResponse.getCode()%></li>
             <li>Response.message : <%=CheckResponse.getMessage()%></li>

@@ -56,10 +56,8 @@
     <fieldset class="fieldset1">
         <legend>회사정보 수정</legend>
         <ul>
-            <li>Response.code : <%=CheckResponse.getCode()%>
-            </li>
-            <li>Response.message : <%=CheckResponse.getMessage()%>
-            </li>
+            <li>Response.code : <%=CheckResponse.getCode()%></li>
+            <li>Response.message : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>
 </div>

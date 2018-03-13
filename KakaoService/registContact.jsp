@@ -42,7 +42,7 @@
     // 담당자 이메일 (최대 70자)
     contactInfo.setEmail("test@test.com");
 
-    // 회사조회 권한여부, true-회사조회, false-개인조회
+    // 회사조회 권한여부 [true-회사조회, false-개인조회]
     contactInfo.setSearchAllAllowYN(true);
 
     Response CheckResponse = null;
@@ -64,10 +64,8 @@
     <fieldset class="fieldset1">
         <legend>담당자 추가등록</legend>
         <ul>
-            <li>Response.code : <%=CheckResponse.getCode()%>
-            </li>
-            <li>Response.message : <%=CheckResponse.getMessage()%>
-            </li>
+            <li>Response.code : <%=CheckResponse.getCode()%></li>
+            <li>Response.message : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>
 </div>

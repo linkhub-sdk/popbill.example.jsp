@@ -40,8 +40,7 @@
     <fieldset class="fieldset1">
         <legend>알림톡/친구톡 전송 단가 확인</legend>
         <ul>
-            <li>전송 단가 : <%=unitCost%>
-            </li>
+            <li>전송 단가 : <%=unitCost%></li>
         </ul>
     </fieldset>
 </div>

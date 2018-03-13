@@ -11,8 +11,8 @@
 <%@page import="com.popbill.api.kakao.PlusFriendID" %>
 
 <%
-    /*
-    팝빌에 등록된 플러스친구 목록을 반환 합니다.
+    /**
+     * 팝빌에 등록된 플러스친구 목록을 반환 합니다.
      */
 
     // 팝빌회원 사업자번호
@@ -37,17 +37,14 @@
     <fieldset class="fieldset1">
         <legend>플러스친구 목록 확인</legend>
         <%
-            PlusFriendID plusFriendID = null;
-
             for (int i = 0; i < plusFriendIDs.length; i++) {
-                plusFriendID = plusFriendIDs[i];
         %>
         <fieldset class="fieldset2">
             <legend>플러스친구 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
             <ul>
-                <li>plusFriendID (플러스친구 아이디) : <%=plusFriendID.getPlusFriendID()%></li>
-                <li>plusFreindName (플러스친구 이름) : <%=plusFriendID.getPlusFriendName()%></li>
-                <li>regDT (등록일시) : <%=plusFriendID.getRegDT()%></li>
+                <li>plusFriendID (플러스친구 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
+                <li>plusFreindName (플러스친구 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
+                <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
             </ul>
         </fieldset>
         <%

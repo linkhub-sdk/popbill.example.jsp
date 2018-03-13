@@ -40,8 +40,7 @@
     <fieldset class="fieldset1">
         <legend>팝빌 로그인 URL</legend>
         <ul>
-            <li>URL : <%=url%>
-            </li>
+            <li>URL : <%=url%></li>
         </ul>
     </fieldset>
 </div>

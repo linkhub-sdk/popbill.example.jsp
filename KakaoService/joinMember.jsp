@@ -79,10 +79,8 @@
     <fieldset class="fieldset1">
         <legend>연동회원가입 요청</legend>
         <ul>
-            <li>Response.code : <%=CheckResponse.getCode()%>
-            </li>
-            <li>Response.message : <%=CheckResponse.getMessage()%>
-            </li>
+            <li>Response.code : <%=CheckResponse.getCode()%></li>
+            <li>Response.message : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>
 </div>
