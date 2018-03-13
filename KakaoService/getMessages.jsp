@@ -61,9 +61,9 @@
                 <li>cancelCnt (취소건수) : <%=kakaoSentInfo.getCancelCnt()%></li>
             </ul>
 
-            <% if (kakaoSentInfo.getBtns() != null) { %>
-            <% List<KakaoButton> btns = kakaoSentInfo.getBtns();
-                for (int j = 0; j < btns.size(); j++) { %>
+            <% if (kakaoSentInfo.getBtns() != null) {
+                List<KakaoButton> btns = kakaoSentInfo.getBtns();
+                    for (int j = 0; j < btns.size(); j++) { %>
             <fieldset class="fieldset3">
                 <legend>버튼 목록 [<%= j + 1 %>]</legend>
                 <ul>
@@ -78,9 +78,9 @@
                 }
             %>
 
-            <% if (kakaoSentInfo.getMsgs() != null) { %>
-            <% List<KakaoSentDetail> msgs = kakaoSentInfo.getMsgs();
-                for (int j = 0; j < msgs.size(); j++) { %>
+            <% if (kakaoSentInfo.getMsgs() != null) {
+                List<KakaoSentDetail> msgs = kakaoSentInfo.getMsgs();
+                    for (int j = 0; j < msgs.size(); j++) { %>
             <fieldset class="fieldset3">
                 <legend>전송결과 정보 배열 [<%= j + 1 %>]</legend>
                 <ul>

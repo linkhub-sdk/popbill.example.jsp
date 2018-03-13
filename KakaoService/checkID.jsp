@@ -6,7 +6,7 @@
     <title>팝빌 SDK jsp Example.</title>
 </head>
 
-<%@ nclude file="common.jsp" %>
+<%@include file="common.jsp" %>
 <%@page import="com.popbill.api.Response" %>
 <%@page import="com.popbill.api.PopbillException" %>
 

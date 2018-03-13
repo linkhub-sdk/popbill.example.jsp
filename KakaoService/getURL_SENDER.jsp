@@ -41,7 +41,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>카카오톡 API 관련 팝업 URL</legend>
+        <legend>카카오톡 발신번호 관리 팝업 URL</legend>
         <ul>
             <li>url : <%=url%></li>
         </ul>

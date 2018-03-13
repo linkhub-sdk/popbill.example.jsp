@@ -48,21 +48,22 @@
                 <li>templateName (템플릿 제목) : <%=aTSTemplates[i].getTemplateName()%></li>
                 <li>template (템플릿 내용) : <%=aTSTemplates[i].getTemplate()%></li>
                 <li>plusFriendID (플러스친구 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
-                <% if (aTSTemplates[i].getBtns() != null) { %>
-                <% List<KakaoButton> btns = aTSTemplates[i].getBtns();
-                    for (int j = 0; j < btns.size(); j++) { %>
-                <fieldset class="fieldset2">
-                    <legend>버튼 목록</legend>
-                    <ul>
-                        <li>n (버튼명) : <%=btns.get(j).getN()%></li>
-                        <li>t (버튼유형) : <%=btns.get(j).getT()%></li>
-                        <li>u1 (버튼링크1) : <%=btns.get(j).getU1()%></li>
-                        <li>u2 (버튼링크2) : <%=btns.get(j).getU2()%></li>
-                    </ul>
-                </fieldset>
+
+                <% if (aTSTemplates[i].getBtns() != null) {
+                    List<KakaoButton> btns = aTSTemplates[i].getBtns();
+                        for (int j = 0; j < btns.size(); j++) { %>
+                            <fieldset class="fieldset2">
+                                <legend>버튼 목록</legend>
+                                <ul>
+                                    <li>n (버튼명) : <%=btns.get(j).getN()%></li>
+                                    <li>t (버튼유형) : <%=btns.get(j).getT()%></li>
+                                    <li>u1 (버튼링크1) : <%=btns.get(j).getU1()%></li>
+                                    <li>u2 (버튼링크2) : <%=btns.get(j).getU2()%></li>
+                                </ul>
+                            </fieldset>
                 <%
+                        }
                     }
-                }
                 %>
             </ul>
         </fieldset>
