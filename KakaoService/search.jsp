@@ -26,7 +26,7 @@
     String EDate = "20180331";
 
     // 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-취소]
-    String[] State = {"1", "2", "3", "4", "5"};
+    String[] State = {"0", "1", "2", "3", "4", "5"};
 
     // 전송여형 배열 [ATS(알림톡) / FTS(친구톡 텍스트) / FMS(친구톡 이미지)]
     String[] Item = {"ATS", "FTS", "FMS"};
@@ -73,10 +73,10 @@
             <li>pageNum (페이지번호) : <%=searchResult.getPageNum()%></li>
             <li>pageCount (페이지 개수) : <%=searchResult.getPageCount()%></li>
         </ul>
-            <%
-					for ( int i = 0; i < searchResult.getList().size(); i++ ) {
-						KakaoSentDetail sentMsg = searchResult.getList().get(i);
-			%>
+        <%
+        for ( int i = 0; i < searchResult.getList().size(); i++ ) {
+            KakaoSentDetail sentMsg = searchResult.getList().get(i);
+        %>
         <fieldset class="fieldset2">
             <legend>카카오톡 전송내역 조회 결과 : [ <%=i + 1%> / <%=searchResult.getList().size() %> ]</legend>
             <ul>
