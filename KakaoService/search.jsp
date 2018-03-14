@@ -77,7 +77,7 @@
         for ( int i = 0; i < searchResult.getList().size(); i++ ) {
             KakaoSentDetail sentMsg = searchResult.getList().get(i);
         %>
-        <fieldset class="fieldset2">
+        <fieldset class="fieldset3">
             <legend>카카오톡 전송내역 조회 결과 : [ <%=i + 1%> / <%=searchResult.getList().size() %> ]</legend>
             <ul>
                 <li>state (전송 상태코드) : <%=sentMsg.getState()%></li>

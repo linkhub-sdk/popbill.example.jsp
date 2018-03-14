@@ -53,7 +53,7 @@
                     List<KakaoButton> btns = aTSTemplates[i].getBtns();
                         for (int j = 0; j < btns.size(); j++) { %>
                             <fieldset class="fieldset2">
-                                <legend>버튼 목록</legend>
+                                <legend>버튼 목록 [<%=j + 1%> / <%=btns.size()%> ] </legend>
                                 <ul>
                                     <li>n (버튼명) : <%=btns.get(j).getN()%></li>
                                     <li>t (버튼유형) : <%=btns.get(j).getT()%></li>

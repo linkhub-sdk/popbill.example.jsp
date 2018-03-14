@@ -43,7 +43,7 @@
             <legend>플러스친구 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
             <ul>
                 <li>plusFriendID (플러스친구 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
-                <li>plusFreindName (플러스친구 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
+                <li>plusFriendName (플러스친구 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
             </ul>
         </fieldset>
