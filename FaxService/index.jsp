@@ -45,8 +45,8 @@
 				<fieldset class="fieldset2">
 					<legend>팩스 전송</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 전송. 1파일 1건 전송</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 전송. 1파일 동보 전송(수신번호 최대 1000개)</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 단건 전송</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 동보 전송(수신번호 최대 1000개)</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX_Multi.jsp">resendFAX</a> - 팩스 동보 재전송</li>
 					</ul>
