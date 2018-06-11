@@ -34,9 +34,9 @@
 
     // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개
-    File[] files = new File[20];
+    File[] files = new File[2];
     File file = new File((application.getRealPath("/resources/test.jpg")));
-    for(int i=0; i<20; i++){
+    for(int i=0; i<2; i++){
         files[i] = file;
     }
 
