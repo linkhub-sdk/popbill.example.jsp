@@ -35,10 +35,8 @@
     // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개
     File[] files = new File[2];
-    File file = new File((application.getRealPath("/resources/test.jpg")));
-    for(int i=0; i<2; i++){
-        files[i] = file;
-    }
+    files[0] = new File((application.getRealPath("/resources/test.jpg")));
+    files[1] = new File((application.getRealPath("/resources/test.jpg")));
 
     // 팩스 수신자 번호 목록, 최대 1000개
     Receiver[] receivers = new Receiver[]{receiver1, receiver2};
