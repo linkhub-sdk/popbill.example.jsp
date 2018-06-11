@@ -39,7 +39,12 @@
 
     // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개
+    File[] files = new File[20];
     File file = new File((application.getRealPath("/resources/test.jpg")));
+    for(int i=0; i<20; i++){
+        files[i] = file;
+    }
+
 
     // 광고팩스 전송여부
     Boolean adsYN = false;
@@ -52,7 +57,7 @@
     try {
 
         receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName,
-                file, reserveDT, testUserID, adsYN, title);
+                files, reserveDT, testUserID, adsYN, title);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

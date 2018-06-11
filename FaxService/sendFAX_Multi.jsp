@@ -32,9 +32,13 @@
     receiver2.setReceiveName("수신자2");
     receiver2.setReceiveNum("070111222");
 
-    // 전송할 팩스 이미지파일 경로
+    // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개
+    File[] files = new File[20];
     File file = new File((application.getRealPath("/resources/test.jpg")));
+    for(int i=0; i<20; i++){
+        files[i] = file;
+    }
 
     // 팩스 수신자 번호 목록, 최대 1000개
     Receiver[] receivers = new Receiver[]{receiver1, receiver2};
@@ -56,7 +60,7 @@
 
     try {
 
-        receiptNum = faxService.sendFAX(testCorpNum, sendNum, receivers, file,
+        receiptNum = faxService.sendFAX(testCorpNum, sendNum, receivers, files,
                 reserveDT, testUserID, adsYN, title);
 
     } catch (PopbillException pe) {
