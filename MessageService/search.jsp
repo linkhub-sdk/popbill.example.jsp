@@ -14,16 +14,17 @@
 <%
   /**
   * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+	* - 최대 검색기간 : 6개월 이내
   */
 
   // 팝빌회원 사업자번호
 	String testCorpNum= "1234567890";
 
   // 시작일자, 날짜형태(yyyyMMdd)
-	String SDate = "20161001";
+	String SDate = "20180701";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20161231";
+	String EDate = "20180720";
 
   // 문자 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
@@ -46,12 +47,17 @@
   // 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
+	// 조회 검색어.
+	// 문자 전송시 입력한 발신자명 또는 수신자명 기재.
+	// 조회 검색어를 포함한 발신자명 또는 수신자명을 검색합니다.
+	String QString = "";
+
 	MSGSearchResult searchResult = null;
 
 	try {
 
 		searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item,
-      ReserveYN, SenderYN, Page, PerPage, Order);
+      ReserveYN, SenderYN, Page, PerPage, Order, QString);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -89,6 +95,7 @@
 						<li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
 						<li>content (메시지 내용) : <%=sentMsg.getContent()%></li>
 						<li>sendNum (발신번호) : <%=sentMsg.getSendNum()%></li>
+						<li>senderName (발신자명) : <%=sentMsg.getSenderName()%></li>
             <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
 						<li>receiptDT (접수일시) : <%=sentMsg.getReceiptDT()%></li>
@@ -96,6 +103,8 @@
 						<li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
 						<li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
 						<li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
+						<li>receiptNum (접수번호) : <%=sentMsg.getReceiptNum()%></li>
+						<li>requestNum (요청번호) : <%=sentMsg.getRequestNum()%></li>
 					</ul>
 				</fieldset>
 				<%

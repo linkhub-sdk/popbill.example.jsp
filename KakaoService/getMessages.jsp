@@ -15,14 +15,14 @@
 
 <%
     /**
-     * 알림톡/알림톡 전송요청 대한 전송결과를 확인합니다.
+     * 카카오톡 전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
      */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
-    // 알림톡/친구톡 전송 접수번호
-    String receiptNum = "018031314283700001";
+    // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
+    String receiptNum = "";
 
     KakaoSentInfo kakaoSentInfo = null;
 
@@ -96,6 +96,8 @@
                     <li>altSendDT (대체문자 전송일시) : <%=msgs.get(j).getAltSendDT()%></li>
                     <li>altResult (대체문자 전송결과 코드) : <%=msgs.get(j).getAltResult()%></li>
                     <li>altResultDT (대체문자 전송결과 수신일시) : <%=msgs.get(j).getAltResultDT()%></li>
+                    <li>receiptNum (접수번호) : <%=msgs.get(j).getReceiptNum()%></li>
+                    <li>requestNum (요청번호) : <%=msgs.get(j).getRequestNum()%></li>
                 </ul>
             </fieldset>
             <%

@@ -14,16 +14,17 @@
 <%
   /**
   * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
+	* - 최대 검색기간 : 6개월 이내
   */
 
   // 펍발회원 사업자번호
 	String testCorpNum = "1234567890";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20170601";
+	String SDate = "20180701";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20170801";
+	String EDate = "20180720";
 
   // 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
@@ -43,12 +44,17 @@
   // 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
+	// 조회 검색어.
+	// 팩스 전송시 입력한 발신자명 또는 수신자명 기재.
+	// 조회 검색어를 포함한 발신자명 또는 수신자명을 검색합니다.
+	String QString = "";
+
 	FAXSearchResult searchResult = null;
 
 	try {
 
 		searchResult = faxService.search(testCorpNum, SDate, EDate, State, ReserveYN,
-      SenderOnlyYN, Page, PerPage, Order);
+      SenderOnlyYN, Page, PerPage, Order, QString);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -86,6 +92,7 @@
             <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
             <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
 						<li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
+						<li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
 						<li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
 						<li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
@@ -97,6 +104,8 @@
 						<li>reserveDT (예약일시) : <%=faxResult.getReserveDT()%></li>
 						<li>sendDT (전송일시) : <%=faxResult.getSendDT()%></li>
 						<li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
+						<li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
+						<li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
 						<%
 							String fileNames = "";
 							int namesLength = faxResult.getFileNames().length;

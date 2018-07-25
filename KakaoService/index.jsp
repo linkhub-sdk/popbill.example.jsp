@@ -63,18 +63,26 @@
     </fieldset>
 
     <fieldset class="fieldset1">
-        <legend>예약전송 취소</legend>
+        <legend>전송내역조회</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserve.jsp">CancelReserve</a> - 예약전송 취소</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/search.jsp">Search</a> - 전송내역 목록 조회</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getURL_BOX.jsp">GetURL</a> - 카카오톡 전송내역 팝업 URL</li>
         </ul>
     </fieldset>
 
     <fieldset class="fieldset1">
-        <legend>정보확인</legend>
+        <legend>접수번호 관련 기능 (요청번호 미할당)</legend>
         <ul>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserve.jsp">CancelReserve</a> - 예약전송 취소</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getMessages.jsp">GetMessages</a> - 알림톡/친구톡 전송내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/search.jsp">Search</a> - 전송내역 목록 조회</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getURL_BOX.jsp">GetURL</a> - 카카오톡 전송내역 팝업 URL</li>
+        </ul>
+    </fieldset>
+
+    <fieldset class="fieldset1">
+        <legend>요청번호 할당 전송건 관련 기능</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserveRN.jsp">CancelReserveRN</a> - 예약전송 취소</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getMessagesRN.jsp">GetMessagesRN</a> - 알림톡/친구톡 전송내역 확인</li>
         </ul>
     </fieldset>
 

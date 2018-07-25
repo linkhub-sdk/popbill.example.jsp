@@ -37,7 +37,7 @@
   msg1.setSenderName("발신자명_XMS");       //발신자명
 	msg1.setReceiver("010111222");		//수신번호
 	msg1.setReceiverName("수신자명");
-	msg1.setContent("메시지 내용1");
+	msg1.setContent("메시지 내용");
 
 	Message msg2 = new Message();
 	msg2.setSender("07043042991");			//발신번호
@@ -45,7 +45,7 @@
 	msg2.setReceiver("010111222");		//수신번호
 	msg2.setReceiverName("수신자명");
 	msg2.setSubject("장문메시지 제목");
-	msg2.setContent("장문으로 전송되는 메시지 테스트 내용입니다. 단/장문 메시지 자동전송의 경우 메시지의 길이가 90Byte 이상이 될 경우 장문(LMS)로 전송됩니다. 메시지의 길이가 90Byte 미만인경우 단문(SMS)로 전송됩니다.");
+	msg2.setContent("메시지 내용");
 
 
   // 메시지 전송정보배열 최대 1000건
@@ -59,12 +59,17 @@
   //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
   //	reserveDT = formatter.parse(reserveDTtxt);
 
+	// 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	String requestNum = "";
+
 	String receiptNum = null;
 
 	try {
 
 		receiptNum = messageService.sendXMS(testCorpNum, sender, subject, content, messages,
-      reserveDT, adsYN, testUserID);
+      reserveDT, adsYN, testUserID, requestNum);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

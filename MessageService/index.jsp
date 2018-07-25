@@ -77,11 +77,26 @@
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과 / 예약취소</legend>
+					<legend>전송내역조회/요약정보확인</legend>
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/search.jsp">search</a> - 문자전송내역 조회 </li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getStates.jsp">getStates</a> - 문자메시지 전송결과 요약정보 확인</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>접수번호 관련 기능 (요청번호 미할당)</legend>
+					<ul>
 						<li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 문자메시지 전송결과 조회</li>
 						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약문자메시지 취소</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>요청번호 할당 전송건 관련 기능</legend>
+					<ul>
+						<li><a href="${pageContext.request.contextPath}/MessageService/getMessagesRN.jsp">getMessagesRN</a> - 문자메시지 전송결과 조회</li>
+						<li><a href="${pageContext.request.contextPath}/MessageService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약문자메시지 취소</li>
 					</ul>
 				</fieldset>
 

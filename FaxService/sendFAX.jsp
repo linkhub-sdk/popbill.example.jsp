@@ -26,16 +26,16 @@
     String senderName = "발신자명";
 
     // 수신자명
-    String receiveName = "수신자 명칭";
+    String receiveName = "수신자명";
 
     // 수신 팩스번호
     String receiveNum = "070111222";
 
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-    //	String reserveDTtxt = "20141230180000";
-    //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    //	reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
+    	// String reserveDTtxt = "20180726120000";
+    	// SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+    	// reserveDT = formatter.parse(reserveDTtxt);
 
     // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개
@@ -49,12 +49,17 @@
     // 팩스제목
     String title = "팩스제목";
 
+    // 전송요청번호
+  	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+  	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    String requestNum = "";
+
     String receiptNum = null;
 
     try {
 
         receiptNum = faxService.sendFAX(testCorpNum, sendNum, receiveNum, receiveName,
-                files, reserveDT, testUserID, adsYN, title);
+                files, reserveDT, testUserID, adsYN, title, requestNum);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -14,16 +14,17 @@
 <%
     /**
      * 검색조건을 사용하여 친구톡/알림톡 내역을 조회합니다.
+	   * - 최대 검색기간 : 6개월 이내
      */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    String SDate = "20180301";
+    String SDate = "20180701";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20180331";
+    String EDate = "20180720";
 
     // 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-취소]
     String[] State = {"0", "1", "2", "3", "4", "5"};
@@ -46,12 +47,19 @@
     // 정렬방향 [A-오름차순, D-내림차순]
     String Order = "D";
 
+    String userID = "testkorea";
+
+    // 조회 검색어.
+  	// 카카오톡 전송시 입력한 수신자명 기재.
+  	// 조회 검색어를 포함한 수신자명을 검색합니다.
+  	String QString = "";
+
     KakaoSearchResult searchResult = null;
 
     try {
 
         searchResult = kakaoService.search(testCorpNum, SDate, EDate, State, Item,
-                ReserveYN, SenderYN, Page, PerPage, Order);
+                ReserveYN, SenderYN, Page, PerPage, Order, userID, QString);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -92,6 +100,8 @@
                 <li>altSendDT (대체문자 전송일시) : <%=sentMsg.getAltSendDT()%></li>
                 <li>altResult (대체문자 전송결과 코드) : <%=sentMsg.getAltResult()%></li>
                 <li>altResultDT (대체문자 전송결과 수신일시) :<%=sentMsg.getAltResultDT()%></li>
+                <li>receiptNum (접수번호) :<%=sentMsg.getReceiptNum()%></li>
+                <li>requestNum (요청번호) :<%=sentMsg.getRequestNum()%></li>
             </ul>
         </fieldset>
             <%

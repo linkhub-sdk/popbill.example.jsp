@@ -69,8 +69,19 @@
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getFlatRatePopUpURL.jsp">getFlatRatePopUpURL</a> - 정액제 서비스 신청 URL</li>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getFlatRateState.jsp">getFlatRateState</a> - 정액제 서비스 상태 확인</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>홈택스 인증관련 기능</legend>
+					<ul>
 						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스연동 인증관리 팝업 URL</li>
-						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스연계 공인인증서 만료일자 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스연동 공인인증서 만료일자 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 홈택스 공인인증서 로그인 테스트</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registDeptUser.jsp">registDeptUser</a> - 홈택스 전자세금계산서 부서사용자 계정등록</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkDeptUser.jsp">checkDeptUser</a> - 홈택스 부서사용자 등록정보 확인</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkLoginDeptUser.jsp">checkLoginDeptUser</a> - 홈택스 부서사용자 로그인 테스트</li>
+						<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/deleteDeptUser.jsp">deleteDeptUser</a> - 홈택스 부서사용자 등록정보 삭제</li>
 					</ul>
 				</fieldset>
 

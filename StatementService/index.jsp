@@ -80,6 +80,8 @@
 						<li><a href="${pageContext.request.contextPath}/StatementService/sendSMS.jsp">sendSMS</a> - 알림문자 전송</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/sendFAX.jsp">sendFAX</a> - 팩스 전송</li>
 						<li><a href="${pageContext.request.contextPath}/StatementService/FAXSend.jsp">FAXSend</a> - 전자명세서 선팩스 전송</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/listEmailConfig.jsp">listEmailConfig</a> - 알림메일 전송목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/StatementService/updateEmailConfig.jsp">updateEmailConfig</a> - 알림메일 전송설정 수정</li>
 					</ul>
 				</fieldset>
 

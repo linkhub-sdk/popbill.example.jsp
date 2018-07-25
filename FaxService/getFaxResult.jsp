@@ -12,16 +12,16 @@
 
 <%
   /**
-  * 팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.
-  * - 응답항목에 대한 정보는 팩스연동매뉴얼 3.3.1 GetFaxDetail(전송내역 및 전송상태 확인)을
-  *   참조하시기 바랍니다.
+	* 팩스전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
+	* - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.1
+	*   GetFaxDetail (전송내역 및 전송상태 확인)을 참조하시기 바랍니다.
   */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
   // 전송요청(sendFAX)시 발급받은 접수번호
-	String receiptNum = "017071710483200001";
+	String receiptNum = "";
 
 	FaxResult[] faxResults = null;
 
@@ -55,6 +55,7 @@
             <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
             <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
 						<li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
+						<li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
 						<li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
 						<li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
@@ -66,6 +67,8 @@
 						<li>reserveDT (예약일시) : <%=faxResult.getReserveDT()%></li>
 						<li>sendDT (전송일시) : <%=faxResult.getSendDT()%></li>
 						<li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
+						<li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
+						<li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
 						<%
 							String fileNames = "";
 							int namesLength = faxResult.getFileNames().length;

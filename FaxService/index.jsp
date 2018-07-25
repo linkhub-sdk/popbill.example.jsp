@@ -47,17 +47,33 @@
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 단건 전송</li>
 						<li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 동보 전송(수신번호 최대 1000개)</li>
-            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>전송내역조회</legend>
+					<ul>
+						<li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 팩스전송 목록조회</li>
+					</ul>
+				</fieldset>
+
+				<fieldset class="fieldset2">
+					<legend>접수번호 관련 기능 (요청번호 미할당)</legend>
+					<ul>
+						<li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약팩스전송 취소</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 팩스 전송결과 조회</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX_Multi.jsp">resendFAX</a> - 팩스 동보 재전송</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="fieldset2">
-					<legend>전송결과 / 예약취소</legend>
+					<legend>요청번호 할당 전송건 관련 기능</legend>
 					<ul>
-						<li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 팩스전송 목록조회</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 팩스 전송결과 조회</li>
-						<li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약팩스전송 취소</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약팩스전송 취소</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/getFaxResultRN.jsp">getFaxResultRN</a> - 팩스 전송결과 조회</li>
+						<li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN.jsp">resendFAXRN</a> - 팩스 재전송</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN_Multi.jsp">resendFAXRN</a> - 팩스 동보 재전송</li>
 					</ul>
 				</fieldset>
 

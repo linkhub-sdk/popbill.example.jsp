@@ -78,6 +78,9 @@
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendEmail.jsp">sendEmail</a> - 이메일 재전송</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendSMS.jsp">sendSMS</a> - 안내문자 메시지 전송</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendFAX.jsp">sendFAX</a> - 세금계산서 팩스전송</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">assignMgtKey</a> - 문서관리번호 할당</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listEmailConfig.jsp">listEmailConfig</a> - 알림메일 전송목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateEmailConfig.jsp">updateEmailConfig</a> - 알림메일 전송설정 수정</li>
 					</ul>
 				</fieldset>
 
@@ -98,6 +101,7 @@
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUnitCost.jsp">getUnitCost</a> - 세금계산서 발행단가 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 공인인증서 만료일시 확인</li>
+						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 공인인증서 유효성 확인</li>
 						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEmailPublicKeys.jsp">getEmailPublicKeys</a> - 대용량 연계사업자 메일목록</li>
 					</ul>
 				</fieldset>

@@ -79,6 +79,8 @@
 						<li><a href="${pageContext.request.contextPath}/CashbillService/sendEmail.jsp">sendEmail</a> - 현금영수증 이메일 재전송</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/sendSMS.jsp">sendSMS</a> - 안내문자 메시지 전송</li>
 						<li><a href="${pageContext.request.contextPath}/CashbillService/sendFAX.jsp">sendFAX</a> - 현금영수증 팩스 전송</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/listEmailConfig.jsp">listEmailConfig</a> - 알림메일 전송목록 확인</li>
+						<li><a href="${pageContext.request.contextPath}/CashbillService/updateEmailConfig.jsp">updateEmailConfig</a> - 알림메일 전송설정 수정</li>
 					</ul>
 				</fieldset>
 
