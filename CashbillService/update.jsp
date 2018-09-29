@@ -49,13 +49,13 @@
     // 공급가액, 숫자만 가능
     cashbill.setSupplyCost("10000");
 
-    // 세액, 숫자만 가능
+    // 부가세, 숫자만 가능
     cashbill.setTax("1000");
 
     // 봉사료, 숫자만 가능
     cashbill.setServiceFee("0");
 
-    // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 세액
+    // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 부가세
     cashbill.setTotalAmount("11000");
 
 
