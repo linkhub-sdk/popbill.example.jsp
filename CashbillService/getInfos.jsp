@@ -50,28 +50,30 @@
   				<fieldset class="fieldset2">
   					<legend>현금영수증 상태/요약정보</legend>
   					<ul>
-              <li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
-  						<li>mgtKey (문서관리번호) : <%= cashbillInfo.getMgtKey()%></li>
-  						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
-  						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
-              <li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
-  						<li>customerName (고객명) : <%= cashbillInfo.getCustomerName()%></li>
-  						<li>itemName (상품명) : <%= cashbillInfo.getItemName()%></li>
-  						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
-  						<li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
-  						<li>totalAmount (거래금액) : <%= cashbillInfo.getTotalAmount()%></li>
-  						<li>tradeUsage (거래용도) : <%= cashbillInfo.getTradeUsage()%></li>
-  						<li>tradeType (현금영수증 형태) : <%= cashbillInfo.getTradeType()%></li>
-  						<li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
-  						<li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
-  						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
-  						<li>confirmNum (국세청승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
-  						<li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
-  						<li>orgConfirmNum (원본 현금영수증 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
-  						<li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
-  						<li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
-  						<li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
-  						<li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
+						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
+						<li>mgtKey (문서관리번호) : <%= cashbillInfo.getMgtKey()%></li>
+						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
+						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
+						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
+						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
+						<li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
+						<li>totalAmount (거래금액) : <%= cashbillInfo.getTotalAmount()%></li>
+						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
+						<li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
+						<li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
+						<li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
+						<li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
+						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
+						<li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
+						<li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
+						<li>confirmNum (국세청승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
+						<li>orgConfirmNum (원본 현금영수증 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
+						<li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
+						<li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
+						<li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
+						<li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
+						<li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
+						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
   					</ul>
   				</fieldset>
 				<%

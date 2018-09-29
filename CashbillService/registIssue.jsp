@@ -33,7 +33,7 @@
   // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
   cashbill.setMgtKey("20170717-01");
 
-  // 현금영수증 형태, {승인거래, 취소거래} 중 기재
+  // 문서형태, {승인거래, 취소거래} 중 기재
   cashbill.setTradeType("승인거래");
 
   // [취소거래 시 필수] 원본 현금영수증 승인번호
@@ -42,10 +42,13 @@
   // [취소거래 시 필수] 원본 현금영수증 거래일자
   cashbill.setOrgTradeDate("");
 
-  // 거래유형, {소득공제용, 지출증빙용} 중 기재
+  // 거래구분, {소득공제용, 지출증빙용} 중 기재
   cashbill.setTradeUsage("소득공제용");
 
-  //거래처 식별번호, 거래유형에 따라 작성
+  // 거래유형, {일반, 도서, 대중교통} 중 기재
+  cashbill.setTradeOpt("일반");
+
+  //거래처 식별번호, 거래구분에 따라 작성
   //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
   //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
   cashbill.setIdentityNum("0101112222");
@@ -62,45 +65,43 @@
   // 봉사료, 숫자만 가능
   cashbill.setServiceFee("0");
 
-  // 합계금액, 숫자만 가능, 봉사료 + 공급가액 + 세액
+  // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 세액
   cashbill.setTotalAmount("11000");
-
-
-  // 발행자 사업자번호, '-'제외 10자리
+  
+  // 가맹점 사업자번호, '-'제외 10자리
   cashbill.setFranchiseCorpNum("1234567890");
 
-  // 발행자 상호
-  cashbill.setFranchiseCorpName("발행자 상호");
+  // 가맹점 상호
+  cashbill.setFranchiseCorpName("가맹점 상호");
 
-  // 발행자 대표자성명
-  cashbill.setFranchiseCEOName("발행자 대표자");
+  // 가맹점 대표자성명
+  cashbill.setFranchiseCEOName("가맹점 대표자");
 
-  // 발행자 주소
-  cashbill.setFranchiseAddr("발행자 주소");
+  // 가맹점 주소
+  cashbill.setFranchiseAddr("가맹점 주소");
 
-  // 발행자 연락처
+  // 가맹점 연락처
   cashbill.setFranchiseTEL("07043042991");
 
   // 발행시 안내문자 전송여부
   cashbill.setSmssendYN(false);
 
+  // 거래처 주문자명
+  cashbill.setCustomerName("주문자명");
 
-  // 고객명
-  cashbill.setCustomerName("고객명");
+  // 거래처 주문상품명
+  cashbill.setItemName("주문상품명");
 
-  // 상품명
-  cashbill.setItemName("상품명");
-
-  // 주문번호
+  // 거래처 주문번호
   cashbill.setOrderNumber("주문번호");
 
-  // 고객 메일주소
+  // 거래처 이메일
   cashbill.setEmail("test@test.com");
 
-  // 고객 휴대폰번호
+  // 거래처 휴대폰
   cashbill.setHp("010111222");
 
-  // 고객 팩스번호
+  // 거래처 팩스
   cashbill.setFax("070111222");
 
   Response CheckResponse = null;

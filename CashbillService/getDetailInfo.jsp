@@ -1,26 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen"/>
+	<title>팝빌 SDK jsp Example.</title>
+</head>
 
 <%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.PopbillException"%>
-<%@page import="com.popbill.api.cashbill.Cashbill"%>
+<%@page import="com.popbill.api.PopbillException" %>
+<%@page import="com.popbill.api.cashbill.Cashbill" %>
 
 <%
 	/**
-  * 현금영수증 1건의 상세정보를 조회합니다.
-  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.현금영수증 구성" 을
-  *   참조하시기 바랍니다.
-  */
+	 * 현금영수증 1건의 상세정보를 조회합니다.
+	 * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.현금영수증 구성" 을
+	 *   참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 현금영수증 문서관리번호
+	// 현금영수증 문서관리번호
 	String mgtKey = "20170316-02";
 
 	Cashbill cashbill = null;
@@ -46,32 +46,30 @@
 					<legend>Cashbill</legend>
 					<ul>
 						<li>mgtKey (문서관리번호) : <%=cashbill.getMgtKey() %></li>
-						<li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
-						<li>tradeUsage (거래유형) : <%=cashbill.getTradeUsage() %></li>
-						<li>tradeType (현금영수증 형태) : <%=cashbill.getTradeType() %></li>
-            <li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
+						<li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
 						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
-            <li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
-            <li>cancelType (취소사유) : <%=cashbill.getCancelType() %></li>
-
+						<li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
+						<li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
+						<li>tradeType (문서형태) : <%=cashbill.getTradeType() %></li>
+						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
+						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
 						<li>taxationType (과세형태) : <%=cashbill.getTaxationType() %></li>
-						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>
-						<li>tax (세액) : <%=cashbill.getTax() %></li>
-						<li>serviceFee (봉사료) : <%=cashbill.getServiceFee() %></li>
 						<li>totalAmount (거래금액) : <%=cashbill.getTotalAmount() %></li>
-
-						<li>franchiseCorpNum (발행자 사업자번호) : <%=cashbill.getFranchiseCorpNum() %></li>
-						<li>franchiseCorpName (발행자 상호) : <%=cashbill.getFranchiseCorpName() %></li>
-						<li>franchiseCEOName (발행자 대표자 성명) : <%=cashbill.getFranchiseCEOName() %></li>
-						<li>franchiseAddr (발행자 주소) : <%=cashbill.getFranchiseAddr() %></li>
-						<li>franchiseTEL (발행자 연락처) : <%=cashbill.getFranchiseTEL() %></li>
-
+						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>
+						<li>tax (부가세) : <%=cashbill.getTax() %></li>
+						<li>serviceFee (봉사료) : <%=cashbill.getServiceFee() %></li>
+						<li>franchiseCorpNum (가맹점 사업자번호) : <%=cashbill.getFranchiseCorpNum() %></li>
+						<li>franchiseCorpName (가맹점 상호) : <%=cashbill.getFranchiseCorpName() %></li>
+						<li>franchiseCEOName (가맹점 대표자 성명) : <%=cashbill.getFranchiseCEOName() %></li>
+						<li>franchiseAddr (가맹점 주소) : <%=cashbill.getFranchiseAddr() %></li>
+						<li>franchiseTEL (가맹점 연락처) : <%=cashbill.getFranchiseTEL() %></li>
 						<li>identityNum (거래처 식별번호) : <%=cashbill.getIdentityNum() %></li>
-						<li>customerName (고객명) : <%=cashbill.getCustomerName() %></li>
-						<li>itemName (상품명) : <%=cashbill.getItemName() %></li>
+						<li>customerName (거래처 주문자명) : <%=cashbill.getCustomerName() %></li>
+						<li>itemName (거래처 주문상품명) : <%=cashbill.getItemName() %></li>
 						<li>orderNumber (가맹점 주문번호) : <%=cashbill.getOrderNumber() %></li>
-						<li>email (고객 이메일) : <%=cashbill.getEmail() %></li>
-						<li>hp (고객 휴대폰번호) : <%=cashbill.getHp() %></li>
+						<li>email (거래처 이메일) : <%=cashbill.getEmail() %></li>
+						<li>hp (거래처 휴대폰번호) : <%=cashbill.getHp() %></li>
+						<li>cancelType (취소사유) : <%=cashbill.getCancelType() %></li>
 						<li>smssendYN (알림문자 전송여부) : <%=cashbill.isSmssendYN() %></li>
 					</ul>
 			</fieldset>

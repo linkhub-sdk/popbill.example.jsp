@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+    <title>팝빌 SDK jsp Example.</title>
+</head>
 
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
@@ -12,60 +12,63 @@
 <%@page import="com.popbill.api.cashbill.CBSearchResult"%>
 
 <%
-	/**
-  * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
-  * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성"
-  *   을 참조하시기 바랍니다.
-  */
+    /**
+     * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+     * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성"
+     *   을 참조하시기 바랍니다.
+     */
 
-  // 팝빌회원 사업자번호
-	String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호
+    String testCorpNum = "1234567890";
 
-  // 검색일자 유형, R-등록일자, T-거래일자, I-발행일자ㄴ
-	String DType = "T";
+    // 검색일자 유형, R-등록일자, T-거래일자, I-발행일자ㄴ
+    String DType = "T";
 
-  // 시작일자, 날짜형태(yyyyMMdd)
-	String SDate = "20161001";
+    // 시작일자, 날짜형태(yyyyMMdd)
+    String SDate = "20161001";
 
-  // 종료일자, 날짜형태(yyyyMMdd)
-	String EDate = "20161231";
+    // 종료일자, 날짜형태(yyyyMMdd)
+    String EDate = "20161231";
 
-  // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
-	String[] State = {"100", "2**", "3**", "4**"};
+    // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+    String[] State = {"100", "2**", "3**", "4**"};
 
-  // 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
-	String[] TradeType = {"N", "C"};
+    // 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
+    String[] TradeType = {"N", "C"};
 
-  // 거래용도 배열, P-소득공제용, C-지출증빙용
-	String[] TradeUsage = {"P", "C"};
+    // 거래구분 배열, P-소득공제용, C-지출증빙용
+    String[] TradeUsage = {"P", "C"};
 
-  // 과세형태 배열, T-과세, N-비과세
-	String[] TaxationType = {"T", "N"};
+    // 거래유형 배열, N-일반, B-도서공연, T-대중교통
+    String[] TradeOpt = {"N", "B", "T"};
 
-  // 현금영수증 식별번호 조회
-  String QString = "";
+    // 과세형태 배열, T-과세, N-비과세
+    String[] TaxationType = {"T", "N"};
 
-  // 페이지 번호
-	int Page = 1;
+    // 현금영수증 식별번호 조회
+    String QString = "";
 
-  // 페이지당 검색개수, 최대 1000개
-	int PerPage = 20;
+    // 페이지 번호
+    int Page = 1;
 
-  // 정렬방향, D-내림차순, A-오름차순
-	String Order = "D";
+    // 페이지당 검색개수, 최대 1000개
+    int PerPage = 20;
 
-	CBSearchResult searchResult = null;
+    // 정렬방향, D-내림차순, A-오름차순
+    String Order = "D";
 
-	try {
+    CBSearchResult searchResult = null;
 
-    searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
-      TradeType, TradeUsage, TaxationType, QString, Page, PerPage, Order);
+    try {
 
-	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-		throw pe;
-	}
+        searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
+                TradeType, TradeUsage, TaxationType, QString, Page, PerPage, Order);
+
+    } catch (PopbillException pe) {
+        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        throw pe;
+    }
 %>
 	<body>
 		<div id="content">
@@ -85,33 +88,35 @@
 					CashbillInfo cashbillInfo = null;
 
           for ( int i = 0; i < searchResult.getList().size(); i++ ) {
-						cashbillInfo = searchResult.getList().get(i);
+                    cashbillInfo = searchResult.getList().get(i);
 				%>
 				<fieldset class="fieldset2">
 					<legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
 					<ul>
-            <li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
+						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
 						<li>mgtKey (문서관리번호) : <%= cashbillInfo.getMgtKey()%></li>
 						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
-						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
-            <li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
-						<li>customerName (고객명) : <%= cashbillInfo.getCustomerName()%></li>
-						<li>itemName (상품명) : <%= cashbillInfo.getItemName()%></li>
-						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
+						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
+						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
+						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
 						<li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
 						<li>totalAmount (거래금액) : <%= cashbillInfo.getTotalAmount()%></li>
-						<li>tradeUsage (거래용도) : <%= cashbillInfo.getTradeUsage()%></li>
-						<li>tradeType (현금영수증 형태) : <%= cashbillInfo.getTradeType()%></li>
+						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
+						<li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
+						<li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
 						<li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
 						<li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
-						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
+						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
+						<li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
+						<li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
 						<li>confirmNum (국세청승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
 						<li>orgConfirmNum (원본 현금영수증 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
-            <li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
+						<li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
 						<li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
 						<li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
 						<li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
 						<li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
+						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
 					</ul>
 				</fieldset>
 				<%
