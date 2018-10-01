@@ -10,8 +10,7 @@
 	<body>
 
 		<div id="content">
-
-			<p class="heading1">팝빌 홈택스 전자(세금)계산서 연계 SDK jsp Example.</p>
+			<p class="heading1">팝빌 홈택스연동(전자세금계산서) SDK jsp Example.</p>
 
 			<br/>
 
