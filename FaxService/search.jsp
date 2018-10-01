@@ -21,10 +21,10 @@
 	String testCorpNum = "1234567890";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20180701";
+	String SDate = "201800920";
 
   // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20180720";
+	String EDate = "20181001";
 
   // 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
@@ -88,9 +88,9 @@
 					<legend>FaxResult : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
 					<ul>
 
-            <li>state (전송상태 코드) : <%=faxResult.getState()%></li>
-            <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
-            <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
+						<li>state (전송상태 코드) : <%=faxResult.getState()%></li>
+						<li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
+						<li>title (팩스제목) : <%=faxResult.getTitle()%></li>
 						<li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
 						<li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
 						<li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
@@ -106,6 +106,8 @@
 						<li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
 						<li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
 						<li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+						<li>chargePageCnt (과금 페이지수) : <%=faxResult.chargePageCnt()%></li>
+						<li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.tiffFileSize()%></li>
 						<%
 							String fileNames = "";
 							int namesLength = faxResult.getFileNames().length;
