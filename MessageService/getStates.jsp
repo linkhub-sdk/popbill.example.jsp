@@ -49,12 +49,13 @@
 					<legend>문자전송내역 조회 결과 : <%=i+1%></legend>
 					<ul>
 						<li>rNum (접수번호) : <%=messageBriefInfo.getrNum()%> </li>
-            <li>sn (일련번호) : <%=messageBriefInfo.getSn()%></li>
+						<li>sn (일련번호) : <%=messageBriefInfo.getSn()%></li>
 						<li>stat (전송 상태코드) : <%=messageBriefInfo.getStat()%></li>
 						<li>rlt (전송 결과코드) : <%=messageBriefInfo.getRlt()%></li>
 						<li>sDT (전송일시) : <%=messageBriefInfo.getsDT()%></li>
 						<li>rDT (결과코드 수신일시) : <%=messageBriefInfo.getrDT()%></li>
-            <li>net (전송 이동통신사명) : <%=messageBriefInfo.getNet()%></li>
+						<li>net (전송 이동통신사명) : <%=messageBriefInfo.getNet()%></li>
+						<li>srt (구 전송결과 코드) : <%=messageBriefInfo.getSrt()%></li>
 					</ul>
 				</fieldset>
 				<%
