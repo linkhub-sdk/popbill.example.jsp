@@ -1,111 +1,117 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
-
-	<body>
-		<div id="content">
-			<p class="heading1">팝빌 세금계산서 SDK jsp Example.</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>팝빌 기본 API</legend>
-				<fieldset class="fieldset2">
-					<legend>회원사 정보</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 로그인/포인트충전/공인인증서 등록 팝업 URL</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
-					</ul>
-				</fieldset>
-			</fieldset>
-			<br />
-			<fieldset class="fieldset1">
-				<legend>전자세금계산서 관련 API</legend>
-				<fieldset class="fieldset2">
-					<legend>등록/수정/확인/삭제</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서관리번호 등록/사용여부 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registIssue.jsp">registIssue</a> - 세금계산서 즉시발행</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/register.jsp">register</a> - 세금계산서 등록</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">update</a> - 세금계산서 수정</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/search.jsp">search</a> - 세금계산서 목록 조회</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo.jsp">getInfo</a> - 세금계산서 상태/요약 정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">getInfos</a> - 세금계산서 상태/요약 정보 확인 - 대량</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">getDetailInfo</a> - 세금계산서 상세정보 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/delete.jsp">delete</a> - 세금계산서 삭제</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getLogs.jsp">getLogs</a> - 세금계산서 상태변경 이력 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachFile.jsp">attachFile</a> - 세금계산서 첨부파일 추가</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getFiles.jsp">getFiles</a> - 세금계산서 첨부파일 목록확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deleteFile.jsp">deleteFile</a> - 세금계산서 첨부파일 삭제</li>
-					</ul>
-				</fieldset>
-
-				<fieldset class="fieldset2">
-					<legend>처리 프로세스</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/send.jsp">send</a> - 세금계산서 발행예정</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelSend.jsp">cancelSend</a> - 세금계산서 발행예정 취소</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/accept.jsp">accept</a> - 발행예정 세금계산서 승인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deny.jsp">deny</a> - 발행예정 세금계산서 거부</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/issue.jsp">issue</a> - 세금계산서 발행</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelIssue.jsp">cancelIssue</a> - 세금계산서 발행취소</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/request.jsp">request</a> - 세금계산서 역발행요청</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelRequest.jsp">cancelRequest</a> - 세금계산서 역발행요청 취소</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/refuse.jsp">refuse</a> - 역발행요청 거부</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendToNTS.jsp">sendToNTS</a> - 국세청 즉시전송</li>
-					</ul>
-				</fieldset>
-
-				<fieldset class="fieldset2">
-					<legend>부가 기능</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachStatement.jsp">attachStatement</a> - 전자명세서 첨부</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/detachStatement.jsp">detachStatement</a> - 전자명세서 첨부해제</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendEmail.jsp">sendEmail</a> - 이메일 재전송</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendSMS.jsp">sendSMS</a> - 안내문자 메시지 전송</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendFAX.jsp">sendFAX</a> - 세금계산서 팩스전송</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">assignMgtKey</a> - 문서관리번호 할당</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listEmailConfig.jsp">listEmailConfig</a> - 알림메일 전송목록 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateEmailConfig.jsp">updateEmailConfig</a> - 알림메일 전송설정 수정</li>
-					</ul>
-				</fieldset>
-
-				<fieldset class="fieldset2">
-					<legend>팝빌 세금계산서 SSO URL 기능</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getURL.jsp">getURL</a> - 세금계산서 관련 SSO URL</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopUpURL.jsp">getPopUpURL</a> - 세금계산서 보기 팝업 URL</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPrintURL.jsp">getPrintURL</a> - 세금계산서 인쇄 팝업 URL</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMassPrintURL.jsp">getMassPrintURL</a> - 세금계산서 인쇄 팝업 URL - 대량</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEPrintURL.jsp">getEPrintURL</a> - 세금계산서 인쇄 팝업 URL - 공급받는자용</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMailURL.jsp">getMailURL</a> - 세금계산서 메일링크 URL</li>
-					</ul>
-				</fieldset>
-
-				<fieldset class="fieldset2">
-					<legend>기타</legend>
-					<ul>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUnitCost.jsp">getUnitCost</a> - 세금계산서 발행단가 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 공인인증서 만료일시 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 공인인증서 유효성 확인</li>
-						<li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEmailPublicKeys.jsp">getEmailPublicKeys</a> - 대용량 연계사업자 메일목록</li>
-					</ul>
-				</fieldset>
-			</fieldset>
-		 </div>
-	</body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen"/>
+    <title>팝빌 SDK jsp Example.</title>
+</head>
+<body>
+<div id="content">
+    <p class="heading1">팝빌 세금계산서 SDK jsp Example.</p>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>정방행/역발행/위수탁발행</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">CheckMgtKeyInUse</a> - 관리번호 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registIssue.jsp">RegistIssue</a> - 즉시 발행</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/register.jsp">Register</a> - 임시저장</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">Update</a> - 수정</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/issue.jsp">Issue</a> - 발행</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelIssue.jsp">CancelIssue</a> - 발행취소</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/send.jsp">Send</a> - [발행예정]</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelSend.jsp">CancelSend</a> - [발행예정] 취소</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/accept.jsp">Accept</a> - [발행예정] 승인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deny.jsp">Deny</a> - [발행예정] 거부</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/delete.jsp">Delete</a> - 삭제</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registRequest.jsp">RegistRequest</a> - [역발행] 즉시 요청</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/request.jsp">Request</a> - 역발행요청</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelRequest.jsp">CancelRequest</a> - 역발행요청 취소</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/refuse.jsp">Refuse</a> - 역발행요청 거부</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>국세청 즉시 전송</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendToNTS.jsp">SendToNTS</a> - 국세청 즉시전송</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>세금계산서 정보확인</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo">GetInfo</a> - 상태 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">GetInfos</a> - 상태 대량 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">GetDetailInfo</a> - 상세정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/search.jsp">Search</a> - 목록 조회</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getLogs.jsp">GetLogs</a> - 상태 변경이력 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getURL.jsp">GetURL</a> - 세금계산서 문서함 관련 URL</li>
+        </ul>
+    </fieldset>
+    <fieldset class="fieldset1">
+        <legend>세금계산서 보기/인쇄</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopUpURL.jsp">GetPopUpURL</a> - 세금계산서 보기 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPrintURL.jsp">GetPrintURL</a> - 세금계산서 인쇄 [공급자/공급받는자] URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEPrintURL.jsp">GetEPrintURL</a> - 세금계산서 인쇄 [공급받는자용] URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMassPrintURL.jsp">GetMassPrintURL</a> - (세금계산서 대량 인쇄 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMailURL.jsp">GetMailURL</a> - 세금계산서 메일링크 URL</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>부가기능</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getAccessURL.jsp">GetAccessURL</a> - 팝빌 로그인 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getSealURL.jsp"> GetSealURL</a> - 인감 및 첨부문서 등록 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachFile.jsp">AttachFile</a> - 첨부파일 추가</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deleteFile.jsp">DeleteFile</a> - 첨부파일 삭제</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getFiles.jsp">GetFiles</a> - 첨부파일 목록 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendEmail.jsp">SendEmail</a> - 메일 전송</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendSMS.jsp">SendSMS</a> - 문자 전송</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendFAX.jsp">SendFAX</a> - 팩스 전송</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachStatement.jsp">AttachStatement</a> - 전자명세서 첨부</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/detachStatement.jsp">DetachStatement</a> - 전자명세서 첨부해제</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEmailPublicKeys.jsp">GetEmailPublicKeys</a> - 유통사업자 메일 목록 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">AssignMgtKey</a> - 관리번호 할당</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listEmailConfig.jsp">ListEmailConfig</a> - 세금계산서 알림메일 전송목록 조회</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateEmailConfig.jsp">UpdateEmailConfig</a> - 세금계산서 알림메일 전송설정 수정</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>공인인증서 관리</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getTaxCertURL.jsp">GetTaxCertURL</a> - 공인인증서 등록 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">GetCertificateExpireDate</a> - 공인인증서 만료일 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">CheckCertValidation</a> - 공인인증서 유효성 확인</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>포인트 관리</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">GetBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeURL.jsp">GetChargeURL</a> - 연동회원 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">GetPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUnitCost.jsp">GetUnitCost</a> - 발행 단가 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeInfo.jsp">GetChargeInfo</a> - 과금정보 확인</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1.jsp">
+        <legend>회원정보</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkIsMember.jsp">CheckIsMember</a> - 연동회원 가입여부 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkID.jsp">CheckID</a> - 아이디 중복 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/joinMember.jsp">JoinMember</a> - 연동회원 신규가입</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCorpInfo.jsp">GetCorpInfo</a> - 회사정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateCorpInfo.jsp">UpdateCorpInfo</a> - 회사정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">RegistContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">ListContact</a> - 담당자 목록 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">UpdateContact</a> - 담당자 정보 수정</li>
+        </ul>
+    </fieldset>
+</body>
 </html>
