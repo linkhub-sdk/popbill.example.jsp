@@ -90,7 +90,7 @@
             <li><a href="${pageContext.request.contextPath}/KakaoService/getUnitCost.jsp">getUnitCost</a> - 전송단가 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeURL.jsp">getChargeURL</a> (연동회원 포인트충전 URL)</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeURL.jsp">getChargeURL</a> 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
         </ul>
@@ -102,7 +102,7 @@
             <li><a href="${pageContext.request.contextPath}/KakaoService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/checkID.jsp">checkID</a> - 연동회원 아이디 중복 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/joinMember.jsp">joinMember</a> - 연동회원사 신규가입</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getAccessURL.jsp">getAccessURL</a> (팝빌 로그인 URL)</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getAccessURL.jsp">getAccessURL</a> 팝빌 로그인 URL</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/registContact.jsp">registContact</a> - 담당자 추가</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
