@@ -10,69 +10,75 @@
     <p class="heading1">팝빌 팩스 SDK jsp Example.</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팝빌 기본 API</legend>
-        <fieldset class="fieldset2">
-            <legend>회원 정보</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/checkID.jsp">checkID</a> - 아이디 중복확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/joinMember.jsp">joinMember</a> - 연동회원 가입 요청</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getChargeInfo.jsp">getChargeInfo</a> - 연동회원 과금정보 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getPopbillURL.jsp">getPopbillURL</a> - 팝빌 SSO URL 요청</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 URL</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/registContact.jsp">registContact</a> - 담당자 등록</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
-            </ul>
-        </fieldset>
+        <legend>발신번호 사전등록</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getSenderNumberMgtURL.jsp">getSenderNumberMgtURL</a> - 발신번호 관리 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getSenderNumberList.jsp">getSenderNumberList</a> - 발신번호 목록 확인</li>
+        </ul>
     </fieldset>
-    <br />
+    <br/>
     <fieldset class="fieldset1">
-        <legend>팩스 관련 API</legend>
-        <fieldset class="fieldset2">
-            <legend>팩스 전송</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 단건 전송</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 동보 전송(수신번호 최대 1000개)</li>
-            </ul>
-        </fieldset>
-        <fieldset class="fieldset2">
-            <legend>전송내역조회</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 팩스전송 목록조회</li>
-            </ul>
-        </fieldset>
-        <fieldset class="fieldset2">
-            <legend>접수번호 관련 기능 (요청번호 미할당)</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약팩스전송 취소</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 팩스 전송결과 조회</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX_Multi.jsp">resendFAX</a> - 팩스 동보 재전송</li>
-            </ul>
-        </fieldset>
-        <fieldset class="fieldset2">
-            <legend>요청번호 할당 전송건 관련 기능</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약팩스전송 취소</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResultRN.jsp">getFaxResultRN</a> - 팩스 전송결과 조회</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN.jsp">resendFAXRN</a> - 팩스 재전송</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN_Multi.jsp">resendFAXRN</a> - 팩스 동보 재전송</li>
-            </ul>
-        </fieldset>
-        <fieldset class="fieldset2">
-            <legend>기타</legend>
-            <ul>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getURL.jsp">getURL</a> - 팩스 API 관련 URL 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getUnitCost.jsp">getUnitCost</a> - 팩스 발송단가 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getSenderNumberList.jsp">getSenderNumberList</a> - 팩스 발신번호 목록 확인</li>
-                <li><a href="${pageContext.request.contextPath}/FaxService/getPreviewURL.jsp">getPreviewURL</a> - 팩스 미리보기 팝업 URL</li>
-            </ul>
-        </fieldset>
+        <legend>팩스 전송</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 전송</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 동보전송</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>접수번호 관련 기능 (요청번호 미할당</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 전송내역 및 전송상태 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX_Multi.jsp">resendFAX</a> - 팩스 동보재전송</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>요청번호 할당 전송건 관련 기능</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResultRN.jsp">getFaxResultRN</a> - 전송내역 및 전송상태 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN.jsp">resendFAX</a> - 팩스 재전송</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN_Multi.jsp">resendFAX</a> - 팩스 동보재전송</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>팩스전송 목록조회</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/search.jsp">search</a> - 전송내역 목록 조회</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getSentListURL.jsp">getSentListURL</a> - 팩스 전송내역 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getPreviewURL.jsp">getPreviewURL</a> - 팩스 미리보기 팝업 URL</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>포인트 관리</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getUnitCost.jsp">getUnitCost</a> - 전송 단가 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+        </ul>
+    </fieldset>
+    <br/>
+    <fieldset class="fieldset1">
+        <legend>회원정보</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/FaxService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/checkID.jsp">checkID</a> - 아이디 중복 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/joinMember.jsp">joinMember</a> - 연동회원 신규가입</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
+        </ul>
     </fieldset>
  </div>
 </body>

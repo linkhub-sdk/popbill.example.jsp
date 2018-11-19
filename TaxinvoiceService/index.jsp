@@ -40,7 +40,7 @@
     <fieldset class="fieldset1">
         <legend>세금계산서 정보확인</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo">GetInfo</a> - 상태 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo.jsp">GetInfo</a> - 상태 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">GetInfos</a> - 상태 대량 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">GetDetailInfo</a> - 상세정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/search.jsp">Search</a> - 목록 조회</li>
@@ -100,7 +100,7 @@
         </ul>
     </fieldset>
     <br/>
-    <fieldset class="fieldset1.jsp">
+    <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkIsMember.jsp">CheckIsMember</a> - 연동회원 가입여부 확인</li>

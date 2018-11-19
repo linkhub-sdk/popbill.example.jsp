@@ -11,21 +11,21 @@
 
 <%
     /**
-     * 팝빌 로그인 URL 을 반환합니다.
-     * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+     * 팝빌 연동회원 포인트충전 팝업 URL을 반환합니다.
+     * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
      */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
-    // [CHRG-연동회원 포인트 충전], [LOGIN-로그인]
-    String TOGO = "LOGIN";
+    // 팝빌회원 아이디
+    String testUserID = "testkorea";
 
     String url = null;
 
     try {
 
-        url = kakaoService.getPopbillURL(testCorpNum, TOGO);
+        url = taxinvoiceService.getChargeURL(testCorpNum, testUserID);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -38,9 +38,10 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팝빌 로그인 URL</legend>
+        <legend>팝빌 연동회원 포인트충전 팝업 URL 확인</legend>
         <ul>
-            <li>URL : <%=url%></li>
+            <li>URL : <%=url%>
+            </li>
         </ul>
     </fieldset>
 </div>
