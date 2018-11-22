@@ -42,7 +42,7 @@
     </fieldset>
     <br/>
     <fieldset class="fieldset1">
-        <legend>접수번호 관련 기능 (요청번호 미할당</legend>
+        <legend>접수번호 관련 기능 (요청번호 미할당)</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 전송내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
