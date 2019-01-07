@@ -25,10 +25,10 @@
 	String DType = "W";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20171101";
+	String SDate = "20181201";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20171231";
+	String EDate = "20190107";
 
 	// 세금계산서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
 	String[] State = {"3**", "4**", "6**"};

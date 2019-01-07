@@ -30,7 +30,7 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>팩스전송 목록조회</legend>
+        <legend>정보확인</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResult.jsp">getFaxResult</a> - 전송내역 및 전송상태 확인</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getFaxResultRN.jsp">getFaxResultRN</a> - 전송내역 및 전송상태 확인 (요청번호 할당)</li>

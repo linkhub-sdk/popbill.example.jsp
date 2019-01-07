@@ -40,7 +40,6 @@
                 <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_multi.jsp">sendATS</a> - 알림톡 개별내용 대량 전송</li>
             </ul>
         </fieldset>
-        <br/>
         <fieldset class="fieldset2">
             <legend>친구톡 텍스트 전송</legend>
             <ul>
