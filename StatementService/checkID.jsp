@@ -11,12 +11,12 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌 회원아이디 중복여부를 확인합니다.
-  */
+	/*
+	 * 팝빌 회원아이디 중복여부를 확인합니다.
+	 */
 
-  // 중복확인할 아이디
-  String userID = "testkorea1234";
+	// 중복확인할 아이디
+	String userID = "testkorea1234";
 
 	Response CheckResponse = null;
 

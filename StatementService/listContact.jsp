@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.ContactInfo"%>
 
 <%
-  /**
-  * 연동회원의 담당자 목록을 확인합니다.
-  */
+	/*
+	 * 연동회원의 담당자 목록을 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	ContactInfo[] contactInfos = null;
@@ -46,15 +46,15 @@
 							<legend>담당자 정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
 								<ul>
 									<li>id (아이디) : <%= contactInfo.getId()%></li>
-	                <li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>
-	                <li>email (이메일) : <%= contactInfo.getEmail()%></li>
-	                <li>hp (휴대폰번호) : <%= contactInfo.getHp()%></li>
-	                <li>fax (팩스번호) : <%= contactInfo.getFax()%></li>
-	                <li>tel (연락처) : <%= contactInfo.getTel()%></li>
-	                <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
-	                <li>searchAllAllowYN (회사조회 권한여부) : <%= contactInfo.getSearchAllAllowYN()%></li>
-	                <li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
-	                <li>state (상태) : <%= contactInfo.getState()%></li>
+									<li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>
+									<li>email (이메일) : <%= contactInfo.getEmail()%></li>
+									<li>hp (휴대폰번호) : <%= contactInfo.getHp()%></li>
+									<li>fax (팩스번호) : <%= contactInfo.getFax()%></li>
+									<li>tel (연락처) : <%= contactInfo.getTel()%></li>
+									<li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
+									<li>searchAllAllowYN (회사 조회권한) : <%= contactInfo.getSearchAllAllowYN()%></li>
+									<li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
+									<li>state (상태) : <%= contactInfo.getState()%></li>
 								</ul>
 						</fieldset>
 					<%

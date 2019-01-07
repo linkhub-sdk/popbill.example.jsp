@@ -15,11 +15,13 @@
 <%@page import="com.popbill.api.statement.StatementDetail"%>
 
 <%
-  /**
-  * 팝빌에 등록하지 않고 전자명세서를 팩스전송합니다.
-  * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
-  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역]
-  *   메뉴에서 전송결과를 확인할 수 있습니다.
+  /*
+   * 팝빌에 전자명세서를 등록하지 않고 공급받는자에게 팩스전송합니다.
+   * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+   * - 팩스 발행 요청시 작성한 문서관리번호는 팩스전송 파일명으로 사용됩니다.
+   * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인할 수 있습니다.
+   * - 팩스 전송결과를 확인하기 위해서는 선팩스 전송 요청 시 반환받은 접수번호를 이용하여
+   *   팩스 API의 전송결과 확인 (GetFaxDetail) API를 이용하면 됩니다.
   */
 
   // 팝빌회원 사업자번호
@@ -39,7 +41,7 @@
 	Statement statement = new Statement();
 
   // [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20170307");
+	statement.setWriteDate("20190107");
 
   // [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -54,7 +56,7 @@
 	statement.setItemCode((short) 121);
 
   // [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20170307-06");
+	statement.setMgtKey("20190107-06");
 
 
   /***************************************************************************
@@ -165,7 +167,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20150317");	// 거래일자
+	detail.setPurchaseDT("20190107");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -176,7 +178,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20150317");	 // 거래일자
+	detail.setPurchaseDT("20190107");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액

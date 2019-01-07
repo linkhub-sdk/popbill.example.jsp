@@ -11,22 +11,22 @@
 <%@page import="com.popbill.api.Response"%>
 
 <%
-	/**
-  * 전자명세서에 첨부된 파일을 삭제합니다.
-  * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
-  *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
-  */
+	/*
+	 * 전자명세서에 첨부된 파일을 삭제합니다.
+	 * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
+	 *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 전자명세서 문서관리번호
-	String mgtKey = "20161130-05";
+	// 전자명세서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+	// 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
 	String FileID = "8BA8ACEA-2247-44EA-90A3-C4248005D5FD.PBF";
 
 	Response CheckResponse = null;

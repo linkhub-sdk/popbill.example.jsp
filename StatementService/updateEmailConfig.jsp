@@ -11,27 +11,27 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-/**
-* 전자명세서 관련 메일전송 항목에 대한 전송여부를 수정한다.
-*
-* 메일전송유형
-* SMT_ISSUE : 공급받는자에게 전자명세서가 발행 되었음을 알려주는 메일입니다.
-* SMT_ACCEPT : 공급자에게 전자명세서가 승인 되었음을 알려주는 메일입니다.
-* SMT_DENY : 공급자에게 전자명세서가 거부 되었음을 알려주는 메일입니다.
-* SMT_CANCEL : 공급받는자에게 전자명세서가 취소 되었음을 알려주는 메일입니다.
-* SMT_CANCEL_ISSUE : 공급받는자에게 전자명세서가 발행취소 되었음을 알려주는 메일입니다.
-*/
+	/*
+	 * 전자명세서 관련 메일전송 항목에 대한 전송여부를 수정한다.
+	 *
+	 * 메일전송유형
+	 * SMT_ISSUE : 공급받는자에게 전자명세서가 발행 되었음을 알려주는 메일입니다.
+	 * SMT_ACCEPT : 공급자에게 전자명세서가 승인 되었음을 알려주는 메일입니다.
+	 * SMT_DENY : 공급자에게 전자명세서가 거부 되었음을 알려주는 메일입니다.
+	 * SMT_CANCEL : 공급받는자에게 전자명세서가 취소 되었음을 알려주는 메일입니다.
+	 * SMT_CANCEL_ISSUE : 공급받는자에게 전자명세서가 발행취소 되었음을 알려주는 메일입니다.
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 메일 전송 유형
-  String emailType = "SMT_ISSUE";
+	// 메일 전송 유형
+	String emailType = "SMT_ISSUE";
 
-  // 전송 여부 (true = 전송, false = 미전송)
-  Boolean sendYN = true;
+	// 전송 여부 (true = 전송, false = 미전송)
+	Boolean sendYN = true;
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 

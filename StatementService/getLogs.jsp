@@ -11,20 +11,20 @@
 <%@page import="com.popbill.api.statement.StatementLog"%>
 
 <%
-  /**
-  * 전자명세서 상태 변경이력을 확인합니다.
-  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[전자명세서 API 연동매뉴얼]
-  *  > 3.3.4 GetLogs (상태 변경이력 확인)" 을 참조하시기 바랍니다.
-  */
+	/*
+	 * 전자명세서 상태 변경이력을 확인합니다.
+	 * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
+	 *   "[전자명세서 API 연동매뉴얼] > 3.2.5 GetLogs (상태 변경이력 확인)" 을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 전자명세서 문서관리번호
-	String mgtKey = "20161130-01";
+	// 전자명세서 문서관리번호
+	String mgtKey = "20190107-001";
 
 	StatementLog[] statementLogs = null;
 
@@ -52,12 +52,12 @@
 				%>
 				<fieldset class="fieldset2">
 					<ul>
-						<li>docLogType : <%= statementLog.getDocLogType() %> </li>
-						<li>log : <%= statementLog.getLog() %> </li>
-						<li>procMemo : <%= statementLog.getProcMemo() %> </li>
-						<li>procType : <%=statementLog.getProcType() %></li>
-						<li>regDT : <%=statementLog.getRegDT() %></li>
-						<li>ip : <%=statementLog.getIp() %></li>
+						<li>docLogType(로그타입) : <%= statementLog.getDocLogType() %> </li>
+						<li>log(이력정보) : <%= statementLog.getLog() %> </li>
+						<li>procMemo(처리메모) : <%= statementLog.getProcMemo() %> </li>
+						<li>procType(처리형태) : <%=statementLog.getProcType() %></li>
+						<li>regDT(등록일시) : <%=statementLog.getRegDT() %></li>
+						<li>ip(아이피) : <%=statementLog.getIp() %></li>
 					</ul>
 				</fieldset>
 

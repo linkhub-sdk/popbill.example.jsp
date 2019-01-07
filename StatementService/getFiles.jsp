@@ -11,20 +11,20 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 전자명세서에 첨부된 파일의 목록을 확인합니다.
-  * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API)
-  *   호출시 이용할 수 있습니다.
-  */
+	/*
+	 * 전자명세서에 첨부된 파일의 목록을 확인합니다.
+	 * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API)
+	 *   호출시 이용할 수 있습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 전자명세서 문서관리번호
-	String mgtKey = "20170307-01";
+	// 전자명세서 문서관리번호
+	String mgtKey = "20190107-001";
 
 	AttachedFile[] attachedFiles = null;
 
@@ -51,12 +51,11 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>serialNum : <%= attachedFile.getSerialNum() %> </legend>
 					<ul>
-						<li>serialNum : <%= attachedFile.getSerialNum() %> </li>
-						<li>attachedFile : <%= attachedFile.getAttachedFile() %> </li>
-						<li>displayName : <%= attachedFile.getDisplayName() %></li>
-						<li>regDT : <%= attachedFile.getRegDT() %></li>
+						<li>serialNum(첨부파일 일련번호) : <%= attachedFile.getSerialNum() %> </li>
+						<li>attachedFile(파일아이디-첨부파일 삭제시 사용) : <%= attachedFile.getAttachedFile() %> </li>
+						<li>displayName(첨부파일명) : <%= attachedFile.getDisplayName() %></li>
+						<li>regDT(첨부일시) : <%= attachedFile.getRegDT() %></li>
 					</ul>
 				</fieldset>
 

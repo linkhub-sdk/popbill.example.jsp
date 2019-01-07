@@ -25,7 +25,7 @@
 	String DType = "W";
 
   // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20161001";
+	String SDate = "20190107";
 
   // 종료일자, 날짜형식(yyyyMMdd)
 	String EDate = "20161130";

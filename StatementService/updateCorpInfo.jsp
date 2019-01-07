@@ -12,32 +12,32 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 회사정보를 수정합니다
-  */
+	/*
+	 * 연동회원의 회사정보를 수정합니다
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 회사정보 객체
-  CorpInfo corpInfo = new CorpInfo();
+	// 회사정보 객체
+	CorpInfo corpInfo = new CorpInfo();
 
-  // 대표자 성명, 최대 30자
-  corpInfo.setCeoname("대표자명");
+	// 대표자 성명, 최대 30자
+	corpInfo.setCeoname("대표자명");
 
-  // 상호, 최대 70자
-  corpInfo.setCorpName("상호");
+	// 상호, 최대 70자
+	corpInfo.setCorpName("상호");
 
-  // 주소, 최대 300자
-  corpInfo.setAddr("주소");
+	// 주소, 최대 300자
+	corpInfo.setAddr("주소");
 
-  // 업태, 최대 40자
-  corpInfo.setBizType("업태");
+	// 업태, 최대 40자
+	corpInfo.setBizType("업태");
 
-  // 종목, 최대 40자
-  corpInfo.setBizClass("종목");
+	// 종목, 최대 40자
+	corpInfo.setBizClass("종목");
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 
