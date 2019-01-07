@@ -25,7 +25,7 @@
     String testCorpNum = "1234567890";
 
     // 세금계산서 문서관리번호
-    String mgtKey = "20190107-03";
+    String mgtKey = "20190107-02";
 
     // 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
     MgtKeyType keyType = MgtKeyType.SELL;

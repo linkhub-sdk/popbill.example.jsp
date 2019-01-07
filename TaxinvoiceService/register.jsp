@@ -69,7 +69,7 @@
   taxinvoice.setInvoicerCorpName("공급자 상호");
 
   // 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-  taxinvoice.setInvoicerMgtKey("20190107-001");
+  taxinvoice.setInvoicerMgtKey("20190107-002");
 
   // 공급자 대표자성명
   taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -223,7 +223,7 @@
   detail = new TaxinvoiceDetail();
 
   detail.setSerialNum((short) 2);
-  detail.setPurchaseDT("20190107-001");
+  detail.setPurchaseDT("20190107");
   detail.setItemName("품목명2");
   detail.setSpec("규격");
   detail.setQty("1");
