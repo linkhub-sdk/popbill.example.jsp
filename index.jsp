@@ -19,8 +19,8 @@
             <li><a href="MessageService">MessageService</a> - 문자메시지 API</li>
             <li><a href="KakaoService">KakaoService</a> - 카카오톡 API</li>
             <li><a href="FaxService">FaxService</a> - 팩스 API</li>
-            <li><a href="HTTaxinvoiceService">HTTaxinvoiceService</a> - 홈택스 전자(세금)계산서 매입매출 조회 API</li>
-            <li><a href="HTCashbillService">HTCashbillService</a> - 홈택스 현금영수증 매입매출 조회 API</li>
+            <li><a href="HTTaxinvoiceService">HTTaxinvoiceService</a> -  홈택스연동 (전자세금계산서) API</li>
+            <li><a href="HTCashbillService">HTCashbillService</a> - 홈택스연동 (현금영수증) API</li>
             <li><a href="ClosedownService">ClosedownService</a> - 휴폐업조회 API</li>
         </ul>
     </fieldset>

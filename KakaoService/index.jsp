@@ -16,7 +16,6 @@
             <li><a href="${pageContext.request.contextPath}/KakaoService/listPlusFriendID.jsp">listPlusFriendID</a> - 플러스친구 목록 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>발신번호 관리</legend>
         <ul>
@@ -24,7 +23,6 @@
             <li><a href="${pageContext.request.contextPath}/KakaoService/getSenderNumberList.jsp">getSenderNumberList</a> - 발신번호 목록 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>알림톡 템플릿 관리</legend>
         <ul>
@@ -32,70 +30,61 @@
             <li><a href="${pageContext.request.contextPath}/KakaoService/listATSTemplate.jsp">listATSTemplate</a> - 알림톡 템플릿 목록 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
-        <legend>알림톡 전송</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_one.jsp">sendATS</a> - 알림톡 단건 전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_same.jsp">sendATS</a> - 알림톡 동일내용 대량 전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_multi.jsp">sendATS</a> - 알림톡 개별내용 대량 전송</li>
-        </ul>
+        <legend>알림톡 / 친구톡 전송</legend>
+        <fieldset class="fieldset2">
+            <legend>알림톡 전송</legend>
+            <ul>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_one.jsp">sendATS</a> - 알림톡 단건 전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_same.jsp">sendATS</a> - 알림톡 동일내용 대량 전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendATS_multi.jsp">sendATS</a> - 알림톡 개별내용 대량 전송</li>
+            </ul>
+        </fieldset>
+        <br/>
+        <fieldset class="fieldset2">
+            <legend>친구톡 텍스트 전송</legend>
+            <ul>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_one.jsp">sendFTS</a> - 친구톡 텍스트 단건 전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_same.jsp">sendFTS</a> - 친구톡 텍스트 동일내용 대량전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_multi.jsp">sendFTS</a> - 친구톡 텍스트 개별내용 대량전송</li>
+            </ul>
+        </fieldset>
+        <fieldset class="fieldset2">
+            <legend>친구톡 이미지 전송</legend>
+            <ul>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_one.jsp">sendFMS</a> - 친구톡 이미지 단건 전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_same.jsp">sendFMS</a> - 친구톡 이미지 동일내용 대량전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_multi.jsp">sendFMS</a> - 친구톡 이미지 개별내용 대량전송</li>
+            </ul>
+        </fieldset>
+        <fieldset class="fieldset2">
+            <legend>예약전송 취소</legend>
+            <ul>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소 (요청번호 할당)</li>
+            </ul>
+        </fieldset>
     </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>친구톡 텍스트 전송</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_one.jsp">sendFTS</a> - 친구톡 텍스트 단건 전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_same.jsp">sendFTS</a> - 친구톡 텍스트 동일내용 대량전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFTS_multi.jsp">sendFTS</a> - 친구톡 텍스트 개별내용 대량전송</li>
-        </ul>
-    </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>친구톡 이미지 전송</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_one.jsp">sendFMS</a> - 친구톡 이미지 단건 전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_same.jsp">sendFMS</a> - 친구톡 이미지 동일내용 대량전송</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_multi.jsp">sendFMS</a> - 친구톡 이미지 개별내용 대량전송</li>
-        </ul>
-    </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>정보확인</legend>
         <ul>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getMessages.jsp">getMessages</a> - 알림톡/친구톡 전송내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getMessagesRN.jsp">getMessagesRN</a> - 알림톡/친구톡 전송내역 확인 (요청번호 할당)</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/search.jsp">search</a> - 전송내역 목록 조회</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getSentListURL.jsp">getSentListURL</a> - 카카오톡 전송내역 팝업 URL</li>
         </ul>
     </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>접수번호 관련 기능 (요청번호 미할당)</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getMessages.jsp">getMessages</a> - 알림톡/친구톡 전송내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
-        </ul>
-    </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>요청번호 할당 전송건 관련 기능</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getMessagesRN.jsp">getMessagesRN</a> - 알림톡/친구톡 전송내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소</li>
-        </ul>
-    </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>포인트관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getUnitCost.jsp">getUnitCost</a> - 전송단가 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeURL.jsp">getChargeURL</a> 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getUnitCost.jsp">getUnitCost</a> - 전송단가 확인</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>회원관리</legend>
         <ul>

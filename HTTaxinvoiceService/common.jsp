@@ -3,7 +3,7 @@
 * 팝빌 홈택스 전자세금계산서 연계 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : http://http://blog.linkhub.co.kr/591/
-* - 업데이트 일자 : 2018-07-25
+* - 업데이트 일자 : 2019-01-07
 * - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991~2
 * - 연동 기술지원 이메일 : code@linkhub.co.kr
 *
@@ -11,10 +11,10 @@
 * 1) 29, 32번 라인에 선언된 링크아이디(LinkID)와 비밀키(SecretKey)를 링크허브 가입시 메일로
 *    발급받은 인증정보를 참조하여 변경합니다.
 * 2) 팝빌 개발용 사이트(test.popbill.com)에 연동회원으로 가입합니다.
-* 3) 홈택스에서 이용가능한 공인인증서를 등록합니다.
-*    - 팝빌로그인 > [홈택스연계] > [환경설정] > [공인인증서 관리] 메뉴
-*    - 공인인증서 등록(GetCertificatePopUpURL API) 반환된 URL을 이용하여
-*      팝업 페이지에서 공인인증서 등록
+* 3) 홈택스 인증 처리를 합니다. (부서사용자등록 / 공인인증서 등록)
+*    - 팝빌로그인 > [홈택스연동] > [환경설정] > [인증 관리] 메뉴
+*    - 홈택스연동 인증 관리 팝업 URL(GetCertificatePopUpURL API) 반환된 URL을 이용하여
+*      홈택스 인증 처리를 합니다.
 *
 * Class Module for base module for Popbill API SDK. It include base functionality for
 * RESTful web service request and parse json result. It uses Linkhub class module

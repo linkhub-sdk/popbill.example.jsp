@@ -16,7 +16,6 @@
             <li><a href="${pageContext.request.contextPath}/MessageService/getSenderNumberList.jsp">getSenderNumberList</a> - 발신번호 목록 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>문자 전송</legend>
         <ul>
@@ -28,47 +27,32 @@
             <li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 포토 전송 [대량]</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendXMS.jsp">sendXMS</a> - 단문/장문 자동인식 전송</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendXMS_Multi.jsp">sendXMS</a> - 단문/장문 자동인식 전송 [대량]</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 전송내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getMessagesRN.jsp">getMessagesRN</a> - 전송내역 확인 (요청번호 할당)</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
-        <legend>전송내역조회/요약정보확인</legend>
+        <legend>정보확인</legend>
         <ul>
+            <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소 (요청번호 할당)</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/search.jsp">search</a> - 전송내역 목록 조회</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getStates.jsp">getStates</a> - 문자메세지 전송요약정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getSentListURL.jsp">getSentListURL</a> - 문자 전송내역 팝업 URL</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080 수신거부 목록 확인</li>
         </ul>
     </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>접수번호 관련 기능 (요청번호 미할당)</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 전송내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
-        </ul>
-    </fieldset>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>요청번호 할당 전송건 관련 기능</legend>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getMessagesRN.jsp">getMessagesRN</a> - 전송내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소</li>
-        </ul>
-    </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>포인트 관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 전송 단가 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/getUnitCost.jsp">getUnitCost</a> - 전송 단가 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>

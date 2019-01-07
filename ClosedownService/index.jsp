@@ -20,12 +20,12 @@
     <fieldset class="fieldset1">
         <legend>포인트 관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
-            <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/ClosedownService/getUnitCost.jsp">getUnitCost</a> - 전송 단가 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getUnitCost.jsp">getUnitCost</a> - 조회 단가 확인</li>
         </ul>
     </fieldset>
     <br/>

@@ -21,7 +21,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/delete.jsp">delete</a> - 삭제</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>취소현금영수증 발행</legend>
         <ul>
@@ -31,7 +30,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/revokeRegister_part.jsp">revokeRegister_part</a> - 부분) 임시저장</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>현금영수증 정보확인</legend>
         <ul>
@@ -43,7 +41,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getURL.jsp">getURL</a> - 현금영수증 문서함 관련 URL</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>현금영수증 보기/인쇄</legend>
         <ul>
@@ -53,7 +50,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getMailURL.jsp">getMailURL</a> - 현금영수증 메일링크 URL</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>부가기능</legend>
         <ul>
@@ -65,7 +61,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/updateEmailConfig.jsp">updateEmailConfig</a> - 현금영수증 알림메일 전송설정 수정</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>포인트관리</legend>
         <ul>
@@ -77,7 +72,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>
