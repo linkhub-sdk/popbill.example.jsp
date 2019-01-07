@@ -57,75 +57,75 @@
 
 
 	/***************************************************************************
-	 *                               공급자 정보
+	 *                               발신자 정보
 	 ****************************************************************************/
 
-	// 공급자 사업자번호
+	// 발신자 사업자번호
 	statement.setSenderCorpNum("1234567890");
 
-	// 공급자 상호
-	statement.setSenderCorpName("공급자 상호_수정");
+	// 발신자 상호
+	statement.setSenderCorpName("발신자 상호_수정");
 
-	// 공급자 주소
-	statement.setSenderAddr("공급자 주소_수정");
+	// 발신자 주소
+	statement.setSenderAddr("발신자 주소_수정");
 
-	// 공급자 대표자 성명
-	statement.setSenderCEOName("공급자 대표자 성명");
+	// 발신자 대표자 성명
+	statement.setSenderCEOName("발신자 대표자 성명");
 
-	// 공급자 종사업장 식별번호
+	// 발신자 종사업장 식별번호
 	statement.setSenderTaxRegID("");
 
-	// 공급자 종목
+	// 발신자 종목
 	statement.setSenderBizClass("종목");
 
-	// 공급자 업태
+	// 발신자 업태
 	statement.setSenderBizType("업태");
 
-	// 공급자 담당자명
-	statement.setSenderContactName("공급자 담당자명");
+	// 발신자 담당자명
+	statement.setSenderContactName("발신자 담당자명");
 
-	// 공급자 담당자 메일주소
+	// 발신자 담당자 메일주소
 	statement.setSenderEmail("test@test.com");
 
-	// 공급자 담당자 연락처
+	// 발신자 담당자 연락처
 	statement.setSenderTEL("070-7070-0707");
 
-	// 공급자 담당자 휴대폰번호
+	// 발신자 담당자 휴대폰번호
 	statement.setSenderHP("010-000-2222");
 
 
 	/***************************************************************************
-	 *                             공급받는자 정보
+	 *                             수신자 정보
 	 ****************************************************************************/
 
-	// 공급자받는자 사업자번호
+	// 발신자받는자 사업자번호
 	statement.setReceiverCorpNum("8888888888");
 
-	// 공급자받는자 상호
-	statement.setReceiverCorpName("공급받는자 상호");
+	// 발신자받는자 상호
+	statement.setReceiverCorpName("수신자 상호");
 
-	// 공급자받는자 대표자성명
-	statement.setReceiverCEOName("공급받는자 대표자 성명");
+	// 발신자받는자 대표자성명
+	statement.setReceiverCEOName("수신자 대표자 성명");
 
-	// 공급자받는자 주소
-	statement.setReceiverAddr("공급받는자 주소");
+	// 발신자받는자 주소
+	statement.setReceiverAddr("수신자 주소");
 
-	// 공급자받는자 종목
-	statement.setReceiverBizClass("공급받는자 업종");
+	// 발신자받는자 종목
+	statement.setReceiverBizClass("수신자 업종");
 
-	// 공급자받는자 업태
-	statement.setReceiverBizType("공급받는자 업태");
+	// 발신자받는자 업태
+	statement.setReceiverBizType("수신자 업태");
 
-	// 공급자받는자 담당자명
-	statement.setReceiverContactName("공급받는자 담당자명");
+	// 발신자받는자 담당자명
+	statement.setReceiverContactName("수신자 담당자명");
 
-	// 공급자받는자 담당자 메일주소
+	// 발신자받는자 담당자 메일주소
 	statement.setReceiverEmail("test@receiver.com");
 
-	// 공급자받는자 담당자 연락처
+	// 발신자받는자 담당자 연락처
 	statement.setReceiverTEL("010-111-1111");
 
-	// 공급자받는자 담당자 휴대폰번호
+	// 발신자받는자 담당자 휴대폰번호
 	statement.setReceiverHP("010-1234-1234");
 
 

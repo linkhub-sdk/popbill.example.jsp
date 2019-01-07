@@ -44,27 +44,27 @@
 
 					if (emailSendConfig.getEmailType().equals("SMT_ISSUE")) {
 			%>
-			<li>SMT_ISSUE (공급받는자에게 전자명세서가 발행 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+			<li>SMT_ISSUE (수신자에게 전자명세서가 발행 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
 			<%
 				}
 				if (emailSendConfig.getEmailType().equals("SMT_ACCEPT")) {
 			%>
-			<li>SMT_ACCEPT (공급자에게 전자명세서가 승인 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+			<li>SMT_ACCEPT (발신자에게 전자명세서가 승인 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
 			<%
 				}
 				if (emailSendConfig.getEmailType().equals("SMT_DENY")) {
 			%>
-			<li>SMT_DENY (공급자에게 전자명세서가 거부 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+			<li>SMT_DENY (발신자에게 전자명세서가 거부 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
 			<%
 				}
 				if (emailSendConfig.getEmailType().equals("SMT_CANCEL")) {
 			%>
-			<li>SMT_CANCEL (공급받는자에게 전자명세서가 취소 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+			<li>SMT_CANCEL (수신자에게 전자명세서가 취소 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
 			<%
 				}
 				if (emailSendConfig.getEmailType().equals("SMT_CANCEL_ISSUE")) {
 			%>
-			<li>SMT_CANCEL_ISSUE (공급받는자에게 전자명세서가 발행취소 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+			<li>SMT_CANCEL_ISSUE (수신자에게 전자명세서가 발행취소 되었음을 알려주는 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
 			<%
 					}
 				}

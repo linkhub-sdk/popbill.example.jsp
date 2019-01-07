@@ -54,10 +54,10 @@
 						<li> writeDate(작성일자) : <%= statementInfo.getWriteDate()%></li>
 						<li> senderCorpName(발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>
 						<li> senderCorpNum(발신자 사업자번호) : <%= statementInfo.getSenderCorpNum()%></li>
-						<li> senderPrintYN(발신자 인쇄여부) : <%= statementInfo.getSenderPrintYN()%></li>
+						<li> senderPrintYN(발신자 인쇄여부) : <%= statementInfo.isSenderPrintYN()%></li>
 						<li> receiverCorpName(수신자 상호) : <%= statementInfo.getReceiverCorpName()%></li>
 						<li> receiverCorpNum(수신자 사업자번호) : <%= statementInfo.getReceiverCorpNum()%></li>
-						<li> receiverPrintYN(수신자 인쇄여부) : <%= statementInfo.getReceiverPrintYN()%></li>
+						<li> receiverPrintYN(수신자 인쇄여부) : <%= statementInfo.isReceiverPrintYN()%></li>
 						<li> supplyCostTotal(공급가액 합계) : <%= statementInfo.getSupplyCostTotal()%></li>
 						<li> taxTotal(세액 합계) : <%= statementInfo.getTaxTotal()%></li>
 						<li> issueDT(발행일시) : <%= statementInfo.getIssueDT()%></li>

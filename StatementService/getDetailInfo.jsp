@@ -51,7 +51,6 @@
 					<ul>
 						<li> itemCode(문서종류코드) : <%= statement.getItemCode()%></li>
 						<li> mgtKey(관리번호) : <%= statement.getMgtKey()%></li>
-						<li> invoiceNum(팝빌부여 문서고유번호) : <%= statement.getInvoiceNum()%></li>
 						<li> formCode(맞춤양식 코드) : <%= statement.getFormCode()%></li>
 						<li> writeDate(작성일자) : <%= statement.getWriteDate()%></li>
 						<li> taxType(세금형태) : <%= statement.getTaxType ()%></li>

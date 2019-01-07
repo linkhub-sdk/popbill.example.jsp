@@ -38,8 +38,8 @@
             <li><a href="${pageContext.request.contextPath}/StatementService/getPopUpURL.jsp">getPopUpURL</a> - 전자명세서 보기 URL</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getPrintURL.jsp">getPrintURL</a> - 전자명세서 인쇄 [공급자] URL</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getEPrintURL.jsp">getEPrintURL</a> - 전자명세서 인쇄 [공급받는자용] URL</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/getMassPrintURL.jsp">getMassPrintURL</a> - (전자명세서 대량 인쇄 URL</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/getMailURL.jsp">getMailURL</a> - (전자명세서 메일링크 URL</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getMassPrintURL.jsp">getMassPrintURL</a> - 전자명세서 대량 인쇄 URL</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getMailURL.jsp">getMailURL</a> - 전자명세서 메일링크 URL</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
