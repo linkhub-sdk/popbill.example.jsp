@@ -10,18 +10,18 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 홈택스 전자세금계산서 팝업 URL을 반환합니다.
-  * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
-  */
+	/*
+	 * 홈택스 전자세금계산서 팝업 URL을 반환합니다.
+	 * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+	 */
 
-  // 팝빌회원 사업자번호
-	String testCorpNum = "6798700433";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 국세청 승인번호
-  String NTSConfirmNum = "201703034100020300001af2";
+	// 국세청 승인번호
+	String NTSConfirmNum = "201703034100020300001af2";
 
-  String url = null;
+	String url = null;
 
 	try {
 

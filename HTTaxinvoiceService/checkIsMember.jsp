@@ -11,15 +11,15 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
-  * - LinkID는 인증정보로 설정되어 있는 링크아이디 값입니다.
-  */
+	/*
+	 * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+	 * - LinkID는 인증정보로 설정되어 있는 링크아이디 값입니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 링크아이디
+	// 링크아이디
 	String linkID = "TESTER";
 
 	Response CheckResponse = null;

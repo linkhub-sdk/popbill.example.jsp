@@ -11,11 +11,11 @@
   <%@page import="com.popbill.api.Response"%>
 
 <%
-  /**
-  * 팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 삭제한다.
-  */
+	/*
+	 * 팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 삭제한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
@@ -37,7 +37,7 @@
 			<fieldset class="fieldset1">
 				<legend>부서사용자 등록정보 삭제</legend>
 				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
+          			<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 		  </fieldset>

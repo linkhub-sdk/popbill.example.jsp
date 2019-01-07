@@ -1,21 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+	<title>팝빌 SDK jsp Example.</title>
+</head>
 
-  <%@ include file="common.jsp" %>
-  <%@page import="com.popbill.api.PopbillException"%>
-  <%@page import="com.popbill.api.Response"%>
+<%@ include file="common.jsp" %>
+<%@page import="com.popbill.api.PopbillException"%>
+<%@page import="com.popbill.api.Response"%>
 
 <%
-  /**
-  * 팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
-  */
+	/*
+	 * 팝빌에 등록된 전자세금계산서 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
