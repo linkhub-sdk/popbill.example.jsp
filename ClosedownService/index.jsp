@@ -16,7 +16,6 @@
             <li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpNums.jsp">checkCorpNums</a> - 휴폐업 대량조회</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>포인트 관리</legend>
         <ul>
@@ -28,7 +27,6 @@
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getUnitCost.jsp">getUnitCost</a> - 조회 단가 확인</li>
         </ul>
     </fieldset>
-    <br/>
     <fieldset class="fieldset1">
         <legend>회원정보</legend>
         <ul>

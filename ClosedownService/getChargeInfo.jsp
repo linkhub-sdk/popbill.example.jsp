@@ -11,9 +11,9 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 홈택스 현금영수증 연계 API 서비스 과금정보를 확인합니다.
-  */
+	/*
+	 * 연동회원의 홈택스 현금영수증 연계 API 서비스 과금정보를 확인합니다.
+	 */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";

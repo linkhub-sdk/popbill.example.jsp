@@ -12,9 +12,9 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 파트너의 연동회원으로 회원가입을 요청합니다.
-  */
+	/*
+	 * 파트너의 연동회원으로 회원가입을 요청합니다.
+	 */
 
   JoinForm joinInfo = new JoinForm();
 
@@ -61,7 +61,6 @@
   joinInfo.setContactEmail("test@test.co.kr");
 
   Response CheckResponse = null;
-
 
 	try {
 

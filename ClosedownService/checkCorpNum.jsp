@@ -11,14 +11,17 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
+	/*
+	 * 1건의 사업자에 대한 휴폐업여부를 조회합니다.
+	 */
+
 	CorpState corpState = null;
 
-  // 팝빌회원 사업자번호
+  	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	if ( request.getParameter("CorpNum") != null ) {
-
-    // 조회할 사업자번호
+    	// 조회할 사업자번호
 		String checkCorpNum = request.getParameter("CorpNum");
 
 		try{
@@ -48,12 +51,12 @@
 				<fieldset class ="fieldset2">
 					<legend>휴폐업조회 결과</legend>
 					<ul>
-						<li>corpNum [사업자번호] : <%=corpState.getCorpNum()%></li>
-						<li>type [사업자유형] : <%=corpState.getType()%></li>
-						<li>state [휴폐업상태] : <%=corpState.getState()%></li>
-						<li>stateDate [휴폐업일자] : <%=corpState.getStateDate()%></li>
-            <li>typeDate [과세유형 전환일자] : <%=corpState.getTypeDate()%></li>
-						<li>checkDate [확인일자] : <%=corpState.getCheckDate()%></li>
+						<li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
+						<li>type (사업자유형) : <%=corpState.getType()%></li>
+						<li>state (휴폐업상태) : <%=corpState.getState()%></li>
+						<li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
+						<li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
+						<li>checkDate (확인일자) : <%=corpState.getCheckDate()%></li>
 					</ul>
 					<p class="info"> type : null (알수없음), 1 (부가가치세 일반과세자), 2 (부가가치세 면세과세자), 3 (부가치세 간이과세자) 4 (비영리법인 또는 국가기관, 고유번호가 부여된 단체)</p>
 					<p class="info"> state : null (알수없음), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>

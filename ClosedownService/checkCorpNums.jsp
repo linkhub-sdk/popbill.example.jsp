@@ -11,7 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  // 팝빌회원 사업자번호
+    /*
+     * 다수의 사업자에 대한 휴폐업여부를 조회합니다. (최대 1000건)
+     */
+
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 조회할 사업자번호 배열, 최대 1000건
@@ -48,12 +52,12 @@
 					<fieldset class ="fieldset2">
 						<legend>휴폐업조회 결과 [<%=i+1%>]</legend>
 						<ul>
-							<li>corpNum [사업자번호] : <%=corpState.getCorpNum()%></li>
-							<li>type [사업 유형] : <%=corpState.getType()%></li>
-							<li>state [휴폐업 상태] : <%=corpState.getState()%></li>
-							<li>stateDate [휴폐업일자] : <%=corpState.getStateDate()%></li>
-              <li>typeDate [과세유형 전환일자] : <%=corpState.getTypeDate()%></li>
-							<li>checkDate [확인일자] : <%=corpState.getCheckDate()%></li>
+							<li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
+							<li>type (사업 유형) : <%=corpState.getType()%></li>
+							<li>state (휴폐업 상태) : <%=corpState.getState()%></li>
+							<li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
+							<li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
+							<li>checkDate (확인일자) : <%=corpState.getCheckDate()%></li>
 						</ul>
 					</fieldset>
 			<%
