@@ -12,26 +12,25 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 전자세금계산서를 팩스전송합니다.
-  * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
-  * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를
-  *   확인할 수 있습니다.
-  */
+	/*
+	 * 전자세금계산서를 팩스전송합니다.
+	 * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+	 * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인할 수 있습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 발신번호
+	// 발신번호
 	String senderNum = "070-4304-2001";
 
-  // 수신팩스 번호
+	// 수신팩스 번호
 	String receiverNum = "070-111-222";
 
 	Response CheckResponse = null;
@@ -47,15 +46,15 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 팩스 전송</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>세금계산서 팩스 전송</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

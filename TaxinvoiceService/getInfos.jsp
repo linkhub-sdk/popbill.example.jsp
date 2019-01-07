@@ -12,20 +12,20 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceInfo"%>
 
 <%
-  /**
-  * 다량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
-  * - 세금계산서 상태정보(GetInfos API) 응답항목에 대한 자세한 정보는
-  *  "[전자세금계산서 API 연동매뉴얼] > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
-  */
+	/*
+	 * 다량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
+	 * - 세금계산서 상태정보(GetInfos API) 응답항목에 대한 자세한 정보는
+	 *  "[전자세금계산서 API 연동매뉴얼] > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 연동관리번호 배열 (최대 1000건)
-	String[] MgtKeyList = new String[] {"20161221-03","20161130-02"};
+	// 세금계산서 연동관리번호 배열 (최대 1000건)
+	String[] MgtKeyList = new String[] {"20190107-001","20190107-002"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;
 
@@ -46,58 +46,56 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>세금계산서 상태/요약 정보 확인 - 대량</legend>
-
 					<%
 						TaxinvoiceInfo taxinvoiceInfo = null;
 						for ( int i = 0; i < taxinvoiceInfos.length; i++ ) {
 							taxinvoiceInfo = taxinvoiceInfos[i];
 					%>
-
 						<fieldset class="fieldset2">
 							<legend>세금계산서 상세/요약 정보 [<%=i+1%>/<%=taxinvoiceInfos.length%>]</legend>
-								<ul>
-                  <li>itemKey (세금계산서 아이템키) : <%= taxinvoiceInfo.getItemKey()%></li>
-      						<li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
-      						<li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
-                  <li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
-      						<li>taxTotal (세액 합계) : <%= taxinvoiceInfo.getTaxTotal() %></li>
-      						<li>regDT (임시저장 일자) : <%= taxinvoiceInfo.getRegDT()%> </li>
-      						<li>lateIssueYN (지연발행 여부) : <%= taxinvoiceInfo.getLateIssueYN() %></li>
-                  <li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
+							<ul>
+								<li>itemKey (세금계산서 아이템키) : <%= taxinvoiceInfo.getItemKey()%></li>
+								<li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
+								<li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
+								<li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
+								<li>taxTotal (세액 합계) : <%= taxinvoiceInfo.getTaxTotal() %></li>
+								<li>regDT (임시저장 일자) : <%= taxinvoiceInfo.getRegDT()%> </li>
+								<li>lateIssueYN (지연발행 여부) : <%= taxinvoiceInfo.getLateIssueYN() %></li>
+								<li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
 
-      						<li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
-      						<li>invoicerCorpNum (공급자 사업자번호) : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
-      						<li>invoicerMgtKey (공급자 문서관리번호) : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
-      						<li>invoicerPrintYN (공급자 인쇄여부) : <%= taxinvoiceInfo.isInvoicerPrintYN() %></li>
+								<li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
+								<li>invoicerCorpNum (공급자 사업자번호) : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
+								<li>invoicerMgtKey (공급자 문서관리번호) : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
+								<li>invoicerPrintYN (공급자 인쇄여부) : <%= taxinvoiceInfo.isInvoicerPrintYN() %></li>
 
-      						<li>invoiceeCorpName (공급받는자 상호) : <%= taxinvoiceInfo.getInvoiceeCorpName() %></li>
-      						<li>invoiceeCorpNum (공급받는자 사업자번호) : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
-      						<li>invoiceeMgtKey (공급받는자 문서관리번호) : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
-      						<li>invoiceePrintYN (공급받는자 인쇄여부) : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
-                  <li>closeDownState (공급받는자 휴폐업상태) : <%= taxinvoiceInfo.getCloseDownState() %></li>
-                  <li>closeDownStateDate (공급받는자 휴폐업일자) : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
+								<li>invoiceeCorpName (공급받는자 상호) : <%= taxinvoiceInfo.getInvoiceeCorpName() %></li>
+								<li>invoiceeCorpNum (공급받는자 사업자번호) : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
+								<li>invoiceeMgtKey (공급받는자 문서관리번호) : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
+								<li>invoiceePrintYN (공급받는자 인쇄여부) : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
+								<li>closeDownState (공급받는자 휴폐업상태) : <%= taxinvoiceInfo.getCloseDownState() %></li>
+								<li>closeDownStateDate (공급받는자 휴폐업일자) : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
 
-      						<li>trusteeCorpName (수탁자 상호) : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
-      						<li>trusteeCorpNum (수탁자 사업자번호) : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
-      						<li>trusteeMgtKey (수탁자 문서관리번호) : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
-      						<li>trusteePrintYN (수탁자 인쇄여부) : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>
+								<li>trusteeCorpName (수탁자 상호) : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
+								<li>trusteeCorpNum (수탁자 사업자번호) : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
+								<li>trusteeMgtKey (수탁자 문서관리번호) : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
+								<li>trusteePrintYN (수탁자 인쇄여부) : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>
 
-      						<li>purposeType (영수/청구) : <%= taxinvoiceInfo.getPurposeType() %></li>
-      						<li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
-      						<li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
-      						<li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
-      						<li>preIssueDT (발행예정일시) : <%= taxinvoiceInfo.getPreIssueDT() %></li>
-      						<li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
-      						<li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
-      						<li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>
-      						<li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
-      						<li>openDT (개봉 일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
-      						<li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
-      						<li>ntsconfirmNum (국세청승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
-      						<li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
-      						<li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
-      						<li>ntssendErrCode (전송실패 사유코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
-								</ul>
+								<li>purposeType (영수/청구) : <%= taxinvoiceInfo.getPurposeType() %></li>
+								<li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
+								<li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
+								<li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
+								<li>preIssueDT (발행예정일시) : <%= taxinvoiceInfo.getPreIssueDT() %></li>
+								<li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
+								<li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
+								<li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>
+								<li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
+								<li>openDT (개봉 일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
+								<li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
+								<li>ntsconfirmNum (국세청승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
+								<li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
+								<li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
+								<li>ntssendErrCode (전송실패 사유코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
+							</ul>
 						</fieldset>
 					<%
 						}

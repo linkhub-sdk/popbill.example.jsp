@@ -12,24 +12,24 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 1건의 전자명세서를 세금계산서에 첨부합니다.
-  */
+	/*
+	 * 1건의 전자명세서를 세금계산서에 첨부합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int subItemCode = 121;
 
-  // 첨부할 전자명세서 문서관리번호
-	String subMgtKey = "20160121-02";
+	// 첨부할 전자명세서 문서관리번호
+	String subMgtKey = "20190107-001";
 
 	Response CheckResponse = null;
 
@@ -44,15 +44,15 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>전자명세서 첨부</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>전자명세서 첨부</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

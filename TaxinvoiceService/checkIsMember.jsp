@@ -11,15 +11,15 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
-  * - LinkID는 파트너 가입시 메일로 발급받은 인증정보 값입니다.
-  */
+	/*
+	 * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+	 * - LinkID는 파트너 가입시 메일로 발급받은 인증정보 값입니다.
+	 */
 
-  // 조회할 사업자번호, '-'제외 10자리
+	// 조회할 사업자번호, '-'제외 10자리
 	String testCorpNum = "1234567890";
 
-  // 파트너 링크아이디
+	// 파트너 링크아이디
 	String linkID = "TESTER";
 
 	Response CheckResponse = null;
@@ -34,17 +34,17 @@
 		throw e;
 	}
 %>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>연동회원 가입여부 확인</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+<body>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>연동회원 가입여부 확인</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
+</body>
 </html>

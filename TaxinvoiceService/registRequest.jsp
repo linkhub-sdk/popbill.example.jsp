@@ -15,7 +15,7 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact" %>
 
 <%
-    /**
+    /*
      * [공급받는자]가 공급자에게 1건의 역발행 세금계산서를 [즉시 요청]합니다.
      * - 세금계산서 항목별 정보는 "[전자세금계산서 API 연동매뉴얼] > 4.1. (세금)계산서구성"을 참조하시기 바랍니다.
      * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두 팝빌에 회원이여야 합니다.
@@ -36,7 +36,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20181119");
+    taxinvoice.setWriteDate("20190107");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
@@ -116,7 +116,7 @@
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
     // [역발행시 필수] 공급받는자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoiceeMgtKey("001-20181119");
+    taxinvoice.setInvoiceeMgtKey("100-20190107");
 
     // 공급받는자 대표자성명
     taxinvoice.setInvoiceeCEOName("공급받는자 대표자 성명");
@@ -212,28 +212,28 @@
 
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
-    detail.setSerialNum((short) 1);                         // 일련번호
-    detail.setPurchaseDT("20181119");                     // 거래일자
-    detail.setItemName("품목명1");          // 품목명
-    detail.setSpec("규격");                // 규격
-    detail.setQty("1");                                     // 수량
-    detail.setUnitCost("100000");                  // 단가
-    detail.setSupplyCost("100000");                // 공급가액
-    detail.setTax("10000");                                // 세액
-    detail.setRemark("품목비고");           // 비고
+    detail.setSerialNum((short) 1); // 일련번호
+    detail.setPurchaseDT("20190107");   // 거래일자
+    detail.setItemName("품목명1"); // 품목명
+    detail.setSpec("규격");   // 규격
+    detail.setQty("1"); // 수량
+    detail.setUnitCost("100000");   // 단가
+    detail.setSupplyCost("100000"); // 공급가액
+    detail.setTax("10000"); // 세액
+    detail.setRemark("품목비고");   // 비고
 
     taxinvoice.getDetailList().add(detail);
 
     detail = new TaxinvoiceDetail();
 
-    detail.setSerialNum((short) 2);                         // 일련번호
-    detail.setPurchaseDT("20181119");                     // 거래일자
+    detail.setSerialNum((short) 2);
+    detail.setPurchaseDT("20190107");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
-    detail.setQty("1");                                    // 수량
-    detail.setUnitCost("100000");                        // 단가
-    detail.setSupplyCost("100000");                        // 공급가액
-    detail.setTax("10000");                                 // 세액
+    detail.setQty("1");
+    detail.setUnitCost("100000");
+    detail.setSupplyCost("100000");
+    detail.setTax("10000");
     detail.setRemark("품목비고");
 
     taxinvoice.getDetailList().add(detail);

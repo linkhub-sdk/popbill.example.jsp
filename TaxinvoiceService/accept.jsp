@@ -12,20 +12,20 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * [발행예정] 세금계산서를 [승인] 처리합니다.
-  */
+	/*
+	 * [승인대기] 상태의 세금계산서를 [공급받는자]가 [승인]합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 메모
+	// 메모
 	String memo = "발행예정 승인 메모";
 
 	Response CheckResponse = null;
@@ -41,15 +41,15 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>발행예정 승인</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>발행예정 승인</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	</div>
 </html>

@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.taxinvoice.EmailPublicKey"%>
 
 <%
-  /**
-  * 대용량 연계사업자 메일주소 목록을 반환합니다.
-  */
+	/*
+	 * 대용량 연계사업자 유통메일주소 목록을 반환합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	EmailPublicKey[] emailPublicKeyList = null;
@@ -31,24 +31,24 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>연계사업자 이메일 목록</legend>
-				<%
-					for(int i=0; i<emailPublicKeyList.length; i++) {
-						EmailPublicKey emailPublicKey = emailPublicKeyList[i];
-				%>
-  				<fieldset class="fieldset2">
-  					<legend>ConfirmNum : <%= emailPublicKey.getConfirmNum() %></legend>
-  						<ul>
-  							<li>email : <%= emailPublicKey.getEmail() %></li>
-  						</ul>
-  				</fieldset>
-					<%
-						}
-					%>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>연계사업자 이메일 목록</legend>
+			<%
+				for(int i=0; i<emailPublicKeyList.length; i++) {
+					EmailPublicKey emailPublicKey = emailPublicKeyList[i];
+			%>
+			<fieldset class="fieldset2">
+					<ul>
+						<li>confirmNum(유통사업자 승인번호) : <%= emailPublicKey.getConfirmNum() %></li>
+						<li>email(유통사업자 이메일) : <%= emailPublicKey.getEmail() %></li>
+					</ul>
 			</fieldset>
-		 </div>
+				<%
+					}
+				%>
+		</fieldset>
+	 </div>
 </html>

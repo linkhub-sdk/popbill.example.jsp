@@ -11,12 +11,12 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌 회원아이디 중복여부를 확인합니다.
-  */
+	/*
+	 * 팝빌 회원아이디 중복여부를 확인합니다.
+	 */
 
-  // 중복조회할 아이디
-	String userID = "testkorea1234";
+	// 중복조회할 아이디
+	String userID = "testkorea";
 
 	Response CheckResponse = null;
 
@@ -30,17 +30,15 @@
 		throw e;
 	}
 %>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>아이디 중복확인</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>아이디 중복확인</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

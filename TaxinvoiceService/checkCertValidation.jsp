@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.Response"%>
 
 <%
-  /**
-  * 팝빌에 등록된 공인인증서의 유효성을 확인한다.
-  */
+	/*
+	 * 팝빌에 등록된 공인인증서의 유효성을 확인한다.
+	 */
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
+	// 팝빌회원 사업자번호, '-'제외 10자리
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
@@ -31,15 +31,15 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>공인인증서 유효성 확인</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>공인인증서 유효성 확인</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

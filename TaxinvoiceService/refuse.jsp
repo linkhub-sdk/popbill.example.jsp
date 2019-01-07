@@ -12,21 +12,21 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 공급받는자에게 요청받은 역발행 세금계산서를 [거부]처리 합니다.
-  * - 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API) 를 호출하여 [삭제] 처리해야 합니다.
-  */
+	/*
+	 * 공급받는자에게 요청받은 역)발행대기 상태의 세금계산서를 [공급자]가 [거부]합니다.
+	 * - 세금계산서의 문서관리번호를 재사용하기 위해서는 삭제 (Delete API)를 호출하여 [삭제] 처리해야 합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 메모
+	// 메모
 	String memo = "역발행요청 거부 메모";
 
 	Response CheckResponse = null;

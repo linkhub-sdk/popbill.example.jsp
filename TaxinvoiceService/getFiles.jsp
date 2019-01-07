@@ -12,19 +12,19 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 세금계산서에 첨부된 파일의 목록을 확인합니다.
-  * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API) 호출시 이용할 수 있습니다.
-  */
+	/*
+	 * 세금계산서에 첨부된 파일의 목록을 확인합니다.
+	 * - 응답항목 중 파일아이디(AttachedFile) 항목은 파일삭제(DeleteFile API) 호출시 이용할 수 있습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
 	AttachedFile[] attachedFiles = null;
 
@@ -49,11 +49,11 @@
 						AttachedFile attachedFile = attachedFiles[i];
 				%>
 				<fieldset class="fieldset2">
-					<legend>serialNum : <%= attachedFile.getSerialNum() %> </legend>
 					<ul>
-						<li>attachedFile : <%= attachedFile.getAttachedFile() %> </li>
-						<li>displayName : <%= attachedFile.getDisplayName() %></li>
-						<li>regDT : <%= attachedFile.getRegDT() %></li>
+						<Li>serialNum(순번) : <%= attachedFile.getSerialNum() %> </Li>
+						<li>attachedFile(파일명) : <%= attachedFile.getAttachedFile() %> </li>
+						<li>displayName(파일아이디) : <%= attachedFile.getDisplayName() %></li>
+						<li>regDT(등록일시) : <%= attachedFile.getRegDT() %></li>
 					</ul>
 				</fieldset>
 				<%

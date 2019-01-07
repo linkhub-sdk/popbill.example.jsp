@@ -12,19 +12,19 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceLog"%>
 
 <%
-  /**
-  * 세금계산서 상태변경 이력을 확인합니다.
-  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
-  *   > 3.6.4 상태 변경이력 확인" 을 참조하시기 바랍니다.
-  */
+	/*
+	 * 세금계산서 상태 변경이력을 확인합니다.
+	 * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
+	 *   "[전자세금계산서 API 연동매뉴얼] > 3.5.5 상태 변경이력 확인" 을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
+	// 세금계산서 문서관리번호
 	String mgtKey = "20161130-01";
 
 	TaxinvoiceLog[] taxinvoiceLogs = null;
@@ -54,13 +54,13 @@
 				<fieldset class="fieldset2">
 					<legend>TaxinvoiceLog.docLogType : <%= taxinvoiceLog.getDocLogType() %></legend>
 					<ul>
-						<li>log : <%= taxinvoiceLog.getLog() %> </li>
-						<li>procType : <%=taxinvoiceLog.getProcType() %></li>
-						<li>procCorpName : <%=taxinvoiceLog.getProcCorpName() %></li>
-						<li>procContactName : <%=taxinvoiceLog.getProcContactName() %></li>
-						<li>procMemo : <%=taxinvoiceLog.getProcMemo() %></li>
-						<li>regDT : <%=taxinvoiceLog.getRegDT() %></li>
-						<li>ip : <%=taxinvoiceLog.getIP() %></li>
+						<li>log (이력정보) : <%= taxinvoiceLog.getLog() %> </li>
+						<li>procType (처리형태) : <%=taxinvoiceLog.getProcType() %></li>
+						<li>procCorpName (처리회사명) : <%=taxinvoiceLog.getProcCorpName() %></li>
+						<li>procContactName (처리담당자) : <%=taxinvoiceLog.getProcContactName() %></li>
+						<li>procMemo (처리메모) : <%=taxinvoiceLog.getProcMemo() %></li>
+						<li>regDT (등록일시) : <%=taxinvoiceLog.getRegDT() %></li>
+						<li>ip (아이피) : <%=taxinvoiceLog.getIP() %></li>
 					</ul>
 				</fieldset>
 				<%

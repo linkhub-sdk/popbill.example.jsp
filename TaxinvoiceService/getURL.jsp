@@ -10,15 +10,15 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌 세금계산서 관련 문서함 팝업 URL을 반환합니다.
-  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
-  */
+	/*
+	 * 팝빌 세금계산서 관련 문서함 팝업 URL을 반환합니다.
+	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
+	// TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
 	String TOGO = "TBOX";
 
 	String url = null;
@@ -34,14 +34,14 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 관련 SSO URL 확인</legend>
-				<ul>
-					<li>url : <%=url%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>세금계산서 관련 SSO URL 확인</legend>
+			<ul>
+				<li>url : <%=url%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

@@ -10,11 +10,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 전자세금계산서 발행단가를 확인합니다.
-  */
+	/*
+	 * 전자세금계산서 발행단가를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	float unitCost;
@@ -30,14 +30,14 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>발행단가 확인</legend>
-				<ul>
-					<li>발행단가 : <%=unitCost%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>발행단가 확인</legend>
+			<ul>
+				<li>발행단가 : <%=unitCost%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

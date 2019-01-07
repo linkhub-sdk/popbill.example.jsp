@@ -11,19 +11,19 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 1건의 전자세금계산서 공급받는자용 인쇄팝업 URL을 반환합니다.
-  * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
-  */
+	/*
+	 * 1건의 전자세금계산서 공급받는자용 인쇄팝업 URL을 반환합니다.
+	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20170307-01";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
 	String url = null;
 
@@ -38,14 +38,14 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 인쇄 팝업 URL - 공급받는자용</legend>
-				<ul>
-					<li>url : <%=url%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>세금계산서 인쇄 팝업 URL - 공급받는자용</legend>
+			<ul>
+				<li>url : <%=url%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

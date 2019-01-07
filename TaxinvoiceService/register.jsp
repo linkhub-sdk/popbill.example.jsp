@@ -15,15 +15,13 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
 
 <%
-  /**
-  * 1건의 세금계산서를 임시저장 합니다.
-  * - 세금계산서 임시저장(Register API) 호출후에는 발행(Issue API)을 호출해야만
-  *   국세청으로 전송됩니다.
-  * - 임시저장과 발행을 한번의 호출로 처리하는 즉시발행(RegistIssue API) 프로세스
-  *   연동을 권장합니다.
-  * - 세금계산서 항목별 정보는 "[전자세금계산서 API 연동매뉴얼] > 4.1. (세금)계산서
-  *   구성"을 참조하시기 바랍니다.
-  */
+  /*
+   * 1건의 세금계산서를 [임시저장]합니다.
+   * - 세금계산서 임시저장(Register API) 호출후에는 발행(Issue API)을 호출해야만 국세청으로 전송됩니다.
+   * - 정발행시 임시저장(Register)과 발행(Issue)을 한번의 호출로 처리하는 즉시발행(RegistIssue API) 프로세스 연동을 권장합니다.
+   * - 역발행시 임시저장(Register)과 역발행요청(Request)을 한번의 호출로 처리하는 즉시요청(RegistRequest API) 프로세스 연동을 권장합니다.
+   * - 세금계산서 항목별 정보는 "[전자세금계산서 API 연동매뉴얼] > 4.1. (세금)계산서구성"을 참조하시기 바랍니다.
+   */
 
   // 팝빌회원 사업자번호
   String testCorpNum = "1234567890";
@@ -33,13 +31,13 @@
 
 
   /***************************************************************************
-  *                               세금계산서 정보
-  ****************************************************************************/
+   *                               세금계산서 정보
+   ****************************************************************************/
   Taxinvoice taxinvoice = new Taxinvoice();
 
 
   // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-  taxinvoice.setWriteDate("20170307");
+  taxinvoice.setWriteDate("20190107");
 
   // 발행유형, {정발행, 역발행, 위수탁} 중 기재
   taxinvoice.setIssueType("정발행");
@@ -58,8 +56,8 @@
 
 
   /***************************************************************************
-  *                               공급자 정보
-  ****************************************************************************/
+   *                               공급자 정보
+   ****************************************************************************/
 
   // 공급자 사업자번호, "-"제외
   taxinvoice.setInvoicerCorpNum("1234567890");
@@ -71,7 +69,7 @@
   taxinvoice.setInvoicerCorpName("공급자 상호");
 
   // 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-  taxinvoice.setInvoicerMgtKey("20170307-03");
+  taxinvoice.setInvoicerMgtKey("20190107-001");
 
   // 공급자 대표자성명
   taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -102,8 +100,8 @@
 
 
   /***************************************************************************
-  *                               공급받는 정보
-  ****************************************************************************/
+   *                               공급받는 정보
+   ****************************************************************************/
 
   // 공급받는자 구분 {사업자 , 개인 , 외국인} 중 기재
   taxinvoice.setInvoiceeType("사업자");
@@ -146,8 +144,8 @@
 
 
   /***************************************************************************
-  *                              세금계산서 기재정보
-  ****************************************************************************/
+   *                              세금계산서 기재정보
+   ****************************************************************************/
 
   // 공급가액 합계
   taxinvoice.setSupplyCostTotal("200000");
@@ -190,10 +188,10 @@
 
 
   /***************************************************************************
-  *                     수정세금계산서 정보 (수정세금계산서 작성시에만 기재
-  * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
-  * - [참고] 수정세금계산서 작성방법 안내 - http://blog.linkhub.co.kr/650
-  ****************************************************************************/
+   *                     수정세금계산서 정보 (수정세금계산서 작성시에만 기재
+   * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
+   * - [참고] 수정세금계산서 작성방법 안내 - http://blog.linkhub.co.kr/650
+   ****************************************************************************/
 
   // 수정세금계산서 작성시 1~6까지 선택기재.
   taxinvoice.setModifyCode(null);
@@ -203,45 +201,44 @@
 
 
   /***************************************************************************
-  *                           상세항목(품목) 정보
-  ****************************************************************************/
+   *                           상세항목(품목) 정보
+   ****************************************************************************/
 
   taxinvoice.setDetailList(new ArrayList<TaxinvoiceDetail>());
 
   TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
-  detail.setSerialNum((short) 1);						 // 일련번호
-  detail.setPurchaseDT("20161128");					 // 거래일자
-  detail.setItemName("품목명1");          // 품목명
-  detail.setSpec("규격");                // 규격
-  detail.setQty("1");									 // 수량
-  detail.setUnitCost("100000");				  // 단가
-  detail.setSupplyCost("100000");				// 공급가액
-  detail.setTax("10000");								// 세액
-  detail.setRemark("품목비고");           // 비고
+  detail.setSerialNum((short) 1); // 일련번호
+  detail.setPurchaseDT("20190107");	// 거래일자
+  detail.setItemName("품목명1"); // 품목명
+  detail.setSpec("규격"); // 규격
+  detail.setQty("1"); // 수량
+  detail.setUnitCost("100000"); // 단가
+  detail.setSupplyCost("100000"); // 공급가액
+  detail.setTax("10000"); // 세액
+  detail.setRemark("품목비고"); // 비고
 
   taxinvoice.getDetailList().add(detail);
 
   detail = new TaxinvoiceDetail();
 
-  detail.setSerialNum((short) 2);						 // 일련번호
-  detail.setPurchaseDT("20161128");					 // 거래일자
+  detail.setSerialNum((short) 2);
+  detail.setPurchaseDT("20190107-001");
   detail.setItemName("품목명2");
   detail.setSpec("규격");
-  detail.setQty("1");									// 수량
-  detail.setUnitCost("100000");						// 단가
-  detail.setSupplyCost("100000");						// 공급가액
-  detail.setTax("10000");								 // 세액
+  detail.setQty("1");
+  detail.setUnitCost("100000");
+  detail.setSupplyCost("100000");
+  detail.setTax("10000");
   detail.setRemark("품목비고");
 
   taxinvoice.getDetailList().add(detail);
 
-
   /***************************************************************************
-  *                             추가담당자 정보
-  * - 세금계산서 발행안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 담당자 정보를 추가하여
-  * 발행안내메일을 다수에게 전송할 수 있습니다.
-  ****************************************************************************/
+   *                             추가담당자 정보
+   * - 세금계산서 발행안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 담당자 정보를 추가하여
+   * 발행안내메일을 다수에게 전송할 수 있습니다.
+   ****************************************************************************/
 
   taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
 
@@ -261,12 +258,12 @@
 
   try {
 
-  	CheckResponse = taxinvoiceService.register(testCorpNum, taxinvoice);
+    CheckResponse = taxinvoiceService.register(testCorpNum, taxinvoice);
 
   } catch (PopbillException pe) {
-  	//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-  	//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-  	throw pe;
+    //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+    //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+    throw pe;
   }
 %>
 	<body>

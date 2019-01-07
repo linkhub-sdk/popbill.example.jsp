@@ -12,22 +12,22 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 세금계산서에 첨부된 파일을 삭제합니다.
-  * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
-  *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
-  */
+	/*
+	 * 세금계산서에 첨부된 파일을 삭제합니다.
+	 * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
+	 *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL : 매출, BUY : 매입, TRUSTEE : 수탁
+	// 세금계산서 유형. SELL : 매출, BUY : 매입, TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-02";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 파일 아이디, 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+	// 파일 아이디, 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
 	String fileID = "3662614B-A90F-4957-991C-E2E4227A15FA.PBF";
 
 	Response CheckResponse = null;
@@ -43,15 +43,15 @@
 	}
 
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>첨부파일 삭제</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>첨부파일 삭제</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

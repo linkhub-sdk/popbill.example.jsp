@@ -12,20 +12,20 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceInfo"%>
 
 <%
-  /**
-  * 1건의 세금계산서 상태/요약 정보를 확인합니다.
-  * - 세금계산서 상태정보(GetInfo API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
-  *   > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
-  */
+	/*
+	 * 1건의 세금계산서 상태/요약 정보를 확인합니다.
+	 * - 세금계산서 상태정보(GetInfo API) 응답항목에 대한 자세한 정보는 "[전자세금계산서 API 연동매뉴얼]
+	 *   > 4.2. (세금)계산서 상태정보 구성" 을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161221-03";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
 	TaxinvoiceInfo taxinvoiceInfo = null;
 
@@ -51,11 +51,11 @@
 						<li>itemKey (세금계산서 아이템키) : <%= taxinvoiceInfo.getItemKey()%></li>
 						<li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
 						<li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
-            <li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
+						<li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
 						<li>taxTotal (세액 합계) : <%= taxinvoiceInfo.getTaxTotal() %></li>
 						<li>regDT (임시저장 일자) : <%= taxinvoiceInfo.getRegDT()%> </li>
 						<li>lateIssueYN (지연발행 여부) : <%= taxinvoiceInfo.getLateIssueYN() %></li>
-            <li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
+						<li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
 
 						<li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
 						<li>invoicerCorpNum (공급자 사업자번호) : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
@@ -66,8 +66,8 @@
 						<li>invoiceeCorpNum (공급받는자 사업자번호) : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
 						<li>invoiceeMgtKey (공급받는자 문서관리번호) : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
 						<li>invoiceePrintYN (공급받는자 인쇄여부) : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
-            <li>closeDownState (공급받는자 휴폐업상태) : <%= taxinvoiceInfo.getCloseDownState() %></li>
-            <li>closeDownStateDate (공급받는자 휴폐업일자) : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
+						<li>closeDownState (공급받는자 휴폐업상태) : <%= taxinvoiceInfo.getCloseDownState() %></li>
+						<li>closeDownStateDate (공급받는자 휴폐업일자) : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
 
 						<li>trusteeCorpName (수탁자 상호) : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 						<li>trusteeCorpNum (수탁자 사업자번호) : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>

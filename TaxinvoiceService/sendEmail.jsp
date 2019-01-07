@@ -12,20 +12,20 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /*
-  * 발행 안내메일을 재전송합니다.
-  */
+	/*
+	 * 세금계싼서 안내 메일을 재전송합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 문서관리번호
-	String mgtKey = "20161130-01";
+	// 세금계산서 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 메일주소
+	// 메일주소
 	String emailAddr = "test@test.com";
 
 	Response CheckResponse = null;
@@ -40,15 +40,15 @@
 		throw pe;
 	}
 %>
-		<div id="content">
-			<p class="heading1">Respones</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>발행안내메일 재전송</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Respones</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>발행안내메일 재전송</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>

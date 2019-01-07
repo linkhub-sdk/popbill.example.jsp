@@ -11,19 +11,19 @@
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
-  /**
-  * 공급받는자 메일링크 URL을 반환합니다.
-  * - 메일링크 URL은 유효시간이 존재하지 않습니다.
-  */
+  /*
+   * 공급받는자 메일링크 URL을 반환합니다.
+   * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+   */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-  // 세금계산서 연동관리번호
-	String mgtKey = "20170307-01";
+	// 세금계산서 연동관리번호
+	String mgtKey = "20190107-001";
 
 	String url = null;
 
@@ -36,16 +36,15 @@
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-
 %>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 메일링크 URL</legend>
-				<ul>
-					<li>url : <%=url%></li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>세금계산서 메일링크 URL</legend>
+			<ul>
+				<li>url : <%=url%></li>
+			</ul>
+		</fieldset>
+	 </div>
 </html>
