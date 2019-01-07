@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 전송요청번호(requestNum)를 할당한 알림톡/친구톡 예약전송건을 취소합니다.
      * - 예약취소는 예약전송시간 10분전까지만 가능합니다.
      */
@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 예약전송 요청시 할당한 전송요청번호
-    String requestNum = "";
+    String requestNum = "20190107-002";
 
     Response CheckResponse = null;
 

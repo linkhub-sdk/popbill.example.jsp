@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.kakao.SenderNumber" %>
 
 <%
-    /**
+    /*
      * 문자 발신번호 목록을 확인합니다.
      */
 

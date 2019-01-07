@@ -12,7 +12,7 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 연동회원의 담당자를 신규로 등록합니다.
      */
 

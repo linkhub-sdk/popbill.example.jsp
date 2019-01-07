@@ -14,7 +14,7 @@
 <%@page import="java.util.List" %>
 
 <%
-    /**
+    /*
      * 전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인한다.
      */
 
@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 전송 요청시 할당한 전송요청번호
-    String requestNum = "";
+    String requestNum = "20190107-001";
 
     KakaoSentInfo kakaoSentInfo = null;
 

@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 카카오톡 전송요청시 발급받은 접수번호(receiptNum)로 예약전송건을 취소합니다.
      * - 예약취소는 예약전송시간 10분전까지만 가능합니다.
      */

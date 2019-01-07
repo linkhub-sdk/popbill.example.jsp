@@ -12,19 +12,19 @@
 <%@page import="com.popbill.api.kakao.KakaoSearchResult" %>
 
 <%
-    /**
+    /*
      * 검색조건을 사용하여 친구톡/알림톡 내역을 조회합니다.
-	   * - 최대 검색기간 : 6개월 이내
+     * - 최대 검색기간 : 6개월 이내
      */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    String SDate = "20180701";
+    String SDate = "20181201";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20180720";
+    String EDate = "20190107";
 
     // 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체, 4-실패, 5-취소]
     String[] State = {"0", "1", "2", "3", "4", "5"};
@@ -50,9 +50,9 @@
     String userID = "testkorea";
 
     // 조회 검색어.
-  	// 카카오톡 전송시 입력한 수신자명 기재.
-  	// 조회 검색어를 포함한 수신자명을 검색합니다.
-  	String QString = "";
+    // 카카오톡 전송시 입력한 수신자명 기재.
+    // 조회 검색어를 포함한 수신자명을 검색합니다.
+    String QString = "";
 
     KakaoSearchResult searchResult = null;
 

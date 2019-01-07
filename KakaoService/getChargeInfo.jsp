@@ -12,7 +12,7 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 연동회원의 친구톡/알림톡 API 서비스 과금정보를 확인합니다.
      */
 

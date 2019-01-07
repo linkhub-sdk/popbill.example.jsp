@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.kakao.KakaoType" %>
 
 <%
-    /**
+    /*
      * 친구톡/알림톡 전송단가를 확인합니다.
      */
 

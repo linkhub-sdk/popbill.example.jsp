@@ -14,7 +14,7 @@
 <%@page import="java.util.List" %>
 
 <%
-    /**
+    /*
      * 카카오톡 전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
      */
 
@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 카카오톡 전송 요청 시 발급받은 접수번호(receiptNum)
-    String receiptNum = "";
+    String receiptNum = "019010716554100001";
 
     KakaoSentInfo kakaoSentInfo = null;
 

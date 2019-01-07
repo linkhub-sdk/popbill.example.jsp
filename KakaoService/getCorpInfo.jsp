@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.CorpInfo" %>
 
 <%
-    /**
+    /*
      * 연동회원의 회사정보를 확인합니다.
      */
 

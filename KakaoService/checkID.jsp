@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 팝빌 회원아이디 중복여부를 확인합니다.
      */
 
