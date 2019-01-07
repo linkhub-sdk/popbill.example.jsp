@@ -11,17 +11,17 @@
 <%@page import="com.popbill.api.cashbill.CashbillLog"%>
 
 <%
-	/**
-  * 현금영수증 상태변경 이력을 확인합니다.
-  * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는 "[현금영수증 API 연동매뉴얼]
-  * > 3.4.4 상태 변경이력 확인" 을 참조하시기 바랍니다.
-  */
+	/*
+	 * 현금영수증 상태 변경이력을 확인합니다.
+	 * - 상태 변경이력 확인(GetLogs API) 응답항목에 대한 자세한 정보는
+	 *   "[현금영수증 API 연동매뉴얼] > 3.3.5 상태 변경이력 확인" 을 참조하시기 바랍니다.
+	 */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서관리번호
-	String mgtKey = "20161130-01";
+	String mgtKey = "20190107-001";
 
 	CashbillLog[] cashbillLogs = null;
 
@@ -47,16 +47,16 @@
 						for ( int i = 0; i < cashbillLogs.length; i++ ) {
 							cashbillLog = cashbillLogs[i];
 				  %>
-  				<fieldset class="fieldset2">
-  					<ul>
-  						<li>docLogType : <%= cashbillLog.getDocLogType()%></li>
-  						<li>log : <%= cashbillLog.getLog() %> </li>
-  						<li>procType : <%=cashbillLog.getProcType() %></li>
-  						<li>procMemo : <%=cashbillLog.getProcMemo() %></li>
-  						<li>regDT : <%=cashbillLog.getRegDT() %></li>
-  						<li>ip : <%=cashbillLog.getIp() %></li>
-  					</ul>
-  				</fieldset>
+				<fieldset class="fieldset2">
+					<ul>
+						<li>docLogType (로그타입) : <%= cashbillLog.getDocLogType()%></li>
+						<li>log (이력정보): <%= cashbillLog.getLog() %> </li>
+						<li>procType (처리형태) : <%=cashbillLog.getProcType() %></li>
+						<li>procMemo (처리메모) : <%=cashbillLog.getProcMemo() %></li>
+						<li>regDT (등록일시) : <%=cashbillLog.getRegDT() %></li>
+						<li>ip (아이피) : <%=cashbillLog.getIp() %></li>
+					</ul>
+				</fieldset>
   				<%
   					}
   				%>

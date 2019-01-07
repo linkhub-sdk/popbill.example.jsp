@@ -11,17 +11,17 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/**
-  * 발행 안내메일을 재전송합니다.
-  */
+	/*
+	 * 현금영수증 안내메일을 재전송합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 현금영수증 문서관리번호
-	String mgtKey = "20170307-01";
+	// 현금영수증 문서관리번호
+	String mgtKey = "20190107-001";
 
-  // 수신메일주소
+	// 수신메일주소
 	String receiver = "test@test.com";
 
 	Response CheckResponse = null;

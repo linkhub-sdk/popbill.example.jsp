@@ -10,16 +10,16 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/**
-  * 현금영수증 인쇄(공급받는자) URL을 반환합니다.
-  * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
-  */
+	/*
+	 * 현금영수증 인쇄(공급받는자) URL을 반환합니다.
+	 * - URL 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 현금영수증 문서관리번호
-	String mgtKey = "20170307-01";
+	// 현금영수증 문서관리번호
+	String mgtKey = "20190107-001";
 
 	String url = null;
 

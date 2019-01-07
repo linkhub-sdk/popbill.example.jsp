@@ -10,16 +10,16 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-	/**
-  * 공급받는자 메일링크 URL을 반환합니다.
-  * - 메일링크 URL은 유효시간이 존재하지 않습니다.
-  */
+	/*
+	 * 공급받는자 메일링크 URL을 반환합니다.
+	 * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 현금영수증 문서관리번호
-	String mgtKey = "20170307-01";
+	// 현금영수증 문서관리번호
+	String mgtKey = "20190107-001";
 
 	String url = null;
 

@@ -11,17 +11,16 @@
 <%@page import="com.popbill.api.cashbill.Cashbill" %>
 
 <%
-	/**
+	/*
 	 * 현금영수증 1건의 상세정보를 조회합니다.
-	 * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1.현금영수증 구성" 을
-	 *   참조하시기 바랍니다.
+	 * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.1. 현금영수증 구성" 을 참조하시기 바랍니다.
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서관리번호
-	String mgtKey = "20170316-02";
+	String mgtKey = "20190107-001";
 
 	Cashbill cashbill = null;
 

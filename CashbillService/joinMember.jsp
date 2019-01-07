@@ -12,55 +12,55 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 파트너의 연동회원으로 회원가입을 요청합니다.
-  */
+	/*
+	 * 파트너의 연동회원으로 회원가입을 요청합니다.
+	 */
 
-  JoinForm joinInfo = new JoinForm();
+	JoinForm joinInfo = new JoinForm();
 
-  // 링크아이디
-  joinInfo.setLinkID("TESTER");
+	// 링크아이디
+	joinInfo.setLinkID("TESTER");
 
-  // 사업자번호 "-" 제외
-  joinInfo.setCorpNum("0000000011");
+	// 사업자번호 "-" 제외
+	joinInfo.setCorpNum("0000000011");
 
-  // 대표자명
-  joinInfo.setCEOName("대표자성명");
+	// 대표자명
+	joinInfo.setCEOName("대표자성명");
 
-  // 상호
-  joinInfo.setCorpName("상호");
+	// 상호
+	joinInfo.setCorpName("상호");
 
-  // 주소
-  joinInfo.setAddr("주소");
+	// 주소
+	joinInfo.setAddr("주소");
 
-  // 업태
-  joinInfo.setBizType("업태");
+	// 업태
+	joinInfo.setBizType("업태");
 
-  // 종목
-  joinInfo.setBizClass("종목");
+	// 종목
+	joinInfo.setBizClass("종목");
 
-  // 아이디, 최대 20자
-  joinInfo.setID("testkorea_11303");
+	// 아이디, 최대 20자
+	joinInfo.setID("testkorea_11303");
 
-  // 비밀번호, 최대 20자
-  joinInfo.setPWD("12345678");
+	// 비밀번호, 최대 20자
+	joinInfo.setPWD("12345678");
 
-  // 담당자명
-  joinInfo.setContactName("담당자명");
+	// 담당자명
+	joinInfo.setContactName("담당자명");
 
-  // 담당자 연락처
-  joinInfo.setContactTEL("02-999-9999");
+	// 담당자 연락처
+	joinInfo.setContactTEL("02-999-9999");
 
-  // 담당자 휴대폰번호
-  joinInfo.setContactHP("010-000-1234");
+	// 담당자 휴대폰번호
+	joinInfo.setContactHP("010-000-1234");
 
-  // 담당자 팩스번호
-  joinInfo.setContactFAX("02-999-9999");
+	// 담당자 팩스번호
+	joinInfo.setContactFAX("02-999-9999");
 
-  // 담당자 메일주소
-  joinInfo.setContactEmail("test@test.co.kr");
+	// 담당자 메일주소
+	joinInfo.setContactEmail("test@test.co.kr");
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 

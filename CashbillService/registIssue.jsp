@@ -12,109 +12,108 @@
 <%@page import="com.popbill.api.cashbill.Cashbill"%>
 
 <%
-  /**
-  * 1건의 현금영수증을 즉시발행합니다.
-  * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
-  * - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.4. 국세청 전송정책"
-  *   을 참조하시기 바랍니다.
-  * - 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
-  */
+    /*
+     * 1건의 현금영수증을 [즉시발행]합니다.
+     * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
+     * - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.3. 국세청 전송정책"을 참조하시기 바랍니다.
+     * - 취소현금영수증 작성방법 안내 - http://blog.linkhub.co.kr/702
+     */
 
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
-  String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호, '-'제외 10자리
+    String testCorpNum = "1234567890";
 
-  // 메모
-  String memo = "발행 메모";
+    // 메모
+    String memo = "발행 메모";
 
-  // 현금영수증 정보 객체
-  Cashbill cashbill = new Cashbill();
+    // 현금영수증 정보 객체
+    Cashbill cashbill = new Cashbill();
 
-  // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-  cashbill.setMgtKey("20170717-01");
+    // 현금영수증 문서관리번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    cashbill.setMgtKey("20190107-001");
 
-  // 문서형태, {승인거래, 취소거래} 중 기재
-  cashbill.setTradeType("승인거래");
+    // 문서형태, {승인거래, 취소거래} 중 기재
+    cashbill.setTradeType("승인거래");
 
-  // [취소거래 시 필수] 원본 현금영수증 승인번호
-  cashbill.setOrgConfirmNum("");
+    // [취소거래 시 필수] 원본 현금영수증 승인번호
+    cashbill.setOrgConfirmNum("");
 
-  // [취소거래 시 필수] 원본 현금영수증 거래일자
-  cashbill.setOrgTradeDate("");
+    // [취소거래 시 필수] 원본 현금영수증 거래일자
+    cashbill.setOrgTradeDate("");
 
-  // 거래구분, {소득공제용, 지출증빙용} 중 기재
-  cashbill.setTradeUsage("소득공제용");
+    // 거래구분, {소득공제용, 지출증빙용} 중 기재
+    cashbill.setTradeUsage("소득공제용");
 
-  // 거래유형, {일반, 도서, 대중교통} 중 기재
-  cashbill.setTradeOpt("일반");
+    // 거래유형, {일반, 도서, 대중교통} 중 기재
+    cashbill.setTradeOpt("일반");
 
-  //거래처 식별번호, 거래구분에 따라 작성
-  //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
-  //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
-  cashbill.setIdentityNum("0101112222");
+    //거래처 식별번호, 거래구분에 따라 작성
+    //소득공제용 - 주민등록/휴대폰/카드번호 기재가능
+    //지출증빙용 - 사업자번호/주민등록/휴대폰/카드번호 기재가능
+    cashbill.setIdentityNum("0101112222");
 
-  // 과세형태, {과세, 비과세} 중 기재
-  cashbill.setTaxationType("과세");
+    // 과세형태, {과세, 비과세} 중 기재
+    cashbill.setTaxationType("과세");
 
-  // 공급가액, 숫자만 가능
-  cashbill.setSupplyCost("10000");
+    // 공급가액, 숫자만 가능
+    cashbill.setSupplyCost("10000");
 
-  // 부가세, 숫자만 가능
-  cashbill.setTax("1000");
+    // 부가세, 숫자만 가능
+    cashbill.setTax("1000");
 
-  // 봉사료, 숫자만 가능
-  cashbill.setServiceFee("0");
+    // 봉사료, 숫자만 가능
+    cashbill.setServiceFee("0");
 
-  // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 부가세
-  cashbill.setTotalAmount("11000");
-  
-  // 가맹점 사업자번호, '-'제외 10자리
-  cashbill.setFranchiseCorpNum("1234567890");
+    // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 부가세
+    cashbill.setTotalAmount("11000");
 
-  // 가맹점 상호
-  cashbill.setFranchiseCorpName("가맹점 상호");
+    // 가맹점 사업자번호, '-'제외 10자리
+    cashbill.setFranchiseCorpNum("1234567890");
 
-  // 가맹점 대표자성명
-  cashbill.setFranchiseCEOName("가맹점 대표자");
+    // 가맹점 상호
+    cashbill.setFranchiseCorpName("가맹점 상호");
 
-  // 가맹점 주소
-  cashbill.setFranchiseAddr("가맹점 주소");
+    // 가맹점 대표자성명
+    cashbill.setFranchiseCEOName("가맹점 대표자");
 
-  // 가맹점 연락처
-  cashbill.setFranchiseTEL("07043042991");
+    // 가맹점 주소
+    cashbill.setFranchiseAddr("가맹점 주소");
 
-  // 발행시 안내문자 전송여부
-  cashbill.setSmssendYN(false);
+    // 가맹점 연락처
+    cashbill.setFranchiseTEL("07043042991");
 
-  // 거래처 주문자명
-  cashbill.setCustomerName("주문자명");
+    // 발행시 안내문자 전송여부
+    cashbill.setSmssendYN(false);
 
-  // 거래처 주문상품명
-  cashbill.setItemName("주문상품명");
+    // 거래처 주문자명
+    cashbill.setCustomerName("주문자명");
 
-  // 거래처 주문번호
-  cashbill.setOrderNumber("주문번호");
+    // 거래처 주문상품명
+    cashbill.setItemName("주문상품명");
 
-  // 거래처 이메일
-  cashbill.setEmail("test@test.com");
+    // 거래처 주문번호
+    cashbill.setOrderNumber("주문번호");
 
-  // 거래처 휴대폰
-  cashbill.setHp("010111222");
+    // 거래처 이메일
+    cashbill.setEmail("test@test.com");
 
-  // 거래처 팩스
-  cashbill.setFax("070111222");
+    // 거래처 휴대폰
+    cashbill.setHp("010111222");
 
-  Response CheckResponse = null;
+    // 거래처 팩스
+    cashbill.setFax("070111222");
 
-	try {
+    Response CheckResponse = null;
 
-		CheckResponse = cashbillService.registIssue(testCorpNum, cashbill, memo);
+    try {
 
-	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-		throw pe;
-	}
+        CheckResponse = cashbillService.registIssue(testCorpNum, cashbill, memo);
+
+    } catch (PopbillException pe) {
+        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        throw pe;
+    }
 %>
 	<body>
 		<div id="content">

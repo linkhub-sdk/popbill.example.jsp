@@ -11,24 +11,24 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-/**
-* 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정한다.
-*
-* 메일전송유형
-* CSH_ISSUE : 고객에게 현금영수증이 발행 되었음을 알려주는 메일 입니다.
-* CSH_CANCELISSUE : 고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 입니다.
-*/
+	/*
+	 * 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정한다.
+	 *
+	 * 메일전송유형
+	 * CSH_ISSUE : 고객에게 현금영수증이 발행 되었음을 알려주는 메일 입니다.
+	 * CSH_CANCELISSUE : 고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 입니다.
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 메일 전송 유형
-  String emailType = "CSH_ISSUE";
+	// 메일 전송 유형
+	String emailType = "CSH_ISSUE";
 
-  // 전송 여부 (true = 전송, false = 미전송)
-  Boolean sendYN = true;
+	// 전송 여부 (true = 전송, false = 미전송)
+	Boolean sendYN = true;
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 
