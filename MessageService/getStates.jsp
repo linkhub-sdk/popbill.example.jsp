@@ -11,15 +11,15 @@
 <%@page import="com.popbill.api.message.MessageBriefInfo"%>
 
 <%
-  /**
-  * 문자전송요청에 대한 전송결과를 확인합니다.
-  */
+	/*
+	 * 문자전송요청에 대한 전송결과를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호, '-'제외 10자리
+	// 팝빌회원 사업자번호, '-'제외 10자리
 	String testCorpNum = "1234567890";
 
-  // 문자전송 요청 시 발급받은 접수번호 배열(receiptNum)
-  String[] ReceiptNumList = new String[] {"017071416000000002"};
+	// 문자전송 요청 시 발급받은 접수번호 배열(receiptNum)
+	String[] ReceiptNumList = new String[] {"019010716000000003"};
 
 	MessageBriefInfo[] messageBriefInfos = null;
 

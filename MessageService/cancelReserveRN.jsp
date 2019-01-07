@@ -11,17 +11,16 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 문자전송요청시 할당한 전송요청번호(requestNum)로
-  * 예약문자 전송을 취소합니다.
-  * - 예약취소는 예약전송시간 10분전까지만 가능합니다.
-  */
+	/*
+	 * 문자전송요청시 할당한 전송요청번호(requestNum)로 전송상태를 확인합니다
+	 * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] > 3.3.2. GetMessagesRN (전송내역 확인 - 요청번호 할당)을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 예약문자전송 요청시 할당한 전송요청번호
-	String requestNum = "";
+	// 예약문자전송 요청시 할당한 전송요청번호
+	String requestNum = "20190107-002";
 
 	Response CheckResponse = null;
 

@@ -12,36 +12,36 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
+	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-  // 발신번호
+	// 발신번호
 	String sender = "07043042991";
 
-  // 수신번호
+	// 수신번호
 	String receiver = "010111222";
 
-  // 수신자명
+	// 수신자명
 	String receiverName = "수신자명";
 
-  // 메시지 제목
+	// 메시지 제목
 	String subject = "장문 문자 메시지 제목";
 
-  // 메시지 내용, 90Byte를 기준으로 단문과 장문을 자동 인식하여 전송됨
+	// 메시지 내용, 90Byte를 기준으로 단문과 장문을 자동 인식하여 전송됨
 	String content = "문자메시지 내용";
 
-  // 광고문자 전송여부
+	// 광고문자 전송여부
 	Boolean adsYN = false;
 
-  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 	Date reserveDT = null;
-  //	예약전송시 아래의 코드 참조
-  //	String reserveDTtxt ="20141229180000";
-  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-  //	reserveDT = formatter.parse(reserveDTtxt);
+	//	예약전송시 아래의 코드 참조
+	//	String reserveDTtxt ="20141229180000";
+	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	//	reserveDT = formatter.parse(reserveDTtxt);
 
 	// 전송요청번호
 	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
@@ -53,7 +53,7 @@
 	try {
 
 		receiptNum = messageService.sendXMS(testCorpNum, sender, receiver, receiverName,
-      subject, content, reserveDT, adsYN, testUserID, requestNum);
+				subject, content, reserveDT, adsYN, testUserID, requestNum);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -13,38 +13,38 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
+	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-  // 발신번호
+	// 발신번호
 	String sender = "07043042991";
 
-  // 수신번호
+	// 수신번호
 	String receiver = "010111222";
 
-  // 수신자명
+	// 수신자명
 	String receiverName = "수신자명";
 
-  // 메시지 제목
+	// 메시지 제목
 	String subject = "멀티 문자메시지 제목";
 
-  // 메시지 내용
+	// 메시지 내용
 	String content = "멀티 문자메시지 내용";
 
-  // 첨부 이미지 파일스트림
+	// 첨부 이미지 파일스트림
 	File file = new File((application.getRealPath("/resources/test.jpg")));
 
-  // 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송
+	// 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송
 	Date reserveDT = null;
-  //	예약전송시 아래의 코드 참조
-  //	String reserveDTtxt ="20141229180000";
-  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-  //	reserveDT = formatter.parse(reserveDTtxt);
+	//	예약전송시 아래의 코드 참조
+	//	String reserveDTtxt ="20141229180000";
+	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	//	reserveDT = formatter.parse(reserveDTtxt);
 
-  // 광고문자 전송여부
+	// 광고문자 전송여부
 	Boolean adsYN = false;
 
 	// 전송요청번호
@@ -57,7 +57,7 @@
 	try {
 
 		receiptNum = messageService.sendMMS(testCorpNum, sender, receiver, receiverName,
-      subject, content, file, reserveDT, adsYN, testUserID, requestNum);
+				subject, content, file, reserveDT, adsYN, testUserID, requestNum);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

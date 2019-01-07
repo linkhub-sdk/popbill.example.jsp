@@ -11,14 +11,14 @@
 <%@page import="com.popbill.api.message.MessageType"%>
 
 <%
-  /**
-  * 문자메시지 전송단가를 확인합니다.
-  */
+	/*
+	 * 문자메시지 전송단가를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 문자전송 유형. SMS(단문), LMS(장문), MMS(포토)
+	// 문자전송 유형. SMS(단문), LMS(장문), MMS(포토)
 	MessageType msgType = MessageType.MMS;
 
 	float unitCost;

@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.message.SenderNumber"%>
 
 <%
-  /**
-  * 문자 발신번호 목록을 확인합니다.
-  */
+	/*
+	 * 문자 발신번호 목록을 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	SenderNumber[] senderNumberList = null;
@@ -44,8 +44,8 @@
 					<legend>발신번호 정보[<%=i+1%>/<%=senderNumberList.length%>]</legend>
 						<ul>
 							<li>number (발신번호) : <%= info.getNumber() %></li>
-              <li>representYN (대표번호 지정여부) : <%= info.getRepresentYN() %></li>
-              <li>state (등록상태) : <%= info.getState() %></li>
+							<li>representYN (대표번호 지정여부) : <%= info.getRepresentYN() %></li>
+							<li>state (등록상태) : <%= info.getState() %></li>
 						</ul>
 				</fieldset>
 					<%

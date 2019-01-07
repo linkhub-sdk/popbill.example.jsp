@@ -12,15 +12,15 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 문자 API 서비스 과금정보를 확인합니다.
-  */
+	/*
+	 * 연동회원의 문자 API 서비스 과금정보를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 문자메시지 유형. SMS(단문), LMS(장문), MMS(포토)
-  MessageType msgType = MessageType.LMS;
+	// 문자메시지 유형. SMS(단문), LMS(장문), MMS(포토)
+	MessageType msgType = MessageType.LMS;
 
 	ChargeInfo chargeInfo = null;
 

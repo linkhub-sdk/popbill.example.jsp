@@ -12,32 +12,32 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
+	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-  // 발신번호
+	// 발신번호
 	String sender = "07043042991";
 
-  // 수신번호
+	// 수신번호
 	String receiver = "010111222";
 
-  // 수신자명
-  String receiverName = "수신자명";
+	// 수신자명
+	String receiverName = "수신자명";
 
-  // 메시지 내용, 90Byte초과된 내용은 길이가 조정되어 전송됨
+	// 메시지 내용, 90Byte초과된 내용은 길이가 조정되어 전송됨
 	String content = "문자메세지 테스트1";
 
-  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 	Date reserveDT = null;
-  //	예약전송시 아래의 코드 참조
-  //	String reserveDTtxt ="20141230190000";
-  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-  //	reserveDT = formatter.parse(reserveDTtxt);
+	//	예약전송시 아래의 코드 참조
+	//	String reserveDTtxt ="20141230190000";
+	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	//	reserveDT = formatter.parse(reserveDTtxt);
 
-  // 광고문자 전송여부
+	// 광고문자 전송여부
 	Boolean adsYN = false;
 
 	// 전송요청번호

@@ -12,39 +12,39 @@
 <%@page import="com.popbill.api.message.MSGSearchResult"%>
 
 <%
-  /**
-  * 검색조건을 사용하여 문자전송 내역을 조회합니다.
-	* - 최대 검색기간 : 6개월 이내
-  */
+	/*
+	 * 검색조건을 사용하여 문자전송 내역을 조회합니다.
+	 * - 최대 검색기간 : 6개월 이내
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum= "1234567890";
 
-  // 시작일자, 날짜형태(yyyyMMdd)
-	String SDate = "20180701";
+	// 시작일자, 날짜형태(yyyyMMdd)
+	String SDate = "20181201";
 
-  // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20180720";
+	// 종료일자, 날짜형식(yyyyMMdd)
+	String EDate = "20190107";
 
-  // 문자 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
+	// 문자 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
 
-  // 문자 전송여형 배열, SMS-단문, LMS-장문, MMS-포토
+	// 문자 전송여형 배열, SMS-단문, LMS-장문, MMS-포토
 	String[] Item = {"SMS", "LMS", "MMS"};
 
-  // 예약전송 여부, true-예약전송조회, false-전체조회
+	// 예약전송 여부, true-예약전송조회, false-전체조회
 	Boolean ReserveYN = false;
 
-  // 개인조회 여부, true-개인조회, false-전체조회
+	// 개인조회 여부, true-개인조회, false-전체조회
 	Boolean SenderYN = false;
 
-  // 페이지 번호
+	// 페이지 번호
 	int Page = 1;
 
-  // 페이지당 검색개수, 최대 1000개
+	// 페이지당 검색개수, 최대 1000개
 	int PerPage = 20;
 
-  // 정렬방향, A-오름차순, D-내림차순
+	// 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
 	// 조회 검색어.
@@ -57,7 +57,7 @@
 	try {
 
 		searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item,
-      ReserveYN, SenderYN, Page, PerPage, Order, QString);
+				ReserveYN, SenderYN, Page, PerPage, Order, QString);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -89,17 +89,17 @@
 				<fieldset class="fieldset2">
 					<legend>SentMessage : [ <%=i+1%> / <%=searchResult.getList().size() %> ]</legend>
 					<ul>
-            <li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
-            <li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
+						<li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
+						<li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
 						<li>subject (메시지 제목) : <%=sentMsg.getSubject()%></li>
 						<li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
 						<li>content (메시지 내용) : <%=sentMsg.getContent()%></li>
 						<li>sendNum (발신번호) : <%=sentMsg.getSendNum()%></li>
 						<li>senderName (발신자명) : <%=sentMsg.getSenderName()%></li>
-            <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
+						<li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
 						<li>receiptDT (접수일시) : <%=sentMsg.getReceiptDT()%></li>
-            <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
+						<li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
 						<li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
 						<li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
 						<li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>

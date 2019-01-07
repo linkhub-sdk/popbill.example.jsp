@@ -11,17 +11,16 @@
 <%@page import="com.popbill.api.message.SentMessage"%>
 
 <%
-  /**
-	* 문자전송요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다
-  * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] >
-  * 3.3.1. GetMessages (전송내역 확인)을 참조하시기 바랍니다.
-  */
+	/*
+	 * 문자전송요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다
+	 * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] >  3.3.1. GetMessages (전송내역 확인)을 참조하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 문자전송 접수번호
-	String receiptNum = "";
+	// 문자전송 접수번호
+	String receiptNum = "019010716000000003";
 
 	SentMessage[] sentMessages = null;
 
@@ -50,16 +49,16 @@
 					<legend>SentMessage : <%=i+1%></legend>
 					<ul>
 						<li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
-            <li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
+						<li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
 						<li>subject (메시지 제목) : <%=sentMsg.getSubject()%></li>
 						<li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
 						<li>content (메시지 내용) : <%=sentMsg.getContent()%></li>
 						<li>sendNum (발신번호) : <%=sentMsg.getSendNum()%></li>
 						<li>sendName (발신자명) : <%=sentMsg.getSenderName()%></li>
-            <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
+						<li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
 						<li>receiptDT (접수일시) : <%=sentMsg.getReceiptDT()%></li>
-            <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
+						<li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
 						<li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
 						<li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
 						<li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
