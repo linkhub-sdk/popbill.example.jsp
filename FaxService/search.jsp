@@ -12,36 +12,36 @@
 <%@page import="com.popbill.api.fax.FAXSearchResult"%>
 
 <%
-  /**
-  * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
-	* - 최대 검색기간 : 6개월 이내
-  */
+	/*
+	 * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
+	 * - 최대 검색기간 : 6개월 이내
+	 */
 
-  // 펍발회원 사업자번호
+	// 펍발회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20180920";
+	// 시작일자, 날짜형식(yyyyMMdd)
+	String SDate = "20181201";
 
-  // 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20181001";
+	// 종료일자, 날짜형식(yyyyMMdd)
+	String EDate = "20190107";
 
-  // 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
+	// 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};
 
-  // 예약여부, true-예약전송건검색, false-전체조회
+	// 예약여부, true-예약전송건검색, false-전체조회
 	Boolean ReserveYN = false;
 
-  // 개인조회여부, true-개인조회, false-전체조회
+	// 개인조회여부, true-개인조회, false-전체조회
 	Boolean SenderOnlyYN = false;
 
-  // 페이지번호
+	// 페이지번호
 	int Page = 1;
 
-  // 페이지당 검색개수, 최대 1000건
+	// 페이지당 검색개수, 최대 1000건
 	int PerPage = 10;
 
-  // 정렬방향, A-오름차순, D-내림차순
+	// 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
 	// 조회 검색어.
@@ -54,7 +54,7 @@
 	try {
 
 		searchResult = faxService.search(testCorpNum, SDate, EDate, State, ReserveYN,
-      SenderOnlyYN, Page, PerPage, Order, QString);
+				SenderOnlyYN, Page, PerPage, Order, QString);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

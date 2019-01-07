@@ -12,40 +12,40 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 담당자를 신규로 등록합니다.
-  */
+	/*
+	 * 연동회원의 담당자를 신규로 등록합니다.
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  ContactInfo contactInfo = new ContactInfo();
+	ContactInfo contactInfo = new ContactInfo();
 
-  // 담당자 아이디, 최대 20자
-  contactInfo.setId("testkorea");
+	// 담당자 아이디, 최대 20자
+	contactInfo.setId("testkorea");
 
-  // 비밀번호, 최대 20자
-  contactInfo.setPwd("this_is_password");
+	// 비밀번호, 최대 20자
+	contactInfo.setPwd("this_is_password");
 
-  // 담당자명 (최대 30자)
-  contactInfo.setPersonName("담당자");
+	// 담당자명 (최대 30자)
+	contactInfo.setPersonName("담당자");
 
-  // 담당자 연락처 (최대 20자)
-  contactInfo.setTel("02-1234-1234");
+	// 담당자 연락처 (최대 20자)
+	contactInfo.setTel("02-1234-1234");
 
-  // 담당자 휴대폰번호 (최대 20자)
-  contactInfo.setHp("010-1234-1234");
+	// 담당자 휴대폰번호 (최대 20자)
+	contactInfo.setHp("010-1234-1234");
 
-  // 담당자 팩스번호 (최대 20자)
-  contactInfo.setFax("070-1234-1234");
+	// 담당자 팩스번호 (최대 20자)
+	contactInfo.setFax("070-1234-1234");
 
-  // 담당자 이메일 (최대 70자)
-  contactInfo.setEmail("test@test.com");
+	// 담당자 이메일 (최대 70자)
+	contactInfo.setEmail("test@test.com");
 
-  // 회사조회 권한여부, true-회사조회, false-개인조회
-  contactInfo.setSearchAllAllowYN(true);
+	// 회사조회 권한여부, true-회사조회, false-개인조회
+	contactInfo.setSearchAllAllowYN(true);
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 

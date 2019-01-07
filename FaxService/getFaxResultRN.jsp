@@ -11,17 +11,16 @@
 <%@page import="com.popbill.api.fax.FaxResult"%>
 
 <%
-	/**
+	/*
 	 * 팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다
-	 * - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.2
-	 *   GetFaxDetailRN (전송내역 및 전송상태 확인 - 요청번호 할당)을 참조하시기 바랍니다.
+	 * - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.2 GetFaxDetailRN (전송내역 및 전송상태 확인 - 요청번호 할당)을 참조하시기 바랍니다.
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 팩스전송 요청시 할당한 전송요청번호
-	String requestNum = "20181001144926";
+	String requestNum = "20190107-001";
 
 	FaxResult[] faxResults = null;
 

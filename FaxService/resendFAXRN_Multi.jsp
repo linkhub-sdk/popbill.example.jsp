@@ -12,48 +12,48 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-	* 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
-	* - 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
-  */
+	/*
+	 * 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
+	 * - 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-  String testUserID = "testkorea";
+	// 팝빌회원 아이디
+	String testUserID = "testkorea";
 
-  // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-  String originalFAXrequestNum = "";
+	// 원본 팩스 전송시 할당한 전송요청번호(requestNum)
+	String originalFAXrequestNum = "";
 
-  // 발신번호
-  String sendNum = "07040342991";
+	// 발신번호
+	String sendNum = "07040342991";
 
-  // 발신자명
-  String senderName = "발신자명";
+	// 발신자명
+	String senderName = "발신자명";
 
-  // 수신전송정보가 기존전송정보와 동일한경우 아래의 코드 참조
-  Receiver[] receivers = null;
-
-
-  // 수신전송정보가 기존전송정보와 다른경우 아래의 코드 참조
-	// 수신정보
-	// Receiver receiver1 = new Receiver();
-	// receiver1.setReceiveName("수신자1");
-	// receiver1.setReceiveNum("070111222");
-  //
-	// Receiver receiver2 = new Receiver();
-	// receiver2.setReceiveName("수신자2");
-	// receiver2.setReceiveNum("070222333");
-
-  // 팩스 수신자 번호 목록, 최대 1000개
-	//Receiver[] receivers = new Receiver[] {receiver1, receiver2};
+	// 수신전송정보가 기존전송정보와 동일한경우 아래의 코드 참조
+	Receiver[] receivers = null;
 
 
-  // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-  //	String reserveDTtxt = "20141229180000";
-  //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-  //	reserveDT = formatter.parse(reserveDTtxt);
+	//팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1000건)
+	//Receiver[] receivers = new Receiver[2];
+
+	//Receiver receiver1 = new Receiver();
+	//receiver1.setReceiveName("수신자1");		// 수신자명
+	//receiver1.setReceiveNum("010111222");	// 수신팩스번호
+	//receivers[0] = receiver1;
+
+	//Receiver receiver2 = new Receiver();
+	//receiver2.setReceiveName("수신자2");		// 수신자명
+	//receiver2.setReceiveNum("010333444");	// 수신팩스번호
+	//receivers[1] = receiver1;
+
+
+	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+	//	String reserveDTtxt = "20141229180000";
+	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	//	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
   // 팩스전송 제목

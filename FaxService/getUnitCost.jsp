@@ -10,11 +10,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팩스 전송단가를 확인합니다.
-  */
+	/*
+	 * 팩스 전송단가를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	float unitCost;
