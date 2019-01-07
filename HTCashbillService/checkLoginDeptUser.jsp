@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌에 등록된 현금영수증 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
-  */
+	/*
+	 * 팝빌에 등록된 현금영수증 부서사용자 계정정보를 이용하여 홈택스 로그인을 테스트한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
@@ -37,7 +37,7 @@
 			<fieldset class="fieldset1">
 				<legend>부서사용자 로그인 테스트</legend>
 				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
+					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 		  </fieldset>

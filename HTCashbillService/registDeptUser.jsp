@@ -11,18 +11,18 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 홈택스 현금영수증 부서사용자 계정을 등록한다.
-  */
+	/*
+	 * 홈택스 현금영수증 부서사용자 계정을 등록한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 홈택스에서 생성한 현금영수증 부서사용자 아이디
-  String deptUserID = "userid";
+	// 홈택스에서 생성한 현금영수증 부서사용자 아이디
+	String deptUserID = "userid";
 
-  // 홈택스에서 생성한 현금영수증 부서사용자 비밀번호
-  String deptUserPWD = "passwd";
+	// 홈택스에서 생성한 현금영수증 부서사용자 비밀번호
+	String deptUserPWD = "passwd";
 
 	Response CheckResponse = null;
 
@@ -43,7 +43,7 @@
 			<fieldset class="fieldset1">
 				<legend>부서사용자 계정등록</legend>
 				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
+					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 		  </fieldset>

@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌에 등록된 공인인증서의 홈택스 로그인을 테스트한다.
-  */
+	/*
+	 * 팝빌에 등록된 공인인증서의 홈택스 로그인을 테스트한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
@@ -31,16 +31,16 @@
 	}
 %>
 	<body>
-		<div id="content">
-			<p class="heading1">Response </p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>홈택스 공인인증서 로그인 테스트</legend>
-				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-		  </fieldset>
-		</div>
+	<div id="content">
+		<p class="heading1">Response </p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>홈택스 공인인증서 로그인 테스트</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	</div>
 	</body>
 </html>

@@ -10,7 +10,7 @@ htCashbillService<%@ page language="java" contentType="text/html; charset=UTF-8"
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /**
+    /*
      * 팝빌 연동회원 포인트충전 팝업 URL을 반환합니다.
      * - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
      */
@@ -40,8 +40,7 @@ htCashbillService<%@ page language="java" contentType="text/html; charset=UTF-8"
     <fieldset class="fieldset1">
         <legend>팝빌 연동회원 포인트충전 팝업 URL 확인</legend>
         <ul>
-            <li>URL : <%=url%>
-            </li>
+            <li>URL : <%=url%></li>
         </ul>
     </fieldset>
 </div>

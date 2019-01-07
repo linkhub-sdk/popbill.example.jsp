@@ -11,25 +11,25 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 검색조건을 사용하여 수집 결과 요약정보를 조회합니다.
-  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
-  *   > 3.3.2. Summary (수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
-  */
+	/*
+	 * 현금영수증 매입/매출 내역의 수집 결과 요약정보를 조회합니다.
+	 * - 응답항목에 관한 정보는 "[홈택스연동 (현금영수증) API 연동매뉴얼] >
+	 *   3.2.2. Summary(수집 결과 요약정보 조회)" 을 참고하시기 바랍니다.
+	 */
 
-  // 팝빌회원 사업자번호
-  String testCorpNum = "1234567890";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 수집 요청시 발급받은 작업아이디
-  String jobID = "016120111000000001";
+	// 수집 요청시 발급받은 작업아이디
+	String jobID = "016120111000000001";
 
-  // 거래용도 배열, P-소득공제용, C-지출증빙용
-  String[] TradeUsage = {"P", "C"};
+	// 거래용도 배열, P-소득공제용, C-지출증빙용
+	String[] TradeUsage = {"P", "C"};
 
-  // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
-  String[] TradeType = {"N", "C"};
+	// 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
+	String[] TradeType = {"N", "C"};
 
-  HTCashbillSummary result = null;
+	HTCashbillSummary result = null;
 
 	try {
 
@@ -42,19 +42,19 @@
 	}
 %>
 	<body>
-		<div id="content">
-			<p class="heading1">Response </p>
-			<br/>
-			<fieldset class="fieldset1">
-        <legend>수집 결과 요약정보 조회</legend>
-        <ul>
-          <li>count (수집 결과 건수) : <%= result.getCount() %></li>
-          <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
-          <li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
-          <li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
-          <li>amountTotal (합계 금액) : <%= result.getAmountTotal() %></li>
-        </ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response </p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>수집 결과 요약정보 조회</legend>
+			<ul>
+				<li>count (수집 결과 건수) : <%= result.getCount() %></li>
+				<li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
+				<li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
+				<li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
+				<li>amountTotal (합계 금액) : <%= result.getAmountTotal() %></li>
+			</ul>
+		</fieldset>
+	</div>
 	</body>
 </html>

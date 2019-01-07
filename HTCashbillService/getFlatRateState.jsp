@@ -11,14 +11,14 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 정액제 서비스 이용상태를 확인합니다.
-  */
+	/*
+	 * 연동회원의 정액제 서비스 이용상태를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  FlatRateState flatRateInfo = null;
+	FlatRateState flatRateInfo = null;
 
 	try {
 
@@ -37,15 +37,15 @@
 			<fieldset class="fieldset1">
 				<legend>정액제 서비스 상태 확인</legend>
 				<ul>
-          <li>referenceID (사업자번호) : <%=flatRateInfo.getReferenceID()%> </li>
-          <li>contractDT (정액제 서비스 시작일시) : <%=flatRateInfo.getContractDT()%> </li>
-          <li>useEndDate (정액제 서비스 종료일) : <%=flatRateInfo.getUseEndDate()%> </li>
-          <li>baseDate (자동연장 결제일) : <%=flatRateInfo.getBaseDate()%> </li>
-          <li>state (정액제 서비스 상태) : <%=flatRateInfo.getState()%> </li>
-          <li>closeRequestYN (정액제 서비스 해제신청 여부) : <%=flatRateInfo.getCloseRequestYN()%> </li>
-          <li>useRestrictYN (정액제 서비스 사용제한 여부) : <%=flatRateInfo.getUseRestrictYN()%> </li>
-          <li>closeOnExpired (정액제 만료시 해제 여부) : <%=flatRateInfo.getCloseOnExpired()%> </li>
-          <li>unPaidYN (미수금 보유 여부) : <%=flatRateInfo.getUnPaidYN()%> </li>
+					<li>referenceID (사업자번호) : <%=flatRateInfo.getReferenceID()%> </li>
+					<li>contractDT (정액제 서비스 시작일시) : <%=flatRateInfo.getContractDT()%> </li>
+					<li>useEndDate (정액제 서비스 종료일) : <%=flatRateInfo.getUseEndDate()%> </li>
+					<li>baseDate (자동연장 결제일) : <%=flatRateInfo.getBaseDate()%> </li>
+					<li>state (정액제 서비스 상태) : <%=flatRateInfo.getState()%> </li>
+					<li>closeRequestYN (정액제 서비스 해제신청 여부) : <%=flatRateInfo.getCloseRequestYN()%> </li>
+					<li>useRestrictYN (정액제 서비스 사용제한 여부) : <%=flatRateInfo.getUseRestrictYN()%> </li>
+					<li>closeOnExpired (정액제 만료시 해제 여부) : <%=flatRateInfo.getCloseOnExpired()%> </li>
+					<li>unPaidYN (미수금 보유 여부) : <%=flatRateInfo.getUnPaidYN()%> </li>
 				</ul>
 		  </fieldset>
 		</div>

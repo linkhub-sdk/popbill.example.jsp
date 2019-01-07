@@ -11,14 +11,14 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
-  */
+	/*
+	 * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  Date expireDate = null;
+	Date expireDate = null;
 
 	try {
 
@@ -37,7 +37,7 @@
 			<fieldset class="fieldset1">
 				<legend>홈택스 공인인증서 만료일시 확인</legend>
 				<ul>
-          <li>expireDate : <%=expireDate%> </li>
+					<li>expireDate : <%=expireDate%> </li>
 				</ul>
 		  </fieldset>
 		</div>

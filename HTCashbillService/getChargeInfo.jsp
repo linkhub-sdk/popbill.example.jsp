@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 연동회원의 홈택스 전자세금계산서 연계 API 서비스 과금정보를 확인합니다.
-  */
+	/*
+	 * 연동회원의 홈택스 전자세금계산서 연계 API 서비스 과금정보를 확인합니다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	ChargeInfo chargeInfo = null;
@@ -31,17 +31,17 @@
 	}
 %>
 	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-      <fieldset class="fieldset1">
-				<legend>과금정보 확인</legend>
-				<ul>
-					<li>unitCost (월정액 요금) : <%=chargeInfo.getUnitCost() %> </li>
-					<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
-					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
-				</ul>
-			</fieldset>
-		 </div>
+	<div id="content">
+		<p class="heading1">Response</p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>과금정보 확인</legend>
+			<ul>
+				<li>unitCost (월정액 요금) : <%=chargeInfo.getUnitCost() %> </li>
+				<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
+				<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
+			</ul>
+		</fieldset>
+	</div>
 	</body>
 </html>

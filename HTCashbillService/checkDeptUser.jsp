@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 팝빌에 등록된 현금영수증 부서사용자 아이디를 확인한다.
-  */
+	/*
+	 * 팝빌에 등록된 현금영수증 부서사용자 아이디를 확인한다.
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	Response CheckResponse = null;
@@ -31,16 +31,16 @@
 	}
 %>
 	<body>
-		<div id="content">
-			<p class="heading1">Response </p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>부서사용자 등록정보 확인</legend>
-				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-		  </fieldset>
-		</div>
+	<div id="content">
+		<p class="heading1">Response </p>
+		<br/>
+		<fieldset class="fieldset1">
+			<legend>부서사용자 등록정보 확인</legend>
+			<ul>
+				<li>Response.code : <%=CheckResponse.getCode()%></li>
+				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+			</ul>
+		</fieldset>
+	</div>
 	</body>
 </html>

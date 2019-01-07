@@ -11,44 +11,44 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 검색조건을 사용하여 수집결과를 조회합니다.
-  * - 응답항목에 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼]
-  *   > 3.3.1. Search (수집 결과 조회)" 을 참고하시기 바랍니다.
-  */
+    /*
+     * 현금영수증 매입/매출 내역의 수집 결과를 조회합니다.
+     * - 응답항목에 관한 정보는 "[홈택스연동 (현금영수증) API 연동매뉴얼] >
+     *   3.2.1. Search(수집 결과 조회)" 을 참고하시기 바랍니다.
+     */
 
-  // 팝빌 회원 사업자번호
-  String testCorpNum = "1234567890";
+    // 팝빌 회원 사업자번호
+    String testCorpNum = "1234567890";
 
-  // 수집 요청시 발급받은 작업아이디
-  String jobID = "017082910000000001";
+    // 수집 요청시 발급받은 작업아이디
+    String jobID = "017082910000000001";
 
-  // 거래용도 배열, P-소득공제용, C-지출증빙용
-  String[] TradeUsage = {"P", "C"};
+    // 거래용도 배열, P-소득공제용, C-지출증빙용
+    String[] TradeUsage = {"P", "C"};
 
-  // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
-  String[] TradeType = {"N", "C"};
+    // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
+    String[] TradeType = {"N", "C"};
 
-  // 페이지번호
-  int Page = 1;
+    // 페이지번호
+    int Page = 1;
 
-  // 페이지당 목록개수
-  int PerPage = 15;
+    // 페이지당 목록개수
+    int PerPage = 15;
 
-  // 정렬방향, 내림차순-D, 오름차순-A
-  String Order = "D";
+    // 정렬방향, 내림차순-D, 오름차순-A
+    String Order = "D";
 
-  HTCashbillSearchResult result = null;
+    HTCashbillSearchResult result = null;
 
-	try {
+    try {
 
-		result = htCashbillService.search(testCorpNum, jobID, TradeUsage, TradeType, Page, PerPage, Order);
+        result = htCashbillService.search(testCorpNum, jobID, TradeUsage, TradeType, Page, PerPage, Order);
 
-	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-		throw pe;
-	}
+    } catch (PopbillException pe) {
+        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        throw pe;
+    }
 %>
 	<body>
 		<div id="content">
@@ -93,12 +93,10 @@
               <li>deductionType (공제유형) : <%= result.getList().get(i).getDeductionType() %></li>
           </ul>
           </fieldset>
-
         <%
       	    }
           }
         %>
-
 			</fieldset>
 		 </div>
 	</body>

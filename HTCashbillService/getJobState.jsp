@@ -11,11 +11,11 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /**
-  * 수집 요청 상태를 확인합니다.
-  * - 응답항목 관한 정보는 "[홈택스 현금영수증 연계 API 연동매뉴얼
-  *   > 3.2.2. GetJobState (수집 상태 확인)" 을 참고하시기 바랍니다 .
-  */
+	/*
+	 * 수집 요청 상태를 확인합니다.
+	 * - 응답항목 관한 정보는 "[홈택스연동 (현금영수증) API 연동매뉴얼] >
+	 *   3.1.2. GetJobState(수집 상태 확인)" 을 참고하시기 바랍니다.
+	 */
 
   // 팝빌회원 사업자번호
 	String testCorpNum = "6798700433";
@@ -43,17 +43,17 @@
 				<legend>수집 상태 확인</legend>
 				<ul>
 					<li>jobID (작업아이디) : <%=jobState.getJobID() %> </li>
-          <li>jobState (수집상태) : <%=jobState.getJobState() %> </li>
-          <li>queryType (수집유형) : <%=jobState.getQueryType() %> </li>
-          <li>queryDateType (일자유형) : <%=jobState.getQueryDateType() %> </li>
-          <li>queryStDate (시작일자) : <%=jobState.getQueryStDate() %> </li>
-          <li>queryEnDate (종료일자) : <%=jobState.getQueryEnDate() %> </li>
-          <li>errorCode (오류코드) : <%=jobState.getErrorCode() %> </li>
-          <li>errorReason (오류메시지) : <%=jobState.getErrorReason() %> </li>
-          <li>jobStartDT (작업 시작일시) : <%=jobState.getJobStartDT() %> </li>
-          <li>jobEndDT (작업 종료일시) : <%=jobState.getJobEndDT() %> </li>
-          <li>collectCount (수집개수) : <%=jobState.getCollectCount() %> </li>
-          <li>regDT (수집 요청일시) : <%=jobState.getRegDT() %> </li>
+					<li>jobState (수집상태) : <%=jobState.getJobState() %> </li>
+					<li>queryType (수집유형) : <%=jobState.getQueryType() %> </li>
+					<li>queryDateType (일자유형) : <%=jobState.getQueryDateType() %> </li>
+					<li>queryStDate (시작일자) : <%=jobState.getQueryStDate() %> </li>
+					<li>queryEnDate (종료일자) : <%=jobState.getQueryEnDate() %> </li>
+					<li>errorCode (오류코드) : <%=jobState.getErrorCode() %> </li>
+					<li>errorReason (오류메시지) : <%=jobState.getErrorReason() %> </li>
+					<li>jobStartDT (작업 시작일시) : <%=jobState.getJobStartDT() %> </li>
+					<li>jobEndDT (작업 종료일시) : <%=jobState.getJobEndDT() %> </li>
+					<li>collectCount (수집개수) : <%=jobState.getCollectCount() %> </li>
+					<li>regDT (수집 요청일시) : <%=jobState.getRegDT() %> </li>
 				</ul>
 			</fieldset>
 		 </div>
