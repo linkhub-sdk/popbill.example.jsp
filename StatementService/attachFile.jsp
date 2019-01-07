@@ -18,21 +18,21 @@
 	 * 전자명세서에 첨부파일을 등록합니다.
 	 * - 첨부파일 등록은 전자명세서가 [임시저장] 상태인 경우에만 가능합니다.
 	 * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
-	*/
+	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 명세서 종류코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 명세서 종류코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-  // 전자명세서 문서관리번호
-	String mgtKey = "20170307-01";
+	// 전자명세서 문서관리번호
+	String mgtKey = "20190107-101";
 
-  // 첨부파일 표시명
+	// 첨부파일 표시명
 	String fileName = "test.jpg";
 
-  // 파일 스트림
+	// 파일 스트림
 	InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
 	Response CheckResponse = null;
@@ -48,11 +48,10 @@
 	} finally {
 		if ( stream != null ) {
 			try {
-					stream.close();
+				stream.close();
 			} catch(IOException e) {}
-    }
+		}
 	}
-
 %>
 		<div id="content">
 			<p class="heading1">Response</p>

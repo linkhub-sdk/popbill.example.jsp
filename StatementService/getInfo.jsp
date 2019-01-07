@@ -62,7 +62,7 @@
 						<li> taxTotal(세액 합계) : <%= statementInfo.getTaxTotal()%></li>
 						<li> issueDT(발행일시) : <%= statementInfo.getIssueDT()%></li>
 						<li> stateDT(상태 변경일시) : <%= statementInfo.getStateDT()%></li>
-						<li> openYN(메일 개봉 여부) : <%= statementInfo.getOpenYN()%></li>
+						<li> openYN(메일 개봉 여부) : <%= statementInfo.isOpenYN()%></li>
 						<li> openDT(개봉 일시) : <%= statementInfo.getOpenDT()%></li>
 						<li> stateMemo(상태메모) : <%= statementInfo.getStateMemo()%></li>
 						<li> regDT(등록일시) : <%= statementInfo.geTregDT()%></li>

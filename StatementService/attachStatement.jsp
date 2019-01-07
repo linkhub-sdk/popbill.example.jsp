@@ -28,7 +28,7 @@
 	int subItemCode = 121;
 
 	// 첨부할 전자명세서 관리번호
-	String subMgtKey = "20190107-002";
+	String subMgtKey = "20190107-101";
 
 	Response CheckResponse = null;
 
