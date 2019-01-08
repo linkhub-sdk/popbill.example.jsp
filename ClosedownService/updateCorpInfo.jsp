@@ -37,7 +37,7 @@
 	// 종목, 최대 40자
 	corpInfo.setBizClass("종목");
 
-  Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 

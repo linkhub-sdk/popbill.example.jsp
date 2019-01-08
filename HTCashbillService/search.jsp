@@ -69,7 +69,6 @@
           if ( result != null ){
             for ( int i = 0; i < result.getList().size(); i++ ) {
         %>
-
           <fieldset class="fieldset2">
           <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
           <ul>

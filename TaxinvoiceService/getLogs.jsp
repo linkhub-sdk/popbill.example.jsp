@@ -52,8 +52,8 @@
 							taxinvoiceLog = taxinvoiceLogs[i];
 				%>
 				<fieldset class="fieldset2">
-					<legend>TaxinvoiceLog.docLogType : <%= taxinvoiceLog.getDocLogType() %></legend>
 					<ul>
+						<li>docLogType (로그타입) : <%= taxinvoiceLog.getDocLogType() %></li>
 						<li>log (이력정보) : <%= taxinvoiceLog.getLog() %> </li>
 						<li>procType (처리형태) : <%=taxinvoiceLog.getProcType() %></li>
 						<li>procCorpName (처리회사명) : <%=taxinvoiceLog.getProcCorpName() %></li>

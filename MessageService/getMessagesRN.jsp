@@ -16,10 +16,10 @@
 	 * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] > 3.3.2. GetMessagesRN (전송내역 확인 - 요청번호 할당)을 참조하시기 바랍니다.
 	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 문자전송 요청 시 할당한 전송요청번호(requestNum)
+	// 문자전송 요청 시 할당한 전송요청번호(requestNum)
 	String requestNum = "20190108-001";
 
 	SentMessage[] sentMessages = null;
