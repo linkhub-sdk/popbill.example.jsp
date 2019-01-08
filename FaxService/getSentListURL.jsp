@@ -38,7 +38,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>문자 전송내역 팝업 URL 확인</legend>
+        <legend>팩스 전송내역 팝업 URL 확인</legend>
         <ul>
             <li>URL : <%=url%>
             </li>
