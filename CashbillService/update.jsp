@@ -59,7 +59,7 @@
 
 
     // 가맹점 사업자번호, '-'제외 10자리
-    cashbill.setFranchiseCorpNum("1234567890");
+    cashbill.setFranchiseCorpNum(testCorpNum);
 
     // 가맹점 상호
     cashbill.setFranchiseCorpName("가맹점 상호_수정");

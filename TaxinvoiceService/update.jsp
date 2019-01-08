@@ -61,7 +61,7 @@
      ****************************************************************************/
 
     // 공급자 사업자번호, "-"제외
-    taxinvoice.setInvoicerCorpNum("1234567890");
+    taxinvoice.setInvoicerCorpNum(testCorpNum);
 
     // 종사업자 식별번호. 필요시 기재. 형식은 숫자 4자리.
     taxinvoice.setInvoicerTaxRegID("");

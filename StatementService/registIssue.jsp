@@ -56,7 +56,7 @@
 	 ****************************************************************************/
 
 	// 발신자 사업자번호
-	statement.setSenderCorpNum("1234567890");
+	statement.setSenderCorpNum(testCorpNum);
 
 	// 발신자 상호
 	statement.setSenderCorpName("발신자 상호");
