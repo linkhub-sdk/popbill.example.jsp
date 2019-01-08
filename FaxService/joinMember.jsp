@@ -18,47 +18,47 @@
 
 	JoinForm joinInfo = new JoinForm();
 
+	// 아이디, 6자 이상 50자 미만
+	joinInfo.setID("testkorea20161201");
+
+	// 비밀번호, 6자이상 20자 미만
+	joinInfo.setPWD("thisispassword");
+
 	// 링크아이디
 	joinInfo.setLinkID("TESTER");
 
 	// 사업자번호 "-" 제외
-	joinInfo.setCorpNum("0000000012");
+	joinInfo.setCorpNum("0000000013");
 
-	// 대표자명
+	// 대표자명, 최대 100자
 	joinInfo.setCEOName("대표자성명");
 
-	// 상호
+	// 상호, 최대 200자
 	joinInfo.setCorpName("상호");
 
-	// 주소
+	// 주소, 최대 300자
 	joinInfo.setAddr("주소");
 
-	// 업태
+	// 업태, 최대 100자
 	joinInfo.setBizType("업태");
 
-	// 종목
+	// 종목, 최대 100자
 	joinInfo.setBizClass("종목");
 
-	// 아이디, 최대 20자
-	joinInfo.setID("testkorea");
-
-	// 비밀번호, 최대 20자
-	joinInfo.setPWD("thisispassword");
-
-	// 담당자명
+	// 담당자 성명, 최대 100자
 	joinInfo.setContactName("담당자명");
 
-	// 담당자 연락처
+	// 담당자 이메일, 최대 100자
+	joinInfo.setContactEmail("test@test.co.kr");
+
+	// 담당자 연락처, 최대 20자
 	joinInfo.setContactTEL("02-999-9999");
 
-	// 담당자 휴대폰번호
+	// 담당자 휴대폰번호, 최대 20자
 	joinInfo.setContactHP("010-000-1234");
 
-	// 담당자 팩스번호
+	// 담당자 팩스번호, 최대 20자
 	joinInfo.setContactFAX("02-999-9999");
-
-	// 담당자 메일주소
-	joinInfo.setContactEmail("code@linkhub.co.kr");
 
 	Response CheckResponse = null;
 

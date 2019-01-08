@@ -22,19 +22,19 @@
 	// 회사정보 객체
 	CorpInfo corpInfo = new CorpInfo();
 
-	// 대표자 성명, 최대 30자
+	// 대표자 성명, 최대 100자
 	corpInfo.setCeoname("대표자명");
 
-	// 상호, 최대 70자
+	// 상호, 최대 200자
 	corpInfo.setCorpName("상호");
 
 	// 주소, 최대 300자
 	corpInfo.setAddr("주소");
 
-	// 업태, 최대 40자
-	corpInfo.setBizType("업태");
+	// 업태, 최대 100자
+	corpInfo.setBizType("업태_JSP");
 
-	// 종목, 최대 40자
+	// 종목, 최대 100자
 	corpInfo.setBizClass("종목");
 
 	Response CheckResponse = null;

@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 문자 발신번호 목록을 확인합니다.
+     * 팝빌에 등록된 발신번호 목록을 확인합니다.
      */
 
     // 팝빌회원 사업자번호
@@ -35,7 +35,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>문자 발신번호 목록</legend>
+        <legend>발신번호 목록</legend>
         <%
             for (int i = 0; i < senderNumberList.length; i++) {
         %>
