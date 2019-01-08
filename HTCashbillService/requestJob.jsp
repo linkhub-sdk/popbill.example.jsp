@@ -19,16 +19,16 @@
 	 */
 
 	// 팝빌회원 사업자번호
-	String testCorpNum = "6798700433";
+	String testCorpNum = "1234567890";
 
 	// 현금영수증 유형, SELL-매출, BUY-매입
 	QueryType CashbillType = QueryType.SELL;
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20170101";
+	String SDate = "20181201";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20170601";
+	String EDate = "20190108";
 
 	String jobID = null;
 

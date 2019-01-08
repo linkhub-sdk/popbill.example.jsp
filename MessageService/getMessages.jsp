@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 문자전송 접수번호
-	String receiptNum = "019010716000000003";
+	String receiptNum = "019010809000000005";
 
 	SentMessage[] sentMessages = null;
 
@@ -46,7 +46,6 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>SentMessage : <%=i+1%></legend>
 					<ul>
 						<li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
 						<li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>

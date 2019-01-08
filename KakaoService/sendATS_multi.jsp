@@ -23,7 +23,7 @@
 
     // 알림톡 템플릿코드
     // 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 또는 팝빌사이트에서 확인 가능합니다.
-    String templateCode = "018020000001";
+    String templateCode = "07043042992";
 
     //발신번호 (팝빌에 등록된 발신번호만 이용가능)
     String senderNum = "07043042993";

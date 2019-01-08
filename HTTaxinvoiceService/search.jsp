@@ -11,7 +11,7 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-    /**
+    /*
      * 전자세금계산서 매입/매출 내역의 수집 결과를 조회합니다.
      * - 응답항목에 관한 정보는 "[홈택스연동 (전자세금계산서계산서) API 연동매뉴얼] >
      *   3.2.1. Search(수집 결과 조회)" 을 참고하시기 바랍니다.
@@ -82,7 +82,7 @@
                     for(int i=0; i < result.getList().size(); i++){
             %>
             <fieldset class="fieldset2">
-                <legend> 전자(세금)계산서 정보 [ <%=(i+1) %> ] </legend>
+                <legend> 전자세금계산서 정보 [ <%=(i+1) %> ] </legend>
                 <ul>
                     <li>ntsconfirmNum (국세청 승인번호) <%= result.getList().get(i).getNtsconfirmNum() %></li>
                     <li>writeDate (작성일자) : <%= result.getList().get(i).getWriteDate()  %> </li>

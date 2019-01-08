@@ -48,7 +48,6 @@
         %>
 
         <fieldset class="fieldset2">
-            <legend>FaxResult : <%=i+1%></legend>
             <ul>
                 <li>state (전송상태 코드) : <%=faxResult.getState()%></li>
                 <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>

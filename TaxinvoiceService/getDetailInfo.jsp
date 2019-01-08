@@ -56,7 +56,7 @@
                     <li> supplyCostTotal (공급가액 합계) : <%=taxinvoice.getSupplyCostTotal() %></li>
                     <li> taxTotal (세액 합계) : <%=taxinvoice.getTaxTotal() %></li>
                     <li> totalAmount (합계금액) : <%=taxinvoice.getTotalAmount() %></li>
-                    <li> ntsconfirmNum (국세청승인번호) : <%=taxinvoice.getNTSconfirmNum() %></li>
+                    <li> ntsconfirmNum (국세청승인번호) : <%=taxinvoice.getNTSConfirmNum() %></li>
 
                     <li> invoicerCorpNum (공급자 사업자번호) : <%=taxinvoice.getInvoicerCorpNum() %></li>
                     <li> invoicerMgtKey (공급자 문서관리번호) : <%=taxinvoice.getInvoicerMgtKey() %></li>

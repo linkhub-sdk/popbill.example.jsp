@@ -87,7 +87,7 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>SentMessage : [ <%=i+1%> / <%=searchResult.getList().size() %> ]</legend>
+					<legend>전송내역 : [ <%=i+1%> / <%=searchResult.getList().size() %> ]</legend>
 					<ul>
 						<li>state (전송 상태코드) : <%=sentMsg.getState()%> </li>
 						<li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>

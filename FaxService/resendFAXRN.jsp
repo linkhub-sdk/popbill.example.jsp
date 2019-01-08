@@ -24,7 +24,7 @@
 	String testUserID = "testkorea";
 
 	// 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-	String originalFAXrequestNum = "";
+	String originalFAXrequestNum = "20190108-001";
 
 	// 발신번호, 공백처리시 기존전송정보로 전송
 	String sendNum = "07043042991";

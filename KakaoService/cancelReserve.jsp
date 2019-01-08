@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 전송 요청시 발급받은 카카오톡 접수번호
-    String receiptNum = "";
+    String receiptNum = "019010809325700001";
 
     Response CheckResponse = null;
 

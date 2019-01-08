@@ -19,7 +19,7 @@
      */
 
     // 팝빌회원 사업자번호
-    String testCorpNum = "6798700433";
+    String testCorpNum = "1234567890";
 
     HTCashbillJobState[] jobList = null;
 

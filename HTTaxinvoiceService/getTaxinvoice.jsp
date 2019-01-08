@@ -21,7 +21,7 @@
     String testCorpNum = "1234567890";
 
     // 전자세금계산서 국세청 승인번호
-    String ntsConfirmNum = "201703034100020300001af2";
+    String ntsConfirmNum = "201812264100020300002e07Q";
 
     HTTaxinvoice taxinvoiceInfo = null;
 

@@ -17,13 +17,13 @@
 	 *   3.1.2. GetJobState(수집 상태 확인)" 을 참고하시기 바랍니다.
 	 */
 
-  // 팝빌회원 사업자번호
-	String testCorpNum = "6798700433";
+	// 팝빌회원 사업자번호
+	String testCorpNum = "1234567890";
 
-  // 수집 요청시 반환받은 작업아이디
-  String jobID = "017030710000000003";
+	// 수집 요청시 반환받은 작업아이디
+	String jobID = "017030710000000003";
 
-  HTCashbillJobState jobState = null;
+	HTCashbillJobState jobState = null;
 
 	try {
 

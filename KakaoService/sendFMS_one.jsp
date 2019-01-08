@@ -27,7 +27,7 @@
     String plusFriendID = "@팝빌";
 
     //발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    String senderNum = "07043042993";
+    String senderNum = "07043042992";
 
     // 친구톡 메시지 내용 (최대 400자)
     String content = "친구톡 메시지 내용";

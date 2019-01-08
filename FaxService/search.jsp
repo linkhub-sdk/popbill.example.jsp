@@ -85,9 +85,8 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>FaxResult : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
+					<legend>개별 전송 내역 : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
 					<ul>
-
 						<li>state (전송상태 코드) : <%=faxResult.getState()%></li>
 						<li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
 						<li>title (팩스제목) : <%=faxResult.getTitle()%></li>

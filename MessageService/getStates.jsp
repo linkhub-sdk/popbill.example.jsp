@@ -46,7 +46,7 @@
 				%>
 
 				<fieldset class="fieldset2">
-					<legend>문자전송내역 조회 결과 : <%=i+1%></legend>
+					<legend>‭전송결과 요약정보 : <%=i+1%></legend>
 					<ul>
 						<li>rNum (접수번호) : <%=messageBriefInfo.getrNum()%> </li>
 						<li>sn (일련번호) : <%=messageBriefInfo.getSn()%></li>
