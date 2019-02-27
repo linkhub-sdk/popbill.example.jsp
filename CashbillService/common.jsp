@@ -3,7 +3,7 @@
 * 팝빌 현금영수증 API Java SDK JSP Example
 *
 * - JSP 연동환경 설정방법 안내 : http://http://blog.linkhub.co.kr/591/
-* - 업데이트 일자 : 2018-01-07
+* - 업데이트 일자 : 2019-02-27
 * - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991~2
 * - 연동 기술지원 이메일 : code@linkhub.co.kr
 *
@@ -29,3 +29,6 @@
 
 <%-- 연동환경 설정값, 개발용(true), 상업용(false) --%>
 <jsp:setProperty name="cashbillService" property="test" value="true"/>
+
+<%-- 인증토큰 발급 IP 제한 On/Off, ture-제한기능 사용(기본값-권장),  false-제한기능 미사용 --%>
+<jsp:setProperty name="cashbillService" property="IPRestrictOnOff" value="true"/>
