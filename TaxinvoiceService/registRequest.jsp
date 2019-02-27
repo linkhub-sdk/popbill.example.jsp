@@ -238,27 +238,6 @@
 
     taxinvoice.getDetailList().add(detail);
 
-
-    /***************************************************************************
-     *                             추가담당자 정보
-     * - 세금계산서 발행안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 담당자 정보를 추가하여
-     * 발행안내메일을 다수에게 전송할 수 있습니다.
-     ****************************************************************************/
-
-    taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
-
-    TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
-    addContact.setSerialNum(1);
-    addContact.setContactName("추가 담당자명");
-    addContact.setEmail("test2@test.com");
-    taxinvoice.getAddContactList().add(addContact);
-
-    addContact = new TaxinvoiceAddContact();
-    addContact.setSerialNum(2);
-    addContact.setContactName("추가 담당자명");
-    addContact.setEmail("test2@test.com");
-    taxinvoice.getAddContactList().add(addContact);
-
     // 메모
     String memo = "즉시요청 메모";
 

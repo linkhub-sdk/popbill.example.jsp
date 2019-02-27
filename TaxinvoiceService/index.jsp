@@ -18,10 +18,6 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">Update</a> - 수정</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/issue.jsp">Issue</a> - 발행</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelIssue.jsp">CancelIssue</a> - 발행취소</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/send.jsp">Send</a> - [발행예정]</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/cancelSend.jsp">CancelSend</a> - [발행예정] 취소</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/accept.jsp">Accept</a> - [발행예정] 승인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/deny.jsp">Deny</a> - [발행예정] 거부</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/delete.jsp">Delete</a> - 삭제</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registRequest.jsp">RegistRequest</a> - [역발행] 즉시 요청</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/request.jsp">Request</a> - 역발행요청</li>
@@ -50,6 +46,7 @@
         <legend>세금계산서 보기/인쇄</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPopUpURL.jsp">GetPopUpURL</a> - 세금계산서 보기 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getViewURL.jsp">GetViewURL</a> - 세금계산서 보기 URL - 메뉴/버튼 제외</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPrintURL.jsp">GetPrintURL</a> - 세금계산서 인쇄 [공급자/공급받는자] URL</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEPrintURL.jsp">GetEPrintURL</a> - 세금계산서 인쇄 [공급받는자용] URL</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getMassPrintURL.jsp">GetMassPrintURL</a> - 세금계산서 대량 인쇄 URL</li>

@@ -8,7 +8,7 @@
 
 <%@ include file="common.jsp" %>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.IssueResponse"%>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.taxinvoice.Taxinvoice"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceDetail"%>
@@ -45,7 +45,7 @@
 
 
 	// 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-	taxinvoice.setWriteDate("20190107");
+	taxinvoice.setWriteDate("20190227");
 
 	// 발행유형, {정발행, 역발행, 위수탁} 중 기재
 	taxinvoice.setIssueType("정발행");
@@ -77,7 +77,7 @@
 	taxinvoice.setInvoicerCorpName("공급자 상호");
 
 	// 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-	taxinvoice.setInvoicerMgtKey("20190107-001");
+	taxinvoice.setInvoicerMgtKey("20190227-005");
 
 	// 공급자 대표자성명
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -263,7 +263,7 @@
 	addContact.setEmail("test2@test.com");
 	taxinvoice.getAddContactList().add(addContact);
 
-	Response CheckResponse = null;
+	IssueResponse CheckResponse = null;
 
 	try {
 
@@ -283,8 +283,9 @@
 			<fieldset class="fieldset1">
 				<legend>세금계산서 즉시발행</legend>
 				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+          <li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
+  				<li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
+          <li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
 				</ul>
 			</fieldset>
 		 </div>

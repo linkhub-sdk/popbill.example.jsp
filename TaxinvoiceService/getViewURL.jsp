@@ -8,13 +8,12 @@
 
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
-<%@page import="com.popbill.api.Response"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
 	/*
-	 * 발행예정 세금계산서를 [취소] 처리 합니다.
-	 * - [취소]된 세금계산서를 삭제(Delete API)하면 등록된 문서관리번호를 재사용할 수 있습니다.
+	 * 1건의 전자세금계산서 보기 팝업 URL을 반환합니다. (메뉴/버튼 제외)
+	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
 	 */
 
 	// 팝빌회원 사업자번호
@@ -24,33 +23,28 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서관리번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20190227-003";
 
-	// 메모
-	String memo = "발행예정 취소 메모";
-
-	Response CheckResponse = null;
+	String url = null;
 
 	try {
 
-		CheckResponse = taxinvoiceService.cancelSend(testCorpNum, keyType, mgtKey, memo);
+		url = taxinvoiceService.getViewURL(testCorpNum, keyType, mgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
 		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
-
 %>
-	<div id="content">
-		<p class="heading1">Respose</p>
-		<br/>
-		<fieldset class="fieldset1">
-			<legend>발행예정 취소</legend>
-			<ul>
-				<li>Response.code : <%=CheckResponse.getCode()%></li>
-				<li>Response.message : <%=CheckResponse.getMessage()%></li>
-			</ul>
-		</fieldset>
-	 </div>
+		<div id="content">
+			<p class="heading1">Response</p>
+			<br/>
+			<fieldset class="fieldset1">
+				<legend>세금계산서 보기 팝업 URL</legend>
+				<ul>
+					<li>url : <%=url%></li>
+				</ul>
+			</fieldset>
+		 </div>
 </html>

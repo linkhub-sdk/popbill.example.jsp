@@ -8,7 +8,7 @@
 
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.PopbillException"%>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.IssueResponse"%>
 <%@page import="com.popbill.api.taxinvoice.MgtKeyType"%>
 
 <%
@@ -26,12 +26,12 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 연동관리번호
-	String mgtKey = "20190107-003";
+	String mgtKey = "20190226-007";
 
 	// 메모
 	String memo = "발행 메모";
 
-	Response CheckResponse = null;
+	IssueResponse CheckResponse = null;
 
 	try {
 
@@ -50,8 +50,9 @@
 		<fieldset class="fieldset1">
 			<legend>세금계산서 발행</legend>
 			<ul>
-				<li>Response.code : <%=CheckResponse.getCode()%></li>
-				<li>Response.message : <%=CheckResponse.getMessage()%></li>
+				<li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
+				<li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
+        <li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
 			</ul>
 		</fieldset>
 	 </div>

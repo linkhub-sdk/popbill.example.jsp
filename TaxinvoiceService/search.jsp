@@ -136,7 +136,7 @@
 									<li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
 									<li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
 									<li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
-									<li>preIssueDT (발행예정일시) : <%= taxinvoiceInfo.getPreIssueDT() %></li>
+									
 									<li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
 									<li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
 									<li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>
