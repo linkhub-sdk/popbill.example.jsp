@@ -11,6 +11,7 @@
 <%@page import="java.text.SimpleDateFormat" %>
 <%@page import="com.popbill.api.kakao.KakaoReceiver" %>
 <%@page import="com.popbill.api.PopbillException" %>
+<%@page import="com.popbill.api.kakao.KakaoButton" %>
 
 <%
     /*
@@ -23,13 +24,18 @@
 
     // 알림톡 템플릿코드
     // 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 또는 팝빌사이트에서 확인 가능합니다.
-    String templateCode = "018110000047";
+    String templateCode = "019020000163";
 
     //발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    String senderNum = "07043042992";
+    String senderNum = "07043042991";
 
     // 알림톡 내용 (최대 1000자)
-    String content = "[테스트] 테스트 템플릿입니다.";
+    String content = "[ 팝빌 ]\n";
+    content += "신청하신 #{템플릿코드}에 대한 심사가 완료되어 승인 처리되었습니다.\n";
+    content += "해당 템플릿으로 전송 가능합니다.\n\n";
+    content += "문의사항 있으시면 파트너센터로 편하게 연락주시기 바랍니다.\n\n";
+    content += "팝빌 파트너센터 : 1600-8536\n";
+    content += "support@linkhub.co.kr";
 
     // 대체문자 내용 (최대 2000byte)
     String altContent = "대체문자 내용";
@@ -61,10 +67,23 @@
     // 접수번호
     String receiptNum = null;
 
+    // 알림톡 버튼정보를 템플릿 신청시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
+    KakaoButton[] btns = null;
+
+    // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
+    // KakaoButton[] btns = new KakaoButton[1];
+    //
+    // KakaoButton button = new KakaoButton();
+    // button.setN("버튼명"); // 버튼명
+    // button.setT("WL"); // 버튼타입
+    // button.setU1("https://www.popbill.com"); // 버튼링크1
+    // button.setU2("http://test.popbill.com"); // 버튼링크2
+    // btns[0] = button;
+
     try {
 
         receiptNum = kakaoService.sendATS(testCorpNum, templateCode, senderNum, content, altContent, altSendType,
-                receivers, sndDT, testUserID, requestNum);
+                receivers, sndDT, testUserID, requestNum, btns);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
