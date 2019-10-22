@@ -23,8 +23,14 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
+  // 팝빌회원 아이디
+  String testUserID = "testkorea";
+
 	// 메모
 	String memo = "즉시발행 메모 ";
+
+  // 발행안내 메일 제목, 미기재시 기본 양식으로 전송
+  String emailSubject = "메일제목 테스트";
 
 	/***************************************************************************
 	 *                               전자명세서 정보
@@ -33,7 +39,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20190107");
+	statement.setWriteDate("20191022");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -48,7 +54,7 @@
 	statement.setItemCode((short) 121);
 
 	// [필수] 문서관리번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20190107-001");
+	statement.setMgtKey("20191022-013");
 
 
 	/***************************************************************************
@@ -93,34 +99,34 @@
 	 *                             수신자 정보
 	 ****************************************************************************/
 
-	// 발신자받는자 사업자번호
+	// 수신자 사업자번호
 	statement.setReceiverCorpNum("8888888888");
 
-	// 발신자받는자 상호
+	// 수신자 상호
 	statement.setReceiverCorpName("수신자 상호");
 
-	// 발신자받는자 대표자성명
+	// 수신자 대표자성명
 	statement.setReceiverCEOName("수신자 대표자 성명");
 
-	// 발신자받는자 주소
+	// 수신자 주소
 	statement.setReceiverAddr("수신자 주소");
 
-	// 발신자받는자 종목
+	// 수신자 종목
 	statement.setReceiverBizClass("수신자 업종");
 
-	// 발신자받는자 업태
+	// 수신자 업태
 	statement.setReceiverBizType("수신자 업태");
 
-	// 발신자받는자 담당자명
+	// 수신자 담당자명
 	statement.setReceiverContactName("수신자 담당자명");
 
-	// 발신자받는자 담당자 메일주소
-	statement.setReceiverEmail("test@receiver.com");
+	// 수신자 담당자 메일주소
+	statement.setReceiverEmail("test@test.com");
 
-	// 발신자받는자 담당자 연락처
+	// 수신자 담당자 연락처
 	statement.setReceiverTEL("010-111-1111");
 
-	// 발신자받는자 담당자 휴대폰번호
+	// 수신자 담당자 휴대폰번호
 	statement.setReceiverHP("010-1234-1234");
 
 
@@ -159,7 +165,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20190107");	// 거래일자
+	detail.setPurchaseDT("20191022");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -170,7 +176,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20190107");	 // 거래일자
+	detail.setPurchaseDT("20191022");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액
@@ -197,7 +203,7 @@
 
 	try {
 
-		CheckResponse = statementService.registIssue(testCorpNum, statement, memo);
+		CheckResponse = statementService.registIssue(testCorpNum, statement, memo, testUserID, emailSubject);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
