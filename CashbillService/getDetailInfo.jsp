@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	// 현금영수증 문서관리번호
+	// 현금영수증 문서번호
 	String mgtKey = "20190107-001";
 
 	Cashbill cashbill = null;
@@ -44,7 +44,7 @@
 				<fieldset class="fieldset2">
 					<legend>Cashbill</legend>
 					<ul>
-						<li>mgtKey (문서관리번호) : <%=cashbill.getMgtKey() %></li>
+						<li>mgtKey (문서번호) : <%=cashbill.getMgtKey() %></li>
 						<li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
 						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
 						<li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>

@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	// 현금영수증 문서관리번호 배열 최대(1000건)
+	// 현금영수증 문서번호 배열 최대(1000건)
 	String[] mgtKeyList = new String[] {"20190107-001", "20190107-002", "20190107-003"};
 
 	CashbillInfo[] cashbillInfos = null;
@@ -50,7 +50,7 @@
   					<legend>현금영수증 상태/요약정보</legend>
   					<ul>
 						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
-						<li>mgtKey (문서관리번호) : <%= cashbillInfo.getMgtKey()%></li>
+						<li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
 						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
 						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
 						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>

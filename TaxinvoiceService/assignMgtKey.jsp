@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 팝빌사이트에서 작성된 세금계산서에 파트너 문서관리번호를 할당합니다.
+	 * 팝빌사이트에서 작성된 세금계산서에 파트너 문서번호를 할당합니다.
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리
@@ -25,7 +25,7 @@
 	// 세금계산서 아이템키, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
 	String itemKey = "019010316320100001";
 
-	// 할당할 문서관리번호, 숫자, 영문 '-', '_' 조합으로 1~24자리까지
+	// 할당할 문서번호, 숫자, 영문 '-', '_' 조합으로 1~24자리까지
 	// 사업자번호별 중복없는 고유번호 할당
 	String mgtKey = "20190107-002";
 
@@ -46,7 +46,7 @@
 		<p class="heading1">Response</p>
 		<br/>
 		<fieldset class="fieldset1">
-			<legend>문서관리번호 할당</legend>
+			<legend>문서번호 할당</legend>
 			<ul>
 				<li>Response.code : <%=CheckResponse.getCode()%></li>
 				<li>Response.message : <%=CheckResponse.getMessage()%></li>

@@ -24,7 +24,7 @@
 	// SELL-매출 세금계산서, BUY-매입 세금계산서, TRUSTEE-위수탁 세금계산서
 	QueryType TaxinvoiceType = QueryType.SELL;
 
-	// 일자유형 유형 W-작성일자, I-발행일자, S-전송일자
+	// 수집일자유형 유형, W-작성일자, I-발행일자, S-전송일자
 	String DType = "S";
 
 	// 시작일자, 날짜형식(yyyyMMdd)

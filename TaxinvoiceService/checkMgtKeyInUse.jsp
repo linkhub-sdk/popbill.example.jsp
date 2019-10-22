@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 세금계산서 문서관리번호 중복여부를 확인합니다.
-	 * - 문서관리번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+	 * 세금계산서 문서번호 중복여부를 확인합니다.
+	 * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
 	 */
 
 	// 팝빌회원 사업자번호
@@ -22,7 +22,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	boolean isInUse;
@@ -42,7 +42,7 @@
 		<p class="heading1">Response</p>
 		<br/>
 		<fieldset class="fieldset1">
-			<legend>문서관리번호 사용여부 확인</legend>
+			<legend>문서번호 사용여부 확인</legend>
 			<ul>
 				<li>사용중 여부 : <%=isInUse ? "사용중" : "미 사용중"%></li>
 			</ul>

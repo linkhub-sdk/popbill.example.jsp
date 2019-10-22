@@ -22,7 +22,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	String url = null;

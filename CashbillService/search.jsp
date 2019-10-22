@@ -93,7 +93,7 @@
 					<legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
 					<ul>
 						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
-						<li>mgtKey (문서관리번호) : <%= cashbillInfo.getMgtKey()%></li>
+						<li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
 						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
 						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
 						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>

@@ -24,7 +24,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	TaxinvoiceInfo taxinvoiceInfo = null;
@@ -59,26 +59,26 @@
 
 						<li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
 						<li>invoicerCorpNum (공급자 사업자번호) : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>
-						<li>invoicerMgtKey (공급자 문서관리번호) : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
+						<li>invoicerMgtKey (공급자 문서번호) : <%= taxinvoiceInfo.getInvoicerMgtKey() %></li>
 						<li>invoicerPrintYN (공급자 인쇄여부) : <%= taxinvoiceInfo.isInvoicerPrintYN() %></li>
 
 						<li>invoiceeCorpName (공급받는자 상호) : <%= taxinvoiceInfo.getInvoiceeCorpName() %></li>
 						<li>invoiceeCorpNum (공급받는자 사업자번호) : <%= taxinvoiceInfo.getInvoiceeCorpNum() %></li>
-						<li>invoiceeMgtKey (공급받는자 문서관리번호) : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
+						<li>invoiceeMgtKey (공급받는자 문서번호) : <%= taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
 						<li>invoiceePrintYN (공급받는자 인쇄여부) : <%= taxinvoiceInfo.isInvoiceePrintYN() %></li>
 						<li>closeDownState (공급받는자 휴폐업상태) : <%= taxinvoiceInfo.getCloseDownState() %></li>
 						<li>closeDownStateDate (공급받는자 휴폐업일자) : <%= taxinvoiceInfo.getCloseDownStateDate() %></li>
 
 						<li>trusteeCorpName (수탁자 상호) : <%= taxinvoiceInfo.getTrusteeCorpName() %></li>
 						<li>trusteeCorpNum (수탁자 사업자번호) : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
-						<li>trusteeMgtKey (수탁자 문서관리번호) : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
+						<li>trusteeMgtKey (수탁자 문서번호) : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
 						<li>trusteePrintYN (수탁자 인쇄여부) : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>
 
 						<li>purposeType (영수/청구) : <%= taxinvoiceInfo.getPurposeType() %></li>
 						<li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
 						<li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
 						<li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
-						
+
 						<li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
 						<li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
 						<li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>

@@ -24,7 +24,7 @@
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 
-    // 세금계산서 문서관리번호
+    // 세금계산서 문서번호
     String mgtKey = "20190107-02";
 
     // 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
@@ -69,7 +69,7 @@
     // 공급자 상호
     taxinvoice.setInvoicerCorpName("공급자 상호_수정");
 
-    // 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+    // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
     taxinvoice.setInvoicerMgtKey(mgtKey);
 
     // 공급자 대표자성명
@@ -116,7 +116,7 @@
     // 공급받는자 상호
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-    // 공급받는자 문서관리번호, 역발행시 필수
+    // 공급받는자 문서번호, 역발행시 필수
     taxinvoice.setInvoiceeMgtKey("");
 
     // 공급받는자 대표자성명
@@ -135,6 +135,8 @@
     taxinvoice.setInvoiceeContactName1("공급받는자 담당자명");
 
     // 공급받는자 메일주소
+    // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
+    // 실제 거래처의 메일주소가 기재되지 않도록 주의
     taxinvoice.setInvoiceeEmail1("test@test.com");
 
     // 공급받는자 연락처
@@ -197,8 +199,8 @@
     // 수정세금계산서 작성시 1~6까지 선택기재.
     taxinvoice.setModifyCode(null);
 
-    // 수정세금계산서 작성시 원본세금계산서의 ItemKey기재. ItemKey는 getInfo로 확인.
-    taxinvoice.setOriginalTaxinvoiceKey("");
+    // 수정세금계산서 작성시 원본세금계산서의 국세청승인번호 기재
+  	taxinvoice.setOrgNTSConfirmNum("")
 
 
     /***************************************************************************

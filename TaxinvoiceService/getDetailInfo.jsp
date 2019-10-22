@@ -26,7 +26,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	Taxinvoice taxinvoice = null;
@@ -59,7 +59,7 @@
                     <li> ntsconfirmNum (국세청승인번호) : <%=taxinvoice.getNTSConfirmNum() %></li>
 
                     <li> invoicerCorpNum (공급자 사업자번호) : <%=taxinvoice.getInvoicerCorpNum() %></li>
-                    <li> invoicerMgtKey (공급자 문서관리번호) : <%=taxinvoice.getInvoicerMgtKey() %></li>
+                    <li> invoicerMgtKey (공급자 문서번호) : <%=taxinvoice.getInvoicerMgtKey() %></li>
                     <li> invoicerCorpName (공급자 상호) : <%=taxinvoice.getInvoicerCorpName() %></li>
                     <li> invoicerCEOName (공급자 대표자명) : <%=taxinvoice.getInvoicerCEOName() %></li>
                     <li> invoicerAddr (공급자 주소) : <%=taxinvoice.getInvoicerAddr() %></li>
@@ -71,7 +71,7 @@
 
                     <li> invoiceeCorpNum (공급받는자 사업자번호) : <%=taxinvoice.getInvoiceeCorpNum() %></li>
                     <li> invoiceeType (공급받는자 구분) : <%=taxinvoice.getInvoiceeType() %></li>
-                    <li> invoiceeMgtKey (공급받는자 문서관리번호) : <%=taxinvoice.getInvoiceeMgtKey() %></li>
+                    <li> invoiceeMgtKey (공급받는자 문서번호) : <%=taxinvoice.getInvoiceeMgtKey() %></li>
                     <li> invoiceeCorpName (공급받는자 상호) : <%=taxinvoice.getInvoiceeCorpName() %></li>
                     <li> invoiceeCEOName (공급받는자 대표자명) : <%=taxinvoice.getInvoiceeCEOName() %></li>
                     <li> invoiceeAddr (공급받는자 주소) : <%=taxinvoice.getInvoiceeAddr() %></li>

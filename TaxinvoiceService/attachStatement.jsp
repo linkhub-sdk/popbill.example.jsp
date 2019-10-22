@@ -22,13 +22,13 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	// 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int subItemCode = 121;
 
-	// 첨부할 전자명세서 문서관리번호
+	// 첨부할 전자명세서 문서번호
 	String subMgtKey = "20190107-001";
 
 	Response CheckResponse = null;

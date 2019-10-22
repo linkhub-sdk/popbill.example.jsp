@@ -21,7 +21,7 @@
 	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int itemCode = 121;
 
-	// 문서관리번호
+	// 문서번호
 	String mgtKey = "20190107-001";
 
 	boolean isInUse;
@@ -41,7 +41,7 @@
 			<p class="heading1">Response</p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>문서관리번호 사용여부 확인</legend>
+				<legend>문서번호 사용여부 확인</legend>
 				<ul>
 					<li>사용중 여부 : <%=isInUse ? "사용중" : "미사용중"%></li>
 				</ul>

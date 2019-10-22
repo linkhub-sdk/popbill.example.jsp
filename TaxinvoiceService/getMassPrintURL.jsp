@@ -22,7 +22,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 배열, 최대 100건
+	// 세금계산서 문서번호 배열, 최대 100건
 	String[] mgtKeyList = new String[]{"20190107-001", "20190107-002"};
 
 	String url = null;

@@ -45,7 +45,7 @@
 
 
 	// 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-	taxinvoice.setWriteDate("20190227");
+	taxinvoice.setWriteDate("20191022");
 
 	// 발행유형, {정발행, 역발행, 위수탁} 중 기재
 	taxinvoice.setIssueType("정발행");
@@ -76,8 +76,8 @@
 	// 공급자 상호
 	taxinvoice.setInvoicerCorpName("공급자 상호");
 
-	// 공급자 문서관리번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-	taxinvoice.setInvoicerMgtKey("20190227-005");
+	// 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+	taxinvoice.setInvoicerMgtKey("20191022-007");
 
 	// 공급자 대표자성명
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -123,7 +123,7 @@
 	// 공급받는자 상호
 	taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-	// 공급받는자 문서관리번호, 역발행시 필수
+	// 공급받는자 문서번호, 역발행시 필수
 	taxinvoice.setInvoiceeMgtKey("");
 
 	// 공급받는자 대표자성명
@@ -142,6 +142,8 @@
 	taxinvoice.setInvoiceeContactName1("공급받는자 담당자명");
 
 	// 공급받는자 메일주소
+  // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
+  // 실제 거래처의 메일주소가 기재되지 않도록 주의
 	taxinvoice.setInvoiceeEmail1("test@test.com");
 
 	// 공급받는자 연락처
@@ -204,8 +206,8 @@
 	// 수정세금계산서 작성시 1~6까지 선택기재.
 	taxinvoice.setModifyCode(null);
 
-	// 수정세금계산서 작성시 원본세금계산서의 ItemKey기재. ItemKey는 getInfo로 확인.
-	taxinvoice.setOriginalTaxinvoiceKey("");
+	// 수정세금계산서 작성시 원본세금계산서의 국세청승인번호 기재
+	taxinvoice.setOrgNTSConfirmNum("");
 
 
 	/***************************************************************************
