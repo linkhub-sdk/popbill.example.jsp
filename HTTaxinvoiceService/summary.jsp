@@ -20,8 +20,11 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
+  // 팝빌회원 아이디
+  String testUserID = "testkorea";
+
 	// 수집 요청시 발급받은 작업아이디
-	String jobID = "016062011000000001";
+	String jobID = "019102217000000002";
 
 	// 문서형태, N-일반, M-수정
 	String[] Type = {"N", "M"};
@@ -41,12 +44,15 @@
 	// 종사업장번호, 다수 기재시 콤마(",")로 구분하여 구성 ex) "0001,0002"
 	String TaxRegID = "";
 
+  // 조회 검색어, 거래처 사업자번호 또는 거래처명 like 검색
+  String searchString = "";
+
 	HTTaxinvoiceSummary result = null;
 
 	try {
 
 		result = htTaxinvoiceService.summary(testCorpNum, jobID, Type, TaxType, PurposeType,
-				TaxRegIDYN, TaxRegIDType, TaxRegID);
+				TaxRegIDYN, TaxRegIDType, TaxRegID, testUserID, searchString);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

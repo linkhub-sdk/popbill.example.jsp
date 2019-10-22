@@ -25,13 +25,13 @@
 	QueryType TaxinvoiceType = QueryType.SELL;
 
 	// 일자유형 유형 W-작성일자, I-발행일자, S-전송일자
-	String DType = "W";
+	String DType = "S";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20181201";
+	String SDate = "20190901";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20190107";
+	String EDate = "20191231";
 
 	String jobID = null;
 
