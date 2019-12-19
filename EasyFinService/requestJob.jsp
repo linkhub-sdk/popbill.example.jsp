@@ -22,7 +22,7 @@
     String BankCode = "0048";
 
     // 계좌번호
-    String AccountNumber = "131020538645";
+    String AccountNumber = "131020538600";
 
     // 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20190920";

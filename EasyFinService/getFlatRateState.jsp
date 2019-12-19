@@ -22,7 +22,7 @@
   String BankCode = "0048";
 
   // 계좌번호
-  String AccountNumber = "131020538645";
+  String AccountNumber = "131020538600";
 
 	FlatRateState flatRateInfo = null;
 
