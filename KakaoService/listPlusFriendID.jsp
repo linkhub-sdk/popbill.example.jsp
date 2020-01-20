@@ -12,7 +12,8 @@
 
 <%
     /*
-     * 팝빌에 등록된 플러스친구 목록을 반환 합니다.
+     * 팝빌에 등록된 카카오톡 채널 목록을 반환 합니다.
+     * - https://docs.popbill.com/kakao/java/api#ListPlusFriendID
      */
 
     // 팝빌회원 사업자번호
@@ -35,15 +36,15 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>플러스친구 목록 확인</legend>
+        <legend>카카오톡 채널 목록 확인</legend>
         <%
             for (int i = 0; i < plusFriendIDs.length; i++) {
         %>
         <fieldset class="fieldset2">
-            <legend>플러스친구 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
+            <legend>카카오톡 채널 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
             <ul>
-                <li>plusFriendID (플러스친구 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
-                <li>plusFriendName (플러스친구 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
+                <li>plusFriendID (카카오톡 채널 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
+                <li>plusFriendName (카카오톡 채널 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
             </ul>
         </fieldset>

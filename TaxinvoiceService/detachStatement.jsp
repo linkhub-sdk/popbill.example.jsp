@@ -14,6 +14,7 @@
 <%
 	/*
 	 * 세금계산서에 첨부된 전자명세서 1건을 첨부해제합니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#DetachStatement
 	 */
 
 	// 팝빌회원 사업자번호
@@ -28,7 +29,7 @@
 	// 첨부해제할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int subItemCode = 121;
 
-	// 첨부해제할 전자명세서 관리번호
+	// 첨부해제할 전자명세서 문서번호
 	String subMgtKey = "20190107-001";
 
 	Response CheckResponse = null;

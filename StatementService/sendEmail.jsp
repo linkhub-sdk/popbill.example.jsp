@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 발행 안내메일을 재전송합니다.
+   * - https://docs.popbill.com/statement/java/api#SendEmail
 	 */
 
 	// 팝빌회원 사업자번호

@@ -19,6 +19,7 @@
 	/*
 	 * 전자명세서 1건을 임시저장 처리합니다.
 	 * - 임시저장후 발행(Issue API)를 호출해야 수신자에게 메일로 전달됩니다.
+   * - https://docs.popbill.com/statement/java/api#Register
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리

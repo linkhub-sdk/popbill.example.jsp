@@ -15,6 +15,7 @@
 	/*
 	 * 팩스를 재전송합니다.
 	 * - 접수일로부터 60일이 경과되지 않은 전송건만 재전송할 수 있습니다.
+   * - https://docs.popbill.com/fax/java/api#ResendFAX_Multi
 	 */
 
 	// 팝빌회원 사업자번호

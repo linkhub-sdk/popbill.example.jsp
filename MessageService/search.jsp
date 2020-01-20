@@ -15,6 +15,7 @@
 	/*
 	 * 검색조건을 사용하여 문자전송 내역을 조회합니다.
 	 * - 최대 검색기간 : 6개월 이내
+   * - https://docs.popbill.com/message/java/api#Search
 	 */
 
 	// 팝빌회원 사업자번호

@@ -13,7 +13,8 @@
 
 <%
 	/*
-	 * 세금계싼서 안내 메일을 재전송합니다.
+	 * 세금계산서 안내 메일을 재전송합니다.
+   *  - https://docs.popbill.com/taxinvoice/java/api#SendEmail
 	 */
 
 	// 팝빌회원 사업자번호

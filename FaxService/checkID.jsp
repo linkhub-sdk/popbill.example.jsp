@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 팝빌 회원아이디 중복여부를 확인합니다.
+   * - https://docs.popbill.com/fax/java/api#CheckID
 	 */
 
 	// 중복조회할 팝빌아이디

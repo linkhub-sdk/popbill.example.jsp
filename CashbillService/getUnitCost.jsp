@@ -12,6 +12,7 @@
 <%
 	/*
 	 * 현금영수증 발행단가를 확인합니다.
+   * - https://docs.popbill.com/cashbill/java/api#GetUnitCost
 	 */
 
 	// 팝빌회원 사업자번호

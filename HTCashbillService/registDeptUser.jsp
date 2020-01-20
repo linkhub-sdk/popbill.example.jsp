@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 홈택스 현금영수증 부서사용자 계정을 등록한다.
+   * - https://docs.popbill.com/htcashbill/java/api#RegistDeptUser
 	 */
 
 	// 팝빌회원 사업자번호

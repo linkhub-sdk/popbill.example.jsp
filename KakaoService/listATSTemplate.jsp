@@ -15,6 +15,7 @@
 <%
     /*
      * (주)카카오로 부터 승인된 알림톡 템플릿 목록을 확인 합니다.
+     * - https://docs.popbill.com/kakao/java/api#ListATSTemplate
      */
 
     // 팝빌회원 사업자번호
@@ -47,7 +48,7 @@
                 <li>templateCode (템플릿 코드) : <%=aTSTemplates[i].getTemplateCode()%></li>
                 <li>templateName (템플릿 제목) : <%=aTSTemplates[i].getTemplateName()%></li>
                 <li>template (템플릿 내용) : <%=aTSTemplates[i].getTemplate()%></li>
-                <li>plusFriendID (플러스친구 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
+                <li>plusFriendID (카카오톡 채널 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
 
                 <% if (aTSTemplates[i].getBtns() != null) {
                     List<KakaoButton> btns = aTSTemplates[i].getBtns();

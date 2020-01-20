@@ -16,6 +16,7 @@
 	 * 세금계산서에 첨부된 파일을 삭제합니다.
 	 * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
 	 *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#DeleteFile
 	 */
 
 	// 팝빌회원 사업자번호

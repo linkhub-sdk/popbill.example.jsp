@@ -13,6 +13,7 @@
 	/*
 	 * 공급받는자 메일링크 URL을 반환합니다.
 	 * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+   * - https://docs.popbill.com/statement/java/api#GetMailURL
 	 */
 
 	// 팝빌회원 사업자번호

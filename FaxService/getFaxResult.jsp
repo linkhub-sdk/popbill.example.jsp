@@ -13,7 +13,7 @@
 <%
     /*
      * 팩스전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
-     * - 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.1 GetFaxDetail (전송내역 및 전송상태 확인)을 참조하시기 바랍니다.
+     * - https://docs.popbill.com/fax/java/api#GetFaxResult
      */
 
     // 팝빌회원 사업자번호

@@ -13,6 +13,7 @@
     /*
      * 팝빌에 로그인 상태로 접근할 수 있는 팝업 URL을 반환합니다.
      * 반환된 URL의 유지시간은 30초이며, 제한된 시간 이후에는 정상적으로 처리되지 않습니다.
+     * - https://docs.popbill.com/statement/java/api#GetAccessURL
      */
 
     // 팝빌회원 사업자번호

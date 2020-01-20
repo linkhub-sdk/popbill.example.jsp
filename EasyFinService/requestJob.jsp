@@ -13,6 +13,7 @@
     /*
     * 계좌 거래내역 수집을 요청한다.
     * - 검색기간은 현재일 기준 90일 이내로만 요청할 수 있다.
+    * - https://docs.popbill.com/easyfinbank/java/api#RequestJob
     */
 
   	// 팝빌회원 사업자번호

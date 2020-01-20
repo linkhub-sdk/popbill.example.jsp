@@ -15,6 +15,7 @@
 	/*
 	 * 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
 	 * - 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
+   * - https://docs.popbill.com/fax/java/api#ResendFAXRN
 	 */
 
 	// 팝빌회원 사업자번호

@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 현금영수증 관련 메일전송 항목에 대한 전송여부를 수정합니다.
+   * - https://docs.popbill.com/cashbill/java/api#UpdateEmailConfig
 	 *
 	 * 메일전송유형
 	 * CSH_ISSUE : 고객에게 현금영수증이 발행 되었음을 알려주는 메일 입니다.

@@ -14,8 +14,7 @@
     /*
      * 수집 요청건들에 대한 상태 목록을 확인합니다.
      * - 수집 요청 작업아이디(JobID)의 유효시간은 1시간 입니다.
-     * - 응답항목에 관한 정보는 "[홈택스 전자(세금)계산서 연계 API 연동매뉴얼]
-     *   > 3.2.3. ListActiveJob (수집 상태 목록 확인)" 을 참고하시기 바랍니다.
+     * - https://docs.popbill.com/httaxinvoice/java/api#ListActiveJob
      */
 
     // 팝빌회원 사업자번호

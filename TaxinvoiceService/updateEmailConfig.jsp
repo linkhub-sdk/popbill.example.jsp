@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 전자세금계산서 관련 메일전송 항목에 대한 전송여부를 수정합니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#UpdateEmailConfig
 	 *
 	 * 메일전송유형
 	 * [정발행]

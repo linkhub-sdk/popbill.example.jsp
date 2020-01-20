@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 팝빌에 등록된 현금영수증 부서사용자 계정정보를 삭제한다.
+   * - https://docs.popbill.com/htcashbill/java/api#DeleteDeptUser
 	 */
 
 	// 팝빌회원 사업자번호

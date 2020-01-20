@@ -17,7 +17,7 @@
 <%
 	/*
      * 1건의 세금계산서 상세정보를 확인합니다.
-     * - 응답항목에 대한 자세한 사항은 "[전자세금계산서 API 연동매뉴얼] > 4.1 (세금)계산서 구성" 을 참조하시기 바랍니다.
+     * - https://docs.popbill.com/taxinvoice/java/api#GetDetailInfo
 	 */
 
 	// 팝빌회원 사업자번호

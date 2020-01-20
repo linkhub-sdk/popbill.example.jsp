@@ -13,6 +13,7 @@
 <%
     /*
      * 연동회원의 담당자 목록을 확인합니다.
+     * - https://docs.popbill.com/kakao/java/api#ListContact
      */
 
     // 팝빌회원 사업자번호
@@ -55,7 +56,7 @@
               <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
               <li>searchAllAllowYN (회사조회 권한) : <%= contactInfo.getSearchAllAllowYN()%></li>
               <li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
-              <li>state (상태) : <%= contactInfo.getState()%></li>                
+              <li>state (상태) : <%= contactInfo.getState()%></li>
             </ul>
         </fieldset>
         <%

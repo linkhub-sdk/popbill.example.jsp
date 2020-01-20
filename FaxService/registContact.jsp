@@ -14,6 +14,7 @@
 <%
 	/*
 	 * 연동회원의 담당자를 신규로 등록합니다.
+   * - https://docs.popbill.com/fax/java/api#RegistContact
 	 */
 
 	// 팝빌회원 사업자번호

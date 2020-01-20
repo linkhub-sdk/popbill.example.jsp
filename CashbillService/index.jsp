@@ -12,7 +12,7 @@
     <fieldset class="fieldset1">
         <legend>현금영수증 발행</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 관리번호 확인</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서번호 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/registIssue.jsp">registIssue</a> - 즉시발행</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/register.jsp">register</a> - 임시저장</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/update.jsp">update</a> - 수정</li>

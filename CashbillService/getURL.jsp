@@ -13,6 +13,7 @@
 	/*
 	 * 팝빌 현금영수증 문서함 관련 팝업 URL을 반환합니다.
 	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
+   * - https://docs.popbill.com/cashbill/java/api#GetURL
 	 */
 
 	// 팝빌회원 사업자번호

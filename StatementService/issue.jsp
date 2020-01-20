@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 1건의 [임시저장] 상태의 전자명세서를 발행처리합니다.
+   * - https://docs.popbill.com/statement/java/api#StmIssue
 	 */
 
 	// 팝빌회원 사업자번호

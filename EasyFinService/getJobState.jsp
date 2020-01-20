@@ -13,6 +13,7 @@
 <%
   /*
    * 계좌 거래내역 수집 상태를 확인한다.
+   * - https://docs.popbill.com/easyfinbank/java/api#GetJobState
    */
 
 	// 팝빌회원 사업자번호

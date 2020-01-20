@@ -14,6 +14,7 @@
 	/*
 	 * 세금계산서 문서번호 중복여부를 확인합니다.
 	 * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
 	 */
 
 	// 팝빌회원 사업자번호

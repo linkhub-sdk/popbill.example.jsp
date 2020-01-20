@@ -13,6 +13,7 @@
 <%
     /*
     * 계좌 거래내역에 메모를 저장한다.
+    * - https://docs.popbill.com/easyfinbank/java/api#SaveMemo
     */
 
   	// 팝빌회원 사업자번호

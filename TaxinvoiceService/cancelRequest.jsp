@@ -15,6 +15,7 @@
 	/*
 	 * 역발행 세금계산서를 [취소] 처리합니다.
 	 * - [취소]한 세금계산서의 문서번호를 재사용하기 위해서는 삭제 (Delete API) 를 호출해야 합니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#CancelRequest
 	 */
 
 	// 팝빌회원 사업자번호

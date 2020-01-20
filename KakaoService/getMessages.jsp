@@ -16,6 +16,7 @@
 <%
     /*
      * 카카오톡 전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
+     * - https://docs.popbill.com/kakao/java/api#GetMessages
      */
 
     // 팝빌회원 사업자번호
@@ -47,7 +48,7 @@
             <ul>
                 <li>contentType (카카오톡 유형) : <%=kakaoSentInfo.getContentType()%></li>
                 <li>templateCode (템플릿 코드) : <%=kakaoSentInfo.getTemplateCode()%></li>
-                <li>plusFriendID (플러스친구 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
+                <li>plusFriendID (카카오톡 채널 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
                 <li>sendNum (발신번호) : <%=kakaoSentInfo.getSendNum()%></li>
                 <li>altContent (대체문자 내용) : <%=kakaoSentInfo.getAltContent()%></li>
                 <li>altSendType (대체문자 유형) : <%=kakaoSentInfo.getAltSendType()%></li>

@@ -13,7 +13,9 @@
 <%
     /*
     * 계좌 거래내역 요약정보를 조회한다.
+    * - https://docs.popbill.com/easyfinbank/java/api#Summary
     */
+    
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
 

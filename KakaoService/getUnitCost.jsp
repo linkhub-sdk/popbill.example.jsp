@@ -12,7 +12,8 @@
 
 <%
     /*
-     * 친구톡/알림톡 전송단가를 확인합니다.
+     * 알림톡/친구톡 전송단가를 확인합니다.
+     * - https://docs.popbill.com/kakao/java/api#GetUnitCost
      */
 
     // 팝빌회원 사업자번호

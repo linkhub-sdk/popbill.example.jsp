@@ -11,24 +11,25 @@
 <%@page import="com.popbill.api.PopbillException" %>
 
 <%
-    /*
-     * 팝빌 회원아이디 중복여부를 확인합니다.
-     */
+  /*
+   * 팝빌 회원아이디 중복여부를 확인합니다.
+   * - https://docs.popbill.com/kakao/java/api#CheckID
+   */
 
-    // 조회할 아이디
-    String userID = "testkorea";
+  // 조회할 아이디
+  String userID = "testkorea";
 
-    Response CheckResponse = null;
+  Response CheckResponse = null;
 
-    try {
+  try {
 
-        CheckResponse = kakaoService.checkID(userID);
+      CheckResponse = kakaoService.checkID(userID);
 
-    } catch (PopbillException e) {
-        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-        throw e;
-    }
+  } catch (PopbillException e) {
+      //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+      //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+      throw e;
+  }
 %>
 <body>
 <div id="content">

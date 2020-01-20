@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 등록된 홈택스 공인인증서의 만료일자를 확인합니다.
+   * - https://docs.popbill.com/htcashbill/java/api#GetCertificateExpireDate
 	 */
 
 	// 팝빌회원 사업자번호

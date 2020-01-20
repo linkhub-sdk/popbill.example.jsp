@@ -13,7 +13,7 @@
 <%
 	/*
 	 * 문자전송요청시 할당한 전송요청번호(requestNum)로 전송상태를 확인합니다
-	 * - 응답항목에 대한 자세한 사항은 "[문자 API 연동매뉴얼] > 3.3.2. GetMessagesRN (전송내역 확인 - 요청번호 할당)을 참조하시기 바랍니다.
+	 * - https://docs.popbill.com/message/java/api#CancelReserveRN
 	 */
 
 	// 팝빌회원 사업자번호

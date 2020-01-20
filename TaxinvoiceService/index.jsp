@@ -12,7 +12,7 @@
     <fieldset class="fieldset1">
         <legend>정방행/역발행/위수탁발행</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">CheckMgtKeyInUse</a> - 관리번호 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">CheckMgtKeyInUse</a> - 문서번호 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registIssue.jsp">RegistIssue</a> - 즉시 발행</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/register.jsp">Register</a> - 임시저장</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">Update</a> - 수정</li>
@@ -67,7 +67,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/attachStatement.jsp">AttachStatement</a> - 전자명세서 첨부</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/detachStatement.jsp">DetachStatement</a> - 전자명세서 첨부해제</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getEmailPublicKeys.jsp">GetEmailPublicKeys</a> - 유통사업자 메일 목록 확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">AssignMgtKey</a> - 관리번호 할당</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">AssignMgtKey</a> - 문서번호 할당</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listEmailConfig.jsp">ListEmailConfig</a> - 세금계산서 알림메일 전송목록 조회</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateEmailConfig.jsp">UpdateEmailConfig</a> - 세금계산서 알림메일 전송설정 수정</li>
         </ul>

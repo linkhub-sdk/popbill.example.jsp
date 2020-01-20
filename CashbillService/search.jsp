@@ -12,10 +12,10 @@
 <%@page import="com.popbill.api.cashbill.CBSearchResult"%>
 
 <%
-    /*
+  /*
 	 * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
-	 * - 응답항목에 대한 자세한 사항은 "[현금영수증 API 연동매뉴얼] > 4.2. 현금영수증 상태정보 구성" 을 참조하시기 바랍니다.
-     */
+	 * - https://docs.popbill.com/cashbill/java/api#Search
+   */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";

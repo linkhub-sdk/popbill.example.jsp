@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 1건의 전자명세서를 [발행취소] 처리합니다.
+   * - https://docs.popbill.com/statement/java/api#Cancel
 	 */
 
 	// 팝빌회원 사업자번호

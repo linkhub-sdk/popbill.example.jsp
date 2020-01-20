@@ -14,6 +14,7 @@
 <%
     /*
      * 파트너의 연동회원으로 회원가입을 요청합니다.
+     * - https://docs.popbill.com/kakao/java/api#JoinMember
      */
 
     JoinForm joinInfo = new JoinForm();

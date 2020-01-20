@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 팩스 발신번호 목록을 반환합니다.
+   * - https://docs.popbill.com/fax/java/api#GetSenderNumberList
 	 */
 
 	// 팝빌회원 사업자번호

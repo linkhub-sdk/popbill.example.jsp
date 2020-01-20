@@ -13,6 +13,7 @@
 <%
   /*
    * 1시간 이내 요청한 수집 작업 목록을 확인한다.
+   * - https://docs.popbill.com/easyfinbank/java/api#ListActiveJob
    */
 
 	// 팝빌회원 사업자번호

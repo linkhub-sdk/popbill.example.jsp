@@ -14,6 +14,7 @@
 	/*
 	 * 공급받는자 메일링크 URL을 반환합니다.
 	 * - 메일링크 URL은 유효시간이 존재하지 않습니다.
+   * - https://docs.popbill.com/taxinvoice/java/api#GetMailURL
 	 */
 
 	// 팝빌회원 사업자번호
@@ -22,7 +23,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 연동관리번호
+	// 세금계산서 문서번호
 	String mgtKey = "20190107-001";
 
 	String url = null;
