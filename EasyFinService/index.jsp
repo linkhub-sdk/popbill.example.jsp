@@ -12,8 +12,13 @@
     <fieldset class="fieldset1">
         <legend>계좌관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/EasyFinService/getBankAccountMgtURL.jsp">getBankAccountMgtURL</a> - 계좌 관리 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/registBankAccount.jsp">registBankAccount</a> - 계좌 등록</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/updateBankAccount.jsp">updateBankAccount</a> - 계좌 정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getBankAccountInfo.jsp">getBankAccountInfo</a> - 계좌 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/listBankAccount.jsp">listBankAccount</a> - 계좌 목록 확인</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getBankAccountMgtURL.jsp">getBankAccountMgtURL</a> - 계좌 관리 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/closeBankAccount.jsp">closeBankAccount</a> - 계좌 정액제 해지요청</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/revokeCloseBankAccount.jsp">revokeCloseBankAccount</a> - 계좌 정액제 해지요청 취소</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
