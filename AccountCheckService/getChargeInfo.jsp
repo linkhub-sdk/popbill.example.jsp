@@ -12,8 +12,7 @@
 
 <%
 	/*
-	 * 연동회원의 휴폐업조회 API 서비스 과금정보를 확인합니다.
-   * - https://docs.popbill.com/closedown/java/api#GetChargeInfo
+	 * 연동회원의 예금주조회 API 서비스 과금정보를 확인합니다.
 	 */
 
   // 팝빌회원 사업자번호
@@ -23,7 +22,7 @@
 
 	try {
 
-		chargeInfo = closedownService.getChargeInfo(testCorpNum);
+		chargeInfo = accountCheckService.getChargeInfo(testCorpNum);
 
 	} catch (PopbillException e) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
