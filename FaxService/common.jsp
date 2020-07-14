@@ -3,7 +3,7 @@
 * 팝빌 팩스 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/fax/tutorial/jsp
-* - 업데이트 일자 : 2020-05-29
+* - 업데이트 일자 : 2020-07-14
 * - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991~2
 * - 연동 기술지원 이메일 : code@linkhub.co.kr
 *
@@ -32,3 +32,6 @@
 
 <%-- 인증토큰 발급 IP 제한 On/Off, ture-제한기능 사용(기본값-권장),  false-제한기능 미사용 --%>
 <jsp:setProperty name="faxService" property="IPRestrictOnOff" value="true"/>
+
+<%-- UseStaticIP : 팝빌 API 서비스 고정 IP 사용여부(GA), true-사용, false-미사용, 기본값(false) --%>
+<jsp:setProperty name="faxService" property="useStaticIP" value="false"/>
