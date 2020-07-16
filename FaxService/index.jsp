@@ -21,6 +21,8 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX.jsp">sendFAX</a> - 팩스 전송</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/sendFAX_Multi.jsp">sendFAX</a> - 팩스 동보전송</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/sendFAXBinary.jsp">sendFAXBinary</a> - 팩스 전송(Binary)</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/sendFAXBinary_Multi.jsp">sendFAXBinary</a> - 팩스 동보전송(Binary)</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX.jsp">resendFAX</a> - 팩스 재전송</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAXRN.jsp">resendFAX</a> - 팩스 재전송 (요청번호 할당)</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/resendFAX_Multi.jsp">resendFAX</a> - 팩스 동보재전송</li>
