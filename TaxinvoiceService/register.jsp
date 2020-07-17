@@ -48,9 +48,6 @@
   // 필수, {영수, 청구} 중 기재
   taxinvoice.setPurposeType("영수");
 
-  // 필수, 발행시점 {직접발행, 승인시자동발행} 중 기쟁
-  taxinvoice.setIssueTiming("직접발행");
-
   // 필수, 과세형태, {과세, 영세, 면세} 중 기재
   taxinvoice.setTaxType("과세");
 

@@ -51,7 +51,6 @@
                     <li> writeDate (작성일자) : <%=taxinvoice.getWriteDate() %></li>
                     <li> chargeDirection (과금방향) : <%=taxinvoice.getChargeDirection() %></li>
                     <li> issueType (발행형태) : <%=taxinvoice.getIssueType() %></li>
-                    <li> issueTiming (발행시점) : <%=taxinvoice.getIssueTiming() %></li>
                     <li> taxType (과세형태) : <%=taxinvoice.getTaxType() %></li>
                     <li> supplyCostTotal (공급가액 합계) : <%=taxinvoice.getSupplyCostTotal() %></li>
                     <li> taxTotal (세액 합계) : <%=taxinvoice.getTaxTotal() %></li>
