@@ -36,7 +36,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20190107");
+    taxinvoice.setWriteDate("20200717");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
