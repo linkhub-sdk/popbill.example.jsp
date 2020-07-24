@@ -40,7 +40,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20191022");
+	statement.setWriteDate("20200724");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -55,7 +55,7 @@
 	statement.setItemCode((short) 121);
 
 	// [필수] 문서번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20191022-013");
+	statement.setMgtKey("20200724-013");
 
 
 	/***************************************************************************
@@ -206,7 +206,7 @@
 
 	try {
 
-		CheckResponse = statementService.registIssue(testCorpNum, statement, memo, testUserID, emailSubject);
+		CheckResponse = statementService.registIssue(testCorpNum, statement, memo, testUserID);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
