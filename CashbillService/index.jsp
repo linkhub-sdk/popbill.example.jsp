@@ -48,6 +48,7 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getPrintURL.jsp">getPrintURL</a> - 현금영수증 인쇄 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getMassPrintURL.jsp">getMassPrintURL</a> - 현금영수증 대량 인쇄 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getMailURL.jsp">getMailURL</a> - 현금영수증 메일링크 URL</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getPDFURL.jsp">getPDFURL</a> - 현금영수증 PDF 다운로드 URL</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
