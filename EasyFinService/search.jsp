@@ -23,7 +23,7 @@
     String testUserID = "testkorea";
 
     // 수집 요청시 발급받은 작업아이디
-    String jobID = "019121913000000001";
+    String jobID = "020080717000000014";
 
     // 거래유형, I-입금 / O-출금
     String[] TradeType = {"I", "O"};
@@ -65,6 +65,7 @@
                 <li>perPage (페이지당 검색개수) : <%= result.getPerPage() %></li>
                 <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
                 <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
+                <li>lastScrapDT (최종 조회일시) : <%= result.getLastScrapDT() %></li>
             </ul>
             <%
                 if ( result != null ){
