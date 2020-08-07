@@ -26,10 +26,10 @@
 	String DType = "W";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20190901";
+	String SDate = "20200701";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20191231";
+	String EDate = "20200731";
 
 	// 세금계산서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
 	String[] State = {"3**", "4**", "6**"};
@@ -42,6 +42,12 @@
 
 	// 발행형태, N-정발행, R-역발행, T-위수탁
 	String[] IssueType = {"N", "R", "T"};
+
+  // 등록유형 배열, P-팝빌, H-홈택스, 또는 외부ASP
+	String[] RegType = {"P", "H"};
+
+  // 공급받는자 휴폐업상태 배열, N-미확인, 0-미등록, 1-사업, 2-폐업, 3-휴업
+	String[] CloseDownState = {"N", "0", "1", "2", "3"};
 
 	// 지연발행 여부, null- 전체조회, false-정상발행, true-지연발행
 	Boolean LateOnly = null;
@@ -57,6 +63,9 @@
 
 	// 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재, 공백시 전체조회
 	String QString = "";
+
+  // 문서번호 또는 국세청승인번호 조회
+	String MgtKey = "";
 
 	// 페이지번호
 	int Page = 1;
@@ -75,7 +84,7 @@
 	try {
 		searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType,
 				SDate, EDate, State, Type, TaxType, IssueType, LateOnly, TaxRegIDType, TaxRegID,
-				TaxRegIDYN, QString, Page, PerPage, Order, InterOPYN);
+				TaxRegIDYN, QString, Page, PerPage, Order, InterOPYN, RegType, CloseDownState, MgtKey);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
