@@ -46,6 +46,7 @@
                 <li>number (발신번호) : <%= senderNumberList[i].getNumber() %></li>
                 <li>representYN (대표번호 지정여부) : <%= senderNumberList[i].getRepresentYN() %></li>
                 <li>state (등록상태) : <%= senderNumberList[i].getState() %></li>
+                <li>memo (메모) : <%= senderNumberList[i].getMemo() %></li>
             </ul>
         </fieldset>
         <%
