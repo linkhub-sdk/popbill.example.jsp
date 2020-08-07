@@ -99,6 +99,7 @@
                     <li>altResultDT (대체문자 전송결과 수신일시) : <%=msgs.get(j).getAltResultDT()%></li>
                     <li>receiptNum (접수번호) : <%=msgs.get(j).getReceiptNum()%></li>
                     <li>requestNum (요청번호) : <%=msgs.get(j).getRequestNum()%></li>
+                    <li>interOPRefKey (파트너 지정키) : <%=msgs.get(j).getInterOPRefKey()%></li>
                 </ul>
             </fieldset>
             <%
