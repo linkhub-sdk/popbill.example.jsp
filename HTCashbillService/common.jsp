@@ -34,8 +34,11 @@
 <%-- 연동환경 설정값, 개발용(true), 상업용(false) --%>
 <jsp:setProperty name="htCashbillService" property="test" value="true"/>
 
-<%-- 인증토큰 발급 IP 제한 On/Off, ture-제한기능 사용(기본값-권장),  false-제한기능 미사용 --%>
+<%-- 인증토큰 발급 IP 제한 On/Off, true-제한기능 사용(기본값-권장),  false-제한기능 미사용 --%>
 <jsp:setProperty name="htCashbillService" property="IPRestrictOnOff" value="true"/>
 
 <%-- UseStaticIP : 팝빌 API 서비스 고정 IP 사용여부(GA), true-사용, false-미사용, 기본값(false) --%>
 <jsp:setProperty name="htCashbillService" property="useStaticIP" value="false"/>
+
+<%-- UseLocalTimeYN : 로컬 타임 사용여부 true-사용(기본값-권장), false-미사용 --%>
+<jsp:setProperty name="htCashbillService" property="useLocalTimeYN" value="true"/>
