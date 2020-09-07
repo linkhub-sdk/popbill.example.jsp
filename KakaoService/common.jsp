@@ -39,5 +39,5 @@
 <%-- UseStaticIP : 팝빌 API 서비스 고정 IP 사용여부(GA), true-사용, false-미사용, 기본값(false) --%>
 <jsp:setProperty name="kakaoService" property="useStaticIP" value="false"/>
 
-<%-- UseLocalTimeYN : 로컬서버 타임 사용여부 true-사용(기본값-권장), false-미사용 --%>
+<%-- UseLocalTimeYN : 인증토큰정보 로컬서버 시간 사용여부 true-사용(기본값-권장), false-미사용 --%>
 <jsp:setProperty name="kakaoService" property="useLocalTimeYN" value="true"/>
