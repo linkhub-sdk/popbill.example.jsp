@@ -19,6 +19,7 @@
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getBankAccountMgtURL.jsp">getBankAccountMgtURL</a> - 계좌 관리 팝업 URL</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/closeBankAccount.jsp">closeBankAccount</a> - 계좌 정액제 해지요청</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/revokeCloseBankAccount.jsp">revokeCloseBankAccount</a> - 계좌 정액제 해지요청 취소</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/deleteBankAccount.jsp">deleteBankAccount</a> - 종량제 계좌 삭제</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
