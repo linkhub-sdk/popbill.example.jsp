@@ -10,7 +10,7 @@
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.SMTIssueResponse"%>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.statement.Statement"%>
 <%@page import="com.popbill.api.statement.StatementDetail"%>
@@ -40,7 +40,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20200724");
+	statement.setWriteDate("20210706");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -55,7 +55,7 @@
 	statement.setItemCode((short) 121);
 
 	// [필수] 문서번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20200724-013");
+	statement.setMgtKey("20210706-JSP002");
 
 
 	/***************************************************************************
@@ -168,7 +168,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20191022");	// 거래일자
+	detail.setPurchaseDT("20210706");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -179,7 +179,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20191022");	 // 거래일자
+	detail.setPurchaseDT("20210706");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액
@@ -202,7 +202,7 @@
 
 	statement.setPropertyBag(propertyBag);
 
-	Response CheckResponse = null;
+	SMTIssueResponse CheckResponse = null;
 
 	try {
 
@@ -223,6 +223,7 @@
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+					<li>Response.invoiceNum : <%=CheckResponse.getInvoiceNum()%></li>
 				</ul>
 			</fieldset>
 		 </div>
