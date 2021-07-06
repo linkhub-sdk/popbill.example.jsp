@@ -86,6 +86,8 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getBalance.jsp">GetBalance</a> - 연동회원 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getChargeURL.jsp">GetChargeURL</a> - 연동회원 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 URL</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">GetPartnerURL</a> - 파트너 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUnitCost.jsp">GetUnitCost</a> - 발행 단가 확인</li>

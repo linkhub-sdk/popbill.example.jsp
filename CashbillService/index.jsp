@@ -68,6 +68,8 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 URL</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getUnitCost.jsp">getUnitCost</a> - 발행 단가 확인</li>
