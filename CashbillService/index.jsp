@@ -45,6 +45,7 @@
         <legend>현금영수증 보기/인쇄</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getPopUpURL.jsp">getPopUpURL</a> - 현금영수증 보기 URL</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getViewURL.jsp">getViewURL</a> - 현금영수증 보기 URL - 메뉴/버튼 제외</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getPrintURL.jsp">getPrintURL</a> - 현금영수증 인쇄 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getMassPrintURL.jsp">getMassPrintURL</a> - 현금영수증 대량 인쇄 URL</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getMailURL.jsp">getMailURL</a> - 현금영수증 메일링크 URL</li>
