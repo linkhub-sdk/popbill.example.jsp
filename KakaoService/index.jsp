@@ -27,6 +27,7 @@
         <legend>알림톡 템플릿 관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getATSTemplateMgtURL.jsp">getATSTemplateMgtURL</a> - 알림톡 템플릿관리 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getATSTemplate.jsp">getATSTemplate</a> - 알림톡 템플릿 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/listATSTemplate.jsp">listATSTemplate</a> - 알림톡 템플릿 목록 확인</li>
         </ul>
     </fieldset>
