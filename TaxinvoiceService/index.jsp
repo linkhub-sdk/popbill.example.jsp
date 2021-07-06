@@ -71,6 +71,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/assignMgtKey.jsp">AssignMgtKey</a> - 문서번호 할당</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listEmailConfig.jsp">ListEmailConfig</a> - 세금계산서 알림메일 전송목록 조회</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateEmailConfig.jsp">UpdateEmailConfig</a> - 세금계산서 알림메일 전송설정 수정</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getSendToNTSConfig.jsp">GetSendToNTSConfig</a> - 국세청 전송 옵션 설정 상태 확인</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
