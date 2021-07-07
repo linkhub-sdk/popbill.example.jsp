@@ -21,8 +21,8 @@
 	// 아이디, 6자 이상 50자 미만
 	joinInfo.setID("testkorea20161201");
 
-	// 비밀번호, 6자이상 20자 미만
-	joinInfo.setPWD("thisispassword");
+	// 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
+    joinInfo.setPassword("password123!@#");
 
 	// 링크아이디
 	joinInfo.setLinkID("TESTER");

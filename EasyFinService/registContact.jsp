@@ -25,8 +25,8 @@
 	// 담당자 아이디 (최대 50자)
 	contactInfo.setId("testkorea");
 
-	// 비밀번호 (최대 20자)
-	contactInfo.setPwd("this_is_password");
+	// 담당자 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
+    contactInfo.setPassword("password123!@#");
 
 	// 담당자명 (최대 100자)
 	contactInfo.setPersonName("담당자");
@@ -43,8 +43,8 @@
 	// 담당자 이메일 (최대 100자)
 	contactInfo.setEmail("test@test.com");
 
-	// 회사조회 권한여부, true-회사조회, false-개인조회
-	contactInfo.setSearchAllAllowYN(true);
+	// 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
+    contactInfo.setSearchRole(3);
 
 	Response CheckResponse = null;
 
