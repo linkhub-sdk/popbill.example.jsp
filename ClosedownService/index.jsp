@@ -38,6 +38,7 @@
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/ClosedownService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>

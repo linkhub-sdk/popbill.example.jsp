@@ -62,6 +62,7 @@
             <li><a href="${pageContext.request.contextPath}/FaxService/joinMember.jsp">joinMember</a> - 연동회원 신규가입</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>

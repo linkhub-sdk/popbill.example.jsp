@@ -86,6 +86,7 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/CashbillService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
         </ul>

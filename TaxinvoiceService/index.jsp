@@ -104,6 +104,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCorpInfo.jsp">GetCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateCorpInfo.jsp">UpdateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registContact.jsp">RegistContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">ListContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">UpdateContact</a> - 담당자 정보 수정</li>
         </ul>

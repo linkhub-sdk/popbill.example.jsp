@@ -64,6 +64,7 @@
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
         </ul>

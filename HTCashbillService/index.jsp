@@ -60,6 +60,7 @@
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/HTCashbillService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
         </ul>

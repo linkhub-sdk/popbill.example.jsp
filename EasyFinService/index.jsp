@@ -62,6 +62,7 @@
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
         </ul>
