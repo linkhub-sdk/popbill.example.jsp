@@ -53,7 +53,7 @@
 									<li>fax (팩스번호) : <%= contactInfo.getFax()%></li>
 									<li>tel (연락처) : <%= contactInfo.getTel()%></li>
 									<li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
-									<li>searchRole (담당자 권한) : <%= contactInfo.searchRole()%></li>
+									<li>searchRole (담당자 권한) : <%= contactInfo.getSearchRole()%></li>
 									<li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
 									<li>state (상태) : <%= contactInfo.getState()%></li>
 								</ul>
