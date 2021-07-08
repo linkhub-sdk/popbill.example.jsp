@@ -13,6 +13,7 @@
 <%
 	/*
 	 * 연동회원의 담당자 목록을 확인합니다.
+	 * -https://docs.popbill.com/accountcheck/java/api#ListContact
 	 */
 
     // 팝빌회원 사업자번호

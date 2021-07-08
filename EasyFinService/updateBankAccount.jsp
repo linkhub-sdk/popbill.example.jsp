@@ -14,6 +14,7 @@
 <%
 	/*
 	 * 팝빌에 등록된 은행 계좌정보를 수정합니다.
+	 * - https://docs.popbill.com/easyfinbank/java/api#UpdateBankAccount
 	 */
 
 	// 팝빌회원 사업자번호

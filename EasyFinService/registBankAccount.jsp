@@ -14,6 +14,7 @@
 <%
 	/*
 	 * 계좌조회 서비스를 이용할 은행계좌를 등록한다.
+	 * -https://docs.popbill.com/easyfinbank/java/api#RegistBankAccount
 	 */
 
 	// 팝빌회원 사업자번호
