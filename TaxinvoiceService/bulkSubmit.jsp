@@ -198,10 +198,10 @@
          *********************************************************************/
         
         // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-        taxinvoice.setModifyCode(null);
+        //taxinvoice.setModifyCode(null);
 
         // 원본세금계산서 국세청승인번호
-        taxinvoice.setOrgNTSConfirmNum("");
+        //taxinvoice.setOrgNTSConfirmNum("");
 
 
         /*********************************************************************
