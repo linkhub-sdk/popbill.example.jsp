@@ -14,6 +14,8 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkMgtKeyInUse.jsp">CheckMgtKeyInUse</a> - 문서번호 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registIssue.jsp">RegistIssue</a> - 즉시 발행</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/bulkSubmit.jsp">bulkSubmit</a> - 초대량 발행 접수</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/GetBulkResult.jsp">getBulkResult</a> - 초대량 접수결과 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/register.jsp">Register</a> - 임시저장</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/update.jsp">Update</a> - 수정</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/issue.jsp">Issue</a> - 발행</li>
