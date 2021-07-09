@@ -12,11 +12,11 @@
 
 <%
 	/*
-	 * 연동회원의 휴폐업조회 API 서비스 과금정보를 확인합니다.
-   * - https://docs.popbill.com/closedown/java/api#GetChargeInfo
+	 * 팝빌 휴폐업조회 API 서비스 과금정보를 확인합니다.
+	 * - https://docs.popbill.com/closedown/java/api#GetChargeInfo
 	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	ChargeInfo chargeInfo = null;
@@ -35,7 +35,7 @@
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
-      <fieldset class="fieldset1">
+			<fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
 					<li>unitCost (조회단가) : <%=chargeInfo.getUnitCost() %> </li>

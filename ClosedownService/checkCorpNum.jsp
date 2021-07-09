@@ -12,17 +12,17 @@
 
 <%
 	/*
-	 * 1건의 사업자에 대한 휴폐업여부를 조회합니다.
-   * - https://docs.popbill.com/closedown/java/api#CheckCorpNum
+	 * 사업자번호 1건에 대한 휴폐업정보를 확인합니다.
+	 * - https://docs.popbill.com/closedown/java/api#CheckCorpNum
 	 */
 
 	CorpState corpState = null;
 
-  	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	if ( request.getParameter("CorpNum") != null ) {
-    	// 조회할 사업자번호
+		// 조회할 사업자번호
 		String checkCorpNum = request.getParameter("CorpNum");
 
 		try{
