@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 현금영수증 1건의 상세정보를 조회합니다.
+	 * 현금영수증 1건의 상세정보를 확인합니다.
 	 * - https://docs.popbill.com/cashbill/java/api#GetDetailInfo
 	 */
 

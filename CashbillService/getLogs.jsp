@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 현금영수증 상태 변경이력을 확인합니다.
+	 * 현금영수증의 상태에 대한 변경이력을 확인합니다.
 	 * - https://docs.popbill.com/cashbill/java/api#GetLogs
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
   // 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210702-001";
 
 	CashbillLog[] cashbillLogs = null;
 

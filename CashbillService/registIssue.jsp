@@ -13,8 +13,7 @@
 
 <%
     /*
-     * 1건의 현금영수증을 [즉시발행]합니다.
-     * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
+     * 현금영수증 데이터를 팝빌에 전송하여 발행합니다.
      * - https://docs.popbill.com/cashbill/java/api#RegistIssue
      */
 
@@ -34,7 +33,7 @@
     Cashbill cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20191022-007");
+    cashbill.setMgtKey("20210703-007");
 
     // 문서형태, {승인거래, 취소거래} 중 기재
     cashbill.setTradeType("승인거래");

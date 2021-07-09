@@ -12,8 +12,7 @@
 
 <%
 	/*
-	 * [발행완료] 상태의 현금영수증을 [발행취소] 합니다.
-	 * - 발행취소는 국세청 전송전에만 가능합니다.
+	 * 국세청 전송 이전 "발행완료" 상태의 현금영수증을 "발행취소"하고 국세청 전송 대상에서 제외됩니다.
 	 * - https://docs.popbill.com/cashbill/java/api#CancelIssue
 	 */
 
@@ -21,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210706-001";
 
 	// 팝빌회원 아이디
 	String userID = "testkorea";

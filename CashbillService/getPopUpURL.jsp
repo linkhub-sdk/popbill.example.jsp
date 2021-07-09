@@ -11,16 +11,16 @@
 
 <%
 	/*
-	 * 1건의 현금영수증 보기 팝업 URL을 반환합니다.
-	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
-   * - https://docs.popbill.com/cashbill/java/api#GetPopUpURL
+	 * 팝빌 사이트와 동일한 현금영수증 1건의 상세 정보 페이지의 URL을 반환합니다.
+	 * - 반환되는 URL은 보안 정책상 30초 동안 유효하며, 시간을 초과한 후에는 해당 URL을 통한 페이지 접근이 불가합니다.
+	 * - https://docs.popbill.com/cashbill/java/api#GetPopUpURL
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210701-001";
 
 	String url = null;
 

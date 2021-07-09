@@ -13,23 +13,21 @@
 
 <%
 	/*
-	 * 1건의 (부분)취소현금영수증을 [즉시발행]합니다.
-	 * - 발행일 기준 오후 5시 이전에 발행된 현금영수증은 다음날 오후 2시에 국세청 전송결과를 확인할 수 있습니다.
-	 * - 현금영수증 국세청 전송 정책에 대한 정보는 "[현금영수증 API 연동매뉴얼] > 1.3. 국세청 전송정책"을 참조하시기 바랍니다.
-   * - https://docs.popbill.com/cashbill/java/api#RevokeRegistIssue
+	 * 취소 현금영수증을 발행하며 취소 현금영수증의 금액은 원본 금액을 넘을 수 없습니다.
+	 * - https://docs.popbill.com/cashbill/java/api#RevokeRegistIssue
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210703-001";
 
 	// 원본현금영수증 승인번호
 	String orgConfirmNum = "081648147";
 
 	// 원본현금영수증 거래일자
-	String orgTradeDate = "20190104";
+	String orgTradeDate = "20210701";
 
 	// 안내문자 전송여부
 	Boolean smssendYN = false;

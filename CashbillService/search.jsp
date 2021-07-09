@@ -12,10 +12,10 @@
 <%@page import="com.popbill.api.cashbill.CBSearchResult"%>
 
 <%
-  /*
-	 * 검색조건을 사용하여 현금영수증 목록을 조회합니다.
+    /*
+	 * 파트너가 지정한 검색조건에 해당하는 현금영수증를 조회합니다.
 	 * - https://docs.popbill.com/cashbill/java/api#Search
-   */
+     */
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
@@ -24,10 +24,10 @@
     String DType = "T";
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    String SDate = "20181201";
+    String SDate = "20210701";
 
     // 종료일자, 날짜형태(yyyyMMdd)
-    String EDate = "20190107";
+    String EDate = "20210705";
 
     // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
     String[] State = {"100", "2**", "3**", "4**"};

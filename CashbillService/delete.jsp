@@ -12,10 +12,9 @@
 
 <%
 	/*
-	 * 1건의 현금영수증을 삭제합니다.
+	 * 국세청 전송되지 않거나 실패된 현금영수증을 삭제합니다.
 	 * - 현금영수증을 삭제하면 사용된 문서번호(mgtKey)를 재사용할 수 있습니다.
-	 * - 삭제가능한 문서 상태 : [임시저장], [발행취소]
-   * - https://docs.popbill.com/cashbill/java/api#Delete
+	 * - https://docs.popbill.com/cashbill/java/api#Delete
 	 */
 
 	// 팝빌회원 사업자번호

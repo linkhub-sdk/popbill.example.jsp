@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 대량의 현금영수증 상태/요약 정보를 확인합니다. (최대 1000건)
+	 * 다수건의 현금영수증의 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
 	 * - https://docs.popbill.com/cashbill/java/api#GetInfos
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호 배열 최대(1000건)
-	String[] mgtKeyList = new String[] {"20190107-001", "20190107-002", "20190107-003"};
+	String[] mgtKeyList = new String[] {"20210701-001", "20210701-002", "20210701-003"};
 
 	CashbillInfo[] cashbillInfos = null;
 

@@ -12,15 +12,14 @@
 
 <%
 	/*
-	 * 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
-	 * - LinkID는 파트너 가입시 메일로 발급받은 인증정보 값입니다.
-   * - https://docs.popbill.com/cashbill/java/api#CheckIsMember
+	 * 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
+	 * - https://docs.popbill.com/cashbill/java/api#CheckIsMember
 	 */
 
 	// 조회할 사업자번호, '-'제외 10자리
 	String testCorpNum = "1234567890";
 
-	// 파트너 링크아이디
+	// 연동신청시 팝빌에서 발급받은 링크아이디
 	String linkID = "TESTER";
 
 	Response CheckResponse = null;

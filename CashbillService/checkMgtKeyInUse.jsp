@@ -11,16 +11,15 @@
 
 <%
 	/*
-	 * 현금영수증 문서번호 중복여부를 확인합니다.
-	 * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
-   * - https://docs.popbill.com/cashbill/java/api#CheckMgtKeyInUse
+	 * 파트너가 현금영수증 관리 목적으로 할당하는 문서번호 사용여부를 확인합니다.
+	 * - https://docs.popbill.com/cashbill/java/api#CheckMgtKeyInUse
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	// 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	// 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+	String mgtKey = "20210703-001";
 
 	boolean isInUse;
 
