@@ -13,19 +13,18 @@
 
 <%
 	/*
-	 * 검색조건을 사용하여 팩스전송 내역을 조회합니다.
-	 * - 최대 검색기간 : 6개월 이내
-   * - https://docs.popbill.com/fax/java/api#Search
+	 * 검색조건에 해당하는 팩스 전송내역 목록을 조회합니다. (최대 검색기간 : 2개월)
+	 * - https://docs.popbill.com/fax/java/api#Search
 	 */
 
 	// 펍발회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20181201";
+	String SDate = "20210703";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20190107";
+	String EDate = "20210703";
 
 	// 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};

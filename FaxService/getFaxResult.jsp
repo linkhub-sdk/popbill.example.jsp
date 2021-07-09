@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 팩스전송요청시 발급받은 접수번호(receiptNum)로 전송결과를 확인합니다
+     * 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
      * - https://docs.popbill.com/fax/java/api#GetFaxResult
      */
 
@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 전송요청(sendFAX)시 발급받은 접수번호
-    String receiptNum = "019010717501200001";
+    String receiptNum = "021010717501200001";
 
     FaxResult[] faxResults = null;
 

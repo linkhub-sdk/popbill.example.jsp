@@ -12,9 +12,8 @@
 
 <%
 	/*
-	 * 팩스전송요청시 할당한 전송요청번호(requestNum)로 팩스 예약전송건을 취소합니다.
-	 * - 예약전송 취소는 예약전송시간 10분전까지 가능하며, 팩스변환 이후 가능합니다.
-   * - https://docs.popbill.com/fax/java/api#CancelReserveRN
+	 * 파트너가 할당한 전송요청 번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
+	 * - https://docs.popbill.com/fax/java/api#CancelReserveRN
 	 */
 
 	// 팝빌회원 사업자번호

@@ -13,9 +13,9 @@
 
 <%
 	/*
-	 * 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
-	 * - 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
-   * - https://docs.popbill.com/fax/java/api#ResendFAXRN_Multi
+	 * 파트너가 할당한 전송요청 번호를 통해 다수건의 팩스를 재전송합니다. (최대 전송파일 개수: 20개) (최대 1,000건)
+	 * - 발신/수신 정보 미입력시 기존과 동일한 정보로 팩스가 전송되고, 접수일 기준 최대 60일이 경과되지 않는 건만 재전송이 가능합니다.
+	 * - https://docs.popbill.com/fax/java/api#ResendFAXRN_Multi
 	 */
 
 	// 팝빌회원 사업자번호
@@ -25,7 +25,7 @@
 	String testUserID = "testkorea";
 
 	// 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-	String originalFAXrequestNum = "20190108-001";
+	String originalFAXrequestNum = "20210703-001";
 
 	// 발신번호
 	String sendNum = "07040342991";

@@ -12,8 +12,7 @@
 
 <%
     /*
-     * 팩스전송요청시 발급받은 접수번호(receiptNum)로 팩스 예약전송건을 취소합니다.
-     * - 예약전송 취소는 예약전송시간 10분전까지 가능하며, 팩스변환 이후 가능합니다.
+     * 팝빌에서 반환받은 접수번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
      * - https://docs.popbill.com/fax/java/api#CancelReserve
      */
 
@@ -21,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 전송요청(sendFAX)시 발급받은 팩스접수번호
-    String receiptNum = "019010717505800001";
+    String receiptNum = "021010717505800001";
 
     Response CheckResponse = null;
 

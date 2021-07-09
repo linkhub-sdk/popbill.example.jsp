@@ -15,7 +15,7 @@
 
 <%
     /*
-     * [대량전송] 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * 동일한 팩스파일을 다수의 수신자에게 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
      * - 팩스전송 문서 파일포맷 안내 : https://docs.popbill.com/fax/format?lang=java
      * - https://docs.popbill.com/fax/java/api#SendFAX_Multi
      */

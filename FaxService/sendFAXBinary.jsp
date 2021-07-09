@@ -19,8 +19,9 @@
 
 <%
     /*
-     * 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+     * 전송할 파일의 바이너리 데이터를 팩스 1건 전송합니다. (최대 전송파일 개수: 20개)
      * - 팩스전송 문서 파일포맷 안내 : https://docs.popbill.com/fax/format?lang=java
+     * - https://docs.popbill.com/fax/java/api#SendFAXBinary
      */
 
     // 팝빌회원 사업자번호

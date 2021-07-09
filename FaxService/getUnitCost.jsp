@@ -11,8 +11,8 @@
 
 <%
 	/*
-	 * 팩스 전송단가를 확인합니다.
-   * - https://docs.popbill.com/fax/java/api#GetUnitCost
+	 * 팩스 전송시 과금되는 포인트 단가를 확인합니다.
+	 * - https://docs.popbill.com/fax/java/api#GetUnitCost
 	 */
 
 	// 팝빌회원 사업자번호
