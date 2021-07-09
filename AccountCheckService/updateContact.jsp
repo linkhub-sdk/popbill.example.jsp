@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 연동회원의 담당자 정보를 수정합니다.
+	 * 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 정보를 수정합니다.
 	 * -https://docs.popbill.com/accountcheck/java/api#UpdateContact
 	 */
 
@@ -45,7 +45,7 @@
 	contactInfo.setEmail("test@test.com");
 
 	// 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
-    contactInfo.setSearchRole(3);
+	contactInfo.setSearchRole(3);
 
 	Response CheckResponse = null;
 

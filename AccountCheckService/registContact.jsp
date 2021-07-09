@@ -13,11 +13,11 @@
 
 <%
 	/*
-	 * 연동회원의 담당자를 신규로 등록합니다.
+	 * 연동회원 사업자번호에 담당자(팝빌 로그인 계정)를 추가합니다.
 	 * -https://docs.popbill.com/accountcheck/java/api#RegistContact
 	 */
 
- 	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	ContactInfo contactInfo = new ContactInfo();
@@ -26,7 +26,7 @@
 	contactInfo.setId("testkorea");
 
 	// 담당자 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
-    contactInfo.setPassword("password123!@#");
+	contactInfo.setPassword("password123!@#");
 
 	// 담당자명 (최대 100자)
 	contactInfo.setPersonName("담당자");

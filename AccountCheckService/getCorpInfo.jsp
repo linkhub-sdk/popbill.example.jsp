@@ -16,7 +16,7 @@
 	 * -https://docs.popbill.com/accountcheck/java/api#GetCorpInfo
 	 */
 
-  	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	CorpInfo corpInfo = null;
