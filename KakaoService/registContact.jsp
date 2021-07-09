@@ -13,7 +13,7 @@
 
 <%
     /*
-     * 연동회원의 담당자를 신규로 등록합니다.
+     * 연동회원 사업자번호에 담당자(팝빌 로그인 계정)를 추가합니다.
      * - https://docs.popbill.com/kakao/java/api#RegistContact
      */
 
