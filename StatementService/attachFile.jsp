@@ -15,10 +15,10 @@
 
 <%
 	/*
-	 * 전자명세서에 첨부파일을 등록합니다.
+	 * "임시저장" 상태의 명세서에 1개의 파일을 첨부합니다. (최대 5개)
 	 * - 첨부파일 등록은 전자명세서가 [임시저장] 상태인 경우에만 가능합니다.
 	 * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
-   * - https://docs.popbill.com/statement/java/api#AttachFile
+	 * - https://docs.popbill.com/statement/java/api#AttachFile
 	 */
 
 	// 팝빌회원 사업자번호
@@ -28,7 +28,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-101";
+	String mgtKey = "20210701-101";
 
 	// 첨부파일 표시명
 	String fileName = "test.jpg";

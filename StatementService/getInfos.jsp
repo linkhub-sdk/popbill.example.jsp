@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 다수건의 전자명세서 상태/요약 정보를 확인합니다.
-   * - https://docs.popbill.com/statement/java/api#GetInfos
+	 * 다수건의 전자명세서 상태 및 요약정보 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
+	 * - https://docs.popbill.com/statement/java/api#GetInfos
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호 배열(최대 1000건)
-	String[] MgtKeyList = new String[] {"20190107-001", "20190107-002", "20190107-003"};
+	String[] MgtKeyList = new String[] {"20210703-001", "20210703-002", "20210703-003"};
 
 	StatementInfo[] statementInfos = null;
 

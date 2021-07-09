@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 전자명세서 관련 메일전송 항목에 대한 전송여부를 수정합니다.
-   * - https://docs.popbill.com/statement/java/api#UpdateEmailConfig
+	 * 전자명세서 관련 메일 항목에 대한 발송설정을 수정합니다.
+	 * - https://docs.popbill.com/statement/java/api#UpdateEmailConfig
 	 *
 	 * 메일전송유형
 	 * SMT_ISSUE : 공급받는자에게 전자명세서가 발행 되었음을 알려주는 메일입니다.

@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 검색조건을 사용하여 전자명세서 목록을 조회합니다.
+	 * 파트너가 지정한 검색조건에 해당하는 세금계산서를 조회합니다.
 	 * - https://docs.popbill.com/statement/java/api#Search
 	 */
 
@@ -24,10 +24,10 @@
 	String DType = "W";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20190901";
+	String SDate = "20210601";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20191231";
+	String EDate = "20210630";
 
 	// 전자명세서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
 	String[] State = {"1**", "2**", "3**", "4**", "5**", "6**"};

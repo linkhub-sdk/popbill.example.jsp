@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 1건의 전자명세서 상태/요약 정보를 확인합니다.
+	 * 전자명세서의 1건의 상태 및 요약정보 확인합니다.
 	 * - https://docs.popbill.com/statement/java/api#GetInfo
 	 */
 
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210704-001";
 
 	StatementInfo statementInfo = null;
 

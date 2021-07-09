@@ -17,21 +17,21 @@
 
 <%
 	/*
-	 * 1건의 전자명세서를 즉시발행 처리합니다.
-   * - https://docs.popbill.com/statement/java/api#RegistIssue
+	 * 작성된 전자명세서 데이터를 팝빌에 저장과 동시에 발행하여, "승인대기" 상태로 처리합니다.
+	 * - https://docs.popbill.com/statement/java/api#RegistIssue
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
-
-  // 팝빌회원 아이디
-  String testUserID = "testkorea";
+		
+	// 팝빌회원 아이디
+	String testUserID = "testkorea";
 
 	// 메모
 	String memo = "즉시발행 메모 ";
 
-  // 발행안내 메일 제목, 미기재시 기본 양식으로 전송
-  String emailSubject = "메일제목 테스트";
+	// 발행안내 메일 제목, 미기재시 기본 양식으로 전송  
+	String emailSubject = "메일제목 테스트";
 
 	/***************************************************************************
 	 *                               전자명세서 정보

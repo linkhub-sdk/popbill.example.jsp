@@ -12,10 +12,8 @@
 
 <%
 	/*
-	 * 전자명세서에 첨부된 파일을 삭제합니다.
-	 * - 파일을 식별하는 파일아이디는 첨부파일 목록(GetFileList API) 의 응답항목
-	 *   중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
-   * - https://docs.popbill.com/statement/java/api#DeleteFile
+	 * 삭제 가능한 상태의 전자명세서를 삭제합니다.
+	 * - https://docs.popbill.com/statement/java/api#DeleteFile
 	 */
 
 	// 팝빌회원 사업자번호
@@ -25,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210703-001";
 
 	// 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
 	String FileID = "8BA8ACEA-2247-44EA-90A3-C4248005D5FD.PBF";

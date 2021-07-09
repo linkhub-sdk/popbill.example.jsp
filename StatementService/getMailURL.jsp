@@ -11,9 +11,9 @@
 
 <%
 	/*
-	 * 공급받는자 메일링크 URL을 반환합니다.
-	 * - 메일링크 URL은 유효시간이 존재하지 않습니다.
-   * - https://docs.popbill.com/statement/java/api#GetMailURL
+	 * 안내메일과 관련된 전자명세서를 확인 할 수 있는 상세 페이지의 팝업 URL을 반환하며, 해당 URL은 메일 하단의 파란색 버튼의 링크와 같습니다.
+	 * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
+	 * - https://docs.popbill.com/statement/java/api#GetMailURL
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210703-001";
 
 	String url = null;
 

@@ -17,9 +17,9 @@
 
 <%
 	/*
-	 * 전자명세서 1건을 임시저장 처리합니다.
+	 * 작성된 전자명세서 데이터를 팝빌에 저장합니다.
 	 * - 임시저장후 발행(Issue API)를 호출해야 수신자에게 메일로 전달됩니다.
-   * - https://docs.popbill.com/statement/java/api#Register
+	 * - https://docs.popbill.com/statement/java/api#Register
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리
@@ -32,7 +32,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20190107");
+	statement.setWriteDate("20210703");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -47,7 +47,7 @@
 	statement.setItemCode((short) 121);
 
 	// [필수] 문서번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20190107-101");
+	statement.setMgtKey("20210703-101");
 
 
 	/***************************************************************************
@@ -160,7 +160,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20190107");	// 거래일자
+	detail.setPurchaseDT("20210703");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -171,7 +171,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20190107");	 // 거래일자
+	detail.setPurchaseDT("20210703");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액

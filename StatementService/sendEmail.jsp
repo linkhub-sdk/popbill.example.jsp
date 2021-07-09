@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 발행 안내메일을 재전송합니다.
-   * - https://docs.popbill.com/statement/java/api#SendEmail
+	 * "승인대기", "발행완료" 상태의 전자명세서와 관련된 발행 안내 메일을 재전송 합니다.
+	 * - https://docs.popbill.com/statement/java/api#SendEmail
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210703-001";
 
 	// 수신메일주소
 	String receiver = "test@test.com";

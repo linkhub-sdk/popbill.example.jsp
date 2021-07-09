@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 1건의 전자명세서를 [발행취소] 처리합니다.
-   * - https://docs.popbill.com/statement/java/api#Cancel
+	 * 발신자가 발행한 전자명세서를 발행취소합니다.
+	 * - https://docs.popbill.com/statement/java/api#Cancel
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210704-001";
 
 	// 팝빌회원 아이디
 	String userID = "testkorea";

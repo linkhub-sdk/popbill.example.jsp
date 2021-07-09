@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 1건의 [임시저장] 상태의 전자명세서를 발행처리합니다.
-   * - https://docs.popbill.com/statement/java/api#StmIssue
+	 * "임시저장" 상태의 전자명세서를 발행하여, "승인대기" 상태로 처리합니다.
+	 * - https://docs.popbill.com/statement/java/api#StmIssue
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 전자명세서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210703-001";
 
 	// 팝빌회원 아이디
 	String userID = "testkorea";

@@ -11,9 +11,9 @@
 
 <%
 	/*
-	 * 다수건의 전자명세서 인쇄팝업 URL을 반환합니다. (최대 100건)
-	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
-   * - https://docs.popbill.com/statement/java/api#GetMassPrintURL
+	 * 다수건의 전자명세서를 인쇄하기 위한 페이지의 팝업 URL을 반환합니다. (최대 100건)
+	 * - 반환되는 URL은 보안 정책상 30초 동안 유효하며, 시간을 초과한 후에는 해당 URL을 통한 페이지 접근이 불가합니다.
+	 * - https://docs.popbill.com/statement/java/api#GetMassPrintURL
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,7 +23,7 @@
 	int itemCode = 121;
 
 	// 문서번호 배열, 최대 100건
-	String[] mgtKeyList = new String[] {"20190107-001", "20190107-002", "20190107-003"};
+	String[] mgtKeyList = new String[] {"20210703-001", "20210703-002", "20210703-003"};
 
 	String url = null;
 
