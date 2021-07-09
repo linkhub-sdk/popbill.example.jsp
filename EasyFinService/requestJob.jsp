@@ -11,13 +11,12 @@
 
 <%
     /*
-    * 계좌 거래내역 수집을 요청한다.
-    * - 검색기간은 현재일 기준 90일 이내로만 요청할 수 있다.
+    * 계좌 거래내역을 확인하기 위해 팝빌에 수집요청을 합니다. 조회기간은 당일 기준으로 90일 이내로만 지정 가능합니다.
     * - https://docs.popbill.com/easyfinbank/java/api#RequestJob
     */
 
-  	// 팝빌회원 사업자번호
-  	String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호
+    String testCorpNum = "1234567890";
 
     // 은행코드
     String BankCode = "0048";

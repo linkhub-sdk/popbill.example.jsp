@@ -12,7 +12,8 @@
 
 <%
   /*
-   * 1시간 이내 요청한 수집 작업 목록을 확인한다.
+   * RequestJob(수집 요청)를 통해 반환 받은 작업아이디의 목록을 확인합니다. 
+   * - 반환 받은 작업아이디는 함수 호출 시점부터 1시간 동안 유효합니다.
    * - https://docs.popbill.com/easyfinbank/java/api#ListActiveJob
    */
 

@@ -12,7 +12,7 @@
 
 <%
     /*
-    * 팝빌에 등록된 은행계좌 목록을 반환한다.
+    * 팝빌에 등록된 계좌정보 목록을 반환합니다.
     * - https://docs.popbill.com/easyfinbank/java/api#ListBankAccount
     */
 

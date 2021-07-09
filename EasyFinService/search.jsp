@@ -12,7 +12,7 @@
 
 <%
     /*
-  	 * 계좌 거래내역을 조회한다.
+  	 * GetJobState(수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래 내역을 조회합니다.
      * - https://docs.popbill.com/easyfinbank/java/api#Search
   	 */
 
@@ -23,7 +23,7 @@
     String testUserID = "testkorea";
 
     // 수집 요청시 발급받은 작업아이디
-    String jobID = "020080717000000014";
+    String jobID = "021080717000000014";
 
     // 거래유형, I-입금 / O-출금
     String[] TradeType = {"I", "O"};

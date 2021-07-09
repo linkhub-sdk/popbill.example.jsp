@@ -12,7 +12,7 @@
 
 <%
     /*
-    * 계좌 거래내역에 메모를 저장한다.
+    * 한 건의 거래 내역에 메모를 저장합니다.
     * - https://docs.popbill.com/easyfinbank/java/api#SaveMemo
     */
 
@@ -23,7 +23,7 @@
     String TID = "01912181100000000120191210000003";
 
     // 메모
-    String Memo = "0191219-테스트";
+    String Memo = "02107-테스트";
 
 
   	Response saveResponse = null;

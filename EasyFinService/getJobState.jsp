@@ -12,7 +12,7 @@
 
 <%
   /*
-   * 계좌 거래내역 수집 상태를 확인한다.
+   * RequestJob(수집 요청)를 통해 반환 받은 작업아이디의 상태를 확인합니다.
    * - https://docs.popbill.com/easyfinbank/java/api#GetJobState
    */
 

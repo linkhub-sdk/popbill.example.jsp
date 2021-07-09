@@ -12,7 +12,7 @@
 
 <%
     /*
-    * 팝빌에 등록된 은행계좌의 정액제 해지를 요청합니다.
+    * 계좌의 정액제 해지를 요청합니다.
     * -https://docs.popbill.com/easyfinbank/java/api#CloseBankAccount
     */
 
