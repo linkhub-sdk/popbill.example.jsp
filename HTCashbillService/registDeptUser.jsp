@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 홈택스 현금영수증 부서사용자 계정을 등록한다.
-   * - https://docs.popbill.com/htcashbill/java/api#RegistDeptUser
+	 * 홈택스연동 인증을 위해 팝빌에 현금영수증 자료조회 부서사용자 계정을 등록합니다.
+	 * - https://docs.popbill.com/htcashbill/java/api#RegistDeptUser
 	 */
 
 	// 팝빌회원 사업자번호

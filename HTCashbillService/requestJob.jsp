@@ -12,9 +12,9 @@
 
 <%
 	/*
-	 * 현금영수증 매출/매입 내역 수집을 요청합니다
+	 * 홈택스에 신고된 현금영수증 매입/매출 내역 수집을 팝빌에 요청합니다.
 	 * - 수집 요청후 반환받은 작업아이디(JobID)의 유효시간은 1시간 입니다.
-   * - https://docs.popbill.com/htcashbill/java/api#RequestJob
+	 * - https://docs.popbill.com/htcashbill/java/api#RequestJob
 	 */
 
 	// 팝빌회원 사업자번호

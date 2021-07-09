@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 수집 요청 상태를 확인합니다.
+	 * 함수 RequestJob (수집 요청)를 통해 반환 받은 작업 아이디의 상태를 확인합니다.
 	 * - https://docs.popbill.com/htcashbill/java/api#GetJobState
 	 */
 

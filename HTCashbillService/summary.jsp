@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 현금영수증 매입/매출 내역의 수집 결과 요약정보를 조회합니다.
+	 * 함수  GetJobState(수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 현금영수증 매입/매출 내역의 요약 정보를 조회합니다.
 	 * - https://docs.popbill.com/htcashbill/java/api#Summary
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 수집 요청시 발급받은 작업아이디
-	String jobID = "016120111000000001";
+	String jobID = "021120111000000001";
 
 	// 거래용도 배열, P-소득공제용, C-지출증빙용
 	String[] TradeUsage = {"P", "C"};
