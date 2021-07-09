@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 전자세금계산서 1건의 상세정보를 확인합니다.
+     * 국세청 승인번호를 통해 수집한 전자세금계산서 1건의 상세정보를 반환합니다.
      * - https://docs.popbill.com/httaxinvoice/java/api#GetTaxinvoice
      */
 

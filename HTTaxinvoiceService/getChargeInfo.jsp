@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 홈택스연동 API 서비스 과금정보를 확인합니다.
-   * - https://docs.popbill.com/httaxinvoice/java/api#GetChargeInfo
+	 * 팝빌 홈택스연동(세금) API 서비스 과금정보를 확인합니다.
+	 * - https://docs.popbill.com/httaxinvoice/java/api#GetChargeInfo
 	 */
 
 	// 팝빌회원 사업자번호

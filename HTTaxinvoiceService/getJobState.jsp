@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 수집 요청 상태를 확인합니다.
+	 * 함수 (RequestJob – 수집 요청)를 통해 반환 받은 작업 아이디의 상태를 확인합니다.
 	 * - https://docs.popbill.com/httaxinvoice/java/api#GetJobState
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 수집 요청(RequestJob API) 호출시 반환받은 작업아이디
-	String jobID = "017030710000000001";
+	String jobID = "021030710000000001";
 
 	HTTaxinvoiceJobState jobState = null;
 

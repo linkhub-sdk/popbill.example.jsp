@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 팝빌에 등록된 전자세금계산서 부서사용자 아이디를 확인한다.
-   * - https://docs.popbill.com/httaxinvoice/java/api#CheckDeptUser
+	 * 홈택스연동 인증을 위해 팝빌에 등록된 전자세금계산서용 부서사용자 계정을 확인합니다.
+	 * - https://docs.popbill.com/httaxinvoice/java/api#CheckDeptUser
 	 */
 
 	// 팝빌회원 사업자번호

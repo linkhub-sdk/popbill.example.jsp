@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 전자세금계산서 매입/매출 내역의 수집 결과를 조회합니다.
+     * 함수 (GetJobState – 수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 전자세금계산서 매입/매출 내역을 조회합니다.
      * - https://docs.popbill.com/httaxinvoice/java/api#Search
      */
 
@@ -23,7 +23,7 @@
     String testUserID = "testkorea";
 
     // 수집 요청시 발급받은 작업아이디
-    String jobID = "019102217000000002";
+    String jobID = "021102217000000002";
 
     // 문서형태, N-일반, M-수정
     String[] Type = {"N", "M"};
