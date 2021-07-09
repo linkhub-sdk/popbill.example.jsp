@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 세금계산서 상태 변경이력을 확인합니다.
+	 * 세금계산서의 상태에 대한 변경이력을 확인합니다.
 	 * - https://docs.popbill.com/taxinvoice/java/api#GetLogs
 	 */
 
@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20161130-01";
+	String mgtKey = "20210708-01";
 
 	TaxinvoiceLog[] taxinvoiceLogs = null;
 

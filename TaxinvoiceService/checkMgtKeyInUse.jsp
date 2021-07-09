@@ -12,9 +12,9 @@
 
 <%
 	/*
-	 * 세금계산서 문서번호 중복여부를 확인합니다.
-	 * - 문서번호는 1~24자리로 숫자, 영문 '-', '_' 조합으로 구성할 수 있습니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
+	 * 파트너가 세금계산서 관리 목적으로 할당하는 문서번호의 사용여부를 확인합니다.
+	 * - 이미 사용 중인 문서번호는 중복 사용이 불가하고, 세금계산서가 삭제된 경우에만 문서번호의 재사용이 가능합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
 	 */
 
 	// 팝빌회원 사업자번호
@@ -23,8 +23,8 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 문서번호
-	String mgtKey = "20190107-001";
+	// 세금계산서 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+	String mgtKey = "20210708-001";
 
 	boolean isInUse;
 

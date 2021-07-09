@@ -13,8 +13,8 @@
 
 <%
 	/*
-	 * 1건의 전자명세서를 세금계산서에 첨부합니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#AttachStatement
+	 * 팝빌 전자명세서 API를 통해 발행한 전자명세서를 세금계산서에 첨부합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#AttachStatement
 	 */
 
 	// 팝빌회원 사업자번호
@@ -24,13 +24,13 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210708-001";
 
 	// 첨부할 전자명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	int subItemCode = 121;
 
 	// 첨부할 전자명세서 문서번호
-	String subMgtKey = "20190107-001";
+	String subMgtKey = "20210708-001";
 
 	Response CheckResponse = null;
 

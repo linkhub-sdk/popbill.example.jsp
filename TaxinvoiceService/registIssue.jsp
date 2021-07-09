@@ -16,7 +16,7 @@
 
 <%
 	/*
-	 * 1건의 세금계산서를 즉시발행 처리합니다.
+	 * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다. [참고] 팝빌 국세청 전송 정책
 	 * - https://docs.popbill.com/taxinvoice/java/api#RegistIssue
 	 */
 
@@ -45,7 +45,7 @@
 
 
 	// 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-	taxinvoice.setWriteDate("20200717");
+	taxinvoice.setWriteDate("20210704");
 
 	// 발행유형, {정발행, 역발행, 위수탁} 중 기재
 	taxinvoice.setIssueType("정발행");
@@ -74,7 +74,7 @@
 	taxinvoice.setInvoicerCorpName("공급자 상호");
 
 	// 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-	taxinvoice.setInvoicerMgtKey("20200717-22");
+	taxinvoice.setInvoicerMgtKey("20210704-22");
 
 	// 공급자 대표자성명
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -216,7 +216,7 @@
 	TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
 	detail.setSerialNum((short) 1);	// 일련번호
-	detail.setPurchaseDT("20190107");	// 거래일자
+	detail.setPurchaseDT("20210704");	// 거래일자
 	detail.setItemName("품목명1");	// 품목명
 	detail.setSpec("규격");	// 규격
 	detail.setQty("1");	// 수량
@@ -230,7 +230,7 @@
 	detail = new TaxinvoiceDetail();
 
 	detail.setSerialNum((short) 2);
-	detail.setPurchaseDT("20190107");
+	detail.setPurchaseDT("20210704");
 	detail.setItemName("품목명2");
 	detail.setSpec("규격");
 	detail.setQty("1");

@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 대용량 연계사업자 유통메일주소 목록을 반환합니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#GetEmailPublicKeys
+	 * 전자세금계산서 유통사업자의 메일 목록을 확인합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#GetEmailPublicKeys
 	 */
 
 	// 팝빌회원 사업자번호

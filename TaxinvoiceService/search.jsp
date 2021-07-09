@@ -14,8 +14,8 @@
 
 <%
 	/*
-	 * 검색조건을 사용하여 세금계산서 목록을 조회합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#Search
+	 * 파트너가 지정한 검색조건에 해당하는 세금계산서를 조회합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#Search
 	 */
 
 	// 팝빌회원 사업자번호
@@ -25,10 +25,10 @@
 	String DType = "W";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20200701";
+	String SDate = "202100601";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20200731";
+	String EDate = "202100630";
 
 	// 세금계산서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
 	String[] State = {"3**", "4**", "6**"};

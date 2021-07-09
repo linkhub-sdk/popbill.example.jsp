@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 1건의 세금계산서 상태/요약 정보를 확인합니다.
+	 * 세금계산서 1건의 상태 및 요약정보를 확인합니다.
 	 * - https://docs.popbill.com/taxinvoice/java/api#GetInfo
 	 */
 
@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210708-001";
 
 	TaxinvoiceInfo taxinvoiceInfo = null;
 

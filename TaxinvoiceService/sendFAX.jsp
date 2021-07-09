@@ -13,10 +13,9 @@
 
 <%
 	/*
-	 * 전자세금계산서를 팩스전송합니다.
+	 * 세금계산서를 팩스로 전송하는 함수로, 팝빌 사이트 [문자·팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인 할 수 있습니다.
 	 * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
-	 * - 전송내역 확인은 "팝빌 로그인" > [문자 팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인할 수 있습니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#SendFAX
+	 * - https://docs.popbill.com/taxinvoice/java/api#SendFAX
 	 */
 
 	// 팝빌회원 사업자번호
@@ -26,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210702-001";
 
 	// 발신번호
 	String senderNum = "070-4304-2001";

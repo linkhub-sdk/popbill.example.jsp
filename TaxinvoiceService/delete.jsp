@@ -13,10 +13,9 @@
 
 <%
 	/*
-	 * 1건의 전자세금계산서를 삭제합니다.
-	 * - 세금계산서를 삭제해야만 문서번호(mgtKey)를 재사용할 수 있습니다.
-	 * - 삭제가능한 문서 상태 : [임시저장], [발행취소], [발행예정 취소], [발행예정 거부]
-   * - https://docs.popbill.com/taxinvoice/java/api#Delete
+	 * 국세청으로 전송되지 않은 세금계산서를 삭제합니다.
+	 * - 삭제처리된 세금계산서의 문서번호는 재사용이 가능합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#Delete
 	 */
 
 	// 팝빌회원 사업자번호
@@ -26,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-002";
+	String mgtKey = "20210708-002";
 
 	Response CheckResponse = null;
 

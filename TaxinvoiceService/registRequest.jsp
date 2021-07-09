@@ -16,7 +16,7 @@
 
 <%
     /*
-     * [공급받는자]가 공급자에게 1건의 역발행 세금계산서를 [즉시 요청]합니다.
+     * 공급받는자가 작성한 세금계산서 데이터를 팝빌에 저장하고 공급자에게 송부하여 발행을 요청합니다.
      * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두 팝빌에 회원이여야 합니다.
      * - 역발행 즉시요청후 공급자가 [발행] 처리시 포인트가 차감되며 역발행 세금계산서 항목중 과금방향(ChargeDirection)에 기재한 값에 따라
      *   정과금(공급자과금) 또는 역과금(공급받는자과금) 처리됩니다.
@@ -36,7 +36,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20200717");
+    taxinvoice.setWriteDate("20210703");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
@@ -212,7 +212,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1); // 일련번호
-    detail.setPurchaseDT("20190107");   // 거래일자
+    detail.setPurchaseDT("20210703");   // 거래일자
     detail.setItemName("품목명1"); // 품목명
     detail.setSpec("규격");   // 규격
     detail.setQty("1"); // 수량
@@ -226,7 +226,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20190107");
+    detail.setPurchaseDT("20210703");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");

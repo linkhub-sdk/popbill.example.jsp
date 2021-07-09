@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 팝빌에 등록된 공인인증서의 유효성을 확인한다.
-   * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
+	 * 팝빌 인증서버에 등록된 인증서의 유효성을 확인합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리

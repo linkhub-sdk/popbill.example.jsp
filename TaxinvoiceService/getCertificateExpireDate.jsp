@@ -12,9 +12,7 @@
 
 <%
 	/*
-	 * 팝빌에 등록되어 있는 공인인증서의 만료일자를 확인합니다.
-	 * - 공인인증서가 갱신/재발급/비밀번호 변경이 되는 경우 해당 인증서를 재등록 하셔야 정상적으로
-	 *   API 통해 발행할 수 있습니다.
+	 * 팝빌 인증서버에 등록된 인증서의 만료일을 확인합니다.
    * - https://docs.popbill.com/taxinvoice/java/api#GetCertificateExpireDate
 	 */
 

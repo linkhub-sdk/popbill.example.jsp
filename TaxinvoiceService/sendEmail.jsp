@@ -13,8 +13,8 @@
 
 <%
 	/*
-	 * 세금계산서 안내 메일을 재전송합니다.
-   *  - https://docs.popbill.com/taxinvoice/java/api#SendEmail
+	 * 세금계산서와 관련된 안내 메일을 재전송 합니다.
+	 *  - https://docs.popbill.com/taxinvoice/java/api#SendEmail
 	 */
 
 	// 팝빌회원 사업자번호
@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210702-001";
 
 	// 메일주소
 	String emailAddr = "test@test.com";

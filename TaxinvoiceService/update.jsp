@@ -17,7 +17,7 @@
 
 <%
     /*
-     * [임시저장] 상태의 세금계산서의 항목을 수정합니다.
+     * "임시저장" 상태의 세금계산서를 수정합니다.
      * - https://docs.popbill.com/taxinvoice/java/api#Update
      */
 
@@ -25,7 +25,7 @@
     String testCorpNum = "1234567890";
 
     // 세금계산서 문서번호
-    String mgtKey = "20190107-02";
+    String mgtKey = "20210704-02";
 
     // 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
     MgtKeyType keyType = MgtKeyType.SELL;

@@ -13,7 +13,7 @@
 
 <%
 	/*
-	 * 다량의 세금계산서 상태/요약 정보를 확인합니다. (최대 1000건)
+	 * 다수건의 세금계산서의 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
 	 * - https://docs.popbill.com/taxinvoice/java/api#GetInfos
 	 */
 
@@ -24,7 +24,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 연동관리번호 배열 (최대 1000건)
-	String[] MgtKeyList = new String[] {"20190107-001","20190107-002"};
+	String[] MgtKeyList = new String[] {"20210708-001","20210708-002"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;
 

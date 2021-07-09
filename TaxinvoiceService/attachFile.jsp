@@ -16,10 +16,8 @@
 
 <%
 	/*
-	 * 세금계산서에 첨부파일을 등록합니다.
-	 * - [임시저장] 상태의 세금계산서만 파일을 첨부할 수 있습니다.
-	 * - 첨부파일은 최대 5개까지 등록할 수 있습니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#AttachFile
+	 * "임시저장" 상태의 세금계산서에 1개의 파일을 첨부합니다. (최대 5개)
+	 * - https://docs.popbill.com/taxinvoice/java/api#AttachFile
 	 */
 
 	// 팝빌회원 사업자번호
@@ -29,7 +27,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-100";
+	String mgtKey = "20210708-100";
 
 	// 첨부파일 표시명
 	String fileName = "test.jpg";
