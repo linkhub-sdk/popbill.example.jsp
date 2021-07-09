@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 연동회원의 담당자 목록을 확인합니다.
-   * - https://docs.popbill.com/message/java/api#ListContact
+	 * 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 목록을 확인합니다.
+	 * - https://docs.popbill.com/message/java/api#ListContact
 	 */
 
 	// 팝빌회원 사업자번호

@@ -15,10 +15,10 @@
 
 <%
 	/*
-	 * [대랑전송] MMS(포토)를 전송합니다.
-	 * - 메시지 내용이 2,000Byte 초과시 메시지 내용은 자동으로 제거됩니다.
+	 * 최대 2,000byte의 메시지와 이미지로 구성된 포토문자(MMS) 다수건 전송을 팝빌에 접수합니다. (최대 1,000건)
 	 * - 이미지 파일의 크기는 최대 300Kbtye (JPEG), 가로/세로 1000px 이하 권장
-   * - https://docs.popbill.com/message/java/api#SendMMS_Multi
+	 * - 모든 수신자에게 동일한 내용을 전송하거나(동보전송), 수신자마다 개별 내용을 전송할 수 있습니다(대량전송).
+	 * - https://docs.popbill.com/message/java/api#SendMMS_Multi
 	 */
 
 	// 팝빌회원 사업자번호

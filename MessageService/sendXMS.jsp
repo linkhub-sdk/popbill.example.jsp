@@ -13,8 +13,8 @@
 
 <%
 	/*
-	 * XMS(단문/장문 자동인식)를 전송합니다.
-	 *  - 메시지 내용의 길이(90byte)에 따라 SMS/LMS(단문/장문)를 자동인식하여 전송합니다.
+	 * 메시지 크기(90byte)에 따라 단문/장문(SMS/LMS)을 자동으로 인식하여 1건의 메시지를 전송을 팝빌에 접수합니다.
+	 * - 단문(SMS) = 90byte 이하의 메시지, 장문(LMS) = 2000byte 이하의 메시지.
 	 *  - https://docs.popbill.com/message/java/api#SendXMS
 	 */
 

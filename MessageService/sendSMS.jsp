@@ -13,9 +13,8 @@
 
 <%
 	/*
-	 * SMS(단문)를 전송합니다.
-	 * - 메시지 내용이 90Byte 초과시 메시지 내용은 자동으로 제거됩니다.
-   * - https://docs.popbill.com/message/java/api#SendSMS
+	 * 최대 90byte의 단문(SMS) 메시지 1건 전송을 팝빌에 접수합니다.
+	 * - https://docs.popbill.com/message/java/api#SendSMS
 	 */
 
 	// 팝빌회원 사업자번호

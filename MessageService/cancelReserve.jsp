@@ -12,16 +12,15 @@
 
 <%
 	/*
-	 * 문자전송요청시 발급받은 접수번호(receiptNum)로 예약문자 전송을 취소합니다.
-	 * - 예약취소는 예약전송시간 10분전까지만 가능합니다.
-   * - https://docs.popbill.com/message/java/api#CancelReserve
+	 * 팝빌에서 반환받은 접수번호를 통해 예약접수된 문자 메시지 전송을 취소합니다. (예약시간 10분 전까지 가능)
+	 * - https://docs.popbill.com/message/java/api#CancelReserve
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	// 예약문자전송 요청시 발급받은 접수번호
-	String receiptNum = "019010716000000004";
+	String receiptNum = "021010716000000004";
 
 	Response CheckResponse = null;
 

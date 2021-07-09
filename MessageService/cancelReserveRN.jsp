@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 문자전송요청시 할당한 전송요청번호(requestNum)로 전송상태를 확인합니다
+	 * 파트너가 할당한 전송요청 번호를 통해 예약접수된 문자 전송을 취소합니다. (예약시간 10분 전까지 가능)
 	 * - https://docs.popbill.com/message/java/api#CancelReserveRN
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 예약문자전송 요청시 할당한 전송요청번호
-	String requestNum = "20190107-002";
+	String requestNum = "20210703-002";
 
 	Response CheckResponse = null;
 

@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 문자전송요청시 할당한 전송요청번호(requestNum)로 전송상태를 확인합니다
+	 * 파트너가 할당한 전송요청 번호를 통해 문자 전송상태 및 결과를 확인합니다.
 	 * - https://docs.popbill.com/message/java/api#GetMessagesRN
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 문자전송 요청 시 할당한 전송요청번호(requestNum)
-	String requestNum = "20190108-001";
+	String requestNum = "20210703-001";
 
 	SentMessage[] sentMessages = null;
 

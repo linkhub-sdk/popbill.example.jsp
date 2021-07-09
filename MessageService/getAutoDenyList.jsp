@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 080 서비스 수신거부 목록을 확인합니다.
-   * - https://docs.popbill.com/message/java/api#GetAutoDenyList
+	 * 전용 080 번호에 등록된 수신거부 목록을 반환합니다.
+	 * - https://docs.popbill.com/message/java/api#GetAutoDenyList
 	 */
 
 	// 팝빌회원 사업자번호

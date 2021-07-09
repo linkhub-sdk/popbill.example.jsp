@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * 문자전송요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다
+	 * 팝빌에서 반환받은 접수번호를 통해 문자 전송상태 및 결과를 확인합니다.
 	 * - https://docs.popbill.com/message/java/api#GetMessages
 	 */
 
@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 문자전송 접수번호
-	String receiptNum = "019010809000000005";
+	String receiptNum = "021010809000000005";
 
 	SentMessage[] sentMessages = null;
 
