@@ -12,7 +12,7 @@
 
 <%
 	/*
-	 * "임시저장" 상태의 전자명세서를 발행하여, "승인대기" 상태로 처리합니다.
+	 * "임시저장" 상태의 전자명세서를 발행합니다.
 	 * - https://docs.popbill.com/statement/java/api#StmIssue
 	 */
 
