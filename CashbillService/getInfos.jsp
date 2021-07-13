@@ -49,7 +49,7 @@
 				<fieldset class="fieldset2">
 					<legend>현금영수증 상태/요약정보</legend>
 					<ul>
-						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
+						<li>itemKey (팝빌번호) : <%= cashbillInfo.getItemKey()%></li>
 						<li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
 						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
 						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>

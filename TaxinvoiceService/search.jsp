@@ -115,7 +115,7 @@
 						<fieldset class="fieldset2">
 							<legend>세금계산서 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
 								<ul>
-									<li>itemKey (세금계산서 아이템키) : <%= taxinvoiceInfo.getItemKey()%></li>
+									<li>itemKey (팝빌번호) : <%= taxinvoiceInfo.getItemKey()%></li>
 									<li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
 									<li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
 									<li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>

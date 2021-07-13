@@ -46,7 +46,7 @@
 				<fieldset class="fieldset2">
 					<legend>StatementInfo</legend>
 					<ul>
-						<li> itemKey(아이템키) : <%= statementInfo.getItemKey()%></li>
+						<li> itemKey(팝빌번호) : <%= statementInfo.getItemKey()%></li>
 						<li> itemCode(문서종류코드) : <%= statementInfo.getItemCode()%></li>
 						<li> stateCode(상태코드) : <%= statementInfo.getStateCode()%></li>
 						<li> taxType(세금형태) : <%= statementInfo.getTaxType()%></li>
