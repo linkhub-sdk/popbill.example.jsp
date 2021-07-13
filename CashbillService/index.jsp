@@ -14,9 +14,6 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/CashbillService/checkMgtKeyInUse.jsp">checkMgtKeyInUse</a> - 문서번호 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/registIssue.jsp">registIssue</a> - 즉시발행</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/register.jsp">register</a> - 임시저장</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/update.jsp">update</a> - 수정</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/issue.jsp">issue</a> - 발행</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/cancelIssue.jsp">cancelIssue</a> - 발행취소</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/delete.jsp">delete</a> - 삭제</li>
         </ul>
@@ -26,8 +23,6 @@
         <ul>
             <li><a href="${pageContext.request.contextPath}/CashbillService/revokeRegistIssue.jsp">revokeRegistIssue</a> - 즉시발행</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/revokeRegistIssue_part.jsp">revokeRegistIssue_part</a> - 부분) 즉시발행</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/revokeRegister.jsp">revokeRegister</a> - 임시저장</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/revokeRegister_part.jsp">revokeRegister_part</a> - 부분) 임시저장</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
