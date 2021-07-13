@@ -12,8 +12,8 @@
 
 <%
 	/*
-	 * 1건의 계좌번호에 대한 예금주성명을 조회합니다.
-	 * -https://docs.popbill.com/accountcheck/java/api#CheckAccountInfo
+	 * 1건의 예금주성명을 조회합니다.
+	 * - https://docs.popbill.com/accountcheck/java/api#CheckAccountInfo
 	 */
 
 	AccountCheckInfo accountInfo = null;
