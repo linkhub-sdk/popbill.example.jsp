@@ -14,7 +14,7 @@
 
 <%
 	/*
-	 * 파트너가 지정한 검색조건에 해당하는 세금계산서를 조회합니다.
+	 * 검색조건에 해당하는 세금계산서를 조회합니다.
 	 * - https://docs.popbill.com/taxinvoice/java/api#Search
 	 */
 
