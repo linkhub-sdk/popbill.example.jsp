@@ -23,7 +23,7 @@
 	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 연동관리번호 배열 (최대 1000건)
+	// 세금계산서 문서번호 배열 (최대 1000건)
 	String[] MgtKeyList = new String[] {"20210708-001","20210708-002"};
 
 	TaxinvoiceInfo[] taxinvoiceInfos = null;

@@ -49,7 +49,7 @@
 					<legend>StatementInfo</legend>
 					<ul>
 						<li> itemCode(문서종류코드) : <%= statement.getItemCode()%></li>
-						<li> mgtKey(관리번호) : <%= statement.getMgtKey()%></li>
+						<li> mgtKey(문서번호) : <%= statement.getMgtKey()%></li>
 						<li> formCode(맞춤양식 코드) : <%= statement.getFormCode()%></li>
 						<li> writeDate(작성일자) : <%= statement.getWriteDate()%></li>
 						<li> taxType(세금형태) : <%= statement.getTaxType ()%></li>
