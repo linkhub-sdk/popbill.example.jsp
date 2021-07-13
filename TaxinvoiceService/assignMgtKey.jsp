@@ -23,7 +23,7 @@
 	// 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
 	MgtKeyType keyType = MgtKeyType.SELL;
 
-	// 세금계산서 아이템키, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
+	// 세금계산서 팝빌번호, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
 	String itemKey = "021010316320100001";
 
 	// 할당할 문서번호, 숫자, 영문 '-', '_' 조합으로 1~24자리까지
