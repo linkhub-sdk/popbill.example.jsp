@@ -15,7 +15,6 @@
 	/*
 	 * 1건의 (부분)취소현금영수증을 [임시저장]합니다.
 	 * - [임시저장] 상태의 현금영수증은 발행(Issue API)을 호출해야만 국세청에 전송됩니다.
-	 * - https://docs.popbill.com/cashbill/java/api#RevokeRegister
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리

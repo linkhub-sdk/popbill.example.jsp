@@ -13,7 +13,6 @@
 <%
 	/*
 	 * [임시저장] 상태의 현금영수증을 [발행] 합니다.
-	 * - https://docs.popbill.com/cashbill/java/api#CBIssue
 	 */
 
 	// 팝빌회원 사업자번호

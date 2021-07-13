@@ -12,7 +12,6 @@
 <%
 	/*
 	 * 현금영수증 인쇄(공급받는자) URL을 반환합니다.
-	 * - https://docs.popbill.com/cashbill/java/api#GetPrintURL
 	 */
 
 	// 팝빌회원 사업자번호

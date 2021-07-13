@@ -13,8 +13,8 @@
 
 <%
     /*
-    * 검색조건에 해당하는 현금영수증를 조회합니다.
-    * - https://docs.popbill.com/cashbill/java/api#Search
+     * 검색조건에 해당하는 현금영수증을 조회합니다.
+     * - https://docs.popbill.com/cashbill/java/api#Search
      */
 
     // 팝빌회원 사업자번호
