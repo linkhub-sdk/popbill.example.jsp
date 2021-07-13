@@ -32,16 +32,16 @@
 	}
 %>
 	<body>
-	<div id="content">
-		<p class="heading1">Response </p>
-		<br/>
-		<fieldset class="fieldset1">
-			<legend>홈택스 공인인증서 로그인 테스트</legend>
-			<ul>
-				<li>Response.code : <%=CheckResponse.getCode()%></li>
-				<li>Response.message : <%=CheckResponse.getMessage()%></li>
-			</ul>
-		</fieldset>
-	</div>
+		<div id="content">
+			<p class="heading1">Response </p>
+			<br/>
+			<fieldset class="fieldset1">
+				<legend>홈택스 공인인증서 로그인 테스트</legend>
+				<ul>
+					<li>Response.code : <%=CheckResponse.getCode()%></li>
+					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+				</ul>
+			</fieldset>
+		</div>
 	</body>
 </html>

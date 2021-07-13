@@ -47,13 +47,12 @@
 							<li>number (발신번호) : <%= info.getNumber() %></li>
 							<li>representYN (대표번호 지정여부) : <%= info.getRepresentYN() %></li>
 							<li>state (등록상태) : <%= info.getState() %></li>
-              <li>memo (메모) : <%= info.getMemo() %></li>
+							<li>memo (메모) : <%= info.getMemo() %></li>
 						</ul>
 				</fieldset>
 					<%
 						}
 					%>
-
 			</fieldset>
 		 </div>
 </html>

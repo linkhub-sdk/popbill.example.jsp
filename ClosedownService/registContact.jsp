@@ -17,7 +17,7 @@
 	 * - https://docs.popbill.com/closedown/java/api#RegistContact
 	 */
 
- 	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
 	ContactInfo contactInfo = new ContactInfo();
@@ -44,7 +44,7 @@
 	contactInfo.setEmail("test@test.com");
 
 	// 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
-    contactInfo.setSearchRole(3);
+	contactInfo.setSearchRole(3);
 
 	Response CheckResponse = null;
 
@@ -69,6 +69,6 @@
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

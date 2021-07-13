@@ -35,15 +35,15 @@
     }
 %>
 <body>
-<div id="content">
-    <p class="heading1">Response</p>
-    <br/>
-    <fieldset class="fieldset1">
-        <legend>팝빌 로그인 URL 확인</legend>
-        <ul>
-            <li>URL : <%=url%></li>
-        </ul>
-    </fieldset>
-</div>
+    <div id="content">
+        <p class="heading1">Response</p>
+        <br/>
+        <fieldset class="fieldset1">
+            <legend>팝빌 로그인 URL 확인</legend>
+            <ul>
+                <li>URL : <%=url%></li>
+            </ul>
+        </fieldset>
+    </div>
 </body>
 </html>

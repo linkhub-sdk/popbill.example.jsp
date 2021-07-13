@@ -16,8 +16,8 @@
     * - https://docs.popbill.com/easyfinbank/java/api#SaveMemo
     */
 
-  	// 팝빌회원 사업자번호
-  	String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호
+    String testCorpNum = "1234567890";
 
     // 거래내역 아이디, Search API 응답항목중 TID
     String TID = "01912181100000000120191210000003";
@@ -25,18 +25,17 @@
     // 메모
     String Memo = "02107-테스트";
 
+    Response saveResponse = null;
 
-  	Response saveResponse = null;
+    try {
 
-  	try {
+        saveResponse = easyFinBankService.saveMemo(testCorpNum, TID, Memo);
 
-  		saveResponse = easyFinBankService.saveMemo(testCorpNum, TID, Memo);
-
-  	} catch (PopbillException pe) {
-  		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-  		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
-  		throw pe;
-  	}
+    } catch (PopbillException pe) {
+        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        throw pe;
+    }
 %>
 	<body>
 		<div id="content">
@@ -44,11 +43,11 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>계좌 거래내역 메모저장</legend>
-        <ul>
+				<ul>
 					<li>Response.code : <%=saveResponse.getCode()%></li>
 					<li>Response.message : <%=saveResponse.getMessage()%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

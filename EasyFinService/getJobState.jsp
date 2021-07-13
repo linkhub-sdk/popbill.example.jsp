@@ -11,10 +11,10 @@
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
-  /*
-   * RequestJob(수집 요청)를 통해 반환 받은 작업아이디의 상태를 확인합니다.
-   * - https://docs.popbill.com/easyfinbank/java/api#GetJobState
-   */
+	/*
+	 * RequestJob(수집 요청)를 통해 반환 받은 작업아이디의 상태를 확인합니다.
+	 * - https://docs.popbill.com/easyfinbank/java/api#GetJobState
+	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
@@ -52,6 +52,6 @@
 					<li>regDT (수집 요청일시) : <%=jobState.getRegDT() %> </li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

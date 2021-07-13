@@ -38,7 +38,7 @@
 			<fieldset class="fieldset1">
 				<legend>부서사용자 등록정보 삭제</legend>
 				<ul>
-          			<li>Response.code : <%=CheckResponse.getCode()%></li>
+					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 		  </fieldset>

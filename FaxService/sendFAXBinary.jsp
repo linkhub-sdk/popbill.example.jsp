@@ -51,24 +51,24 @@
 
     // 전송할 File InputStream 생성을 위한 샘플코드.
     File file = new File(application.getRealPath("/resources/test.jpg"));
-		InputStream targetStream = null;
-		try {
-			targetStream = new FileInputStream(file);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+    InputStream targetStream = null;
+    try {
+        targetStream = new FileInputStream(file);
+        } catch (FileNotFoundException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
 
-		// 파일정보 배열, 최대 20개까지 입력가능.
-		FaxUploadFile[] fileList = new FaxUploadFile[1];
-		FaxUploadFile uf = new FaxUploadFile();
+    // 파일정보 배열, 최대 20개까지 입력가능.
+    FaxUploadFile[] fileList = new FaxUploadFile[1];
+    FaxUploadFile uf = new FaxUploadFile();
 
-		// 파일명
-		uf.fileName = "test.jpg";
+    // 파일명
+    uf.fileName = "test.jpg";
 
-		// 파일 InputStream
-		uf.fileData = targetStream;
-		fileList[0] = uf;
+    // 파일 InputStream
+    uf.fileData = targetStream;
+    fileList[0] = uf;
 
     // 광고팩스 전송여부
     Boolean adsYN = false;

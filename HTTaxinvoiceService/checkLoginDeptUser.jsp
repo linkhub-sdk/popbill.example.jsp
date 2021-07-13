@@ -38,7 +38,7 @@
 			<fieldset class="fieldset1">
 				<legend>부서사용자 로그인 테스트</legend>
 				<ul>
-          <li>Response.code : <%=CheckResponse.getCode()%></li>
+					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 		  </fieldset>

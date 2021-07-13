@@ -40,6 +40,6 @@
 					<li>조회단가 : <%=unitCost%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

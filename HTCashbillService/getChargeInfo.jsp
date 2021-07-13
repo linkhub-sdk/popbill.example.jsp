@@ -32,17 +32,17 @@
 	}
 %>
 	<body>
-	<div id="content">
-		<p class="heading1">Response</p>
-		<br/>
-		<fieldset class="fieldset1">
-			<legend>과금정보 확인</legend>
-			<ul>
-				<li>unitCost (월정액 요금) : <%=chargeInfo.getUnitCost() %> </li>
-				<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
-				<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
-			</ul>
-		</fieldset>
-	</div>
+		<div id="content">
+			<p class="heading1">Response</p>
+			<br/>
+			<fieldset class="fieldset1">
+				<legend>과금정보 확인</legend>
+				<ul>
+					<li>unitCost (월정액 요금) : <%=chargeInfo.getUnitCost() %> </li>
+					<li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
+					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
+				</ul>
+			</fieldset>
+		</div>
 	</body>
 </html>

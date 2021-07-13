@@ -16,10 +16,10 @@
 	 * - https://docs.popbill.com/cashbill/java/api#GetLogs
 	 */
 
-  // 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-  // 현금영수증 문서번호
+	// 현금영수증 문서번호
 	String mgtKey = "20210702-001";
 
 	CashbillLog[] cashbillLogs = null;
@@ -40,12 +40,12 @@
 			<br/>
 			<fieldset class="fieldset1">
 				<legend>현금영수증 상태변경 이력 확인</legend>
-  				<%
-						CashbillLog cashbillLog = new CashbillLog();
+				<%
+					CashbillLog cashbillLog = new CashbillLog();
 
-						for ( int i = 0; i < cashbillLogs.length; i++ ) {
+					for ( int i = 0; i < cashbillLogs.length; i++ ) {
 							cashbillLog = cashbillLogs[i];
-				  %>
+				%>
 				<fieldset class="fieldset2">
 					<ul>
 						<li>docLogType (로그타입) : <%= cashbillLog.getDocLogType()%></li>
@@ -55,11 +55,11 @@
 						<li>regDT (등록일시) : <%=cashbillLog.getRegDT() %></li>
 						<li>ip (아이피) : <%=cashbillLog.getIp() %></li>
 					</ul>
-				</fieldset>
-  				<%
-  					}
-  				%>
+				</fieldset> 
+				<%
+							}
+				%>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

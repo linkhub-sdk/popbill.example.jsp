@@ -67,7 +67,6 @@
 			%>
 			</fieldset>
 			<br />
-		 </div>
-		 </script>
+		</div>
 	</body>
 </html>

@@ -46,9 +46,9 @@
 					for ( int i = 0; i < cashbillInfos.length; i++ ) {
 						cashbillInfo = cashbillInfos[i];
 				%>
-  				<fieldset class="fieldset2">
-  					<legend>현금영수증 상태/요약정보</legend>
-  					<ul>
+				<fieldset class="fieldset2">
+					<legend>현금영수증 상태/요약정보</legend>
+					<ul>
 						<li>itemKey (현금영수증 아이템키) : <%= cashbillInfo.getItemKey()%></li>
 						<li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
 						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
@@ -73,12 +73,12 @@
 						<li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
 						<li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
 						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
-  					</ul>
-  				</fieldset>
+					</ul>
+				</fieldset>
 				<%
 					}
 				%>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

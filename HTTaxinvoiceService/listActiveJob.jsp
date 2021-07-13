@@ -57,7 +57,7 @@
                     <li>regDT (수집 요청일시) : <%=jobList[i].getRegDT() %> </li>
                 </ul>
             </fieldset>
-            <%		}
+            <%  }
             }
             %>
         </fieldset>

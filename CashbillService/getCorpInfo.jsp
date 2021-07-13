@@ -45,6 +45,6 @@
 						<li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
 					</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

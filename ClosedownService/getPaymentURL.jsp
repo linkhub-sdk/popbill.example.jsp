@@ -19,8 +19,8 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
+	// 팝빌회원 아이디
+	String testUserID = "testkorea";
 
 	String url = null;
 
@@ -44,5 +44,5 @@
 				<li>url : <%=url%></li>
 			</ul>
 		</fieldset>
-	 </div>
+	</div>
 </html>

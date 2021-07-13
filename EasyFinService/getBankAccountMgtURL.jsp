@@ -40,7 +40,7 @@
 				<ul>
 					<li>url : <%=url%> </li>
 				</ul>
-		  </fieldset>
+			</fieldset>
 		</div>
 	</body>
 </html>

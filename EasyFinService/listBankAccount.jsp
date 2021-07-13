@@ -59,7 +59,7 @@
                     <li>unPaidYN (미수금 보유 여부) : <%=bankList[i].getUnPaidYN() %> </li>
                 </ul>
             </fieldset>
-            <%		}
+            <%  }
             }
             %>
         </fieldset>

@@ -41,7 +41,7 @@
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
-		  </fieldset>
+			</fieldset>
 		</div>
 	</body>
 </html>

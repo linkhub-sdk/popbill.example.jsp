@@ -41,19 +41,19 @@
 	}
 %>
 	<body>
-	<div id="content">
-		<p class="heading1">Response </p>
-		<br/>
-		<fieldset class="fieldset1">
-			<legend>수집 결과 요약정보 조회</legend>
-			<ul>
-				<li>count (수집 결과 건수) : <%= result.getCount() %></li>
-				<li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
-				<li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
-				<li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
-				<li>amountTotal (합계 금액) : <%= result.getAmountTotal() %></li>
-			</ul>
-		</fieldset>
-	</div>
+		<div id="content">
+			<p class="heading1">Response </p>
+			<br/>
+			<fieldset class="fieldset1">
+				<legend>수집 결과 요약정보 조회</legend>
+				<ul>
+					<li>count (수집 결과 건수) : <%= result.getCount() %></li>
+					<li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
+					<li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
+					<li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
+					<li>amountTotal (합계 금액) : <%= result.getAmountTotal() %></li>
+				</ul>
+			</fieldset>
+		</div>
 	</body>
 </html>

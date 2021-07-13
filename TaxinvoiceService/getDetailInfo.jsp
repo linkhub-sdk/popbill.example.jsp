@@ -16,8 +16,8 @@
 
 <%
 	/*
-     * 세금계산서 1건의 상세정보를 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#GetDetailInfo
+	 * 세금계산서 1건의 상세정보를 확인합니다.
+	 * - https://docs.popbill.com/taxinvoice/java/api#GetDetailInfo
 	 */
 
 	// 팝빌회원 사업자번호

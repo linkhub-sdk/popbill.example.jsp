@@ -38,10 +38,9 @@
 			<fieldset class="fieldset1">
 				<legend>홈택스 공인인증서 만료일시 확인</legend>
 				<ul>
-          <li>expireDate : <%=expireDate%> </li>
+					<li>expireDate : <%=expireDate%> </li>
 				</ul>
-
-		  </fieldset>
+			</fieldset>
 		</div>
 	</body>
 </html>

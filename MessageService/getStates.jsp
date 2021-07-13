@@ -13,7 +13,7 @@
 <%
 	/*
 	 * 문자전송에 대한 전송결과 요약정보를 확인합니다.
-   * - https://docs.popbill.com/message/java/api#GetStates
+	 * - https://docs.popbill.com/message/java/api#GetStates
 	 */
 
 	// 팝빌회원 사업자번호, '-'제외 10자리

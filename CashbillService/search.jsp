@@ -13,8 +13,8 @@
 
 <%
     /*
-	 * 파트너가 지정한 검색조건에 해당하는 현금영수증를 조회합니다.
-	 * - https://docs.popbill.com/cashbill/java/api#Search
+    * 파트너가 지정한 검색조건에 해당하는 현금영수증를 조회합니다.
+    * - https://docs.popbill.com/cashbill/java/api#Search
      */
 
     // 팝빌회원 사업자번호
@@ -86,8 +86,8 @@
 				<%
 					CashbillInfo cashbillInfo = null;
 
-          for ( int i = 0; i < searchResult.getList().size(); i++ ) {
-                    cashbillInfo = searchResult.getList().get(i);
+				for ( int i = 0; i < searchResult.getList().size(); i++ ) {
+					cashbillInfo = searchResult.getList().get(i);
 				%>
 				<fieldset class="fieldset2">
 					<legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
@@ -122,6 +122,6 @@
 					}
 				%>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

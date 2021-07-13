@@ -23,7 +23,7 @@
 	joinInfo.setID("testkorea20161201");
 
 	// 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
-    joinInfo.setPassword("password123!@#");
+	joinInfo.setPassword("password123!@#");
 
 	// 링크아이디
 	joinInfo.setLinkID("TESTER");

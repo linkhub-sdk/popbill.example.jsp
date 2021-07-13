@@ -13,7 +13,7 @@
 <%
 	/*
 	 * 팝빌 인증서버에 등록된 인증서의 만료일을 확인합니다.
-   * - https://docs.popbill.com/taxinvoice/java/api#GetCertificateExpireDate
+	 * - https://docs.popbill.com/taxinvoice/java/api#GetCertificateExpireDate
 	 */
 
 	// 팝빌회원 사업자번호

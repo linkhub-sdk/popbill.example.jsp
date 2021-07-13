@@ -57,13 +57,13 @@
 	//	reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
-  // 팩스전송 제목
-  String title = "팩스재전송 동보제목";
+	// 팩스전송 제목
+	String title = "팩스재전송 동보제목";
 
-  // 재전송 팩스의 전송요청번호
+	// 재전송 팩스의 전송요청번호
 	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
 	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-  // 재전송 팩스의 전송상태확인(GetSendDetailRN) / 예약전송취소(CancelReserveRN) 에 이용됩니다.
+	// 재전송 팩스의 전송상태확인(GetSendDetailRN) / 예약전송취소(CancelReserveRN) 에 이용됩니다.
 	String requestNum = "";
 
   String receiptNum = null;
@@ -71,7 +71,7 @@
 	try {
 
 		receiptNum = faxService.resendFAXRN(testCorpNum, requestNum, sendNum, senderName,
-      receivers, reserveDT, testUserID, title, originalFAXrequestNum);
+			receivers, reserveDT, testUserID, title, originalFAXrequestNum);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -89,6 +89,6 @@
 					<li>접수번호 : <%=receiptNum%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

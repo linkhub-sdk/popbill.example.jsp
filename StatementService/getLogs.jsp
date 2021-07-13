@@ -45,8 +45,8 @@
 				<legend>전자명세서 상태변경 이력 확인</legend>
 				<%
 						StatementLog statementLog = new StatementLog();
-
-            for ( int i = 0; i < statementLogs.length; i++ ) {
+	
+				for ( int i = 0; i < statementLogs.length; i++ ) {
 							statementLog = statementLogs[i];
 				%>
 				<fieldset class="fieldset2">

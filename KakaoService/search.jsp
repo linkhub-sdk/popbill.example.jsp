@@ -105,8 +105,8 @@
             </ul>
         </fieldset>
             <%
-					}
-			%>
+            }
+            %>
 </div>
 </body>
 </html>

@@ -35,7 +35,7 @@
 		<div id="content">
 			<p class="heading1">Response</p>
 			<br/>
-      <fieldset class="fieldset1">
+			<fieldset class="fieldset1">
 				<legend>과금정보 확인</legend>
 				<ul>
 					<li>unitCost (전송단가) : <%=chargeInfo.getUnitCost() %> </li>
@@ -43,6 +43,6 @@
 					<li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

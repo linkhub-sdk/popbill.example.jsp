@@ -45,6 +45,6 @@
 					<li>BizClass (종목) : <%=corpInfo.getBizClass() %> </li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

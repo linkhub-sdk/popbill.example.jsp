@@ -41,7 +41,7 @@
 				<%
 					ContactInfo contactInfo = null;
 
-        	for ( int i = 0; i < contactInfos.length; i++ ) {
+				for ( int i = 0; i < contactInfos.length; i++ ) {
 						contactInfo = contactInfos[i];
 				%>
 					<fieldset class="fieldset2">

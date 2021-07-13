@@ -13,14 +13,14 @@
 	/*
 	 * 연동회원 포인트 결제내역 확인을 위한 페이지의 팝업 URL을 반환합니다.
 	 * - 보안정책으로 인해 반환된 URL의 유효시간은 30초입니다.
-     * - https://docs.popbill.com/kakao/java/api#GetPaymentURL
+	 * - https://docs.popbill.com/kakao/java/api#GetPaymentURL
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
+	// 팝빌회원 아이디
+	String testUserID = "testkorea";
 
 	String url = null;
 

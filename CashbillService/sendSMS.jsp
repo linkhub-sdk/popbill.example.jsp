@@ -55,6 +55,6 @@
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

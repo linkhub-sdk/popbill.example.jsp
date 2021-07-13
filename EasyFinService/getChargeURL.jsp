@@ -41,8 +41,7 @@
     <fieldset class="fieldset1">
         <legend>팝빌 연동회원 포인트충전 팝업 URL 확인</legend>
         <ul>
-            <li>URL : <%=url%>
-            </li>
+            <li>URL : <%=url%></li>
         </ul>
     </fieldset>
 </div>

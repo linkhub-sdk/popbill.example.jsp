@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	//     연동신청시 팝빌에서 발급받은 링크아이디
+	// 연동신청시 팝빌에서 발급받은 링크아이디
 	String linkID = "TESTER";
 
 	Response CheckResponse = null;
@@ -45,6 +45,6 @@
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
 				</ul>
 			</fieldset>
-		 </div>
+		</div>
 	</body>
 </html>

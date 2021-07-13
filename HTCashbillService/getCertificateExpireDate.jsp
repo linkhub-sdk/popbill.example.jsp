@@ -40,7 +40,7 @@
 				<ul>
 					<li>expireDate : <%=expireDate%> </li>
 				</ul>
-		  </fieldset>
+			</fieldset>
 		</div>
 	</body>
 </html>

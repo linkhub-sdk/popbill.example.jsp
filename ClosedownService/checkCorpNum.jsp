@@ -68,18 +68,18 @@
 			%>
 
 			<br />
-		 </div>
+		</div>
 
-		 <script type ="text/javascript">
-		 window.onload=function(){
-			 document.getElementById('CorpNum').focus();
-		 }
+		<script type ="text/javascript">
+		window.onload=function(){
+			document.getElementById('CorpNum').focus();
+		}
 
-		 function search(){
+		function search(){
 			document.getElementById('corpnum_form').submit();
-		 }
+		}
 
-		 </script>
+		</script>
 
 	</body>
 </html>

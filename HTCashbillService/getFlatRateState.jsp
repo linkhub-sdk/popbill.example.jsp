@@ -48,7 +48,7 @@
 					<li>closeOnExpired (정액제 만료시 해제 여부) : <%=flatRateInfo.getCloseOnExpired()%> </li>
 					<li>unPaidYN (미수금 보유 여부) : <%=flatRateInfo.getUnPaidYN()%> </li>
 				</ul>
-		  </fieldset>
+			</fieldset>
 		</div>
 	</body>
 </html>
