@@ -35,7 +35,7 @@
 	// 첨부할 파일스트림
 	InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
-  	Response CheckResponse = null;
+	Response CheckResponse = null;
 
 	try {
 

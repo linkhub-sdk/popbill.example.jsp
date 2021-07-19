@@ -48,7 +48,7 @@
 				<fieldset class="fieldset2">
 					<legend>StatementInfo</legend>
 					<ul>
-						<li> itemCode(문서종류코드) : <%= statement.getItemCode()%></li>
+						<li> itemCode(명세서 코드) : <%= statement.getItemCode()%></li>
 						<li> mgtKey(문서번호) : <%= statement.getMgtKey()%></li>
 						<li> formCode(맞춤양식 코드) : <%= statement.getFormCode()%></li>
 						<li> writeDate(작성일자) : <%= statement.getWriteDate()%></li>

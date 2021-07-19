@@ -22,7 +22,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210710-001";
 
 	Response CheckResponse = null;
 

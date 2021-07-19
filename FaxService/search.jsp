@@ -21,10 +21,10 @@
 	String testCorpNum = "1234567890";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
-	String SDate = "20210703";
+	String SDate = "20210701";
 
 	// 종료일자, 날짜형식(yyyyMMdd)
-	String EDate = "20210703";
+	String EDate = "20210710";
 
 	// 전송상태 배열, 1-대기, 2-성공, 3-실패, 4-취소
 	String[] State = {"1", "2", "3", "4"};

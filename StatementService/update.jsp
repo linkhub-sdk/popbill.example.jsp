@@ -38,7 +38,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20190107");
+	statement.setWriteDate("20210701");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");

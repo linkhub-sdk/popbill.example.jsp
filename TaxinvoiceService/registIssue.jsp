@@ -17,6 +17,7 @@
 <%
 	/*
 	 * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
+	 * - 세금계산서 국세청 전송 정책 : https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java
 	 * - https://docs.popbill.com/taxinvoice/java/api#RegistIssue
 	 */
 
@@ -120,7 +121,7 @@
 	// 공급받는자 상호
 	taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-	// 공급받는자 문서번호, 역발행시 필수
+	// [역발행시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
 	taxinvoice.setInvoiceeMgtKey("");
 
 	// 공급받는자 대표자성명

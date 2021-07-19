@@ -36,7 +36,7 @@
 			<p class="heading1">Response </p>
 			<br/>
 			<fieldset class="fieldset1">
-				<legend>홈택스 공인인증서 만료일시 확인</legend>
+				<legend>홈택스연동 공인인증서 만료일시 확인</legend>
 				<ul>
 					<li>expireDate : <%=expireDate%> </li>
 				</ul>

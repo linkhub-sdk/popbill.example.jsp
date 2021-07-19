@@ -14,6 +14,7 @@
 <%
     /*
      * 현금영수증 데이터를 팝빌에 전송하여 발행합니다.
+     * - 현금영수증 국세청 전송 정책 : https://docs.popbill.com/cashbill/ntsSendPolicy?lang=java
      * - https://docs.popbill.com/cashbill/java/api#RegistIssue
      */
 

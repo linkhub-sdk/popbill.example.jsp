@@ -26,10 +26,10 @@
     String AccountNumber = "131020538600";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20190920";
+    String SDate = "20210701";
 
     // 종료일자, 닐짜형식(yyyyMMdd)
-    String EDate = "20191218";
+    String EDate = "20210710";
 
     String jobID = null;
 

@@ -39,7 +39,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>카카오톡 채널 계정관리 팝업 URL 확인</legend>
+        <legend>카카오톡 채널 관리 팝업 URL 확인</legend>
         <ul>
             <li>URL : <%=url%>
             </li>

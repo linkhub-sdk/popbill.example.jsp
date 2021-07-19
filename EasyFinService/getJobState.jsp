@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 수집 요청(RequestJob API) 호출시 반환받은 작업아이디
-	String jobID = "019121911000000001";
+	String jobID = "021121915000000002";
 
 	EasyFinBankJobState jobState = null;
 

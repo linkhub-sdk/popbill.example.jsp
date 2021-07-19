@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 국세청 승인번호
-	String NTSConfirmNum = "201703034100020300001af2";
+	String NTSConfirmNum = "202103034100020300001af2";
 
 	String url = null;
 

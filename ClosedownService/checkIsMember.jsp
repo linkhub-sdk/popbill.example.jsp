@@ -13,14 +13,13 @@
 <%
 	/*
 	 * 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
-	 * 연동신청시 팝빌에서 발급받은 링크아이디
 	 * - https://docs.popbill.com/closedown/java/api#CheckIsMember
 	 */
 
 	// 조회할 사업자번호 ("-"제외)
 	String testCorpNum = "1234567890";
 
-	// 링크아이디
+	// 연동신청시 팝빌에서 발급받은 링크아이디
 	String linkID = "TESTER";
 
 	Response CheckResponse = null;

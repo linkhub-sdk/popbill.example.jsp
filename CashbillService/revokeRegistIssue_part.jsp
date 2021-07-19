@@ -13,7 +13,8 @@
 
 <%
 	/*
-	 * 취소 현금영수증을 발행하며 취소 현금영수증의 금액은 원본 금액을 넘을 수 없습니다.
+	 * 취소 현금영수증을 발행하며 취소 현금영수증의 금액은 원본 금액을 넘을 수 없습니다.\
+	 * - 현금영수증 국세청 전송 정책 : https://docs.popbill.com/cashbill/ntsSendPolicy?lang=java
 	 * - https://docs.popbill.com/cashbill/java/api#RevokeRegistIssue
 	 */
 
