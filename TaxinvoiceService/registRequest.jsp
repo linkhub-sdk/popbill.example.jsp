@@ -200,7 +200,7 @@
     taxinvoice.setModifyCode(null);
 
     // 수정세금계산서 작성시 원본세금계산서의 국세청승인번호 기재
-  	taxinvoice.setOrgNTSConfirmNum("")
+  	taxinvoice.setOrgNTSConfirmNum("");
 
 
     /***************************************************************************

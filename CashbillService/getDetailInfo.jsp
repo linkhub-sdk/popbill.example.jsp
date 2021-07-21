@@ -50,8 +50,8 @@
 						<li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
 						<li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
 						<li>tradeType (문서형태) : <%=cashbill.getTradeType() %></li>
-						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
-						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
+						<li>tradeUsage (거래구분) : <%= cashbill.getTradeUsage()%></li>
+						<li>tradeOpt (거래유형) : <%= cashbill.getTradeOpt()%></li>
 						<li>taxationType (과세형태) : <%=cashbill.getTaxationType() %></li>
 						<li>totalAmount (거래금액) : <%=cashbill.getTotalAmount() %></li>
 						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>

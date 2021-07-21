@@ -37,7 +37,7 @@
 	Receiver[] receivers = null;
 
 	// 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1000건)
-	Receiver[] receivers = new Receiver[2];
+	//Receiver[] receivers = new Receiver[2];
 
 	// Receiver receiver1 = new Receiver();
 	// receiver1.setReceiveName("수신자1");		// 수신자명
