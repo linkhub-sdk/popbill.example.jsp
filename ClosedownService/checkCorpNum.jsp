@@ -51,16 +51,18 @@
 			%>
 				<fieldset class ="fieldset2">
 					<legend>휴폐업조회 결과</legend>
+          <p class="info"> state : null (알수없음), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>
+          <p class="info"> taxType : null (알수없음), 10 (일반과세자), 20 (면세과세자), 30 (간이과세자), 31 (간이과세자-세금계산서 발급사업자), 40 (비영리법인 또는 국가기관, 고유번호가 부여된 단체)</p>
 					<ul>
 						<li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
-						<li>type (사업자유형) : <%=corpState.getType()%></li>
+						<li>taxType (과세유형) : <%=corpState.getTaxType()%></li>
 						<li>state (휴폐업상태) : <%=corpState.getState()%></li>
 						<li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
 						<li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
 						<li>checkDate (확인일자) : <%=corpState.getCheckDate()%></li>
 					</ul>
-					<p class="info"> type : null (알수없음), 1 (부가가치세 일반과세자), 2 (부가가치세 면세과세자), 3 (부가치세 간이과세자) 4 (비영리법인 또는 국가기관, 고유번호가 부여된 단체)</p>
-					<p class="info"> state : null (알수없음), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>
+
+
 				</fieldset>
 
 			<%
