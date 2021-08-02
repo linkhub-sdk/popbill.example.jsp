@@ -13,7 +13,7 @@
 	/*
 	 * 현금영수증 PDF 파일을 다운 받을 수 있는 URL을 반환합니다.
 	 * - 반환되는 URL은 보안정책상 30초의 유효시간을 갖으며, 유효시간 이후 호출시 정상적으로 페이지가 호출되지 않습니다.
-	 * -https://docs.popbill.com/cashbill/java/api#GetPDFURL
+	 * - https://docs.popbill.com/cashbill/java/api#GetPDFURL
 	 */
 
 	// 팝빌회원 사업자번호

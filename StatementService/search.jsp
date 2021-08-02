@@ -85,8 +85,8 @@
 							<legend>StatementInfo [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
 							<ul>
 								<li>itemKey(팝빌번호) : <%= statementInfo.getItemKey()%></li>
-								<li>itemCode(문서 종류코드) : <%= statementInfo.getItemCode()%></li>
-								<li>invoiceNum(문서고유번호) : <%= statementInfo.getInvoiceNum()%></li>
+								<li>itemCode(명세서 코드) : <%= statementInfo.getItemCode()%></li>
+								<li>invoiceNum(팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
 								<li>mgtKey(파트너 문서번호) : <%= statementInfo.getMgtKey()%></li>
 
 								<li>stateCode(상태코드) : <%= statementInfo.getStateCode()%></li>

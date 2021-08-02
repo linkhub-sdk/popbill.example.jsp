@@ -13,7 +13,7 @@
 <%
     /*
     * 팝빌에 등록된 계좌 정보를 확인합니다.
-    * -https://docs.popbill.com/easyfinbank/java/api#GetBankAccountInfo
+    * - https://docs.popbill.com/easyfinbank/java/api#GetBankAccountInfo
     */
 
     // 팝빌회원 사업자번호

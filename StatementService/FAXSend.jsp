@@ -41,7 +41,7 @@
 	Statement statement = new Statement();
 
 	// [필수] 작성일자, 날짜형식(yyyyMMdd)
-	statement.setWriteDate("20190107");
+	statement.setWriteDate("20210701");
 
 	// [필수] {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
@@ -55,8 +55,8 @@
 	// [필수] 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	statement.setItemCode((short) 121);
 
-	// [필수] 문서번호, 최대 24자리 영문, 숫자, '-', '_' 조합으로 구성
-	statement.setMgtKey("20190107-06");
+	// [필수] 문서번호, 최대 24자리 영문 대소문자, 숫자, 특수문자('-','_')만 이용 가능 
+	statement.setMgtKey("20210701-06");
 
 
 	/***************************************************************************
@@ -167,7 +167,7 @@
 
 	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
 	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20190107");	// 거래일자
+	detail.setPurchaseDT("20210701");	// 거래일자
 	detail.setQty("1");								// 수량
 	detail.setSupplyCost("200000");		// 공급가액
 	detail.setTax("20000");						// 세액
@@ -178,7 +178,7 @@
 
 	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
 	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20190107");	 // 거래일자
+	detail.setPurchaseDT("20210701");	 // 거래일자
 	detail.setQty("1");								 // 수량
 	detail.setSupplyCost("200000");		 // 공급가액
 	detail.setTax("20000");						 // 세액
