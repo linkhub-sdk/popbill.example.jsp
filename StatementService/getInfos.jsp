@@ -52,7 +52,7 @@
                 <legend>StatementInfo [ <%=i+1%> / <%=statementInfos.length%> ]</legend>
                 <ul>
                     <li> itemKey(팝빌번호) : <%= statementInfo.getItemKey()%></li>
-                    <li> itemCode(문서종류코드) : <%= statementInfo.getItemCode()%></li>
+                    <li> itemCode(명세서 코드) : <%= statementInfo.getItemCode()%></li>
                     <li> stateCode(상태코드) : <%= statementInfo.getStateCode()%></li>
                     <li> taxType(세금형태) : <%= statementInfo.getTaxType()%></li>
                     <li> purposeType(영수/청구) : <%= statementInfo.getPurposeType()%></li>

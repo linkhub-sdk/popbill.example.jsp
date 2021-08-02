@@ -61,7 +61,7 @@
 
                     <li>modifyCode (수정 사유코드) : <%=taxinvoiceInfo.getModifyCode() %> </li>
                     <li>invoicerCorpNum (공급자 사업자번호) : <%=taxinvoiceInfo.getInvoicerCorpNum() %> </li>
-                    <li>invoicerMgtKey (공급자 관리번호) : <%=taxinvoiceInfo.getInvoicerMgtKey() %> </li>
+                    <li>invoicerMgtKey (공급자 문서번호) : <%=taxinvoiceInfo.getInvoicerMgtKey() %> </li>
                     <li>invoicerTaxRegID (공급자 종사업장번호) : <%=taxinvoiceInfo.getInvoicerTaxRegID() %> </li>
                     <li>invoicerCorpName (공급자 상호) : <%=taxinvoiceInfo.getInvoicerCorpName() %> </li>
                     <li>invoicerCEOName (공급자 대표자 성명) : <%=taxinvoiceInfo.getInvoicerCEOName() %> </li>
@@ -73,7 +73,7 @@
 
                     <li>invoiceeCorpNum (공급받는자 사업자번호) : <%=taxinvoiceInfo.getInvoiceeCorpNum() %> </li>
                     <li>invoiceeType (공급받는자 구분) : <%=taxinvoiceInfo.getInvoiceeType() %> </li>
-                    <li>invoiceeMgtKey (공급받는자 관리번호) : <%=taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
+                    <li>invoiceeMgtKey (공급받는자 문서번호) : <%=taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
                     <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <%=taxinvoiceInfo.getInvoiceeTaxRegID() %> </li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%=taxinvoiceInfo.getInvoiceeCorpName() %> </li>
                     <li>invoiceeCEOName (공급받는자 대표자 성명) : <%=taxinvoiceInfo.getInvoiceeCEOName() %> </li>

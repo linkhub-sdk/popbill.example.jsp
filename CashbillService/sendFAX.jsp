@@ -21,7 +21,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210701-001";
 
 	// 발신자 번호
 	String sender = "07043042991";

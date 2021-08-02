@@ -29,7 +29,7 @@
 	int subItemCode = 121;
 
 	// 첨부해제할 전자명세서 문서번호
-	String subMgtKey = "20190107-101";
+	String subMgtKey = "20210701-101";
 
 	Response CheckResponse = null;
 

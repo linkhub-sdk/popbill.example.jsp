@@ -21,13 +21,13 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-	String mgtKey = "20190107-001";
+	String mgtKey = "20210702-001";
 
 	// 원본현금영수증 승인번호
 	String orgConfirmNum = "081648147";
 
 	// 원본현금영수증 거래일자
-	String orgTradeDate = "20190104";
+	String orgTradeDate = "20210701";
 
 	// 안내문자 전송여부
 	Boolean smssendYN = false;

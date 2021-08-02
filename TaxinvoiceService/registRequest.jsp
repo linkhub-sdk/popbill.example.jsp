@@ -36,7 +36,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20210703");
+    taxinvoice.setWriteDate("20210701");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
@@ -64,7 +64,7 @@
     // 공급자 상호
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
-    // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+    // 공급자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     taxinvoice.setInvoicerMgtKey("");
 
     // 공급자 대표자성명
@@ -112,8 +112,8 @@
     // 공급받는자 상호
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-    // [역발행시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoiceeMgtKey("100-20190107");
+    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    taxinvoice.setInvoiceeMgtKey("100-20210701");
 
     // 공급받는자 대표자성명
     taxinvoice.setInvoiceeCEOName("공급받는자 대표자 성명");

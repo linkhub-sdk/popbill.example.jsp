@@ -28,7 +28,7 @@
 	String orgConfirmNum = "081648147";
 
 	// 원본현금영수증 거래일자
-	String orgTradeDate = "20190104";
+	String orgTradeDate = "20210701";
 
 	Response CheckResponse = null;
 

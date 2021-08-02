@@ -25,7 +25,7 @@
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
-	String mgtKey = "20190107-100";
+	String mgtKey = "20210701-100";
 
 	AttachedFile[] attachedFiles = null;
 
