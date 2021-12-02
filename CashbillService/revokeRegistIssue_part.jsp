@@ -23,13 +23,13 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-	String mgtKey = "20210703-001";
+	String mgtKey = "20211202-301";
 
 	// 원본현금영수증 승인번호
-	String orgConfirmNum = "081648147";
+	String orgConfirmNum = "TB0000033";
 
 	// 원본현금영수증 거래일자
-	String orgTradeDate = "20210701";
+	String orgTradeDate = "20210819";
 
 	// 안내문자 전송여부
 	Boolean smssendYN = false;
@@ -78,6 +78,8 @@
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+					<li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
+					<li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
 				</ul>
 			</fieldset>
 		 </div>
