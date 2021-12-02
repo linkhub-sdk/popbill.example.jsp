@@ -18,14 +18,16 @@
 
 	AccountCheckInfo accountInfo = null;
 
-	// 팝빌회원 사업자번호
+	// [필수] 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-
-	// 기관코드
+	/*
+	 * [필수] 기관코드
+	 * - https://docs.popbill.com/accountcheck/?lang=java#BankCodeList
+	 */
 	String bankCode = "0004";
 
-	// 계좌번호
+	// [필수] 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
 	String accountNumber = "1234567890";
 
 	try{

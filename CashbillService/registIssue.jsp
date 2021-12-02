@@ -34,7 +34,7 @@
     Cashbill cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20210703-007");
+    cashbill.setMgtKey("20211202-002");
 
     // 문서형태, {승인거래, 취소거래} 중 기재
     cashbill.setTradeType("승인거래");
@@ -130,6 +130,8 @@
 				<ul>
 					<li>Response.code : <%=CheckResponse.getCode()%></li>
 					<li>Response.message : <%=CheckResponse.getMessage()%></li>
+					<li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
+					<li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
 				</ul>
 			</fieldset>
 		 </div>
