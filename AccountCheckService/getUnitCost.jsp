@@ -18,11 +18,14 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
+	// 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+	String ServiceType = "성명";
+
 	float unitCost;
 
 	try {
 
-		unitCost = accountCheckService.getUnitCost(testCorpNum);
+		unitCost = accountCheckService.getUnitCost(testCorpNum, ServiceType);
 
 	} catch (PopbillException pe) {
 		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

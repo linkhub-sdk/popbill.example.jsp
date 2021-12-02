@@ -13,6 +13,7 @@
         <legend>예금주조회</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/checkAccountInfo.jsp">checkAccountInfo</a> - 예금주 성명조회</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/checkDepositorInfo.jsp">checkDepositorInfo</a> - 예금주 실명조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

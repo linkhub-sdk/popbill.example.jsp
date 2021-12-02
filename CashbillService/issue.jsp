@@ -7,7 +7,7 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.CBIssueResponse"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
@@ -24,7 +24,7 @@
 	// 팝빌회원 아이디
 	String userID = "testkorea";
 
-	Response CheckResponse = null;
+	CBIssueResponse CheckResponse = null;
 
 	try {
 

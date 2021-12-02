@@ -26,7 +26,7 @@
 	String bankCode = "0004";
 
 	// 계좌번호
-	String accountNumber = "94324511758";
+	String accountNumber = "1234567890";
 
 	try{
 		accountInfo = accountCheckService.CheckAccountInfo(testCorpNum, bankCode, accountNumber);

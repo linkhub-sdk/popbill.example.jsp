@@ -7,7 +7,7 @@
 	</head>
 
 <%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.CBIssueResponse"%>
 <%@page import="com.popbill.api.PopbillException"%>
 <%@page import="com.popbill.api.cashbill.Cashbill"%>
 
@@ -56,7 +56,7 @@
 	String totalAmount = "3300";
 
 
-	Response CheckResponse = null;
+	CBIssueResponse CheckResponse = null;
 
 	try {
 
