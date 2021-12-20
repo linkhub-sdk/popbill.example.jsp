@@ -13,25 +13,31 @@
 <%
 	/*
 	 * 1건의 예금주실명을 조회합니다.
-	 * - https://docs.popbill.com/accountcheck/java/api#depositorCheckInfo
+	 * - https://docs.popbill.com/accountcheck/java/api#CheckDepositorInfo
 	 */
 
 	DepositorCheckInfo depositorCheckInfo = null;
 
-	// 팝빌회원 사업자번호
+	// [필수] 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-
-	// 기관코드
+	/*
+	 * [필수] 기관코드
+	 * - https://docs.popbill.com/accountcheck/?lang=java#BankCodeList
+	 */
 	String BankCode = "0004";
 
-	// 계좌번호
+	// [필수] 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
 	String AccountNumber = "94324511758";
 	
-    //등록번호 유형
+	// [필수] 등록번호 유형 ( P / B 중 택 1 ,  P = 개인, B = 사업자)
     String IdentityNumType ="P";
     
-    //등록번호
+	/*
+	 * [필수] 등록번호
+	 * - IdentityNumType 값이 "B" 인 경우 (하이픈 '-' 제외  사업자번호(10)자리 입력 )
+	 * - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
+	 */
     String IdentityNum = "901112";
 
 	try{
