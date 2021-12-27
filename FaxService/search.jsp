@@ -93,6 +93,7 @@
 						<li>title (팩스제목) : <%=faxResult.getTitle()%></li>
 						<li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
 						<li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
+						<li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
 						<li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
 						<li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
 						<li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
