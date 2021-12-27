@@ -61,7 +61,8 @@
     cashbill.setFranchiseCorpNum(testCorpNum);
 
     // 가맹점 종사업장 번호
-    cashbill.setFranchiseTaxRegID("0001");
+    // └ 다수건 검색시 콤마(",")로 구분. 예) 1234,1000
+    cashbill.setFranchiseTaxRegID("");
 
     // 가맹점 상호
     cashbill.setFranchiseCorpName("가맹점 상호_수정");
