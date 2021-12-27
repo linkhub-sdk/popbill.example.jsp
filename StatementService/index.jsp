@@ -47,6 +47,7 @@
         <legend>부가기능</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/StatementService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getSealURL.jsp">getSealURL</a> - 인감 및 첨부문서 등록 URL</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/attachFile.jsp">attachFile</a> - 첨부파일 추가</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/deleteFile.jsp">deleteFile</a> - 첨부파일 삭제</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getFiles.jsp">getFiles</a> - 첨부파일 목록 확인</li>

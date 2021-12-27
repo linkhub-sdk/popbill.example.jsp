@@ -49,7 +49,8 @@
                 <li>templateName (템플릿 제목) : <%=aTSTemplates[i].getTemplateName()%></li>
                 <li>template (템플릿 내용) : <%=aTSTemplates[i].getTemplate()%></li>
                 <li>plusFriendID (카카오톡 채널 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
-
+                <li>ads (광고메시지) : ${aTSTemplates[i].getAds()}</li>
+                <li>appendix(부가메시지) : ${aTSTemplates[i].getAppendix()}</li>
                 <% if (aTSTemplates[i].getBtns() != null) {
                     List<KakaoButton> btns = aTSTemplates[i].getBtns();
                         for (int j = 0; j < btns.size(); j++) { %>

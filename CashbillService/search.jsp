@@ -24,10 +24,10 @@
     String DType = "T";
 
     // 시작일자, 날짜형태(yyyyMMdd)
-    String SDate = "20210701";
+    String SDate = "20211227";
 
     // 종료일자, 날짜형태(yyyyMMdd)
-    String EDate = "20210705";
+    String EDate = "20211227";
 
     // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
     String[] State = {"100", "2**", "3**", "4**"};
@@ -47,6 +47,9 @@
     // 현금영수증 식별번호 조회
     String QString = "";
 
+    // 현금영수증 종사업장 번호
+    String FranchiseTaxRegID ="0001,0002";
+
     // 페이지 번호
     int Page = 1;
 
@@ -61,7 +64,7 @@
     try {
 
         searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
-                TradeType, TradeUsage, TaxationType, TradeOpt, QString, Page, PerPage, Order);
+                TradeType, TradeUsage, TaxationType, TradeOpt, QString, Page, PerPage, Order, FranchiseTaxRegID);
 
     } catch (PopbillException pe) {
         //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

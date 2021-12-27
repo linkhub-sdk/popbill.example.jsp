@@ -3,7 +3,7 @@
 * 팝빌 전자명세서 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/statement/tutorial/jsp
-* - 업데이트 일자 : 2021-12-02
+* - 업데이트 일자 : 2021-12-27
 * - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991~2
 * - 연동 기술지원 이메일 : code@linkhub.co.kr
 *

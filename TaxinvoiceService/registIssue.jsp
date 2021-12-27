@@ -46,7 +46,7 @@
 
 
 	// 필수, 기재상 작성일자, 날짜형식(yyyyMMdd)
-	taxinvoice.setWriteDate("20210704");
+	taxinvoice.setWriteDate("20211227");
 
 	// 발행유형, {정발행, 역발행, 위수탁} 중 기재
 	taxinvoice.setIssueType("정발행");
@@ -75,7 +75,7 @@
 	taxinvoice.setInvoicerCorpName("공급자 상호");
 
 	// 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-	taxinvoice.setInvoicerMgtKey("20210704-22");
+	taxinvoice.setInvoicerMgtKey("20211227-01");
 
 	// 공급자 대표자성명
 	taxinvoice.setInvoicerCEOName("공급자 대표자 성명");

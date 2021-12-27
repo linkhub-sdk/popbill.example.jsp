@@ -20,7 +20,7 @@
 	String testCorpNum = "1234567890";
 
 	// 현금영수증 문서번호
-	String mgtKey = "20210701-001";
+	String mgtKey = "20211227-001";
 
 	Cashbill cashbill = null;
 
@@ -58,6 +58,7 @@
 						<li>tax (부가세) : <%=cashbill.getTax() %></li>
 						<li>serviceFee (봉사료) : <%=cashbill.getServiceFee() %></li>
 						<li>franchiseCorpNum (가맹점 사업자번호) : <%=cashbill.getFranchiseCorpNum() %></li>
+						<li>franchiseTaxRegID (가맹점 종사업장 번호) : <%=cashbill.getFranchiseTaxRegID() %></li>
 						<li>franchiseCorpName (가맹점 상호) : <%=cashbill.getFranchiseCorpName() %></li>
 						<li>franchiseCEOName (가맹점 대표자 성명) : <%=cashbill.getFranchiseCEOName() %></li>
 						<li>franchiseAddr (가맹점 주소) : <%=cashbill.getFranchiseAddr() %></li>

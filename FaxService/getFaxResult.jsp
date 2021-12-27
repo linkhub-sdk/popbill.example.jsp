@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 전송요청(sendFAX)시 발급받은 접수번호
-    String receiptNum = "021010717501200001";
+    String receiptNum = "021122715200800001";
 
     FaxResult[] faxResults = null;
 
@@ -54,6 +54,7 @@
                 <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                 <li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
                 <li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
+                <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                 <li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
                 <li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
                 <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>

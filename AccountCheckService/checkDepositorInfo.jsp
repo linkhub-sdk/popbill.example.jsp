@@ -60,9 +60,9 @@
 						<li> accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
 						<li> accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
 						<li> identityNumType (등록번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
-                		<li> identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
+						<li> identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
 						<li> checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
-						<li> resultCode (응답코드) : <%=depositorCheckInfo.getResultCode()%></li>
+						<li> result (응답코드) : <%=depositorCheckInfo.getResult()%></li>
 						<li> resultMessage (응답메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
 					</ul>
 

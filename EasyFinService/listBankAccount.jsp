@@ -42,7 +42,7 @@
             %>
             <fieldset class="fieldset2">
                 <ul>
-                    <li>bankCode (은행코드) : <%=bankList[i].getBankCode() %> </li>
+                    <li>bankCode (기관코드) : <%=bankList[i].getBankCode() %> </li>
                     <li>accountNumber (계좌번호) : <%=bankList[i].getAccountNumber() %> </li>
                     <li>accountName (계좌 별칭) : <%=bankList[i].getAccountName() %> </li>
                     <li>accountType (계좌 유형) : <%=bankList[i].getAccountType() %> </li>
