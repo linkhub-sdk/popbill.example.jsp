@@ -20,10 +20,10 @@
 
     // 팝빌회원 사업자번호
     String testCorpNum = "1234567890";
-	
+
     // 확인할 템플릿 코드
     String templateCode = "021010000076";
-            
+
     ATSTemplate aTSTemplate = null;
 
     try {
@@ -48,7 +48,7 @@
                 <li>template (템플릿 내용) : <%=aTSTemplate.getTemplate()%></li>
                 <li>plusFriendID (카카오톡 채널 아이디) : <%=aTSTemplate.getPlusFriendID()%></li>
                 <li>ads (광고메시지) : ${aTSTemplate.getAds()}</li>
-                <li>appendix(부가메시지) : ${aTSTemplate.getAppendix()}</li>
+                <li>appendix (부가메시지) : ${aTSTemplate.getAppendix()}</li>
                 <% if (aTSTemplate.getBtns() != null) {
                     List<KakaoButton> btns = aTSTemplate.getBtns();
                         for (int i = 0; i < btns.size(); i++) { %>
