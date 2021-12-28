@@ -48,7 +48,7 @@
     String QString = "";
 
     // 현금영수증 종사업장 번호
-    String FranchiseTaxRegID ="0001,0002";
+    String FranchiseTaxRegID ="";
 
     // 페이지 번호
     int Page = 1;
