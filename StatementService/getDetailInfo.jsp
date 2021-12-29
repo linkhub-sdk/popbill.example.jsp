@@ -18,7 +18,7 @@
 	 * - https://docs.popbill.com/statement/java/api#GetDetailInfo
 	 */
 
-	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
 	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
@@ -34,8 +34,8 @@
 		statement = statementService.getDetailInfo(testCorpNum, itemCode, mgtKey);
 
 	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
 %>
@@ -86,7 +86,7 @@
 						<li> businessLicenseYN(사업자등록증 첨부여부) : <%= statement.getBusinessLicenseYN()%></li>
 						<li> bankBookYN(통장사본 첨부여부) : <%= statement.getBankBookYN()%></li>
 						<li> smssendYN(알림문자 전송여부) : <%= statement.getSmssendYN()%></li>
-						<li> autoacceptYN(발행시 자동승인 여부) : <%= statement.getAutoacceptYN()%></li>
+						<li> autoacceptYN(발행 시 자동승인 여부) : <%= statement.getAutoacceptYN()%></li>
 
 						<%
 							if(statement.getDetailList() != null){

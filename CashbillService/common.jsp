@@ -9,7 +9,7 @@
 *
 * <테스트 연동개발 준비사항>
 * 1) 24, 27번 라인에 선언된 링크아이디(LinkID)와 비밀키(SecretKey)를
-*    연동 신청시 메일로 발급받은 인증정보를 참조하여 변경합니다.
+*    연동 신청 시 메일로 발급받은 인증정보를 참조하여 변경합니다.
 *
 * Class Module for base module for Popbill API SDK. It include base functionality for
 * RESTful web service request and parse json result. It uses Linkhub class module

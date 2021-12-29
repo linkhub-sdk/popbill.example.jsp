@@ -23,10 +23,10 @@
      * - https://docs.popbill.com/taxinvoice/java/api#RegistRequest
      */
 
-    // 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testUserID = "testkorea";
 
     /***************************************************************************
@@ -41,7 +41,7 @@
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
 
-    // 과금방향, {정과금, 역과금}, '역과금'은 역발행 세금계산서 발행시에만 이용가능
+    // 과금방향, {정과금, 역과금}, '역과금'은 역발행 세금계산서 발행 시에만 이용가능
     taxinvoice.setChargeDirection("정과금");
 
     // 필수, {영수, 청구} 중 기재
@@ -112,7 +112,7 @@
     // 공급받는자 상호
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-    // [역발행시 필수] 공급받는자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    // [역발행 시 필수] 공급받는자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
     taxinvoice.setInvoiceeMgtKey("100-20210701");
 
     // 공급받는자 대표자성명
@@ -141,7 +141,7 @@
     // 공급받는자 휴대폰번호
     taxinvoice.setInvoiceeHP1("010-000-1111");
 
-    // 역발행시 안내문자메시지 전송여부
+    // 역발행 시 안내문자메시지 전송여부
     // - 전송시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoiceeSMSSendYN(false);
 
@@ -247,8 +247,8 @@
         CheckResponse = taxinvoiceService.registRequest(testCorpNum, taxinvoice, memo, testUserID);
 
     } catch (PopbillException pe) {
-        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
         throw pe;
     }
 %>

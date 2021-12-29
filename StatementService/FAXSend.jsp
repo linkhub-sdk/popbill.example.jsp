@@ -24,7 +24,7 @@
 	 * - https://docs.popbill.com/statement/java/api#FAXSend
 	 */
 
-	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
 	// 발신번호
@@ -40,22 +40,22 @@
 
 	Statement statement = new Statement();
 
-	// [필수] 작성일자, 날짜형식(yyyyMMdd)
+	// 작성일자, 날짜형식(yyyyMMdd)
 	statement.setWriteDate("20210701");
 
-	// [필수] {영수, 청구} 중 기재
+	// {영수, 청구} 중 기재
 	statement.setPurposeType("영수");
 
-	// [필수] 과세형태, {과세, 영세, 면세} 중 기재
+	// 과세형태, {과세, 영세, 면세} 중 기재
 	statement.setTaxType("과세");
 
 	// 맞춤양식코드, 미기재시 기본양식으로 처리
 	statement.setFormCode("");
 
-	// [필수] 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	statement.setItemCode((short) 121);
 
-	// [필수] 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+	// 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
 	statement.setMgtKey("20210701-06");
 
 
@@ -136,13 +136,13 @@
 	 *                               전자명세서 기재정보
 	 ****************************************************************************/
 
-	// [필수] 공급가액 합계
+	// 공급가액 합계
 	statement.setSupplyCostTotal("400000");
 
-	// [필수] 세액 합계
+	// 세액 합계
 	statement.setTaxTotal("40000");
 
-	// [필수] 합계금액.  공급가액 + 세액
+	// 합계금액.  공급가액 + 세액
 	statement.setTotalAmount("440000");
 
 	// 기재상 일련번호 항목
@@ -208,8 +208,8 @@
 		receiptNum = statementService.FAXSend(testCorpNum, statement, sendNum, receiveNum);
 
 	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
 %>

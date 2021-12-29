@@ -25,19 +25,19 @@
 	// 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
 	joinInfo.setPassword("password123!@#");
 
-	// 링크아이디
+	// 연동신청 시 팝빌에서 발급받은 링크아이디
 	joinInfo.setLinkID("TESTER");
 
-	// 사업자번호 "-" 제외
+	// 사업자번호 (하이픈 '-' 제외 10 자리)
 	joinInfo.setCorpNum("0000000013");
 
-	// 대표자명, 최대 100자
+	// 대표자 성명, 최대 100자
 	joinInfo.setCEOName("대표자성명");
 
 	// 상호, 최대 200자
 	joinInfo.setCorpName("상호");
 
-	// 주소, 최대 300자
+	// 사업장 주소, 최대 300자
 	joinInfo.setAddr("주소");
 
 	// 업태, 최대 100자
@@ -68,8 +68,8 @@
 		CheckResponse =	statementService.joinMember(joinInfo);
 
 	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
 %>

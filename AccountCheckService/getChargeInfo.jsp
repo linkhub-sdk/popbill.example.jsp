@@ -16,10 +16,10 @@
 	 * - https://docs.popbill.com/accountcheck/java/api#GetChargeInfo
 	 */
 
-	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 서비스 유형, 계좌성명조회일 때는 "성명"을 입력하고, 계좌실명조회일 때는 "실명"을 입력합니다.
+	// 서비스 유형 ("성명" / "실명" 중 택 1 , 성명 = 예금주성명조회, 실명 = 예금주실명조회)
 	String ServiceType = "성명";
 
 	ChargeInfo chargeInfo = null;

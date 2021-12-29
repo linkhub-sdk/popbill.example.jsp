@@ -26,8 +26,8 @@
 		CheckResponse = closedownService.checkID(userID);
 
 	} catch (PopbillException e) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw e;
 	}
 %>

@@ -18,7 +18,7 @@
 
 	CorpState corpState = null;
 
-	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
 	if ( request.getParameter("CorpNum") != null ) {

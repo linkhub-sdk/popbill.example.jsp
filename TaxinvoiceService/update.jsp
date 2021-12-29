@@ -21,7 +21,7 @@
      * - https://docs.popbill.com/taxinvoice/java/api#Update
      */
 
-    // 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
     // 세금계산서 문서번호
@@ -43,7 +43,7 @@
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("정발행");
 
-    // 과금방향, {정과금, 역과금}, '역과금'은 역발행 세금계산서 발행시에만 이용가능
+    // 과금방향, {정과금, 역과금}, '역과금'은 역발행 세금계산서 발행 시에만 이용가능
     taxinvoice.setChargeDirection("정과금");
 
     // 필수, {영수, 청구} 중 기재
@@ -93,7 +93,7 @@
     // 공급자 휴대폰번호
     taxinvoice.setInvoicerHP("010-000-2222");
 
-    // 발행시 안내문자 전송여부
+    // 발행 시 안내문자 전송여부
     taxinvoice.setInvoicerSMSSendYN(false);
 
 
@@ -113,7 +113,7 @@
     // 공급받는자 상호
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-    // 공급받는자 문서번호, 역발행시 필수
+    // 공급받는자 문서번호, 역발행 시 필수
     taxinvoice.setInvoiceeMgtKey("");
 
     // 공급받는자 대표자성명
@@ -262,8 +262,8 @@
         CheckResponse = taxinvoiceService.update(testCorpNum, keyType, mgtKey, taxinvoice);
 
     } catch (PopbillException pe) {
-        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
         throw pe;
     }
 %>

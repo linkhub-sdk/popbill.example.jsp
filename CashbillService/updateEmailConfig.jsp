@@ -20,7 +20,7 @@
 	 * CSH_CANCEL : 고객에게 현금영수증이 발행취소 되었음을 알려주는 메일 입니다.
 	 */
 
-	// 팝빌회원 사업자번호
+	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
 	// 메일 전송 유형
@@ -36,8 +36,8 @@
 		CheckResponse = cashbillService.updateEmailConfig(testCorpNum, emailType, sendYN);
 
 	} catch (PopbillException pe) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw pe;
 	}
 %>

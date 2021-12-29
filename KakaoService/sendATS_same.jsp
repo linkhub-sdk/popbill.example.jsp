@@ -21,7 +21,7 @@
      * - https://docs.popbill.com/kakao/java/api#SendATS_same
      */
 
-    // 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
     // 알림톡 템플릿코드
@@ -70,7 +70,7 @@
     // 접수번호
     String receiptNum = null;
 
-    // 알림톡 버튼정보를 템플릿 신청시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
+    // 알림톡 버튼정보를 템플릿 신청 시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
     KakaoButton[] btns = null;
 
     // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
@@ -89,8 +89,8 @@
                 receivers, sndDT, testUserID, requestNum, btns);
 
     } catch (PopbillException pe) {
-        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
         throw pe;
     }
 %>

@@ -21,7 +21,7 @@
      * - https://docs.popbill.com/taxinvoice/java/api/#BulkSubmit
      */
      
-    // 팝빌회원 사업자번호
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
     
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
@@ -115,7 +115,7 @@
         // 공급받는자 상호
         taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-        // [역발행시 필수] 공급받는자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+        // [역발행 시 필수] 공급받는자 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
         taxinvoice.setInvoiceeMgtKey("");
 
         // 공급받는자 대표자 성명
@@ -144,7 +144,7 @@
         // 공급받는자 담당자 휴대폰번호
         taxinvoice.setInvoiceeHP1("010-111-222");
 
-        // 역발행시 안내문자메시지 전송여부
+        // 역발행 시 안내문자메시지 전송여부
         // - 전송시 포인트 차감되며, 전송실패시 환불처리
         taxinvoice.setInvoiceeSMSSendYN(false);
 
@@ -153,13 +153,13 @@
          *                          세금계산서 기재정보
          *********************************************************************/
 
-        // [필수] 공급가액 합계
+        // 공급가액 합계
         taxinvoice.setSupplyCostTotal("100000");
 
-        // [필수] 세액 합계
+        // 세액 합계
         taxinvoice.setTaxTotal("10000");
 
-        // [필수] 합계금액, 공급가액 + 세액
+        // 합계금액, 공급가액 + 세액
         taxinvoice.setTotalAmount("110000");
 
         // 기재 상 일련번호
@@ -267,8 +267,8 @@
         CheckResponse = taxinvoiceService.bulkSubmit(testCorpNum, submitID, bulkTx, ForceIssue);
 
     } catch (PopbillException pe) {
-        //적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-        //예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+        // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+        // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
         throw pe;
     }
 %>
