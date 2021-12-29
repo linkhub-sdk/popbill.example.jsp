@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	//서비스 유형, 계좌성명조회일 때는 "성명"을 입력하고, 계좌실명조회일 때는 "실명"을 입력합니다.
+	// 서비스 유형, 계좌성명조회일 때는 "성명"을 입력하고, 계좌실명조회일 때는 "실명"을 입력합니다.
 	String ServiceType = "성명";
 
 	ChargeInfo chargeInfo = null;
@@ -29,8 +29,8 @@
 		chargeInfo = accountCheckService.getChargeInfo(testCorpNum , ServiceType);
 
 	} catch (PopbillException e) {
-		//적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
-		//예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
+		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
+		// 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
 		throw e;
 	}
 %>
