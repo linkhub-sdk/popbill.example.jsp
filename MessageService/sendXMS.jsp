@@ -44,10 +44,10 @@
 
 	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 	Date reserveDT = null;
-	//	예약전송시 아래의 코드 참조
-	//	String reserveDTtxt ="20141229180000";
-	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-	//	reserveDT = formatter.parse(reserveDTtxt);
+	// 예약전송시 아래의 코드 참조
+	// String reserveDTtxt ="20141229180000";
+	// SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	// reserveDT = formatter.parse(reserveDTtxt);
 
 	// 전송요청번호
 	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+        <title>팝빌 SDK jsp Example.</title>
+    </head>
 
 <%@ include file="common.jsp" %>
 <%@page import="com.popbill.api.hometax.HTCashbillSearchResult"%>
@@ -54,48 +54,48 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-	        <legend> 조회결과 </legend>
-	        <ul>
-	          <li>code (응답코드) : <%= result.getCode() %></li>
-	          <li>message (응답메시지) : <%= result.getMessage() %></li>
-	          <li>total (총 검색결과 건수) : <%= result.getTotal() %></li>
-	          <li>perPage (페이지당 검색개수) : <%= result.getPerPage() %></li>
-	          <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
-	          <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
-	        </ul>
-	
-	        <%
-	          if ( result != null ){
-	            for ( int i = 0; i < result.getList().size(); i++ ) {
-	        %>
-	          <fieldset class="fieldset2">
-	          <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
-	          <ul>
-	              <li>ntsconfirmNum (국세청승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
-	              <li>tradeDate (거래일자) : <%= result.getList().get(i).getTradeDate() %></li>
-	              <li>tradeDT (거래일시) : <%= result.getList().get(i).getTradeDT() %></li>
-	              <li>tradeUsage (거래구분) : <%= result.getList().get(i).getTradeUsage() %></li>
-	              <li>tradeType (문서형태) : <%= result.getList().get(i).getTradeType() %></li>
-	              <li>totalAmount (거래금액) : <%= result.getList().get(i).getTotalAmount() %></li>
-	              <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
-	              <li>tax (부가세) : <%= result.getList().get(i).getTax() %></li>
-	              <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>
-	              <li>invoiceType (매일/매출) : <%= result.getList().get(i).getInvoiceType()  %> </li>
-	              <li>franchiseCorpNum (발행자 사업자번호) : <%= result.getList().get(i).getFranchiseCorpNum() %></li>
-	              <li>franchiseCorpName (발행자 상호) : <%= result.getList().get(i).getFranchiseCorpName() %></li>
-	              <li>franchiseCorpType (발행자 사업자유형) : <%= result.getList().get(i).getFranchiseCorpType() %></li>
-	              <li>identityNum (거래처 식별번호) : <%= result.getList().get(i).getIdentityNum() %></li>
-	              <li>identityNumType (식별번호유형) : <%= result.getList().get(i).getIdentityNumType() %></li>
-	              <li>customerName (식별번호유형) : <%= result.getList().get(i).getCustomerName() %></li>
-	              <li>cardOwnerName (카드소유자명) : <%= result.getList().get(i).getCardOwnerName() %></li>
-	              <li>deductionType (공제유형) : <%= result.getList().get(i).getDeductionType() %></li>
-	          </ul>
-	          </fieldset>
-	        <%
-	      	    }
-	          }
-	        %>
-			</fieldset>
-		 </div>
-	</body>
+            <legend> 조회결과 </legend>
+            <ul>
+              <li>code (응답코드) : <%= result.getCode() %></li>
+              <li>message (응답메시지) : <%= result.getMessage() %></li>
+              <li>total (총 검색결과 건수) : <%= result.getTotal() %></li>
+              <li>perPage (페이지당 검색개수) : <%= result.getPerPage() %></li>
+              <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
+              <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
+            </ul>
+    
+            <%
+              if ( result != null ){
+                for ( int i = 0; i < result.getList().size(); i++ ) {
+            %>
+              <fieldset class="fieldset2">
+              <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
+              <ul>
+                  <li>ntsconfirmNum (국세청승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
+                  <li>tradeDate (거래일자) : <%= result.getList().get(i).getTradeDate() %></li>
+                  <li>tradeDT (거래일시) : <%= result.getList().get(i).getTradeDT() %></li>
+                  <li>tradeUsage (거래구분) : <%= result.getList().get(i).getTradeUsage() %></li>
+                  <li>tradeType (문서형태) : <%= result.getList().get(i).getTradeType() %></li>
+                  <li>totalAmount (거래금액) : <%= result.getList().get(i).getTotalAmount() %></li>
+                  <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
+                  <li>tax (부가세) : <%= result.getList().get(i).getTax() %></li>
+                  <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>
+                  <li>invoiceType (매일/매출) : <%= result.getList().get(i).getInvoiceType()  %> </li>
+                  <li>franchiseCorpNum (발행자 사업자번호) : <%= result.getList().get(i).getFranchiseCorpNum() %></li>
+                  <li>franchiseCorpName (발행자 상호) : <%= result.getList().get(i).getFranchiseCorpName() %></li>
+                  <li>franchiseCorpType (발행자 사업자유형) : <%= result.getList().get(i).getFranchiseCorpType() %></li>
+                  <li>identityNum (거래처 식별번호) : <%= result.getList().get(i).getIdentityNum() %></li>
+                  <li>identityNumType (식별번호유형) : <%= result.getList().get(i).getIdentityNumType() %></li>
+                  <li>customerName (식별번호유형) : <%= result.getList().get(i).getCustomerName() %></li>
+                  <li>cardOwnerName (카드소유자명) : <%= result.getList().get(i).getCardOwnerName() %></li>
+                  <li>deductionType (공제유형) : <%= result.getList().get(i).getDeductionType() %></li>
+              </ul>
+              </fieldset>
+            <%
+                }
+              }
+            %>
+            </fieldset>
+         </div>
+    </body>
 </html>

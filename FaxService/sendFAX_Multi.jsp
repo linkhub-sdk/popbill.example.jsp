@@ -33,13 +33,13 @@
     Receiver[] receivers = new Receiver[2];
 
     Receiver receiver1 = new Receiver();
-    receiver1.setReceiveName("수신자1");		// 수신자명
-    receiver1.setReceiveNum("010111222");	// 수신팩스번호
+    receiver1.setReceiveName("수신자1");       // 수신자명
+    receiver1.setReceiveNum("010111222");    // 수신팩스번호
     receivers[0] = receiver1;
 
     Receiver receiver2 = new Receiver();
-    receiver2.setReceiveName("수신자2");		// 수신자명
-    receiver2.setReceiveNum("010333444");	// 수신팩스번호
+    receiver2.setReceiveName("수신자2");       // 수신자명
+    receiver2.setReceiveNum("010333444");    // 수신팩스번호
     receivers[1] = receiver1;
 
     // 팩스전송파일 경로
@@ -49,9 +49,9 @@
     files[1] = new File((application.getRealPath("/resources/test.jpg")));
 
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
-    //	String reserveDTtxt = "20141229180000";
-    //	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    //	reserveDT = formatter.parse(reserveDTtxt);
+    // String reserveDTtxt = "20141229180000";
+    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+    // reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
 
     // 광고팩스 전송여부

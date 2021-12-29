@@ -41,9 +41,9 @@
 	String receiveName = "";
 
 	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전ㅌ
-	//	String reserveDTtxt = "20141230180000";
-	//	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-	//	reserveDT = formatter.parse(reserveDTtxt);
+	// String reserveDTtxt = "20141230180000";
+	// SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+	// reserveDT = formatter.parse(reserveDTtxt);
 	Date reserveDT = null;
 
 	// 팩스제목

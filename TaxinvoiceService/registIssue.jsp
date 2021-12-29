@@ -216,15 +216,15 @@
 
 	TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
-	detail.setSerialNum((short) 1);	// 일련번호
-	detail.setPurchaseDT("20210704");	// 거래일자
-	detail.setItemName("품목명1");	// 품목명
-	detail.setSpec("규격");	// 규격
-	detail.setQty("1");	// 수량
-	detail.setUnitCost("100000");	// 단가
-	detail.setSupplyCost("100000");	// 공급가액
-	detail.setTax("10000");	// 세액
-	detail.setRemark("품목비고");	// 비고
+	detail.setSerialNum((short) 1);      // 일련번호
+	detail.setPurchaseDT("20210704");    // 거래일자
+	detail.setItemName("품목명1");         // 품목명
+	detail.setSpec("규격");               // 규격
+	detail.setQty("1");                  // 수량
+	detail.setUnitCost("100000");        // 단가
+	detail.setSupplyCost("100000");      // 공급가액
+	detail.setTax("10000");              // 세액
+	detail.setRemark("품목비고");          // 비고
 
 	taxinvoice.getDetailList().add(detail);
 

@@ -17,8 +17,8 @@
     * - https://docs.popbill.com/easyfinbank/java/api#DeleteBankAccount
     */
 
-  	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-  	String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
+    String testCorpNum = "1234567890";
 
     // 기관코드
     // 산업은행-0002 / 기업은행-0003 / 국민은행-0004 /수협은행-0007 / 농협은행-0011 / 우리은행-0020

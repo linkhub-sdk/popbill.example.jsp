@@ -44,7 +44,7 @@
     // 담당자 이메일주소 (최대 100자)
     contactInfo.setEmail("test@test.com");
 
- 	// 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
+    // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
     contactInfo.setSearchRole(3);
 
 

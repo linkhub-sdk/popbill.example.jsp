@@ -164,23 +164,23 @@
 
 	StatementDetail detail = new StatementDetail();
 
-	detail.setSerialNum((short) 1);		// 일련번호, 1부터 순차기재
-	detail.setItemName("품명");				 // 품목명
-	detail.setPurchaseDT("20210701");	// 거래일자
-	detail.setQty("1");								// 수량
-	detail.setSupplyCost("200000");		// 공급가액
-	detail.setTax("20000");						// 세액
+	detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
+	detail.setItemName("품명");          // 품목명
+	detail.setPurchaseDT("20210701");   // 거래일자
+	detail.setQty("1");                 // 수량
+	detail.setSupplyCost("200000");     // 공급가액
+	detail.setTax("20000");             // 세액
 
 	statement.getDetailList().add(detail);
 
-	detail = new StatementDetail();		// 상세항목(품목) 배열
+	detail = new StatementDetail();     // 상세항목(품목) 배열
 
-	detail.setSerialNum((short) 2);		 // 일련번호 1부터 순차기재
-	detail.setItemName("품명");					// 품목명
-	detail.setPurchaseDT("20210701");	 // 거래일자
-	detail.setQty("1");								 // 수량
-	detail.setSupplyCost("200000");		 // 공급가액
-	detail.setTax("20000");						 // 세액
+	detail.setSerialNum((short) 2);      // 일련번호 1부터 순차기재
+	detail.setItemName("품명");           // 품목명
+	detail.setPurchaseDT("20210701");    // 거래일자
+	detail.setQty("1");                  // 수량
+	detail.setSupplyCost("200000");      // 공급가액
+	detail.setTax("20000");              // 세액
 
 	statement.getDetailList().add(detail);
 
@@ -194,9 +194,9 @@
 	// 추가속성, 추가속성에 관한 정보는 [전자명세서 API 연동매뉴얼 > [5.2 기본양식 추가속성 테이블] 참조
 	Map<String, String> propertyBag = new HashMap<String, String>();
 
-	propertyBag.put("Balance", "15000");			// 전잔액
-	propertyBag.put("Deposit", "5000");				// 입금액
-	propertyBag.put("CBalance", "20000");			// 현잔액
+	propertyBag.put("Balance", "15000");            // 전잔액
+	propertyBag.put("Deposit", "5000");             // 입금액
+	propertyBag.put("CBalance", "20000");           // 현잔액
 
 	statement.setPropertyBag(propertyBag);
 

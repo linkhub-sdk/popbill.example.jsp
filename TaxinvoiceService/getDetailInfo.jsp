@@ -117,7 +117,7 @@
                     <li> remark2 (비고2) : <%=taxinvoice.getRemark2() %></li>
                     <li> remark3 (비고3) : <%=taxinvoice.getRemark3() %></li>
                     <li> kwon (권) : <%=taxinvoice.getKwon() %></li>
-                    <li> ho(호)  : <%=taxinvoice.getHo() %></li>
+                    <li> ho (호)  : <%=taxinvoice.getHo() %></li>
                     <li> businessLicenseYN (사업자등록증 이미지 첨부여부) : <%=taxinvoice.getBusinessLicenseYN() %></li>
                     <li> bankBookYN (통장사본이미지 첨부여부) : <%=taxinvoice.getBankBookYN() %></li>
 
@@ -129,15 +129,15 @@
                     <fieldset class="fieldset2">
                         <legend>상세 품목 정보</legend>
                         <ul>
-                            <li>SerialNum(일련번호) :  <%= detail.getSerialNum() %> </li>
-                            <li>purchaseDT(거래일자) : <%= detail.getPurchaseDT() %> </li>
-                            <li>itemName(품명) : <%=detail.getItemName() %></li>
-                            <li>spec(규격) : <%=detail.getSpec() %></li>
-                            <li>qty(수량) : <%=detail.getQty() %></li>
-                            <li>unitCost(단가) : <%=detail.getUnitCost() %></li>
-                            <li>supplyCost(공급가액) : <%=detail.getSupplyCost() %></li>
-                            <li>tax(세액) : <%=detail.getTax() %></li>
-                            <li>remark(비고) : <%=detail.getRemark() %></li>
+                            <li>SerialNum (일련번호) :  <%= detail.getSerialNum() %> </li>
+                            <li>purchaseDT (거래일자) : <%= detail.getPurchaseDT() %> </li>
+                            <li>itemName (품명) : <%=detail.getItemName() %></li>
+                            <li>spec (규격) : <%=detail.getSpec() %></li>
+                            <li>qty (수량) : <%=detail.getQty() %></li>
+                            <li>unitCost (단가) : <%=detail.getUnitCost() %></li>
+                            <li>supplyCost (공급가액) : <%=detail.getSupplyCost() %></li>
+                            <li>tax (세액) : <%=detail.getTax() %></li>
+                            <li>remark (비고) : <%=detail.getRemark() %></li>
                         </ul>
                     </fieldset>
                     <%
@@ -153,9 +153,9 @@
                     <fieldset class="fieldset2">
                         <legend>추가 담당자 정보</legend>
                         <ul>
-                            <li>SerialNum(일련번호) :  <%= addContactList.getSerialNum() %> </li>
-                            <li>email(이메일) : <%=addContactList.getEmail() %></li>
-                            <li>contactName(담당자 성명) : <%= addContactList.getContactName() %> </li>
+                            <li>SerialNum (일련번호) :  <%= addContactList.getSerialNum() %> </li>
+                            <li>email (이메일) : <%=addContactList.getEmail() %></li>
+                            <li>contactName (담당자 성명) : <%= addContactList.getContactName() %> </li>
                         </ul>
                     </fieldset>
                     <%
