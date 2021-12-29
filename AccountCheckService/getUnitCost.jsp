@@ -11,14 +11,14 @@
 
 <%
 	/*
-	 * 예금주 성명 조회시 과금되는 포인트 단가를 확인합니다.
+	 * 예금주조회시 과금되는 포인트 단가를 확인합니다.
 	 * - https://docs.popbill.com/accountcheck/java/api#GetUnitCost
 	 */
 
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	// 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+	//서비스 유형, 계좌성명조회일 때는 "성명"을 , 계좌실명조회일 때는 "실명"을 입력합니다.
 	String ServiceType = "성명";
 
 	float unitCost;

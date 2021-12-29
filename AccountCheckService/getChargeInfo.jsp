@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호
 	String testCorpNum = "1234567890";
 
-	//서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+	//서비스 유형, 계좌성명조회일 때는 "성명"을 입력하고, 계좌실명조회일 때는 "실명"을 입력합니다.
 	String ServiceType = "성명";
 
 	ChargeInfo chargeInfo = null;
