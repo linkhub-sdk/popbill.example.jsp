@@ -42,12 +42,12 @@
 
 	//Receiver receiver1 = new Receiver();
 	//receiver1.setReceiveName("수신자1");       // 수신자명
-	//receiver1.setReceiveNum("010111222");    // 수신팩스번호
+	//receiver1.setReceiveNum("010111222");     // 수신팩스번호
 	//receivers[0] = receiver1;
 
 	//Receiver receiver2 = new Receiver();
 	//receiver2.setReceiveName("수신자2");       // 수신자명
-	//receiver2.setReceiveNum("010333444");    // 수신팩스번호
+	//receiver2.setReceiveNum("010333444");     // 수신팩스번호
 	//receivers[1] = receiver1;
 
 
