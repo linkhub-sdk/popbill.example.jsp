@@ -20,7 +20,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 검색일자 유형, R-등록일자, W-작성일자, I-발행일자 중 택1
+	// 검색일자 유형, R-등록일자, W-작성일자, I-발행일자 중 택 1
 	String DType = "W";
 
 	// 시작일자, 날짜형식(yyyyMMdd)
@@ -29,13 +29,17 @@
 	// 종료일자, 날짜형식(yyyyMMdd)
 	String EDate = "20210630";
 
-	// 전자명세서 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+	// 전자명세서 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
+	// - 미입력시 전체조회
 	String[] State = {"1**", "2**", "3**", "4**", "5**", "6**"};
 
-	// 명세서 종류코드 배열, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+	// 전자명세서 문서유형 배열 (121 , 122 , 123 , 124 , 125 , 126 중 선택. 다중 선택 가능)
+	// 121 = 명세서 , 122 = 청구서 , 123 = 견적서
+	// 124 = 발주서 , 125 = 입금표 , 126 = 영수증
 	int[] ItemCode = {121, 122, 123, 124, 125, 126};
 
-	// 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재하여 조회. 공백시 전체조회
+	// 통합검색어, 거래처 상호명 또는 거래처 사업자번호로 조회
+	// - 미입력시 전체조회
 	String QString = "";
 
 	// 페이지 번호
@@ -84,32 +88,32 @@
 						<fieldset class="fieldset2">
 							<legend>StatementInfo [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
 							<ul>
-								<li>itemKey(팝빌번호) : <%= statementInfo.getItemKey()%></li>
-								<li>itemCode(명세서 코드) : <%= statementInfo.getItemCode()%></li>
-								<li>invoiceNum(팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
-								<li>mgtKey(문서번호) : <%= statementInfo.getMgtKey()%></li>
+								<li>itemKey (팝빌번호) : <%= statementInfo.getItemKey()%></li>
+								<li>itemCode (명세서 코드) : <%= statementInfo.getItemCode()%></li>
+								<li>invoiceNum (팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
+								<li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
 
-								<li>stateCode(상태코드) : <%= statementInfo.getStateCode()%></li>
-								<li>taxType(세금형태) : <%= statementInfo.getTaxType()%></li>
-								<li>purposeType(영수/청구) : <%= statementInfo.getPurposeType()%></li>
+								<li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
+								<li>taxType (세금형태) : <%= statementInfo.getTaxType()%></li>
+								<li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
 
-								<li>writeDate(작성일자) : <%= statementInfo.getWriteDate()%></li>
-								<li>senderCorpName(발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>
-								<li>senderCorpNum(발신자 사업자번호) : <%= statementInfo.getSenderCorpNum()%></li>
-								<li>senderPrintYN(발신자 인쇄여부) : <%= statementInfo.isSenderPrintYN()%></li>
+								<li>writeDate (작성일자) : <%= statementInfo.getWriteDate()%></li>
+								<li>senderCorpName (발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>
+								<li>senderCorpNum (발신자 사업자번호) : <%= statementInfo.getSenderCorpNum()%></li>
+								<li>senderPrintYN (발신자 인쇄여부) : <%= statementInfo.isSenderPrintYN()%></li>
 
-								<li>receiverCorpName(수신자 상호) : <%= statementInfo.getReceiverCorpName()%></li>
-								<li>receiverCorpNum(수신자 사업자번호) : <%= statementInfo.getReceiverCorpNum()%></li>
-								<li>receiverPrintYN(수신자 인쇄여부) : <%= statementInfo.isReceiverPrintYN()%></li>
+								<li>receiverCorpName (수신자 상호) : <%= statementInfo.getReceiverCorpName()%></li>
+								<li>receiverCorpNum (수신자 사업자번호) : <%= statementInfo.getReceiverCorpNum()%></li>
+								<li>receiverPrintYN (수신자 인쇄여부) : <%= statementInfo.isReceiverPrintYN()%></li>
 
-								<li>supplyCostTotal(공급가액 합계) : <%= statementInfo.getSupplyCostTotal()%></li>
-								<li>taxTotal(세액 합계) : <%= statementInfo.getTaxTotal()%></li>
-								<li>issueDT(발행일시) : <%= statementInfo.getIssueDT()%></li>
-								<li>stateDT(상태 변경일시) : <%= statementInfo.getStateDT()%></li>
-								<li>openYN(개봉 여부) : <%= statementInfo.isOpenYN()%></li>
-								<li>openDT(개봉 일시) : <%= statementInfo.getOpenDT()%></li>
-								<li>stateMemo(상태 메모) : <%= statementInfo.getStateMemo()%></li>
-								<li>regDT(임시저장 일시) : <%= statementInfo.getRegDT()%></li>
+								<li>supplyCostTotal (공급가액 합계) : <%= statementInfo.getSupplyCostTotal()%></li>
+								<li>taxTotal (세액 합계) : <%= statementInfo.getTaxTotal()%></li>
+								<li>issueDT (발행일시) : <%= statementInfo.getIssueDT()%></li>
+								<li>stateDT (상태 변경일시) : <%= statementInfo.getStateDT()%></li>
+								<li>openYN (개봉 여부) : <%= statementInfo.isOpenYN()%></li>
+								<li>openDT (개봉 일시) : <%= statementInfo.getOpenDT()%></li>
+								<li>stateMemo (상태 메모) : <%= statementInfo.getStateMemo()%></li>
+								<li>regDT (임시저장 일시) : <%= statementInfo.getRegDT()%></li>
 
 							</ul>
 						</fieldset>

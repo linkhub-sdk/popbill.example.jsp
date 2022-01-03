@@ -24,8 +24,11 @@
 	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-	// 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-	String originalFAXrequestNum = "20210703-001";
+	// 재전송 팩스의 전송요청번호
+	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+	// 재전송 팩스의 전송상태확인(GetSendDetailRN) / 예약전송취소(CancelReserveRN) 에 이용됩니다.
+	String requestNum = "";
 
 	// 발신번호, 공백처리시 기존전송정보로 전송
 	String sendNum = "07043042991";
@@ -33,14 +36,13 @@
 	// 발신자명, 공백처리시 기존전송정보로 전송
 	String senderName = "발신자명";
 
-	// 수신자명, 수신번호를 모두 공백처리시 기존전송정보로 전송
-	// 수신 팩스번호
+	// 수신번호, 공백처리시 기존전송정보로 전송
 	String receiveNum = "070111222";
 
-	// 수신자명
+	// 수신자명, 공백처리시 기존전송정보로 전송
 	String receiveName = "";
 
-	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전ㅌ
+	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 	// String reserveDTtxt = "20141230180000";
 	// SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	// reserveDT = formatter.parse(reserveDTtxt);
@@ -49,11 +51,8 @@
 	// 팩스제목
 	String title = "팩스전송 제목";
 
-	// 재전송 팩스의 전송요청번호
-	// 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
-	// 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-	// 재전송 팩스의 전송상태확인(GetSendDetailRN) / 예약전송취소(CancelReserveRN) 에 이용됩니다.
-	String requestNum = "";
+	// 원본 팩스 전송시 할당한 전송요청번호(requestNum)
+	String originalFAXrequestNum = "20210703-001";
 
 	String receiptNum = null;
 

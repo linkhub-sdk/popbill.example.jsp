@@ -20,13 +20,13 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 세금계산서 유형. SELL :매출, BUY : 매입, TRUSTEE : 수탁
+	// 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 팝빌번호, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
 	String itemKey = "021010316320100001";
 
-	// 할당할 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+	// 할당할 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
 	String mgtKey = "20210709-002";
 
 	Response CheckResponse = null;

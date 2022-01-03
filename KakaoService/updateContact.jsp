@@ -29,7 +29,7 @@
     // 담당자 아이디
     contactInfo.setId(testUserID);
 
-    // 담당자 성명 (최대 100자)
+    // 담당자 성명, 최대 100자
     contactInfo.setPersonName("담당자");
 
     // 담당자 연락처 (최대 20자)

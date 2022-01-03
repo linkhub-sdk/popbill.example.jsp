@@ -12,9 +12,10 @@
 <%
    /*
     * 연동회원의 국세청 전송 옵션 설정 상태를 확인합니다.
+    * - 국세청 전송 옵션 설정은 팝빌 사이트 [전자세금계산서] > [환경설정] > [세금계산서 관리] 메뉴에서 설정할 수 있으며, API로 설정은 불가능 합니다.
     * - https://docs.popbill.com/taxinvoice/java/api#GetSendToNTSConfig
     */
-	
+
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 

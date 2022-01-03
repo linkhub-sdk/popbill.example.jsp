@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 예약문자전송 요청시 발급받은 접수번호
+	// 예약문자 전송요청시 팝빌로부터 반환 받은 접수번호
 	String receiptNum = "021010716000000004";
 
 	Response CheckResponse = null;

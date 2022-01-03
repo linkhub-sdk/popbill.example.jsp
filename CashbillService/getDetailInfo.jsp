@@ -45,15 +45,15 @@
 					<legend>Cashbill</legend>
 					<ul>
 						<li>mgtKey (문서번호) : <%=cashbill.getMgtKey() %></li>
-						<li>confirmNum (국세청승인번호) : <%=cashbill.getConfirmNum() %></li>
-						<li>orgConfirmNum (원본 현금영수증 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
+						<li>confirmNum (국세청 승인번호) : <%=cashbill.getConfirmNum() %></li>
+						<li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
 						<li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
 						<li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
 						<li>tradeType (문서형태) : <%=cashbill.getTradeType() %></li>
 						<li>tradeUsage (거래구분) : <%= cashbill.getTradeUsage()%></li>
 						<li>tradeOpt (거래유형) : <%= cashbill.getTradeOpt()%></li>
 						<li>taxationType (과세형태) : <%=cashbill.getTaxationType() %></li>
-						<li>totalAmount (거래금액) : <%=cashbill.getTotalAmount() %></li>
+						<li>totalAmount (합계금액) : <%=cashbill.getTotalAmount() %></li>
 						<li>supplyCost (공급가액) : <%=cashbill.getSupplyCost() %></li>
 						<li>tax (부가세) : <%=cashbill.getTax() %></li>
 						<li>serviceFee (봉사료) : <%=cashbill.getServiceFee() %></li>

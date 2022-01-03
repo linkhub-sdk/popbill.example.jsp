@@ -22,14 +22,14 @@
     String testCorpNum = "1234567890";
 
     //대량 발행 접수시 기재한 제출아이디
-    String SubmitID = "202010708JSP-BULK0"; 
+    String SubmitID = "202010708JSP-BULK0";
 
     BulkTaxinvoiceResult bulkResult = null;
 
     try {
 
         bulkResult = taxinvoiceService.getBulkResult(testCorpNum, SubmitID);
-        
+
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
         // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
@@ -43,30 +43,30 @@
             <fieldset class="fieldset1">
                   <legend>대량발행 접수결과 </legend>
                 <ul>
-                    <li> code (응답코드) : <%= bulkResult.getCode() %></li>
-                    <li> message (응답 메시지) : <%= bulkResult.getMessage() %></li>
-                    <li> submitID (제출아이디) : <%= bulkResult.getSubmitID() %></li>
-                    <li> submitCount (접수건수) : <%= bulkResult.getSuccessCount() %></li>
-                    <li> successCount (발행 성공건수) : <%= bulkResult.getSuccessCount() %></li>
-                    <li> failCount (발행 실패건수) : <%= bulkResult.getFailCount() %></li>
-                    <li> txState (접수 상태코드) : <%= bulkResult.getTxState() %></li>
-                    <li> txResultCode (접수 결과코드) : <%= bulkResult.getTxResultCode() %></li>
-                    <li> txStartDT (발행처리 시작일시) : <%= bulkResult.getTxStartDT() %></li>
-                    <li> txEndDT (발행처리 완료일시) : <%= bulkResult.getTxEndDT() %></li>
-                    <li> receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
+                    <li>code (응답코드) : <%= bulkResult.getCode() %></li>
+                    <li>message (응답 메시지) : <%= bulkResult.getMessage() %></li>
+                    <li>submitID (제출아이디) : <%= bulkResult.getSubmitID() %></li>
+                    <li>submitCount (접수건수) : <%= bulkResult.getSuccessCount() %></li>
+                    <li>successCount (발행 성공건수) : <%= bulkResult.getSuccessCount() %></li>
+                    <li>failCount (발행 실패건수) : <%= bulkResult.getFailCount() %></li>
+                    <li>txState (접수 상태코드) : <%= bulkResult.getTxState() %></li>
+                    <li>txResultCode (접수 결과코드) : <%= bulkResult.getTxResultCode() %></li>
+                    <li>txStartDT (발행처리 시작일시) : <%= bulkResult.getTxStartDT() %></li>
+                    <li>txEndDT (발행처리 완료일시) : <%= bulkResult.getTxEndDT() %></li>
+                    <li>receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
                   </ul>
             </fieldset>
-            
+
             <% if (bulkResult.getIssueResult() != null) {
                 List<BulkTaxinvoiceIssueResult> issueResult = bulkResult.getIssueResult();
                     for (int i = 0; i < issueResult.size(); i++) { %>
             <fieldset class="fieldset2">
                 <legend>발행결과 [<%= i + 1 %>]</legend>
                 <ul>
-                    <li>invoicerMgtKey (공급자 문서번호) : <%=issueResult.get(i).getInvoicerMgtKey()%></li>
-                    <li>code (응답코드) : <%=issueResult.get(i).getCode()%></li>
-                    <li>ntsconfirmNum (국세청승인번호) : <%=issueResult.get(i).getNtsconfirmNum()%></li>
-                    <li>issueDT (발행일시) : <%=issueResult.get(i).getIssueDT()%></li>
+                    <li>invoicerMgtKey (공급자 문서번호) : <%= issueResult.get(i).getInvoicerMgtKey() %></li>
+                    <li>code (응답코드) : <%= issueResult.get(i).getCode() %></li>
+                    <li>ntsconfirmNum (국세청 승인번호) : <%= issueResult.get(i).getNtsconfirmNum() %></li>
+                    <li>issueDT (발행일시) : <%= issueResult.get(i).getIssueDT() %></li>
                 </ul>
             </fieldset>
             <% }

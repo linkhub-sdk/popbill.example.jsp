@@ -20,7 +20,8 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 검색일자 유형, R-등록일자, T-거래일자, I-발행일자ㄴ
+    // 일자 유형 ("R" , "T" , "I" 중 택 1)
+    // └ R = 등록일자 , T = 거래일자 , I = 발행일자
     String DType = "T";
 
     // 시작일자, 날짜형태(yyyyMMdd)
@@ -29,22 +30,31 @@
     // 종료일자, 날짜형태(yyyyMMdd)
     String EDate = "20211227";
 
-    // 현금영수증 상태코드 배열, 2,3번째 자리에 와일드카드(*) 사용가능
+    // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
+    // - 미입력시 전체조회
     String[] State = {"100", "2**", "3**", "4**"};
 
-    // 현금영수증 형태 배열, N-일반 현금영수증, C-취소 현금영수증
+    // 문서형태 배열 ("N" , "C" 중 선택, 다중 선택 가능)
+    // - N = 승인거래 , C = 취소거래
+    // - 미입력시 전체조회
     String[] TradeType = {"N", "C"};
 
-    // 거래구분 배열, P-소득공제용, C-지출증빙용
+    // 거래구분 배열 ("P" , "C" 중 선택, 다중 선택 가능)
+    // - P = 소득공제용 , C = 지출증빙용
+    // - 미입력시 전체조회
     String[] TradeUsage = {"P", "C"};
 
-    // 거래유형 배열, N-일반, B-도서공연, T-대중교통
+    // 거래유형 배열 ("N" , "B" , "T" 중 선택, 다중 선택 가능)
+    // - N = 일반 , B = 도서공연 , T = 대중교통
+    // - 미입력시 전체조회
     String[] TradeOpt = {"N", "B", "T"};
 
-    // 과세형태 배열, T-과세, N-비과세
+    // 과세형태 배열 ("T" , "N" 중 선택, 다중 선택 가능)
+    // - T = 과세 , N = 비과세
+    // - 미입력시 전체조회
     String[] TaxationType = {"T", "N"};
 
-    // 현금영수증 식별번호 조회
+    // 식별번호 조회 (미기재시 전체조회)
     String QString = "";
 
     // 가맹점 종사업장 번호 조회
@@ -103,7 +113,7 @@
 						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
 						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
 						<li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
-						<li>totalAmount (거래금액) : <%= cashbillInfo.getTotalAmount()%></li>
+						<li>totalAmount (합계금액) : <%= cashbillInfo.getTotalAmount()%></li>
 						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
 						<li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
 						<li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
@@ -112,8 +122,8 @@
 						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
 						<li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
 						<li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
-						<li>confirmNum (국세청승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
-						<li>orgConfirmNum (원본 현금영수증 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
+						<li>confirmNum (국세청 승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
+						<li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
 						<li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
 						<li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
 						<li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>

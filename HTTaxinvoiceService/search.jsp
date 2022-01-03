@@ -25,19 +25,22 @@
     // 수집 요청시 발급받은 작업아이디
     String jobID = "021102217000000002";
 
-    // 문서형태, N-일반, M-수정
+		// 문서형태 배열 ("N" 와 "M" 중 선택, 다중 선택 가능)
+		// └ N = 일반 , M = 수정 , 미입력 시 전체조회
     String[] Type = {"N", "M"};
 
-    // 과세형태, T-과세, N-면세, Z-영세
+    // 과세형태 배열 ("T" , "N" , "Z" 중 선택, 다중 선택 가능)
+		// └ T = 과세, N = 면세, Z = 영세 , 미입력 시 전체조회
     String[] TaxType = {"T", "Z", "N"};
 
-    // 영수/청구 R-영수, C-청구, N-없음
+    // 발행목적 배열 ("R" , "C", "N" 중 선택, 다중 선택 가능)
+		// └ R = 영수, C = 청구, N = 없음, 미입력 시 전체조회
     String[] PurposeType = {"R", "C", "N"};
 
-    // 종사업장 유무, 공백-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음
+    // 종사업장번호 유무, 공백-전체조회, 0-종사업장번호 없음, 1-종사업장번호 있음
     String TaxRegIDYN = "";
 
-    // 종사업장 유형, S-공급자, B-공급받는자, T-수탁자
+    // 종사업장번호의 주체, S-공급자, B-공급받는자, T-수탁자
     String TaxRegIDType = "S";
 
     // 종사업장번호, 다수 기재시 콤마(",")로 구분하여 구성 ex) "0001,0002"
@@ -52,7 +55,9 @@
     // 정렬발향, A-오름차순, D-내림차순
     String Order = "D";
 
-    // 조회 검색어, 거래처 사업자번호 또는 거래처명 like 검색
+		// 거래처 상호 / 사업자번호 (사업자) / 주민등록번호 (개인) / "9999999999999" (외국인) 중 검색하고자 하는 정보 입력
+		// - 사업자번호 / 주민등록번호는 하이픈('-')을 제외한 숫자만 입력
+		// - 미입력시 전체조회
     String searchString = "";
 
     HTTaxinvoiceSearchResult result = null;
@@ -123,7 +128,7 @@
                     <li>invoiceeType (공급받는자 구분) : <%= result.getList().get(i).getInvoiceeType()  %> </li>
                     <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <%= result.getList().get(i).getInvoiceeTaxRegID()  %> </li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%= result.getList().get(i).getInvoiceeCorpName()  %> </li>
-                    <li>invoiceeCEOName (공급받는자 대표자성명) : <%= result.getList().get(i).getInvoiceeCEOName()  %> </li>
+                    <li>invoiceeCEOName (공급받는자 대표자 성명) : <%= result.getList().get(i).getInvoiceeCEOName()  %> </li>
                     <li>invoiceeEmail1 (공급받는자 이메일) : <%= result.getList().get(i).getInvoiceeEmail1()  %> </li>
 
                     <li>trusteeCorpNum (수탁자 사업자번호) : <%= result.getList().get(i).getTrusteeCorpNum()  %> </li>

@@ -20,7 +20,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 전송 요청시 발급받은 카카오톡 접수번호
+    // 카카오톡 예약전송 접수시 팝빌로부터 반환받은 접수번호
     String receiptNum = "021062710242700001";
 
     Response CheckResponse = null;

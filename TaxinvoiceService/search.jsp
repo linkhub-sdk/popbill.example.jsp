@@ -63,7 +63,7 @@
 	// 통합검색어, 거래처명 또는 거래처 사업자등록번호 기재, 공백시 전체조회
 	String QString = "";
 
-	// 문서번호 또는 국세청승인번호 조회
+	// 문서번호 또는 국세청 승인번호 조회
 	String MgtKey = "";
 
 	// 페이지번호
@@ -75,7 +75,9 @@
 	// 정렬방향, A-오름차순, D-내림차순
 	String Order = "D";
 
-	// 연동/일반 문서유형, 공백-전체조회, 0-일반문서, 1-연동문서
+	// 연동문서 여부, 공백-전체조회, 0-일반문서, 1-연동문서
+	// 일반문서 - 세금계산서 작성 시 API가 아닌 팝빌 사이트를 통해 등록한 문서
+	// 연동문서 - 세금계산서 작성 시 API를 통해 등록한 문서
 	String InterOPYN = "";
 
 	TISearchResult searchResult = new TISearchResult();
@@ -152,7 +154,7 @@
 									<li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
 									<li>openDT (개봉 일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
 									<li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
-									<li>ntsconfirmNum (국세청승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
+									<li>ntsconfirmNum (국세청 승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
 									<li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
 									<li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
 									<li>ntssendErrCode (전송실패 사유코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>

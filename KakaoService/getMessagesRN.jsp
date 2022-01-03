@@ -22,7 +22,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 전송 요청시 할당한 전송요청번호
+    // 카카오톡 전송 접수시 파트너가 할당한 전송요청 번호
     String requestNum = "20210702-001";
 
     KakaoSentInfo kakaoSentInfo = null;

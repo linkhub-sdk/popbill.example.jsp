@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 팩스전송 요청시 할당한 전송요청번호
+	// 팩스 전송요청시 파트너가 할당한 전송요청번호
 	String requestNum = "fax_jsp_test1234";
 
 	FaxResult[] faxResults = null;

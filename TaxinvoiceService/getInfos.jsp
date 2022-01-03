@@ -20,7 +20,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호 배열 (최대 1000건)
@@ -90,7 +90,7 @@
 								<li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
 								<li>openDT (개봉 일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
 								<li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
-								<li>ntsconfirmNum (국세청승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
+								<li>ntsconfirmNum (국세청 승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
 								<li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
 								<li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
 								<li>ntssendErrCode (전송실패 사유코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>

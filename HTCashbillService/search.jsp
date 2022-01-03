@@ -22,10 +22,12 @@
     // 수집 요청시 발급받은 작업아이디
     String jobID = "021082910000000001";
 
-    // 거래용도 배열, P-소득공제용, C-지출증빙용
+    // 거래구분 배열 ("P" 와 "C" 중 선택, 다중 선택 가능)
+    // └ P = 소득공제용 , C = 지출증빙용 , 미입력 시 전체조회
     String[] TradeUsage = {"P", "C"};
 
-    // 거래유형 배열, N-일반 현금영수증, C-취소현금영수증
+    // 문서형태 배열 ("N" 와 "C" 중 선택, 다중 선택 가능)
+    // └ N = 일반 현금영수증 , C = 취소현금영수증 , 미입력 시 전체조회
     String[] TradeType = {"N", "C"};
 
     // 페이지번호
@@ -63,7 +65,7 @@
               <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
               <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
             </ul>
-    
+
             <%
               if ( result != null ){
                 for ( int i = 0; i < result.getList().size(); i++ ) {
@@ -71,12 +73,12 @@
               <fieldset class="fieldset2">
               <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
               <ul>
-                  <li>ntsconfirmNum (국세청승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
+                  <li>ntsconfirmNum (국세청 승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
                   <li>tradeDate (거래일자) : <%= result.getList().get(i).getTradeDate() %></li>
                   <li>tradeDT (거래일시) : <%= result.getList().get(i).getTradeDT() %></li>
                   <li>tradeUsage (거래구분) : <%= result.getList().get(i).getTradeUsage() %></li>
                   <li>tradeType (문서형태) : <%= result.getList().get(i).getTradeType() %></li>
-                  <li>totalAmount (거래금액) : <%= result.getList().get(i).getTotalAmount() %></li>
+                  <li>totalAmount (합계금액) : <%= result.getList().get(i).getTotalAmount() %></li>
                   <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
                   <li>tax (부가세) : <%= result.getList().get(i).getTax() %></li>
                   <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>

@@ -27,7 +27,7 @@
 	 */
 	String BankCode = "0004";
 
-	// 조회할 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
+	// 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
 	String AccountNumber = "94324511758";
 
 	// 등록번호 유형 ( P / B 중 택 1 , P = 개인, B = 사업자)
@@ -59,14 +59,14 @@
 			<fieldset class="fieldset1">
 					<legend>에금주조회 결과</legend>
 					<ul>
-						<li> bankCode (기관코드) : <%=depositorCheckInfo.getBankCode()%></li>
-						<li> accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
-						<li> accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
-						<li> identityNumType (등록번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
-						<li> identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
-						<li> checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
-						<li> result (응답코드) : <%=depositorCheckInfo.getResult()%></li>
-						<li> resultMessage (응답메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
+						<li>bankCode (기관코드) : <%=depositorCheckInfo.getBankCode()%></li>
+						<li>accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
+						<li>accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
+						<li>identityNumType (등록번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
+						<li>identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
+						<li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
+						<li>result (응답코드) : <%=depositorCheckInfo.getResult()%></li>
+						<li>resultMessage (응답메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
 					</ul>
 
 			</fieldset>

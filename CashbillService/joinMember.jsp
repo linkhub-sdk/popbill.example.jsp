@@ -32,7 +32,7 @@
 	joinInfo.setCorpNum("0000000013");
 
 	// 대표자 성명, 최대 100자
-	joinInfo.setCEOName("대표자성명");
+	joinInfo.setCEOName("대표자 성명");
 
 	// 상호, 최대 200자
 	joinInfo.setCorpName("상호");
@@ -47,7 +47,7 @@
 	joinInfo.setBizClass("종목");
 
 	// 담당자 성명, 최대 100자
-	joinInfo.setContactName("담당자명");
+	joinInfo.setContactName("담당자 성명");
 
 	// 담당자 이메일, 최대 100자
 	joinInfo.setContactEmail("test@test.co.kr");

@@ -41,7 +41,7 @@
             <fieldset class="fieldset1">
             <legend>상세 정보 확인</legend>
                 <ul>
-                    <li>ntsconfirmNum (국세청승인번호) : <%=taxinvoiceInfo.getNtsconfirmNum() %> </li>
+                    <li>ntsconfirmNum (국세청 승인번호) : <%=taxinvoiceInfo.getNtsconfirmNum() %> </li>
                     <li>writeDate (작성일자) : <%=taxinvoiceInfo.getWriteDate() %> </li>
                     <li>issueDT (발행일시) : <%=taxinvoiceInfo.getIssueDT() %> </li>
                     <li>invoiceType (전자세금계산서 종류) : <%=taxinvoiceInfo.getInvoiceType() %> </li>

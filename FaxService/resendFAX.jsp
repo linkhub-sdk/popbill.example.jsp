@@ -33,14 +33,13 @@
 	// 발신자명, 공백처리시 기존전송정보로 전송
 	String senderName = "발신자명";
 
-	// 수신자명, 수신번호를 모두 공백처리시 기존전송정보로 전송
-	// 수신 팩스번호
+	// 수신번호, 공백처리시 기존전송정보로 전송
 	String receiveNum = "070111222";
 
-	// 수신자명
+	// 수신자명, 공백처리시 기존전송정보로 전송
 	String receiveName = "";
 
-	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전ㅌ
+	// 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
 	// String reserveDTtxt = "20141230180000";
 	// SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	// reserveDT = formatter.parse(reserveDTtxt);

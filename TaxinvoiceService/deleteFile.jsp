@@ -21,13 +21,13 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 세금계산서 유형. SELL : 매출, BUY : 매입, TRUSTEE : 수탁
+	// 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
 	String mgtKey = "20210708-100";
 
-	// 파일 아이디, 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+	// 파일 아이디, getFiles()로 확인한 AttachedFile의 attachedFile 참조.
 	String fileID = "3662614B-A90F-4957-991C-E2E4227A15FA.PBF";
 
 	Response CheckResponse = null;

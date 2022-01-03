@@ -22,7 +22,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
@@ -31,11 +31,17 @@
 	// 메모
 	String memo = "발행 메모";
 
+	// 지연발행 강제여부
+	Boolean forceIssue = false;
+
+	// 팝빌회원 아이디
+	String userID = "testkorea";
+
 	IssueResponse CheckResponse = null;
 
 	try {
 
-		CheckResponse = taxinvoiceService.issue(testCorpNum, keyType, mgtKey, memo);
+		CheckResponse = taxinvoiceService.issue(testCorpNum, keyType, mgtKey, memo, forceIssue, userID);
 
 	} catch (PopbillException pe) {
 		// 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -52,7 +58,7 @@
 			<ul>
 				<li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
 				<li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
-				<li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
+				<li>국세청 승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
 			</ul>
 		</fieldset>
 	 </div>

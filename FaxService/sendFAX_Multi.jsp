@@ -26,7 +26,8 @@
     // 팝빌회원 아이디
     String testUserID = "testkorea";
 
-    // 발신번호번호
+    // 발신번호
+    // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     String sendNum = "07043042991";
 
     // 수신자 정보 (최대 1000건)
@@ -34,12 +35,12 @@
 
     Receiver receiver1 = new Receiver();
     receiver1.setReceiveName("수신자1");       // 수신자명
-    receiver1.setReceiveNum("010111222");     // 수신팩스번호
+    receiver1.setReceiveNum("010111222");      // 수신팩스번호
     receivers[0] = receiver1;
 
     Receiver receiver2 = new Receiver();
     receiver2.setReceiveName("수신자2");       // 수신자명
-    receiver2.setReceiveNum("010333444");     // 수신팩스번호
+    receiver2.setReceiveNum("010333444");      // 수신팩스번호
     receivers[1] = receiver1;
 
     // 팩스전송파일 경로

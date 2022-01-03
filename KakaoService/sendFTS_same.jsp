@@ -36,10 +36,11 @@
     // 대체문자 내용 (최대 2000byte)
     String altContent = "대체문자 내용";
 
-    // 대체문자 유형 [공백-미전송, C-친구톡내용, A-대체문자내용]
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = {altContent}에 입력한 내용 전송
     String altSendType = "C";
 
-    // 1회 최대 전송 1,000건 전송 가능
+    // 카카오톡 수신정보 배열, 최대 1000건
     KakaoReceiver[] receivers = new KakaoReceiver[10];
 
     for (int i = 0; i < 10; i++) {

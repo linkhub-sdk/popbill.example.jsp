@@ -47,12 +47,12 @@
 			<fieldset class="fieldset1">
 					<legend>에금주조회 결과</legend>
 					<ul>
-						<li> bankCode (기관코드) : <%=accountInfo.getBankCode()%></li>
-						<li> accountNumber (계좌번호) : <%=accountInfo.getAccountNumber()%></li>
-						<li> accountName (예금주 성명) : <%=accountInfo.getAccountName()%></li>
-						<li> checkDate (확인일시) : <%=accountInfo.getCheckDate()%></li>
-						<li> result (응답코드) : <%=accountInfo.getResult()%></li>
-						<li> resultMessage (응답메시지) : <%=accountInfo.getResultMessage()%></li>
+						<li>bankCode (기관코드) : <%=accountInfo.getBankCode()%></li>
+						<li>accountNumber (계좌번호) : <%=accountInfo.getAccountNumber()%></li>
+						<li>accountName (예금주 성명) : <%=accountInfo.getAccountName()%></li>
+						<li>checkDate (확인일시) : <%=accountInfo.getCheckDate()%></li>
+						<li>result (응답코드) : <%=accountInfo.getResult()%></li>
+						<li>resultMessage (응답메시지) : <%=accountInfo.getResultMessage()%></li>
 					</ul>
 
 			</fieldset>

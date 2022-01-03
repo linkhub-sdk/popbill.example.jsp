@@ -35,7 +35,8 @@
     // 대체문자 내용 (최대 2000byte)
     String altContent = "대체문자 내용";
 
-    // 대체문자 유형 [공백-미전송, C-친구톡내용, A-대체문자내용]
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = {altContent}에 입력한 내용 전송
     String altSendType = "C";
 
     // 버튼 (최대 5개)

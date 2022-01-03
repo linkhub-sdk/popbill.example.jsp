@@ -55,7 +55,7 @@
 	// 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
 	statement.setItemCode((short) 121);
 
-	// 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+	// 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
 	statement.setMgtKey("20210701-06");
 
 
@@ -84,8 +84,8 @@
 	// 발신자 업태
 	statement.setSenderBizType("업태");
 
-	// 발신자 담당자명
-	statement.setSenderContactName("발신자 담당자명");
+	// 발신자 담당자 성명
+	statement.setSenderContactName("발신자 담당자 성명");
 
 	// 발신자 담당자 메일주소
 	statement.setSenderEmail("test@test.com");
@@ -107,7 +107,7 @@
 	// 발신자받는자 상호
 	statement.setReceiverCorpName("수신자 상호");
 
-	// 발신자받는자 대표자성명
+	// 발신자받는자 대표자 성명
 	statement.setReceiverCEOName("수신자 대표자 성명");
 
 	// 발신자받는자 주소
@@ -119,8 +119,8 @@
 	// 발신자받는자 업태
 	statement.setReceiverBizType("수신자 업태");
 
-	// 발신자받는자 담당자명
-	statement.setReceiverContactName("수신자 담당자명");
+	// 발신자받는자 담당자 성명
+	statement.setReceiverContactName("수신자 담당자 성명");
 
 	// 발신자받는자 담당자 메일주소
 	statement.setReceiverEmail("test@receiver.com");
@@ -166,7 +166,7 @@
 	StatementDetail detail = new StatementDetail();
 
 	detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
-	detail.setItemName("품명");          // 품목명
+	detail.setItemName("품명");         // 품목명
 	detail.setPurchaseDT("20210701");   // 거래일자
 	detail.setQty("1");                 // 수량
 	detail.setSupplyCost("200000");     // 공급가액
@@ -177,7 +177,7 @@
 	detail = new StatementDetail();     // 상세항목(품목) 배열
 
 	detail.setSerialNum((short) 2);     // 일련번호 1부터 순차기재
-	detail.setItemName("품명");          // 품목명
+	detail.setItemName("품명");         // 품목명
 	detail.setPurchaseDT("20210701");   // 거래일자
 	detail.setQty("1");                 // 수량
 	detail.setSupplyCost("200000");     // 공급가액

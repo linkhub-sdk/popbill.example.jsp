@@ -24,16 +24,16 @@
 	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-	// 팩스 접수번호
+	// 원본 팩스 접수번호
 	String orgReceiptNum = "019010809435800001";
 
-	// 발신번호
+	// 발신번호, 공백처리시 기존전송정보로 재전송
 	String sendNum = "07040342991";
 
-	// 발신자명
+	// 발신자명, 공백처리시 기존전송정보로 재전송
 	String senderName = "발신자명";
 
-	// 수신전송정보가 기존전송정보와 동일한경우 아래의 코드 참조
+	// 팩스수신정보를 기존전송정보와 동일하게 재전송하는 경우, receivers 변수 null 처리
 	Receiver[] receivers = null;
 
 	// 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1000건)
@@ -41,12 +41,12 @@
 
 	// Receiver receiver1 = new Receiver();
 	// receiver1.setReceiveName("수신자1");       // 수신자명
-	// receiver1.setReceiveNum("010111222");     // 수신팩스번호
+	// receiver1.setReceiveNum("010111222");      // 수신팩스번호
 	// receivers[0] = receiver1;
 
 	// Receiver receiver2 = new Receiver();
 	// receiver2.setReceiveName("수신자2");       // 수신자명
-	// receiver2.setReceiveNum("010333444");     // 수신팩스번호
+	// receiver2.setReceiveNum("010333444");      // 수신팩스번호
 	// receivers[1] = receiver1;
 
 

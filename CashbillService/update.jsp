@@ -27,7 +27,7 @@
     // 현금영수증 정보 객체
     Cashbill cashbill = new Cashbill();
 
-    // 현금영수증 문서번호, 최대 24자리, 영문, 숫자 '-', '_'를 조합하여 사업자별로 중복되지 않도록 구성
+    // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
     cashbill.setMgtKey(mgtKey);
 
     // 거래구분, {소득공제용, 지출증빙용} 중 기재
@@ -53,7 +53,7 @@
     // 봉사료, 숫자만 가능
     cashbill.setServiceFee("0");
 
-    // 거래금액, 숫자만 가능, 봉사료 + 공급가액 + 부가세
+    // 합계금액, 숫자만 가능, 봉사료 + 공급가액 + 부가세
     cashbill.setTotalAmount("11000");
 
 
@@ -66,7 +66,7 @@
     // 가맹점 상호
     cashbill.setFranchiseCorpName("가맹점 상호_수정");
 
-    // 가맹점 대표자성명
+    // 가맹점 대표자 성명
     cashbill.setFranchiseCEOName("가맹점 대표자_수정");
 
     // 가맹점 주소
@@ -75,28 +75,24 @@
     // 가맹점 연락처
     cashbill.setFranchiseTEL("07043042991");
 
-    // 발행 시 안내문자 전송여부
+    // 발행 안내 문자 전송여부
     cashbill.setSmssendYN(false);
 
 
-    // 거래처 주문자명
+    // 구매자 성명
     cashbill.setCustomerName("주문자명");
 
-    // 거래처 주문상품명
+    // 주문상품명
     cashbill.setItemName("주문상품명");
 
-    // 거래처 주문번호
+    // 주문번호
     cashbill.setOrderNumber("주문번호");
 
-    // 거래처 이메일
+    // 구매자 이메일
     cashbill.setEmail("test@test.com");
 
-    // 거래처 휴대폰
+    // 구매자 휴대폰
     cashbill.setHp("01043245117");
-
-    // 거래처 팩스
-    cashbill.setFax("070111222");
-
 
     Response CheckResponse = null;
 

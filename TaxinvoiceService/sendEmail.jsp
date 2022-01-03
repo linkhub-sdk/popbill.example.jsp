@@ -20,13 +20,13 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 세금계산서 유형. SELL :매출 , BUY : 매입  , TRUSTEE : 수탁
+	// 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
 	MgtKeyType keyType = MgtKeyType.SELL;
 
 	// 세금계산서 문서번호
 	String mgtKey = "20210702-001";
 
-	// 메일주소
+	// 수신메일주소
 	String emailAddr = "test@test.com";
 
 	Response CheckResponse = null;
@@ -45,7 +45,7 @@
 		<p class="heading1">Respones</p>
 		<br/>
 		<fieldset class="fieldset1">
-			<legend>발행안내메일 재전송</legend>
+			<legend>발행 안내메일 재전송</legend>
 			<ul>
 				<li>Response.code : <%=CheckResponse.getCode()%></li>
 				<li>Response.message : <%=CheckResponse.getMessage()%></li>

@@ -31,6 +31,7 @@
     String testUserID = "testkorea";
 
     // 발신번호
+    // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     String sendNum = "07043042991";
 
     // 발신자명
@@ -54,10 +55,10 @@
     InputStream targetStream = null;
     try {
         targetStream = new FileInputStream(file);
-        } catch (FileNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
+    } catch (FileNotFoundException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+    }
 
     // 파일정보 배열, 최대 20개까지 입력가능.
     FaxUploadFile[] fileList = new FaxUploadFile[1];

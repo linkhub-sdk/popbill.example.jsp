@@ -20,10 +20,10 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// SELL-매출 세금계산서, BUY-매입 세금계산서, TRUSTEE-위수탁 세금계산서
+	// 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-수탁
 	QueryType TaxinvoiceType = QueryType.SELL;
 
-	// 수집일자유형 유형, W-작성일자, I-발행일자, S-전송일자
+	// 조회할 일자 유형, W-작성일자, I-발행일자, S-전송일자
 	String DType = "S";
 
 	// 시작일자, 날짜형식(yyyyMMdd)

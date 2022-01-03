@@ -38,10 +38,11 @@
     // 대체문자 내용 (최대 2000byte)
     String altContent = "대체문자 내용";
 
-    // 대체문자 유형 [공백-미전송, C-친구톡내용, A-대체문자내용]
+    // 대체문자 유형 (null , "C" , "A" 중 택 1)
+    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = {altContent}에 입력한 내용 전송
     String altSendType = "C";
 
-    // 1회 최대 전송 1,000건 전송 가능
+    // 카카오톡 수신정보 배열, 최대 1000건
     KakaoReceiver[] receivers = new KakaoReceiver[10];
 
     for (int i = 0; i < 10; i++) {
@@ -70,11 +71,13 @@
     // 광고여부
     Boolean adsYN = false;
 
-    // 파일경로
-    // 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbyte / 이미지 높이/너비 비율 : 1.333 이하, 1/2 이상)
+    // 첨부이미지 파일 경로
+    // 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
     File file = new File((application.getRealPath("/resources/kakaofmstest.jpg")));
 
     // 이미지 링크 URL
+    // └ 수신자가 친구톡 상단 이미지 클릭시 호출되는 URL
+    // 미입력시 첨부된 이미지를 링크 기능 없이 표시
     String imageURL = "http://www.linkhub.co.kr";
 
     // 팝빌회원 아이디

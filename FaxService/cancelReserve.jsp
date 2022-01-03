@@ -19,7 +19,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 전송요청(sendFAX)시 발급받은 팩스접수번호
+    // 예약팩스 전송요청시 팝빌로부터 반환 받은 접수번호
     String receiptNum = "021010717505800001";
 
     Response CheckResponse = null;

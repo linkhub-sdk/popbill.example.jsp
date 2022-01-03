@@ -25,28 +25,28 @@
 	// 팝빌회원 아이디
 	String testUserID = "testkorea";
 
-	// 발신번호
+	// [동보전송시 필수] 발신번호, 개별 전송정보의 발신번호가 없는 경우 적용
 	String sender = "07043042991";
 
-	// 대량문자 제목, 개별전송정보 없는경우
+	// [동보전송시 필수] 메시지 제목, 개별 전송정보의 메시지 제목이 없는 경우 적용
 	String subject = "대량문자 제목";
 
-	// 대량문자 내용, 개별전송정보 없는경우
+	// [동보전송시 필수] 메시지 내용, 개별 전송정보의 메시지 내용이 없는 경우 적용
 	String content = "대량문자 내용";
 
 	// 광고문자 전송여부
 	Boolean adsYN = false;
 
-	// 수신정보배열, 최대 1000건.
+	// 전송 정보 배열, 최대 1000건.
 	Message[] messages = new Message[2];
 
 	Message msg1 = new Message();
-	msg1.setSender("07043042991");      //발신번호
-	msg1.setSenderName("발신자1");        //발신자명
-	msg1.setReceiver("010111222");      //수신번호
-	msg1.setReceiverName("수신자1");      //수신자명
-	msg1.setSubject("장문 메시지 제목");    //문자제목
-	msg1.setContent("메시지 내용1");       //메시지내용
+	msg1.setSender("07043042991");       // 발신번호
+	msg1.setSenderName("발신자1");       // 발신자명
+	msg1.setReceiver("010111222");       // 수신번호
+	msg1.setReceiverName("수신자1");     // 수신자명
+	msg1.setSubject("장문 메시지 제목"); // 문자제목
+	msg1.setContent("메시지 내용1");     // 메시지내용
 	messages[0] = msg1;
 
 	Message msg2 = new Message();

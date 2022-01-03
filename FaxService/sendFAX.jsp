@@ -26,6 +26,7 @@
     String testUserID = "testkorea";
 
     // 발신번호
+    // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     String sendNum = "07043042991";
 
     // 발신자명
