@@ -77,11 +77,11 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>공인인증서 관리</legend>
+        <legend>공동인증서 관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getTaxCertURL.jsp">GetTaxCertURL</a> - 공인인증서 등록 URL</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">GetCertificateExpireDate</a> - 공인인증서 만료일 확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">CheckCertValidation</a> - 공인인증서 유효성 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getTaxCertURL.jsp">GetTaxCertURL</a> - 공동인증서 등록 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">GetCertificateExpireDate</a> - 공동인증서 만료일 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">CheckCertValidation</a> - 공동인증서 유효성 확인</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

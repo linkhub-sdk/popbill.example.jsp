@@ -28,8 +28,8 @@
         <legend>홈택스연동 인증 관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스연동 인증 관리 팝업 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTCashbillService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스연동 공인인증서 만료일자 확인</li>
-            <li><a href="${pageContext.request.contextPath}/HTCashbillService/checkCertValidation.jsp">checkCertValidation</a> - 홈택스 공인인증서 로그인 테스트</li>
+            <li><a href="${pageContext.request.contextPath}/HTCashbillService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스연동 공동인증서 만료일자 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTCashbillService/checkCertValidation.jsp">checkCertValidation</a> - 홈택스 공동인증서 로그인 테스트</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/registDeptUser.jsp">registDeptUser</a> - 부서사용자 계정등록</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/checkDeptUser.jsp">checkDeptUser</a> - 부서사용자 등록정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTCashbillService/checkLoginDeptUser.jsp">checkLoginDeptUser</a> - 부서사용자 로그인 테스트</li>

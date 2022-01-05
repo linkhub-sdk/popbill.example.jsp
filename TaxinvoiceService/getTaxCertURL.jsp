@@ -39,7 +39,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>공인인증서 등록 URL 확인</legend>
+        <legend>공동인증서 등록 URL 확인</legend>
         <ul>
             <li>URL : <%=url%></li>
         </ul>

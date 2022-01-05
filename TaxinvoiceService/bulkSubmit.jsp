@@ -219,8 +219,8 @@
 
         detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
         detail.setPurchaseDT("20211212"); // 거래일자
-        detail.setItemName("품목명");      // 품목명
-        detail.setSpec("규격");            // 규격
+        detail.setItemName("품목명");     // 품목명
+        detail.setSpec("규격");           // 규격
         detail.setQty("1");               // 수량
         detail.setUnitCost("50000");      // 단가
         detail.setSupplyCost("50000");    // 공급가액

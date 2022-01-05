@@ -169,7 +169,7 @@
                 }
                 if (emailSendConfig.getEmailType().equals("ETC_CERT_EXPIRATION")) {
             %>
-            <li>[정기발송] ETC_CERT_EXPIRATION (팝빌에서 이용중인 공인인증서의 갱신 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[정기발송] ETC_CERT_EXPIRATION (팝빌에서 이용중인 공동인증서의 갱신 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                     }
                 }

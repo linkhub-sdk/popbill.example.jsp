@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-		<title>팝빌 SDK jsp Example.</title>
-	</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
+        <title>팝빌 SDK jsp Example.</title>
+    </head>
 
 <%@ include file="common.jsp" %>
 <%@page import="java.util.ArrayList"%>
@@ -144,7 +144,7 @@
 
     // 역발행 안내 문자 전송여부
     // - 전송시 포인트 차감되며, 전송실패시 환불처리
-		taxinvoice.setInvoiceeSMSSendYN(false);
+        taxinvoice.setInvoiceeSMSSendYN(false);
 
     /***************************************************************************
      *                              세금계산서 기재정보
@@ -213,8 +213,8 @@
 
     detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
     detail.setPurchaseDT("20210712"); // 거래일자
-    detail.setItemName("품목명");      // 품목명
-    detail.setSpec("규격");            // 규격
+    detail.setItemName("품목명");     // 품목명
+    detail.setSpec("규격");           // 규격
     detail.setQty("1");               // 수량
     detail.setUnitCost("50000");      // 단가
     detail.setSupplyCost("50000");    // 공급가액
@@ -269,17 +269,17 @@
         throw pe;
     }
 %>
-	<body>
-		<div id="content">
-			<p class="heading1">Response</p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>세금계산서 수정 결과 확인</legend>
-				<ul>
-					<li>Response.code : <%=CheckResponse.getCode()%></li>
-					<li>Response.message : <%=CheckResponse.getMessage()%></li>
-				</ul>
-			</fieldset>
-		 </div>
-	</body>
+    <body>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>세금계산서 수정 결과 확인</legend>
+                <ul>
+                    <li>Response.code : <%=CheckResponse.getCode()%></li>
+                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                </ul>
+            </fieldset>
+         </div>
+    </body>
 </html>

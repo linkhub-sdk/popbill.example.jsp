@@ -83,59 +83,59 @@
         throw pe;
     }
 %>
-	<body>
-		<div id="content">
-			<p class="heading1">Response </p>
-			<br/>
-			<fieldset class="fieldset1">
-				<legend>현금영수증 목록 조회</legend>
-				<ul>
-					<li>code (응답코드) : <%= searchResult.getCode()%></li>
-					<li>message (응답메시지) : <%= searchResult.getMessage()%></li>
-					<li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
-					<li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
-					<li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
-					<li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
-				</ul>
-				<%
-					CashbillInfo cashbillInfo = null;
+    <body>
+        <div id="content">
+            <p class="heading1">Response </p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend>현금영수증 목록 조회</legend>
+                <ul>
+                    <li>code (응답코드) : <%= searchResult.getCode()%></li>
+                    <li>message (응답메시지) : <%= searchResult.getMessage()%></li>
+                    <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
+                    <li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
+                    <li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
+                    <li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
+                </ul>
+                <%
+                    CashbillInfo cashbillInfo = null;
 
-				for ( int i = 0; i < searchResult.getList().size(); i++ ) {
-					cashbillInfo = searchResult.getList().get(i);
-				%>
-				<fieldset class="fieldset2">
-					<legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
-					<ul>
-						<li>itemKey (팝빌번호) : <%= cashbillInfo.getItemKey()%></li>
-						<li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
-						<li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
-						<li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
-						<li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
-						<li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
-						<li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
-						<li>totalAmount (합계금액) : <%= cashbillInfo.getTotalAmount()%></li>
-						<li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
-						<li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
-						<li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
-						<li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
-						<li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
-						<li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
-						<li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
-						<li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
-						<li>confirmNum (국세청 승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
-						<li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
-						<li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
-						<li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
-						<li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
-						<li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
-						<li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
-						<li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
-					</ul>
-				</fieldset>
-				<%
-					}
-				%>
-			</fieldset>
-		</div>
-	</body>
+                for ( int i = 0; i < searchResult.getList().size(); i++ ) {
+                    cashbillInfo = searchResult.getList().get(i);
+                %>
+                <fieldset class="fieldset2">
+                    <legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
+                    <ul>
+                        <li>itemKey (팝빌번호) : <%= cashbillInfo.getItemKey()%></li>
+                        <li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
+                        <li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
+                        <li>tradeType (문서형태) : <%= cashbillInfo.getTradeType()%></li>
+                        <li>tradeUsage (거래구분) : <%= cashbillInfo.getTradeUsage()%></li>
+                        <li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
+                        <li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
+                        <li>totalAmount (합계금액) : <%= cashbillInfo.getTotalAmount()%></li>
+                        <li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
+                        <li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
+                        <li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
+                        <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
+                        <li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
+                        <li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
+                        <li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
+                        <li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
+                        <li>confirmNum (국세청 승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
+                        <li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
+                        <li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
+                        <li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
+                        <li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
+                        <li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
+                        <li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
+                        <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
+                    </ul>
+                </fieldset>
+                <%
+                    }
+                %>
+            </fieldset>
+        </div>
+    </body>
 </html>
