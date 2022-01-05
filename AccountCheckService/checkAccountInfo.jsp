@@ -25,10 +25,10 @@
 	 * 조회할 기관코드
 	 * - https://docs.popbill.com/accountcheck/?lang=java#BankCodeList
 	 */
-	String bankCode = "0004";
+	String bankCode = "";
 
 	// 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
-	String accountNumber = "1234567890";
+	String accountNumber = "";
 
 	try{
 		accountInfo = accountCheckService.CheckAccountInfo(testCorpNum, bankCode, accountNumber);

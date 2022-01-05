@@ -43,8 +43,8 @@
 			%>
 			<fieldset class="fieldset2">
 					<ul>
-						<li>confirmNum(유통사업자 승인번호) : <%= emailPublicKey.getConfirmNum() %></li>
-						<li>email(유통사업자 이메일) : <%= emailPublicKey.getEmail() %></li>
+						<li>confirmNum (유통사업자 승인번호) : <%= emailPublicKey.getConfirmNum() %></li>
+						<li>email (유통사업자 이메일) : <%= emailPublicKey.getEmail() %></li>
 					</ul>
 			</fieldset>
 				<%

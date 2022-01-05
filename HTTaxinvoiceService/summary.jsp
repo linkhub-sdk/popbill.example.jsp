@@ -12,15 +12,15 @@
 
 <%
   /*
-   * 함수 (GetJobState – 수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 전자세금계산서 매입/매출 내역의 요약 정보를 조회합니다.
+   * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 전자세금계산서 매입/매출 내역의 요약 정보를 조회합니다.
    * - https://docs.popbill.com/httaxinvoice/java/api#Summary
    */
 
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-  // 팝빌회원 아이디
-  String testUserID = "testkorea";
+	// 팝빌회원 아이디
+	String testUserID = "testkorea";
 
 	// 수집 요청시 발급받은 작업아이디
 	String jobID = "021102217000000002";

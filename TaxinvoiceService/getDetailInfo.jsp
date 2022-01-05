@@ -87,12 +87,12 @@
                     <li>invoiceeHP1 (공급받는자 담당자 휴대폰) : <%=taxinvoice.getInvoiceeHP1() %></li>
                     <li>invoiceeEmail1 (공급받는자 담당자 메일) : <%=taxinvoice.getInvoiceeEmail1() %></li>
                     <li>invoiceeSMSSendYN (역발행 안내 문자 전송여부) : <%=taxinvoice.getInvoiceeSMSSendYN() %></li>
-                    <li>closeDownState (공급받는자 휴폐업상태) : <%=taxinvoice.getCloseDownState () %></li>
-                    <li>closeDownStateDate (공급받는자 휴폐업일자) : <%=taxinvoice.getCloseDownStateDate () %></li>
+                    <li>closeDownState (공급받는자 휴폐업상태) : <%=taxinvoice.getCloseDownState() %></li>
+                    <li>closeDownStateDate (공급받는자 휴폐업일자) : <%=taxinvoice.getCloseDownStateDate() %></li>
 
                     <li>trusteeMgtKey (수탁자 문서번호) : <%=taxinvoice.getTrusteeMgtKey() %></li>
                     <li>trusteeCorpNum (수탁자 사업자번호) : <%=taxinvoice.getTrusteeCorpNum() %></li>
-                    <li>trusteeTaxRegID (수탁자 종사업장 번호) : <%=taxinvoice.getTrusteeTaxRegID() %></li> 
+                    <li>trusteeTaxRegID (수탁자 종사업장 번호) : <%=taxinvoice.getTrusteeTaxRegID() %></li>
                     <li>trusteeCorpName (수탁자 상호) : <%=taxinvoice.getTrusteeCorpName() %></li>
                     <li>trusteeCEOName (수탁자 대표자명) : <%=taxinvoice.getTrusteeCEOName() %></li>
                     <li>trusteeAddr (수탁자 주소) : <%=taxinvoice.getTrusteeAddr() %></li>
@@ -108,7 +108,7 @@
                     <li>modifyCode (수정 사유코드) : <%=taxinvoice.getModifyCode() %></li>
                     <li>orgNTSConfirmNum (원본 세금계산서 국세청 승인번호) : <%=taxinvoice.getOrgNTSConfirmNum() %></li>
                     <li>purposeType (영수/청구) : <%=taxinvoice.getPurposeType() %></li>
-                    <li>serialNum (일련번호) : <%=taxinvoice.getSerialNum () %></li>
+                    <li>serialNum (일련번호) : <%=taxinvoice.getSerialNum() %></li>
                     <li>cash (현금) : <%=taxinvoice.getCash() %></li>
                     <li>chkBill (수표) : <%=taxinvoice.getChkBill() %></li>
                     <li>credit (외상) : <%=taxinvoice.getCredit() %></li>

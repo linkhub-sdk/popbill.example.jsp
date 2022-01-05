@@ -20,10 +20,10 @@
     String testCorpNum = "1234567890";
 
     // 기관코드
-    String BankCode = "0048";
+    String BankCode = "";
 
     // 계좌번호
-    String AccountNumber = "131020538600";
+    String AccountNumber = "";
 
     // 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20210701";

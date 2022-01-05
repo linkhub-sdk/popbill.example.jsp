@@ -12,7 +12,7 @@
 
 <%
     /*
-    * GetJobState(수집 상태 확인)를 통해 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
+    * 수집 상태 확인(GetJobState API) 함수를 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
     * - https://docs.popbill.com/easyfinbank/java/api#Summary
     */
 
@@ -25,14 +25,14 @@
     // 수집 요청시 발급받은 작업아이디
     String jobID = "019121913000000001";
 
-		// 거래유형 배열 ("I" 와 "O" 중 선택, 다중 선택 가능)
-		// └ I = 입금 , O = 출금 , 미입력 시 전체조회
+    // 거래유형 배열 ("I" 와 "O" 중 선택, 다중 선택 가능)
+    // └ I = 입금 , O = 출금 , 미입력 시 전체조회
     String[] TradeType = {"I", "O"};
 
-		// "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
-		// - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
-		// - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3, remark4 값
-		// - 미입력시 전체조회
+    // "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
+    // - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
+    // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
+    // - 미입력시 전체조회
     String searchString = "";
 
     EasyFinBankSummary result = null;

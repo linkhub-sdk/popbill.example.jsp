@@ -18,9 +18,9 @@
 
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
-	
+
 	// 팝빌회원 아이디
-	 String testUserID = "testkorea";
+	String testUserID = "testkorea";
 
 	String url = null;
 

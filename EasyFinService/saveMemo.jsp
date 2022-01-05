@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 거래내역 아이디, Search API 응답항목중 TID
-    String TID = "02112181100000000120191210000003";
+    String TID = "";
 
     // 메모
     String Memo = "02107-테스트";

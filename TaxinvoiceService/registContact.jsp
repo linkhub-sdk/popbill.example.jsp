@@ -26,7 +26,7 @@
 	contactInfo.setId("testkorea");
 
 	// 담당자 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
-    contactInfo.setPassword("password123!@#");
+	contactInfo.setPassword("password123!@#");
 
 	// 담당자 성명, 최대 100자
 	contactInfo.setPersonName("담당자");

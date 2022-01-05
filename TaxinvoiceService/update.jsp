@@ -94,7 +94,7 @@
     taxinvoice.setInvoicerHP("010-000-2222");
 
     // 발행 안내 문자 전송여부
-		// - 전송시 포인트 차감되며, 전송실패시 환불처리
+    // - 전송시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoicerSMSSendYN(false);
 
     /***************************************************************************
@@ -142,8 +142,8 @@
     // 공급받는자 담당자 휴대폰번호
     taxinvoice.setInvoiceeHP1("010-000-1111");
 
-		// 역발행 안내 문자 전송여부
-		// - 전송시 포인트 차감되며, 전송실패시 환불처리
+    // 역발행 안내 문자 전송여부
+    // - 전송시 포인트 차감되며, 전송실패시 환불처리
 		taxinvoice.setInvoiceeSMSSendYN(false);
 
     /***************************************************************************
@@ -206,36 +206,36 @@
      *                           상세항목(품목) 정보
      ****************************************************************************/
 
-		 taxinvoice.setDetailList(new ArrayList<TaxinvoiceDetail>());
+    taxinvoice.setDetailList(new ArrayList<TaxinvoiceDetail>());
 
-		 // 상세항목 객체
-		 TaxinvoiceDetail detail = new TaxinvoiceDetail();
+    // 상세항목 객체
+    TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
-		 detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
-		 detail.setPurchaseDT("20210712"); // 거래일자
-		 detail.setItemName("품목명");      // 품목명
-		 detail.setSpec("규격");            // 규격
-		 detail.setQty("1");               // 수량
-		 detail.setUnitCost("50000");      // 단가
-		 detail.setSupplyCost("50000");    // 공급가액
-		 detail.setTax("5000");            // 세액
-		 detail.setRemark("품목비고");     // 비고
+    detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
+    detail.setPurchaseDT("20210712"); // 거래일자
+    detail.setItemName("품목명");      // 품목명
+    detail.setSpec("규격");            // 규격
+    detail.setQty("1");               // 수량
+    detail.setUnitCost("50000");      // 단가
+    detail.setSupplyCost("50000");    // 공급가액
+    detail.setTax("5000");            // 세액
+    detail.setRemark("품목비고");     // 비고
 
-		 taxinvoice.getDetailList().add(detail);
+    taxinvoice.getDetailList().add(detail);
 
-		 detail = new TaxinvoiceDetail();
+    detail = new TaxinvoiceDetail();
 
-		 detail.setSerialNum((short) 2);
-		 detail.setPurchaseDT("20210712");
-		 detail.setItemName("품목명2");
-		 detail.setSpec("규격");
-		 detail.setQty("1");
-		 detail.setUnitCost("50000");
-		 detail.setSupplyCost("50000");
-		 detail.setTax("5000");
-		 detail.setRemark("품목비고2");
+    detail.setSerialNum((short) 2);
+    detail.setPurchaseDT("20210712");
+    detail.setItemName("품목명2");
+    detail.setSpec("규격");
+    detail.setQty("1");
+    detail.setUnitCost("50000");
+    detail.setSupplyCost("50000");
+    detail.setTax("5000");
+    detail.setRemark("품목비고2");
 
-		 taxinvoice.getDetailList().add(detail);
+    taxinvoice.getDetailList().add(detail);
 
     /***************************************************************************
      *                             추가담당자 정보

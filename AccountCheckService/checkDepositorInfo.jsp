@@ -25,21 +25,21 @@
 	 * 조회할 기관코드
 	 * - https://docs.popbill.com/accountcheck/?lang=java#BankCodeList
 	 */
-	String BankCode = "0004";
+	String BankCode = "";
 
 	// 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
-	String AccountNumber = "94324511758";
+	String AccountNumber = "";
 
 	// 등록번호 유형 ( P / B 중 택 1 , P = 개인, B = 사업자)
-	String IdentityNumType ="P";
+	String IdentityNumType ="";
 
 	/*
 	 * 등록번호
-	 * - IdentityNumType 값이 "B" 인 경우 (사업자번호(10)자리 입력 )
+	 * - IdentityNumType 값이 "B" 인 경우 (사업자번호(10)자리 입력)
 	 * - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
 	 * 하이픈 '-' 제외하고 입력
 	 */
-	String IdentityNum = "901112";
+	String IdentityNum = "";
 
 	try{
 		depositorCheckInfo = accountCheckService.CheckDepositorInfo(testCorpNum, BankCode, AccountNumber, IdentityNumType, IdentityNum);

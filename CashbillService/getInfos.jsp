@@ -19,7 +19,7 @@
 	// 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
 	String testCorpNum = "1234567890";
 
-	// 현금영수증 문서번호 배열 최대(1000건)
+	// 현금영수증 문서번호 배열 (최대 1000건)
 	String[] mgtKeyList = new String[] {"20210701-001", "20210701-002", "20210701-003"};
 
 	CashbillInfo[] cashbillInfos = null;
