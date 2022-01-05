@@ -20,7 +20,6 @@
 <%
     /*
      * 동일한 파일의 바이너리 데이터를 다수의 수신자에게 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
-     * - 팩스전송 문서 파일포맷 안내 : https://docs.popbill.com/fax/format?lang=java
      * - https://docs.popbill.com/fax/java/api#SendFAXBinary_multi
      */
 

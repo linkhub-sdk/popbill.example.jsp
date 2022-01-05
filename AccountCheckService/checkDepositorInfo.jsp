@@ -21,10 +21,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    /*
-     * 조회할 기관코드
-     * - https://docs.popbill.com/accountcheck/?lang=java#BankCodeList
-     */
+    // 조회할 기관코드
     String BankCode = "";
 
     // 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)

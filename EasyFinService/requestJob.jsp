@@ -11,10 +11,10 @@
 
 <%
     /*
-    * 계좌 거래내역을 확인하기 위해 팝빌에 수집요청을 합니다. (조회기간 단위 : 최대 1개월)
-    * - 조회일로부터 최대 3개월 이전 내역까지 조회할 수 있습니다.
-    * - https://docs.popbill.com/easyfinbank/java/api#RequestJob
-    */
+     * 계좌 거래내역을 확인하기 위해 팝빌에 수집요청을 합니다. (조회기간 단위 : 최대 1개월)
+     * - 조회일로부터 최대 3개월 이전 내역까지 조회할 수 있습니다.
+     * - https://docs.popbill.com/easyfinbank/java/api#RequestJob
+     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";

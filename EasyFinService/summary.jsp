@@ -12,9 +12,9 @@
 
 <%
     /*
-    * 수집 상태 확인(GetJobState API) 함수를 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
-    * - https://docs.popbill.com/easyfinbank/java/api#Summary
-    */
+     * 수집 상태 확인(GetJobState API) 함수를 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
+     * - https://docs.popbill.com/easyfinbank/java/api#Summary
+     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
