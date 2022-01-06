@@ -83,7 +83,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팩스 동보전송 결과 확인</legend>
+        <legend>팩스 동보전송 요청</legend>
         <ul>
             <li>접수번호 : <%=receiptNum%>
             </li>

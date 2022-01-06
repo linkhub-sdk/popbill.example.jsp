@@ -14,17 +14,20 @@
 <%
     /*
      * 다수건의 세금계산서 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
+     * - 리턴값 'TaxinvoiceInfo'의 변수 'stateCode'를 통해 세금계산서의 상태코드를 확인합니다.
+     * - 세금계산서 상태코드 [https://docs.popbill.com/taxinvoice/stateCode?lang=java]
      * - https://docs.popbill.com/taxinvoice/java/api#GetInfos
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
+    // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호 배열 (최대 1000건)
-    String[] MgtKeyList = new String[] {"20210708-001","20210708-002"};
+    String[] MgtKeyList = new String[] {"20220104-001","20220104-100"};
 
     TaxinvoiceInfo[] taxinvoiceInfos = null;
 

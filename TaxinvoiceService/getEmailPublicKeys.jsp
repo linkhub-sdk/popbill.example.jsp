@@ -36,7 +36,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>연계사업자 이메일 목록</legend>
+            <legend>유통사업자 이메일 목록</legend>
             <%
                 for(int i=0; i<emailPublicKeyList.length; i++) {
                     EmailPublicKey emailPublicKey = emailPublicKeyList[i];

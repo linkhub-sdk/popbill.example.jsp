@@ -37,7 +37,7 @@
 
 
   // 작성일자, 날짜형식(yyyyMMdd)
-  taxinvoice.setWriteDate("20210704");
+  taxinvoice.setWriteDate("20220104");
 
   // 발행유형, {정발행, 역발행, 위수탁} 중 기재
   taxinvoice.setIssueType("정발행");
@@ -66,7 +66,7 @@
   taxinvoice.setInvoicerCorpName("공급자 상호");
 
   // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-  taxinvoice.setInvoicerMgtKey("20210704-007");
+  taxinvoice.setInvoicerMgtKey("20220104-010");
 
   // 공급자 대표자 성명
   taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -75,10 +75,10 @@
   taxinvoice.setInvoicerAddr("공급자 주소");
 
   // 공급자 종목
-  taxinvoice.setInvoicerBizClass("공급자 업종");
+  taxinvoice.setInvoicerBizClass("공급자 종목");
 
   // 공급자 업태
-  taxinvoice.setInvoicerBizType("공급자 업태,업태2");
+  taxinvoice.setInvoicerBizType("공급자 업태");
 
   // 공급자 담당자 성명
   taxinvoice.setInvoicerContactName("공급자 담당자 성명");
@@ -193,7 +193,7 @@
   /***************************************************************************
    * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재)
    * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
-   * - [참고] 수정세금계산서 작성방법 안내 - http://blog.linkhub.co.kr/650
+   * - 수정세금계산서 작성방법 안내 [https://docs.popbill.com/taxinvoice/modify?lang=java]
    ****************************************************************************/
 
   // 수정세금계산서 작성시 1~6까지 선택기재.
@@ -213,7 +213,7 @@
   TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
   detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
-  detail.setPurchaseDT("20210712"); // 거래일자
+  detail.setPurchaseDT("20220103"); // 거래일자
   detail.setItemName("품목명");     // 품목명
   detail.setSpec("규격");           // 규격
   detail.setQty("1");               // 수량
@@ -227,7 +227,7 @@
   detail = new TaxinvoiceDetail();
 
   detail.setSerialNum((short) 2);
-  detail.setPurchaseDT("20210712");
+  detail.setPurchaseDT("20220103");
   detail.setItemName("품목명2");
   detail.setSpec("규격");
   detail.setQty("1");

@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 안내메일과 관련된 전자세금계산서를 확인 할 수 있는 상세 페이지의 팝업 URL을 반환하며, 해당 URL은 메일 하단의 "전자세금계산서 보기" 버튼의 링크와 같습니다.
+     * 전자세금계산서 안내메일의 상세보기 링크 URL을 반환합니다.
      * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
      * - https://docs.popbill.com/taxinvoice/java/api#GetMailURL
      */
@@ -20,11 +20,12 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
+    // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20210706-001";
+    String mgtKey = "20220104-001";
 
     String url = null;
 

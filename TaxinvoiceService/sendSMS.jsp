@@ -22,7 +22,8 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
+    // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
@@ -34,7 +35,7 @@
     // 수신번호
     String receiverNum = "010-111-222";
 
-    // 문자메시지 내용, 최대 90Byte 초과된 내용은 삭제되어 전송됨
+    // 문자메시지 내용, 최대 90Byte까지 입력가능하고, 초과한 내용은 삭제되어 전송됨
     String msg = "문자 메시지 내용";
 
     Response CheckResponse = null;

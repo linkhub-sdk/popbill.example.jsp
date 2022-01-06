@@ -13,7 +13,7 @@
 
 <%
     /*
-     * 팝빌 사이트를 통해 발행하였지만 문서번호가 존재하지 않는 세금계산서에 문서번호를 할당합니다.
+     * 팝빌 사이트를 통해 발행하여 문서번호가 부여되지 않은 세금계산서에 문서번호를 할당합니다.
      * - https://docs.popbill.com/taxinvoice/java/api#AssignMgtKey
      */
 
@@ -23,7 +23,7 @@
     // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 팝빌번호, 문서 목록조회(Search) API의 반환항목중 ItemKey 참조
+    // 세금계산서 팝빌번호, 문서 목록조회(Search API) 함수의 반환항목 중 ItemKey 참조
     String itemKey = "021010316320100001";
 
     // 할당할 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성

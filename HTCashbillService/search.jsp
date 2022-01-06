@@ -82,7 +82,7 @@
                   <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost() %></li>
                   <li>tax (부가세) : <%= result.getList().get(i).getTax() %></li>
                   <li>serviceFee (봉사료) : <%= result.getList().get(i).getServiceFee() %></li>
-                  <li>invoiceType (매일/매출) : <%= result.getList().get(i).getInvoiceType()  %> </li>
+                  <li>invoiceType (매입/매출) : <%= result.getList().get(i).getInvoiceType()  %> </li>
                   <li>franchiseCorpNum (발행자 사업자번호) : <%= result.getList().get(i).getFranchiseCorpNum() %></li>
                   <li>franchiseCorpName (발행자 상호) : <%= result.getList().get(i).getFranchiseCorpName() %></li>
                   <li>franchiseCorpType (발행자 사업자유형) : <%= result.getList().get(i).getFranchiseCorpType() %></li>

@@ -17,7 +17,7 @@
 <%
     /*
      * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
-     * - 세금계산서 국세청 전송 정책 : https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java
+     * - 세금계산서 국세청 전송 정책 [https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java]
      * - https://docs.popbill.com/taxinvoice/java/api#RegistIssue
      */
 
@@ -40,7 +40,7 @@
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20211227");
+    taxinvoice.setWriteDate("20220104");
 
     // {영수, 청구} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -59,7 +59,7 @@
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20211227-01");
+    taxinvoice.setInvoicerMgtKey("20220104-020");
 
     // 공급자 대표자성명
     taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -68,10 +68,10 @@
     taxinvoice.setInvoicerAddr("공급자 주소");
 
     // 공급자 종목
-    taxinvoice.setInvoicerBizClass("공급자 업종");
+    taxinvoice.setInvoicerBizClass("공급자 종목");
 
     // 공급자 업태
-    taxinvoice.setInvoicerBizType("공급자 업태,업태2");
+    taxinvoice.setInvoicerBizType("공급자 업태");
 
     // 공급자 담당자 성명
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
@@ -185,7 +185,7 @@
     /***************************************************************************
      * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재)
      * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
-     * - [참고] 수정세금계산서 작성방법 안내 - http://blog.linkhub.co.kr/650
+     * - 수정세금계산서 작성방법 안내 [https://docs.popbill.com/taxinvoice/modify?lang=java]
      ****************************************************************************/
 
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
@@ -204,7 +204,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20210704");   // 거래일자
+    detail.setPurchaseDT("20220103");   // 거래일자
     detail.setItemName("품목명1");      // 품목명
     detail.setSpec("규격");             // 규격
     detail.setQty("1");                 // 수량
@@ -218,7 +218,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20210704");
+    detail.setPurchaseDT("20220103");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");
@@ -233,7 +233,7 @@
     /***************************************************************************
      *                             추가담당자 정보
      * - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 담당자 정보를
-     * - 추가하여 발행 안내메일을 다수에게 전송할 수 있습니다.
+     *   추가하여 발행 안내메일을 다수에게 전송할 수 있습니다.
      ****************************************************************************/
 
     taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());

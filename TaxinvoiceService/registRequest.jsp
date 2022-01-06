@@ -18,8 +18,8 @@
     /*
      * 공급받는자가 작성한 세금계산서 데이터를 팝빌에 저장하고 공급자에게 송부하여 발행을 요청합니다.
      * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두 팝빌에 회원이여야 합니다.
-     * - 역발행 즉시요청 후 공급자가 [발행] 처리시 포인트가 차감되며 역발행 세금계산서 항목중 과금방향(ChargeDirection)에
-     * - 기재한 값에 따라 정과금(공급자과금) 또는 역과금(공급받는자과금) 처리됩니다.
+     * - 역발행 즉시 요청(RegistRequest) 후 공급자가 [발행] 처리시 포인트가 차감되며 역발행 세금계산서 항목 중
+     * - 과금방향(ChargeDirection)에 기재한 값에 따라 정과금(공급자과금) 또는 역과금(공급받는자과금) 처리됩니다.
      * - https://docs.popbill.com/taxinvoice/java/api#RegistRequest
      */
 
@@ -36,7 +36,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20210701");
+    taxinvoice.setWriteDate("20220104");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
@@ -75,10 +75,10 @@
     taxinvoice.setInvoicerAddr("공급자 주소");
 
     // 공급자 종목
-    taxinvoice.setInvoicerBizClass("공급자 업종");
+    taxinvoice.setInvoicerBizClass("공급자 종목");
 
     // 공급자 업태
-    taxinvoice.setInvoicerBizType("공급자 업태,업태2");
+    taxinvoice.setInvoicerBizType("공급자 업태");
 
     // 공급자 담당자 성명
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
@@ -114,7 +114,7 @@
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
     // [역발행 시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoiceeMgtKey("100-20210701");
+    taxinvoice.setInvoiceeMgtKey("20220104-003");
 
     // 공급받는자 대표자 성명
     taxinvoice.setInvoiceeCEOName("공급받는자 대표자 성명");
@@ -191,9 +191,9 @@
     taxinvoice.setBankBookYN(false);
 
     /***************************************************************************
-     * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재
+     * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재)
      * - 수정세금계산서 관련 정보는 연동매뉴얼 또는 개발가이드 링크 참조
-     * - [참고] 수정세금계산서 작성방법 안내 - https://docs.popbill.com/taxinvoice/modify?lang=java
+     * - 수정세금계산서 작성방법 안내 [https://docs.popbill.com/taxinvoice/modify?lang=java]
      ****************************************************************************/
 
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
@@ -213,7 +213,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20210712"); // 거래일자
+    detail.setPurchaseDT("20220103"); // 거래일자
     detail.setItemName("품목명");     // 품목명
     detail.setSpec("규격");           // 규격
     detail.setQty("1");               // 수량
@@ -227,7 +227,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20210712");
+    detail.setPurchaseDT("20220103");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");

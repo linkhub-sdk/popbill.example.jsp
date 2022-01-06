@@ -12,14 +12,18 @@
 
 <%
     /*
-     * RequestJob(수집 요청)를 통해 반환 받은 작업아이디의 상태를 확인합니다.
+     * - 수집 요청(RequestJob API) 함수를 통해 반환 받은 작업 아이디의 상태를 확인합니다.
+     * - 거래 내역 조회(Search API) 함수 또는 거래 요약 정보 조회(Summary API) 함수를 사용하기 전에
+     *   수집 작업의 진행 상태, 수집 작업의 성공 여부를 확인해야 합니다.
+     * - 작업 상태(jobState) = 3(완료), 수집 결과 코드(errCode) = 1(수집성공)이면
+     *   거래 내역 조회 또는 거래 요약 정보 조회를 해야 합니다.
      * - https://docs.popbill.com/easyfinbank/java/api#GetJobState
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 수집 요청(RequestJob API) 호출시 반환받은 작업아이디
+    // 수집 요청(RequestJob API) 함수 호출시 반환받은 작업아이디
     String jobID = "021121915000000002";
 
     EasyFinBankJobState jobState = null;

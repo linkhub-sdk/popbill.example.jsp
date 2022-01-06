@@ -19,7 +19,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 명세서 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+    // 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int itemCode = 121;
 
     // 전자명세서 문서번호 배열(최대 1000건)
@@ -52,9 +52,10 @@
                 <legend>StatementInfo [ <%=i+1%> / <%=statementInfos.length%> ]</legend>
                 <ul>
                     <li>itemKey(팝빌번호) : <%= statementInfo.getItemKey()%></li>
-                    <li>itemCode(명세서 코드) : <%= statementInfo.getItemCode()%></li>
+                    <li>itemCode(전자명세서 유형 코드) : <%= statementInfo.getItemCode()%></li>
+                    <li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
                     <li>stateCode(상태코드) : <%= statementInfo.getStateCode()%></li>
-                    <li>taxType(세금형태) : <%= statementInfo.getTaxType()%></li>
+                    <li>taxType(과세형태) : <%= statementInfo.getTaxType()%></li>
                     <li>purposeType(영수/청구) : <%= statementInfo.getPurposeType()%></li>
                     <li>writeDate(작성일자) : <%= statementInfo.getWriteDate()%></li>
                     <li>senderCorpName(발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>

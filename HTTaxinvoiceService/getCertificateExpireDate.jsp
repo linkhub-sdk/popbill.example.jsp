@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 홈택스연동 인증을 위해 팝빌에 등록된 인증서 만료일자를 확인합니다.
+     * 팝빌에 등록된 인증서 만료일자를 확인합니다.
      * - https://docs.popbill.com/httaxinvoice/java/api#GetCertificateExpireDate
      */
 

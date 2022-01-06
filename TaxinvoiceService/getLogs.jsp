@@ -20,11 +20,12 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
+    // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20210708-01";
+    String mgtKey = "20220104-01";
 
     TaxinvoiceLog[] taxinvoiceLogs = null;
 

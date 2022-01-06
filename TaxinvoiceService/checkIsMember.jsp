@@ -19,7 +19,7 @@
     // 조회할 사업자번호, '-'제외 10자리
     String testCorpNum = "1234567890";
 
-    // 파트너 링크아이디
+    // 연동신청 시 팝빌에서 발급받은 링크아이디
     String linkID = "TESTER";
 
     Response CheckResponse = null;
