@@ -50,7 +50,7 @@
         // 발행유형, [정발행, 역발행, 위수탁] 중 기재
         taxinvoice.setIssueType("정발행");
 
-        // [영수, 청구] 중 기재
+        // [영수, 청구, 없음] 중 기재
         taxinvoice.setPurposeType("영수");
 
         // 과세형태, [과세, 영세, 면세] 중 기재

@@ -45,7 +45,7 @@
     // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     taxinvoice.setChargeDirection("정과금");
 
-    // {영수, 청구} 중 기재
+    // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
 
     // 과세형태, {과세, 영세, 면세} 중 기재
