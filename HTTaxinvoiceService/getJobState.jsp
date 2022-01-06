@@ -12,9 +12,13 @@
 
 <%
     /*
-     * - 수집 요청(RequestJob API) 함수를 통해 반환 받은 작업 아이디의 상태를 확인합니다.
-     * - 수집 결과 조회(Search API) 함수 또는 수집결과 요약정보 조회(Summary API) 함수를 사용하기 전에
+     * 수집 요청(RequestJob API) 함수를 통해 반환 받은 작업 아이디의 상태를 확인합니다.
+     * - 거래 내역 조회(Search API) 함수 또는 거래 요약 정보 조회(Summary API) 함수를 사용하기 전에
      *   수집 작업의 진행 상태, 수집 작업의 성공 여부를 확인해야 합니다.
+     * - 작업 상태(jobState) = 3(완료)이고 수집 결과 코드(errorCode) = 1(수집성공)이면
+     *   거래 내역 조회(Search) 또는 거래 요약 정보 조회(Summary) 를 해야합니다.
+     * - 작업 상태(jobState)가 3(완료)이지만 수집 결과 코드(errorCode)가 1(수집성공)이 아닌 경우에는
+     *   오류메시지(errorReason)로 수집 실패에 대한 원인을 파악할 수 있습니다.
      * - https://docs.popbill.com/httaxinvoice/java/api#GetJobState
      */
 
