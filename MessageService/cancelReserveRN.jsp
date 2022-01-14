@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 예약문자 전송요청 시 파트너가 할당한 전송요청 번호
-    String requestNum = "20210703-002";
+    String requestNum = "";
 
     Response CheckResponse = null;
 

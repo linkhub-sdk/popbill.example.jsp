@@ -48,7 +48,7 @@
     msg2.setReceiver("010333444");
     msg2.setReceiverName("수신자2");
     msg2.setContent("메시지 내용2");
-    messages[1] = msg1;
+    messages[1] = msg2;
 
 
     // 광고문자 전송여부

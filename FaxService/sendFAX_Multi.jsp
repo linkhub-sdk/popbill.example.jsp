@@ -40,7 +40,7 @@
     Receiver receiver2 = new Receiver();
     receiver2.setReceiveName("수신자2");       // 수신자명
     receiver2.setReceiveNum("010333444");      // 수신팩스번호
-    receivers[1] = receiver1;
+    receivers[1] = receiver2;
 
     // 팩스전송파일 경로
     // 파일 전송 개수 최대 20개

@@ -59,7 +59,7 @@
     msg2.setReceiverName("수신자2");
     msg2.setSubject("멀티 메시지 제목");
     msg2.setContent("메시지 내용2");
-    messages[1] = msg1;
+    messages[1] = msg2;
 
     // 전송할 이미지 파일 경로
     File file = new File((application.getRealPath("/resources/test.jpg")));

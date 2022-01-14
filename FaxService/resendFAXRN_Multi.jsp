@@ -51,7 +51,7 @@
     // Receiver receiver2 = new Receiver();
     // receiver2.setReceiveName("수신자2");       // 수신자명
     // receiver2.setReceiveNum("010333444");     // 수신팩스번호
-    // receivers[1] = receiver1;
+    // receivers[1] = receiver2;
 
 
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
@@ -64,7 +64,7 @@
     String title = "팩스재전송 동보제목";
 
     // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-    String originalFAXrequestNum = "20210703-001";
+    String originalFAXrequestNum = "";
 
   String receiptNum = null;
 

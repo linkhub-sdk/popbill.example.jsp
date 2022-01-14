@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     // 카카오톡 전송 접수시 파트너가 할당한 전송요청 번호
-    String requestNum = "20210702-001";
+    String requestNum = "";
 
     KakaoSentInfo kakaoSentInfo = null;
 

@@ -27,10 +27,10 @@
     String DType = "S";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20210701";
+    String SDate = "20220101";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20210708";
+    String EDate = "20220108";
 
     String jobID = null;
 

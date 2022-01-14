@@ -37,7 +37,7 @@
     // └ R = 영수, C = 청구, N = 없음, 미입력 시 전체조회
     String[] PurposeType = {"R", "C", "N"};
 
-    // 종사업장번호 유무
+    // 종사업장번호 유무 (null , "0" , "1" 중 택 1)
     // - null = 전체 , 0 = 없음, 1 = 있음
     String TaxRegIDYN = "";
 

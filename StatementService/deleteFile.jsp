@@ -12,10 +12,9 @@
 
 <%
     /*
-     * 삭제 가능한 상태의 전자명세서를 삭제합니다.
-     * - 삭제 가능한 상태: "임시저장", "취소", "승인거부", "발행취소"
-     * - 전자명세서를 삭제하면 사용된 문서번호(mgtKey)를 재사용할 수 있습니다.
-     * - https://docs.popbill.com/statement/java/api#DeleteFile
+    * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
+    * - 파일을 식별하는 파일아이디는 첨부파일 목록 확인(GetFiles API) 함수의 응답항목 중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+    * - https://docs.popbill.com/statement/java/api#DeleteFile
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -52,7 +52,7 @@
     String title = "팩스전송 제목";
 
     // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-    String originalFAXrequestNum = "20210703-001";
+    String originalFAXrequestNum = "";
 
     String receiptNum = null;
 

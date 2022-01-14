@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 팩스 전송요청시 파트너가 할당한 전송요청번호
-    String requestNum = "fax_jsp_test1234";
+    String requestNum = "";
 
     FaxResult[] faxResults = null;
 

@@ -24,10 +24,12 @@
 
     // 거래구분 배열 ("P" 와 "C" 중 선택, 다중 선택 가능)
     // └ P = 소득공제용 , C = 지출증빙용
+    // └ 미입력시 전체조회
     String[] TradeUsage = {"P", "C"};
 
     // 문서형태 배열 ("N" 와 "C" 중 선택, 다중 선택 가능)
     // └ N = 일반 현금영수증 , C = 취소현금영수증
+    // └ 미입력시 전체조회
     String[] TradeType = {"N", "C"};
 
     HTCashbillSummary result = null;

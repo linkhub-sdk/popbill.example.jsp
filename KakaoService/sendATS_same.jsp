@@ -53,7 +53,7 @@
         KakaoReceiver message = new KakaoReceiver();
         message.setReceiverNum("010111222" + i);
         message.setReceiverName("수신자명" + i);
-        message.setInterOPRefKey("20200807-" + i); // 파트너 지정키, 대량 접수시 수신자 구별용 메모.
+        message.setInterOPRefKey(""); // 파트너 지정키, 대량 접수시 수신자 구별용 메모.
         receivers[i] = message;
     }
 

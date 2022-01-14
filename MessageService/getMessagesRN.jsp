@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 문자 전송요청시 파트너가 할당한 전송요청 번호
-    String requestNum = "20210703-001";
+    String requestNum = "";
 
     SentMessage[] sentMessages = null;
 
