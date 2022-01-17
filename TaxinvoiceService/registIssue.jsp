@@ -18,6 +18,8 @@
     /*
      * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
      * - 세금계산서 국세청 전송 정책 [https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java]
+     * - "발행완료"된 전자세금계산서는 국세청 전송 이전에 발행취소(CancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
+     * - 임시저장(Register) 과 발행(Issue) 기능을 한 번의 프로세스로 처리합니다.
      * - https://docs.popbill.com/taxinvoice/java/api#RegistIssue
      */
 

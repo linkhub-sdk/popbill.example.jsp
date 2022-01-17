@@ -13,6 +13,8 @@
 <%
     /*
      * 현금영수증 1건의 상태 및 요약정보를 확인합니다.
+     * - 리턴값 'CashbillInfo'의 변수 'stateCode'를 통해 현금영수증의 상태코드를 확인합니다.
+     * - 현금영수증 상태코드 [https://docs.popbill.com/cashbill/stateCode?lang=java]
      * - https://docs.popbill.com/cashbill/java/api#GetInfo
      */
 
