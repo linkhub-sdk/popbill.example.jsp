@@ -26,34 +26,48 @@
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
     String mgtKey = "20211202-301";
 
-    // 원본 현금영수증 국세청 승인번호
+    // 원본 현금영수증 국세청 승인번호 - 상태확인(getInfo API) 함수를 통해 confirmNum 값 기재
     String orgConfirmNum = "TB0000033";
 
-    // 원본 현금영수증 거래일자
+    // 원본 현금영수증 거래일자 - 상태확인(getInfo API) 함수를 통해 tradeDate 값 기재
     String orgTradeDate = "20210819";
 
-    // 안내 문자 전송여부
+    // 안내 문자 전송여부 , true / false 중 택 1
+    // └ true = 전송 , false = 미전송
+    // └ 원본 현금영수증의 구매자(고객)의 휴대폰번호 문자 전송
     Boolean smssendYN = false;
 
     // 발행메모
     String memo = "";
 
-    // 부분취소여부, true-부분취소, false-전체취소
+    // 현금영수증 취소유형 , true / false 중 택 1
+    // └ true = 부분 취소 , false = 전체 취소
+    // └ 미입력시 기본값 false 처리
     Boolean isPartCancel = true;
 
-    // 취소사유(integer) / 1-거래취소, 2-오류발급취소, 3-기타
+    // 취소사유 , 1 / 2 / 3 중 택 1
+    // └ 1 = 거래취소 , 2 = 오류발급취소 , 3 = 기타
+    // └ 미입력시 기본값 1 처리
     Integer cancelType = 1;
 
     // [취소] 공급가액
+    // - 현금영수증 취소유형이 true 인 경우 취소할 공급가액 입력
+    // - 현금영수증 취소유형이 false 인 경우 미입력
     String supplyCost = "3000";
 
-    // [취소] 세액
+    // [취소] 부가세
+    // - 현금영수증 취소유형이 true 인 경우 취소할 부가세 입력
+    // - 현금영수증 취소유형이 false 인 경우 미입력
     String tax = "300";
 
     // [취소] 봉사료
+    // - 현금영수증 취소유형이 true 인 경우 취소할 봉사료 입력
+    // - 현금영수증 취소유형이 false 인 경우 미입력
     String serviceFee = "0";
 
-    // [취소] 합계금액
+    // [취소] 거래금액 (공급가액+부가세+봉사료)
+    // - 현금영수증 취소유형이 true 인 경우 취소할 거래금액 입력
+    // - 현금영수증 취소유형이 false 인 경우 미입력
     String totalAmount = "3300";
 
 

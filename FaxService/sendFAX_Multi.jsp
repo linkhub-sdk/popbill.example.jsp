@@ -29,7 +29,7 @@
     // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     String sendNum = "07043042991";
 
-    // 수신자 정보 (최대 1000건)
+    // 수신자 정보 배열 (최대 1000건)
     Receiver[] receivers = new Receiver[2];
 
     Receiver receiver1 = new Receiver();
@@ -54,7 +54,9 @@
     // reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
 
-    // 광고팩스 전송여부
+    // 광고팩스 전송여부 , true / false 중 택 1
+    // └ true = 광고 , false = 일반
+    // └ 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
     // 팩스제목

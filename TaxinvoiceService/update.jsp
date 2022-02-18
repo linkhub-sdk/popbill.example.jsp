@@ -28,7 +28,7 @@
     String mgtKey = "20220104-010";
 
     // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
 
@@ -45,7 +45,8 @@
     taxinvoice.setIssueType("정발행");
 
     // 과금방향, {정과금, 역과금} 중 기재
-    // └ '역과금'은 역발행 세금계산서 발행 시에만 가능
+    // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
+    // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     taxinvoice.setChargeDirection("정과금");
 
     // {영수, 청구, 없음} 중 기재
@@ -95,18 +96,23 @@
     // 공급자 담당자 휴대폰번호
     taxinvoice.setInvoicerHP("010-000-2222");
 
-    // 발행 안내 문자 전송여부
-    // - 전송시 포인트 차감되며, 전송실패시 환불처리
+    // 발행 안내 문자 전송여부 (true / false 중 택 1)
+    // └ true = 전송 , false = 미전송
+    // └ 공급받는자 (주)담당자 휴대폰번호 {invoiceeHP1} 값으로 문자 전송
+    // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoicerSMSSendYN(false);
 
     /***************************************************************************
-     *                               공급받는 정보
+     *                               공급받는자 정보
      ****************************************************************************/
 
     // 공급받는자 구분, {사업자 , 개인 , 외국인} 중 기재
     taxinvoice.setInvoiceeType("사업자");
 
-    // 공급받는자 사업자번호, '-' 제외 10자리
+    // 공급받는자 사업자번호
+    // - {invoiceeType}이 "사업자" 인 경우, 사업자번호 (하이픈 ('-') 제외 10자리)
+    // - {invoiceeType}이 "개인" 인 경우, 주민등록번호 (하이픈 ('-') 제외 13자리)
+    // - {invoiceeType}이 "외국인" 인 경우, "9999999999999" (하이픈 ('-') 제외 13자리)
     taxinvoice.setInvoiceeCorpNum("8888888888");
 
     // 공급받는자 종사업장 식별번호, 필요시 숫자4자리 기재
@@ -144,9 +150,11 @@
     // 공급받는자 담당자 휴대폰번호
     taxinvoice.setInvoiceeHP1("010-000-1111");
 
-    // 역발행 안내 문자 전송여부
-    // - 전송시 포인트 차감되며, 전송실패시 환불처리
-        taxinvoice.setInvoiceeSMSSendYN(false);
+    // 역발행 안내 문자 전송여부 (true / false 중 택 1)
+    // └ true = 전송 , false = 미전송
+    // └ 공급자 담당자 휴대폰번호 {invoicerHP} 값으로 문자 전송
+    // - 전송 시 포인트 차감되며, 전송실패시 환불처리
+    taxinvoice.setInvoiceeSMSSendYN(false);
 
     /***************************************************************************
      *                              세금계산서 기재정보
@@ -175,6 +183,10 @@
 
     // 외상미수금
     taxinvoice.setCredit("");
+
+    // 비고
+    // {invoiceeType}이 "외국인" 이면 remark1 필수
+    // - 외국인 등록번호 또는 여권번호 입력
     taxinvoice.setRemark1("비고1");
     taxinvoice.setRemark2("비고2");
     taxinvoice.setRemark3("비고3");
@@ -185,10 +197,14 @@
     // 책번호 '호' 항목, 최대값 32767
     taxinvoice.setHo((short) 1);
 
-    // 사업자등록증 이미지 첨부여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
 
     /***************************************************************************

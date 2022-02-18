@@ -16,6 +16,7 @@
 <%
     /*
      * 승인된 템플릿의 내용을 작성하여 다수건의 알림톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
+     * - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
      * - https://docs.popbill.com/kakao/java/api#SendATS_multi
      */
@@ -23,8 +24,9 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 알림톡 템플릿코드
-    // 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 또는 팝빌사이트에서 확인 가능합니다.
+    // 승인된 알림톡 템플릿코드
+    // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
+    //   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
     String templateCode = "019020000163";
 
     // 알림톡 내용 (최대 1000자)
@@ -39,7 +41,7 @@
     String senderNum = "07043042991";
 
     // 대체문자 유형 (null , "C" , "A" 중 택 1)
-    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = {altContent}에 입력한 내용 전송
+    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     String altSendType = "C";
 
     // 카카오톡 전송 정보 배열, 최대 1000건
@@ -51,6 +53,24 @@
         message.setReceiverName("수신자명" + i);
         message.setMessage(content);
         message.setAltMessage("대체문자 내용" + i);
+
+        // // 수신자별 개별 버튼정보
+        // KakaoButton button = new KakaoButton();
+        // button.setN("타입1 버튼명"+i); // 버튼명
+        // button.setT("WL"); // 버튼타입
+        // button.setU1("http://"+i+"popbill.com"); // 버튼링크1
+        // button.setU2("http://"+i+"test.popbill.com"); // 버튼링크2
+        //
+        // KakaoButton button02 = new KakaoButton();
+        // button02.setN("타입2 버튼명"+i); // 버튼명
+        // button02.setT("WL"); // 버튼타입
+        // button02.setU1("http://"+i+"popbill.com"); // 버튼링크1
+        // button02.setU2("http://"+i+"test.popbill.com"); // 버튼링크2
+        //
+        // // 수신자별로 각기다른 버튼정보 추가.
+        // message.setBtns(new ArrayList<KakaoButton>());
+        // message.getBtns().add(button);
+        // message.getBtns().add(button02);
         receivers[i] = message;
     }
 
@@ -58,7 +78,7 @@
     String sndDT = "";
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

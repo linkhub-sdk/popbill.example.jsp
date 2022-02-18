@@ -17,10 +17,10 @@
 <%
     /*
      * 전자명세서를 팩스로 전송하는 함수로, 팝빌에 데이터를 저장하는 과정이 없습니다.
-     * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
      * - 팝빌 사이트 [문자·팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인 할 수 있습니다.
-     * - 팩스 전송결과를 확인하기 위해서는 선팩스 전송 요청 시 반환받은 접수번호를 이용하여
-     *   팩스 API의 전송결과 확인(GetFaxDetail API) 함수를 이용하면 됩니다.
+     * - 함수 호출시 포인트가 과금됩니다.
+     * - 선팩스 전송 요청 시 작성한 문서번호는 팩스로 전송되는 파일명에 사용됩니다.
+     * - 팩스 전송결과를 확인하기 위해서는 선팩스 전송 요청 시 반환받은 접수번호를 이용하여 팩스 API의 전송내역 확인 (GetFaxResult API) 함수를 이용하면 됩니다.
      * - https://docs.popbill.com/statement/java/api#FAXSend
      */
 
@@ -153,10 +153,14 @@
     statement.setRemark2("비고2");
     statement.setRemark3("비고3");
 
-    // 사업자등록증 이미지 첨부여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBankBookYN(false);
 
 

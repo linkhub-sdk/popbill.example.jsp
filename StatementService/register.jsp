@@ -18,7 +18,7 @@
 <%
     /*
      * 작성된 전자명세서 데이터를 팝빌에 저장합니다.
-     * - 임시저장후 발행(Issue API) 함수를 호출해야 수신자에게 메일로 전달됩니다.
+     * - "임시저장" 상태의 전자명세서는 발행(Issue API) 함수를 호출하여 "발행완료"처리한 경우에만 수신자에게 발행 안내 메일이 발송됩니다.
      * - https://docs.popbill.com/statement/java/api#Register
      */
 
@@ -146,10 +146,14 @@
     statement.setRemark2("비고2");
     statement.setRemark3("비고3");
 
-    // 사업자등록증 이미지 첨부여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBankBookYN(false);
 
 

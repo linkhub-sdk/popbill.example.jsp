@@ -19,7 +19,8 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 거래내역 아이디, Search API 응답항목중 TID
+    // 메모를 저장할 거래내역 아이디
+    // └ 거래내역 조회(Seach API) 함수의 반환값인 EasyFinBankSearchDetail 의 tid를 통해 확인 가능
     String TID = "";
 
     // 메모

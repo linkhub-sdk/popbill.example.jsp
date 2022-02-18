@@ -14,7 +14,7 @@
 <%
     /*
      * 세금계산서를 팩스로 전송하는 함수로, 팝빌 사이트 [문자·팩스] > [팩스] > [전송내역] 메뉴에서 전송결과를 확인 할 수 있습니다.
-     * - 팩스 전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+     * - 함수 호출시 포인트가 차감됩니다. (전송실패시 환불처리)
      * - https://docs.popbill.com/taxinvoice/java/api#SendFAX
      */
 
@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호

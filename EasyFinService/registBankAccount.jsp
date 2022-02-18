@@ -55,9 +55,10 @@
     // 조회전용 계정 비밀번호 (대구은행, 신협, 신한은행 필수)
     bankInfo.setFastPWD("");
 
-    // 정액제 이용할 개월수, 1~12 입력가능, 미기재시 기본값(1) 처리
+    // 정액제 이용할 개월수, 1~12 입력가능
+    // - 미입력시 기본값 1개월 처리
     // - 파트너 과금방식의 경우 입력값에 관계없이 1개월 처리
-     bankInfo.setUsePeriod(1);
+    bankInfo.setUsePeriod(1);
 
     // 메모
     bankInfo.setMemo("");

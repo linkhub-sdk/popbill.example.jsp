@@ -19,7 +19,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // TBOX : 임시문서함, PBOX : 발행문서함
+    // TBOX : 임시문서함, PBOX : 발행문서함, WRITE : 현금영수증 작성
     String TOGO = "PBOX";
 
     String url = null;

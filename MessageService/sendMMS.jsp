@@ -38,6 +38,7 @@
     String subject = "멀티 문자메시지 제목";
 
     // 메시지 내용
+    // └ 한글, 한자, 특수문자 2byte / 영문, 숫자, 공백 1byte
     String content = "멀티 문자메시지 내용";
 
     // 전송할 이미지 파일 경로
@@ -50,11 +51,12 @@
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);
 
-    // 광고문자 전송여부
+    // 광고 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
     Boolean adsYN = false;
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

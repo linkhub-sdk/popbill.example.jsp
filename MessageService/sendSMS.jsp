@@ -23,7 +23,7 @@
     // 팝빌회원 아이디
     String testUserID = "testkorea";
 
-    // 발신번호
+    // 발신번호 (팝빌에 등록된 발신번호만 이용가능)
     String sender = "07043042991";
 
     // 수신번호
@@ -32,7 +32,8 @@
     // 수신자명
     String receiverName = "수신자명";
 
-    // 메시지 내용, 90Byte초과된 내용은 길이가 조정되어 전송됨
+    // 메시지 내용, 90byte 초과된 내용은 삭제되어 전송
+    // └ 한글, 한자, 특수문자 2byte / 영문, 숫자, 공백 1byte
     String content = "문자메세지 테스트1";
 
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
@@ -42,11 +43,12 @@
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);
 
-    // 광고문자 전송여부
+    // 광고 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
     Boolean adsYN = false;
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

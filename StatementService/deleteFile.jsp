@@ -13,7 +13,7 @@
 <%
     /*
     * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
-    * - 파일을 식별하는 파일아이디는 첨부파일 목록 확인(GetFiles API) 함수의 응답항목 중 파일아이디(AttachedFile) 값을 통해 확인할 수 있습니다.
+    * - 파일 식별을 위해 첨부 시 부여되는 'FileID'는 첨부파일 목록 확인(GetFiles API) 함수를 호출하여 확인합니다.
     * - https://docs.popbill.com/statement/java/api#DeleteFile
      */
 
@@ -26,7 +26,8 @@
     // 전자명세서 문서번호
     String mgtKey = "20210703-001";
 
-    // 파일 아이디 기재. 파일아이디는 첨부파일목록(getFiles)의 attachedFile 변수값 확인
+    // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
+    // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
     String FileID = "8BA8ACEA-2247-44EA-90A3-C4248005D5FD.PBF";
 
     Response CheckResponse = null;

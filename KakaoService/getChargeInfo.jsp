@@ -20,7 +20,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 전송유형. ATS(알림톡), FTS(친구톡 텍스트), FMS(친구톡 이미지)
+    // 카카오톡 전송유형. ATS(알림톡), FTS(친구톡 텍스트), FMS(친구톡 이미지)
     KakaoType kakaoType = KakaoType.ATS;
 
     ChargeInfo chargeInfo = null;

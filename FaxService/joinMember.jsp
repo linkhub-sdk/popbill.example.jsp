@@ -34,8 +34,8 @@
     // 대표자 성명, 최대 100자
     joinInfo.setCEOName("대표자 성명");
 
-    // 상호, 최대 200자
-    joinInfo.setCorpName("상호");
+    // 회사명, 최대 200자
+    joinInfo.setCorpName("회사명");
 
     // 사업장 주소, 최대 300자
     joinInfo.setAddr("주소");

@@ -13,7 +13,8 @@
 
 <%
     /*
-     * "발행완료" 상태의 전자세금계산서를 국세청에 즉시 전송하며, 함수 호출 후 최대 30분 이내에 전송 처리가 완료됩니다.
+    * "발행완료" 상태의 전자세금계산서를 국세청에 즉시 전송하며, 함수 호출 후 최대 30분 이내에 전송 처리가 완료됩니다.
+    * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 다음 영업일 오후 3시에 팝빌 시스템에서 일괄적으로 국세청으로 전송합니다.
      * - https://docs.popbill.com/taxinvoice/java/api#SendToNTS
      */
 
@@ -21,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 수탁
+    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호

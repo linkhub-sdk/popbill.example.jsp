@@ -75,7 +75,9 @@
     // reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
 
-    // 광고팩스 전송여부
+    // 광고팩스 전송여부 , true / false 중 택 1
+    // └ true = 광고 , false = 일반
+    // └ 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
     // 팩스제목

@@ -19,7 +19,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 국세청 승인번호
+    // 조회할 전자세금계산서 국세청 승인번호
     String NTSConfirmNum = "202103034100020300001af2";
 
     String url = null;

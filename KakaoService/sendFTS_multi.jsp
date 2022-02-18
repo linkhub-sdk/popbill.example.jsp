@@ -16,7 +16,7 @@
 <%
     /*
      * 텍스트로 구성된 다수건의 친구톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
-     * - 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
+     * - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
      * - https://docs.popbill.com/kakao/java/api#SendFTS_multi
      */
@@ -31,7 +31,7 @@
     String senderNum = "07043042992";
 
     // 대체문자 유형 (null , "C" , "A" 중 택 1)
-    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = {altContent}에 입력한 내용 전송
+    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     String altSendType = "C";
 
     // 카카오톡 수신정보 배열, 최대 1000건
@@ -58,17 +58,20 @@
         btns[i] = button;
     }
 
-    // 예약일시 (작성형식 : yyyyMMddHHmmss)
+    // 예약전송일시, 형태(yyyyMMddHHmmss)
+    // - 분단위 전송, 미입력 시 즉시 전송
     String sndDT = "";
 
-    // 광고여부
+    // 광고성 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
+    // - 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
     // 팝빌회원 아이디
     String testUserID = "testkorea";
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

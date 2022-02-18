@@ -31,7 +31,8 @@
     // 메모
     String memo = "즉시발행 메모 ";
 
-    // 발행 안내 메일 제목, 미기재시 기본 양식으로 전송
+    // 발행 안내 메일 제목
+    // - 미입력 시 팝빌에서 지정한  이메일 제목으로 전송
     String emailSubject = "메일제목 테스트";
 
     /***************************************************************************
@@ -155,10 +156,14 @@
     statement.setRemark2("비고2");
     statement.setRemark3("비고3");
 
-    // 사업자등록증 이미지 첨부여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBankBookYN(false);
 
 

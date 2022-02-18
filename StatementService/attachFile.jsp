@@ -31,7 +31,8 @@
     // 첨부파일 표시명
     String fileName = "test.jpg";
 
-    // 파일 스트림
+    // 첨부할 파일의 InputStream. 예제는 resource에 테스트파일을 참조함.
+    // FileInputStream으로 처리하는 것을 권함.
     InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
     Response CheckResponse = null;

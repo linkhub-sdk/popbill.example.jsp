@@ -19,7 +19,10 @@
      * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
      * - 세금계산서 국세청 전송 정책 [https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java]
      * - "발행완료"된 전자세금계산서는 국세청 전송 이전에 발행취소(CancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
-     * - 임시저장(Register) 과 발행(Issue) 기능을 한 번의 프로세스로 처리합니다.
+     * - 임시저장(Register API) 함수와 발행(Issue API) 함수를 한 번의 프로세스로 처리합니다.
+     * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
+     *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
+     * - 세금계산서 발행 시 포인트가 과금되며 공급받는자에게 발행 메일이 발송됩니다.
      * - https://docs.popbill.com/taxinvoice/java/api#RegistIssue
      */
 
@@ -38,7 +41,8 @@
     taxinvoice.setTaxType("과세");
 
     // 과금방향, {정과금, 역과금} 중 기재
-    // └ '역과금'은 역발행 세금계산서 발행 시에만 이용가능
+    // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
+    // -'역과금'은 역발행 세금계산서 발행 시에만 이용가능
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
@@ -87,8 +91,10 @@
     // 공급자 휴대폰번호
     taxinvoice.setInvoicerHP("010-000-2222");
 
-    // 발행 안내 문자 전송여부
-    // └ 전송 시 포인트 차감되며, 전송실패시 환불처리
+    // 발행 안내 문자 전송여부 (true / false 중 택 1)
+    // └ true = 전송 , false = 미전송
+    // └ 공급받는자 (주)담당자 휴대폰번호 {invoiceeHP1} 값으로 문자 전송
+    // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoicerSMSSendYN(false);
 
 
@@ -99,7 +105,10 @@
     // 공급받는자 구분 {사업자 , 개인 , 외국인} 중 기재
     taxinvoice.setInvoiceeType("사업자");
 
-    // 공급받는자 사업자번호, '-' 제외 10자리
+    // 공급받는자 사업자번호
+    // - {invoiceeType}이 "사업자" 인 경우, 사업자번호 (하이픈 ('-') 제외 10자리)
+    // - {invoiceeType}이 "개인" 인 경우, 주민등록번호 (하이픈 ('-') 제외 13자리)
+    // - {invoiceeType}이 "외국인" 인 경우, "9999999999999" (하이픈 ('-') 제외 13자리)
     taxinvoice.setInvoiceeCorpNum("8888888888");
 
     // 공급받는자 종사업장 식별번호, 필요시 숫자4자리 기재
@@ -137,8 +146,10 @@
     // 공급받는자 담당자 휴대폰번호
     taxinvoice.setInvoiceeHP1("010-000-1111");
 
-    // 역발행 안내 문자 전송여부
-    // └ 전송 시 포인트 차감되며, 전송실패시 환불처리
+    // 역발행 안내 문자 전송여부 (true / false 중 택 1)
+    // └ true = 전송 , false = 미전송
+    // └ 공급자 담당자 휴대폰번호 {invoicerHP} 값으로 문자 전송
+    // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoiceeSMSSendYN(false);
 
     /***************************************************************************
@@ -168,6 +179,10 @@
 
     // 외상미수금
     taxinvoice.setCredit("");
+
+    // 비고
+    // {invoiceeType}이 "외국인" 이면 remark1 필수
+    // - 외국인 등록번호 또는 여권번호 입력
     taxinvoice.setRemark1("비고1");
     taxinvoice.setRemark2("비고2");
     taxinvoice.setRemark3("비고3");
@@ -178,10 +193,14 @@
     // 책번호 '호' 항목, 최대값 32767
     taxinvoice.setHo((short) 1);
 
-    // 사업자등록증 이미지 첨부여부
+    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부
+    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
 
     /***************************************************************************
@@ -246,20 +265,24 @@
     addContact.setEmail("test2@test.com");
     taxinvoice.getAddContactList().add(addContact);
 
-    // 거래명세서 동시작성 여부
+    // 거래명세서 동시작성여부  (true / false 중 택 1)
+    // └ true = 사용 , false = 미사용
+    // - 미입력 시 기본값 false 처리
     Boolean writeSpecification = false;
 
-    // 거래명세서 동시작성 시 명세서 문서번호
+    // {writeSpecification} = true인 경우, 거래명세서 문서번호 할당
     // - 미입력시 기본값 세금계산서 문서번호와 동일하게 할당
     String dealInvoiceKey = "";
 
     // 메모
     String memo = "즉시발행 메모";
 
-    // 지연발행 강제여부
-    // 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
-    // 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
-    // true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
+    // 지연발행 강제여부  (true / false 중 택 1)
+    // └ true = 가능 , false = 불가능
+    // - 미입력 시 기본값 false 처리
+    // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
+    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
+    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean forceIssue = false;
 
 

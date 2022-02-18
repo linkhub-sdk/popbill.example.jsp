@@ -14,7 +14,6 @@
 <%
     /*
      * 메시지 길이(90byte)에 따라 단문/장문(SMS/LMS)을 자동으로 인식하여 1건의 메시지를 전송을 팝빌에 접수합니다.
-     * - 단문(SMS) = 90byte 이하의 메시지, 장문(LMS) = 2000byte 이하의 메시지.
      *  - https://docs.popbill.com/message/java/api#SendXMS
      */
 
@@ -36,10 +35,12 @@
     // 메시지 제목
     String subject = "장문 문자 메시지 제목";
 
-    // 메시지 내용, 90Byte를 기준으로 단문과 장문을 자동 인식하여 전송됨
+    // 문자메시지 내용, 90Byte를 기준으로 단문과 장문을 자동인식하여 전송.
+    // └ 한글, 한자, 특수문자 2byte / 영문, 숫자, 공백 1byte
     String content = "문자메시지 내용";
 
-    // 광고문자 전송여부
+    // 광고 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
     Boolean adsYN = false;
 
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
@@ -50,7 +51,7 @@
     // reserveDT = formatter.parse(reserveDTtxt);
 
     // 전송요청번호
-    // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 
