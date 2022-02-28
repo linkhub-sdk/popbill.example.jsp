@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     //대량 발행 접수시 기재한 제출아이디
-    String SubmitID = "20220103JSP-BULK0";
+    String SubmitID = "20220218-JSP-BULK";
 
     BulkTaxinvoiceResult bulkResult = null;
 

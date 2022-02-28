@@ -42,7 +42,7 @@
     Statement statement = new Statement();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    statement.setWriteDate("20210706");
+    statement.setWriteDate("20220218");
 
     // {영수, 청구, 없음} 중 기재
     statement.setPurposeType("영수");
@@ -57,7 +57,7 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20210706-JSP002");
+    statement.setMgtKey("20220218-JSP001");
 
 
     /***************************************************************************
@@ -174,7 +174,7 @@
 
     detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
     detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20210706");   // 거래일자
+    detail.setPurchaseDT("20220218");   // 거래일자
     detail.setQty("1");                 // 수량
     detail.setSupplyCost("200000");     // 공급가액
     detail.setTax("20000");             // 세액
@@ -185,7 +185,7 @@
 
     detail.setSerialNum((short) 2);     // 일련번호 1부터 순차기재
     detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20210706");   // 거래일자
+    detail.setPurchaseDT("20220218");   // 거래일자
     detail.setQty("1");                 // 수량
     detail.setSupplyCost("200000");     // 공급가액
     detail.setTax("20000");             // 세액

@@ -23,7 +23,7 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호
-    String mgtKey = "20210702-001";
+    String mgtKey = "20220218-JSP001";
 
     String url = null;
 

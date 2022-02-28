@@ -46,7 +46,7 @@
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20220104");
+    taxinvoice.setWriteDate("20220218");
 
     // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -65,7 +65,7 @@
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20220104-020");
+    taxinvoice.setInvoicerMgtKey("20220218-JSP001");
 
     // 공급자 대표자성명
     taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -224,7 +224,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20220103");   // 거래일자
+    detail.setPurchaseDT("20220218");   // 거래일자
     detail.setItemName("품목명1");      // 품목명
     detail.setSpec("규격");             // 규격
     detail.setQty("1");                 // 수량
@@ -238,7 +238,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20220103");
+    detail.setPurchaseDT("20220218");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");

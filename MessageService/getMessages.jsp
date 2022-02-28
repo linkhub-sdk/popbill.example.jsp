@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 문자 전송요청 시 팝빌로부터 반환 받은 접수번호
-    String receiptNum = "021010809000000005";
+    String receiptNum = "022022111000000012";
 
     SentMessage[] sentMessages = null;
 

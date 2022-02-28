@@ -23,7 +23,7 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호 배열(최대 1000건)
-    String[] MgtKeyList = new String[] {"20210703-001", "20210703-002", "20210703-003"};
+    String[] MgtKeyList = new String[] {"20220218-JSP001", "20220218-JSP002"};
 
     StatementInfo[] statementInfos = null;
 

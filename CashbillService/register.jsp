@@ -25,7 +25,7 @@
     Cashbill cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20211227-002");
+    cashbill.setMgtKey("20220218-JSP002");
 
     // 문서형태, {승인거래, 취소거래} 중 기재
     cashbill.setTradeType("승인거래");

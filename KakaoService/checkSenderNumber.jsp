@@ -13,6 +13,7 @@
 <%
     /*
      * 카카오톡 발신번호 등록여부를 확인합니다.
+     * - 발신번호 상태가 '승인'인 경우에만 리턴값 'Response'의 변수 'code'가 1로 반환됩니다.
      * - https://docs.popbill.com/kakao/java/api#CheckSenderNumber
      */
 
@@ -20,7 +21,7 @@
     String testCorpNum = "1234567890";
 
     // 확인할 발신번호
-    String sender = "070-4304-2991";
+    String senderNumber = "070-4304-2991";
 
     // 팝빌회원 계정 아이디
     String userID = "testkorea";
@@ -29,7 +30,7 @@
 
     try {
 
-        CheckResponse = kakaoService.checkSenderNumber(testCorpNum, sender, userID);
+        CheckResponse = kakaoService.checkSenderNumber(testCorpNum, senderNumber, userID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

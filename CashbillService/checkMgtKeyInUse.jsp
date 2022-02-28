@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20210703-001";
+    String mgtKey = "20220218-JSP001";
 
     boolean isInUse;
 

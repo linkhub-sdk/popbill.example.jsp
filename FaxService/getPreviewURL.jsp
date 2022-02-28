@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 팩스 접수번호
-    String receiptNum = "021102609383900001";
+    String receiptNum = "022021803102600001";
 
     String url = null;
 

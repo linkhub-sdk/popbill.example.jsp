@@ -24,7 +24,7 @@
     String testUserID = "testkorea";
 
     // 수집 요청시 발급받은 작업아이디
-    String jobID = "019121913000000001";
+    String jobID = "022021815000000002";
 
     // 거래유형 배열 ("I" 와 "O" 중 선택, 다중 선택 가능)
     // └ I = 입금 , O = 출금

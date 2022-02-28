@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20211227-001";
+    String mgtKey = "20220218-JSP001";
 
     Cashbill cashbill = null;
 

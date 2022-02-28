@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 조회할 전자세금계산서 국세청 승인번호
-    String NTSConfirmNum = "202103034100020300001af2";
+    String NTSConfirmNum = "202202188888888800000109";
 
     String url = null;
 

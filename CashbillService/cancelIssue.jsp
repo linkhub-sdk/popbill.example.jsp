@@ -13,7 +13,7 @@
 <%
     /*
      * 국세청 전송 이전 "발행완료" 상태의 현금영수증을 "발행취소"하고 국세청 전송 대상에서 제외합니다.
-     * - Delete(삭제)함수를 호출하여 "발행취소" 상태의 현금영수증을 삭제하면, 문서번호 재사용이 가능합니다. 
+     * - Delete(삭제)함수를 호출하여 "발행취소" 상태의 현금영수증을 삭제하면, 문서번호 재사용이 가능합니다.
      * - https://docs.popbill.com/cashbill/java/api#CancelIssue
      */
 
@@ -21,7 +21,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20210706-001";
+    String mgtKey = "20220218-JSP002";
 
     // 팝빌회원 아이디
     String userID = "testkorea";

@@ -23,7 +23,7 @@
     String testUserID = "testkorea";
 
     // 수집요청(requestJob API) 함수 호출 시 발급받은 작업아이디
-    String jobID = "021102217000000002";
+    String jobID = "";
 
     // 문서형태 배열 ("N" 와 "M" 중 선택, 다중 선택 가능)
     // └ N = 일반 , M = 수정

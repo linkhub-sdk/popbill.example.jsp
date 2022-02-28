@@ -127,7 +127,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>세금계산서 초대량 발행 접수</legend>
+                <legend>현금영수증 초대량 발행 접수</legend>
                 <ul>
                     <li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>

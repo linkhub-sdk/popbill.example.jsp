@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     // 카카오톡 전송 접수시 팝빌로부터 반환받은 접수번호
-    String receiptNum = "020080717052100001";
+    String receiptNum = "022021810443200001";
 
     KakaoSentInfo kakaoSentInfo = null;
 

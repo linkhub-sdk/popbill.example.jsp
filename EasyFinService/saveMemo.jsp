@@ -24,7 +24,7 @@
     String TID = "";
 
     // 메모
-    String Memo = "02107-테스트";
+    String Memo = "Memo-테스트";
 
     Response saveResponse = null;
 

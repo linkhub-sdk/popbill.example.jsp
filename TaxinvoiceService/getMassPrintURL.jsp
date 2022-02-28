@@ -25,7 +25,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호 배열, 최대 100건
-    String[] mgtKeyList = new String[]{"20220104-001", "20220104-100"};
+    String[] mgtKeyList = new String[]{"20220218-JSP001", "20220218-JSP002"};
 
     String url = null;
 

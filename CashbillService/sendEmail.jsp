@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20210703-001";
+    String mgtKey = "20220218-JSP001";
 
     // 수신메일주소
     String receiver = "test@test.com";

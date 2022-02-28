@@ -29,7 +29,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String submitID = "202010708JSP-BULK0";
+    String submitID = "20220218-JSP-BULK";
 
     // 지연발행 강제여부  (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
@@ -46,7 +46,7 @@
         Taxinvoice taxinvoice = new Taxinvoice();
 
         // 작성일자, 날짜형식(yyyyMMdd)
-        taxinvoice.setWriteDate("20211229");
+        taxinvoice.setWriteDate("20220218");
 
         // 과금방향, {정과금, 역과금} 중 기재
         // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -77,7 +77,7 @@
         taxinvoice.setInvoicerCorpName("공급자 상호");
 
         // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-        taxinvoice.setInvoicerMgtKey(submitID + "-" + i);
+        taxinvoice.setInvoicerMgtKey(submitID + "-" + String.valueOf(i + 1));
 
         // 공급자 대표자 성명
         taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -236,7 +236,7 @@
         TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
         detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
-        detail.setPurchaseDT("20211212"); // 거래일자
+        detail.setPurchaseDT("20220218"); // 거래일자
         detail.setItemName("품목명");     // 품목명
         detail.setSpec("규격");           // 규격
         detail.setQty("1");               // 수량
@@ -250,7 +250,7 @@
         detail = new TaxinvoiceDetail();
 
         detail.setSerialNum((short) 2);
-        detail.setPurchaseDT("20211212");
+        detail.setPurchaseDT("20220218");
         detail.setItemName("품목명2");
         detail.setSpec("규격");
         detail.setQty("1");

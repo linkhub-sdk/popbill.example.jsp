@@ -39,7 +39,7 @@
     // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
     Date reserveDT = null;
     // 예약전송시 아래의 코드 참조
-    // String reserveDTtxt ="20141230190000";
+    // String reserveDTtxt ="20220228180000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);
 

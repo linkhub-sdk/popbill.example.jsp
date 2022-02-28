@@ -24,11 +24,11 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호
-    String mgtKey = "20210703-001";
+    String mgtKey = "20220218-JSP002";
 
     // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
     // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
-    String FileID = "8BA8ACEA-2247-44EA-90A3-C4248005D5FD.PBF";
+    String FileID = "";
 
     Response CheckResponse = null;
 

@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20210702-001";
+    String mgtKey = "20220218-JSP001";
 
     CashbillLog[] cashbillLogs = null;
 
@@ -55,7 +55,7 @@
                         <li>regDT (등록일시) : <%=cashbillLog.getRegDT() %></li>
                         <li>ip (아이피) : <%=cashbillLog.getIp() %></li>
                     </ul>
-                </fieldset> 
+                </fieldset>
                 <%
                             }
                 %>

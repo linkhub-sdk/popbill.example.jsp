@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호 배열 (최대 1000건)
-    String[] mgtKeyList = new String[] {"20210701-001", "20210701-002", "20210701-003"};
+    String[] mgtKeyList = new String[] {"20220218-JSP001", "20220218-JSP002"};
 
     CashbillInfo[] cashbillInfos = null;
 

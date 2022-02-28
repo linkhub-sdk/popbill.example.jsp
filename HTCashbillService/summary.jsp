@@ -21,7 +21,7 @@
     String testCorpNum = "1234567890";
 
     // 수집요청(requestJob API) 함수 호출 시 발급받은 작업아이디
-    String jobID = "021120111000000001";
+    String jobID = "";
 
     // 거래구분 배열 ("P" 와 "C" 중 선택, 다중 선택 가능)
     // └ P = 소득공제용 , C = 지출증빙용
