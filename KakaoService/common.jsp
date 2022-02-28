@@ -3,7 +3,7 @@
 * 팝빌 카카오톡 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : https://docs.popbill.com/kakao/tutorial/jsp
-* - 업데이트 일자 : 2022-01-14
+* - 업데이트 일자 : 2022-02-28
 * - 연동 기술지원 연락처 : 1600-9854
 * - 연동 기술지원 이메일 : code@linkhubcorp.com
 *
