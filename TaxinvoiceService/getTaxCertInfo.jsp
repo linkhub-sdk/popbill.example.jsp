@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 팝빌 인증서버에 등록된 인증서의 정보를 확인합니다.
+     * 팝빌 인증서버에 등록된 공동인증서의 정보를 확인합니다.
      * - https://docs.popbill.com/taxinvoice/java/api#GetTaxCertInfo
      */
 

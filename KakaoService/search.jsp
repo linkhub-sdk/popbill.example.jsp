@@ -40,7 +40,7 @@
     // 전송유형별 조회 (null , "0" , "1" 중 택 1)
     // └ null = 전체 , 0 = 즉시전송건 , 1 = 예약전송건
     // - 미입력 시 전체조회
-    String ReserveYN = "";
+    String ReserveYN = null;
 
     // 사용자권한별 조회 (true / false 중 택 1)
     // └ false = 접수한 카카오톡 전체 조회 (관리자권한)

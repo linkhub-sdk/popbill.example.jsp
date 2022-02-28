@@ -37,7 +37,7 @@
     // 수신 팩스번호
     String receiveNum = "070111222";
 
-    // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 예약전송일시, null인 경우 즉시전송
     Date reserveDT = null;
     // String reserveDTtxt = "20180726120000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");

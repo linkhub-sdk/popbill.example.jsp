@@ -16,7 +16,7 @@
 <%
     /*
      * 최대 100건의 현금영수증 발행을 한번의 요청으로 접수합니다.
-     * - 현금영수증 발행 시 포인트가 과금되며 구매자에게 발행 메일이 발송됩니다.
+     * - 현금영수증 발행 시 구매자에게 발행 메일이 발송됩니다.
      * - https://docs.popbill.com/cashbill/java/api#BulkSubmit
      */
 
@@ -27,6 +27,7 @@
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
     String submitID = "20220218-JSP-BULK";
 
+    // 최대 100건
     List<Cashbill> bulkCash = new ArrayList<Cashbill>();
 
     for(int i=0; i<5; i++) {
@@ -101,7 +102,7 @@
         // 구매자 이메일
         // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
         // 실제 거래처의 메일주소가 기재되지 않도록 주의
-        cashbill.setEmail("test@test.com");
+        cashbill.setEmail("");
 
         // 구매자 휴대폰
         cashbill.setHp("010111222");

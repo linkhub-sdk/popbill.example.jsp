@@ -44,7 +44,7 @@
     // 전송할 이미지 파일 경로
     File file = new File((application.getRealPath("/resources/test.jpg")));
 
-    // 전송예약시간(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 전송예약시간, null인 경우 즉시전송
     Date reserveDT = null;
     // 예약전송시 아래의 코드 참조
     // String reserveDTtxt ="20220228180000";

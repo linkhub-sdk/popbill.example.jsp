@@ -43,7 +43,7 @@
     // 수신자명, 공백처리시 기존전송정보로 전송
     String receiveName = "";
 
-    // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 예약전송일시, null인 경우 즉시전송
     // String reserveDTtxt = "20141230180000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);

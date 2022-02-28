@@ -55,7 +55,7 @@
     // receivers[1] = receiver2;
 
 
-    // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 예약전송일시, null인 경우 즉시전송
     // String reserveDTtxt = "20141229180000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);

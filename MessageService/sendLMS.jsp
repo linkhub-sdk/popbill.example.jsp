@@ -44,7 +44,7 @@
     // └ true = 광고 , false = 일반
     Boolean adsYN = false;
 
-    // 전송예약일시(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 전송예약일시, null인 경우 즉시전송
     Date reserveDT = null;
     // 예약전송시 아래의 코드 참조
     // String reserveDTtxt ="20220228180000";

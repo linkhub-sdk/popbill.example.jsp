@@ -76,7 +76,7 @@
 
     // 종사업장번호 유무 (null , "0" , "1" 중 택 1)
     // - null = 전체 , 0 = 없음, 1 = 있음
-    String TaxRegIDYN = "";
+    String TaxRegIDYN = null;
 
     // 거래처 상호 / 사업자번호 (사업자) / 주민등록번호 (개인) / "9999999999999" (외국인) 중 검색하고자 하는 정보 입력
     // - 사업자번호 / 주민등록번호는 하이픈('-')을 제외한 숫자만 입력
@@ -100,7 +100,7 @@
     // - null = 전체조회 , 0 = 일반문서 , 1 = 연동문서
     // - 일반문서 : 세금계산서 작성 시 API가 아닌 팝빌 사이트를 통해 등록한 문서
     // - 연동문서 : 세금계산서 작성 시 API를 통해 등록한 문서
-    String InterOPYN = "";
+    String InterOPYN = null;
 
     TISearchResult searchResult = new TISearchResult();
 

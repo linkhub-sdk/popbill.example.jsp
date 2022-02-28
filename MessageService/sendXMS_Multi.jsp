@@ -56,7 +56,7 @@
     msg2.setContent("메시지 내용2");
     messages[1] = msg2;
 
-    // 예약전송일시(yyyyMMddHHmmss), null인 경우 즉시전송
+    // 예약전송일시, null인 경우 즉시전송
     Date reserveDT = null;
     // 예약전송시 아래의 코드 참조
     // String reserveDTtxt = "20220228180000";

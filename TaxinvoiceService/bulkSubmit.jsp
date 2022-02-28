@@ -20,7 +20,7 @@
      * 최대 100건의 세금계산서 발행을 한번의 요청으로 접수합니다.
      * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
      *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
-     * - 세금계산서 발행 시 포인트가 과금되며 공급받는자에게 발행 메일이 발송됩니다.
+     * - 세금계산서 발행 시 공급받는자에게 발행 메일이 발송됩니다.
      * - https://docs.popbill.com/taxinvoice/java/api#BulkSubmit
      */
 
@@ -38,6 +38,7 @@
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     boolean ForceIssue = false;
 
+    // 최대 100건
     List<Taxinvoice> bulkTx = new ArrayList<Taxinvoice>();
 
     for(int i=0; i<10; i++) {
@@ -95,7 +96,7 @@
         taxinvoice.setInvoicerContactName("공급자 담당자 성명");
 
         // 공급자 담당자 메일주소
-        taxinvoice.setInvoicerEmail("test@test.com");
+        taxinvoice.setInvoicerEmail("");
 
         // 공급자 담당자 연락처
         taxinvoice.setInvoicerTEL("070-7070-0707");
@@ -273,7 +274,7 @@
 
         addContact.setSerialNum(1);
         addContact.setContactName("추가 담당자 성명");
-        addContact.setEmail("test2@test.com");
+        addContact.setEmail("");
 
         taxinvoice.getAddContactList().add(addContact);
 
