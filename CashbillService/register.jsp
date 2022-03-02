@@ -76,9 +76,6 @@
     // 가맹점 연락처
     cashbill.setFranchiseTEL("07043042991");
 
-    // 발행 안내 문자 전송여부
-    cashbill.setSmssendYN(false);
-
     // 구매자 성명
     cashbill.setCustomerName("고객명");
 
@@ -94,10 +91,11 @@
     cashbill.setEmail("test@test.com");
 
     // 구매자 휴대폰
-    cashbill.setHp("010111222");
+    // - {smssendYN} 의 값이 true 인 경우 이 값으로 안내 문자 전송
+    cashbill.setHp("");
 
-    // 구먀자 팩스
-    cashbill.setFax("070111222");
+    // 발행 안내 문자 전송여부
+    cashbill.setSmssendYN(false);
 
     Response CheckResponse = null;
 

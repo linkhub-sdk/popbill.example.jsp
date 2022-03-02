@@ -16,7 +16,6 @@
 <%
     /*
      * 최대 100건의 현금영수증 발행을 한번의 요청으로 접수합니다.
-     * - 현금영수증 발행 시 구매자에게 발행 메일이 발송됩니다.
      * - https://docs.popbill.com/cashbill/java/api#BulkSubmit
      */
 
@@ -28,7 +27,7 @@
     String submitID = "20220218-JSP-BULK";
 
     // 최대 100건
-    List<Cashbill> bulkCash = new ArrayList<Cashbill>();
+    List<Cashbill> cashbillList = new ArrayList<Cashbill>();
 
     for(int i=0; i<5; i++) {
 
@@ -87,9 +86,6 @@
         // 가맹점 연락처
         cashbill.setFranchiseTEL("07043042991");
 
-        // 발행 안내 문자 전송여부
-        cashbill.setSmssendYN(false);
-
         // 구매자 성명
         cashbill.setCustomerName("고객명");
 
@@ -105,16 +101,20 @@
         cashbill.setEmail("");
 
         // 구매자 휴대폰
-        cashbill.setHp("010111222");
+        // - {smssendYN} 의 값이 true 인 경우 이 값으로 안내 문자 전송
+        cashbill.setHp("");
 
-        bulkCash.add(cashbill);
+        // 발행 안내 문자 전송여부
+        cashbill.setSmssendYN(false);
+
+        cashbillList.add(cashbill);
     }
 
     BulkResponse CheckResponse = null;
 
     try {
 
-        CheckResponse = cashbillService.bulkSubmit(testCorpNum, submitID, bulkCash);
+        CheckResponse = cashbillService.bulkSubmit(testCorpNum, submitID, cashbillList);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

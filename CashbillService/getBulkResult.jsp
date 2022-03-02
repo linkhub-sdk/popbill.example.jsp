@@ -68,7 +68,7 @@
                     <li>code (응답코드) : <%= issueResult.get(i).getCode() %></li>
                     <li>mgtKey (문서번호) : <%= issueResult.get(i).getMgtKey() %></li>
                     <li>confirmNum (국세청 승인번호) : <%= issueResult.get(i).getConfirmNum() %></li>
-                    <li>tradeDate (거래일시) : <%= issueResult.get(i).getTradeDate() %></li>
+                    <li>tradeDate (거래일자) : <%= issueResult.get(i).getTradeDate() %></li>
                 </ul>
             </fieldset>
             <% }
