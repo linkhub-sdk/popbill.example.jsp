@@ -17,6 +17,7 @@
      * - 취소 현금영수증의 금액은 원본 금액을 넘을 수 없습니다.
      * - 현금영수증 국세청 전송 정책 [https://docs.popbill.com/cashbill/ntsSendPolicy?lang=java]
      * - "발행완료"된 취소 현금영수증은 국세청 전송 이전에 발행취소(cancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
+     * - 취소 현금영수증 발행 시 구매자 메일주소로 발행 안내 베일이 전송되니 유의하시기 바랍니다.
      * - https://docs.popbill.com/cashbill/java/api#RevokeRegistIssue
      */
 

@@ -13,6 +13,7 @@
 <%
     /*
      * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 전자세금계산서 매입/매출 내역의 요약 정보를 조회합니다.
+     * - 요약 정보 : 전자세금계산서 수집 건수, 공급가액 합계, 세액 합계, 합계 금액
      * - https://docs.popbill.com/httaxinvoice/java/api#Summary
      */
 

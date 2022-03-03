@@ -100,12 +100,12 @@
     // 실제 구매자의 메일주소가 기재되지 않도록 주의
     cashbill.setEmail("test@test.com");
 
-    // 구매자 휴대폰
-    // - {smssendYN} 의 값이 true 인 경우 이 값으로 안내 문자 전송
-    cashbill.setHp("");
-
     // 발행 안내 문자 전송여부
     cashbill.setSmssendYN(false);
+
+    // 구매자 휴대폰
+    // - {smssendYN} 의 값이 true 인 경우 아래 휴대폰번호로 안내 문자 전송
+    cashbill.setHp("");
 
     CBIssueResponse CheckResponse = null;
 

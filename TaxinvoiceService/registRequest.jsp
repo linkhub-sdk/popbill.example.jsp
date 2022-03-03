@@ -21,11 +21,8 @@
     * - 발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
     * - 공급자는 팝빌 사이트의 "매출 발행 대기함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
     * - 임시저장(Register API) 함수와 역발행 요청(Request API) 함수를 한 번의 프로세스로 처리합니다.
-    * - 역발행 요청시 공급자에게 역발행 요청 메일이 발송됩니다.
-    * - 공급자가 역발행 세금계산서 발행시 포인트가 과금되며, 객체 'Taxinvoice'의 변수 'chargeDirection' 값에 따라 과금 주체를 변경할 수 있습니다.
-    *   └ 정과금 : 공급자 과금 , 역과금 : 공급받는자 과금
-     * - https://docs.popbill.com/taxinvoice/java/api#RegistRequest
-     */
+    * - https://docs.popbill.com/taxinvoice/java/api#RegistRequest
+    */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
@@ -89,6 +86,7 @@
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
 
     // 공급자 담당자 메일주소
+    // - 역발행 요청 시 공급자에게 역발행 요청 메일 발송
     taxinvoice.setInvoicerEmail("test@test.com");
 
     // 공급자 담당자 연락처
