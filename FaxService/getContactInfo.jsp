@@ -18,9 +18,9 @@
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
-    
+
     String contactID = "testkorea";
-    
+
     ContactInfo contactInfo = null;
 
     try {
@@ -43,8 +43,6 @@
                     <li>id (아이디) : <%= contactInfo.getId()%></li>
                     <li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>
                     <li>email (이메일) : <%= contactInfo.getEmail()%></li>
-                    <li>hp (휴대폰번호) : <%= contactInfo.getHp()%></li>
-                    <li>fax (팩스번호) : <%= contactInfo.getFax()%></li>
                     <li>tel (연락처) : <%= contactInfo.getTel()%></li>
                     <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
                     <li>searchRole (담당자 권한) : <%= contactInfo.getSearchRole()%></li>

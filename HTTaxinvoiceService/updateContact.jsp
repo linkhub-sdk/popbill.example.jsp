@@ -36,12 +36,6 @@
     // 담당자 연락처 (최대 20자)
     contactInfo.setTel("02-1234-1234");
 
-    // 담당자 휴대폰번호 (최대 20자)
-    contactInfo.setHp("010-1234-1234");
-
-    // 담당자 팩스번호 (최대 20자)
-    contactInfo.setFax("070-1234-1234");
-
     // 담당자 이메일주소 (최대 100자)
     contactInfo.setEmail("test@test.com");
 

@@ -55,12 +55,6 @@
     // 담당자 연락처, 최대 20자
     joinInfo.setContactTEL("02-999-9999");
 
-    // 담당자 휴대폰번호, 최대 20자
-    joinInfo.setContactHP("010-000-1234");
-
-    // 담당자 팩스번호, 최대 20자
-    joinInfo.setContactFAX("02-999-9999");
-
     Response CheckResponse = null;
 
     try {
