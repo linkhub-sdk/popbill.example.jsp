@@ -49,6 +49,9 @@
                 <li>plusFriendID (카카오톡 채널 아이디) : <%=aTSTemplate.getPlusFriendID()%></li>
                 <li>ads (광고메시지) : <%=aTSTemplate.getAds()%></li>
                 <li>appendix (부가메시지) : <%=aTSTemplate.getAppendix()%></li>
+                <li>secureYN (보안템플릿 여부) : <%=aTSTemplate.getSecureYN()%></li>
+                <li>state (채널 상태) : <%=aTSTemplate.getState()%></li>
+                <li>stateDT (채널 상태 일시) : <%=aTSTemplate.getStateDT()%></li>
                 <% if (aTSTemplate.getBtns() != null) {
                     List<KakaoButton> btns = aTSTemplate.getBtns();
                         for (int i = 0; i < btns.size(); i++) { %>
