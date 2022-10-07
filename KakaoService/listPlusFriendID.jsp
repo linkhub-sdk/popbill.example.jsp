@@ -46,6 +46,8 @@
                 <li>plusFriendID (카카오톡 채널 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
                 <li>plusFriendName (카카오톡 채널 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
+                <li>state (채널 상태) : <%=plusFriendIDs[i].getState()%></li>
+                <li>stateDT (채널 상태 일시) : <%=plusFriendIDs[i].getStateDT()%></li>
             </ul>
         </fieldset>
         <%
