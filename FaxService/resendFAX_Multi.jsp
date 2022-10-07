@@ -27,7 +27,7 @@
     String testUserID = "testkorea";
 
     // 원본 팩스 접수번호
-    String orgReceiptNum = "022021803102600001";
+    String orgReceiptNum = "022100715402200001";
 
     // 발신번호, 공백처리시 기존전송정보로 재전송
     String sendNum = "07040342991";
@@ -44,11 +44,13 @@
     // Receiver receiver1 = new Receiver();
     // receiver1.setReceiveName("수신자1");       // 수신자명
     // receiver1.setReceiveNum("010111222");      // 수신팩스번호
+    // receiver1.setInterOPRefKey("20221007-reFAX001"); // 파트너 지정키
     // receivers[0] = receiver1;
 
     // Receiver receiver2 = new Receiver();
     // receiver2.setReceiveName("수신자2");       // 수신자명
     // receiver2.setReceiveNum("010333444");      // 수신팩스번호
+    // receiver2.setInterOPRefKey("20221007-reFAX002"); // 파트너 지정키
     // receivers[1] = receiver2;
 
 

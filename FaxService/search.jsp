@@ -22,10 +22,10 @@
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20220201";
+    String SDate = "20221007";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20220228";
+    String EDate = "20221007";
 
     // 전송상태 배열 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
     // └ 1 = 대기 , 2 = 성공 , 3 = 실패 , 4 = 취소
@@ -113,6 +113,7 @@
                         <li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
                         <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
                         <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+                        <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
                         <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
                         <li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.getTiffFileSize()%></li>
                         <%

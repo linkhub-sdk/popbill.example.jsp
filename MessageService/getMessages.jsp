@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 문자 전송요청 시 팝빌로부터 반환 받은 접수번호
-    String receiptNum = "022022111000000012";
+    String receiptNum = "022100715000000005";
 
     SentMessage[] sentMessages = null;
 
@@ -63,6 +63,7 @@
                         <li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
                         <li>receiptNum (접수번호) : <%=sentMsg.getReceiptNum()%></li>
                         <li>requestNum (요청번호) : <%=sentMsg.getRequestNum()%></li>
+                        <li>interOPRefKey (파트너 지정키) : <%=sentMsg.getInterOPRefKey()%></li>
                     </ul>
                 </fieldset>
                 <%

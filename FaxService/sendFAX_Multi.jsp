@@ -35,11 +35,13 @@
     Receiver receiver1 = new Receiver();
     receiver1.setReceiveName("수신자1");       // 수신자명
     receiver1.setReceiveNum("010111222");      // 수신팩스번호
+    receiver1.setInterOPRefKey("20221007-FAX001"); // 파트너 지정키
     receivers[0] = receiver1;
 
     Receiver receiver2 = new Receiver();
     receiver2.setReceiveName("수신자2");       // 수신자명
     receiver2.setReceiveNum("010333444");      // 수신팩스번호
+    receiver2.setInterOPRefKey("20221007-FAX002"); // 파트너 지정키
     receivers[1] = receiver2;
 
     // 팩스전송파일 경로
@@ -65,7 +67,7 @@
     // 전송요청번호
     // 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
-    String requestNum = "";
+    String requestNum = "20221007-request";
 
     String receiptNum = null;
 

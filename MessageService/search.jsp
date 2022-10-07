@@ -22,10 +22,10 @@
     String testCorpNum= "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20220201";
+    String SDate = "20221007";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20220228";
+    String EDate = "20221007";
 
     // 전송상태 배열 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
     // └ 1 = 대기 , 2 = 성공 , 3 = 실패 , 4 = 취소
@@ -115,6 +115,7 @@
                         <li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
                         <li>receiptNum (접수번호) : <%=sentMsg.getReceiptNum()%></li>
                         <li>requestNum (요청번호) : <%=sentMsg.getRequestNum()%></li>
+                        <li>interOPRefKey (파트너 지정키) : <%=sentMsg.getInterOPRefKey()%></li>
                     </ul>
                 </fieldset>
                 <%

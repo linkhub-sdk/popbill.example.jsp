@@ -68,6 +68,7 @@
                 <li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
                 <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
                 <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+                <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
                 <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
                 <li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.getTiffFileSize()%></li>
                 <%
