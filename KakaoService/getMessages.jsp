@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     // 카카오톡 전송 접수시 팝빌로부터 반환받은 접수번호
-    String receiptNum = "022021810443200001";
+    String receiptNum = "022100714553600001";
 
     KakaoSentInfo kakaoSentInfo = null;
 
@@ -50,6 +50,7 @@
                 <li>templateCode (템플릿 코드) : <%=kakaoSentInfo.getTemplateCode()%></li>
                 <li>plusFriendID (카카오톡 채널 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
                 <li>sendNum (발신번호) : <%=kakaoSentInfo.getSendNum()%></li>
+                <li>altSubject (대체문자 제목) : <%=kakaoSentInfo.getAltSubject()%></li>
                 <li>altContent (대체문자 내용) : <%=kakaoSentInfo.getAltContent()%></li>
                 <li>altSendType (대체문자 유형) : <%=kakaoSentInfo.getAltSendType()%></li>
                 <li>reserveDT (예약일시) : <%=kakaoSentInfo.getReserveDT()%></li>
@@ -93,6 +94,8 @@
                     <li>receiveNum (수신번호) : <%=msgs.get(j).getReceiveNum()%></li>
                     <li>receiveName (수신자명) : <%=msgs.get(j).getReceiveName()%></li>
                     <li>content (알림톡/친구톡 내용) : <%=msgs.get(j).getContent()%></li>
+                    <li>altSubject (대체문자 제목) : <%=msgs.get(j).getAltSubject()%></li>
+                    <li>altContent (대체문자 내용) : <%=msgs.get(j).getAltContent()%></li>
                     <li>altContentType (대체문자 전송타입) : <%=msgs.get(j).getAltContentType()%></li>
                     <li>altSendDT (대체문자 전송일시) : <%=msgs.get(j).getAltSendDT()%></li>
                     <li>altResult (대체문자 전송결과 코드) : <%=msgs.get(j).getAltResult()%></li>

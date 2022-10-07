@@ -30,10 +30,7 @@
     String plusFriendID = "@팝빌";
 
     //발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    String senderNum = "07043042992";
-
-    // 친구톡 메시지 내용 (최대 400자)
-    String content = "친구톡 메시지 내용";
+    String senderNum = "070-4304-2991";
 
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
@@ -44,21 +41,30 @@
     String altSendType = "C";
 
     // 카카오톡 수신정보 배열, 최대 1000건
-    KakaoReceiver[] receivers = new KakaoReceiver[10];
+    KakaoReceiver[] receivers = new KakaoReceiver[3];
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 3; i++) {
         KakaoReceiver message = new KakaoReceiver();
-        message.setReceiverNum("010111222" + i);
-        message.setReceiverName("수신자명" + i);
-        message.setMessage("친구톡 이미지 입니다." + i);
-        message.setAltMessage("대체문자 내용" + i);
+        message.setReceiverNum("010111222" + i);    // 수신자번호
+        message.setReceiverName("수신자명" + i);     // 수신자명
+        message.setMessage(
+                "[친구톡 이미지 테스트]\n\n"
+              + "친구톡 이미지 개별내용입니다.\n"
+              + "대체문자를 친구톡 메시지 내용 그대로 전송할 수 있습니다.\n"
+              + "또는 대체문자 내용을 작송하여 전송할 수도 있습니다.\n"
+              + "하지만 대체문자 내용이 길어지게 되면 LMS 로 전송될 수 있습니다.\n\n"
+              + "수신을 원치 않으시면 1600-9854로 전화주시길 바랍니다.\n"
+              + "To. 수신자" + i
+              );                                 // 내용
+        message.setAltSubject("대체문자 제목" + i);  // 대체문자 제목
+        message.setAltMessage("대체문자 내용" + i);  // 대체문자 내용
         receivers[i] = message;
     }
 
     // 버튼 (최대 5개)
-    KakaoButton[] btns = new KakaoButton[5];
+    KakaoButton[] btns = new KakaoButton[3];
 
-    for (int i = 0; i <5 ; i++) {
+    for (int i = 0; i < 3 ; i++) {
         KakaoButton button = new KakaoButton();
         button.setN("버튼명"+i);
         button.setT("WL");

@@ -27,10 +27,10 @@
     // 승인된 알림톡 템플릿코드
     // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
     //   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
-    String templateCode = "019020000163";
+    String templateCode = "021120000563";
 
     //발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    String senderNum = "07043042991";
+    String senderNum = "070-4304-2991";
 
     // 알림톡 내용 (최대 1000자)
     String content = "[ 팝빌 ]\n";
@@ -39,6 +39,10 @@
     content += "문의사항 있으시면 파트너센터로 편하게 연락주시기 바랍니다.\n\n";
     content += "팝빌 파트너센터 : 1600-8536\n";
     content += "support@linkhub.co.kr";
+
+    // 대체문자 제목
+    // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    String altSubject = "대체문자 제목";
 
     // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
@@ -49,9 +53,9 @@
     String altSendType = "C";
 
     // 카카오톡 수신정보 배열, 최대 1000건
-    KakaoReceiver[] receivers = new KakaoReceiver[10];
+    KakaoReceiver[] receivers = new KakaoReceiver[2];
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 2; i++) {
         KakaoReceiver message = new KakaoReceiver();
         message.setReceiverNum("010111222" + i);
         message.setReceiverName("수신자명" + i);
@@ -88,8 +92,8 @@
 
     try {
 
-        receiptNum = kakaoService.sendATS(testCorpNum, templateCode, senderNum, content, altContent, altSendType,
-                receivers, sndDT, testUserID, requestNum, btns);
+        receiptNum = kakaoService.sendATS(testCorpNum, templateCode, senderNum, content, altSubject, altContent, 
+                altSendType, receivers, sndDT, testUserID, requestNum, btns);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

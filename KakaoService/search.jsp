@@ -22,10 +22,10 @@
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20220101";
+    String SDate = "20221001";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20220105";
+    String EDate = "20221007";
 
     // 전송상태 배열 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     // └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
@@ -106,6 +106,8 @@
                 <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
                 <li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
                 <li>content (알림톡/친구톡 내용) : <%=sentMsg.getContent()%></li>
+                <li>altSubject (대체문자 제목) : <%=sentMsg.getAltSubject()%></li>
+                <li>altContent (대체문자 내용) : <%=sentMsg.getAltContent()%></li>
                 <li>altContentType (대체문자 전송타입) : <%=sentMsg.getAltContentType()%></li>
                 <li>altSendDT (대체문자 전송일시) : <%=sentMsg.getAltSendDT()%></li>
                 <li>altResult (대체문자 전송결과 코드) : <%=sentMsg.getAltResult()%></li>
