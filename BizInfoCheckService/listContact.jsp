@@ -55,11 +55,11 @@
                                 <li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
                                 <li>state (상태) : <%= contactInfo.getState()%></li>
                             </ul>
-                     </fieldset>
+                    </fieldset>
                 <%
                     }
                 %>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

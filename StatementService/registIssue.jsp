@@ -231,6 +231,6 @@
                     <li>Response.invoiceNum : <%=CheckResponse.getInvoiceNum()%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

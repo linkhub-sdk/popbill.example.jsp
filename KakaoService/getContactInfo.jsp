@@ -50,6 +50,6 @@
                     <li>state (상태) : <%= contactInfo.getState()%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

@@ -42,5 +42,5 @@
                     <li>(true)-발행 즉시 전송 (false)-익일 자동 전송</li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
 </html>

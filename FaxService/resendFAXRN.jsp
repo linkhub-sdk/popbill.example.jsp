@@ -78,6 +78,6 @@
                     <li>receiptNum (팩스전송 접수번호) : <%=receiptNum%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

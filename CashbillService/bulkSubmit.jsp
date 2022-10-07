@@ -135,6 +135,6 @@
                     <li>접수아이디 (Response.receiptID) : <%=CheckResponse.getReceiptID()%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

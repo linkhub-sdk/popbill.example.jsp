@@ -40,5 +40,5 @@
                 <li>발행단가 : <%=unitCost%></li>
             </ul>
         </fieldset>
-     </div>
+    </div>
 </html>

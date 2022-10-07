@@ -61,6 +61,6 @@
                     <li>regDT (수집 요청일시) : <%=jobState.getRegDT() %> </li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

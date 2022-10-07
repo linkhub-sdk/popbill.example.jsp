@@ -53,6 +53,6 @@
                     <li>jobID (작업아이디) : <%=jobID %> </li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

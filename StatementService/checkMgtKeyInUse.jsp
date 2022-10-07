@@ -47,6 +47,6 @@
                     <li>사용중 여부 : <%=isInUse ? "사용중" : "미사용중"%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

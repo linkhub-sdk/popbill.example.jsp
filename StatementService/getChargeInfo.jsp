@@ -46,6 +46,6 @@
                     <li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

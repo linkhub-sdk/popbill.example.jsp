@@ -311,6 +311,6 @@
                     <li>국세청 승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

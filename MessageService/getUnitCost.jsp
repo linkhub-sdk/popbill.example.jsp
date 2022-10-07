@@ -44,6 +44,6 @@
                     <li>전송 단가 : <%=unitCost%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

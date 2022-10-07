@@ -40,6 +40,6 @@
                     <li>잔여포인트 : <%=remainPoint%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>

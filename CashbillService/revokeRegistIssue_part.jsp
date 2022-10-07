@@ -98,6 +98,6 @@
                     <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
                 </ul>
             </fieldset>
-         </div>
+        </div>
     </body>
 </html>
