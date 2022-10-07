@@ -39,6 +39,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfo.jsp">GetInfo</a> - 상태 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getInfos.jsp">GetInfos</a> - 상태 대량 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getDetailInfo.jsp">GetDetailInfo</a> - 상세정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getXML.jsp">GetXML</a> - 상세정보 확인(XML)</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/search.jsp">Search</a> - 목록 조회</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getLogs.jsp">GetLogs</a> - 상태 변경이력 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getURL.jsp">GetURL</a> - 세금계산서 문서함 관련 URL</li>
