@@ -46,6 +46,12 @@
         <legend>포인트 관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/FaxService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getUseHistory.jsp">GetUseHistory</a> - 포인트 사용내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getPaymentHistory.jsp">GetPaymentHistory</a> - 포인트 결제내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getRefundHistory.jsp">GetRefundHistory</a> - 환불 신청내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/refund.jsp">Refund</a> - 환불 신청</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/paymentRequest.jsp">PaymentRequest</a> - 무통장 입금신청</li>
+            <li><a href="${pageContext.request.contextPath}/FaxService/getSettleResult.jsp">GetSettleResult</a> - 무통장 입금신청 정보확인</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 URL</li>
             <li><a href="${pageContext.request.contextPath}/FaxService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 URL</li>

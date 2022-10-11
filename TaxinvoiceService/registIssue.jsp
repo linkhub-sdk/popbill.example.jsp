@@ -26,7 +26,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String testCorpNum = "1234123567890";
 
     /***************************************************************************
      *                               세금계산서 정보
@@ -45,7 +45,7 @@
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20220218");
+    taxinvoice.setWriteDate("20221011");
 
     // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -64,7 +64,7 @@
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20220218-JSP001");
+    taxinvoice.setInvoicerMgtKey("20220218-JSP002");
 
     // 공급자 대표자성명
     taxinvoice.setInvoicerCEOName("공급자 대표자 성명");

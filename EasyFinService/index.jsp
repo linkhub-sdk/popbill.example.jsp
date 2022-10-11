@@ -44,6 +44,12 @@
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getFlatRatePopUpURL.jsp">getFlatRatePopUpURL</a> - 정액제 서비스 신청 URL</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getFlatRateState.jsp">getFlatRateState</a> - 정액제 서비스 상태 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getUseHistory.jsp">GetUseHistory</a> - 포인트 사용내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getPaymentHistory.jsp">GetPaymentHistory</a> - 포인트 결제내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getRefundHistory.jsp">GetRefundHistory</a> - 환불 신청내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/refund.jsp">Refund</a> - 환불 신청</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/paymentRequest.jsp">PaymentRequest</a> - 무통장 입금신청</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getSettleResult.jsp">GetSettleResult</a> - 무통장 입금신청 정보확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 URL</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 URL</li>
