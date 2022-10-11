@@ -22,11 +22,14 @@
     // 조회할 전자세금계산서 국세청 승인번호
     String NTSConfirmNum = "202202188888888800000109";
 
+    // 팝빌회원 아이디
+    String testUserID = "testkorea";
+
     String url = null;
 
     try {
 
-        url = htTaxinvoiceService.getPrintURL(testCorpNum, NTSConfirmNum);
+        url = htTaxinvoiceService.getPrintURL(testCorpNum, NTSConfirmNum, testUserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

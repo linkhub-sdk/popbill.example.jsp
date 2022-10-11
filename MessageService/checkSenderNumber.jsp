@@ -23,14 +23,11 @@
     // 확인할 발신번호
     String senderNumber = "070-4304-2991";
 
-    // 팝빌회원 계정 아이디
-    String userID = "testkorea";
-
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = messageService.checkSenderNumber(testCorpNum, senderNumber, userID);
+        CheckResponse = messageService.checkSenderNumber(testCorpNum, senderNumber);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

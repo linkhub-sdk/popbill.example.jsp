@@ -23,11 +23,14 @@
     // - TBOX : 임시문서함, SBOX : 매출문서함, PBOX : 매입문서함, WRITE : 매출작성
     String TOGO = "TBOX";
 
+    // 팝빌회원 아이디
+    String testUserID = "testkorea";
+
     String url = null;
 
     try {
 
-        url = taxinvoiceService.getURL(testCorpNum, TOGO);
+        url = taxinvoiceService.getURL(testCorpNum, testUserID, TOGO);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

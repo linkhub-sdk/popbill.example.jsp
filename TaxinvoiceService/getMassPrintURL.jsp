@@ -27,11 +27,14 @@
     // 세금계산서 문서번호 배열, 최대 100건
     String[] mgtKeyList = new String[]{"20220218-JSP001", "20220218-JSP002"};
 
+    // 팝빌회원 아이디
+    String testUserID = "testkorea";
+
     String url = null;
 
     try {
 
-        url = taxinvoiceService.getMassPrintURL(testCorpNum, keyType, mgtKeyList);
+        url = taxinvoiceService.getMassPrintURL(testCorpNum, keyType, mgtKeyList, testUserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
