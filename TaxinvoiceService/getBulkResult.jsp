@@ -42,7 +42,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                  <legend>대량발행 접수결과 </legend>
+                <legend>대량발행 접수결과 </legend>
                 <ul>
                     <li>code (응답코드) : <%= bulkResult.getCode() %></li>
                     <li>message (응답 메시지) : <%= bulkResult.getMessage() %></li>
@@ -55,7 +55,7 @@
                     <li>txStartDT (발행처리 시작일시) : <%= bulkResult.getTxStartDT() %></li>
                     <li>txEndDT (발행처리 완료일시) : <%= bulkResult.getTxEndDT() %></li>
                     <li>receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
-                  </ul>
+                </ul>
             </fieldset>
 
             <% if (bulkResult.getIssueResult() != null) {
@@ -66,6 +66,7 @@
                 <ul>
                     <li>invoicerMgtKey (공급자 문서번호) : <%= issueResult.get(i).getInvoicerMgtKey() %></li>
                     <li>code (응답코드) : <%= issueResult.get(i).getCode() %></li>
+                    <li>message (응답메시지) : <%= issueResult.get(i).getMessage() %></li>
                     <li>ntsconfirmNum (국세청 승인번호) : <%= issueResult.get(i).getNtsconfirmNum() %></li>
                     <li>issueDT (발행일시) : <%= issueResult.get(i).getIssueDT() %></li>
                 </ul>

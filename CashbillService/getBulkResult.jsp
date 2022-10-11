@@ -42,7 +42,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                  <legend>대량발행 접수결과 </legend>
+                <legend>대량발행 접수결과 </legend>
                 <ul>
                     <li>code (응답코드) : <%= bulkResult.getCode() %></li>
                     <li>message (응답 메시지) : <%= bulkResult.getMessage() %></li>
@@ -56,7 +56,7 @@
                     <li>txEndDT (발행처리 완료일시) : <%= bulkResult.getTxEndDT() %></li>
                     <li>receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
                     <li>receiptDT (접수일시) : <%= bulkResult.getReceiptDT() %></li>
-                  </ul>
+                </ul>
             </fieldset>
 
             <% if (bulkResult.getIssueResult() != null) {
@@ -66,6 +66,7 @@
                 <legend>발행결과 [<%= i + 1 %>]</legend>
                 <ul>
                     <li>code (응답코드) : <%= issueResult.get(i).getCode() %></li>
+                    <li>message (응답메시지) : <%= issueResult.get(i).getMessage() %></li>
                     <li>mgtKey (문서번호) : <%= issueResult.get(i).getMgtKey() %></li>
                     <li>confirmNum (국세청 승인번호) : <%= issueResult.get(i).getConfirmNum() %></li>
                     <li>tradeDate (거래일자) : <%= issueResult.get(i).getTradeDate() %></li>
