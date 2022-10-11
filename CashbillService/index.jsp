@@ -34,7 +34,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/getInfos.jsp">getInfos</a> - 상태 대량 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getDetailInfo.jsp">getDetailInfo</a> - 상세정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/search.jsp">search</a> - 목록 조회</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/getLogs.jsp">getLogs</a> - 상태 변경이력 확인</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getURL.jsp">getURL</a> - 현금영수증 문서함 관련 URL</li>
         </ul>
     </fieldset>

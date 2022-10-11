@@ -38,7 +38,6 @@
             <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserve.jsp">cancelReserve</a> - 예약전송 취소</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/cancelReserveRN.jsp">cancelReserveRN</a> - 예약전송 취소 (요청번호 할당)</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/search.jsp">search</a> - 전송내역 목록 조회</li>
-            <li><a href="${pageContext.request.contextPath}/MessageService/getStates.jsp">getStates</a> - 문자메세지 전송요약정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getSentListURL.jsp">getSentListURL</a> - 문자 전송내역 팝업 URL</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getAutoDenyList.jsp">getAutoDenyList</a> - 080 수신거부 목록 확인</li>
         </ul>
