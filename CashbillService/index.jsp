@@ -16,7 +16,6 @@
             <li><a href="${pageContext.request.contextPath}/CashbillService/registIssue.jsp">registIssue</a> - 즉시발행</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/bulkSubmit.jsp">bulkSubmit</a> - 초대량 발행 접수</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/getBulkResult.jsp">getBulkResult</a> - 초대량 접수결과 확인</li>
-            <li><a href="${pageContext.request.contextPath}/CashbillService/cancelIssue.jsp">cancelIssue</a> - 발행취소</li>
             <li><a href="${pageContext.request.contextPath}/CashbillService/delete.jsp">delete</a> - 삭제</li>
         </ul>
     </fieldset>
