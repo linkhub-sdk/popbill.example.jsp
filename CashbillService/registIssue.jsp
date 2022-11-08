@@ -34,7 +34,7 @@
     Cashbill cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20220218-JSP001");
+    cashbill.setMgtKey("20221108-JSP001");
 
     // 문서형태, 승인거래 기재
     cashbill.setTradeType("승인거래");
@@ -106,6 +106,10 @@
     // - {smssendYN} 의 값이 true 인 경우 아래 휴대폰번호로 안내 문자 전송
     cashbill.setHp("");
 
+    // 거래일시, 날짜(yyyyMMddHHmmss)
+    // 당일, 전일만 가능
+    cashbill.setTradeDT("20221108000000");
+    
     CBIssueResponse CheckResponse = null;
 
     try {
@@ -129,6 +133,7 @@
                     <li>Response.message : <%=CheckResponse.getMessage()%></li>
                     <li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
                     <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
+                    <li>Response.tradeDT : <%=CheckResponse.getTradeDT()%></li>
                 </ul>
             </fieldset>
         </div>

@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20220218-JSP001";
+    String mgtKey = "20221108-JSP001";
 
     Cashbill cashbill = null;
 
@@ -49,6 +49,7 @@
                         <li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
                         <li>orgTradeDate (원본 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
                         <li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
+                        <li>tradeDT (거래일시) : <%=cashbill.getTradeDT() %></li>
                         <li>tradeType (문서형태) : <%=cashbill.getTradeType() %></li>
                         <li>tradeUsage (거래구분) : <%= cashbill.getTradeUsage()%></li>
                         <li>tradeOpt (거래유형) : <%= cashbill.getTradeOpt()%></li>
