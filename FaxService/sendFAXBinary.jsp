@@ -20,7 +20,7 @@
 <%
     /*
      * 전송할 파일의 바이너리 데이터를 팩스 1건 전송합니다. (최대 전송파일 개수: 20개)
-     * - https://docs.popbill.com/fax/java/api#SendFAXBinary
+     * - https://developers.popbill.com/reference/fax/java/api/send#SendFAXBinary
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

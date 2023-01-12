@@ -13,7 +13,7 @@
 <%
     /*
      * 파트너가 할당한 전송요청 번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
-     * - https://docs.popbill.com/kakao/java/api#CancelReserveRN
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#CancelReserveRN
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

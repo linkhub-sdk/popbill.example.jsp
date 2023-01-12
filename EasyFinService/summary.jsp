@@ -14,7 +14,7 @@
     /*
      * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보가 확인된 작업아이디를 활용하여 계좌 거래내역의 요약 정보를 조회합니다.
      * - 요약 정보는 입·출금액 합계, 입·출 거래 건수를 가리킵니다.
-     * - https://docs.popbill.com/easyfinbank/java/api#Summary
+     * - https://developers.popbill.com/reference/easyfinbank/java/api/search#Summary
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

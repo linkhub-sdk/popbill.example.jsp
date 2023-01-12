@@ -13,7 +13,7 @@
 <%
     /*
      * 하나의 전자명세서에 첨부된 다른 전자명세서를 해제합니다.
-     * - https://docs.popbill.com/statement/java/api#DetachStatement
+     * - https://developers.popbill.com/reference/statement/java/api/etc#DetachStatement
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

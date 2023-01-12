@@ -13,7 +13,7 @@
 <%
     /*
      * 무통장 입금신청한 건의 정보를 확인합니다.
-     * - https://docs.popbill.com/htcashbill/java/api#GetSettleResult
+     * - https://developers.popbill.com/reference/htcashbill/java/api/point#GetSettleResult
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

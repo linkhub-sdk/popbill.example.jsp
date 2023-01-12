@@ -16,7 +16,7 @@
     /*
      * 접수시 기재한 SubmitID를 사용하여 현금영수증 접수결과를 확인합니다.
      * - 개별 현금영수증 처리상태는 접수상태(txState)가 완료(2) 시 반환됩니다.
-     * - https://docs.popbill.com/cashbill/java/api#GetBulkResult
+     * - https://developers.popbill.com/reference/cashbill/java/api/issue#GetBulkResult
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

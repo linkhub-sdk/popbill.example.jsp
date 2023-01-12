@@ -13,7 +13,7 @@
 <%
     /*
      * "승인대기", "발행완료" 상태의 전자명세서와 관련된 발행 안내 메일을 재전송 합니다.
-     * - https://docs.popbill.com/statement/java/api#SendEmail
+     * - https://developers.popbill.com/reference/statement/java/api/etc#SendEmail
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

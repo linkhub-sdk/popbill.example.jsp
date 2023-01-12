@@ -15,8 +15,8 @@
     /*
      * 다수건의 세금계산서 상태 및 요약 정보를 확인합니다. (1회 호출 시 최대 1,000건 확인 가능)
      * - 리턴값 'TaxinvoiceInfo'의 변수 'stateCode'를 통해 세금계산서의 상태코드를 확인합니다.
-     * - 세금계산서 상태코드 [https://docs.popbill.com/taxinvoice/stateCode?lang=java]
-     * - https://docs.popbill.com/taxinvoice/java/api#GetInfos
+     * - 세금계산서 상태코드 [https://developers.popbill.com/reference/taxinvoice/java/response-code]
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/info#GetInfos
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

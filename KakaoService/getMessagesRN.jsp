@@ -16,7 +16,7 @@
 <%
     /*
      * 파트너가 할당한 전송요청 번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
-     * - https://docs.popbill.com/kakao/java/api#GetMessagesRN
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/info#GetMessagesRN
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

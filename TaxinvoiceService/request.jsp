@@ -18,7 +18,7 @@
     * - 역발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
     * - 공급자는 팝빌 사이트의 "매출 발행 대기함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
     * - 역발행 요청시 공급자에게 역발행 요청 메일이 발송됩니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#Request
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Request
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

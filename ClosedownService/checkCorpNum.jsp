@@ -13,7 +13,7 @@
 <%
     /*
      * 사업자번호 1건에 대한 휴폐업정보를 확인합니다.
-     * - https://docs.popbill.com/closedown/java/api#CheckCorpNum
+     * - https://developers.popbill.com/reference/closedown/java/api/check#CheckCorpNum
      */
 
     CorpState corpState = null;

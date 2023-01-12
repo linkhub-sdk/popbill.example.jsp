@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에서 반환받은 접수번호를 통해 예약접수된 문자 메시지 전송을 취소합니다. (예약시간 10분 전까지 가능)
-     * - https://docs.popbill.com/message/java/api#CancelReserve
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#CancelReserve
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

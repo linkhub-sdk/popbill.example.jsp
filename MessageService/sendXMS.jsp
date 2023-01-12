@@ -14,7 +14,7 @@
 <%
     /*
      * 메시지 길이(90byte)에 따라 단문/장문(SMS/LMS)을 자동으로 인식하여 1건의 메시지를 전송을 팝빌에 접수합니다.
-     *  - https://docs.popbill.com/message/java/api#SendXMS
+     *  - https://developers.popbill.com/reference/sms/java/api/send#SendXMSOne
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

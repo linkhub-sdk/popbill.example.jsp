@@ -19,7 +19,7 @@
     /*
      * 작성된 전자명세서 데이터를 팝빌에 저장합니다.
      * - "임시저장" 상태의 전자명세서는 발행(Issue API) 함수를 호출하여 "발행완료"처리한 경우에만 수신자에게 발행 안내 메일이 발송됩니다.
-     * - https://docs.popbill.com/statement/java/api#Register
+     * - https://developers.popbill.com/reference/statement/java/api/issue#Register
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
@@ -182,12 +182,6 @@
 
     statement.getDetailList().add(detail);
 
-
-    /***************************************************************************
-     *                               추가속성 정보
-     * - 추가속성에 관한 자세한 사항은 아래의 URL을 참조.
-     * - https://docs.popbill.com/statement/propertyBag?lang=java
-     ****************************************************************************/
 
     Map<String, String> propertyBag = new HashMap<String, String>();
 

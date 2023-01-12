@@ -14,7 +14,7 @@
 <%
     /*
      * 환불을 신청합니다.
-     * - https://docs.popbill.com/cashbill/java/api#Refund
+     * - https://developers.popbill.com/reference/cashbill/java/api/point#Refund
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

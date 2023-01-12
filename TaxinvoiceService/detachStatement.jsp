@@ -14,7 +14,7 @@
 <%
     /*
      * 세금계산서에 첨부된 전자명세서를 해제합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#DetachStatement
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/etc#DetachStatement
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

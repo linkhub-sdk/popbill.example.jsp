@@ -13,7 +13,7 @@
 <%
     /*
      * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보 확인된 작업아이디를 활용하여 현금영수증 매입/매출 내역을 조회합니다.
-     * - https://docs.popbill.com/htcashbill/java/api#Search
+     * - https://developers.popbill.com/reference/htcashbill/java/api/search#Search
      */
 
     // 팝빌 회원 사업자번호

@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에 등록된 계좌정보 목록을 반환합니다.
-     * - https://docs.popbill.com/easyfinbank/java/api#ListBankAccount
+     * - https://developers.popbill.com/reference/easyfinbank/java/api/manage#ListBankAccount
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

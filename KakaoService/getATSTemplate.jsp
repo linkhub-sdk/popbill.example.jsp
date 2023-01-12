@@ -15,7 +15,7 @@
 <%
     /*
      * 승인된 알림톡 템플릿 정보를 확인합니다.
-     * - https://docs.popbill.com/kakao/java/api#GetATSTemplate
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/template#GetATSTemplate
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -13,7 +13,7 @@
 <%
     /*
      * 세금계산서 관련 메일 항목에 대한 발송설정을 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#ListEmailConfig
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/etc#ListEmailConfig
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

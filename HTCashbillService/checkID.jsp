@@ -13,7 +13,7 @@
 <%
     /*
      * 사용하고자 하는 아이디의 중복여부를 확인합니다.
-     * - https://docs.popbill.com/htcashbill/java/api#CheckID
+     * - https://developers.popbill.com/reference/htcashbill/java/api/member#CheckID
      */
 
     // 조회할 아이디

@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
-     * - https://docs.popbill.com/fax/java/api#GetFaxResult
+     * - https://developers.popbill.com/reference/fax/java/api/info#GetFaxResult
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

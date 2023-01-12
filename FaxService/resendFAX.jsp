@@ -17,7 +17,7 @@
      * - 발신/수신 정보 미입력시 기존과 동일한 정보로 팩스가 전송되고, 접수일 기준 최대 60일이 경과되지 않는 건만 재전송이 가능합니다.
      * - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
      * - 변환실패 사유로 전송실패한 팩스 접수건은 재전송이 불가합니다.
-     * - https://docs.popbill.com/fax/java/api#ResendFAX
+     * - https://developers.popbill.com/reference/fax/java/api/send#ResendFAX
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

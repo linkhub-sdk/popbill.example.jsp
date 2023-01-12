@@ -18,7 +18,7 @@
 <%
     /*
      * "임시저장" 상태의 세금계산서를 수정합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#Update
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Update
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
@@ -209,7 +209,7 @@
 
     /***************************************************************************
      * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재)
-     * - 수정세금계산서 작성방법 안내 [https://docs.popbill.com/taxinvoice/modify?lang=java]
+     * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      ****************************************************************************/
 
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.

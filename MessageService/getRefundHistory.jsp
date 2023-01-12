@@ -14,7 +14,7 @@
 <%
     /*
      * 환불 신청내역을 확인합니다.
-     * - https://docs.popbill.com/message/java/api#GetRefundHistory
+     * - https://developers.popbill.com/reference/sms/java/api/point#GetRefundHistory
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

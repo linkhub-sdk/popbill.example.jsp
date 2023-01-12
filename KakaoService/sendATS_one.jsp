@@ -17,7 +17,7 @@
      * 승인된 템플릿의 내용을 작성하여 1건의 알림톡 전송을 팝빌에 접수합니다.
      * - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
      * - 전송실패 시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
-     * - https://docs.popbill.com/kakao/java/api#SendATS_one
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#SendATSOne
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

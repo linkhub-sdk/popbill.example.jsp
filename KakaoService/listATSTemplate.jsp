@@ -16,7 +16,7 @@
     /*
      * 승인된 알림톡 템플릿 목록을 확인합니다.
      * - 반환항목중 템플릿코드(templateCode)는 알림톡 전송시 사용됩니다.
-     * - https://docs.popbill.com/kakao/java/api#ListATSTemplate
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/template#ListATSTemplate
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -14,7 +14,7 @@
     /*
      * 파트너가 세금계산서 관리 목적으로 할당하는 문서번호의 사용여부를 확인합니다.
      * - 이미 사용 중인 문서번호는 중복 사용이 불가하고, 세금계산서가 삭제된 경우에만 문서번호의 재사용이 가능합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#CheckMgtKeyInUse
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/info#CheckMgtKeyInUse
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

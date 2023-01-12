@@ -13,7 +13,7 @@
 <%
     /*
      * 1건의 예금주실명을 조회합니다.
-     * - https://docs.popbill.com/accountcheck/java/api#CheckDepositorInfo
+     * - https://developers.popbill.com/reference/accountcheck/java/api/check#CheckDepositorInfo
      */
 
     DepositorCheckInfo depositorCheckInfo = null;

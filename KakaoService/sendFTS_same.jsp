@@ -18,7 +18,7 @@
      * 텍스트로 구성된 다수건의 친구톡 전송을 팝빌에 접수하며, 모든 수신자에게 동일 내용을 전송합니다. (최대 1,000건)
      * - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
-     * - https://docs.popbill.com/kakao/java/api#SendFTS_same
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#SendFTSSame
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

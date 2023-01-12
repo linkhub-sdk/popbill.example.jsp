@@ -15,7 +15,7 @@
     /*
      * 검색조건에 해당하는 카카오톡 전송내역을 조회합니다. (조회기간 단위 : 최대 2개월)
      * - 카카오톡 접수일시로부터 6개월 이내 접수건만 조회할 수 있습니다.
-     * - https://docs.popbill.com/kakao/java/api#Search
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/info#Search
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

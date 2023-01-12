@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에 등록된 인증서로 홈택스 로그인 가능 여부를 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/java/api#CheckCertValidation
+     * - https://developers.popbill.com/reference/httaxinvoice/java/api/cert#CheckCertValidation
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

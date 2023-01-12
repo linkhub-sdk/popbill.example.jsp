@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에 등록한 연동회원의 카카오톡 채널 목록을 확인합니다.
-     * - https://docs.popbill.com/kakao/java/api#ListPlusFriendID
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/channel#ListPlusFriendID
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

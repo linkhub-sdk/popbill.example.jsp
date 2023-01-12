@@ -16,7 +16,7 @@
 <%
     /*
      * 세금계산서 1건의 상세정보를 XML로 확인합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#GetXML
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/info#GetXML
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

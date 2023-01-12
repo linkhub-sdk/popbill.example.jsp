@@ -15,7 +15,7 @@
     /*
      * 검색조건에 해당하는 팩스 전송내역 목록을 조회합니다. (조회기간 단위 : 최대 2개월)
      * - 팩스 접수일시로부터 2개월 이내 접수건만 조회할 수 있습니다.
-     * - https://docs.popbill.com/fax/java/api#Search
+     * - https://developers.popbill.com/reference/fax/java/api/info#Search
      */
 
     // 펍발회원 사업자번호

@@ -14,8 +14,8 @@
 <%
     /*
      * 작성된 현금영수증 데이터를 팝빌에 저장과 동시에 발행하여 "발행완료" 상태로 처리합니다.
-     * - 현금영수증 국세청 전송 정책 [https://docs.popbill.com/cashbill/ntsSendPolicy?lang=java]
-     * - https://docs.popbill.com/cashbill/java/api#RegistIssue
+     * - 현금영수증 국세청 전송 정책 [https://developers.popbill.com/guide/cashbill/java/introduction/policy-of-send-to-nts]
+     * - https://developers.popbill.com/reference/cashbill/java/api/issue#RegistIssue
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

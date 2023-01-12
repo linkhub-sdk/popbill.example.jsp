@@ -13,7 +13,7 @@
 <%
     /*
      * 전자명세서의 상태에 대한 변경이력을 확인합니다.
-     * - https://docs.popbill.com/statement/java/api#GetLogs
+     * - https://developers.popbill.com/reference/statement/java/api/info#GetLogs
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

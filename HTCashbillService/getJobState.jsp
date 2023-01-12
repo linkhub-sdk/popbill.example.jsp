@@ -19,7 +19,7 @@
      *   수집 결과 조회(Search) 또는 수집 결과 요약 정보 조회(Summary) 를 해야합니다.
      * - 작업 상태(jobState)가 3(완료)이지만 수집 결과 코드(errorCode)가 1(수집성공)이 아닌 경우에는
      *   오류메시지(errorReason)로 수집 실패에 대한 원인을 파악할 수 있습니다.
-     * - https://docs.popbill.com/htcashbill/java/api#GetJobState
+     * - https://developers.popbill.com/reference/htcashbill/java/api/job#GetJobState
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -16,7 +16,7 @@
 <%
 /*
  * 사업자번호 1건에 대한 기업정보를 확인합니다.
- * - https://docs.popbill.com/bizinfocheck/java/api#CheckBizInfo
+ * - https://developers.popbill.com/reference/bizinfocheck/java/api/check#CheckBizInfo
  */
 
 BizCheckInfo bizInfo = null;

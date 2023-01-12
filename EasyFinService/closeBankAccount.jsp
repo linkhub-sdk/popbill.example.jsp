@@ -13,7 +13,7 @@
 <%
     /*
      * 계좌의 정액제 해지를 요청합니다.
-     * - https://docs.popbill.com/easyfinbank/java/api#CloseBankAccount
+     * - https://developers.popbill.com/reference/easyfinbank/java/api/manage#CloseBankAccount
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

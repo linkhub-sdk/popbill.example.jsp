@@ -19,7 +19,7 @@
     /*
      * 작성된 전자명세서 데이터를 팝빌에 저장과 동시에 발행하여, "발행완료" 상태로 처리합니다.
      * - 팝빌 사이트 [전자명세서] > [환경설정] > [전자명세서 관리] 메뉴의 발행 시 자동승인 옵션 설정을 통해 전자명세서를 "발행완료" 상태가 아닌 "승인대기" 상태로 발행 처리 할 수 있습니다.
-     * - https://docs.popbill.com/statement/java/api#RegistIssue
+     * - https://developers.popbill.com/reference/statement/java/api/issue#RegistIssue
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
@@ -189,12 +189,6 @@
 
     statement.getDetailList().add(detail);
 
-
-    /***************************************************************************
-     *                               추가속성 정보
-     * - 추가속성에 관한 자세한 사항은 아래의 URL을 참조.
-     * - https://docs.popbill.com/statement/propertyBag?lang=java
-     ****************************************************************************/
 
     Map<String, String> propertyBag = new HashMap<String, String>();
 

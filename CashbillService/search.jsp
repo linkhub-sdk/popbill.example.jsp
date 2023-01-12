@@ -14,7 +14,7 @@
 <%
     /*
      * 검색조건에 해당하는 현금영수증을 조회합니다. (조회기간 단위 : 최대 6개월)
-     * - https://docs.popbill.com/cashbill/java/api#Search
+     * - https://developers.popbill.com/reference/cashbill/java/api/info#Search
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

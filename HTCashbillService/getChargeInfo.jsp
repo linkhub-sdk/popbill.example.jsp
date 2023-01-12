@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌 홈택스연동(현금) API 서비스 과금정보를 확인합니다.
-     * - https://docs.popbill.com/htcashbill/java/api#GetChargeInfo
+     * - https://developers.popbill.com/reference/htcashbill/java/api/point#GetChargeInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -13,7 +13,7 @@
 <%
     /*
      * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 전자세금계산서 매입/매출 내역을 조회합니다.
-     * - https://docs.popbill.com/httaxinvoice/java/api#Search
+     * - https://developers.popbill.com/reference/httaxinvoice/java/api/search#Search
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -16,7 +16,7 @@
 <%
     /*
      * 최대 2,000byte의 장문(LMS) 메시지 다수건 전송을 팝빌에 접수합니다. (최대 1,000건)
-     * - https://docs.popbill.com/message/java/api#SendLMS_Multi
+     * - https://developers.popbill.com/reference/sms/java/api/send#SendLMSAll
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

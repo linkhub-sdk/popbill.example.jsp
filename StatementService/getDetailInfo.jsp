@@ -15,7 +15,7 @@
 <%
     /*
      * 전자명세서 1건의 상세정보 확인합니다.
-     * - https://docs.popbill.com/statement/java/api#GetDetailInfo
+     * - https://developers.popbill.com/reference/statement/java/api/info#GetDetailInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

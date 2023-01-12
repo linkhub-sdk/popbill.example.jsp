@@ -14,12 +14,12 @@
 <%
     /*
      * "임시저장" 또는 "(역)발행대기" 상태의 세금계산서를 발행(전자서명)하며, "발행완료" 상태로 처리합니다.
-     * - 세금계산서 국세청 전송정책 [https://docs.popbill.com/taxinvoice/ntsSendPolicy?lang=java]
+     * - 세금계산서 국세청 전송정책 [https://developers.popbill.com/guide/taxinvoice/java/introduction/policy-of-send-to-nts]
      * - "발행완료" 된 전자세금계산서는 국세청 전송 이전에 발행취소(CancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
      * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
      *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
      * - 세금계산서 발행 시 공급받는자에게 발행 메일이 발송됩니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#TIIssue
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Issue
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

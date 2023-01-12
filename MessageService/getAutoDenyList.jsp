@@ -13,7 +13,7 @@
 <%
     /*
      * 전용 080 번호에 등록된 수신거부 목록을 반환합니다.
-     * - https://docs.popbill.com/message/java/api#GetAutoDenyList
+     * - https://developers.popbill.com/reference/sms/java/api/info#GetAutoDenyList
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

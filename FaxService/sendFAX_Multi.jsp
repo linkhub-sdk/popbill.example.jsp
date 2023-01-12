@@ -16,7 +16,7 @@
 <%
     /*
      * 동일한 팩스파일을 다수의 수신자에게 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
-     * - https://docs.popbill.com/fax/java/api#SendFAX_Multi
+     * - https://developers.popbill.com/reference/fax/java/api/send#SendFAXMulti
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

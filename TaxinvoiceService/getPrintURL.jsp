@@ -15,7 +15,7 @@
      * 세금계산서 1건을 인쇄하기 위한 페이지의 팝업 URL을 반환하며, 페이지내에서 인쇄 설정값을
      * "공급자" / "공급받는자" / "공급자+공급받는자"용 중 하나로 지정할 수 있습니다.
      * - 반환되는 URL은 보안 정책상 30초 동안 유효하며, 시간을 초과한 후에는 해당 URL을 통한 페이지 접근이 불가합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#GetPrintURL
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/view#GetPrintURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

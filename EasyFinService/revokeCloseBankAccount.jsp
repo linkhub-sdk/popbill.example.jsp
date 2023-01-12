@@ -13,7 +13,7 @@
 <%
     /*
      * 신청한 정액제 해지요청을 취소합니다.
-     * - https://docs.popbill.com/easyfinbank/java/api#RevokeCloseBankAccount
+     * - https://developers.popbill.com/reference/easyfinbank/java/api/manage#RevokeCloseBankAccount
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

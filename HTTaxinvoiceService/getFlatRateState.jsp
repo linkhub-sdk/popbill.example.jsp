@@ -13,7 +13,7 @@
 <%
     /*
      * 홈택스연동 정액제 서비스 상태를 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/java/api#GetFlatRateState
+     * - https://developers.popbill.com/reference/httaxinvoice/java/api/point#GetFlatRateState
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

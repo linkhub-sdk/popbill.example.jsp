@@ -14,7 +14,7 @@
     /*
      * 홈택스에 신고된 전자세금계산서 매입/매출 내역 수집을 팝빌에 요청합니다. (조회기간 단위 : 최대 3개월)
      * 주기적으로 자체 DB에 세금계산서 정보를 INSERT 하는 경우, 조회할 일자 유형(DType) 값을 "S"로 하는 것을 권장합니다.
-     * - https://docs.popbill.com/httaxinvoice/java/api#RequestJob
+     * - https://developers.popbill.com/reference/httaxinvoice/java/api/job#RequestJob
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

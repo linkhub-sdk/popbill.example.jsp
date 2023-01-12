@@ -22,7 +22,7 @@
      * - 역발행 시 임시저장(Register)과 역발행요청(Request)을 한번의 호출로 처리하는 즉시요청(RegistRequest API) 프로세스 연동을 권장합니다.
      * - 세금계산서 파일첨부 기능을 구현하는 경우, 임시저장(Register API) -> 파일첨부(AttachFile API) -> 발행(Issue API) 함수를 차례로 호출합니다.
      * - 임시저장된 세금계산서는 팝빌 사이트 '임시문서함'에서 확인 가능합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#Register
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Register
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
@@ -211,7 +211,7 @@
 
     /***************************************************************************
      * 수정세금계산서 정보 (수정세금계산서 작성시에만 기재)
-     * - 수정세금계산서 작성방법 안내 [https://docs.popbill.com/taxinvoice/modify?lang=java]
+     * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      ****************************************************************************/
 
     // 수정세금계산서 작성시 1~6까지 선택기재.

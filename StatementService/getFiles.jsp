@@ -14,7 +14,7 @@
     /*
      * 전자명세서에 첨부된 파일목록을 확인합니다.
          * - 응답항목 중 파일아이디(AttachedFile) 항목은 첨부파일 삭제(DeleteFile API) 함수 호출 시 이용할 수 있습니다.
-     * - https://docs.popbill.com/statement/java/api#GetFiles
+     * - https://developers.popbill.com/reference/statement/java/api/etc#GetFiles
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

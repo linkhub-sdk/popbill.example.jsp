@@ -12,8 +12,8 @@
 
 <%
     /*
-         * 팝빌에서 반환받은 접수번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
-     * - https://docs.popbill.com/kakao/java/api#CancelReserve
+     * 팝빌에서 반환받은 접수번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#CancelReserve
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

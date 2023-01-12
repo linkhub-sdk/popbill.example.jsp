@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌에 등록된 전자세금계산서용 부서사용자 계정 정보로 홈택스 로그인 가능 여부를 확인합니다.
-     * - https://docs.popbill.com/httaxinvoice/java/api#CheckLoginDeptUser
+     * - https://developers.popbill.com/reference/httaxinvoice/java/api/cert#CheckLoginDeptUser
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

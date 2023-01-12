@@ -14,7 +14,7 @@
 <%
     /*
      * 최대 90byte의 단문(SMS) 메시지 1건 전송을 팝빌에 접수합니다.
-     * - https://docs.popbill.com/message/java/api#SendSMS
+     * - https://developers.popbill.com/reference/sms/java/api/send#SendSMSOne
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

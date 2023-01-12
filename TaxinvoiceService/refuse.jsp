@@ -14,7 +14,7 @@
 <%
     /*
      * 공급자가 공급받는자에게 역발행 요청 받은 세금계산서의 발행을 거부합니다.
-     * - https://docs.popbill.com/taxinvoice/java/api#Refuse
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Refuse
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

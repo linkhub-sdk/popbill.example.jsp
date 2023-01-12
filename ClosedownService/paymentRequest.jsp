@@ -15,7 +15,7 @@
 <%
     /*
      * 무통장 입금을 신청합니다.
-     * - https://docs.popbill.com/closedown/java/api#PaymentRequest
+     * - https://developers.popbill.com/reference/closedown/java/api/point#PaymentRequest
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

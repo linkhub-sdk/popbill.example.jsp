@@ -20,7 +20,7 @@
      * - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
      * - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
      * - 대체문자의 경우, 포토문자(MMS) 형식은 지원하고 있지 않습니다.
-     * - https://docs.popbill.com/kakao/java/api#SendFMS_multi
+     * - https://developers.popbill.com/reference/kakaotalk/java/api/send#SendFMSMulti
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

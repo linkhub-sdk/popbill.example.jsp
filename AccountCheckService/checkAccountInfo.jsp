@@ -13,7 +13,7 @@
 <%
     /*
      * 1건의 예금주성명을 조회합니다.
-     * - https://docs.popbill.com/accountcheck/java/api#CheckAccountInfo
+     * - https://developers.popbill.com/reference/accountcheck/java/api/check#CheckAccountInfo
      */
 
     AccountCheckInfo accountInfo = null;

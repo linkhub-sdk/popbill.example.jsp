@@ -18,7 +18,7 @@
      * 최대 2,000byte의 메시지와 이미지로 구성된 포토문자(MMS) 다수건 전송을 팝빌에 접수합니다. (최대 1,000건)
      * - 모든 수신자에게 동일한 내용을 전송하거나(동보전송), 수신자마다 개별 내용을 전송할 수 있습니다(대량전송).
      * - 이미지 파일 포맷/규격 : 최대 300Kbyte(JPEG), 가로/세로 1,000px 이하 권장
-     * - https://docs.popbill.com/message/java/api#SendMMS_Multi
+     * - https://developers.popbill.com/reference/sms/java/api/send#SendMMSAll
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

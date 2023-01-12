@@ -13,7 +13,7 @@
 <%
     /*
      * 파트너가 할당한 전송요청 번호를 통해 문자 전송상태 및 결과를 확인합니다.
-     * - https://docs.popbill.com/message/java/api#GetMessagesRN
+     * - https://developers.popbill.com/reference/sms/java/api/info#GetMessagesRN
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

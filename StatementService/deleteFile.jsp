@@ -14,7 +14,7 @@
     /*
     * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
     * - 파일 식별을 위해 첨부 시 부여되는 'FileID'는 첨부파일 목록 확인(GetFiles API) 함수를 호출하여 확인합니다.
-    * - https://docs.popbill.com/statement/java/api#DeleteFile
+    * - https://developers.popbill.com/reference/statement/java/api/etc#DeleteFile
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
