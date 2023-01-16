@@ -32,7 +32,7 @@
     Statement statement = new Statement();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    statement.setWriteDate("20220218");
+    statement.setWriteDate("20230113");
 
     // {영수, 청구, 없음} 중 기재
     statement.setPurposeType("영수");
@@ -47,7 +47,7 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20220218-JSP002");
+    statement.setMgtKey("20230113-JSP001");
 
 
     /***************************************************************************
@@ -116,7 +116,7 @@
     // 수신자 담당자 메일주소
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
-    statement.setReceiverEmail("test@receiver.com");
+    statement.setReceiverEmail("lshk955@naver.com");
 
     // 수신자 담당자 연락처
     statement.setReceiverTEL("010-111-1111");
