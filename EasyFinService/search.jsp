@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 수집 요청시 발급받은 작업아이디
-    String jobID = "022021815000000002";
+    String jobID = "023011317000000006";
 
     // 거래유형 배열 ("I" 와 "O" 중 선택, 다중 선택 가능)
     // └ I = 입금 , O = 출금
@@ -68,6 +68,7 @@
                 <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
                 <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
                 <li>lastScrapDT (최종 조회일시) : <%= result.getLastScrapDT() %></li>
+                <li>balance (현재잔액) : <%= result.getBalance() %></li>
             </ul>
             <%
                 if ( result != null ){
