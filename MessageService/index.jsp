@@ -30,6 +30,7 @@
             <li><a href="${pageContext.request.contextPath}/MessageService/sendXMS_Multi.jsp">sendXMS</a> - 단문/장문 자동인식 전송 [대량]</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 전송내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getMessagesRN.jsp">getMessagesRN</a> - 전송내역 확인 (요청번호 할당)</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/checkAutoDenyNumber.jsp">checkAutoDenyNumber</a> - 발신번호 등록여부 확인</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
