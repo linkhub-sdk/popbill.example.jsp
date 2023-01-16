@@ -54,7 +54,6 @@
                     <li>Response.message : <%=CheckResponse.getMessage()%></li>
                     <li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
                     <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
-                    <li>Response.tradeDT : <%=CheckResponse.getTradeDT()%></li>
                 </ul>
             </fieldset>
         </div>
