@@ -27,7 +27,6 @@
             <li><a href="MessageService">MessageService</a> - 문자메시지 API</li>
             <li><a href="KakaoService">KakaoService</a> - 카카오톡 API</li>
             <li><a href="FaxService">FaxService</a> - 팩스 API</li>
-
         </ul>
     </fieldset>
 </div>
