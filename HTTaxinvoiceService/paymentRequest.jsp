@@ -34,7 +34,7 @@
 
     // 담당자 휴대폰
     // 무통장 입금 승인 알림톡이 전송됩니다.
-    paymentForm.setSettlerHP("01012341234");
+    paymentForm.setNotifyHP("01012341234");
 
     // 입금자명
     paymentForm.setPaymentName("입금자명");
