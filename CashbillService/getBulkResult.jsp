@@ -70,7 +70,7 @@
                     <li>mgtKey (문서번호) : <%= issueResult.get(i).getMgtKey() %></li>
                     <li>confirmNum (국세청 승인번호) : <%= issueResult.get(i).getConfirmNum() %></li>
                     <li>tradeDate (거래일자) : <%= issueResult.get(i).getTradeDate() %></li>
-                    <li>tradeDT (거래일시) : <%= issueResult.get(i).getTradeDT() %></li>
+                    <li>issueDT (발행일시) : <%= issueResult.get(i).getIssueDT() %></li>
                 </ul>
             </fieldset>
             <% }
