@@ -39,7 +39,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>예약 알림톡/친구톡 취소</legend>
+        <legend>예약전송 전체 취소 (전송요청번호)</legend>
         <ul>
             <li>Response.code : <%=CheckResponse.getCode()%></li>
             <li>Response.message : <%=CheckResponse.getMessage()%></li>
