@@ -28,13 +28,13 @@
     String memo = "발행 메모";
 
     // 발행 안내 메일 제목, 미기재시 기본 양식으로 메일 전송
-    String emailSubject = "";
+    String emailSubject = "lshk955@naver.com";
 
     // 현금영수증 정보 객체
     Cashbill cashbill = new Cashbill();
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20221108-JSP001");
+    cashbill.setMgtKey("20230113-JSP001");
 
     // 문서형태, 승인거래 기재
     cashbill.setTradeType("승인거래");
@@ -108,7 +108,7 @@
 
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능
-    cashbill.setTradeDT("20221108000000");
+    cashbill.setTradeDT("20230113180000");
     
     CBIssueResponse CheckResponse = null;
 
@@ -133,7 +133,6 @@
                     <li>Response.message : <%=CheckResponse.getMessage()%></li>
                     <li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
                     <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
-                    <li>Response.tradeDT : <%=CheckResponse.getTradeDT()%></li>
                 </ul>
             </fieldset>
         </div>
