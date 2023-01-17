@@ -28,7 +28,7 @@
     String memo = "발행 메모";
 
     // 발행 안내 메일 제목, 미기재시 기본 양식으로 메일 전송
-    String emailSubject = "lshk955@naver.com";
+    String emailSubject = "";
 
     // 현금영수증 정보 객체
     Cashbill cashbill = new Cashbill();
