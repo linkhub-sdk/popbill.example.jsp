@@ -19,7 +19,6 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-
     //수신번호 유형, 일반 / 지능 중 택 1
     String receiveNumType = "일반";
 

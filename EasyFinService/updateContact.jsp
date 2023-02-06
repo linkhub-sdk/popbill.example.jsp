@@ -23,7 +23,6 @@
     // 팝빌회원 아이디
     String testUserID =  "testkorea";
 
-
     // 담당자정보 객체
     ContactInfo contactInfo = new ContactInfo();
 

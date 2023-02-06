@@ -28,8 +28,8 @@
     // 계좌번호 하이픈('-') 제외
     String AccountNumber = "";
 
-
     Response saveResponse = null;
+    
     try {
 
         saveResponse = easyFinBankService.revokeCloseBankAccount(testCorpNum, BankCode, AccountNumber);

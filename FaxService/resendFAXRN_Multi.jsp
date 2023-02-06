@@ -69,7 +69,7 @@
     // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
     String originalFAXrequestNum = "20221007-request";
 
-  String receiptNum = null;
+    String receiptNum = null;
 
     try {
 

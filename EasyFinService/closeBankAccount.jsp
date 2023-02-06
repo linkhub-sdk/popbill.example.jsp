@@ -34,7 +34,6 @@
     // └ 중도일 경우, 정액제 잔여기간은 일할로 계산되어 포인트 환불 (무료 이용기간 중 해지하면 전액 환불)
     String CloseType = "중도";
 
-
     Response saveResponse = null;
 
     try {

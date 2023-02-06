@@ -32,7 +32,6 @@
     // 수신자명
     String receiverName = "수신자명";
 
-
     // 메시지 제목
     String subject = "장문 문자메시지 제목";
 

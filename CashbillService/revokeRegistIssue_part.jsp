@@ -70,7 +70,6 @@
     // - 현금영수증 취소유형이 false 인 경우 미입력
     String totalAmount = "3300";
 
-
     CBIssueResponse CheckResponse = null;
 
     try {
