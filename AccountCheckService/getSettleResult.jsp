@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 무통장 입금신청한 건의 정보를 확인합니다.
+     * 연동회원 포인트 무통장 입금신청내역 1건을 확인합니다.
      * - https://developers.popbill.com/reference/accountcheck/java/api/point#GetSettleResult
      */
 

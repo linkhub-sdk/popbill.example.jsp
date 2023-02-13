@@ -11,7 +11,7 @@
 
 <%
     /*
-     * 예금주조회 시 과금되는 포인트 단가를 확인합니다.
+     * 예금주 조회시 과금되는 포인트 단가를 확인합니다.
      * - https://developers.popbill.com/reference/accountcheck/java/api/point#GetUnitCost
      */
 
