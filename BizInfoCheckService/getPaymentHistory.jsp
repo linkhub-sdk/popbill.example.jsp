@@ -13,7 +13,7 @@
 
 <%
     /*
-     * 포인트 결제내역을 확인합니다.
+     * 연동회원의 포인트 결제내역을 확인합니다.
      * - https://developers.popbill.com/reference/bizinfocheck/java/api/point#GetPaymentHistory
      */
 

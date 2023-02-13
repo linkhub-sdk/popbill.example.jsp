@@ -11,7 +11,7 @@
 
 <%
     /*
-     * 기업정보조회 시 과금되는 포인트 단가를 확인합니다.
+     * 기업정보 조회시 과금되는 포인트 단가를 확인합니다.
      * - https://developers.popbill.com/reference/bizinfocheck/java/api/point#GetUnitCost
      */
 
