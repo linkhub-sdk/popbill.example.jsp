@@ -14,7 +14,7 @@
 
 <%
     /*
-     * 무통장 입금을 신청합니다.
+     * 연동회원 포인트 충전을 위해 무통장입금을 신청합니다.
      * - https://developers.popbill.com/reference/taxinvoice/java/api/point#PaymentRequest
      */
 

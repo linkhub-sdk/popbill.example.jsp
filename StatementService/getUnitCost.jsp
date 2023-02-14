@@ -11,7 +11,7 @@
 
 <%
     /*
-     * 전자명세서 발행 시 과금되는 포인트 단가를 확인합니다.
+     * 전자명세서 발행시 과금되는 포인트 단가를 확인합니다.
      * - https://developers.popbill.com/reference/statement/java/api/point#GetUnitCost
      */
 

@@ -14,8 +14,8 @@
 
 <%
     /*
-     * 무통장 입금을 신청합니다.
-     * - https://developers.popbill.com/reference/closedown/java/api/point#PaymentRequest
+     * 연동회원 포인트 충전을 위해 무통장입금을 신청합니다.
+     * https://developers.popbill.com/reference/closedown/java/api/point#PaymentRequest
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
