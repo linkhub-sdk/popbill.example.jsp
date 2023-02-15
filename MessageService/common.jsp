@@ -30,7 +30,7 @@
 <jsp:setProperty name="messageService" property="secretKey" value="SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="/>
 
 <%-- 연동환경 설정값, 개발용(true), 상업용(false) --%>
-<jsp:setProperty name="messageService" property="test" value="true"/>
+<jsp:setProperty name="messageService" property="test" value="false"/>
 
 <%-- 인증토큰 발급 IP 제한 On/Off, true-제한기능 사용(기본값-권장),  false-제한기능 미사용 --%>
 <jsp:setProperty name="messageService" property="IPRestrictOnOff" value="true"/>
