@@ -25,7 +25,7 @@
     String testCorpNum = "1234567890";
 
     // 세금계산서 문서번호
-    String mgtKey = "20220218-JSP002";
+    String mgtKey = "20230102-JSP002";
 
     // 세금계산서 유형 (SELL , BUY , TRUSTEE 중 택 1)
     // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
@@ -39,7 +39,7 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20220218");
+    taxinvoice.setWriteDate("20230102");
 
     // 발행유형, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("정발행");
@@ -229,7 +229,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1);   // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20220218"); // 거래일자
+    detail.setPurchaseDT("20230102"); // 거래일자
     detail.setItemName("품목명");     // 품목명
     detail.setSpec("규격");           // 규격
     detail.setQty("1");               // 수량
@@ -243,7 +243,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20220218");
+    detail.setPurchaseDT("20230102");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");

@@ -23,10 +23,10 @@
     QueryType CashbillType = QueryType.SELL;
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20220201";
+    String SDate = "20230102";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20220228";
+    String EDate = "20230131";
 
     String jobID = null;
 

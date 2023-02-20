@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 카카오톡 예약전송 접수시 팝빌로부터 반환 받은 접수번호
-    String receiptNum = "20230111_ats_23";
+    String receiptNum = "20230102_ats_23";
 
     // 카카오톡 예약전송 접수시 팝빌로 요청한 수신번호
     String receiveNum = "";

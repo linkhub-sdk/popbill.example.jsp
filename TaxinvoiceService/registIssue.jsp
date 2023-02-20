@@ -45,7 +45,7 @@
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20221011");
+    taxinvoice.setWriteDate("20230102");
 
     // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -223,7 +223,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20220218");   // 거래일자
+    detail.setPurchaseDT("20230102");   // 거래일자
     detail.setItemName("품목명1");      // 품목명
     detail.setSpec("규격");             // 규격
     detail.setQty("1");                 // 수량
@@ -237,7 +237,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20220218");
+    detail.setPurchaseDT("20230102");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");

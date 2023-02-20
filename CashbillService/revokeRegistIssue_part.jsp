@@ -24,13 +24,13 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20220217-JSP006";
+    String mgtKey = "20230102-JSP006";
 
     // 원본 현금영수증 국세청 승인번호 - 상태확인(getInfo API) 함수를 통해 confirmNum 값 기재
     String orgConfirmNum = "TB0000387";
 
     // 원본 현금영수증 거래일자 - 상태확인(getInfo API) 함수를 통해 tradeDate 값 기재
-    String orgTradeDate = "20220217";
+    String orgTradeDate = "20230102";
 
     // 안내 문자 전송여부 , true / false 중 택 1
     // └ true = 전송 , false = 미전송

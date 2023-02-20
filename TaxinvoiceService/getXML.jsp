@@ -27,7 +27,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20220916-JHP0201";
+    String mgtKey = "20230102-JHP0201";
 
     TaxinvoiceXML taxinvoiceXML = null;
 

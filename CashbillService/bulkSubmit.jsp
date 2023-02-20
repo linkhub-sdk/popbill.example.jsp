@@ -24,7 +24,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String submitID = "20221108-JSP-BULK";
+    String submitID = "20230102-JSP-BULK";
 
     // 최대 100건
     List<Cashbill> cashbillList = new ArrayList<Cashbill>();

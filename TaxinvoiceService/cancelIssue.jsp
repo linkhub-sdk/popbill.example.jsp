@@ -25,7 +25,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20220218-JSP001";
+    String mgtKey = "20230102-JSP001";
 
     // 메모
     String memo = "발행취소 메모";

@@ -23,13 +23,13 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호
-    String mgtKey = "20220218-JSP001";
+    String mgtKey = "20230102-JSP001";
 
     // 첨부해제할 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int subItemCode = 121;
 
     // 첨부해제할 전자명세서 문서번호
-    String subMgtKey = "20220218-JSP002";
+    String subMgtKey = "20230102-JSP002";
 
     Response CheckResponse = null;
 

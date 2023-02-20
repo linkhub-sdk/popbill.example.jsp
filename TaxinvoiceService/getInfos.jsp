@@ -27,7 +27,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호 배열 (최대 1000건)
-    String[] MgtKeyList = new String[] {"20220218-JSP001","20220218-JSP002"};
+    String[] MgtKeyList = new String[] {"20230102-JSP001","20230102-JSP002"};
 
     TaxinvoiceInfo[] taxinvoiceInfos = null;
 

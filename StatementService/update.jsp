@@ -28,7 +28,7 @@
     int itemCode = 121;
 
     // 수정할 전자명세서 문서번호
-    String mgtKey = "20220218-JSP002";
+    String mgtKey = "20230102-JSP002";
 
 
     /***************************************************************************
@@ -38,7 +38,7 @@
     Statement statement = new Statement();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    statement.setWriteDate("20220218");
+    statement.setWriteDate("20230102");
 
     // {영수, 청구, 없음} 중 기재
     statement.setPurposeType("영수");
@@ -170,7 +170,7 @@
 
     detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
     detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20220218");   // 거래일자
+    detail.setPurchaseDT("20230102");   // 거래일자
     detail.setQty("1");                 // 수량
     detail.setSupplyCost("200000");     // 공급가액
     detail.setTax("20000");             // 세액
@@ -181,7 +181,7 @@
 
     detail.setSerialNum((short) 2);     // 일련번호 1부터 순차기재
     detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20220218");   // 거래일자
+    detail.setPurchaseDT("20230102");   // 거래일자
     detail.setQty("1");                 // 수량
     detail.setSupplyCost("200000");     // 공급가액
     detail.setTax("20000");             // 세액

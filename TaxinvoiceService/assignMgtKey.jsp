@@ -27,7 +27,7 @@
     String itemKey = "022021718272000001";
 
     // 할당할 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20220218-JSP007";
+    String mgtKey = "20230102-JSP007";
 
     Response CheckResponse = null;
 

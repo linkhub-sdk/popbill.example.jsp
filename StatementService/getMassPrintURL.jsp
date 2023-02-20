@@ -23,7 +23,7 @@
     int itemCode = 121;
 
     // 문서번호 배열, 최대 100건
-    String[] mgtKeyList = new String[] {"20220218-JSP001", "20220218-JSP002"};
+    String[] mgtKeyList = new String[] {"20230102-JSP001", "20230102-JSP002"};
 
     // 팝빌회원 아이디
     String testUserID = "testkorea";
