@@ -16,8 +16,8 @@
     * - 팝빌 사이트 [전자명세서] > [환경설정] > [전자명세서 관리] 메뉴의 발행시 자동승인 옵션 설정을 통해
     *   전자명세서를 "발행완료" 상태가 아닌 "승인대기" 상태로 발행 처리 할 수 있습니다.
     * - 전자명세서 발행 함수 호출시 수신자에게 발행 안내 메일이 발송됩니다.
-     * - https://developers.popbill.com/reference/statement/java/api/issue#Issue
-     */
+    * - https://developers.popbill.com/reference/statement/java/api/issue#Issue
+    */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";

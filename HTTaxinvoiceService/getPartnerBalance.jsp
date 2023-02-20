@@ -12,7 +12,7 @@
 <%
     /*
      * 파트너의 잔여포인트를 확인합니다.
-     * 과금방식이 연동과금인 경우 연동회원 잔여포인트 확인(GetBalance API) 함수를 이용하시기 바랍니다.
+     * - 과금방식이 연동과금인 경우 연동회원 잔여포인트 확인(GetBalance API) 함수를 이용하시기 바랍니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/point#GetPartnerBalance
      */
 

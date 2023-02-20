@@ -3,7 +3,7 @@
 * 팝빌 홈택스 현금영수증 연계 API Java SDK JSP Example
 *
 * - JSP SDK 연동환경 설정방법 안내 : https://developers.popbill.com/guide/htcashbill/java/getting-started/tutorial?fwn=jsp
-* - 업데이트 일자 : 2023-02-14
+* - 업데이트 일자 : 2023-02-20
 * - 연동 기술지원 연락처 : 1600-9854
 * - 연동 기술지원 이메일 : code@linkhubcorp.com
 *

@@ -15,8 +15,8 @@
     /*
     * "발행완료" 상태의 전자세금계산서를 국세청에 즉시 전송하며, 함수 호출 후 최대 30분 이내에 전송 처리가 완료됩니다.
     * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 다음 영업일 오후 3시에 팝빌 시스템에서 일괄적으로 국세청으로 전송합니다.
-     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#SendToNTS
-     */
+    * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#SendToNTS
+    */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
