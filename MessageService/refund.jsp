@@ -44,7 +44,7 @@
     refundForm.setReason("환불사유");
 
     Response checkResponse = new Response();
-    
+
     try {
 
         checkResponse = messageService.refund(testCorpNum, refundForm);
@@ -64,6 +64,7 @@
                 <ul>
                     <li>응답코드 (Response.code) : <%=checkResponse.getCode()%></li>
                     <li>응답메시지 (Response.message) : <%=checkResponse.getMessage()%></li>
+                    <li>응답메시지 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
                 </ul>
             </fieldset>
         </div>

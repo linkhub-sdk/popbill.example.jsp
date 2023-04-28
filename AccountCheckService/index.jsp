@@ -32,7 +32,9 @@
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/refund.jsp">Refund</a> - 연동회원 포인트 환불신청</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/getRefundHistory.jsp">GetRefundHistory</a> - 연동회원 포인트 환불내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-            <li><a href="${pageContext.request.contextPath}/AccountCheckService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 팝업 URL</li> 
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/getRefundInfo.jsp">GetRefundInfo</a> - 환불 신청 상태 조회</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/getRefundableBalance.jsp">GetRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -48,6 +50,7 @@
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
         </ul>
     </fieldset>
 </div>

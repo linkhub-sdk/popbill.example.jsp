@@ -62,7 +62,6 @@
                         <li>totalAmount (합계금액) : <%= cashbillInfo.getTotalAmount()%></li>
                         <li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
                         <li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
-                        <li>stateMemo (상태메모) : <%= cashbillInfo.getStateMemo()%></li>
                         <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
                         <li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
                         <li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
@@ -76,6 +75,7 @@
                         <li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
                         <li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
                         <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
+                        <li>interOPYN (연동문서 여부) : <%= cashbillInfo.interOPYN()%></li>
                     </ul>
                 </fieldset>
                 <%

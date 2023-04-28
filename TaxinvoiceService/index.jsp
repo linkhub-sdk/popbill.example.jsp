@@ -103,6 +103,8 @@
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundHistory.jsp">GetRefundHistory</a> - 연동회원 포인트 환불내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">GetPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundInfo.jsp">GetRefundInfo</a> - 환불 신청 상태 조회</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundableBalance.jsp">getRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -117,6 +119,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/listContact.jsp">ListContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/updateContact.jsp">UpdateContact</a> - 담당자 정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
         </ul>
     </fieldset>
 </div>

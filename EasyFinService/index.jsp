@@ -56,6 +56,8 @@
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getRefundHistory.jsp">GetRefundHistory</a> - 연동회원 포인트 환불내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getRefundInfo.jsp">GetRefundInfo</a> - 환불 신청 상태 조회</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/getRefundableBalance.jsp">GetRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -71,6 +73,7 @@
             <li><a href="${pageContext.request.contextPath}/EasyFinService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/EasyFinService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/EasyFinService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
         </ul>
     </fieldset>
 </div>

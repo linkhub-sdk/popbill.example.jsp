@@ -20,8 +20,8 @@
     String testCorpNum = "1234567890";
 
     // 접근 메뉴 ( "TBOX" , "SBOX" , "PBOX" , "WRITE" 중 택 1)
-    // TBOX : 임시문서함 , SBOX : 매출문서함 , PBOX : 매입문서함 , 
-    // SWBOX : 매출발행 대기함 , PWBOX : 매입발행 대기함 , WRITE : 매출작성
+    // TBOX : 임시문서함 , SBOX : 매출문서함 , PBOX : 매입문서함 ,
+    // SWBOX : 매출발행 대기함 , PWBOX : 매입발행 대기함 , WRITE : 정발행 작성
     String TOGO = "TBOX";
 
     // 팝빌회원 아이디

@@ -78,6 +78,8 @@
             <li><a href="${pageContext.request.contextPath}/StatementService/getRefundHistory.jsp">GetRefundHistory</a> - 환불 신청내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getRefundInfo.jsp">getRefundInfo</a> - 환불 신청 상태 조회</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getRefundableBalance.jsp">getRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -92,6 +94,7 @@
             <li><a href="${pageContext.request.contextPath}/StatementService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/quitMember.jsp">quitMember</a> - 팝빌 회원 탈퇴</li>
         </ul>
     </fieldset>
 </div>
