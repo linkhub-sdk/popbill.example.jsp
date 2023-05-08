@@ -27,10 +27,10 @@
 
     // 전자명세서 문서번호
     String mgtKey = "20230102-JSP001";
-    
+
     // 전자명세서 상태 이력을 관리하기 위한 메모
     String memo = "상태메모";
-    
+
     // 전자명세서 발행 안내메일 제목
     // - 미입력시 팝빌에서 지정한 이메일 제목으로 전송
     String emailSubject = "메일제목";
@@ -54,8 +54,8 @@
             <fieldset class="fieldset1">
                 <legend>전자명세서 발행</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

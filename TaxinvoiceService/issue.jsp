@@ -42,7 +42,7 @@
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean forceIssue = false;
-    
+
     // 팝빌회원 아이디
     String testUserID = "testkorea";
 
@@ -65,8 +65,8 @@
         <fieldset class="fieldset1">
             <legend>세금계산서 발행</legend>
             <ul>
-                <li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
-                <li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
+                <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 <li>국세청 승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
             </ul>
         </fieldset>

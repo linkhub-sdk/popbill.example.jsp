@@ -48,8 +48,8 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 팩스 전송</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

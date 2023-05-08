@@ -21,7 +21,7 @@
 
     // 예약문자 전송요청시 팝빌로부터 반환 받은 접수번호
     String receiptNum = "";
-    
+
     // 예약문자 전송요청 시 파트너가 요청한 수신번호
     String receiveNum = "";
 
@@ -44,8 +44,8 @@
             <fieldset class="fieldset1">
                 <legend>예약문자전송 취소</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

@@ -24,7 +24,7 @@
 
     // 카카오톡 예약전송 접수시 팝빌로 요청한 수신번호
     String receiveNum = "";
-    
+
     Response CheckResponse = null;
 
     try {
@@ -44,8 +44,8 @@
             <fieldset class="fieldset1">
                 <legend>예약전송 일부 취소 (접수번호)</legend>
                 <ul>
-                    <li>Response.code : <%= CheckResponse.getCode() %></li>
-                    <li>Response.message : <%= CheckResponse.getMessage() %></li>
+                    <li>응답 코드(code) : <%= CheckResponse.getCode() %></li>
+                    <li>응답메시지 (message) : <%= CheckResponse.getMessage() %></li>
                 </ul>
             </fieldset>
         </div>

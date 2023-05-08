@@ -43,7 +43,7 @@
     paymentForm.setSettleCost("11000");
 
     PaymentResponse paymentResponse = new PaymentResponse();
-    
+
     try {
 
         paymentResponse = cashbillService.paymentRequest(testCorpNum, paymentForm);
@@ -61,8 +61,8 @@
             <fieldset class="fieldset1">
                 <legend>무통장 입금신청</legend>
                 <ul>
-                    <li>응답코드 (Response.code) : <%=paymentResponse.getCode()%></li>
-                    <li>응답메시지 (Response.message) : <%=paymentResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=paymentResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=paymentResponse.getMessage()%></li>
                     <li>정산코드 (Response.settleCode) : <%=paymentResponse.getSettleCode()%></li>
                 </ul>
             </fieldset>

@@ -306,8 +306,8 @@
             <fieldset class="fieldset1">
                 <legend>세금계산서 즉시발행</legend>
                 <ul>
-                    <li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
-                    <li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                     <li>국세청 승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
                 </ul>
             </fieldset>

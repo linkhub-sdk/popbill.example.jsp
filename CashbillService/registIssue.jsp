@@ -109,7 +109,7 @@
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능
     cashbill.setTradeDT("20230113180000");
-    
+
     CBIssueResponse CheckResponse = null;
 
     try {
@@ -129,8 +129,8 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 즉시발행</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                     <li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
                     <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
                 </ul>

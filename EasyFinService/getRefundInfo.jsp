@@ -7,6 +7,7 @@
     </head>
 
 <%@ include file="common.jsp" %>
+<%@page import="com.popbill.api.RefundHistory"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
 <%
@@ -20,11 +21,11 @@
 
     String refundCode = "023040000017";
 
-    RefundResponse response;
+    RefundHistory refundHistory = new RefundHistory();
 
     try {
 
-        response = easyFinBankService.getRefundInfo(testCorpNum, refundCode);
+        refundHistory = easyFinBankService.getRefundInfo(testCorpNum, refundCode);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -39,13 +40,13 @@
             <fieldset class="fieldset1">
                 <legend>RefundInfo (환불 신청 상태)</legend>
                 <ul>
-                    <li>reqDT (신청일시) : <%=response.reqDT%></li>
-                    <li>requestPoint (환불 신청포인트) : <%=response.requestPoint%></li>
-                    <li>accountBank (환불계좌 은행명) : <%=response.accountBank%></li>
-                    <li>accountNum (환불계좌번호) : <%=response.accountNum%></li>
-                    <li>accountName (환불계좌 예금주명) : <%=response.accountName%></li>
-                    <li>state (상태) : <%=response.state%></li>
-                    <li>reason (환불사유) : <%=response.reason%></li>
+                    <li>reqDT (신청일시) : <%=refundHistory.getReqDT()%></li>
+                    <li>requestPoint (환불 신청포인트) : <%=refundHistory.getRequestPoint()%></li>
+                    <li>accountBank (환불계좌 은행명) : <%=refundHistory.getAccountBank()%></li>
+                    <li>accountNum (환불계좌번호) : <%=refundHistory.getAccountNum()%></li>
+                    <li>accountName (환불계좌 예금주명) : <%=refundHistory.getAccountName()%></li>
+                    <li>state (상태) : <%=refundHistory.getState()%></li>
+                    <li>reason (환불사유) : <%=refundHistory.getReason()%></li>
                 </ul>
             </fieldset>
         </div>

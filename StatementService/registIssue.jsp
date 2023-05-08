@@ -217,8 +217,8 @@
             <fieldset class="fieldset1">
                 <legend>전자명세서 즉시발행</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                     <li>Response.invoiceNum : <%=CheckResponse.getInvoiceNum()%></li>
                 </ul>
             </fieldset>

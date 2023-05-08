@@ -21,7 +21,7 @@
 
     // 카카오톡 예약전송 접수시 파트너가 할당한 전송요청 번호
     String requestNum = "20230102_ats_23";
-  		
+
     // 카카오톡 예약전송 접수시 팝빌로 요청한 수신번호
     String receiveNum = "01022223333";
 
@@ -44,8 +44,8 @@
             <fieldset class="fieldset1">
                 <legend>예약전송 일부 취소 (전송요청번호)</legend>
                 <ul>
-                    <li>Response.code : <%=CheckResponse.getCode()%></li>
-                    <li>Response.message : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

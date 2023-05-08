@@ -134,8 +134,8 @@
             <fieldset class="fieldset1">
                 <legend>현금영수증 초대량 발행 접수</legend>
                 <ul>
-                    <li>응답코드 (Response.code) : <%=CheckResponse.getCode()%></li>
-                    <li>응답메시지 (Response.message) : <%=CheckResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                     <li>접수아이디 (Response.receiptID) : <%=CheckResponse.getReceiptID()%></li>
                 </ul>
             </fieldset>

@@ -29,7 +29,7 @@
     String AccountNumber = "";
 
     Response saveResponse = null;
-    
+
     try {
 
         saveResponse = easyFinBankService.revokeCloseBankAccount(testCorpNum, BankCode, AccountNumber);
@@ -47,8 +47,8 @@
             <fieldset class="fieldset1">
                 <legend>정액제 해지요청 취소</legend>
                 <ul>
-                    <li>Response.code : <%=saveResponse.getCode()%></li>
-                    <li>Response.message : <%=saveResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=saveResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

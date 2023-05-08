@@ -45,8 +45,8 @@
             <fieldset class="fieldset1">
                 <legend>계좌 거래내역 메모저장</legend>
                 <ul>
-                    <li>Response.code : <%=saveResponse.getCode()%></li>
-                    <li>Response.message : <%=saveResponse.getMessage()%></li>
+                    <li>응답 코드(code) : <%=saveResponse.getCode()%></li>
+                    <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>
