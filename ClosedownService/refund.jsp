@@ -64,8 +64,8 @@
                 <ul>
                     <li>응답 코드(code) : <%=checkResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=checkResponse.getMessage()%></li>
-                    <li>응답메시지 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
-                    <li>응답메시지 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
+                    <li>환불코드 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
+                    <li>환불코드 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
                 </ul>
             </fieldset>
         </div>
