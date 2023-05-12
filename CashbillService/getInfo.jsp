@@ -69,7 +69,7 @@
                         <li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
                         <li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
                         <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
-                        <li>interOPYN (연동문서 여부) : <%= cashbillInfo.interOPYN()%></li>
+                        <li>interOPYN (연동문서 여부) : <%= cashbillInfo.isInterOPYN()%></li>
                     </ul>
                 </fieldset>
             </fieldset>
