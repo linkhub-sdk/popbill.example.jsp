@@ -13,19 +13,20 @@
 <%
     /*
      * 포인트 환불에 대한 상세정보 1건을 확인합니다.
-     * - https://developers.popbill.com/reference/accountcheck/java/api/point#GetRefundInfo
+     * - https://developers.popbill.com/reference/sms/java/api/point#GetRefundInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
+    // 환불코드
     String refundCode = "023040000017";
 
     RefundHistory refundHistory = new RefundHistory();
 
     try {
 
-        refundHistory = accountCheckService.getRefundInfo(testCorpNum, refundCode);
+        refundHistory = messageService.getRefundInfo(testCorpNum, refundCode);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

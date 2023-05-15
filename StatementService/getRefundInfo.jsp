@@ -19,6 +19,7 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
+    // 환불코드
     String refundCode = "023040000017";
 
     RefundHistory refundHistory = new RefundHistory();

@@ -7,7 +7,7 @@
     </head>
 
 <%@ include file="common.jsp" %>
-<%@page import="com.popbill.api.Response"%>
+<%@page import="com.popbill.api.RefundResponse"%>
 <%@page import="com.popbill.api.RefundForm"%>
 <%@page import="com.popbill.api.PopbillException"%>
 
@@ -43,7 +43,7 @@
     // 환불사유
     refundForm.setReason("환불사유");
 
-    Response checkResponse = new Response();
+    RefundResponse checkResponse = new RefundResponse();
 
     try {
 
@@ -64,8 +64,7 @@
                 <ul>
                     <li>응답 코드(code) : <%=checkResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=checkResponse.getMessage()%></li>
-                    <li>환불코드 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
-                    <li>환불코드 (Response.refundCode) : <%=checkResponse.getRefundCode()%></li>
+                    <li>환불코드 (refundCode) : <%=checkResponse.getRefundCode()%></li>
                 </ul>
             </fieldset>
         </div>
