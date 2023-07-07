@@ -51,7 +51,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>포인트사용내역 목록조회</legend>
+                <legend>포인트사용내역 확인</legend>
                 <ul>
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
@@ -71,7 +71,8 @@
                                 <ul>
                                     <li>itemCode (서비스 코드) : <%= useHistory.getItemCode()%></li>
                                     <li>txType (포인트 증감 유형) : <%= useHistory.getTxType()%></li>
-                                    <li>balance (증감 포인트) : <%= useHistory.getBalance()%></li>
+                                    <li>txType (증감 포인트) : <%= useHistory.getBalance()%></li>
+                                    <li>balance (잔여포인트) : <%= useHistory.getBalance()%></li>
                                     <li>txDT (포인트 증감 일시) : <%= useHistory.getTxDT()%></li>
                                     <li>userID (담당자 아이디) : <%= useHistory.getUserID()%></li>
                                     <li>userName (담당자명) : <%= useHistory.getUserName()%></li>
