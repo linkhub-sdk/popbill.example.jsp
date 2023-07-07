@@ -236,9 +236,21 @@
     detail.setRemark("품목비고2"); // 비고
 
     taxinvoice.getDetailList().add(detail);
+
+    // 즉시발행 메모
+    String Memo = "수정세금계산서 발행 메모";
+
+    // 지연발행 강제여부  (true / false 중 택 1)
+    // └ true = 가능 , false = 불가능
+    // - 미입력 시 기본값 false 처리
+    // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
+    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
+    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
+    Boolean ForceIssue = false;
+
     IssueResponse issueResponse = null;
     try{
-        issueResponse = taxinvoiceService.registIssue(CorpNum, taxinvoice, false);
+        issueResponse = taxinvoiceService.registIssue(CorpNum, taxinvoice, Memo, ForceIssue);
     }catch(PopbillException pe){
         throw pe;
     }
