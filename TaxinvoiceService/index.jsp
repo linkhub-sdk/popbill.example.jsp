@@ -28,6 +28,19 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
+        <legend>수정 세금계산서 발행</legend>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice01minus">RegistIssue</a>  - 기재사항 착오정정(취소분)</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice01plus">RegistIssue</a>  - 기재사항 착오정정(수정분)</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice02">RegistIssue</a> - 공급가액 변동</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice03">RegistIssue</a> - 환입</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice04">RegistIssue</a> - 계약의 해제</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice05minus">RegistIssue</a> - 내국신용장 사후개설(취소분)</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice05plus">RegistIssue</a> - 내국신용장 사후개설(수정분)</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/modifyTaxinvoice06">RegistIssue</a> - 착오에 의한 이중발급</li>
+        </ul>
+    </fieldset>
+    <fieldset class="fieldset1">
         <legend>국세청 즉시 전송</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/sendToNTS.jsp">SendToNTS</a> - 국세청 즉시전송</li>
