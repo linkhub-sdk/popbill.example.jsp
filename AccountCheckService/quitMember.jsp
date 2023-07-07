@@ -38,7 +38,7 @@
 %>
     <body>
         <div id="content">
-            <p class="heading1">RefundableBalance</p>
+            <p class="heading1">QuitMember</p>
             <br/>
             <fieldset class="fieldset1">
                 <legend>팝빌 회원 탈퇴</legend>
