@@ -42,7 +42,7 @@
             <legend>입금신청 정보</legend>
             <ul>
                 <li>productType (결제 내용) : <%=paymentHistory.getProductType()%></li>
-                <li>productName (정액제 상품명) : <%=paymentHistory.getProductName()%></li>
+                <li>productName (결제 상품명) : <%=paymentHistory.getProductName()%></li>
                 <li>settleType (결제유형) : <%=paymentHistory.getSettleType()%></li>
                 <li>settlerName (담당자명) : <%=paymentHistory.getSettlerName()%></li>
                 <li>settlerEmail (담당자메일) : <%=paymentHistory.getSettlerEmail()%></li>
