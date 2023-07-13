@@ -13,19 +13,39 @@
 <%@page import="com.popbill.api.taxinvoice.Taxinvoice"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceDetail"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
+
 <%
-/**
- * 기재사항 착오정정 수정세금계산서를 발행합니다. - '필요적 기재사항'이나 '임의적 기재사항' 등을 착오 또는 착오 외의 사유로 잘못 작성하거나, 세율을 잘못
- * 적용하여 신고한 경우 이용하는 수정사유 입니다. - 기재사항 착오정정 수정세금계산서는 총 2장(취소분/수정분) 발급해야 합니다. -
- * https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice
- */
+
+    /**
+     * 기재사항 착오정정 수정세금계산서를 발행합니다.
+     * - '필요적 기재사항'이나 '임의적 기재사항' 등을 착오 또는 착오 외의 사유로 잘못 작성하거나, 세율을 잘못 적용하여 신고한 경우 이용하는 수정사유 입니다.
+     * - 기재사항 착오정정 수정세금계산서는 총 2장(취소분/수정분) 발급해야 합니다.
+     * - https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice
+     */
+
+    /**
+     **************** 기재사항 착오정정 수정세금계산서 예시 (취소분) ****************
+     * 작성일자 1월 2일 공급가액 200,000원으로 매출 세금계산서를 발급해야 하는데, 공급가액 100,000원으로 잘못 발급 한 경우
+     * 원본 전자세금계산서와 동일한 내용의 부(-) 세금계산서 발행
+     */
+
+    String CorpNum = "1234567890";
 
     // 원본 세금계산서를 취소할 세금계산서 객체
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
     // 원본 세금계산서 작성 일자 기재
-    taxinvoice.setWriteDate("20230701");
+    taxinvoice.setWriteDate("20230102");
+
+    // 공급가액 합계
+    taxinvoice.setSupplyCostTotal("-100000");
+
+    // 세액 합계
+    taxinvoice.setTaxTotal("-10000");
+
+    // 합계금액, 공급가액 + 세액
+    taxinvoice.setTotalAmount("-110000");
 
     // 과금방향, [정과금, 역과금] 중 선택기재
     // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -145,14 +165,6 @@
      * 세금계산서 기재정보
      *********************************************************************/
 
-    // 공급가액 합계
-    taxinvoice.setSupplyCostTotal("-100000");
-
-    // 세액 합계
-    taxinvoice.setTaxTotal("-10000");
-
-    // 합계금액, 공급가액 + 세액
-    taxinvoice.setTotalAmount("-110000");
 
     // 일련번호
     taxinvoice.setSerialNum("123");
@@ -262,15 +274,22 @@
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
-
     IssueResponse issueResponse = null;
-
     try {
-        issueResponse = taxinvoiceService.registIssue(CorpNum, taxinvoice, Memo, ForceIssue);
+
+        // 취소분 세금계산서 발행
+        issueResponse= taxinvoiceService.registIssue(CorpNum,
+                taxinvoice, Memo, ForceIssue);
+
+
     } catch (PopbillException pe) {
         throw pe;
     }
+
+
+
 %>
+
 <div id="content">
     <p class="heading1">IssueResponse</p>
     <br/>

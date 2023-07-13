@@ -14,17 +14,44 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceDetail"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
 <%
-/**
- * 내국신용장 사후개설에 의한 수정세금계산서 발행
- * - 재화 또는 서비스/용역을 공급한 시기가 속하는 과세기간 종료(1/1~6/30 또는 7/1~12/31) 다음달(7월 또는 1월) 25일 이내에 내국신용장이 개설되었거나 구매확인서가 발급된 경우 이용하는 수정사유 입니다.
- * - 취소분 : 내국신용장이 개설된 품목에 대한 부(-) 세금계산서 발행
- * - 수정분 : 내국신용장이 개설된 품목에 대한 정(+) 영세율 세금계산서 발행
- * - 수정세금계산서 가이드: [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
- */
+
+    /**
+     * 내국신용장 사후개설에 의한 수정세금계산서 발행
+     * - 재화 또는 서비스/용역을 공급한 시기가 속하는 과세기간 종료(1/1~6/30 또는 7/1~12/31) 다음달(7월 또는 1월) 25일 이내에 내국신용장이 개설되었거나 구매확인서가 발급된 경우 이용하는 수정사유 입니다.
+     * - 취소분 : 내국신용장이 개설된 품목에 대한 부(-) 세금계산서 발행
+     * - 수정분 : 내국신용장이 개설된 품목에 대한 정(+) 영세율 세금계산서 발행
+     * - 수정세금계산서 가이드: [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+     */
+
+    /**
+     **************** 내국신용장 사후개설에 의한 수정세금계산서 예시 (취소분) ****************
+     * 3월 13일 공급가액 3,000,000원의 전자세금계산서를 발급한 후, 4월 12일에 일부 품목인 공급가액 1,000,000원에 대해 내국신용장이 개설된 경우
+     * 내국 신용장 사후개설된 1,000,000원에 대한 3월 13일 작성일자의 영세율 세금계산서 작성
+     */
+
+    String CorpNum = "1234567890";
+
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20230707");
+    // 원본 세금계산서의 작성일자 기재
+    taxinvoice.setWriteDate("20230313");
+
+    // 과세형태, [과세, 영세, 면세] 중 기재
+    // 부 세금계산서의 경우 과세
+    taxinvoice.setTaxType("과세");
+
+    // 공급가액 합계
+    taxinvoice.setSupplyCostTotal("-1000000");
+
+    // 세액 합계
+    taxinvoice.setTaxTotal("-100000");
+
+    // 합계금액, 공급가액 + 세액
+    taxinvoice.setTotalAmount("-1100000");
+
+    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    taxinvoice.setModifyCode((short) 5);
 
     // 과금방향, [정과금, 역과금] 중 선택기재
     // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -37,8 +64,6 @@
     // [영수, 청구, 없음] 중 기재
     taxinvoice.setPurposeType("영수");
 
-    // 과세형태, [과세, 영세, 면세] 중 기재
-    taxinvoice.setTaxType("과세");
 
     /**********************************************************************
      * 공급자 정보
@@ -144,15 +169,6 @@
      * 세금계산서 기재정보
      *********************************************************************/
 
-    // 공급가액 합계
-    taxinvoice.setSupplyCostTotal("-100000");
-
-    // 세액 합계
-    taxinvoice.setTaxTotal("-10000");
-
-    // 합계금액, 공급가액 + 세액
-    taxinvoice.setTotalAmount("-110000");
-
     // 일련번호
     taxinvoice.setSerialNum("123");
 
@@ -169,7 +185,6 @@
     taxinvoice.setCredit("");
 
     // 비고
-    // {invoiceeType}이 "외국인" 이면 remark1 필수
     // - 외국인 등록번호 또는 여권번호 입력
     taxinvoice.setRemark1("비고1");
     taxinvoice.setRemark2("비고2");
@@ -195,8 +210,7 @@
      * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
      * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      *********************************************************************/
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-    taxinvoice.setModifyCode((short)5);
+
 
     // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
     taxinvoice.setOrgNTSConfirmNum(null);

@@ -14,15 +14,39 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceDetail"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
 <%
-/**
- * 기재사항 착오정정 수정세금계산서를 발행합니다. - '필요적 기재사항'이나 '임의적 기재사항' 등을 착오 또는 착오 외의 사유로 잘못 작성하거나, 세율을 잘못
- * 적용하여 신고한 경우 이용하는 수정사유 입니다. - 기재사항 착오정정 수정세금계산서는 총 2장(취소분/수정분) 발급해야 합니다. -
- * https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice
- */
+
+    /**
+     * 기재사항 착오정정 수정세금계산서를 발행합니다.
+     * - '필요적 기재사항'이나 '임의적 기재사항' 등을 착오 또는 착오 외의 사유로 잘못 작성하거나, 세율을 잘못 적용하여 신고한 경우 이용하는 수정사유 입니다
+     * - 기재사항 착오정정 수정세금계산서는 총 2장(취소분/수정분) 발급해야 합니다.
+     * - https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice
+     */
+
+    /**
+     **************** 기재사항 착오정정 수정세금계산서 예시 (수정분) ****************
+     * 작성일자 1월 2일 공급가액 200,000원으로 매출 세금계산서를 발급해야 하는데, 공급가액 100,000원으로 잘못 발급 한 경우
+     * 수정사항을 반영한 정(+) 세금계산서를 발행
+     */
+
+    String CorpNum = "1234567890";
+
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20230701");
+    // 원본 전자세금계산서 작성일자 또는 변경을 원하는 작성일자
+    taxinvoice.setWriteDate("20230102");
+
+    // 공급가액 합계
+    taxinvoice.setSupplyCostTotal("200000");
+
+    // 세액 합계
+    taxinvoice.setTaxTotal("20000");
+
+    // 합계금액, 공급가액 + 세액
+    taxinvoice.setTotalAmount("220000");
+
+    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    taxinvoice.setModifyCode((short) 1);
 
     // 과금방향, [정과금, 역과금] 중 선택기재
     // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -142,14 +166,6 @@
      * 세금계산서 기재정보
      *********************************************************************/
 
-    // 공급가액 합계
-    taxinvoice.setSupplyCostTotal("100000");
-
-    // 세액 합계
-    taxinvoice.setTaxTotal("10000");
-
-    // 합계금액, 공급가액 + 세액
-    taxinvoice.setTotalAmount("110000");
 
     // 일련번호
     taxinvoice.setSerialNum("123");
@@ -193,8 +209,6 @@
      * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
      * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      *********************************************************************/
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-    taxinvoice.setModifyCode((short)1);
 
     // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
     taxinvoice.setOrgNTSConfirmNum(null);
@@ -247,12 +261,11 @@
 
     IssueResponse issueResponse = null;
 
-    try{
+    try {
         issueResponse = taxinvoiceService.registIssue(CorpNum, taxinvoice, Memo, ForceIssue);
     } catch (PopbillException pe) {
         throw pe;
     }
-
 %>
 <div id="content">
     <p class="heading1">IssueResponse</p>

@@ -14,19 +14,41 @@
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceDetail"%>
 <%@page import="com.popbill.api.taxinvoice.TaxinvoiceAddContact"%>
 <%
-/**
- * 공급가액 변동에 의한 수정세금계산서 발행
- * - 일부 금액의 계약의 해지 등을 포함하여 공급가액의 증가 또는 감소가 발생한 경우 이용하는 수정사유 입니다.
- * - 증가 : 원본 전자세금계산서 공급가액에서 증가한 금액만큼만 수정분 정(+) 세금계산서 발행
- * - 감소 : 원본 전자세금계산서 공급가액에서 감소한 금액만큼만 수정분 부(-) 세금계산서 발행
- * - ※ 원본 전자세금계산서 공급가액 + 수정세금계산서 공급가액(+/-) = 최종 공급가액
- * - 수정세금계산서 가이드: [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
- */
+    /**
+     * 공급가액 변동에 의한 수정세금계산서 발행
+     * - 일부 금액의 계약의 해지 등을 포함하여 공급가액의 증가 또는 감소가 발생한 경우 이용하는 수정사유 입니다.
+     * - 증가 : 원본 전자세금계산서 공급가액에서 증가한 금액만큼만 수정분 정(+) 세금계산서 발행
+     * - 감소 : 원본 전자세금계산서 공급가액에서 감소한 금액만큼만 수정분 부(-) 세금계산서 발행
+     * - ※ 원본 전자세금계산서 공급가액 + 수정세금계산서 공급가액(+/-) = 최종 공급가액
+     * - 수정세금계산서 가이드: [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+     */
+
+    /**
+     **************** 공급가액 변동에 의한 수정세금계산서 예시 ****************
+     * 작성일자 2월 7일 공급가액 30,000원으로 매출 세금계산서를 발급해야 하는데, 공급가액 50,000원으로 잘못  발급한 경우
+     * 원본 공급가액의 50,000원에서 차감되어야 하는 금액이 -20,000원의 수정세금계산서 발행
+     */
+
+    String CorpNum = "1234567890";
 
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20230707");
+    // 공급가액 변동이 발생한 날
+    taxinvoice.setWriteDate("20230207");
+
+    // 공급가액 합계
+    taxinvoice.setSupplyCostTotal("-20000");
+
+    // 세액 합계
+    taxinvoice.setTaxTotal("-2000");
+
+    // 합계금액, 공급가액 + 세액
+    taxinvoice.setTotalAmount("-22000");
+
+    // 비고
+    // 공급가액 변동으로 인한 수정 세금계산서 작성 시, 원본 세금계산서 작성일자 기재 필수
+    taxinvoice.setRemark1("20230207");
 
     // 과금방향, [정과금, 역과금] 중 선택기재
     // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -146,15 +168,6 @@
      * 세금계산서 기재정보
      *********************************************************************/
 
-    // 공급가액 합계
-    taxinvoice.setSupplyCostTotal("-100000");
-
-    // 세액 합계
-    taxinvoice.setTaxTotal("-10000");
-
-    // 합계금액, 공급가액 + 세액
-    taxinvoice.setTotalAmount("-110000");
-
     // 일련번호
     taxinvoice.setSerialNum("123");
 
@@ -171,10 +184,6 @@
     taxinvoice.setCredit("");
 
     // 비고
-    // {invoiceeType}이 "외국인" 이면 remark1 필수
-    // - 외국인 등록번호 또는 여권번호 입력
-    // 공급가액 변동으로 인한 수정 세금계산서 작성 시, 원본 세금계산서 작성일자 기재 필수
-    taxinvoice.setRemark1("20230701");
     taxinvoice.setRemark2("비고2");
     taxinvoice.setRemark3("비고3");
 
@@ -199,7 +208,7 @@
      * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      *********************************************************************/
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-    taxinvoice.setModifyCode((short)2);
+    taxinvoice.setModifyCode((short) 2);
 
     // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
     taxinvoice.setOrgNTSConfirmNum(null);
@@ -250,13 +259,15 @@
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
 
-    IssueResponse = null;
 
-    try{
+    IssueResponse issueResponse = null;
+    try {
         issueResponse = taxinvoiceService.registIssue(CorpNum, taxinvoice, Memo, ForceIssue);
-    }catch(PopbillException pe){
+    } catch (PopbillException pe) {
         throw pe;
     }
+
+
 %>
 <div id="content">
     <p class="heading1">IssueResponse</p>
