@@ -254,7 +254,7 @@
     detail.setRemark("품목비고2"); // 비고
 
     taxinvoice.getDetailList().add(detail);
-    율
+
     // 즉시발행 메모
     String Memo = "수정세금계산서 발행 메모";
 
