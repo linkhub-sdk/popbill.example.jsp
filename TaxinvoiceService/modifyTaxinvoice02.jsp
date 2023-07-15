@@ -33,6 +33,16 @@
 
     Taxinvoice taxinvoice = new Taxinvoice();
 
+    /**********************************************************************
+     * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
+     * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+     *********************************************************************/
+    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    taxinvoice.setModifyCode((short) 2);
+
+    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+    taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
+
     // 작성일자, 날짜형식(yyyyMMdd)
     // 공급가액 변동이 발생한 날
     taxinvoice.setWriteDate("20230207");
@@ -204,16 +214,6 @@
     taxinvoice.setBankBookYN(false);
 
     /**********************************************************************
-     * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
-     * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
-     *********************************************************************/
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-    taxinvoice.setModifyCode((short) 2);
-
-    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
-    taxinvoice.setOrgNTSConfirmNum(null);
-
-    /**********************************************************************
      * 상세항목(품목) 정보
      *********************************************************************/
 
@@ -247,6 +247,22 @@
     detail.setRemark("품목비고2"); // 비고
 
     taxinvoice.getDetailList().add(detail);
+
+
+    /**********************************************************************
+     * 추가담당자 정보 - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 - 담당자 정보를 추가하여 발행 안내메일을 다수에게 전송할 수
+     * 있습니다. (최대 5명)
+     *********************************************************************/
+
+    taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
+
+    TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
+
+    addContact.setSerialNum(1);
+    addContact.setContactName("추가 담당자 성명");
+    addContact.setEmail("test2@test.com");
+
+    taxinvoice.getAddContactList().add(addContact);
 
     // 즉시발행 메모
     String Memo = "수정세금계산서 발행 메모";

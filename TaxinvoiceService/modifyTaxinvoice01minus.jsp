@@ -34,6 +34,16 @@
     // 원본 세금계산서를 취소할 세금계산서 객체
     Taxinvoice taxinvoice = new Taxinvoice();
 
+    /**********************************************************************
+     * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
+     * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+     *********************************************************************/
+    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    taxinvoice.setModifyCode((short) 1);
+
+    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+    taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
+
     // 작성일자, 날짜형식(yyyyMMdd)
     // 원본 세금계산서 작성 일자 기재
     taxinvoice.setWriteDate("20230102");
@@ -205,16 +215,6 @@
     taxinvoice.setBankBookYN(false);
 
     /**********************************************************************
-     * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
-     * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
-     *********************************************************************/
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
-    taxinvoice.setModifyCode((short) 1);
-
-    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
-    taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
-
-    /**********************************************************************
      * 상세항목(품목) 정보
      *********************************************************************/
 
@@ -254,15 +254,15 @@
      * 있습니다. (최대 5명)
      *********************************************************************/
 
-    // taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
+    taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
 
-    // TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
+    TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
 
-    // addContact.setSerialNum(1);
-    // addContact.setContactName("추가 담당자 성명");
-    // addContact.setEmail("test2@test.com");
+    addContact.setSerialNum(1);
+    addContact.setContactName("추가 담당자 성명");
+    addContact.setEmail("test2@test.com");
 
-    // taxinvoice.getAddContactList().add(addContact);
+    taxinvoice.getAddContactList().add(addContact);
 
     // 즉시발행 메모
     String Memo = "수정세금계산서 발행 메모";
