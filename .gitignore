@@ -214,3 +214,4 @@ $RECYCLE.BIN/
 hs_err_pid*
 replay_pid*
 .DS_Store
+.idea
