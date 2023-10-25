@@ -28,7 +28,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String submitID = "20230102-JSP-BULK";
+    String submitID = "20231025-JSP-BULK-z";
 
     // 지연발행 강제여부  (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
@@ -40,13 +40,13 @@
     // 최대 100건
     List<Taxinvoice> bulkTx = new ArrayList<Taxinvoice>();
 
-    for(int i=0; i<10; i++) {
+    for(int i=0; i<2; i++) {
 
         // 세금계산서 정보 객체
         Taxinvoice taxinvoice = new Taxinvoice();
 
         // 작성일자, 날짜형식(yyyyMMdd)
-        taxinvoice.setWriteDate("20230102");
+        taxinvoice.setWriteDate("20231025");
 
         // 과금방향, {정과금, 역과금} 중 기재
         // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
@@ -273,7 +273,7 @@
 
         addContact.setSerialNum(1);
         addContact.setContactName("추가 담당자 성명");
-        addContact.setEmail("");
+        addContact.setEmail("test@test.com");
 
         taxinvoice.getAddContactList().add(addContact);
 
@@ -282,9 +282,12 @@
 
     BulkResponse CheckResponse = null;
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     try {
 
-        CheckResponse = taxinvoiceService.bulkSubmit(testCorpNum, submitID, bulkTx, ForceIssue);
+        CheckResponse = taxinvoiceService.bulkSubmitMLE(testCorpNum, submitID, bulkTx, ForceIssue, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

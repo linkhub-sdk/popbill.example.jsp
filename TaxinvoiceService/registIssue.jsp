@@ -26,7 +26,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234123567890";
+    String testCorpNum = "1234567890";
 
     /***************************************************************************
      *                               세금계산서 정보
@@ -45,7 +45,7 @@
     taxinvoice.setChargeDirection("정과금");
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20230102");
+    taxinvoice.setWriteDate("20231025");
 
     // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -64,7 +64,7 @@
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20220218-JSP002");
+    taxinvoice.setInvoicerMgtKey("20231025-JSP002");
 
     // 공급자 대표자성명
     taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
@@ -284,14 +284,18 @@
     //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean forceIssue = false;
 
+    // 세금계산서 발행 안내메일 제목
+    String EmailSubject = "";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     IssueResponse CheckResponse = null;
 
     try {
 
-        CheckResponse = taxinvoiceService.registIssue(testCorpNum, taxinvoice, writeSpecification,
-                memo, forceIssue, dealInvoiceKey);
+        CheckResponse = taxinvoiceService.registIssueMLE(testCorpNum, taxinvoice, writeSpecification,
+                memo, forceIssue, dealInvoiceKey, EmailSubject, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
