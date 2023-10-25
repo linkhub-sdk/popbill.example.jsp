@@ -73,15 +73,15 @@
     // KakaoButton[] btns = null;
 
     // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
-    KakaoButton[] btns = new KakaoButton[1];
+    // KakaoButton[] btns = new KakaoButton[1];
 
-    KakaoButton button = new KakaoButton();
-    button.setN("사이트 연결"); // 버튼명
-    button.setT("WL"); // 버튼타입
-    button.setU1("https://www.popbill.com/"); // 버튼링크1
-    button.setU2("https://www.popbill.com/"); // 버튼링크2
-    button.setTg("out");
-    btns[0] = button;
+    // KakaoButton button = new KakaoButton();
+    // button.setN("사이트 연결"); // 버튼명
+    // button.setT("WL"); // 버튼타입
+    // button.setU1("https://www.popbill.com/"); // 버튼링크1
+    // button.setU2("https://www.popbill.com/"); // 버튼링크2
+    // button.setTg("out");
+    // btns[0] = button;
 
     try {
 
