@@ -294,7 +294,7 @@
 
     try {
 
-        CheckResponse = taxinvoiceService.registIssueMLE(testCorpNum, taxinvoice, writeSpecification,
+        CheckResponse = taxinvoiceService.registIssue(testCorpNum, taxinvoice, writeSpecification,
                 memo, forceIssue, dealInvoiceKey, EmailSubject, UserID);
 
     } catch (PopbillException pe) {
