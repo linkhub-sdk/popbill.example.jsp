@@ -26,21 +26,16 @@
     // 승인된 알림톡 템플릿코드
     // └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
     //   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
-    String templateCode = "021120000563";
+    String templateCode = "023100000450";
 
     // 팝빌에 사전 등록된 발신번호
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
-    String senderNum = "070-4304-2991";
+    String senderNum = "1600-8536";
 
     // 알림톡 내용 (최대 1000자)
-    String content = "[ 팝빌 ]\n";
-    content += "신청하신 #{템플릿코드}에 대한 심사가 완료되어 승인 처리되었습니다.\n";
-    content += "해당 템플릿으로 전송 가능합니다.\n\n";
-    content += "문의사항 있으시면 파트너센터로 편하게 연락주시기 바랍니다.\n\n";
-    content += "팝빌 파트너센터 : 1600-8536\n";
-    content += "support@linkhub.co.kr";
+    String content = "[주문완료 안내]\n테스트님, 카카오에 가입해주셔서 감사합니다~!\n\n테스트님께서 신청해주신 서비스는 5일 이내로 연동 신청 될 예정입니다\n\n[ 서비스 정보 ]\n▶ 신청하신 서비스명: 테스트\n▶ 신청 일자 : 테스트";
 
     // 대체문자 제목
     // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
@@ -52,10 +47,10 @@
 
     // 대체문자 유형 (null , "C" , "A" 중 택 1)
     // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
-    String altSendType = "A";
+    String altSendType = null;
 
     // 수신번호
-    String receiverNum = "010111222";
+    String receiverNum = "";
 
     // 수신자 이름
     String receiverName = "수신자명";
@@ -64,7 +59,7 @@
     String sndDT = "";
 
     // 팝빌회원 아이디
-    String testUserID = "testkorea";
+    String testUserID = null;
 
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
@@ -75,21 +70,22 @@
     String receiptNum = null;
 
     // 알림톡 버튼정보를 템플릿 신청 시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
-    KakaoButton[] btns = null;
+    // KakaoButton[] btns = null;
 
     // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
-    // KakaoButton[] btns = new KakaoButton[1];
-    //
-    // KakaoButton button = new KakaoButton();
-    // button.setN("버튼명"); // 버튼명
-    // button.setT("WL"); // 버튼타입
-    // button.setU1("https://www.popbill.com"); // 버튼링크1
-    // button.setU2("http://test.popbill.com"); // 버튼링크2
-    // btns[0] = button;
+    KakaoButton[] btns = new KakaoButton[1];
+
+    KakaoButton button = new KakaoButton();
+    button.setN("사이트 연결"); // 버튼명
+    button.setT("WL"); // 버튼타입
+    button.setU1("https://www.popbill.com/"); // 버튼링크1
+    button.setU2("https://www.popbill.com/"); // 버튼링크2
+    button.setTg("out");
+    btns[0] = button;
 
     try {
 
-        receiptNum = kakaoService.sendATS(testCorpNum, templateCode, senderNum, content, altSubject, altContent, 
+        receiptNum = kakaoService.sendATS(testCorpNum, templateCode, senderNum, content, altSubject, altContent,
                 altSendType, receiverNum, receiverName, sndDT, testUserID, requestNum, btns);
 
     } catch (PopbillException pe) {
