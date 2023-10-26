@@ -70,7 +70,7 @@
     String receiptNum = null;
 
     // 알림톡 버튼정보를 템플릿 신청 시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
-    // KakaoButton[] btns = null;
+    KakaoButton[] btns = null;
 
     // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
     // KakaoButton[] btns = new KakaoButton[1];
