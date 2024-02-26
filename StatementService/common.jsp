@@ -1,6 +1,7 @@
 <%--
 ===================================================================================
 * 팝빌 전자명세서 API Java SDK JSP Example
+* JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/statement/java/getting-started/tutorial?fwn=jsp
 *
 * 업데이트 일자 : 2024-02-26
 * 연동기술지원 연락처 : 1600-9854
