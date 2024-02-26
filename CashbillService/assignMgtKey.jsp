@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 팝빌 사이트를 통해 발행하여 문서번호가 부여되지 않은 현금영수증에 문서번호를 할당합니다.
+     * 팝빌 사이트를 통해 발행하여 문서번호가 할당되지 않은 현금영수증에 문서번호를 할당합니다.
      * - https://developers.popbill.com/reference/cashbill/java/api/etc#AssignMgtKey
      */
 

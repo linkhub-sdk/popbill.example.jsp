@@ -13,7 +13,7 @@
 <%
     /*
     * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
-    * - 파일 식별을 위해 첨부 시 부여되는 'FileID'는 첨부파일 목록 확인(GetFiles API) 함수를 호출하여 확인합니다.
+    * - 파일 식별을 위해 첨부 시 할당되는 'FileID'는 첨부파일 목록 확인(GetFiles API) 함수를 호출하여 확인합니다.
     * - https://developers.popbill.com/reference/statement/java/api/etc#DeleteFile
      */
 
