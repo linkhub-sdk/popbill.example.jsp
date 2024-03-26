@@ -62,8 +62,8 @@
                         <li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
                         <li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
                         <li>confirmNum (국세청 승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
-                        <li>orgConfirmNum (원본 현금영수증 국세청 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
-                        <li>orgTradeDate (원본 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
+                        <li>orgConfirmNum (당초 승인 현금영수증 국세청 승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
+                        <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
                         <li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
                         <li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
                         <li>ntsresultCode (국세청 처리결과 상태코드) : <%= cashbillInfo.getNtsresultCode()%></li>
