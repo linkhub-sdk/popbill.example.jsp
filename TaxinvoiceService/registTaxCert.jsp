@@ -33,7 +33,7 @@
     String CertCipher = "";
 
     // 팝빌회원 아이디
-    String UserID = "";
+    String UserID = "testkorea";
 
     Response Response = null;
 
