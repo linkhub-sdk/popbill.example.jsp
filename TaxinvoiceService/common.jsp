@@ -16,6 +16,12 @@
 *     - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
 *     - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
+
+*     공동인증서를 등록하는 API를 사용하는 경우, 통신구간 보안을 위한 암호화 정보
+*     암호화 키 발급은 팝빌 파트너센터(1600-8536)로 문의하여 발급
+*     - mlePublicKey : MLE(Message Level Encryption) 공개키
+*     - mleKeyID : MLE 공개키 식별 아이디
+*     - mleKeyName : MLE 공개키 식별 이름
 * 3) 전자세금계산서 발행을 위해 공동인증서를 등록합니다.
 *    - 팝빌사이트 로그인 > [전자세금계산서] > [환경설정] > [공동인증서 관리]
 *    - 공동인증서 등록 팝업 URL (GetTaxCertURL API)을 이용하여 등록
@@ -47,12 +53,11 @@
 <%-- 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true) --%>
 <jsp:setProperty name="taxinvoiceService" property="useLocalTimeYN" value="true"/>
 
-<!-- RegistTaxCert, RegistTaxCertPFX 사용 시 설정 -->
-<%-- MLE KEY 사용자 식별 아이디 --%>
-<jsp:setProperty name="taxinvoiceService" property="mleKeyID" value=""/>
-
-<%-- MLE KEY 사용자 식별 이름 --%>
-<jsp:setProperty name="taxinvoiceService" property="mleKeyName" value=""/>
-
 <%-- MLE 공개키 --%>
 <jsp:setProperty name="taxinvoiceService" property="mlePublicKey" value=""/>
+
+<%-- MLE 공개키 아이디 --%>
+<jsp:setProperty name="taxinvoiceService" property="mleKeyID" value=""/>
+
+<%-- MLE 공개키 이름 --%>
+<jsp:setProperty name="taxinvoiceService" property="mleKeyName" value=""/>
