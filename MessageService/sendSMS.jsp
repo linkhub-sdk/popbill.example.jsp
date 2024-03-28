@@ -26,6 +26,9 @@
     // 발신번호 (팝빌에 등록된 발신번호만 이용가능)
     String sender = "07043042991";
 
+    // 발신자명
+    String senderName = "발신자명";
+
     // 수신번호
     String receiver = "010111222";
 
@@ -56,7 +59,7 @@
 
     try {
 
-        receiptNum = messageService.sendSMS(testCorpNum, sender, receiver, receiverName, content, reserveDT, adsYN, testUserID, requestNum);
+        receiptNum = messageService.sendSMS(testCorpNum, sender, senderName, receiver, receiverName, content, reserveDT, adsYN, testUserID, requestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

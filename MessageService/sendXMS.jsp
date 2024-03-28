@@ -26,6 +26,9 @@
     // 발신번호
     String sender = "07043042991";
 
+    // 발신자명
+    String senderName = "발신자명";
+
     // 수신번호
     String receiver = "010111222";
 
@@ -59,7 +62,7 @@
 
     try {
 
-        receiptNum = messageService.sendXMS(testCorpNum, sender, receiver, receiverName,
+        receiptNum = messageService.sendXMS(testCorpNum, sender, senderName, receiver, receiverName,
                 subject, content, reserveDT, adsYN, testUserID, requestNum);
 
     } catch (PopbillException pe) {

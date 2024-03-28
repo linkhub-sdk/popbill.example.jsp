@@ -28,6 +28,9 @@
     // 발신번호
     String sender = "07043042991";
 
+    // 발신자명
+    String senderName = "발신자명";
+
     // 수신번호
     String receiver = "010111222";
 
@@ -64,7 +67,7 @@
 
     try {
 
-        receiptNum = messageService.sendMMS(testCorpNum, sender, receiver, receiverName,
+        receiptNum = messageService.sendMMS(testCorpNum, sender, senderName, receiver, receiverName,
                 subject, content, file, reserveDT, adsYN, testUserID, requestNum);
 
     } catch (PopbillException pe) {
