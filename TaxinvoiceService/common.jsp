@@ -46,3 +46,13 @@
 
 <%-- 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true) --%>
 <jsp:setProperty name="taxinvoiceService" property="useLocalTimeYN" value="true"/>
+
+<!-- RegistTaxCert, RegistTaxCertPFX 사용 시 설정 -->
+<%-- MLE KEY 사용자 식별 아이디 --%>
+<jsp:setProperty name="taxinvoiceService" property="mleKeyID" value=""/>
+
+<%-- MLE KEY 사용자 식별 이름 --%>
+<jsp:setProperty name="taxinvoiceService" property="mleKeyName" value=""/>
+
+<%-- MLE 공개키 --%>
+<jsp:setProperty name="taxinvoiceService" property="mlePublicKey" value=""/>
