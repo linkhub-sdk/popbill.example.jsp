@@ -17,7 +17,7 @@
      * 공동인증서 정보는 통신 구간의 보안을 위해 필드 레벨 암호화(FLE)되어 처리됩니다.
      * 통신구간 암호화 키 발급은 파트너 센터(1600-8536)로 문의하여 주시기 바랍니다.
      * 공동인증서 비밀번호의 안전한 관리를 위해 DB 저장시 컬럼 암호화 하여 저장합니다.
-     * - https://developers.popbill.com/reference/taxinvoice/java/api/cert#RegistTaxCert
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/cert#RegistTaxCertPFX
      */
 
     // 팝빌회원 사업자번호
