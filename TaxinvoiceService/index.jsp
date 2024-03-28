@@ -96,6 +96,8 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">GetCertificateExpireDate</a> - 공동인증서 만료일 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">CheckCertValidation</a> - 공동인증서 유효성 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getTaxCertInfo.jsp">getTaxCertInfo</a> - 공동인증서 정보확인</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCert.jsp">registTaxCert</a> - 공동 인증서 등록</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCertPFX.jsp">registTaxCertPFX</a> - PFX 공동 인증서 등록</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
