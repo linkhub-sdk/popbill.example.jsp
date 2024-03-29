@@ -80,7 +80,7 @@
     // button.setT("WL"); // 버튼타입
     // button.setU1("https://www.popbill.com/"); // 버튼링크1
     // button.setU2("https://www.popbill.com/"); // 버튼링크2
-    // button.setTg("out");
+    // button.setTg("out"); // 아웃링크
     // btns[0] = button;
 
     try {
