@@ -12,7 +12,7 @@
 *     - LinkID : 링크허브에서 발급한 링크아이디
 *     - SecretKey : 링크허브에서 발급한 비밀키
 * 2) SDK 환경설정 필수 옵션 설정
-*     - IsTest : 연동환경 설정, true-테스트, false-운영(Production), (기본값:true)
+*     - IsTest : 연동환경 설정, true-테스트, false-운영(Production), (기본값:false)
 *     - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
 *     - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
