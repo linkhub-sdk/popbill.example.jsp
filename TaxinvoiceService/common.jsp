@@ -11,13 +11,13 @@
 * 1) API Key 변경 (연동신청 시 메일로 전달된 정보)
 *     - LinkID : 링크허브에서 발급한 링크아이디
 *     - SecretKey : 링크허브에서 발급한 비밀키
-* 2) SDK 환경설정 옵션 설정
+* 2) SDK 환경설정 필수 옵션 설정
 *     - IsTest : 연동환경 설정, true-테스트, false-운영(Production), (기본값:true)
 *     - IPRestrictOnOff : 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true)
 *     - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
-
-*     공동인증서를 등록하는 API를 사용하는 경우, 통신구간 보안을 위한 암호화 정보
+* 3) SDK 환경설정 선택 옵션 설정
+*     RegistTaxCert, RegistTaxCertPFX API를 사용하는 경우, 통신구간 보안을 위한 암호화 정보
 *     암호화 키 발급은 팝빌 파트너센터(1600-8536)로 문의하여 발급
 *     - mlePublicKey : MLE(Message Level Encryption) 공개키
 *     - mleKeyID : MLE 공개키 식별 아이디
@@ -53,11 +53,11 @@
 <%-- 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true) --%>
 <jsp:setProperty name="taxinvoiceService" property="useLocalTimeYN" value="true"/>
 
-<%-- MLE 공개키 --%>
+<%-- MLE PublicKey --%>
 <jsp:setProperty name="taxinvoiceService" property="mlePublicKey" value=""/>
 
-<%-- MLE 공개키 아이디 --%>
+<%-- MLE Key ID --%>
 <jsp:setProperty name="taxinvoiceService" property="mleKeyID" value=""/>
 
-<%-- MLE 공개키 이름 --%>
+<%-- MLE Key Name --%>
 <jsp:setProperty name="taxinvoiceService" property="mleKeyName" value=""/>
