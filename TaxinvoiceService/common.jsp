@@ -22,7 +22,7 @@
 *     - mlePublicKey : MLE(Message Level Encryption) 공개키
 *     - mleKeyID : MLE 공개키 식별 아이디
 *     - mleKeyName : MLE 공개키 식별 이름
-* 3) 전자세금계산서 발행을 위해 공동인증서를 등록합니다.
+* 4) 전자세금계산서 발행을 위해 공동인증서를 등록합니다.
 *    - 팝빌사이트 로그인 > [전자세금계산서] > [환경설정] > [공동인증서 관리]
 *    - 공동인증서 등록 팝업 URL (GetTaxCertURL API)을 이용하여 등록
 *
