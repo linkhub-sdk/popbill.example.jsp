@@ -3,7 +3,7 @@
 * 팝빌 기업정보조회 API Java SDK JSP Example
 * JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/bizinfocheck/java/getting-started/tutorial?fwn=jsp
 *
-* 업데이트 일자 : 2024-02-26
+* 업데이트 일자 : 2024-04-01
 * 연동기술지원 연락처 : 1600-9854
 * 연동기술지원 이메일 : code@linkhubcorp.com
 *         
@@ -32,7 +32,7 @@
 <%-- 비밀키 --%>
 <jsp:setProperty name="bizInfoCheckService" property="secretKey" value="SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="/>
 
-<%-- 연동환경 설정, true-테스트, false-운영(Production), (기본값:true) --%>
+<%-- 연동환경 설정, true-테스트, false-운영(Production), (기본값:false) --%>
 <jsp:setProperty name="bizInfoCheckService" property="test" value="true"/>
 
 <%-- 인증토큰 IP 검증 설정, true-사용, false-미사용, (기본값:true) --%>
