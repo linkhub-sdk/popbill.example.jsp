@@ -26,7 +26,7 @@
     // 공동인증서 PFX 파일(Base64 Encoded)
     String PFX = "";
 
-    // 공동인증서 PXF 파일 비밀번호
+    // 공동인증서 비밀번호
     String Password = "";
 
     // 팝빌회원 아이디

@@ -34,8 +34,8 @@
     Taxinvoice taxinvoice = new Taxinvoice();
 
     /**********************************************************************
-     * 수정세금계산서 정보 (수정세금계산서 작성시 기재) - 수정세금계산서 작성방법 안내
-     * [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
+     * 수정세금계산서 정보 (수정세금계산서 작성시 기재)
+     * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      *********************************************************************/
 
 
@@ -253,8 +253,9 @@
 
 
     /**********************************************************************
-     * 추가담당자 정보 - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 - 담당자 정보를 추가하여 발행 안내메일을 다수에게 전송할 수
-     * 있습니다. (최대 5명)
+     * 추가담당자 정보
+     * - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우
+     * - 담당자 정보를 추가하여 발행 안내메일을 다수에게 전송할 수 있습니다. (최대 5명)
      *********************************************************************/
 
     taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
@@ -274,8 +275,7 @@
     // └ true = 가능 , false = 불가능
     // - 미입력 시 기본값 false 처리
     // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
-    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
-    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
+    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을 true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
 
     IssueResponse issueResponse = null;

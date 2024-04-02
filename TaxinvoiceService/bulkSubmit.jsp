@@ -33,8 +33,7 @@
     // 지연발행 강제여부  (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
     // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
-    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을
-    //   true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
+    // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을 true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     boolean ForceIssue = false;
 
     // 최대 100건
