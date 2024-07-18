@@ -91,7 +91,7 @@
     // button.setT("WL"); // 버튼타입
     // button.setU1("https://www.popbill.com"); // 버튼링크1
     // button.setU2("http://test.popbill.com"); // 버튼링크2
-    // button.setTg("out");// 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저)
+    // button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
     // btns[0] = button;
 
     try {
