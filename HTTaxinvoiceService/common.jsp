@@ -3,7 +3,7 @@
 * 팝빌 홈택스 전자세금계산서 API Java SDK JSP Example
 * JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/httaxinvoice/java/getting-started/tutorial?fwn=jsp
 *
-* 업데이트 일자 : 2024-04-01
+* 업데이트 일자 : 2024-11-11
 * 연동기술지원 연락처 : 1600-9854
 * 연동기술지원 이메일 : code@linkhubcorp.com
 *         
@@ -17,8 +17,8 @@
 *     - UseStaticIP : 통신 IP 고정, true-사용, false-미사용, (기본값:false)
 *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
 * 3) 홈택스 로그인 인증정보를 등록합니다. (부서사용자등록 / 공동인증서 등록)
-*    - 팝빌로그인 > [홈택스연동] > [환경설정] > [인증 관리] 메뉴
-*    - 홈택스연동 인증 관리 팝업 URL(GetCertificatePopUpURL API) 반환된 URL을 이용하여
+*    - 팝빌로그인 > [홈택스수집] > [환경설정] > [인증 관리] 메뉴
+*    - 홈택스수집 인증 관리 팝업 URL(GetCertificatePopUpURL API) 반환된 URL을 이용하여
 *      홈택스 인증 처리를 합니다.
 *
 * Class Module for base module for Popbill API SDK. It include base functionality for

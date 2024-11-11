@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 홈택스연동 인증을 위해 팝빌에 등록된 전자세금계산서용 부서사용자 계정을 확인합니다.
+     * 홈택스수집 인증을 위해 팝빌에 등록된 전자세금계산서용 부서사용자 계정을 확인합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/cert#CheckDeptUser
      */
 

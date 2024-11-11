@@ -17,9 +17,9 @@
             <li><a href="StatementService">StatementService</a> - 전자명세서 API</li>
             <li><a href="CashbillService">CashbillService</a> - 현금영수증 API</li>
 
-            <li><a href="HTTaxinvoiceService">HTTaxinvoiceService</a> -  홈택스연동 (전자세금계산서) API</li>
-            <li><a href="HTCashbillService">HTCashbillService</a> - 홈택스연동 (현금영수증) API</li>
-            <li><a href="ClosedownService">ClosedownService</a> - 휴폐업조회 API</li>
+            <li><a href="HTTaxinvoiceService">HTTaxinvoiceService</a> -  홈택스수집 (전자세금계산서) API</li>
+            <li><a href="HTCashbillService">HTCashbillService</a> - 홈택스수집 (현금영수증) API</li>
+            <li><a href="ClosedownService">ClosedownService</a> - 사업자등록상태조회 (휴폐업조회) API</li>
             <li><a href="BizInfoCheckService">BizInfoCheckService</a> - 기업정보조회 API</li>
             <li><a href="EasyFinService">EasyFinService</a> - 계좌조회 API</li>
             <li><a href="AccountCheckService">AccountCheckService</a> - 예금주조회 API</li>

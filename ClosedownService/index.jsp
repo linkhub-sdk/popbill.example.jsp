@@ -7,13 +7,13 @@
 </head>
 <body>
 <div id="content">
-    <p class="heading1">팝빌 휴폐업조회 SDK jsp Example.</p>
+    <p class="heading1">팝빌 사업자등록상태조회 (휴폐업조회) SDK jsp Example.</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>휴폐업조회</legend>
+        <legend>사업자등록상태조회 (휴폐업조회)</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpNum.jsp">checkCorpNum</a> - 휴폐업 단건조회</li>
-            <li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpNums.jsp">checkCorpNums</a> - 휴폐업 대량조회</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpNum.jsp">checkCorpNum</a> - 사업자등록상태조회 (휴폐업조회) 단건조회</li>
+            <li><a href="${pageContext.request.contextPath}/ClosedownService/checkCorpNums.jsp">checkCorpNums</a> - 사업자등록상태조회 (휴폐업조회) 대량조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

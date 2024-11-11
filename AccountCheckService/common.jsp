@@ -3,7 +3,7 @@
 * 팝빌 예금주조회 API Java SDK JSP Example
 * JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/accountcheck/java/getting-started/tutorial?fwn=jsp
 *
-* 업데이트 일자 : 2024-04-01
+* 업데이트 일자 : 2024-11-11
 * 연동기술지원 연락처 : 1600-9854
 * 연동기술지원 이메일 : code@linkhubcorp.com
 *         

@@ -11,7 +11,7 @@
 
 <%
     /*
-     * 휴폐업조회 시 과금되는 포인트 단가를 확인합니다.
+     * 사업자등록상태조회 (휴폐업조회) 시 과금되는 포인트 단가를 확인합니다.
      * - https://developers.popbill.com/reference/closedown/java/api/point#GetUnitCost
      */
 
@@ -35,7 +35,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>휴폐업조회 단가 확인</legend>
+                <legend>사업자등록상태조회 (휴폐업조회) 단가 확인</legend>
                 <ul>
                     <li>조회단가 : <%=unitCost%></li>
                 </ul>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="content">
-    <p class="heading1">팝빌 홈택스연동(전자세금계산서) SDK jsp Example.</p>
+    <p class="heading1">팝빌 홈택스수집(전자세금계산서) SDK jsp Example.</p>
     <br/>
     <fieldset class="fieldset1">
         <legend>홈택스 전자세금계산서 매입/매출 내역 수집</legend>
@@ -29,10 +29,10 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>홈택스연동 인증 관리</legend>
+        <legend>홈택스수집 인증 관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스연동 인증 관리 팝업 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스연동 공동인증서 만료일자 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스수집 인증 관리 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스수집 공동인증서 만료일자 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 홈택스 공동인증서 로그인 테스트</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registDeptUser.jsp">registDeptUser</a> - 부서사용자 계정등록</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkDeptUser.jsp">checkDeptUser</a> - 부서사용자 등록정보 확인</li>

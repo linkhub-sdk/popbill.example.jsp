@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 홈택스연동 인증을 위해 팝빌에 등록된 현금영수증 자료조회 부서사용자 계정을 확인합니다.
+     * 홈택스수집 인증을 위해 팝빌에 등록된 현금영수증 자료조회 부서사용자 계정을 확인합니다.
      * - https://developers.popbill.com/reference/htcashbill/java/api/cert#CheckDeptUser
      */
 

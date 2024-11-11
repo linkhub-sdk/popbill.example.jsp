@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main.css" media="screen" />
-        <title>휴폐업조회 SDK JSP Example.</title>
+        <title>사업자등록상태조회 (휴폐업조회) SDK JSP Example.</title>
     </head>
 
 <%@ include file="common.jsp" %>
@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 다수건의 사업자번호에 대한 휴폐업정보를 확인합니다. (최대 1,000건)
+     * 다수건의 사업자번호에 대한 사업자등록상태 (휴폐업조회) 를 확인합니다. (최대 1,000건)
      * - https://developers.popbill.com/reference/closedown/java/api/check#CheckCorpNums
      */
 
@@ -38,10 +38,10 @@
 
     <body>
         <div id="content">
-            <p class="heading1">휴폐업조회 API SDK - JSP Example.</p>
+            <p class="heading1">사업자등록상태조회 (휴폐업조회) API SDK - JSP Example.</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>휴폐업조회 대량</legend>
+                <legend>사업자등록상태조회 (휴폐업조회) - 대량</legend>
                 <br/>
         <p class="info"> state : null (알수없음), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>
         <p class="info"> taxType : null (알수없음), 10 (일반과세자), 20 (면세과세자), 30 (간이과세자), 31 (간이과세자-세금계산서 발급사업자), 40 (비영리법인 또는 국가기관, 고유번호가 부여된 단체)</p>
@@ -52,7 +52,7 @@
                     corpState = corpStates[i];
             %>
                     <fieldset class ="fieldset2">
-                        <legend>휴폐업조회 결과 [<%=i+1%>]</legend>
+                        <legend>사업자등록상태조회 (휴폐업조회) 결과 [<%=i+1%>]</legend>
                         <ul>
                             <li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
                             <li>taxType (과세유형) : <%=corpState.getTaxType()%></li>

@@ -64,17 +64,22 @@
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_REQUEST")) {
             %>
-            <li>[역발행] TAX_REQUEST (공급자에게 세금계산서를 발행요청 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[역발행] TAX_REQUEST (공급자에게 전자세금계산서를 발행요청 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_CANCEL_REQUEST")) {
             %>
-            <li>[역발행] TAX_CANCEL_REQUEST (공급받는자에게 세금계산서 취소 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[역발행] TAX_CANCEL_REQUEST (공급받는자에게 전자세금계산서 취소 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_REFUSE")) {
             %>
-            <li>[역발행] TAX_REFUSE (공급받는자에게 세금계산서 거부 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[역발행] TAX_REFUSE (공급받는자에게 전자세금계산서 거부 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <%
+                }
+                if (emailSendConfig.getEmailType().equals("TAX_REVERSE_ISSUE")) {
+            %>
+            <li>[역발행] TAX_REVERSE_ISSUE (공급받는자에게 전자세금계산서 발행 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_TRUST_ISSUE")) {
@@ -99,12 +104,12 @@
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_TRUST_CANCEL_ISSUE_INVOICER")) {
             %>
-            <li>[위수탁발행] TAX_TRUST_CALCEL_ISSUE_INVOICER (공급자에게 전자세금계산서 발행취소 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[위수탁발행] TAX_TRUST_CANCEL_ISSUE_INVOICER (공급자에게 전자세금계산서 발행취소 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_CLOSEDOWN")) {
             %>
-            <li>[처리결과] TAX_CLOSEDOWN (거래처의 휴폐업 여부 확인 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+            <li>[처리결과] TAX_CLOSEDOWN (거래처의 사업자등록상태(휴폐업) 확인 메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
             <%
                 }
                 if (emailSendConfig.getEmailType().equals("TAX_NTSFAIL_INVOICER")) {

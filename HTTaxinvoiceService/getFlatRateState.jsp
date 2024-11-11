@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 홈택스연동 정액제 서비스 상태를 확인합니다.
+     * 홈택스수집 정액제 서비스 상태를 확인합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/point#GetFlatRateState
      */
 
