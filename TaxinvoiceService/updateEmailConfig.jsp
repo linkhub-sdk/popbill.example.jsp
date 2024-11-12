@@ -46,7 +46,7 @@
     String testCorpNum = "1234567890";
 
     // 메일 전송 유형
-    String emailType = "TAX_ISSUE";
+    String emailType = "TAX_ISSUE_INVOICER";
 
     // 전송 여부 (true = 전송, false = 미전송)
     Boolean sendYN = true;
