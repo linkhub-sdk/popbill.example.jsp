@@ -22,19 +22,19 @@
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20230102";
+    String SDate = "20241201";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20230131";
+    String EDate = "20241231";
 
     // 전송상태 배열 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
     // └ 1 = 대기 , 2 = 성공 , 3 = 실패 , 4 = 취소
     // - 미입력 시 전체조회
     String[] State = {"1", "2", "3", "4"};
 
-    // 예약여부 (false , true 중 택 1)
-    // false = 전체조회, true = 예약전송건 조회
-    // 미입력시 기본값 false 처리
+    // 예약여부 (null, false , true 중 택 1)
+    // └ null = 전체조회, false = 즉시전송건 조회, true = 예약전송건 조회
+    // - 미입력 시 전체조회
     Boolean ReserveYN = false;
 
     // 개인조회 여부 (false , true 중 택 1)
