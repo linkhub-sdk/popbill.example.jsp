@@ -86,15 +86,16 @@
         <legend>회원정보</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/StatementService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/checkID.jsp">checkID</a> - 아이디 중복 확인</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/checkID.jsp">checkID</a> - 연동회원 아이디 중복 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/joinMember.jsp">joinMember</a> - 연동회원 신규가입</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/quitMember.jsp">QuitMember</a> - 연동회원 탈퇴</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/registContact.jsp">registContact</a> - 담당자 등록</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/deleteContact.jsp">deleteContact</a> - 담당자 삭제</li>
         </ul>
     </fieldset>
 </div>

@@ -41,16 +41,16 @@
         <legend>회원정보</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
-            <li><a href="${pageContext.request.contextPath}/AccountCheckService/checkID.jsp">checkID</a> - 아이디 중복 확인</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/checkID.jsp">checkID</a> - 연동회원 아이디 중복 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/joinMember.jsp">joinMember</a> - 연동회원 신규가입</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/quitMember.jsp">QuitMember</a> - 연동회원 탈퇴</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/registContact.jsp">registContact</a> - 담당자 등록</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/AccountCheckService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
-            <li><a href="${pageContext.request.contextPath}/AccountCheckService/getAccessURL.jsp">getAccessURL</a> - 팝빌 로그인 URL</li>
-            <li><a href="${pageContext.request.contextPath}/AccountCheckService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
+            <li><a href="${pageContext.request.contextPath}/AccountCheckService/deleteContact.jsp">deleteContact</a> - 담당자 삭제</li>
         </ul>
     </fieldset>
 </div>

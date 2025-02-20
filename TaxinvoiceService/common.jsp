@@ -3,7 +3,7 @@
 * 팝빌 전자세금계산서 API Java SDK JSP Example
 * JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/taxinvoice/java/getting-started/tutorial?fwn=jsp
 *
-* 업데이트 일자 : 2025-01-23
+* 업데이트 일자 : 2025-02-20
 * 연동기술지원 연락처 : 1600-9854
 * 연동기술지원 이메일 : code@linkhubcorp.com
 *         
@@ -52,12 +52,3 @@
 
 <%-- 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true) --%>
 <jsp:setProperty name="taxinvoiceService" property="useLocalTimeYN" value="true"/>
-
-<%-- MLE PublicKey --%>
-<jsp:setProperty name="taxinvoiceService" property="mlePublicKey" value=""/>
-
-<%-- MLE Key ID --%>
-<jsp:setProperty name="taxinvoiceService" property="mleKeyID" value=""/>
-
-<%-- MLE Key Name --%>
-<jsp:setProperty name="taxinvoiceService" property="mleKeyName" value=""/>

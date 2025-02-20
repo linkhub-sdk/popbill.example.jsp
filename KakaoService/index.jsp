@@ -102,16 +102,16 @@
         <legend>회원관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/KakaoService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/checkID.jsp">checkID</a> - 연동회원 아이디 중복 확인</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/checkID.jsp">checkID</a> - 연동회원 연동회원 아이디 중복 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/joinMember.jsp">joinMember</a> - 연동회원사 신규가입</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getAccessURL.jsp">getAccessURL</a> 팝빌 로그인 URL</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/quitMember.jsp">QuitMember</a> - 연동회원 탈퇴</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/registContact.jsp">registContact</a> - 담당자 추가</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
-            <li><a href="${pageContext.request.contextPath}/KakaoService/quitMember.jsp">QuitMember</a> - 팝빌 회원 탈퇴</li>
+            <li><a href="${pageContext.request.contextPath}/KakaoService/deleteContact.jsp">deleteContact</a> - 담당자 삭제</li>
         </ul>
     </fieldset>
 </div>

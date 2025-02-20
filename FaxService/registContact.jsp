@@ -13,7 +13,7 @@
 
 <%
     /*
-     * 연동회원 사업자번호에 담당자(팝빌 로그인 계정)를 추가합니다.
+     * 연동회원에 담당자를 추가합니다.
      * - https://developers.popbill.com/reference/fax/java/api/member#RegistContact
      */
 
