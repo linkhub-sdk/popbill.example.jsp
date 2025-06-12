@@ -70,6 +70,12 @@
                         <li>ntsresultMessage (국세청 처리결과 메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
                         <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
                         <li>interOPYN (연동문서 여부) : <%= cashbillInfo.isInterOPYN()%></li>
+                        <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
+                        <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>
+                        <li>supplyCost (공급가액) : <%= cashbillInfo.getSupplyCost()%></li>
+                        <li>tax (부가세) : <%= cashbillInfo.getTax()%></li>
+                        <li>serviceFee (봉사료) : <%= cashbillInfo.getServiceFee()%></li>
+                        <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
                     </ul>
                 </fieldset>
             </fieldset>
