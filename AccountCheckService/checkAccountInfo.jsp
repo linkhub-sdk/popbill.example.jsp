@@ -50,6 +50,7 @@
                     <li>checkDate (확인일시) : <%=accountInfo.getCheckDate()%></li>
                     <li>result (응답코드) : <%=accountInfo.getResult()%></li>
                     <li>resultMessage (응답메시지) : <%=accountInfo.getResultMessage()%></li>
+                    <li>checkDT (확인일자) : <%=accountInfo.getCheckDT()%></li>
                 </ul>
 
             </fieldset>

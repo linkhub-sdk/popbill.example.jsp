@@ -64,6 +64,7 @@
                     <li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
                     <li>result (응답코드) : <%=depositorCheckInfo.getResult()%></li>
                     <li>resultMessage (응답메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
+                    <li>checkDT (확인일자) : <%=depositorCheckInfo.getCheckDT()%></li>
                 </ul>
 
             </fieldset>
