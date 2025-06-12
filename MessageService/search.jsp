@@ -46,7 +46,7 @@
     // false = 접수한 문자 전체 조회 (관리자권한)
     // true = 해당 담당자 계정으로 접수한 문자만 조회 (개인권한)
     // 미입력시 기본값 false 처리
-    Boolean SenderYN = false;
+    Boolean SenderOnly = false;
 
     // 페이지 번호
     int Page = 1;
@@ -67,7 +67,7 @@
     try {
 
         searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item,
-                ReserveYN, SenderYN, Page, PerPage, Order, QString);
+                ReserveYN, SenderOnly, Page, PerPage, Order, QString);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
