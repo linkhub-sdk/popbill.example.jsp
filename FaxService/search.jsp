@@ -15,6 +15,8 @@
     /*
      * 검색조건에 해당하는 팩스 전송내역 목록을 조회합니다. (조회기간 단위 : 최대 2개월)
      * - 팩스 접수일시로부터 2개월 이내 접수건만 조회할 수 있습니다.
+     * 팩스 상태코드 [https://developers.popbill.com/reference/fax/java/response-code#state-code]
+     * 통신사 결과코드 [https://developers.popbill.com/reference/fax/java/response-code#result-code]
      * - https://developers.popbill.com/reference/fax/java/api/info#Search
      */
 

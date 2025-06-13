@@ -13,6 +13,8 @@
 <%
     /*
      * 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
+     * 팩스 상태코드 [https://developers.popbill.com/reference/fax/java/response-code#state-code]
+     * 통신사 결과코드 [https://developers.popbill.com/reference/fax/java/response-code#result-code]
      * - https://developers.popbill.com/reference/fax/java/api/info#GetFaxResult
      */
 

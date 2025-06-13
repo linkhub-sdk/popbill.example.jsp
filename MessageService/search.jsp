@@ -15,6 +15,8 @@
     /*
      * 검색조건에 해당하는 문자 전송내역을 조회합니다. (조회기간 단위 : 최대 2개월)
      * - 문자 접수일시로부터 6개월 이내 접수건만 조회할 수 있습니다.
+     * 문자 상태코드 [https://developers.popbill.com/reference/sms/java/response-code#state-code]
+     * 통신사 결과코드 [https://developers.popbill.com/reference/sms/java/response-code#result-code]
      * - https://developers.popbill.com/reference/sms/java/api/info#Search
      */
 

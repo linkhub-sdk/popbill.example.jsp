@@ -13,6 +13,8 @@
 <%
     /*
      * 파트너가 할당한 전송요청 번호를 통해 문자 전송상태 및 결과를 확인합니다.
+     * 문자 상태코드 [https://developers.popbill.com/reference/sms/java/response-code#state-code]
+     * 통신사 결과코드 [https://developers.popbill.com/reference/sms/java/response-code#result-code]
      * - https://developers.popbill.com/reference/sms/java/api/info#GetMessagesRN
      */
 

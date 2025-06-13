@@ -16,6 +16,7 @@
 <%
     /*
      * 사업자번호 1건에 대한 기업정보를 확인합니다.
+     * 기업정보조회 상태코드 [https://developers.popbill.com/reference/bizinfocheck/java/response-code#result-code]
      * - https://developers.popbill.com/reference/bizinfocheck/java/api/check#CheckBizInfo
      */
 

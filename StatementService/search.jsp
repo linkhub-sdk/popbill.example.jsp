@@ -14,6 +14,7 @@
 <%
     /*
      * 검색조건에 해당하는 전자명세서를 조회합니다. (조회기간 단위 : 최대 6개월)
+     * 전자명세서 상태코드 [https://developers.popbill.com/reference/statement/java/response-code#state-code]
      * - https://developers.popbill.com/reference/statement/java/api/info#Search
      */
 

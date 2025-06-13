@@ -14,6 +14,7 @@
 <%
     /*
      * 검색조건에 해당하는 현금영수증을 조회합니다. (조회기간 단위 : 최대 6개월)
+     * 현금영수증 상태코드 [https://developers.popbill.com/reference/cashbill/java/response-code]
      * - https://developers.popbill.com/reference/cashbill/java/api/info#Search
      */
 

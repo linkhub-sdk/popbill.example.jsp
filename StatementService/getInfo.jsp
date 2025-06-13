@@ -13,6 +13,7 @@
 <%
     /*
      * 전자명세서의 1건의 상태 및 요약정보 확인합니다.
+     * 전자명세서 상태코드 [https://developers.popbill.com/reference/statement/java/response-code#state-code]
      * - https://developers.popbill.com/reference/statement/java/api/info#GetInfo
      */
 
