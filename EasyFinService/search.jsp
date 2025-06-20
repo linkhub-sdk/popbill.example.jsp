@@ -59,7 +59,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
-            <legend> 조회결과 </legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>code (응답코드) : <%= result.getCode() %></li>
                 <li>message (응답메시지) : <%= result.getMessage() %></li>

@@ -46,7 +46,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자명세서 인쇄 팝업 URL 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>URL : <%=url%></li>
                 </ul>

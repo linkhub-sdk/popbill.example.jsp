@@ -46,7 +46,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>상세 정보 확인 - XML</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                       <li>resultCode (요청에 대한 응답 상태코드) : <%=xmlResponse.getResultCode()%> </li>
                       <li>message (응답메시지) : <%=xmlResponse.getMessage()%> </li>

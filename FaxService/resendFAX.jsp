@@ -73,7 +73,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>팩스 재전송 요청</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>receiptNum (팩스전송 접수번호) : <%=receiptNum%></li>
                 </ul>

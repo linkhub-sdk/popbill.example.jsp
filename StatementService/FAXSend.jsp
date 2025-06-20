@@ -215,7 +215,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자명세서 선팩스전송</legend>
+                <legend>전<%=request.getRequestURI()%></legend>
                 <ul>
                     <li>receiptNum(팩스전송 접수번호) : <%=receiptNum%></li>
                 </ul>

@@ -39,7 +39,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>정액제 신청 URL </legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>url : <%=url%> </li>
                 </ul>

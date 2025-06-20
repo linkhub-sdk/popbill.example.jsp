@@ -42,7 +42,7 @@
 		<p class="heading1">기업정보조회 API SDK - JSP Example.</p>
 		<br />
 		<fieldset class="fieldset1">
-			<legend>기업정보조회 결과</legend>
+			<legend><%=request.getRequestURI()%></legend>
 			<ul>
 				<li>corpNum (사업자번호) : <%=bizInfo.getCorpNum()%></li>
 				<li>companyRegNum (법인번호): <%=bizInfo.getCompanyRegNum()%></li>

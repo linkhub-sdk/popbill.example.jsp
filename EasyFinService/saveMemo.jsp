@@ -43,7 +43,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>계좌 거래내역 메모저장</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=saveResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>

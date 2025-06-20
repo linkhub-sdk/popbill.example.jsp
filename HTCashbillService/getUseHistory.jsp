@@ -51,7 +51,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>포인트사용내역 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>

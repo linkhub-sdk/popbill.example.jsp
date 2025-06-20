@@ -12,7 +12,7 @@
     <p class="heading1">Exception Occurred</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>예외 발생</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>Exception.code : <%=exception instanceof PopbillException ? ((PopbillException) exception).getCode() : "-"%> </li>
             <li>Exception.message : <%=exception.getMessage()%> </li>

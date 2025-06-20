@@ -121,7 +121,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>친구톡 이미지 전송</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>접수번호 : <%=receiptNum%></li>
         </ul>

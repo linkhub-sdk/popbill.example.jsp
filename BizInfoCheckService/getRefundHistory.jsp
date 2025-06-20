@@ -42,7 +42,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>환불 신청내역 목록조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>

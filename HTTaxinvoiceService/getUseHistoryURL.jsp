@@ -41,7 +41,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>연동회원 포인트 사용내역 팝업 URL</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>url : <%=url%></li>
             </ul>

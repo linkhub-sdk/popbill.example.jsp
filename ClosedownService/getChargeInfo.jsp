@@ -36,7 +36,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>과금정보 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>unitCost (조회단가) : <%=chargeInfo.getUnitCost() %> </li>
                     <li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>

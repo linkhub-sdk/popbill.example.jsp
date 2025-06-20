@@ -39,7 +39,7 @@
         <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-            <legend>상세 정보 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>ntsconfirmNum (국세청 승인번호) : <%=taxinvoiceInfo.getNtsconfirmNum() %> </li>
                     <li>writeDate (작성일자) : <%=taxinvoiceInfo.getWriteDate() %> </li>

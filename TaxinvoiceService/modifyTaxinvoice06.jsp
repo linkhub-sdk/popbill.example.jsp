@@ -292,7 +292,7 @@
     <p class="heading1">IssueResponse</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>수정세금계산서 발행 - 착오에 의한 이중발급</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>응답 코드(code) : <%=issueResponse.getCode()%></li>
             <li>응답메시지 (message) : <%=issueResponse.getMessage()%></li>

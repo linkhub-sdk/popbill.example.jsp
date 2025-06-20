@@ -45,7 +45,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>알림톡/친구톡 전송결과 조회</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <fieldset class="fieldset2">
             <legend>개별 전송내역</legend>
             <ul>

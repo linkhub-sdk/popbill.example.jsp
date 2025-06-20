@@ -66,7 +66,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>계좌정보 수정</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>응답 코드(code) : <%=CheckResponse.getCode()%>
             </li>

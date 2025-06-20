@@ -47,7 +47,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>세금계산서 인쇄 팝업 URL - 공급받는자용</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>url : <%=url%></li>
             </ul>

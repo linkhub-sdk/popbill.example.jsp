@@ -44,7 +44,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자명세서 조회 결과</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <fieldset class="fieldset2">
                     <legend>StatementInfo</legend>
                     <ul>

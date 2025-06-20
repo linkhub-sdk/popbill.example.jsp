@@ -50,7 +50,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>수집 결과 요약정보 조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>count (수집 결과 건수) : <%= result.getCount() %></li>
                     <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>

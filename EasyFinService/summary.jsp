@@ -50,7 +50,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
-            <legend> 조회결과 </legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>count (수집 결과 건수) : <%= result.getCount() %></li>
                 <li>cntAccIn (입금거래 건수) : <%= result.getCntAccIn() %></li>

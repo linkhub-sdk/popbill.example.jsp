@@ -39,7 +39,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>예약팩스전송 취소</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>응답 코드(code) : <%=CheckResponse.getCode()%>
             </li>

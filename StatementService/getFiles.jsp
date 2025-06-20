@@ -43,7 +43,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자명세서 첨부파일 목록확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
 
                 <%
                     for(int i=0; i<attachedFiles.length; i++){

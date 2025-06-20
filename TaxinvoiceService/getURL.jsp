@@ -44,7 +44,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>세금계산서 관련 SSO URL 확인</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>url : <%=url%></li>
             </ul>

@@ -45,7 +45,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>세금계산서 첨부파일 목록확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                     for ( int i = 0; i < attachedFiles.length; i++ ) {
                         AttachedFile attachedFile = attachedFiles[i];

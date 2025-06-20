@@ -46,7 +46,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>세금계산서 메일링크 URL</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>url : <%=url%></li>
             </ul>

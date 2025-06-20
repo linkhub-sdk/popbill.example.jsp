@@ -38,7 +38,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>팩스 전송단가 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>전송단가 : <%=unitCost%></li>
                 </ul>

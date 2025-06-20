@@ -43,7 +43,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>전자명세서 상태/요약 정보 확인</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <%
                 StatementInfo statementInfo = null;
                 for(int i=0; i < statementInfos.length; i++){

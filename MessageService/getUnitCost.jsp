@@ -39,7 +39,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>문자메시지 전송 단가 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>전송 단가 : <%=unitCost%></li>
                 </ul>

@@ -41,7 +41,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팩스전송 전송결과 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <%
             FaxResult faxResult = new FaxResult();
 

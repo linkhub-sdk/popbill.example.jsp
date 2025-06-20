@@ -60,7 +60,7 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>포인트관리</legend>
+        <legend>포인트 관리</legend>
         <ul>
 	        <li><a href="${pageContext.request.contextPath}/CashbillService/getUnitCost.jsp">getUnitCost</a> - 발행 단가 확인</li>
 	        <li><a href="${pageContext.request.contextPath}/CashbillService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>

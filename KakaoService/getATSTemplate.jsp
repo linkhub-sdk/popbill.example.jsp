@@ -41,7 +41,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>알림톡 템플릿 정보 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>templateCode (템플릿 코드) : <%=aTSTemplate.getTemplateCode()%></li>
                 <li>templateName (템플릿 제목) : <%=aTSTemplate.getTemplateName()%></li>

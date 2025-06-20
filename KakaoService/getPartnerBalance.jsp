@@ -36,7 +36,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>파트너 잔여포인트 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>잔여포인트 : <%=remainPoint%></li>
         </ul>

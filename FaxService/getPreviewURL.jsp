@@ -42,7 +42,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>팩스 미리보기 URL 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>URL : <%=url%></li>
         </ul>

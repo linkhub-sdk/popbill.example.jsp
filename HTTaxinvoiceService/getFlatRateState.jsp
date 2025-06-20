@@ -36,7 +36,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>정액제 서비스 상태 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                   <li>referenceID (사업자번호) : <%=flatRateInfo.getReferenceID()%> </li>
                   <li>contractDT (정액제 서비스 시작일시) : <%=flatRateInfo.getContractDT()%> </li>

@@ -36,7 +36,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>080 번호 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <fieldset class="fieldset2">
                     <ul>
                         <li>number (수신거부번호) : <%= checkAutoDeny.getNumber() %></li>

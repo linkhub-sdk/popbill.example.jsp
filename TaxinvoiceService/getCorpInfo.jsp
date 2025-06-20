@@ -36,7 +36,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>회사정보 확인</legend>
+            <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>Ceoname (대표자명) : <%=corpInfo.getCeoname() %> </li>
                     <li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>

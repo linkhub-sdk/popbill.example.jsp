@@ -35,7 +35,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>사업자등록상태조회 (휴폐업조회) 단가 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>조회단가 : <%=unitCost%></li>
                 </ul>

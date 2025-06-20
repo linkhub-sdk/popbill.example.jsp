@@ -45,7 +45,7 @@
     <div id="content">
         <p class="heading1">TaxinvoiceXML</p>
         <fieldset class="fieldset1">
-            <legend>세금계산서 상세정보 확인</legend>
+            <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>code (응답코드) : <%=taxinvoiceXML.getCode() %></li>
                     <li>message (응답메시지) : <%=taxinvoiceXML.getMessage() %></li>

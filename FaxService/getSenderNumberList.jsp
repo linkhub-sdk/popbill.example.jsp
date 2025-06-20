@@ -36,7 +36,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>팩스 발신번호 목록</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                     for ( int i = 0; i < senderNumberList.length; i++ ) {
                         SenderNumber info = senderNumberList[i];

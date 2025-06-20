@@ -59,7 +59,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>무통장 입금신청</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=paymentResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=paymentResponse.getMessage()%></li>

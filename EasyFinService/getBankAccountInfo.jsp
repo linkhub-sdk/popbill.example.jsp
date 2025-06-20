@@ -42,6 +42,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>bankCode (기관코드) : <%=bankAccountInfo.getBankCode() %> </li>
                 <li>accountNumber (계좌번호) : <%=bankAccountInfo.getAccountNumber() %> </li>

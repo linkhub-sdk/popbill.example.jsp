@@ -287,7 +287,7 @@
     <p class="heading1">IssueResponse</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>수정세금계산서 발행 - 기재사항 착오정정(수정분)</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>응답 코드(code) : <%=issueResponse.getCode()%></li>
             <li>응답메시지 (message) : <%=issueResponse.getMessage()%></li>

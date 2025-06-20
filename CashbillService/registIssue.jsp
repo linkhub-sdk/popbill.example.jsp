@@ -127,7 +127,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>현금영수증 즉시발행</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>

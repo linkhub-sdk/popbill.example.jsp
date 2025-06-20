@@ -40,7 +40,7 @@
             <p class="heading1">사업자등록상태조회 (휴폐업조회) API SDK - JSP Example.</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>사업자등록상태조회 (휴폐업조회) - 단건</legend>
+                <legend><%=request.getRequestURI()%></legend>
                     <div class ="fieldset4">
                     <form method= "GET" id="corpnum_form" action="checkCorpNum.jsp">
                         <input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CorpNum" name="CorpNum" value ='<%=corpState != null ? corpState.getCorpNum():""%>' tabindex=1/>

@@ -39,7 +39,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>문서번호 사용여부 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>사용중 여부 : <%=isInUse ? "사용중" : "미 사용중"%></li>
                 </ul>

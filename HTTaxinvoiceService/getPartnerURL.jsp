@@ -41,7 +41,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>파트너 포인트 충전 URL 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>URL : <%=url%></li>
                 </ul>

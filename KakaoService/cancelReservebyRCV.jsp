@@ -42,7 +42,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>예약전송 일부 취소 (접수번호)</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%= CheckResponse.getCode() %></li>
                     <li>응답메시지 (message) : <%= CheckResponse.getMessage() %></li>

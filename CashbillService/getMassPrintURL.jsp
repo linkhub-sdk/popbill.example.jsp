@@ -42,7 +42,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>현금영수증 대량 인쇄 팝업 URL</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>URL : <%=url%></li>
                 </ul>

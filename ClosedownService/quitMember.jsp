@@ -39,7 +39,7 @@
             <p class="heading1">QuitMember</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>연동회원 탈퇴</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=quitResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=quitResponse.getMessage()%></li>

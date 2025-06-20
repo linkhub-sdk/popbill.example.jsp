@@ -36,6 +36,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
+            <legend><%=request.getRequestURI()%></legend>
             <%
                 if ( jobList != null ){
                     for ( int i = 0; i < jobList.length; i++ ) {

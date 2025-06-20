@@ -42,7 +42,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>담당자 정보 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>id (아이디) : <%= contactInfo.getId()%></li>
                     <li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>

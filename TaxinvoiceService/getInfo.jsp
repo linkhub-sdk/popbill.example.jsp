@@ -46,7 +46,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>세금계산서 상태/요약 정보 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <fieldset class="fieldset2">
                     <legend>TaxinvoiceInfo</legend>
                     <ul>

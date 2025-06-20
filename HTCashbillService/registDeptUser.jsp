@@ -42,7 +42,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>부서사용자 계정등록</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>

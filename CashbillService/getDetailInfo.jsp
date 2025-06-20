@@ -40,7 +40,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>현금영수증 상세정보 조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <fieldset class="fieldset2">
                     <legend>Cashbill</legend>
                     <ul>

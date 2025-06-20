@@ -291,7 +291,7 @@
     <p class="heading1">IssueResponse</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>수정세금계산서 발행 - 내국신용장 사후개설(취소분)</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>응답 코드(code) : <%=issueResponse.getCode()%></li>
             <li>응답메시지 (message) : <%=issueResponse.getMessage()%></li>

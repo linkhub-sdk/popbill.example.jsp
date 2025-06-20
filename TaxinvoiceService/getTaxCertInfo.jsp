@@ -36,7 +36,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>공동인증서 정보확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>regDT (등록일시) : <%=taxinvoiceCertificate.getRegDT() %> </li>
             <li>expireDT (만료일시) : <%=taxinvoiceCertificate.getExpireDT() %> </li>

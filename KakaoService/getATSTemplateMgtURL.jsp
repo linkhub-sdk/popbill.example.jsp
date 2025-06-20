@@ -40,7 +40,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>알림톡 템플릿 관리 팝업 URL 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <ul>
             <li>URL : <%=url%>
             </li>

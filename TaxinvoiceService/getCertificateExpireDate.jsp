@@ -36,7 +36,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>공동인증서 만료일시 확인</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>ExpireDate : <%=expireDate %></li>
             </ul>

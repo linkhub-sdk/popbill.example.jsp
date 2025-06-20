@@ -42,7 +42,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>대량발행 접수결과 </legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>code (응답코드) : <%= bulkResult.getCode() %></li>
                     <li>message (응답 메시지) : <%= bulkResult.getMessage() %></li>

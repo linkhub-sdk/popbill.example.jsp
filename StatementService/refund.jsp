@@ -60,7 +60,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>환불 신청</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=checkResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=checkResponse.getMessage()%></li>

@@ -48,7 +48,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>계좌 거래내역 수집 요청</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>jobID (작업아이디) : <%=jobID %> </li>
                 </ul>

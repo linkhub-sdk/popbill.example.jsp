@@ -37,7 +37,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>담당자 목록 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                     <%
                         ContactInfo contactInfo = null;
 

@@ -42,7 +42,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>전자명세서 상태변경 이력 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                         StatementLog statementLog = new StatementLog();
 

@@ -40,7 +40,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>수집 상태 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>jobID (작업아이디) : <%=jobState.getJobID() %> </li>
                     <li>jobState (수집상태) : <%=jobState.getJobState() %> </li>

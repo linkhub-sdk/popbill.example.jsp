@@ -90,7 +90,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>현금영수증 목록 조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>message (응답메시지) : <%= searchResult.getMessage()%></li>

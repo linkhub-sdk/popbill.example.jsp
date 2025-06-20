@@ -44,7 +44,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>세금계산서 상태변경 이력</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                         TaxinvoiceLog taxinvoiceLog = new TaxinvoiceLog();
 

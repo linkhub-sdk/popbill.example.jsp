@@ -39,7 +39,7 @@
             <p class="heading1">GetRefundInfo</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>RefundInfo (환불 신청 상태)</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>reqDT (신청일시) : <%=refundHistory.getReqDT()%></li>
                     <li>requestPoint (환불 신청포인트) : <%=refundHistory.getRequestPoint()%></li>

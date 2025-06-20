@@ -35,7 +35,7 @@
             <p class="heading1">RefundableBalance</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>환불 가능 포인트 조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>환불 가능 포인트 (refundableBalance) : <%=refundableBalance%></li>
                 </ul>

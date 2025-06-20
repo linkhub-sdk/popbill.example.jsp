@@ -36,7 +36,7 @@
         <p class="heading1">Response </p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>알림메일 전송목록 조회</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <%
                     EmailSendConfig emailSendConfig = null;

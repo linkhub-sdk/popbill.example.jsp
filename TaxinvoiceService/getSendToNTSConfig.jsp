@@ -36,7 +36,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>국세청 전송 옵션 설정 상태 확인</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>ntsConfig : <%=ntsConfig%></li>
                     <li>(true)-발행 즉시 전송 (false)-익일 자동 전송</li>

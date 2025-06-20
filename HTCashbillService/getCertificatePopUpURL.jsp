@@ -39,7 +39,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>홈택스수집 인증관리 팝업 URL</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>url : <%=url%> </li>
                 </ul>

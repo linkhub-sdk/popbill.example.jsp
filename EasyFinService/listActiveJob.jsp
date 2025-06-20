@@ -42,7 +42,7 @@
                 for ( int i = 0; i < jobList.length; i++ ) {
         %>
           <fieldset class="fieldset2">
-            <legend>수집 상태 확인</legend>
+              <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>jobID (작업아이디) : <%=jobList[i].getJobID() %> </li>
                 <li>jobState (수집상태) : <%=jobList[i].getJobState() %> </li>

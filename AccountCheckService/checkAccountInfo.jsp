@@ -43,7 +43,7 @@
             <p class="heading1">예금주조회 API SDK - JSP Example.</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>에금주조회 결과</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>bankCode (기관코드) : <%=accountInfo.getBankCode()%></li>
                     <li>accountNumber (계좌번호) : <%=accountInfo.getAccountNumber()%></li>

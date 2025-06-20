@@ -39,7 +39,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>입금신청 정보</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>productType (결제 내용) : <%=paymentHistory.getProductType()%></li>
                 <li>productName (결제 상품명) : <%=paymentHistory.getProductName()%></li>

@@ -41,7 +41,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>메시지 전송결과 조회</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                     for(int i=0; i<sentMessages.length; i++){
                         SentMessage sentMsg = sentMessages[i];

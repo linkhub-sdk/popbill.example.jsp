@@ -36,7 +36,7 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>비즈니스 채널 목록 확인</legend>
+        <legend><%=request.getRequestURI()%></legend>
         <%
             for (int i = 0; i < plusFriendIDs.length; i++) {
         %>

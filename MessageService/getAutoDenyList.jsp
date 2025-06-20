@@ -36,7 +36,7 @@
             <p class="heading1">Response</p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>080 수신거부번호 목록</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <%
                     for ( int i = 0; i < autoDenyList.length; i++ ) {
                         AutoDeny autoDeny = autoDenyList[i];

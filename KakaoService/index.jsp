@@ -78,7 +78,7 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>포인트관리</legend>
+        <legend>포인트 관리</legend>
         <ul>
         	<li><a href="${pageContext.request.contextPath}/KakaoService/getUnitCost.jsp">getUnitCost</a> - 전송 단가 확인</li>
         	<li><a href="${pageContext.request.contextPath}/KakaoService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
@@ -99,7 +99,7 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>회원관리</legend>
+        <legend>회원 관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/KakaoService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
             <li><a href="${pageContext.request.contextPath}/KakaoService/checkID.jsp">checkID</a> - 연동회원 연동회원 아이디 중복 확인</li>

@@ -42,7 +42,7 @@
             <p class="heading1">Response </p>
             <br/>
             <fieldset class="fieldset1">
-                <legend>정액제 해지요청 취소</legend>
+                <legend><%=request.getRequestURI()%></legend>
                 <ul>
                     <li>응답 코드(code) : <%=saveResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>

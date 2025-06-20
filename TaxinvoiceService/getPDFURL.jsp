@@ -47,7 +47,7 @@
         <p class="heading1">Response</p>
         <br/>
         <fieldset class="fieldset1">
-            <legend>세금계산서 PDF 다운로드 URL</legend>
+            <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>url : <%=url%></li>
             </ul>
