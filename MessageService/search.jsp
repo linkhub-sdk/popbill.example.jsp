@@ -44,10 +44,9 @@
     // - 미입력 시 전체조회
     Boolean ReserveYN = false;
 
-    // 개인조회 여부 (false , true 중 택 1)
-    // false = 접수한 문자 전체 조회 (관리자권한)
-    // true = 해당 담당자 계정으로 접수한 문자만 조회 (개인권한)
-    // 미입력시 기본값 false 처리
+    // 사용자권한별 조회
+    // └ true = 팝빌회원 아이디(UserID)로 전송한 문자만 조회
+    // └ false = 전송한 문자 전체 조회 : 기본값
     Boolean SenderOnly = false;
 
     // 페이지 번호
