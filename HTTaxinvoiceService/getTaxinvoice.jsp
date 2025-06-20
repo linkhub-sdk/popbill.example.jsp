@@ -72,7 +72,7 @@
                     <li>invoicerEmail (공급자 이메일) : <%=taxinvoiceInfo.getInvoicerEmail() %> </li>
 
                     <li>invoiceeCorpNum (공급받는자 사업자번호) : <%=taxinvoiceInfo.getInvoiceeCorpNum() %> </li>
-                    <li>invoiceeType (공급받는자 구분) : <%=taxinvoiceInfo.getInvoiceeType() %> </li>
+                    <li>invoiceeType (공급받는자 유형) : <%=taxinvoiceInfo.getInvoiceeType() %> </li>
                     <li>invoiceeMgtKey (공급받는자 문서번호) : <%=taxinvoiceInfo.getInvoiceeMgtKey() %> </li>
                     <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <%=taxinvoiceInfo.getInvoiceeTaxRegID() %> </li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%=taxinvoiceInfo.getInvoiceeCorpName() %> </li>

@@ -13,7 +13,7 @@
 <%
     /*
      * 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
-     * - https://developers.popbill.com/reference/closedown/java/api/member#CheckIsMember
+     * - https://developers.popbill.com/reference/closedown/java/common-api/member#CheckIsMember
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

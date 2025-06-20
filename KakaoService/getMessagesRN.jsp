@@ -51,7 +51,7 @@
             <ul>
                 <li>contentType (카카오톡 유형) : <%=kakaoSentInfo.getContentType()%></li>
                 <li>templateCode (템플릿 코드) : <%=kakaoSentInfo.getTemplateCode()%></li>
-                <li>plusFriendID (카카오톡 채널 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
+                <li>plusFriendID (비즈니스 채널 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
                 <li>sendNum (발신번호) : <%=kakaoSentInfo.getSendNum()%></li>
                 <li>altSubject (대체문자 제목) : <%=kakaoSentInfo.getAltSubject()%></li>
                 <li>altContent (대체문자 내용) : <%=kakaoSentInfo.getAltContent()%></li>

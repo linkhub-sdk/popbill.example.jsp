@@ -40,8 +40,8 @@
         <ul>
             <li>regDT (등록일시) : <%=taxinvoiceCertificate.getRegDT() %> </li>
             <li>expireDT (만료일시) : <%=taxinvoiceCertificate.getExpireDT() %> </li>
-            <li>issuerDN (인증서 발급자 DN) : <%=taxinvoiceCertificate.getIssuerDN() %> </li>
-            <li>subjectDN (등록된 인증서 DN) : <%=taxinvoiceCertificate.getSubjectDN() %> </li>
+            <li>issuerDN (발급자 DN) : <%=taxinvoiceCertificate.getIssuerDN() %> </li>
+            <li>subjectDN (인증서 DN) : <%=taxinvoiceCertificate.getSubjectDN() %> </li>
             <li>issuerName (인증서 종류) : <%=taxinvoiceCertificate.getIssuerName() %> </li>
             <li>oid (OID) : <%=taxinvoiceCertificate.getOid() %> </li>
             <li>regContactName (등록 담당자 성명) : <%=taxinvoiceCertificate.getRegContactName() %> </li>

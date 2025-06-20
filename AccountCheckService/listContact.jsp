@@ -13,7 +13,7 @@
 <%
     /*
      * 연동회원에 추가된 담당자 목록을 확인합니다.
-     * - https://developers.popbill.com/reference/accountcheck/java/api/member#ListContact
+     * - https://developers.popbill.com/reference/accountcheck/java/common-api/member#ListContact
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
@@ -51,8 +51,8 @@
                                 <li>email (이메일) : <%= contactInfo.getEmail()%></li>
                                 <li>tel (연락처) : <%= contactInfo.getTel()%></li>
                                 <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
-                                <li>searchRole (담당자 권한) : <%= contactInfo.getSearchRole()%></li>
-                                <li>mgrYN (관리자 권한여부) : <%= contactInfo.getMgrYN()%></li>
+                                <li>searchRole (권한) : <%= contactInfo.getSearchRole()%></li>
+                                <li>mgrYN (역할) : <%= contactInfo.getMgrYN()%></li>
                                 <li>state (상태) : <%= contactInfo.getState()%></li>
                             </ul>
                     </fieldset>

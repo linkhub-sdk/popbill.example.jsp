@@ -49,7 +49,7 @@
                 <li>templateCode (템플릿 코드) : <%=aTSTemplates[i].getTemplateCode()%></li>
                 <li>templateName (템플릿 제목) : <%=aTSTemplates[i].getTemplateName()%></li>
                 <li>template (템플릿 내용) : <%=aTSTemplates[i].getTemplate()%></li>
-                <li>plusFriendID (카카오톡 채널 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
+                <li>plusFriendID (비즈니스 채널 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
                 <li>ads (광고메시지) : <%=aTSTemplates[i].getAppendix()%></li>
                 <li>appendix (부가메시지) : <%=aTSTemplates[i].getAppendix()%></li>
                 <li>secureYN (보안템플릿 여부) : <%=aTSTemplates[i].getSecureYN()%></li>

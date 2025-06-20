@@ -13,8 +13,8 @@
 
 <%
     /*
-     * 사용자를 연동회원으로 가입처리합니다.
-     * - https://developers.popbill.com/reference/statement/java/api/member#JoinMember
+     * 프로그램 공급사의 고객사를 팝빌 연동회원으로 가입하는 API 입니다.
+     * - https://developers.popbill.com/reference/statement/java/common-api/member#JoinMember
      */
 
     JoinForm joinInfo = new JoinForm();

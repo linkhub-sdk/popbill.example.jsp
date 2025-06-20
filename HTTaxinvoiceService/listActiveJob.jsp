@@ -12,8 +12,7 @@
 
 <%
     /*
-     * 전자세금계산서 매입/매출 내역 수집요청에 대한 상태 목록을 확인합니다.
-     * - 수집 요청 후 1시간이 경과한 수집 요청건은 상태정보가 반환되지 않습니다.
+     * [RequestJob – 수집 요청] API를 호출하고 반환 받은 작업아이디(JobID) 목록의 수집 상태를 확인합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/job#ListActiveJob
      */
 

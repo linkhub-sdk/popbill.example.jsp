@@ -46,8 +46,8 @@
                     <ul>
                         <li>mgtKey (문서번호) : <%=cashbill.getMgtKey() %></li>
                         <li>confirmNum (국세청 승인번호) : <%=cashbill.getConfirmNum() %></li>
-                        <li>orgConfirmNum (당초 승인 현금영수증 국세청 승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
-                        <li>orgTradeDate (당초 승인 현금영수증 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
+                        <li>orgConfirmNum (당초 국세청승인번호) : <%=cashbill.getOrgConfirmNum() %></li>
+                        <li>orgTradeDate (당초 거래일자) : <%=cashbill.getOrgTradeDate() %></li>
                         <li>tradeDate (거래일자) : <%=cashbill.getTradeDate() %></li>
                         <li>tradeDT (거래일시) : <%=cashbill.getTradeDT() %></li>
                         <li>tradeType (문서형태) : <%=cashbill.getTradeType() %></li>

@@ -14,7 +14,7 @@
 <%
     /*
      * 연동회원에 추가된 담당자 정보를 수정합니다.
-     * - https://developers.popbill.com/reference/cashbill/java/api/member#UpdateContact
+     * - https://developers.popbill.com/reference/cashbill/java/common-api/member#UpdateContact
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

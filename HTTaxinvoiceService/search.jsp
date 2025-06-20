@@ -135,7 +135,7 @@
                     <li>invoicerEmail (공급자 이메일) : <%= result.getList().get(i).getInvoicerEmail()  %> </li>
 
                     <li>invoiceeCorpNum (공급받는자 사업자번호) : <%= result.getList().get(i).getInvoiceeCorpNum()  %> </li>
-                    <li>invoiceeType (공급받는자 구분) : <%= result.getList().get(i).getInvoiceeType()  %> </li>
+                    <li>invoiceeType (공급받는자 유형) : <%= result.getList().get(i).getInvoiceeType()  %> </li>
                     <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <%= result.getList().get(i).getInvoiceeTaxRegID()  %> </li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%= result.getList().get(i).getInvoiceeCorpName()  %> </li>
                     <li>invoiceeCEOName (공급받는자 대표자 성명) : <%= result.getList().get(i).getInvoiceeCEOName()  %> </li>

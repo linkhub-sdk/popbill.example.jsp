@@ -14,7 +14,7 @@
 <%
     /*
      * 연동회원의 회사정보를 수정합니다.
-     * - https://developers.popbill.com/reference/fax/java/api/member#UpdateCorpInfo
+     * - https://developers.popbill.com/reference/fax/java/common-api/member#UpdateCorpInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

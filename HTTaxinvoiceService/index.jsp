@@ -10,7 +10,7 @@
     <p class="heading1">팝빌 홈택스수집(전자세금계산서) SDK jsp Example.</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>홈택스 전자세금계산서 매입/매출 내역 수집</legend>
+        <legend>홈택스 수집 요청</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/requestJob.jsp">requestJob</a> - 수집 요청</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getJobState.jsp">getJobState</a> - 수집 상태 확인</li>
@@ -18,52 +18,52 @@
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>홈택스 전자세금계산서 매입/매출 내역 수집 결과 조회</legend>
+        <legend>수집 내역 확인</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/search.jsp">search</a> - 수집 결과 조회</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/summary.jsp">summary</a> - 수집 결과 요약정보 조회</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getTaxinvoice.jsp">getTaxinvoice</a> - 상세정보 확인 - JSON</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getXML.jsp">getXML</a> - 상세정보 확인 - XML</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPopUpURL.jsp">getPopUpURL</a> - 홈택스 전자세금계산서 보기 팝업 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPrintURL.jsp">getPrintURL</a> - 홈택스 전자세금계산서 인쇄 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/search.jsp">search</a> - 수집 내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/summary.jsp">summary</a> - 수집 내역 합계</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getTaxinvoice.jsp">getTaxinvoice</a> - 수집 상세 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getXML.jsp">getXML</a> - 수집 상세 확인 (XML)</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPopUpURL.jsp">getPopUpURL</a> - 전자세금계산서 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPrintURL.jsp">getPrintURL</a> - 전자세금계산서 인쇄 팝업 URL</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>홈택스수집 인증 관리</legend>
+        <legend>홈택스 인증 관리</legend>
         <ul>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스수집 인증 관리 팝업 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 홈택스수집 공동인증서 만료일자 확인</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 홈택스 공동인증서 로그인 테스트</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registDeptUser.jsp">registDeptUser</a> - 부서사용자 계정등록</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkDeptUser.jsp">checkDeptUser</a> - 부서사용자 등록정보 확인</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkLoginDeptUser.jsp">checkLoginDeptUser</a> - 부서사용자 로그인 테스트</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/deleteDeptUser.jsp">deleteDeptUser</a> - 부서사용자 등록정보 삭제</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificatePopUpURL.jsp">getCertificatePopUpURL</a> - 홈택스 인증정보 등록 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCertificateExpireDate.jsp">getCertificateExpireDate</a> - 인증서 만료일자 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkCertValidation.jsp">checkCertValidation</a> - 인증서 유효성 검증</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registDeptUser.jsp">registDeptUser</a> - 부서사용자 계정 등록</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkDeptUser.jsp">checkDeptUser</a> - 부서사용자 등록 여부</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkLoginDeptUser.jsp">checkLoginDeptUser</a> - 부서사용자 유효성 검증</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/deleteDeptUser.jsp">deleteDeptUser</a> - 부서사용자 계정 삭제</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>포인트 관리 / 정액제 신청</legend>
+        <legend>정액제 신청 / 포인트 관리</legend>
         <ul>
         	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getFlatRateState.jsp">getFlatRateState</a> - 정액제 서비스 상태 확인</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getFlatRatePopUpURL.jsp">getFlatRatePopUpURL</a> - 정액제 서비스 신청 URL</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getFlatRatePopUpURL.jsp">getFlatRatePopUpURL</a> - 정액제 신청 팝업 URL</li>
         	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getChargeInfo.jsp">getChargeInfo</a> - 과금정보 확인</li>
         	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getBalance.jsp">getBalance</a> - 연동회원 잔여포인트 확인</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트충전 URL</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/paymentRequest.jsp">PaymentRequest</a> - 무통장 입금신청</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getSettleResult.jsp">GetSettleResult</a> - 무통장 입금신청 정보확인</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPaymentHistory.jsp">GetPaymentHistory</a> - 포인트 결제내역 확인</li>
-        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getUseHistory.jsp">GetUseHistory</a> - 포인트 사용내역 확인</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 URL</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/refund.jsp">Refund</a> - 환불 신청</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getRefundHistory.jsp">GetRefundHistory</a> - 환불 신청내역 확인</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getChargeURL.jsp">getChargeURL</a> - 연동회원 포인트 충전 팝업 URL</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/paymentRequest.jsp">PaymentRequest</a> - 연동회원 무통장 입금신청</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getSettleResult.jsp">GetSettleResult</a> - 연동회원 무통장 입금신청 정보확인</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPaymentHistory.jsp">GetPaymentHistory</a> - 연동회원 포인트 결제내역 확인</li>
+        	<li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getUseHistory.jsp">GetUseHistory</a> - 연동회원 포인트 사용내역 확인</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 팝업 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/refund.jsp">Refund</a> - 연동회원 포인트 환불신청</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getRefundHistory.jsp">GetRefundHistory</a> - 연동회원 포인트 환불내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPartnerBalance.jsp">getPartnerBalance</a> - 파트너 잔여포인트 확인</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트충전 URL</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getPartnerURL.jsp">getPartnerURL</a> - 파트너 포인트 충전 팝업 URL</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getRefundInfo.jsp">GetRefundInfo</a> - 환불 신청 상태 조회</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getRefundableBalance.jsp">GetRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
-        <legend>회원정보</legend>
+        <legend>회원 관리</legend>
         <ul>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkIsMember.jsp">checkIsMember</a> - 연동회원 가입여부 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/checkID.jsp">checkID</a> - 연동회원 아이디 중복 확인</li>
@@ -71,7 +71,7 @@
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/quitMember.jsp">QuitMember</a> - 연동회원 탈퇴</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getCorpInfo.jsp">getCorpInfo</a> - 회사정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/updateCorpInfo.jsp">updateCorpInfo</a> - 회사정보 수정</li>
-            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registContact.jsp">registContact</a> - 담당자 등록</li>
+            <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/registContact.jsp">registContact</a> - 담당자 추가</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/getContactInfo.jsp">GetContactInfo</a> - 담당자 정보 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/listContact.jsp">listContact</a> - 담당자 목록 확인</li>
             <li><a href="${pageContext.request.contextPath}/HTTaxinvoiceService/updateContact.jsp">updateContact</a> - 담당자 정보 수정</li>

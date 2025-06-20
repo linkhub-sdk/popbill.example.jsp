@@ -75,7 +75,7 @@
 
                     <li>invoiceeCorpNum (공급받는자 사업자번호) : <%=taxinvoice.getInvoiceeCorpNum() %></li>
                     <li>invoiceeTaxRegID (공급받는자 종사업장 번호) : <%=taxinvoice.getInvoiceeTaxRegID() %></li>
-                    <li>invoiceeType (공급받는자 구분) : <%=taxinvoice.getInvoiceeType() %></li>
+                    <li>invoiceeType (공급받는자 유형) : <%=taxinvoice.getInvoiceeType() %></li>
                     <li>invoiceeMgtKey (공급받는자 문서번호) : <%=taxinvoice.getInvoiceeMgtKey() %></li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%=taxinvoice.getInvoiceeCorpName() %></li>
                     <li>invoiceeCEOName (공급받는자 대표자명) : <%=taxinvoice.getInvoiceeCEOName() %></li>

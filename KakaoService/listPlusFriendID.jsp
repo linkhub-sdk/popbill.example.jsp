@@ -12,7 +12,7 @@
 
 <%
     /*
-     * 팝빌에 등록한 연동회원의 카카오톡 채널 목록을 확인합니다.
+     * 팝빌에 등록한 연동회원의 비즈니스 채널 목록을 확인합니다.
      * - https://developers.popbill.com/reference/kakaotalk/java/api/channel#ListPlusFriendID
      */
 
@@ -36,15 +36,15 @@
     <p class="heading1">Response</p>
     <br/>
     <fieldset class="fieldset1">
-        <legend>카카오톡 채널 목록 확인</legend>
+        <legend>비즈니스 채널 목록 확인</legend>
         <%
             for (int i = 0; i < plusFriendIDs.length; i++) {
         %>
         <fieldset class="fieldset2">
-            <legend>카카오톡 채널 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
+            <legend>비즈니스 채널 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
             <ul>
-                <li>plusFriendID (카카오톡 채널 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
-                <li>plusFriendName (카카오톡 채널 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
+                <li>plusFriendID (비즈니스 채널 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
+                <li>plusFriendName (비즈니스 채널 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
                 <li>state (채널 상태) : <%=plusFriendIDs[i].getState()%></li>
                 <li>stateDT (채널 상태 일시) : <%=plusFriendIDs[i].getStateDT()%></li>
