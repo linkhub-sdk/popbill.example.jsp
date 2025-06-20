@@ -92,9 +92,9 @@
             <fieldset class="fieldset3">
                 <legend>전송결과 정보 배열 [<%= j + 1 %>]</legend>
                 <ul>
-                    <li>state (전송 상태코드) : <%=msgs.get(j).getState()%></li>
+                    <li>state (상태코드) : <%=msgs.get(j).getState()%></li>
                     <li>sendDT (전송일시) : <%=msgs.get(j).getSendDT()%></li>
-                    <li>result (전송 결과코드) : <%=msgs.get(j).getResult()%></li>
+                    <li>result (카카오 결과코드) : <%=msgs.get(j).getResult()%></li>
                     <li>resultDT (전송결과 수신일시) : <%=msgs.get(j).getResultDT()%></li>
                     <li>contentType (카카오톡 유형) : <%=msgs.get(j).getContentType()%></li>
                     <li>receiveNum (수신번호) : <%=msgs.get(j).getReceiveNum()%></li>

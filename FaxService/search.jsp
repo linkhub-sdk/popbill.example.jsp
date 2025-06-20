@@ -95,8 +95,8 @@
                 <fieldset class="fieldset2">
                     <legend>개별 전송 내역 : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
                     <ul>
-                        <li>state (전송상태 코드) : <%=faxResult.getState()%></li>
-                        <li>result (전송결과 코드) : <%=faxResult.getResult()%></li>
+                        <li>state (상태코드) : <%=faxResult.getState()%></li>
+                        <li>result (결과코드) : <%=faxResult.getResult()%></li>
                         <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                         <li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
                         <li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>

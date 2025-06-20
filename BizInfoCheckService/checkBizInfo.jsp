@@ -64,8 +64,8 @@
 				<li>enAddr (영문주소) : <%=bizInfo.getEnAddr()%></li>
 				<li>bizClass (업종) : <%=bizInfo.getBizClass()%></li>
 				<li>bizType (업태) : <%=bizInfo.getBizType()%></li>
-				<li>result (결과코드) : <%=bizInfo.getResult()%></li>
-				<li>resultMessage (결과메시지) : <%=bizInfo.getResultMessage()%></li>
+				<li>result (상태코드) : <%=bizInfo.getResult()%></li>
+				<li>resultMessage (상태메시지) : <%=bizInfo.getResultMessage()%></li>
 				<li>closeDownTaxType (사업자과세유형) : <%=bizInfo.getCloseDownTaxType()%></li>
 				<li>closeDownTaxTypeDate (과세유형전환일자):<%=bizInfo.getCloseDownTaxTypeDate()%></li>
 				<li>closeDownState (휴폐업상태) : <%=bizInfo.getCloseDownState()%></li>

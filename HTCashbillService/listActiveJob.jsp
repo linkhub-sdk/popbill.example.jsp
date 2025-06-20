@@ -50,7 +50,7 @@
                     <li>queryDateType (일자유형) : <%=jobList[i].getQueryDateType() %> </li>
                     <li>queryStDate (시작일자) : <%=jobList[i].getQueryStDate() %> </li>
                     <li>queryEnDate (종료일자) : <%=jobList[i].getQueryEnDate() %> </li>
-                    <li>errorCode (오류코드) : <%=jobList[i].getErrorCode() %> </li>
+                    <li>errorCode (수집 결과코드) : <%=jobList[i].getErrorCode() %> </li>
                     <li>errorReason (오류메시지) : <%=jobList[i].getErrorReason() %> </li>
                     <li>jobStartDT (작업 시작일시) : <%=jobList[i].getJobStartDT() %> </li>
                     <li>jobEndDT (작업 종료일시) : <%=jobList[i].getJobEndDT() %> </li>

@@ -100,9 +100,9 @@
         <fieldset class="fieldset3">
             <legend>카카오톡 전송내역 조회 결과 : [ <%=i + 1%> / <%=searchResult.getList().size() %> ]</legend>
             <ul>
-                <li>state (전송 상태코드) : <%=sentMsg.getState()%></li>
+                <li>state (상태코드) : <%=sentMsg.getState()%></li>
                 <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
-                <li>result (전송 결과코드) : <%=sentMsg.getResult()%></li>
+                <li>result (카카오 결과코드) : <%=sentMsg.getResult()%></li>
                 <li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
                 <li>contentType (카카오톡 유형) : <%=sentMsg.getContentType()%></li>
                 <li>receiveNum (수신번호) : <%=sentMsg.getReceiveNum()%></li>
