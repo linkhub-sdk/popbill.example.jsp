@@ -56,6 +56,9 @@
                 <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_one.jsp">sendFMS</a> - 친구톡 이미지 단건 전송</li>
                 <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_same.jsp">sendFMS</a> - 친구톡 이미지 동일내용 대량전송</li>
                 <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_multi.jsp">sendFMS</a> - 친구톡 이미지 개별내용 대량전송</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_one_binary.jsp">sendFMSBinary</a> - 친구톡 이미지 단건 전송 (Binary)</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_same_binary.jsp">sendFMSBinary</a> - 친구톡 이미지 동일내용 대량전송 (Binary)</li>
+                <li><a href="${pageContext.request.contextPath}/KakaoService/sendFMS_multi_binary.jsp">sendFMSBinary</a> - 친구톡 이미지 개별내용 대량전송 (Binary)</li>
             </ul>
         </fieldset>
         <fieldset class="fieldset2">

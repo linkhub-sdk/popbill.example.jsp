@@ -26,6 +26,8 @@
             <li><a href="${pageContext.request.contextPath}/MessageService/sendLMS_Multi.jsp">sendLMS</a> - 장문 전송 [대량]</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendMMS.jsp">sendMMS</a> - 포토 전송</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi.jsp">sendMMS</a> - 포토 전송 [대량]</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_binary.jsp">sendMMSBinary</a> - 포토 전송 (Binary)</li>
+            <li><a href="${pageContext.request.contextPath}/MessageService/sendMMS_Multi_binary.jsp">sendMMSBinary</a> - 포토 전송 [대량] (Binary)</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendXMS.jsp">sendXMS</a> - 단문/장문 자동인식 전송</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/sendXMS_Multi.jsp">sendXMS</a> - 단문/장문 자동인식 전송 [대량]</li>
             <li><a href="${pageContext.request.contextPath}/MessageService/getMessages.jsp">getMessages</a> - 전송내역 확인</li>
