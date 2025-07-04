@@ -62,7 +62,7 @@
                     <li>accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
                     <li>identityNumType (등록번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
                     <li>identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
-                    <li>checkDate (확인일자) : <%=depositorCheckInfo.getCheckDate()%></li>
+                    <li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
                     <li>result (상태코드) : <%=depositorCheckInfo.getResult()%></li>
                     <li>resultMessage (상태메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
                     <li>checkDT (확인일시) : <%=depositorCheckInfo.getCheckDT()%></li>
