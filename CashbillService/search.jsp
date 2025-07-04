@@ -117,12 +117,18 @@
                         <li>tradeOpt (거래유형) : <%= cashbillInfo.getTradeOpt()%></li>
                         <li>taxationType (과세형태) : <%= cashbillInfo.getTaxationType()%></li>
                         <li>totalAmount (합계금액) : <%= cashbillInfo.getTotalAmount()%></li>
+                        <li>supplyCost (공급가액) : <%= cashbillInfo.getSupplyCost()%></li>
+                        <li>tax (부가세) : <%= cashbillInfo.getTax()%></li>
+                        <li>serviceFee (봉사료) : <%= cashbillInfo.getServiceFee()%></li>
                         <li>issueDT (발행일시) : <%= cashbillInfo.getIssueDT()%></li>
                         <li>regDT (등록일시) : <%= cashbillInfo.getRegDT()%></li>
                         <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
                         <li>stateDT (상태변경일시) : <%= cashbillInfo.getStateDT()%></li>
                         <li>identityNum (거래처 식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
                         <li>itemName (주문 상품명) : <%= cashbillInfo.getItemName()%></li>
+                        <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
+                        <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
+                        <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>
                         <li>customerName (주문자명) : <%= cashbillInfo.getCustomerName()%></li>
                         <li>confirmNum (국세청 승인번호) : <%= cashbillInfo.getConfirmNum()%></li>
                         <li>orgConfirmNum (당초 국세청승인번호) : <%= cashbillInfo.getOrgConfirmNum()%></li>
@@ -133,12 +139,6 @@
                         <li>ntsresultMessage (결과메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
                         <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
                         <li>interOPYN (연동문서 여부) : <%= cashbillInfo.isInterOPYN()%></li>
-                        <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
-                        <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>
-                        <li>supplyCost (공급가액) : <%= cashbillInfo.getSupplyCost()%></li>
-                        <li>tax (부가세) : <%= cashbillInfo.getTax()%></li>
-                        <li>serviceFee (봉사료) : <%= cashbillInfo.getServiceFee()%></li>
-                        <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
                     </ul>
                 </fieldset>
                 <%
