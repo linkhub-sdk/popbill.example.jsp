@@ -32,7 +32,7 @@
     // 계좌비밀번호
     bankInfo.setAccountPWD("");
 
-    // 계좌유형, "법인" 또는 "개인" 입력
+    // 계좌유형, "법인" / "개인" 중 택 1
     bankInfo.setAccountType("");
 
     // 예금주 식별정보 ('-' 제외)

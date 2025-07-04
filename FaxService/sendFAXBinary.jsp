@@ -36,18 +36,11 @@
     // 발신자명
     String senderName = "발신자명";
 
-    // 수신자명
-    String receiveName = "수신자명";
-
     // 수신 팩스번호
     String receiveNum = "070111222";
 
-    // 예약전송일시, null인 경우 즉시전송
-    Date reserveDT = null;
-    // String reserveDTtxt = "20180726120000";
-    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    // reserveDT = formatter.parse(reserveDTtxt);
-
+    // 수신자명
+    String receiveName = "수신자명";
 
     // 전송할 File InputStream 생성을 위한 샘플코드.
     File file = new File(application.getRealPath("/resources/test.jpg"));
@@ -69,6 +62,12 @@
     // 파일 InputStream
     uf.fileData = targetStream;
     fileList[0] = uf;
+
+    // 예약전송일시, null인 경우 즉시전송
+    Date reserveDT = null;
+    // String reserveDTtxt = "20180726120000";
+    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+    // reserveDT = formatter.parse(reserveDTtxt);
 
     // 광고팩스 전송여부 , true / false 중 택 1
     // └ true = 광고 , false = 일반

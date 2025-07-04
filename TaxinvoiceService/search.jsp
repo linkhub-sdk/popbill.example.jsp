@@ -22,8 +22,11 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 일자 유형 ("R" , "W" , "I" 중 택 1)
-    // └ R = 등록일자 , W = 작성일자 , I = 발행일자
+    // 세금계산서 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
+    MgtKeyType mgtKeyType = MgtKeyType.SELL;
+
+    // 일자유형 ("R" , "W" , "I" 중 택 1)
+    // - R = 등록일자 , W = 작성일자 , I = 발행일자
     String DType = "W";
 
     // 시작일자, 날짜형식(yyyyMMdd)
@@ -32,12 +35,12 @@
     // 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20230131";
 
-    // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
+    // 세금계산서 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
     // - 미입력시 전체조회
     String[] State = {"3**", "6**"};
 
-    // 문서 유형 배열 ("N" , "M" 중 선택, 다중 선택 가능)
-    // - N = 일반 세금계산서 , M = 수정 세금계산서
+    // 문서유형 배열 ("N" , "M" 중 선택, 다중 선택 가능)
+    // - N = 일반세금계산서 , M = 수정세금계산서
     // - 미입력시 전체조회
     String[] Type = {"N", "M"};
 
@@ -51,16 +54,6 @@
     // - 미입력시 전체조회
     String[] IssueType = {"N", "R", "T"};
 
-    // 등록유형 배열 ("P" , "H" 중 선택, 다중 선택 가능)
-    // - P = 팝빌, H = 홈택스 또는 외부ASP
-    // - 미입력시 전체조회
-    String[] RegType = {"P", "H"};
-
-    // 공급받는자 휴폐업상태 배열 ("N" , "0" , "1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
-    // - N = 미확인 , 0 = 미등록 , 1 = 사업 , 2 = 폐업 , 3 = 휴업 , 4 = 확인실패
-    // - 미입력시 전체조회
-    String[] CloseDownState = {"N", "0", "1", "2", "3"};
-
     // 지연발행 여부 (null , true , false 중 택 1)
     // - null = 전체조회 , true = 지연발행 , false = 정상발행
     Boolean LateOnly = null;
@@ -68,7 +61,7 @@
     // 종사업장번호의 주체 ("S" , "B" , "T" 중 택 1)
     // └ S = 공급자 , B = 공급받는자 , T = 수탁자
     // - 미입력시 전체조회
-    String TaxRegIDType = "S";
+    String TaxRegIDType = "";
 
     // 종사업장번호
     // 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
@@ -80,35 +73,45 @@
     String TaxRegIDYN = null;
 
     // 거래처 상호 / 사업자번호 (사업자) / 주민등록번호 (개인) / "9999999999999" (외국인) 중 검색하고자 하는 정보 입력
-    // - 사업자번호 / 주민등록번호는 하이픈('-')을 제외한 숫자만 입력
+    // └ 사업자번호 / 주민등록번호는 하이픈('-')을 제외한 숫자만 입력
     // - 미입력시 전체조회
     String QString = "";
 
-    // 문서번호 또는 국세청 승인번호
-    // - 미입력시 전체조회
-    String MgtKey = "";
-
-    // 페이지번호
+    // 페이지 번호
     int Page = 1;
 
-    // 페이지당 검색개수, 최대 1000건
-    int PerPage = 30;
+    // 페이지당 목록개수
+    int PerPage = 20;
 
     // 정렬방향, A-오름차순, D-내림차순
     String Order = "D";
 
     // 연동문서 여부 (null , "0" , "1" 중 택 1)
-    // - null = 전체조회 , 0 = 일반문서 , 1 = 연동문서
-    // - 일반문서 : 세금계산서 작성 시 API가 아닌 팝빌 사이트를 통해 등록한 문서
-    // - 연동문서 : 세금계산서 작성 시 API를 통해 등록한 문서
+    // └ null = 전체조회 , 0 = 일반문서 , 1 = 연동문서
+    // - 일반문서 : 팝빌 사이트를 통해 저장 또는 발행한 세금계산서
+    // - 연동문서 : 팝빌 API를 통해 저장 또는 발행한 세금계산서
     String InterOPYN = null;
+
+    // 등록유형 배열 ("P" , "H" 중 선택, 다중 선택 가능)
+    // - P = 팝빌에서 등록 , H = 홈택스 또는 외부ASP 등록
+    // - 미입력시 전체조회
+    String[] RegType = {"P", "H"};
+
+    // 공급받는자 휴폐업상태 배열 ("N" , "0" , "1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
+    // - N = 미확인 , 0 = 미등록 , 1 = 사업 , 2 = 폐업 , 3 = 휴업 , 4 = 확인실패
+    // - 미입력시 전체조회
+    String[] CloseDownState = {"N", "0", "1", "2", "3"};
+
+    // 문서번호 또는 국세청 승인번호 조회
+    // - 미입력시 전체조회
+    String MgtKey = "";
 
     TISearchResult searchResult = new TISearchResult();
 
     String UserID = "testkorea";
 
     try {
-        searchResult = taxinvoiceService.Search(testCorpNum, MgtKeyType.SELL, DType,
+        searchResult = taxinvoiceService.Search(testCorpNum, mgtKeyType, DType,
                 SDate, EDate, State, Type, TaxType, IssueType, LateOnly, TaxRegIDType, TaxRegID,
                 TaxRegIDYN, QString, Page, PerPage, Order, InterOPYN, RegType, CloseDownState, MgtKey, UserID);
 

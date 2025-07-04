@@ -67,14 +67,14 @@
     String title = "팩스재전송 동보제목";
 
     // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
-    String originalFAXrequestNum = "20221007-request";
+    String orgRequestNum = "20221007-request";
 
     String receiptNum = null;
 
     try {
 
         receiptNum = faxService.resendFAXRN(testCorpNum, requestNum, sendNum, senderName,
-            receivers, reserveDT, testUserID, title, originalFAXrequestNum);
+            receivers, reserveDT, testUserID, title, orgRequestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

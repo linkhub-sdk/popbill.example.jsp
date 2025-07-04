@@ -25,10 +25,10 @@
     // └ R = 등록일자 , T = 거래일자 , I = 발행일자
     String DType = "T";
 
-    // 시작일자, 날짜형태(yyyyMMdd)
+    // 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20230102";
 
-    // 종료일자, 날짜형태(yyyyMMdd)
+    // 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20230131";
 
     // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
@@ -38,39 +38,39 @@
     // 문서형태 배열 ("N" , "C" 중 선택, 다중 선택 가능)
     // - N = 일반 현금영수증 , C = 취소 현금영수증
     // - 미입력시 전체조회
-    String[] TradeType = {"N", "C"};
+    String[] TradeType = { "N", "C" };
 
     // 거래구분 배열 ("P" , "C" 중 선택, 다중 선택 가능)
     // - P = 소득공제용 , C = 지출증빙용
     // - 미입력시 전체조회
-    String[] TradeUsage = {"P", "C"};
+    String[] TradeUsage = { "P", "C" };
 
     // 거래유형 배열 ("N" , "B" , "T" 중 선택, 다중 선택 가능)
     // - N = 일반 , B = 도서공연 , T = 대중교통
     // - 미입력시 전체조회
-    String[] TradeOpt = {"N", "B", "T"};
+    String[] TradeOpt = { "N", "B", "T" };
 
     // 과세형태 배열 ("T" , "N" 중 선택, 다중 선택 가능)
     // - T = 과세 , N = 비과세
     // - 미입력시 전체조회
-    String[] TaxationType = {"T", "N"};
+    String[] TaxationType = { "T", "N" };
 
     // 식별번호 조회 (미기재시 전체조회)
     String QString = "";
 
-    // 가맹점 종사업장 번호
-    // └ 다수건 검색시 콤마(",")로 구분. 예) "1234,1000"
-    // └ 미입력시 전제조회
-    String FranchiseTaxRegID ="";
-
     // 페이지 번호
     int Page = 1;
 
-    // 페이지당 검색개수, 최대 1000개
+    // 페이지당 목록개수, 최대 1000건
     int PerPage = 20;
 
-    // 정렬방향, D-내림차순, A-오름차순
+    // 정렬방향, A-오름차순, D-내림차순
     String Order = "D";
+
+    // 가맹점 종사업장 번호
+    // └ 다수건 검색시 콤마(",")로 구분. 예) "1234,1000"
+    // └ 미입력시 전제조회
+    String FranchiseTaxRegID = "";
 
     CBSearchResult searchResult = null;
 

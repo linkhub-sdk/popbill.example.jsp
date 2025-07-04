@@ -58,16 +58,10 @@
     // 예약일시 (작성형식 : yyyyMMddHHmmss)
     String sndDT = "";
 
-    // 팝빌회원 아이디
-    String testUserID = null;
-
     // 전송요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
-
-    // 접수번호
-    String receiptNum = null;
 
     // 알림톡 버튼정보를 템플릿 신청 시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
     KakaoButton[] btns = null;
@@ -82,6 +76,12 @@
     // button.setU2("https://www.popbill.com/"); // 버튼링크2
     // button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
     // btns[0] = button;
+
+    // 팝빌회원 아이디
+    String testUserID = null;
+    
+    // 접수번호
+    String receiptNum = null;
 
     try {
 

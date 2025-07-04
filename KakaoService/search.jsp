@@ -60,11 +60,11 @@
     // └ D = 내림차순(기본값) , A = 오름차순
     String Order = "D";
 
-    String userID = "testkorea";
-
     // 조회하고자 하는 수신자명
     // - 미입력시 전체조회
     String QString = "";
+
+    String userID = "testkorea";
 
     KakaoSearchResult searchResult = null;
 

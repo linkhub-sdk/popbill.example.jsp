@@ -22,9 +22,6 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
-
     // 발신번호
     String sender = "07043042991";
 
@@ -62,6 +59,9 @@
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
+
+    // 팝빌회원 아이디
+    String testUserID = "testkorea";
 
     String receiptNum = null;
 

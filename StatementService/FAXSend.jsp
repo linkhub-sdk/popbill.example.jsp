@@ -27,68 +27,71 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 발신번호
-    String sendNum = "070-4304-2991";
-
-    // 수신팩스번호
-    String receiveNum = "070-111-222";
-
-
-    /***************************************************************************
-     *                               전자명세서 정보
-     ****************************************************************************/
-
+    // 전자명세서 정보 객체
     Statement statement = new Statement();
 
-    // 작성일자, 날짜형식(yyyyMMdd)
-    statement.setWriteDate("20220218");
-
-    // {영수, 청구, 없음} 중 기재
-    statement.setPurposeType("영수");
-
-    // 과세형태, {과세, 영세, 면세} 중 기재
-    statement.setTaxType("과세");
-
-    // 맞춤양식코드, 미기재시 기본양식으로 처리
-    statement.setFormCode("");
-
-    // 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+    // 명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
     statement.setMgtKey("20230102-JSP003");
 
+    // 맞춤양식코드, 미기재시 기본양식으로 처리
+    statement.setFormCode("");
 
-    /***************************************************************************
-     *                               발신자 정보
-     ****************************************************************************/
+    // 작성일자, 형태 yyyyMmdd
+    statement.setWriteDate("20220218");
+
+    // {과세, 영세, 면세} 중 기재
+    statement.setTaxType("과세");
+
+    // {영수, 청구, 없음} 중 기재
+    statement.setPurposeType("영수");
+
+    // 기재상 일련번호 항목
+    statement.setSerialNum("123");
+
+    // 세액 합계
+    statement.setTaxTotal("40000");
+
+    // 공급가액 합계
+    statement.setSupplyCostTotal("400000");
+
+    // 합계금액. 공급가액 + 세액
+    statement.setTotalAmount("440000");
+
+    // 기재상 비고 항목
+    statement.setRemark1("비고1");
+    statement.setRemark2("비고2");
+    statement.setRemark3("비고3");
+
+    /*********************************************************************
+     *                                발신자 정보
+     *********************************************************************/
 
     // 발신자 사업자번호
-    statement.setSenderCorpNum(testCorpNum);
+    statement.setSenderCorpNum("1234567890");
+
+    // 발신자 종사업장 식별번호, 숫자 4자리, 필요시 기재
+    statement.setSenderTaxRegID("");
 
     // 발신자 상호
     statement.setSenderCorpName("발신자 상호");
 
-    // 발신자 주소
-    statement.setSenderAddr("발신자 주소");
-
     // 발신자 대표자 성명
     statement.setSenderCEOName("발신자 대표자 성명");
 
-    // 발신자 종사업장 식별번호
-    statement.setSenderTaxRegID("");
-
-    // 발신자 종목
-    statement.setSenderBizClass("종목");
+    // 발신자 주소
+    statement.setSenderAddr("발신자 주소");
 
     // 발신자 업태
     statement.setSenderBizType("업태");
 
+    // 발신자 종목
+    statement.setSenderBizClass("업종");
+
     // 발신자 담당자 성명
     statement.setSenderContactName("발신자 담당자 성명");
-
-    // 발신자 담당자 메일주소
-    statement.setSenderEmail("test@test.com");
 
     // 발신자 담당자 연락처
     statement.setSenderTEL("070-7070-0707");
@@ -96,10 +99,12 @@
     // 발신자 담당자 휴대폰번호
     statement.setSenderHP("010-000-2222");
 
+    // 발신자 담당자 메일주소
+    statement.setSenderEmail("test@test.com");
 
-    /***************************************************************************
-     *                             수신자 정보
-     ****************************************************************************/
+    /*********************************************************************
+     *                            수신자 정보
+     *********************************************************************/
 
     // 수신자 사업자번호
     statement.setReceiverCorpNum("8888888888");
@@ -113,82 +118,19 @@
     // 수신자 주소
     statement.setReceiverAddr("수신자 주소");
 
-    // 수신자 종목
-    statement.setReceiverBizClass("수신자 업종");
-
     // 수신자 업태
     statement.setReceiverBizType("수신자 업태");
+
+    // 수신자 종목
+    statement.setReceiverBizClass("수신자 종목");
 
     // 수신자 담당자 성명
     statement.setReceiverContactName("수신자 담당자 성명");
 
-    // 수신자 담당자 메일주소
+    // 수신자 메일주소
+    // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
+    // 실제 거래처의 메일주소가 기재되지 않도록 주의
     statement.setReceiverEmail("test@receiver.com");
-
-    // 수신자 담당자 연락처
-    statement.setReceiverTEL("010-111-1111");
-
-    // 수신자 담당자 휴대폰번호
-    statement.setReceiverHP("010-1234-1234");
-
-
-    /***************************************************************************
-     *                               전자명세서 기재정보
-     ****************************************************************************/
-
-    // 공급가액 합계
-    statement.setSupplyCostTotal("400000");
-
-    // 세액 합계
-    statement.setTaxTotal("40000");
-
-    // 합계금액.  공급가액 + 세액
-    statement.setTotalAmount("440000");
-
-    // 기재상 일련번호 항목
-    statement.setSerialNum("123");
-
-    // 기재상 비고 항목
-    statement.setRemark1("비고1");
-    statement.setRemark2("비고2");
-    statement.setRemark3("비고3");
-
-    // 사업자등록증 이미지 첨부여부  (true / false 중 택 1)
-    // └ true = 첨부 , false = 미첨부(기본값)
-    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
-    statement.setBusinessLicenseYN(false);
-
-    // 통장사본 이미지 첨부여부  (true / false 중 택 1)
-    // └ true = 첨부 , false = 미첨부(기본값)
-    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
-    statement.setBankBookYN(false);
-
-
-    // 상세항목(품목) 배열
-    statement.setDetailList(new ArrayList<StatementDetail>());
-
-    StatementDetail detail = new StatementDetail();
-
-    detail.setSerialNum((short) 1);     // 일련번호, 1부터 순차기재
-    detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20220218");   // 거래일자
-    detail.setQty("1");                 // 수량
-    detail.setSupplyCost("200000");     // 공급가액
-    detail.setTax("20000");             // 세액
-
-    statement.getDetailList().add(detail);
-
-    detail = new StatementDetail();     // 상세항목(품목) 배열
-
-    detail.setSerialNum((short) 2);     // 일련번호 1부터 순차기재
-    detail.setItemName("품명");         // 품목명
-    detail.setPurchaseDT("20220218");   // 거래일자
-    detail.setQty("1");                 // 수량
-    detail.setSupplyCost("200000");     // 공급가액
-    detail.setTax("20000");             // 세액
-
-    statement.getDetailList().add(detail);
-
 
     Map<String, String> propertyBag = new HashMap<String, String>();
 
@@ -197,6 +139,49 @@
     propertyBag.put("CBalance", "20000");           // 현잔액
 
     statement.setPropertyBag(propertyBag);
+
+    // 사업자등록증 이미지 첨부여부 (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    statement.setBusinessLicenseYN(false);
+
+    // 통장사본 이미지 첨부여부 (true / false 중 택 1)
+    // └ true = 첨부 , false = 미첨부(기본값)
+    // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
+    statement.setBankBookYN(false);
+
+    /*********************************************************************
+     *                            전자명세서 품목항목
+     *********************************************************************/
+
+    statement.setDetailList(new ArrayList<StatementDetail>());
+
+    StatementDetail detail = new StatementDetail();    // 상세항목(품목) 배열
+
+    detail.setSerialNum((short) 1);                    // 일련번호, 1부터 순차기재
+    detail.setPurchaseDT("20230102");                  // 거래일자
+    detail.setItemName("품명");                        // 품목명
+    detail.setQty("1");                                // 수량
+    detail.setSupplyCost("200000");                    // 공급가액
+    detail.setTax("20000");                            // 세액
+
+    statement.getDetailList().add(detail);
+
+    detail = new StatementDetail();                    // 상세항목(품목) 배열
+    detail.setSerialNum((short) 2);                    // 일련번호 1부터 순차기재
+    detail.setPurchaseDT("20230102");                  // 거래일자
+    detail.setItemName("품명");                        // 품목명
+    detail.setQty("1");                                // 수량
+    detail.setSupplyCost("200000");                    // 공급가액
+    detail.setTax("20000");                            // 세액
+
+    statement.getDetailList().add(detail);
+
+    // 팩스전송 발신번호
+    String sendNum = "07043042991";
+
+    // 수신팩스번호
+    String receiveNum = "00111222";
 
     String receiptNum = null;
 

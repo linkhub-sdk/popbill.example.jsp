@@ -37,15 +37,39 @@
      * 수정세금계산서 정보 (수정세금계산서 작성시 기재)
      * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice]
      *********************************************************************/
+
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
     taxinvoice.setModifyCode((short) 2);
 
     // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
     taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
 
+    // 발행형태, [정발행, 역발행, 위수탁] 중 기재
+    taxinvoice.setIssueType("정발행");
+
+    // 과세형태, [과세, 영세, 면세] 중 기재
+    taxinvoice.setTaxType("과세");
+
+    // 과금방향, [정과금, 역과금] 중 선택기재
+    // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
+    // -"역과금"은 역발행 세금계산서 발행 시에만 이용가능
+    taxinvoice.setChargeDirection("정과금");
+
+    // 일련번호
+    taxinvoice.setSerialNum("123");
+
+    // 책번호 '권' 항목, 최대값 32767
+    taxinvoice.setKwon((short) 1);
+
+    // 책번호 '호' 항목, 최대값 32767
+    taxinvoice.setHo((short) 1);
+
     // 작성일자, 날짜형식(yyyyMMdd)
     // 공급가액 변동이 발생한 날
     taxinvoice.setWriteDate("20230207");
+
+    // [영수, 청구, 없음] 중 기재
+    taxinvoice.setPurposeType("영수");
 
     // 공급가액 합계
     taxinvoice.setSupplyCostTotal("-20000");
@@ -56,27 +80,30 @@
     // 합계금액, 공급가액 + 세액
     taxinvoice.setTotalAmount("-22000");
 
+    // 현금
+    taxinvoice.setCash("");
+
+    // 수표
+    taxinvoice.setChkBill("");
+
+    // 외상미수금
+    taxinvoice.setCredit("");
+
+    // 어음
+    taxinvoice.setNote("");
+
     // 비고
     // 공급가액 변동으로 인한 수정 세금계산서 작성 시, 원본 세금계산서 작성일자 기재 필수
     taxinvoice.setRemark1("20230207");
-
-    // 과금방향, [정과금, 역과금] 중 선택기재
-    // └ 정과금 = 공급자 과금 , 역과금 = 공급받는자 과금
-    // -"역과금"은 역발행 세금계산서 발행 시에만 이용가능
-    taxinvoice.setChargeDirection("정과금");
-
-    // 발행형태, [정발행, 역발행, 위수탁] 중 기재
-    taxinvoice.setIssueType("정발행");
-
-    // [영수, 청구, 없음] 중 기재
-    taxinvoice.setPurposeType("영수");
-
-    // 과세형태, [과세, 영세, 면세] 중 기재
-    taxinvoice.setTaxType("과세");
+    taxinvoice.setRemark2("비고2");
+    taxinvoice.setRemark3("비고3");
 
     /**********************************************************************
      * 공급자 정보
      *********************************************************************/
+
+    // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+    taxinvoice.setInvoicerMgtKey("20230102-BOOT001");
 
     // 공급자 사업자번호
     taxinvoice.setInvoicerCorpNum(CorpNum);
@@ -87,32 +114,29 @@
     // 공급자 상호
     taxinvoice.setInvoicerCorpName("공급자 상호");
 
-    // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20230102-BOOT001");
-
     // 공급자 대표자 성명
     taxinvoice.setInvoicerCEOName("공급자 대표자 성명");
 
     // 공급자 주소
     taxinvoice.setInvoicerAddr("공급자 주소");
 
-    // 공급자 종목
-    taxinvoice.setInvoicerBizClass("공급자 종목");
-
     // 공급자 업태
     taxinvoice.setInvoicerBizType("공급자 업태,업태2");
 
+    // 공급자 종목
+    taxinvoice.setInvoicerBizClass("공급자 종목");
+
     // 공급자 담당자 성명
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
-
-    // 공급자 담당자 메일주소
-    taxinvoice.setInvoicerEmail("test@test.com");
 
     // 공급자 담당자 연락처
     taxinvoice.setInvoicerTEL("070-7070-0707");
 
     // 공급자 담당자 휴대폰번호
     taxinvoice.setInvoicerHP("010-000-2222");
+
+    // 공급자 담당자 메일주소
+    taxinvoice.setInvoicerEmail("test@test.com");
 
     // 발행 안내 문자 전송여부 (true / false 중 택 1)
     // └ true = 전송 , false = 미전송
@@ -123,6 +147,9 @@
     /**********************************************************************
      * 공급받는자 정보
      *********************************************************************/
+
+    // [역발행시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 를 조합하여 사업자별로 중복되지 않도록 구성
+    taxinvoice.setInvoiceeMgtKey("");
 
     // 공급받는자 유형, [사업자, 개인, 외국인] 중 기재
     taxinvoice.setInvoiceeType("사업자");
@@ -139,28 +166,20 @@
     // 공급받는자 상호
     taxinvoice.setInvoiceeCorpName("공급받는자 상호");
 
-    // [역발행시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 를 조합하여 사업자별로 중복되지 않도록 구성
-    taxinvoice.setInvoiceeMgtKey("");
-
     // 공급받는자 대표자 성명
     taxinvoice.setInvoiceeCEOName("공급받는자 대표자 성명");
 
     // 공급받는자 주소
     taxinvoice.setInvoiceeAddr("공급받는자 주소");
 
-    // 공급받는자 종목
-    taxinvoice.setInvoiceeBizClass("공급받는자 업종");
-
     // 공급받는자 업태
     taxinvoice.setInvoiceeBizType("공급받는자 업태");
 
+    // 공급받는자 종목
+    taxinvoice.setInvoiceeBizClass("공급받는자 종목");
+
     // 공급받는자 담당자 성명
     taxinvoice.setInvoiceeContactName1("공급받는자 담당자 성명");
-
-    // 공급받는자 담당자 메일주소
-    // 팝빌 테스트 환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
-    // 실제 거래처의 메일주소가 기재되지 않도록 주의
-    taxinvoice.setInvoiceeEmail1("test@invoicee.com");
 
     // 공급받는자 담당자 연락처
     taxinvoice.setInvoiceeTEL1("070-111-222");
@@ -168,40 +187,16 @@
     // 공급받는자 담당자 휴대폰번호
     taxinvoice.setInvoiceeHP1("010-111-222");
 
+    // 공급받는자 담당자 메일주소
+    // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
+    // 실제 거래처의 메일주소가 기재되지 않도록 주의
+    taxinvoice.setInvoiceeEmail1("test@invoicee.com");
+
     // 역발행 안내 문자 전송여부 (true / false 중 택 1)
     // └ true = 전송 , false = 미전송
     // └ 공급자 담당자 휴대폰번호 {invoicerHP} 값으로 문자 전송
     // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoiceeSMSSendYN(false);
-
-    /**********************************************************************
-     * 세금계산서 기재정보
-     *********************************************************************/
-
-    // 일련번호
-    taxinvoice.setSerialNum("123");
-
-    // 현금
-    taxinvoice.setCash("");
-
-    // 수표
-    taxinvoice.setChkBill("");
-
-    // 어음
-    taxinvoice.setNote("");
-
-    // 외상미수금
-    taxinvoice.setCredit("");
-
-    // 비고
-    taxinvoice.setRemark2("비고2");
-    taxinvoice.setRemark3("비고3");
-
-    // 책번호 '권' 항목, 최대값 32767
-    taxinvoice.setKwon((short) 1);
-
-    // 책번호 '호' 항목, 최대값 32767
-    taxinvoice.setHo((short) 1);
 
     // 사업자등록증 이미지 첨부여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
@@ -247,7 +242,6 @@
     detail.setRemark("품목비고2"); // 비고
 
     taxinvoice.getDetailList().add(detail);
-
 
     /**********************************************************************
      * 추가담당자 정보
