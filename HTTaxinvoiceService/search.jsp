@@ -104,11 +104,11 @@
             <fieldset class="fieldset2">
                 <legend> 전자세금계산서 정보 [ <%=(i+1) %> ] </legend>
                 <ul>
-                    <li>ntsconfirmNum (국세청 승인번호) <%= result.getList().get(i).getNtsconfirmNum() %></li>
+                    <li>ntsconfirmNum (국세청승인번호) <%= result.getList().get(i).getNtsconfirmNum() %></li>
                     <li>writeDate (작성일자) : <%= result.getList().get(i).getWriteDate()  %> </li>
                     <li>issueDate (발행일자) : <%= result.getList().get(i).getIssueDate()  %> </li>
                     <li>sendDate (전송일자) : <%= result.getList().get(i).getSendDate()  %> </li>
-                    <li>invoiceType (구분) : <%= result.getList().get(i).getInvoiceType()  %> </li>
+                    <li>invoiceType (세금계산서 유형) : <%= result.getList().get(i).getInvoiceType()  %> </li>
 
                     <li>taxType (과세형태) : <%= result.getList().get(i).getTaxType()  %> </li>
                     <li>purposeType (영수/청구) : <%= result.getList().get(i).getPurposeType()  %> </li>
@@ -118,34 +118,34 @@
                     <li>remark1 (비고) : <%= result.getList().get(i).getRemark1()  %> </li>
 
                     <li>modifyYN (수정 전자세금계산서 여부) : <%= result.getList().get(i).getModifyYN()  %> </li>
-                    <li>orgNTSConfirmNum (원본 전자세금계산서 국세청 승인번호) : <%= result.getList().get(i).getOrgNTSConfirmNum()  %> </li>
-                    <li>purchaseDate (거래일자) : <%= result.getList().get(i).getPurchaseDate()  %> </li>
-                    <li>itemName (품명) : <%= result.getList().get(i).getItemName()  %> </li>
-                    <li>spec (규격) : <%= result.getList().get(i).getSpec()  %> </li>
-                    <li>qty (수량) : <%= result.getList().get(i).getQty()  %> </li>
-                    <li>unitCost (단가) : <%= result.getList().get(i).getUnitCost()  %> </li>
-                    <li>supplyCost (공급가액) : <%= result.getList().get(i).getSupplyCost()  %> </li>
-                    <li>tax (세액) : <%= result.getList().get(i).getTax()  %> </li>
-                    <li>remark (비고) : <%= result.getList().get(i).getRemark()  %> </li>
+                    <li>orgNTSConfirmNum (당초 국세청승인번호) : <%= result.getList().get(i).getOrgNTSConfirmNum()  %> </li>
+                    <li>purchaseDate (품목1의 거래일자) : <%= result.getList().get(i).getPurchaseDate()  %> </li>
+                    <li>itemName (품목1의 품명) : <%= result.getList().get(i).getItemName()  %> </li>
+                    <li>spec (품목1의 규격) : <%= result.getList().get(i).getSpec()  %> </li>
+                    <li>qty (품목1의 수량) : <%= result.getList().get(i).getQty()  %> </li>
+                    <li>unitCost (품목1의 단가) : <%= result.getList().get(i).getUnitCost()  %> </li>
+                    <li>supplyCost (품목1의 공급가액) : <%= result.getList().get(i).getSupplyCost()  %> </li>
+                    <li>tax (품목1의 세액) : <%= result.getList().get(i).getTax()  %> </li>
+                    <li>remark (품목1의 비고) : <%= result.getList().get(i).getRemark()  %> </li>
 
                     <li>invoicerCorpNum (공급자 사업자번호) : <%= result.getList().get(i).getInvoicerCorpNum()  %> </li>
-                    <li>invoicerTaxRegID (공급자 종사업장번호) : <%= result.getList().get(i).getInvoicerTaxRegID()  %> </li>
+                    <li>invoicerTaxRegID (공급자 종사업장 식별번호) : <%= result.getList().get(i).getInvoicerTaxRegID()  %> </li>
                     <li>invoicerCorpName (공급자 상호) : <%= result.getList().get(i).getInvoicerCorpName()  %> </li>
                     <li>invoicerCEOName (공급자 대표자 성명) : <%= result.getList().get(i).getInvoicerCEOName()  %> </li>
-                    <li>invoicerEmail (공급자 이메일) : <%= result.getList().get(i).getInvoicerEmail()  %> </li>
+                    <li>invoicerEmail (공급자 담당자 메일) : <%= result.getList().get(i).getInvoicerEmail()  %> </li>
 
-                    <li>invoiceeCorpNum (공급받는자 사업자번호) : <%= result.getList().get(i).getInvoiceeCorpNum()  %> </li>
+                    <li>invoiceeCorpNum (공급받는자 등록번호) : <%= result.getList().get(i).getInvoiceeCorpNum()  %> </li>
                     <li>invoiceeType (공급받는자 유형) : <%= result.getList().get(i).getInvoiceeType()  %> </li>
-                    <li>invoiceeTaxRegID (공급받는자 종사업장번호) : <%= result.getList().get(i).getInvoiceeTaxRegID()  %> </li>
+                    <li>invoiceeTaxRegID (공급받는자 종사업장 식별번호) : <%= result.getList().get(i).getInvoiceeTaxRegID()  %> </li>
                     <li>invoiceeCorpName (공급받는자 상호) : <%= result.getList().get(i).getInvoiceeCorpName()  %> </li>
                     <li>invoiceeCEOName (공급받는자 대표자 성명) : <%= result.getList().get(i).getInvoiceeCEOName()  %> </li>
-                    <li>invoiceeEmail1 (공급받는자 이메일) : <%= result.getList().get(i).getInvoiceeEmail1()  %> </li>
+                    <li>invoiceeEmail1 (공급받는자 담당자 메일) : <%= result.getList().get(i).getInvoiceeEmail1()  %> </li>
 
                     <li>trusteeCorpNum (수탁자 사업자번호) : <%= result.getList().get(i).getTrusteeCorpNum()  %> </li>
-                    <li>trusteeTaxRegID (수탁자 종사업장번호) : <%= result.getList().get(i).getTrusteeTaxRegID()  %> </li>
+                    <li>trusteeTaxRegID (수탁자 종사업장 식별번호) : <%= result.getList().get(i).getTrusteeTaxRegID()  %> </li>
                     <li>trusteeCorpName (수탁자 상호) : <%= result.getList().get(i).getTrusteeCorpName()  %> </li>
                     <li>tursteeCEOName (수탁자 대표자 성명) : <%= result.getList().get(i).getTrusteeCEOName()  %> </li>
-                    <li>trusteeEmail (수탁자 이메일) : <%= result.getList().get(i).getTrusteeEmail()  %> </li>
+                    <li>trusteeEmail (수탁자 담당자 메일) : <%= result.getList().get(i).getTrusteeEmail()  %> </li>
                 </ul>
             </fieldset>
             <%

@@ -43,8 +43,8 @@
         <fieldset class="fieldset2">
             <legend>비즈니스 채널 정보 [<%=i + 1%> / <%=plusFriendIDs.length%>]</legend>
             <ul>
-                <li>plusFriendID (비즈니스 채널 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
-                <li>plusFriendName (비즈니스 채널 이름) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
+                <li>plusFriendID (검색용 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
+                <li>plusFriendName (채널명) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
                 <li>state (채널 상태) : <%=plusFriendIDs[i].getState()%></li>
                 <li>stateDT (채널 상태 일시) : <%=plusFriendIDs[i].getStateDT()%></li>

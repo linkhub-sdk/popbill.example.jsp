@@ -86,10 +86,9 @@
                     <li>code (응답코드) : <%=searchResult.getCode()%></li>
                     <li>message (응답메시지) : <%=searchResult.getMessage()%></li>
                     <li>total (총 검색결과 건수) : <%=searchResult.getTotal()%></li>
-                    <li>perPage (페이지당 검색개수) : <%=searchResult.getPerPage()%></li>
-                    <li>pageNum (페이지번호) : <%=searchResult.getPageNum()%></li>
+                    <li>perPage (페이지당 목록 건수) : <%=searchResult.getPerPage()%></li>
+                    <li>pageNum (페이지 번호) : <%=searchResult.getPageNum()%></li>
                     <li>pageCount (페이지 개수) : <%=searchResult.getPageCount()%></li>
-
                 </ul>
                 <%
                     for ( int i = 0; i < searchResult.getList().size(); i++ ) {
@@ -100,10 +99,7 @@
                 <fieldset class="fieldset2">
                     <legend>전송내역 : [ <%=i+1%> / <%=searchResult.getList().size() %> ]</legend>
                     <ul>
-                        <li>state (상태코드) : <%=sentMsg.getState()%> </li>
-                        <li>result (결과코드) : <%=sentMsg.getResult()%></li>
                         <li>subject (메시지 제목) : <%=sentMsg.getSubject()%></li>
-                        <li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
                         <li>content (메시지 내용) : <%=sentMsg.getContent()%></li>
                         <li>sendNum (발신번호) : <%=sentMsg.getSendNum()%></li>
                         <li>senderName (발신자명) : <%=sentMsg.getSenderName()%></li>
@@ -111,8 +107,11 @@
                         <li>receiveName (수신자명) : <%=sentMsg.getReceiveName()%></li>
                         <li>receiptDT (접수일시) : <%=sentMsg.getReceiptDT()%></li>
                         <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>
-                        <li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
                         <li>resultDT (전송결과 수신일시) : <%=sentMsg.getResultDT()%></li>
+                        <li>reserveDT (예약일시) : <%=sentMsg.getReserveDT()%></li>
+                        <li>state (상태코드) : <%=sentMsg.getState()%> </li>
+                        <li>result (결과코드) : <%=sentMsg.getResult()%></li>
+                        <li>messageType (메시지 타입) : <%=sentMsg.getMessageType()%></li>
                         <li>tranNet (전송처리 이동통신사명) : <%=sentMsg.getTranNet()%></li>
                         <li>receiptNum (접수번호) : <%=sentMsg.getReceiptNum()%></li>
                         <li>requestNum (요청번호) : <%=sentMsg.getRequestNum()%></li>

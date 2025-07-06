@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     // 수집 요청시 반환받은 작업아이디
-    String jobID = "";
+    String jobID = "111111111111111111";
 
     HTCashbillJobState jobState = null;
 
@@ -47,7 +47,7 @@
                     <li>jobID (작업아이디) : <%=jobState.getJobID() %> </li>
                     <li>jobState (수집상태) : <%=jobState.getJobState() %> </li>
                     <li>queryType (수집유형) : <%=jobState.getQueryType() %> </li>
-                    <li>queryDateType (일자유형) : <%=jobState.getQueryDateType() %> </li>
+                    <li>queryDateType (수집 일자 유형) : <%=jobState.getQueryDateType() %> </li>
                     <li>queryStDate (시작일자) : <%=jobState.getQueryStDate() %> </li>
                     <li>queryEnDate (종료일자) : <%=jobState.getQueryEnDate() %> </li>
                     <li>errorCode (수집 결과코드) : <%=jobState.getErrorCode() %> </li>

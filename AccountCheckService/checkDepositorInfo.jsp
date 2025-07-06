@@ -57,17 +57,16 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>bankCode (기관코드) : <%=depositorCheckInfo.getBankCode()%></li>
-                    <li>accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
-                    <li>accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
-                    <li>identityNumType (등록번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
-                    <li>identityNum (등록번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
-                    <li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
                     <li>result (상태코드) : <%=depositorCheckInfo.getResult()%></li>
                     <li>resultMessage (상태메시지) : <%=depositorCheckInfo.getResultMessage()%></li>
+                    <li>accountName (예금주 성명) : <%=depositorCheckInfo.getAccountName()%></li>
+                    <li>bankCode (기관코드) : <%=depositorCheckInfo.getBankCode()%></li>
+                    <li>accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
+                    <li>identityNumType (실명번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
+                    <li>identityNum (실명번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
+                    <li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
                     <li>checkDT (확인일시) : <%=depositorCheckInfo.getCheckDT()%></li>
                 </ul>
-
             </fieldset>
         </div>
     </body>

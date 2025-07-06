@@ -53,26 +53,20 @@
             <ul>
                 <li>state (상태코드) : <%=faxResult.getState()%></li>
                 <li>result (결과코드) : <%=faxResult.getResult()%></li>
-                <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                 <li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
                 <li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
                 <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                 <li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
                 <li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
+                <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                 <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
                 <li>successPageCnt (성공 페이지수) : <%=faxResult.getSuccessPageCnt()%></li>
                 <li>failPageCnt (실패 페이지수) : <%=faxResult.getFailPageCnt()%></li>
-                <li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>
                 <li>cancelPageCnt (취소 페이지수) : <%=faxResult.getCancelPageCnt()%></li>
-                <li>receiptDT (접수일시) : <%=faxResult.getReceiptDT()%></li>
                 <li>reserveDT (예약일시) : <%=faxResult.getReserveDT()%></li>
+                <li>receiptDT (접수일시) : <%=faxResult.getReceiptDT()%></li>
                 <li>sendDT (전송일시) : <%=faxResult.getSendDT()%></li>
                 <li>resultDT (전송결과 수신일시) : <%=faxResult.getResultDT()%></li>
-                <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
-                <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
-                <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
-                <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
-                <li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.getTiffFileSize()%></li>
                 <%
                     String fileNames = "";
                     int namesLength = faxResult.getFileNames().length;
@@ -86,6 +80,12 @@
                     }
                 %>
                 <li>fileNames (전송 파일명 리스트) : <%=fileNames%></li>
+                <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
+                <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+                <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
+                <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
+                <li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>
+                <li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.getTiffFileSize()%></li>
             </ul>
         </fieldset>
         <%

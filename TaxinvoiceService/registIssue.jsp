@@ -198,12 +198,12 @@
     // 당초 국세청승인번호
     taxinvoice.setOrgNTSConfirmNum(null);
 
-    // 사업자등록증 이미지 첨부여부 (true / false 중 택 1)
+    // 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부 (true / false 중 택 1)
+    // 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
@@ -306,7 +306,7 @@
                 <ul>
                     <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                    <li>국세청 승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
+                    <li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
                 </ul>
             </fieldset>
         </div>

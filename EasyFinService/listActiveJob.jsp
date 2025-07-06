@@ -45,7 +45,7 @@
               <legend><%=request.getRequestURI()%></legend>
             <ul>
                 <li>jobID (작업아이디) : <%=jobList[i].getJobID() %> </li>
-                <li>jobState (수집상태) : <%=jobList[i].getJobState() %> </li>
+                <li>jobState (수집 상태) : <%=jobList[i].getJobState() %> </li>
                 <li>startDate (시작일자) : <%=jobList[i].getStartDate() %> </li>
                 <li>endDate (종료일자) : <%=jobList[i].getEndDate() %> </li>
                 <li>errorCode (수집 결과코드) : <%=jobList[i].getErrorCode() %> </li>

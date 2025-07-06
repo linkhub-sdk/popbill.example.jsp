@@ -45,15 +45,14 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>bankCode (기관코드) : <%=accountInfo.getBankCode()%></li>
-                    <li>accountNumber (계좌번호) : <%=accountInfo.getAccountNumber()%></li>
-                    <li>accountName (예금주 성명) : <%=accountInfo.getAccountName()%></li>
-                    <li>checkDate (확인일시) : <%=accountInfo.getCheckDate()%></li>
                     <li>result (상태코드) : <%=accountInfo.getResult()%></li>
                     <li>resultMessage (상태메시지) : <%=accountInfo.getResultMessage()%></li>
+                    <li>accountName (예금주 성명) : <%=accountInfo.getAccountName()%></li>
+                    <li>bankCode (기관코드) : <%=accountInfo.getBankCode()%></li>
+                    <li>accountNumber (계좌번호) : <%=accountInfo.getAccountNumber()%></li>
+                    <li>checkDate (확인일시) : <%=accountInfo.getCheckDate()%></li>
                     <li>checkDT (확인일시) : <%=accountInfo.getCheckDT()%></li>
                 </ul>
-
             </fieldset>
         </div>
     </body>

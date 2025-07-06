@@ -49,7 +49,7 @@
                 <ul>
                     <li>code (응답코드) : <%=taxinvoiceXML.getCode() %></li>
                     <li>message (응답메시지) : <%=taxinvoiceXML.getMessage() %></li>
-                    <li>retObject (발행형태) : <%=taxinvoiceXML.getRetObject().replaceAll("<","&lt;").replaceAll(">", "&gt;") %></li>
+                    <li>retObject (전자세금계산서 XML 문서) : <%=taxinvoiceXML.getRetObject().replaceAll("<","&lt;").replaceAll(">", "&gt;") %></li>
 
                 </ul>
         </fieldset>

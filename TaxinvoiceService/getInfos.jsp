@@ -56,13 +56,27 @@
                         <fieldset class="fieldset2">
                             <legend>세금계산서 상세/요약 정보 [<%=i+1%>/<%=taxinvoiceInfos.length%>]</legend>
                             <ul>
-                                <li>itemKey (팝빌번호) : <%= taxinvoiceInfo.getItemKey()%></li>
+                                <li>itemKey (팝빌에서 할당한 식별번호) : <%= taxinvoiceInfo.getItemKey()%></li>
                                 <li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
                                 <li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
+                                <li>regDT (임시저장 일시) : <%= taxinvoiceInfo.getRegDT()%> </li>
+                                <li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
                                 <li>supplyCostTotal (공급가액 합계) : <%= taxinvoiceInfo.getSupplyCostTotal() %></li>
                                 <li>taxTotal (세액 합계) : <%= taxinvoiceInfo.getTaxTotal() %></li>
-                                <li>regDT (임시저장 일자) : <%= taxinvoiceInfo.getRegDT()%> </li>
+                                <li>purposeType (영수/청구) : <%= taxinvoiceInfo.getPurposeType() %></li>
+                                <li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
                                 <li>lateIssueYN (지연발행 여부) : <%= taxinvoiceInfo.getLateIssueYN() %></li>
+                                <li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
+                                <li>openDT (개봉일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
+                                <li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>
+                                <li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
+                                <li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
+                                <li>ntsconfirmNum (국세청승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
+                                <li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
+                                <li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
+                                <li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
+                                <li>ntssendErrCode (결과코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
+                                <li>modifyCode (수정 사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
                                 <li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
 
                                 <li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
@@ -81,22 +95,6 @@
                                 <li>trusteeCorpNum (수탁자 사업자번호) : <%= taxinvoiceInfo.getTrusteeCorpNum() %></li>
                                 <li>trusteeMgtKey (수탁자 문서번호) : <%= taxinvoiceInfo.getTrusteeMgtKey() %></li>
                                 <li>trusteePrintYN (수탁자 인쇄여부) : <%= taxinvoiceInfo.isTrusteePrintYN() %></li>
-
-                                <li>purposeType (영수/청구) : <%= taxinvoiceInfo.getPurposeType() %></li>
-                                <li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
-                                <li>issueType (발행형태) : <%= taxinvoiceInfo.getIssueType() %></li>
-                                <li>issueDT (발행일시) : <%= taxinvoiceInfo.getIssueDT() %></li>
-
-                                <li>stateCode (상태코드) : <%= taxinvoiceInfo.getStateCode() %></li>
-                                <li>stateDT (상태 변경일시) : <%= taxinvoiceInfo.getStateDT() %></li>
-                                <li>stateMemo (상태메모) : <%= taxinvoiceInfo.getStateMemo() %></li>
-                                <li>openYN (개봉 여부) : <%= taxinvoiceInfo.isOpenYN() %></li>
-                                <li>openDT (개봉 일시) : <%= taxinvoiceInfo.getOpenDT() %></li>
-                                <li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
-                                <li>ntsconfirmNum (국세청 승인번호) : <%= taxinvoiceInfo.getNTSConfirmNum() %></li>
-                                <li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
-                                <li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
-                                <li>ntssendErrCode (전송실패 사유코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
                             </ul>
                         </fieldset>
                     <%

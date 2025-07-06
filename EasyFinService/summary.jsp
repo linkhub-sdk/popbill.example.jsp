@@ -52,7 +52,7 @@
         <fieldset class="fieldset1">
             <legend><%=request.getRequestURI()%></legend>
             <ul>
-                <li>count (수집 결과 건수) : <%= result.getCount() %></li>
+                <li>count (수집 건수) : <%= result.getCount() %></li>
                 <li>cntAccIn (입금거래 건수) : <%= result.getCntAccIn() %></li>
                 <li>cntAccOut (출금거래 건수) : <%= result.getCntAccOut() %></li>
                 <li>totalAccIn (입금액 합계) : <%= result.getTotalAccIn() %></li>

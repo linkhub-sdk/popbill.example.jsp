@@ -45,19 +45,19 @@
 			<legend><%=request.getRequestURI()%></legend>
 			<ul>
 				<li>corpNum (사업자번호) : <%=bizInfo.getCorpNum()%></li>
-				<li>companyRegNum (법인번호): <%=bizInfo.getCompanyRegNum()%></li>
-				<li>checkDT (확인일시) : <%=bizInfo.getCheckDT()%></li>
+				<li>companyRegNum (법인등록번호): <%=bizInfo.getCompanyRegNum()%></li>
+				<li>checkDT (기업정보조회일시) : <%=bizInfo.getCheckDT()%></li>
 				<li>corpName (상호): <%=bizInfo.getCorpName()%></li>
+				<li>CEOName (대표자명) : <%=bizInfo.getCEOName()%></li>
 				<li>corpCode (기업형태코드): <%=bizInfo.getCorpCode()%></li>
 				<li>corpScaleCode (기업규모코드): <%=bizInfo.getCorpScaleCode()%></li>
-				<li>personCorpCode (개인법인코드): <%=bizInfo.getPersonCorpCode()%></li>
-				<li>headOfficeCode (본점지점코드) : <%=bizInfo.getHeadOfficeCode()%></li>
+				<li>personCorpCode (개인/법인코드): <%=bizInfo.getPersonCorpCode()%></li>
+				<li>headOfficeCode (본점/지점코드) : <%=bizInfo.getHeadOfficeCode()%></li>
 				<li>industryCode (산업코드) : <%=bizInfo.getIndustryCode()%></li>
-				<li>establishCode (설립구분코드) : <%=bizInfo.getEstablishCode()%></li>
 				<li>establishDate (설립일자) : <%=bizInfo.getEstablishDate()%></li>
-				<li>CEOName (대표자명) : <%=bizInfo.getCEOName()%></li>
-				<li>workPlaceCode (사업장구분코드): <%=bizInfo.getWorkPlaceCode()%></li>
-				<li>addrCode (주소구분코드) : <%=bizInfo.getAddrCode()%></li>
+				<li>establishCode (설립코드) : <%=bizInfo.getEstablishCode()%></li>
+				<li>workPlaceCode (사업장코드): <%=bizInfo.getWorkPlaceCode()%></li>
+				<li>addrCode (주소코드) : <%=bizInfo.getAddrCode()%></li>
 				<li>zipCode (우편번호) : <%=bizInfo.getZipCode()%></li>
 				<li>addr (주소) : <%=bizInfo.getAddr()%></li>
 				<li>addrDetail (상세주소) : <%=bizInfo.getAddrDetail()%></li>
@@ -66,12 +66,11 @@
 				<li>bizType (업태) : <%=bizInfo.getBizType()%></li>
 				<li>result (상태코드) : <%=bizInfo.getResult()%></li>
 				<li>resultMessage (상태메시지) : <%=bizInfo.getResultMessage()%></li>
-				<li>closeDownTaxType (사업자과세유형) : <%=bizInfo.getCloseDownTaxType()%></li>
-				<li>closeDownTaxTypeDate (과세유형전환일자):<%=bizInfo.getCloseDownTaxTypeDate()%></li>
 				<li>closeDownState (휴폐업상태) : <%=bizInfo.getCloseDownState()%></li>
 				<li>closeDownStateDate (휴폐업일자) : <%=bizInfo.getCloseDownStateDate()%></li>
+				<li>closeDownTaxType (과세유형) : <%=bizInfo.getCloseDownTaxType()%></li>
+				<li>closeDownTaxTypeDate (과세유형 전환일자):<%=bizInfo.getCloseDownTaxTypeDate()%></li>
 			</ul>
-
 		</fieldset>
 	</div>
 </body>

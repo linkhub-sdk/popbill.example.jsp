@@ -53,7 +53,7 @@
                 <fieldset class="fieldset2">
                     <ul>
                         <li>serialNum (첨부파일 일련번호) : <%= attachedFile.getSerialNum() %> </li>
-                        <li>attachedFile (파일아이디-첨부파일 삭제시 사용) : <%= attachedFile.getAttachedFile() %> </li>
+                        <li>attachedFile (첨부파일 삭제시 사용) : <%= attachedFile.getAttachedFile() %> </li>
                         <li>displayName (첨부파일명) : <%= attachedFile.getDisplayName() %></li>
                         <li>regDT (첨부일시) : <%= attachedFile.getRegDT() %></li>
                     </ul>

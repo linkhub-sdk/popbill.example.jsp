@@ -80,10 +80,10 @@
         <fieldset class="fieldset1">
             <legend><%=request.getRequestURI()%></legend>
             <ul>
-                <li>count (수집 결과 건수) : <%= result.getCount() %></li>
+                <li>count (수집 건수) : <%= result.getCount() %></li>
                 <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
                 <li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
-                <li>amountTotal (합계 금액) : <%= result.getAmountTotal() %></li>
+                <li>amountTotal (총계) : <%= result.getAmountTotal() %></li>
             </ul>
         </fieldset>
     </div>

@@ -47,13 +47,12 @@
                 <fieldset class="fieldset2">
                     <legend>StatementInfo</legend>
                     <ul>
+                        <li>itemCode (전자명세서 문서 유형) : <%= statementInfo.getItemCode()%></li>
                         <li>itemKey (팝빌번호) : <%= statementInfo.getItemKey()%></li>
-                        <li>itemCode (전자명세서 유형 코드) : <%= statementInfo.getItemCode()%></li>
                         <li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
-                        <li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
                         <li>taxType (과세형태) : <%= statementInfo.getTaxType()%></li>
-                        <li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
                         <li>writeDate (작성일자) : <%= statementInfo.getWriteDate()%></li>
+                        <li>regDT (임시저장일시) : <%= statementInfo.getRegDT()%></li>
                         <li>senderCorpName (발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>
                         <li>senderCorpNum (발신자 사업자번호) : <%= statementInfo.getSenderCorpNum()%></li>
                         <li>senderPrintYN (발신자 인쇄여부) : <%= statementInfo.isSenderPrintYN()%></li>
@@ -62,12 +61,13 @@
                         <li>receiverPrintYN (수신자 인쇄여부) : <%= statementInfo.isReceiverPrintYN()%></li>
                         <li>supplyCostTotal (공급가액 합계) : <%= statementInfo.getSupplyCostTotal()%></li>
                         <li>taxTotal (세액 합계) : <%= statementInfo.getTaxTotal()%></li>
+                        <li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
                         <li>issueDT (발행일시) : <%= statementInfo.getIssueDT()%></li>
+                        <li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
                         <li>stateDT (상태 변경일시) : <%= statementInfo.getStateDT()%></li>
-                        <li>openYN (메일 개봉 여부) : <%= statementInfo.isOpenYN()%></li>
-                        <li>openDT (개봉 일시) : <%= statementInfo.getOpenDT()%></li>
                         <li>stateMemo (상태메모) : <%= statementInfo.getStateMemo()%></li>
-                        <li>regDT (등록일시) : <%= statementInfo.getRegDT()%></li>
+                        <li>openYN (개봉여부) : <%= statementInfo.isOpenYN()%></li>
+                        <li>openDT (개봉 일시) : <%= statementInfo.getOpenDT()%></li>
                     </ul>
                 </fieldset>
             </fieldset>

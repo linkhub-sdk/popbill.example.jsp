@@ -54,12 +54,12 @@
                     <fieldset class ="fieldset2">
                         <legend>사업자등록상태조회 (휴폐업조회) 결과 [<%=i+1%>]</legend>
                         <ul>
-                            <li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
-                            <li>taxType (과세유형) : <%=corpState.getTaxType()%></li>
-                            <li>state (휴폐업 상태) : <%=corpState.getState()%></li>
-                            <li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
+                            <li>corpNum (조회한 사업자번호) : <%=corpState.getCorpNum()%></li>
+                            <li>taxType (사업자 과세유형) : <%=corpState.getTaxType()%></li>
                             <li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
-                            <li>checkDate (확인일자) : <%=corpState.getCheckDate()%></li>
+                            <li>state (휴폐업상태) : <%=corpState.getState()%></li>
+                            <li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
+                            <li>checkDate (국세청 확인일자) : <%=corpState.getCheckDate()%></li>
                         </ul>
                     </fieldset>
             <%

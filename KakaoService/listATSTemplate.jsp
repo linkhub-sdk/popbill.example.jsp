@@ -49,12 +49,12 @@
                 <li>templateCode (템플릿 코드) : <%=aTSTemplates[i].getTemplateCode()%></li>
                 <li>templateName (템플릿 제목) : <%=aTSTemplates[i].getTemplateName()%></li>
                 <li>template (템플릿 내용) : <%=aTSTemplates[i].getTemplate()%></li>
-                <li>plusFriendID (비즈니스 채널 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
-                <li>ads (광고메시지) : <%=aTSTemplates[i].getAppendix()%></li>
-                <li>appendix (부가메시지) : <%=aTSTemplates[i].getAppendix()%></li>
+                <li>plusFriendID (검색용 아이디) : <%=aTSTemplates[i].getPlusFriendID()%></li>
+                <li>ads (광고 메시지) : <%=aTSTemplates[i].getAppendix()%></li>
+                <li>appendix (부가 메시지) : <%=aTSTemplates[i].getAppendix()%></li>
                 <li>secureYN (보안템플릿 여부) : <%=aTSTemplates[i].getSecureYN()%></li>
-                <li>state (채널 상태) : <%=aTSTemplates[i].getState()%></li>
-                <li>stateDT (채널 상태 일시) : <%=aTSTemplates[i].getStateDT()%></li>
+                <li>state (템플릿 상태) : <%=aTSTemplates[i].getState()%></li>
+                <li>stateDT (템플릿 상태 일시) : <%=aTSTemplates[i].getStateDT()%></li>
                 <% if (aTSTemplates[i].getBtns() != null) {
                     List<KakaoButton> btns = aTSTemplates[i].getBtns();
                         for (int j = 0; j < btns.size(); j++) { %>

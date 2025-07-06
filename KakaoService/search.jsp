@@ -25,10 +25,10 @@
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20230102";
+    String SDate = "20230602";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20230131";
+    String EDate = "20230631";
 
     // 전송상태 배열 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     // └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
@@ -89,8 +89,8 @@
             <li>code (응답코드) : <%=searchResult.getCode()%></li>
             <li>message (응답메시지) : <%=searchResult.getMessage()%></li>
             <li>total (총 검색결과 건수) : <%=searchResult.getTotal()%></li>
-            <li>perPage (페이지당 검색개수) : <%=searchResult.getPerPage()%></li>
-            <li>pageNum (페이지번호) : <%=searchResult.getPageNum()%></li>
+            <li>perPage (페이지 당 목록 건수) : <%=searchResult.getPerPage()%></li>
+            <li>pageNum (페이지 번호) : <%=searchResult.getPageNum()%></li>
             <li>pageCount (페이지 개수) : <%=searchResult.getPageCount()%></li>
         </ul>
         <%
@@ -116,6 +116,7 @@
                 <li>altResultDT (대체문자 전송결과 수신일시) :<%=sentMsg.getAltResultDT()%></li>
                 <li>receiptNum (접수번호) :<%=sentMsg.getReceiptNum()%></li>
                 <li>requestNum (요청번호) :<%=sentMsg.getRequestNum()%></li>
+                <li>interOPRefKey (파트너 지정키) :<%=sentMsg.getInterOPRefKey()%></li>
             </ul>
         </fieldset>
             <%

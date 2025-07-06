@@ -64,7 +64,7 @@
                 <li>code (응답코드) : <%= result.getCode() %></li>
                 <li>message (응답메시지) : <%= result.getMessage() %></li>
                 <li>total (총 검색결과 건수) : <%= result.getTotal() %></li>
-                <li>perPage (페이지당 검색개수) : <%= result.getPerPage() %></li>
+                <li>perPage (페이지 당 목록 건수) : <%= result.getPerPage() %></li>
                 <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
                 <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
                 <li>lastScrapDT (최종 조회일시) : <%= result.getLastScrapDT() %></li>
@@ -76,7 +76,9 @@
             %>
             <fieldset class="fieldset2">
                 <ul>
+                    <li>tid (거래내역 아이디) : <%= result.getList().get(i).getTid() %></li>
                     <li>trdate (거래일자) : <%= result.getList().get(i).getTrdate() %></li>
+                    <li>trserial (거래일련번호) : <%= result.getList().get(i).getTrserial() %></li>
                     <li>trdt (거래일시) : <%= result.getList().get(i).getTrdt() %></li>
                     <li>accIn (입금액) : <%= result.getList().get(i).getAccIn() %></li>
                     <li>accOut (출금액) : <%= result.getList().get(i).getAccOut() %></li>
@@ -87,8 +89,6 @@
                     <li>remark4 (비고4) : <%= result.getList().get(i).getRemark4() %></li>
                     <li>regDT (등록일시) : <%= result.getList().get(i).getRegDT() %></li>
                     <li>memo (메모) : <%= result.getList().get(i).getMemo() %></li>
-                    <li>tid (거래내역 아이디) : <%= result.getList().get(i).getTid() %></li>
-                    <li>trserial (거래일자별 일련번호) : <%= result.getList().get(i).getTrserial() %></li>
                 </ul>
             </fieldset>
             <%

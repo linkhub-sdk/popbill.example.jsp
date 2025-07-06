@@ -53,24 +53,20 @@
             %>
                 <fieldset class ="fieldset2">
                     <legend>사업자등록상태조회 (휴폐업조회) 결과</legend>
-                    <p class="info"> state : null (알수없음), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>
-                    <p class="info"> taxType : null (알수없음), 10 (일반과세자), 20 (면세과세자), 30 (간이과세자), 31 (간이과세자-세금계산서 발급사업자), 40 (비영리법인 또는 국가기관, 고유번호가 부여된 단체)</p>
+                    <p class="info"> state : null (확인실패), 0 (등록되지 않은 사업자번호), 1 (사업중), 2 (폐업), 3 (휴업)</p>
+                    <p class="info"> taxType : null (확인실패), 10 (일반과세자), 20 (면세과세자), 30 (간이과세자), 31 (간이과세자 세금계산서 발급사업자), 40 (비영리법인 또는 국가기관, 고유번호가 할당된 단체)</p>
                     <ul>
-                        <li>corpNum (사업자번호) : <%=corpState.getCorpNum()%></li>
-                        <li>taxType (과세유형) : <%=corpState.getTaxType()%></li>
+                        <li>corpNum (조회한 사업자번호) : <%=corpState.getCorpNum()%></li>
+                        <li>taxType (사업자 과세유형) : <%=corpState.getTaxType()%></li>
+                        <li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
                         <li>state (휴폐업상태) : <%=corpState.getState()%></li>
                         <li>stateDate (휴폐업일자) : <%=corpState.getStateDate()%></li>
-                        <li>typeDate (과세유형 전환일자) : <%=corpState.getTypeDate()%></li>
-                        <li>checkDate (확인일자) : <%=corpState.getCheckDate()%></li>
+                        <li>checkDate (국세청 확인일자) : <%=corpState.getCheckDate()%></li>
                     </ul>
-
-
                 </fieldset>
-
             <%
                 }
             %>
-
             <br />
         </div>
 

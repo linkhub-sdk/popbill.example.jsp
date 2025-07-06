@@ -47,7 +47,7 @@
                 <ul>
                     <li>jobState (수집상태) : <%=jobList[i].getJobState() %> </li>
                     <li>queryType (수집유형) : <%=jobList[i].getQueryType() %> </li>
-                    <li>queryDateType (일자유형) : <%=jobList[i].getQueryDateType() %> </li>
+                    <li>queryDateType (수집 일자 유형) : <%=jobList[i].getQueryDateType() %> </li>
                     <li>queryStDate (시작일자) : <%=jobList[i].getQueryStDate() %> </li>
                     <li>queryEnDate (종료일자) : <%=jobList[i].getQueryEnDate() %> </li>
                     <li>errorCode (수집 결과코드) : <%=jobList[i].getErrorCode() %> </li>

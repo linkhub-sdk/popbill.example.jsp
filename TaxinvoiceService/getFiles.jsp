@@ -52,9 +52,9 @@
                 %>
                 <fieldset class="fieldset2">
                     <ul>
-                        <Li>serialNum (순번) : <%= attachedFile.getSerialNum() %> </Li>
-                        <li>attachedFile (파일명) : <%= attachedFile.getAttachedFile() %> </li>
-                        <li>displayName (파일아이디) : <%= attachedFile.getDisplayName() %></li>
+                        <Li>serialNum (첨부파일 일련번호) : <%= attachedFile.getSerialNum() %> </Li>
+                        <li>attachedFile (파일아이디) : <%= attachedFile.getAttachedFile() %> </li>
+                        <li>displayName (첨부파일명) : <%= attachedFile.getDisplayName() %></li>
                         <li>regDT (등록일시) : <%= attachedFile.getRegDT() %></li>
                     </ul>
                 </fieldset>

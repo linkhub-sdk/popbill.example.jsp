@@ -51,13 +51,13 @@
             <ul>
                 <li>contentType (카카오톡 유형) : <%=kakaoSentInfo.getContentType()%></li>
                 <li>templateCode (템플릿 코드) : <%=kakaoSentInfo.getTemplateCode()%></li>
-                <li>plusFriendID (비즈니스 채널 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
+                <li>plusFriendID (검색용 아이디) : <%=kakaoSentInfo.getPlusFriendID()%></li>
                 <li>sendNum (발신번호) : <%=kakaoSentInfo.getSendNum()%></li>
                 <li>altSubject (대체문자 제목) : <%=kakaoSentInfo.getAltSubject()%></li>
                 <li>altContent (대체문자 내용) : <%=kakaoSentInfo.getAltContent()%></li>
                 <li>altSendType (대체문자 유형) : <%=kakaoSentInfo.getAltSendType()%></li>
                 <li>reserveDT (예약일시) : <%=kakaoSentInfo.getReserveDT()%></li>
-                <li>adsYN (광고전송 여부) : <%=kakaoSentInfo.getAdsYN()%></li>
+                <li>adsYN (광고메시지 전송 여부) : <%=kakaoSentInfo.getAdsYN()%></li>
                 <li>imageURL (친구톡 이미지 URL) : <%=kakaoSentInfo.getImageURL()%></li>
                 <li>sendCnt (전송건수) : <%=kakaoSentInfo.getSendCnt()%></li>
                 <li>successCnt (성공건수) : <%=kakaoSentInfo.getSuccessCnt()%></li>
@@ -116,6 +116,7 @@
                 }
             %>
         </fieldset>
+    </fieldset>
 </div>
 </body>
 </html>

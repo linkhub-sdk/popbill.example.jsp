@@ -195,15 +195,15 @@
     // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
     taxinvoice.setModifyCode(null);
 
-    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+    // 수정세금계산서 작성시 원본세금계산서 국세청승인번호 기재
     taxinvoice.setOrgNTSConfirmNum(null);
 
-    // 사업자등록증 이미지 첨부여부 (true / false 중 택 1)
+    // 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부 (true / false 중 택 1)
+    // 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);

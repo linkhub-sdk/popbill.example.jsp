@@ -12,14 +12,14 @@
 
 <%
     /*
-     * 국세청 승인번호를 통해 수집한 전자세금계산서 1건의 상세정보를 XML 형태의 문자열로 반환합니다.
+     * 국세청승인번호를 통해 수집한 전자세금계산서 1건의 상세정보를 XML 형태의 문자열로 반환합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/search#GetXML
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 전자세금계산서 국세청 승인번호
+    // 전자세금계산서 국세청승인번호
     String ntsConfirmNum = "202202188888888800000109";
 
     HTTaxinvoiceXMLResponse xmlResponse = null;
@@ -48,9 +48,9 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                      <li>resultCode (요청에 대한 응답 상태코드) : <%=xmlResponse.getResultCode()%> </li>
+                      <li>resultCode (응답코드) : <%=xmlResponse.getResultCode()%> </li>
                       <li>message (응답메시지) : <%=xmlResponse.getMessage()%> </li>
-                      <li>retObject (XML정보) :<%=xmlData%> </li>
+                      <li>retObject (전자세금계산서 XML 문서) :<%=xmlData%> </li>
                 </ul>
           </fieldset>
         </div>

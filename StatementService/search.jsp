@@ -77,7 +77,7 @@
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>message (응답메시지) : <%= searchResult.getMessage()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
-                    <li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
+                    <li>perPage (페이지당 목록 건수) : <%= searchResult.getPerPage()%> </li>
                     <li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
                     <li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
                 </ul>
@@ -91,33 +91,27 @@
                         <fieldset class="fieldset2">
                             <legend>StatementInfo [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
                             <ul>
+                                <li>itemCode (전자명세서 문서 유형) : <%= statementInfo.getItemCode()%></li>
                                 <li>itemKey (팝빌번호) : <%= statementInfo.getItemKey()%></li>
-                                <li>itemCode (전자명세서 유형 코드) : <%= statementInfo.getItemCode()%></li>
-                                <li>invoiceNum (팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
                                 <li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
-
-                                <li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
                                 <li>taxType (과세형태) : <%= statementInfo.getTaxType()%></li>
-                                <li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
-
                                 <li>writeDate (작성일자) : <%= statementInfo.getWriteDate()%></li>
+                                <li>regDT (임시저장일시) : <%= statementInfo.getRegDT()%></li>
                                 <li>senderCorpName (발신자 상호) : <%= statementInfo.getSenderCorpName()%></li>
                                 <li>senderCorpNum (발신자 사업자번호) : <%= statementInfo.getSenderCorpNum()%></li>
                                 <li>senderPrintYN (발신자 인쇄여부) : <%= statementInfo.isSenderPrintYN()%></li>
-
                                 <li>receiverCorpName (수신자 상호) : <%= statementInfo.getReceiverCorpName()%></li>
                                 <li>receiverCorpNum (수신자 사업자번호) : <%= statementInfo.getReceiverCorpNum()%></li>
                                 <li>receiverPrintYN (수신자 인쇄여부) : <%= statementInfo.isReceiverPrintYN()%></li>
-
                                 <li>supplyCostTotal (공급가액 합계) : <%= statementInfo.getSupplyCostTotal()%></li>
                                 <li>taxTotal (세액 합계) : <%= statementInfo.getTaxTotal()%></li>
+                                <li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
                                 <li>issueDT (발행일시) : <%= statementInfo.getIssueDT()%></li>
-                                <li>stateDT (상태 변경일시) : <%= statementInfo.getStateDT()%></li>
-                                <li>openYN (개봉 여부) : <%= statementInfo.isOpenYN()%></li>
+                                <li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
+                                <li>stateDT (상태변경 일시) : <%= statementInfo.getStateDT()%></li>
+                                <li>stateMemo (상태메모) : <%= statementInfo.getStateMemo()%></li>
+                                <li>openYN (개봉여부) : <%= statementInfo.isOpenYN()%></li>
                                 <li>openDT (개봉 일시) : <%= statementInfo.getOpenDT()%></li>
-                                <li>stateMemo (상태 메모) : <%= statementInfo.getStateMemo()%></li>
-                                <li>regDT (임시저장 일시) : <%= statementInfo.getRegDT()%></li>
-
                             </ul>
                         </fieldset>
                         <%

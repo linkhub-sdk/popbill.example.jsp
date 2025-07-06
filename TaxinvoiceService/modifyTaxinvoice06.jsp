@@ -42,7 +42,7 @@
     // 착오에 의한 이중발급 사유로 수정세금계산서 작성 시, 수정사유코드 6 기재
     taxinvoice.setModifyCode((short) 6);
 
-    // 수정세금계산서 작성시 원본세금계산서 국세청 승인번호 기재
+    // 수정세금계산서 작성시 원본세금계산서 국세청승인번호 기재
     taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
 
     // 발행형태, [정발행, 역발행, 위수탁] 중 기재
@@ -203,12 +203,12 @@
     // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoiceeSMSSendYN(false);
 
-    // 사업자등록증 이미지 첨부여부 (true / false 중 택 1)
+    // 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 이미지 첨부여부 (true / false 중 택 1)
+    // 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
@@ -290,7 +290,7 @@
         <ul>
             <li>응답 코드(code) : <%=issueResponse.getCode()%></li>
             <li>응답메시지 (message) : <%=issueResponse.getMessage()%></li>
-            <li>국세청 승인번호 (Response.ntsConfirmNum) : <%=issueResponse.getNtsConfirmNum()%></li>
+            <li>국세청승인번호 (Response.ntsConfirmNum) : <%=issueResponse.getNtsConfirmNum()%></li>
         </ul>
     </fieldset>
 </div>
