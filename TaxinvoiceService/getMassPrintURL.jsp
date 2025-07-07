@@ -24,7 +24,7 @@
     // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호 배열, 최대 100건
+    // 문서번호 목록, 최대 100건
     String[] mgtKeyList = new String[]{"20230102-JSP001", "20230102-JSP002"};
 
     // 팝빌회원 아이디

@@ -26,7 +26,7 @@
     // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호 배열 (최대 1000건)
+    // 문서번호 목록 (최대 1000건)
     String[] MgtKeyList = new String[] {"20230102-JSP001","20230102-JSP002"};
 
     TaxinvoiceInfo[] taxinvoiceInfos = null;
