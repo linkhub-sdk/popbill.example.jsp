@@ -23,7 +23,7 @@
     // └ 거래내역 조회(Seach API) 함수의 반환값인 EasyFinBankSearchDetail 의 tid를 통해 확인 가능
     String TID = "";
 
-    // 메모
+    // 거래내역 메모
     String Memo = "Memo-테스트";
 
     Response saveResponse = null;
