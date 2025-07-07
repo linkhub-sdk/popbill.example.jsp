@@ -54,7 +54,7 @@
                     <ul>
                         <li>serialNum (첨부파일 일련번호) : <%= attachedFile.getSerialNum() %> </li>
                         <li>attachedFile (첨부파일 삭제시 사용) : <%= attachedFile.getAttachedFile() %> </li>
-                        <li>displayName (첨부파일명) : <%= attachedFile.getDisplayName() %></li>
+                        <li>displayName (파일명) : <%= attachedFile.getDisplayName() %></li>
                         <li>regDT (첨부일시) : <%= attachedFile.getRegDT() %></li>
                     </ul>
                 </fieldset>
