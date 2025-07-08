@@ -28,11 +28,11 @@
     // 조회할 기관의 계좌번호 (하이픈 '-' 제외 7자리 이상 14자리 이하)
     String AccountNumber = "";
 
-    // 등록번호 유형 ( P / B 중 택 1 , P = 개인, B = 사업자)
+    // 실명번호 유형 ( P / B 중 택 1 , P = 개인, B = 사업자)
     String IdentityNumType ="";
 
     /*
-     * 등록번호
+     * 실명번호
      * - IdentityNumType 값이 "B" 인 경우 (사업자번호(10)자리 입력)
      * - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
      * 하이픈 '-' 제외하고 입력
