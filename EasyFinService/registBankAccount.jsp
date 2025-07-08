@@ -23,7 +23,7 @@
     // 계좌정보 클래스 인스턴스 생성
     EasyFinBankAccountForm bankInfo = new EasyFinBankAccountForm();
 
-    // 기관코드
+    // 은행 기관코드
     bankInfo.setBankCode("");
 
     // 계좌번호 하이픈('-') 제외

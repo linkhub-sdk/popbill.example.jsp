@@ -22,7 +22,7 @@
 
     String UserID = "testkorea";
 
-    // 기관코드
+    // 은행 기관코드
     String BankCode = "";
 
     // 계좌번호 하이픈('-') 제외
