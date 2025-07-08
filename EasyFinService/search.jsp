@@ -27,6 +27,12 @@
     // - 미입력 시 전체조회
     String[] TradeType = {"I", "O"};
 
+    // "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
+    // - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
+    // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
+    // - 미입력시 전체조회
+    String searchString = "";
+
     // 페이지 번호
     int Page = 1;
 
@@ -35,13 +41,7 @@
 
     // 정렬발향, A-오름차순, D-내림차순
     String Order = "D";
-
-    // "입·출금액" / "메모" / "비고" 중 검색하고자 하는 값 입력
-    // - 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
-    // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
-    // - 미입력시 전체조회
-    String searchString = "";
-
+    
     EasyFinBankSearchResult result = null;
 
     try {
