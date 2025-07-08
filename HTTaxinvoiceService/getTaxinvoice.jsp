@@ -83,6 +83,19 @@
                     <li>invoiceeTEL1 (공급받는자 담당자 연락처) : <%=taxinvoiceInfo.getInvoiceeTEL1() %> </li>
                     <li>invoiceeEmail1 (공급받는자 담당자 메일) : <%=taxinvoiceInfo.getInvoiceeEmail1() %> </li>
 
+                    <li>trusteeCorpNum (수탁자 사업자번호) : <%=taxinvoiceInfo.getTrusteeCorpNum() %> </li>
+                    <li>trusteeMgtKey (수탁자 문서번호) : <%=taxinvoiceInfo.getTrusteeMgtKey() %> </li>
+                    <li>trusteeTaxRegID (수탁자 종사업장 식별번호) : <%=taxinvoiceInfo.getTrusteeTaxRegID() %> </li>
+                    <li>trusteeCorpName (수탁자 상호) : <%=taxinvoiceInfo.getTrusteeCorpName() %> </li>
+                    <li>trusteeCEOName (수탁자 대표자 성명) : <%=taxinvoiceInfo.getTrusteeCEOName() %> </li>
+                    <li>trusteeAddr (수탁자 주소) : <%=taxinvoiceInfo.getTrusteeAddr() %> </li>
+                    <li>trusteeBizType (수탁자 업태) : <%=taxinvoiceInfo.getTrusteeBizType() %> </li>
+                    <li>trusteeBizClass (수탁자 종목) : <%=taxinvoiceInfo.getTrusteeBizClass() %> </li>
+                    <li>trusteeContactName (수탁자 담당자 성명) : <%=taxinvoiceInfo.getTrusteeContactName() %> </li>
+                    <li>trusteeDeptName (수탁자 담당자 부서명) : <%=taxinvoiceInfo.getTrusteeDeptName() %> </li>
+                    <li>trusteeTEL (수탁자 담당자 연락처) : <%=taxinvoiceInfo.getTrusteeTEL() %> </li>
+                    <li>trusteeEmail (수탁자 담당자 메일) : <%=taxinvoiceInfo.getTrusteeEmail() %> </li>
+
                     <li>modifyCode (수정 사유코드) : <%=taxinvoiceInfo.getModifyCode() %> </li>
                     <fieldset class ="fieldset2">
                         <legend> 품목정보</legend>
