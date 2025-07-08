@@ -64,7 +64,6 @@
                     <li>accountNumber (계좌번호) : <%=depositorCheckInfo.getAccountNumber()%></li>
                     <li>identityNumType (실명번호 유형) : <%=depositorCheckInfo.getIdentityNumType()%></li>
                     <li>identityNum (실명번호) : <%=depositorCheckInfo.getIdentityNum()%></li>
-                    <li>checkDate (확인일시) : <%=depositorCheckInfo.getCheckDate()%></li>
                     <li>checkDT (확인일시) : <%=depositorCheckInfo.getCheckDT()%></li>
                 </ul>
             </fieldset>
