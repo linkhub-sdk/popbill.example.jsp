@@ -12,7 +12,7 @@
 <%
     /*
      * 사업자등록상태조회 (휴폐업조회) 시 과금되는 포인트 단가를 확인합니다.
-     * - https://developers.popbill.com/reference/closedown/java/api/point#GetUnitCost
+     * - https://developers.popbill.com/reference/closedown/java/common-api/point#GetUnitCost
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

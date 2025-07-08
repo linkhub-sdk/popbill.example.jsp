@@ -14,7 +14,7 @@
 <%
     /*
      * 연동회원의 포인트 환불신청내역을 확인합니다.
-     * - https://developers.popbill.com/reference/taxinvoice/java/api/point#GetRefundHistory
+     * - https://developers.popbill.com/reference/taxinvoice/java/common-api/point#GetRefundHistory
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -14,7 +14,7 @@
 <%
     /*
      * 연동회원 포인트를 환불 신청합니다.
-     * - https://developers.popbill.com/reference/closedown/java/api/point#Refund
+     * - https://developers.popbill.com/reference/closedown/java/common-api/point#Refund
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

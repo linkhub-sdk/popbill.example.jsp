@@ -15,7 +15,7 @@
      * - 권장 사이즈 : width = 1,200px (최소 800px) / height = 600px
      * - 반환되는 URL은 30초 동안만 사용이 가능합니다.
      * - 반환되는 URL에서만 유효한 세션을 포함하고 있습니다.
-     * - https://developers.popbill.com/reference/httaxinvoice/java/api/point#GetPaymentURL
+     * - https://developers.popbill.com/reference/httaxinvoice/java/common-api/point#GetPaymentURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

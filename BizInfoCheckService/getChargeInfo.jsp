@@ -13,7 +13,7 @@
 <%
     /*
      * 팝빌 기업정보조회 API 서비스 과금정보를 확인합니다.
-     * - https://developers.popbill.com/reference/bizinfocheck/java/api/point#GetChargeInfo
+     * - https://developers.popbill.com/reference/bizinfocheck/java/common-api/point#GetChargeInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -14,7 +14,7 @@
 <%
     /*
      * 연동회원의 포인트 결제내역을 확인합니다.
-     * - https://developers.popbill.com/reference/htcashbill/java/api/point#GetPaymentHistory
+     * - https://developers.popbill.com/reference/htcashbill/java/common-api/point#GetPaymentHistory
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)

@@ -13,7 +13,7 @@
 <%
     /*
      * 포인트 환불에 대한 상세정보 1건을 확인합니다.
-     * - https://developers.popbill.com/reference/sms/java/api/point#GetRefundInfo
+     * - https://developers.popbill.com/reference/sms/java/common-api/point#GetRefundInfo
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
