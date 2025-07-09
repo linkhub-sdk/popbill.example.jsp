@@ -56,8 +56,8 @@
                         <li>taxType (과세형태) : <%= statement.getTaxType ()%></li>
                         <li>purposeType (영수/청구) : <%= statement.getPurposeType()%></li>
                         <li>serialNum (기재상 일련번호) : <%= statement.getSerialNum()%></li>
-                        <li>taxTotal (세액 합계) : <%= statement.getTaxTotal()%></li>
                         <li>supplyCostTotal (공급가액 합계) : <%= statement.getSupplyCostTotal()%></li>
+                        <li>taxTotal (세액 합계) : <%= statement.getTaxTotal()%></li>
                         <li>totalAmount (합계금액) : <%= statement.getTotalAmount()%></li>
                         <li>remark1 (비고1) : <%= statement.getRemark1()%></li>
                         <li>remark2 (비고2) : <%= statement.getRemark2()%></li>
