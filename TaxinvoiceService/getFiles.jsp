@@ -53,7 +53,7 @@
                 <fieldset class="fieldset2">
                     <ul>
                         <Li>serialNum (첨부파일 일련번호) : <%= attachedFile.getSerialNum() %> </Li>
-                        <li>attachedFile (파일아이디) : <%= attachedFile.getAttachedFile() %> </li>
+                        <li>attachedFile (팝빌이 할당한 파일 식별번호) : <%= attachedFile.getAttachedFile() %> </li>
                         <li>displayName (파일명) : <%= attachedFile.getDisplayName() %></li>
                         <li>regDT (등록일시) : <%= attachedFile.getRegDT() %></li>
                     </ul>

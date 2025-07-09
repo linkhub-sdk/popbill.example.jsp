@@ -28,7 +28,7 @@
     // 세금계산서 문서번호
     String mgtKey = "20230102-JSP002";
 
-    // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
+    // 팝빌이 할당한 파일 식별번호
     // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
     String fileID = "";
 
