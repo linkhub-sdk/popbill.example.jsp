@@ -163,20 +163,26 @@
 
     detail.setSerialNum((short) 1);                    // 일련번호, 1부터 순차기재
     detail.setPurchaseDT("20230102");                  // 거래일자
-    detail.setItemName("품명");                        // 품목명
+    detail.setItemName("품명");                         // 품목명
+    detail.setSpec("규격");                             // 규격
     detail.setQty("1");                                // 수량
+    detail.setUnit("200000");                          // 단가
     detail.setSupplyCost("200000");                    // 공급가액
     detail.setTax("20000");                            // 세액
+    detail.setRemark("비고1");                          // 비고
 
     statement.getDetailList().add(detail);
 
     detail = new StatementDetail();                    // 상세항목(품목) 배열
     detail.setSerialNum((short) 2);                    // 일련번호 1부터 순차기재
     detail.setPurchaseDT("20230102");                  // 거래일자
-    detail.setItemName("품명");                        // 품목명
+    detail.setItemName("품명");                         // 품목명
+    detail.setSpec("규격");                             // 규격
     detail.setQty("1");                                // 수량
+    detail.setUnit("200000");                          // 단가
     detail.setSupplyCost("200000");                    // 공급가액
     detail.setTax("20000");                            // 세액
+    detail.setRemark("비고1");                          // 비고
 
     statement.getDetailList().add(detail);
 
