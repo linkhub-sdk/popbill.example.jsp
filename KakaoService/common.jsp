@@ -18,10 +18,10 @@
 *     - UseLocalTimeYN : 로컬시스템 시간 사용여부, true-사용, false-미사용, (기본값:true)
 * 3) 비즈니스 채널 등록 및 알림톡 템플릿을 신청합니다.
 *    - 1. 비즈니스 채널 등록 (등록방법은 사이트/API 두가지 방식이 있습니다.)
-*        └ 팝빌 사이트 로그인 [문자/팩스] > [카카오톡] > [카카오톡 관리] > '비즈니스 채널 관리' 메뉴에서 등록
+*        └ 팝빌 사이트 로그인 [카카오톡] > [관리] > [비즈니스 채널 관리] 메뉴에서 등록
 *        └ GetPlusFriendMgtURL API 를 통해 반환된 URL을 이용하여 등록
 *    - 2. 알림톡 템플릿 신청 (등록방법은 사이트/API 두가지 방식이 있습니다.)
-*        └ 팝빌 사이트 로그인 [문자/팩스] > [카카오톡] > [카카오톡 관리] > '알림톡 템플릿 관리' 메뉴에서 등록
+*        └ 팝빌 사이트 로그인 [카카오톡] > [관리] > [알림톡 템플릿 관리] 메뉴에서 등록
 *        └ GetATSTemplateMgtURL API 를 통해 URL을 이용하여 등록.
 *
 * Class Module for base module for Popbill API SDK. It include base functionality for
