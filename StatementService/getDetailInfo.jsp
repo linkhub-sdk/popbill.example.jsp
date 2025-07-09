@@ -50,6 +50,7 @@
                     <ul>
                         <li>itemCode (전자명세서 문서 유형) : <%= statement.getItemCode()%></li>
                         <li>mgtKey (문서번호) : <%= statement.getMgtKey()%></li>
+                        <li>invoiceNum (팝빌 승인번호) : <%= statement.getInvoiceNum()%></li>
                         <li>formCode (맞춤양식 코드) : <%= statement.getFormCode()%></li>
                         <li>writeDate (작성일자) : <%= statement.getWriteDate()%></li>
                         <li>taxType (과세형태) : <%= statement.getTaxType ()%></li>
