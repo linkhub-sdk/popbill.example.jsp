@@ -260,15 +260,8 @@
 
     taxinvoice.getAddContactList().add(addContact);
 
-    // taxinvoice.setAddContactList(new ArrayList<TaxinvoiceAddContact>());
-
-    // TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
-
-    // addContact.setSerialNum(1);
-    // addContact.setContactName("추가 담당자 성명");
-    // addContact.setEmail("test2@test.com");
-
-    // taxinvoice.getAddContactList().add(addContact);
+    //거래명세서 동시작성 여부
+    Boolean WriteSpecification = false;
 
     // 즉시발행 메모
     String Memo = "수정세금계산서 발행 메모";
@@ -280,11 +273,20 @@
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을 true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
 
+    // 거래명세서 문서번호
+    String DealInvoiceKey = null;
+
+    // 세금계산서 발행 안내메일 제목
+    String EmailSubject = null;
+
+    String UserID = "testkorea";
+
     IssueResponse issueResponse = null;
     try {
 
         // 취소분 세금계산서 발행
-        issueResponse= taxinvoiceService.registIssue(CorpNum, taxinvoice, Memo, ForceIssue);
+        issueResponse= taxinvoiceService.registIssue(CorpNum, taxinvoice, WriteSpecification, Memo,
+                ForceIssue, DealInvoiceKey, EmailSubject, UserID);
 
     } catch (PopbillException pe) {
         throw pe;
