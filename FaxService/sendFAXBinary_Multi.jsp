@@ -33,6 +33,9 @@
     // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
     String sendNum = "07043042991";
 
+    // 발신자명
+    String SenderName = "발신자명";
+
     // 수신자 정보 (최대 1000건)
     Receiver[] receivers = new Receiver[2];
 
@@ -94,7 +97,7 @@
 
     try {
 
-        receiptNum = faxService.sendFAXBinary(testCorpNum, sendNum, receivers, fileList,
+        receiptNum = faxService.sendFAXBinary(testCorpNum, sendNum, SenderName, receivers, fileList,
                 reserveDT, testUserID, adsYN, title, requestNum);
 
     } catch (PopbillException pe) {
