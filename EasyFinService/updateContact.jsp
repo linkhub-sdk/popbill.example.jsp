@@ -20,14 +20,11 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String testCorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID =  "testkorea";
-
     // 담당자정보 객체
     ContactInfo contactInfo = new ContactInfo();
 
     // 담당자 아이디
-    contactInfo.setId(testUserID);
+    contactInfo.setId("testkorea");
 
     // 담당자 성명, 최대 100자
     contactInfo.setPersonName("담당자");
@@ -41,11 +38,14 @@
     // 담당자 조회권한 1 - 개인권한 / 2 - 읽기권한  / 3 - 회사권한
     contactInfo.setSearchRole(3);
 
+    // 팝빌회원 아이디
+    String UserID =  "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = easyFinBankService.updateContact(testCorpNum, contactInfo, testUserID);
+        CheckResponse = easyFinBankService.updateContact(testCorpNum, contactInfo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
