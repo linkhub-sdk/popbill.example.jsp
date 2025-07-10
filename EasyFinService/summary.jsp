@@ -34,10 +34,13 @@
     // - 미입력시 전체조회
     String searchString = "";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     EasyFinBankSummary result = null;
 
     try {
-        result = easyFinBankService.summary(testCorpNum, jobID, TradeType, searchString);
+        result = easyFinBankService.summary(testCorpNum, jobID, TradeType, searchString, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

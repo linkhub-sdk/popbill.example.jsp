@@ -29,11 +29,14 @@
     // 일반(일반해지) – 이용중인 정액제 기간 만료 후 해지
     String CloseType = "일반";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response saveResponse = null;
 
     try {
 
-        saveResponse = easyFinBankService.closeBankAccount(testCorpNum, BankCode, AccountNumber, CloseType);
+        saveResponse = easyFinBankService.closeBankAccount(testCorpNum, BankCode, AccountNumber, CloseType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

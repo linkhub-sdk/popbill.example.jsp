@@ -22,11 +22,14 @@
     // 조회할 사업자번호 배열, 최대 1000건
     String[] corpNumList = new String[] {"1234567890", "6798700433", "401-03-94930"};
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     CorpState[] corpStates = null;
 
     try {
 
-        corpStates = closedownService.CheckCorpNum(testCorpNum, corpNumList);
+        corpStates = closedownService.CheckCorpNum(testCorpNum, corpNumList, UserID);
 
     } catch (PopbillException pe){
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

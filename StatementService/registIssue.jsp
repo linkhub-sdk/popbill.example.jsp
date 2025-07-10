@@ -188,6 +188,9 @@
 
     String Memo = "전자명세서 즉시발행 메모";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     // 발행 안내 메일 제목
     // - 미입력 시 팝빌에서 지정한  이메일 제목으로 전송
     String emailSubject = "";
@@ -196,7 +199,7 @@
 
     try {
 
-        CheckResponse = statementService.registIssue(testCorpNum, statement, Memo);
+        CheckResponse = statementService.registIssue(testCorpNum, statement, Memo, UserID, emailSubject);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

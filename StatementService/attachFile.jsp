@@ -35,11 +35,14 @@
     // FileInputStream으로 처리하는 것을 권함.
     InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = statementService.attachFile(testCorpNum, itemCode, mgtKey, fileName, stream);
+        CheckResponse = statementService.attachFile(testCorpNum, itemCode, mgtKey, fileName, stream, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

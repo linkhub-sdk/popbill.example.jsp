@@ -29,11 +29,14 @@
     // 전자명세서 상태 이력을 관리하기 위한 메모
     String memo = "상태메모";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = statementService.cancel(testCorpNum, itemCode, mgtKey, memo);
+        CheckResponse = statementService.cancel(testCorpNum, itemCode, mgtKey, memo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -24,11 +24,14 @@
     // 문자 전송요청 시 팝빌로부터 반환 받은 접수번호
     String receiptNum = "022100715000000005";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     SentMessage[] sentMessages = null;
 
     try {
 
-        sentMessages = messageService.getMessages(testCorpNum, receiptNum);
+        sentMessages = messageService.getMessages(testCorpNum, receiptNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

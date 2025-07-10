@@ -41,12 +41,15 @@
 
     // 정렬발향, A-오름차순, D-내림차순
     String Order = "D";
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
     
     EasyFinBankSearchResult result = null;
 
     try {
         result = easyFinBankService.search(testCorpNum, jobID, TradeType, searchString,
-            Page, PerPage, Order);
+            Page, PerPage, Order, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

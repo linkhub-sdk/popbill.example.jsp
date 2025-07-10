@@ -70,12 +70,24 @@
     // - 현금영수증 취소유형이 false 인 경우 미입력
     String totalAmount = "3300";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 현금영수증 발행 안내메일 제목
+    String emailSubject = "";
+
+    // 거래일시
+    // - 전일부터 당일까지 입력 가능
+    // - 기본값 : 발행일시 사용
+    String TradeDT = "";
+
     CBIssueResponse CheckResponse = null;
 
     try {
 
-        CheckResponse = cashbillService.revokeRegistIssue(testCorpNum, mgtKey, orgConfirmNum, orgTradeDate, smssendYN,
-                memo, isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount);
+        CheckResponse = cashbillService.revokeRegistIssue(testCorpNum, mgtKey, orgConfirmNum, orgTradeDate,
+                smssendYN, memo, isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount, UserID,
+                emailSubject, TradeDT);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

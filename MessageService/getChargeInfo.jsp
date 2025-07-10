@@ -23,11 +23,14 @@
     // 문자메시지 유형. SMS(단문), LMS(장문), MMS(포토)
     MessageType msgType = MessageType.LMS;
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     ChargeInfo chargeInfo = null;
 
     try {
 
-        chargeInfo = messageService.getChargeInfo(testCorpNum, msgType);
+        chargeInfo = messageService.getChargeInfo(testCorpNum, msgType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

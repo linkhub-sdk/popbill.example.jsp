@@ -25,11 +25,14 @@
     // 예약문자 전송요청 시 파트너가 요청한 수신번호
     String receiveNum = "";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = messageService.cancelReserveRNbyRCV(testCorpNum, requestNum, receiveNum);
+        CheckResponse = messageService.cancelReserveRNbyRCV(testCorpNum, requestNum, receiveNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -275,6 +275,7 @@
     // 세금계산서 발행 안내메일 제목
     String EmailSubject = null;
 
+    // 팝빌회원 아이디
     String UserID = "testkorea";
 
     IssueResponse issueResponse = null;

@@ -262,12 +262,15 @@
     addContact.setEmail("test2@test.com");
     taxinvoice.getAddContactList().add(addContact);
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    Boolean writeSpecification = false;
+
     Response CheckResponse = null;
 
     try {
-
-        CheckResponse = taxinvoiceService.register(CorpNum, taxinvoice);
-
+        CheckResponse = taxinvoiceService.register(CorpNum, taxinvoice, UserID, writeSpecification);
     } catch (PopbillException pe) {
       // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
       // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.

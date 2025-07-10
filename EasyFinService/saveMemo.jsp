@@ -26,11 +26,14 @@
     // 거래내역 메모
     String Memo = "Memo-테스트";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response saveResponse = null;
 
     try {
 
-        saveResponse = easyFinBankService.saveMemo(testCorpNum, TID, Memo);
+        saveResponse = easyFinBankService.saveMemo(testCorpNum, TID, Memo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -29,11 +29,14 @@
     // 문서번호 목록 (최대 1000건)
     String[] MgtKeyList = new String[] {"20230102-JSP001","20230102-JSP002"};
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     TaxinvoiceInfo[] taxinvoiceInfos = null;
 
     try {
 
-        taxinvoiceInfos = taxinvoiceService.getInfos(testCorpNum, keyType, MgtKeyList);
+        taxinvoiceInfos = taxinvoiceService.getInfos(testCorpNum, keyType, MgtKeyList, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

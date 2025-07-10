@@ -269,14 +269,14 @@
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을 true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
 
-    BulkResponse CheckResponse = null;
-
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
+    BulkResponse CheckResponse = null;
+
     try {
 
-        CheckResponse = taxinvoiceService.bulkSubmit(CorpNum, SubmitID, TaxinvoiceList, ForceIssue);
+        CheckResponse = taxinvoiceService.bulkSubmit(CorpNum, SubmitID, TaxinvoiceList, ForceIssue, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -21,11 +21,14 @@
     // 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int itemCode = 121;
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     float unitCost;
 
     try {
 
-        unitCost = statementService.getUnitCost(testCorpNum, itemCode);
+        unitCost = statementService.getUnitCost(testCorpNum, itemCode, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

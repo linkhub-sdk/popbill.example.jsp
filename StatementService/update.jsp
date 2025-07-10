@@ -191,11 +191,14 @@
 
     statement.getDetailList().add(detail);
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = statementService.update(testCorpNum, itemCode, mgtKey, statement);
+        CheckResponse = statementService.update(testCorpNum, itemCode, mgtKey, statement, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

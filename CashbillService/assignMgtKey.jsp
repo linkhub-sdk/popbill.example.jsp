@@ -25,11 +25,14 @@
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
     String mgtKey = "20230102-JSP007";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = cashbillService.assignMgtKey(testCorpNum, itemKey, mgtKey);
+        CheckResponse = cashbillService.assignMgtKey(testCorpNum, itemKey, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

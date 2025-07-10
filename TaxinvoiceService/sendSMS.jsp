@@ -30,19 +30,22 @@
     String mgtKey = "20230102-JSP001";
 
     // 발신번호
-    String senderNum = "07043042992";
+    String sender = "07043042992";
 
     // 수신번호
-    String receiverNum = "010-111-222";
+    String receiver = "010-111-222";
 
     // 문자메시지 내용, 최대 90Byte까지 입력가능하고, 초과한 내용은 삭제되어 전송됨
-    String msg = "문자 메시지 내용";
+    String contents = "문자 메시지 내용";
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = taxinvoiceService.sendSMS(testCorpNum, keyType, mgtKey, senderNum, receiverNum, msg);
+        CheckResponse = taxinvoiceService.sendSMS(testCorpNum, keyType, mgtKey, sender, receiver, contents, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

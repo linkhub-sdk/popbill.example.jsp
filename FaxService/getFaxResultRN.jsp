@@ -24,11 +24,14 @@
     // 팩스 전송요청시 파트너가 할당한 전송요청번호
     String requestNum = "";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     FaxResult[] faxResults = null;
 
     try {
 
-        faxResults = faxService.getFaxResultRN(testCorpNum, requestNum);
+        faxResults = faxService.getFaxResultRN(testCorpNum, requestNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

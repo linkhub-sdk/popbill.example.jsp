@@ -72,12 +72,15 @@
     // └ 미입력시 전제조회
     String FranchiseTaxRegID = "";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     CBSearchResult searchResult = null;
 
     try {
 
         searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
-                TradeType, TradeUsage, TaxationType, TradeOpt, QString, Page, PerPage, Order, FranchiseTaxRegID);
+                TradeType, TradeUsage, TaxationType, TradeOpt, QString, Page, PerPage, Order, FranchiseTaxRegID, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -106,9 +106,10 @@
     // - 미입력시 전체조회
     String MgtKey = "";
 
-    TISearchResult searchResult = new TISearchResult();
-
+    // 팝빌회원 아이디
     String UserID = "testkorea";
+
+    TISearchResult searchResult = new TISearchResult();
 
     try {
         searchResult = taxinvoiceService.Search(testCorpNum, mgtKeyType, DType,

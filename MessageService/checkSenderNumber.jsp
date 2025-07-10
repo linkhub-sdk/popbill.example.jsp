@@ -18,16 +18,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String corpNum = "1234567890";
 
     // 확인할 발신번호
     String senderNumber = "070-4304-2991";
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = messageService.checkSenderNumber(testCorpNum, senderNumber);
+        CheckResponse = messageService.checkSenderNumber(corpNum, senderNumber, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

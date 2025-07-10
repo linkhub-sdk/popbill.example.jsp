@@ -25,11 +25,14 @@
     // 홈택스에서 생성한 전자세금계산서 부서사용자 비밀번호
     String deptUserPWD = "passwd";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = htTaxinvoiceService.registDeptUser(testCorpNum, deptUserID, deptUserPWD);
+        CheckResponse = htTaxinvoiceService.registDeptUser(testCorpNum, deptUserID, deptUserPWD, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -29,16 +29,19 @@
     String mgtKey = "20230102-JSP001";
 
     // 발신번호
-    String senderNum = "070-4304-2001";
+    String sender = "070-4304-2001";
 
     // 수신팩스 번호
-    String receiverNum = "070-111-222";
+    String receiver = "070-111-222";
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = taxinvoiceService.sendFAX(testCorpNum, keyType, mgtKey, senderNum, receiverNum);
+        CheckResponse = taxinvoiceService.sendFAX(testCorpNum, keyType, mgtKey, sender, receiver, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
