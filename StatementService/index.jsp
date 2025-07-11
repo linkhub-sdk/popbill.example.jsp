@@ -79,7 +79,7 @@
             <li><a href="${pageContext.request.contextPath}/StatementService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getPartnerURL.jsp">GetPartnerURL</a> - 파트너 포인트충전 URL</li>
             <li><a href="${pageContext.request.contextPath}/StatementService/getRefundInfo.jsp">getRefundInfo</a> - 환불 신청 상태 조회</li>
-            <li><a href="${pageContext.request.contextPath}/StatementService/getRefundableBalance.jsp">getRefundableBalance</a> - 환불 가능 포인트 조회</li>
+            <li><a href="${pageContext.request.contextPath}/StatementService/getRefundableBalance.jsp">GetRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">

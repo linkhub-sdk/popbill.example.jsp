@@ -96,8 +96,8 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getCertificateExpireDate.jsp">GetCertificateExpireDate</a> - 공동인증서 만료일 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/checkCertValidation.jsp">CheckCertValidation</a> - 공동인증서 유효성 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getTaxCertInfo.jsp">getTaxCertInfo</a> - 공동인증서 정보확인</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCert.jsp">registTaxCert</a> - 공동 인증서 등록</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCertPFX.jsp">registTaxCertPFX</a> - PFX 공동 인증서 등록</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCert.jsp">RegistTaxCert</a> - 공동 인증서 등록</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/registTaxCertPFX.jsp">RegistTaxCertPFX</a> - PFX 공동 인증서 등록</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
@@ -118,7 +118,7 @@
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerURL.jsp">GetPartnerURL</a> - 파트너 포인트충전 팝업 URL</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundInfo.jsp">GetRefundInfo</a> - 환불 신청 상태 조회</li>
-            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundableBalance.jsp">getRefundableBalance</a> - 환불 가능 포인트 조회</li>
+            <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundableBalance.jsp">GetRefundableBalance</a> - 환불 가능 포인트 조회</li>
         </ul>
     </fieldset>
     <fieldset class="fieldset1">
