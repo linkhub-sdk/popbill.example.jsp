@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 예약팩스 전송요청시 팝빌로부터 반환 받은 접수번호
-    String receiptNum = "022021803102600001";
+    String receiptNum = "022025071102600001";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

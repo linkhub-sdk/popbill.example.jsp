@@ -21,10 +21,10 @@
     String testCorpNum = "1234567890";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20230102";
+    String SDate = "20250711";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20230131";
+    String EDate = "20250731";
 
     // 페이지번호
     int Page = 1;

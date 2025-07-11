@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 조회할 전자세금계산서 국세청승인번호
-    String NTSConfirmNum = "202202188888888800000109";
+    String NTSConfirmNum = "202507118888888800000109";
 
     // 팝빌회원 아이디
     String testUserID = "testkorea";

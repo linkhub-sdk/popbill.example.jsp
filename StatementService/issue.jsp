@@ -25,7 +25,7 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호
-    String mgtKey = "20230102-JSP001";
+    String mgtKey = "20250711-JSP001";
 
     // 전자명세서 상태 이력을 관리하기 위한 메모
     String memo = "상태메모";

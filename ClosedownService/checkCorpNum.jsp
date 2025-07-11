@@ -24,9 +24,9 @@
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
-    if ( request.getParameter("CorpNum") != null ) {
+    if ( request.getParameter("CheckCorpNum") != null ) {
         // 조회할 사업자번호
-        String checkCorpNum = request.getParameter("CorpNum");
+        String checkCorpNum = request.getParameter("CheckCorpNum");
 
         try{
             corpState = closedownService.CheckCorpNum(testCorpNum, checkCorpNum, UserID);
@@ -46,7 +46,7 @@
                 <legend><%=request.getRequestURI()%></legend>
                     <div class ="fieldset4">
                     <form method= "GET" id="corpnum_form" action="checkCorpNum.jsp">
-                        <input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CorpNum" name="CorpNum" value ='<%=corpState != null ? corpState.getCorpNum():""%>' tabindex=1/>
+                        <input class= "txtCorpNum left" type="text" placeholder="사업자번호 기재" id="CheckCorpNum" name="CheckCorpNum" value ='<%=corpState != null ? corpState.getCorpNum():""%>' tabindex=1/>
                         <p class="find_btn find_btn01 hand" onclick="search()" tabindex=2>조회</p>
                     </form>
                     </div>

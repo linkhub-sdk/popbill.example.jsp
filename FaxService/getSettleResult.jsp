@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // paymentRequest 를 통해 얻은 settleCode.
-    String settleCode = "202210040000000070";
+    String settleCode = "202507110000000070";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

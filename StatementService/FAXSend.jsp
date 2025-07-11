@@ -34,13 +34,13 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20230102-JSP003");
+    statement.setMgtKey("20250711-JSP003");
 
     // 맞춤양식코드, 미기재시 기본양식으로 처리
     statement.setFormCode("");
 
     // 작성일자, 형태 yyyyMmdd
-    statement.setWriteDate("20220218");
+    statement.setWriteDate("20250711");
 
     // {과세, 영세, 면세} 중 기재
     statement.setTaxType("과세");
@@ -164,7 +164,7 @@
     StatementDetail detail = new StatementDetail();    // 상세항목(품목) 배열
 
     detail.setSerialNum((short) 1);                    // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20230102");                  // 거래일자
+    detail.setPurchaseDT("20250711");                  // 거래일자
     detail.setItemName("품명");                        // 품목명
     detail.setQty("1");                                // 수량
     detail.setSupplyCost("200000");                    // 공급가액
@@ -174,7 +174,7 @@
 
     detail = new StatementDetail();                    // 상세항목(품목) 배열
     detail.setSerialNum((short) 2);                    // 일련번호 1부터 순차기재
-    detail.setPurchaseDT("20230102");                  // 거래일자
+    detail.setPurchaseDT("20250711");                  // 거래일자
     detail.setItemName("품명");                        // 품목명
     detail.setQty("1");                                // 수량
     detail.setSupplyCost("200000");                    // 공급가액

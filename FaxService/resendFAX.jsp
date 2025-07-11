@@ -27,7 +27,7 @@
     String testUserID = "testkorea";
 
     // 팩스 접수번호
-    String orgReceiptNum = "022021803102600001";
+    String orgReceiptNum = "022025071102600001";
 
     // 발신번호, 공백처리시 기존전송정보로 전송
     String sendNum = "07043042991";

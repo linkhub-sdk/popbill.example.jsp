@@ -23,7 +23,7 @@
     String testCorpNum = "1234567890";
 
     //대량 발행 접수시 기재한 제출아이디
-    String SubmitID = "20231025-JSP-BULK";
+    String SubmitID = "20250711-JSP-BULK";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

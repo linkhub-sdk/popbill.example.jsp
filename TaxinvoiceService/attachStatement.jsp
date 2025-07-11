@@ -24,13 +24,13 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20230102-JSP001";
+    String mgtKey = "20250711-JSP001";
 
     // 첨부할 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int subItemCode = 121;
 
     // 첨부할 전자명세서 문서번호
-    String subMgtKey = "20230102-JSP002";
+    String subMgtKey = "20250711-JSP002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

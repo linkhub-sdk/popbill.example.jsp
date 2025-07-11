@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20230102-JSP001";
+    String mgtKey = "20250711-JSP001";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

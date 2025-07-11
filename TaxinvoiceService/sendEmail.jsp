@@ -25,7 +25,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20230102-JSP001";
+    String mgtKey = "20250711-JSP001";
 
     // 수신메일주소
     String emailAddr = "test@test.com";

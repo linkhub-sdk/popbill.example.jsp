@@ -22,7 +22,7 @@
     String testCorpNum = "1234567890";
 
     // 현금영수증 문서번호
-    String mgtKey = "20230102-JSP002";
+    String mgtKey = "20250711-JSP002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

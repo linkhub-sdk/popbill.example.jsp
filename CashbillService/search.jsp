@@ -26,10 +26,10 @@
     String DType = "T";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20230102";
+    String SDate = "20250711";
 
     // 종료일자, 날짜형식(yyyyMMdd)
-    String EDate = "20230131";
+    String EDate = "20250731";
 
     // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
     // - 미입력시 전체조회

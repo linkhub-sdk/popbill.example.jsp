@@ -20,7 +20,7 @@
     String testCorpNum = "1234567890";
 
     // 팩스 접수번호
-    String receiptNum = "022021803102600001";
+    String receiptNum = "022025071102600001";
 
     // 팝빌회원 아이디
     String testUserID = "testkorea";

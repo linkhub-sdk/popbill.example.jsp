@@ -24,10 +24,10 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 세금계산서 팝빌번호, 문서 목록조회(Search API) 함수의 반환항목 중 ItemKey 참조
-    String itemKey = "022021718272000001";
+    String itemKey = "022025071172000001";
 
     // 할당할 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20230102-JSP007";
+    String mgtKey = "20250711-JSP007";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

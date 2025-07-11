@@ -27,10 +27,10 @@
     String AccountNumber = "";
 
     // 시작일자, 날짜형식(yyyyMMdd)
-    String SDate = "20230102";
+    String SDate = "20250711";
 
     // 종료일자, 닐짜형식(yyyyMMdd)
-    String EDate = "20230131";
+    String EDate = "20250731";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

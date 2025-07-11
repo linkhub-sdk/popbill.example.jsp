@@ -26,7 +26,7 @@
     int itemCode = 121;
 
     // 전자명세서 문서번호
-    String mgtKey = "20230102-JSP002";
+    String mgtKey = "20250711-JSP002";
 
     // 첨부파일 표시명
     String fileName = "test.jpg";

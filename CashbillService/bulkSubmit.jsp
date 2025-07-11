@@ -24,7 +24,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String SubmitID = "20230102-JSP-BULK";
+    String SubmitID = "20250711-JSP-BULK";
 
     // 최대 100건.
     List<Cashbill> cashbillList = new ArrayList<Cashbill>();
@@ -39,7 +39,7 @@
 
         // 거래일시, 날짜(yyyyMMddHHmmss)
         // 당일, 전일만 가능
-        cashbill.setTradeDT("20221104000000");
+        cashbill.setTradeDT("20250711000000");
 
         // 문서형태, 승인거래 기재
         cashbill.setTradeType("승인거래");

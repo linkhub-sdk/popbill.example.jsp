@@ -41,7 +41,7 @@
     taxinvoice.setModifyCode((short) 1);
 
     // 수정세금계산서 작성시 원본세금계산서 국세청승인번호 기재
-    taxinvoice.setOrgNTSConfirmNum("20230706-original-TI00001");
+    taxinvoice.setOrgNTSConfirmNum("20250711-original-TI00001");
 
     // 발행형태, [정발행, 역발행, 위수탁] 중 기재
     taxinvoice.setIssueType("정발행");
@@ -65,7 +65,7 @@
 
     // 작성일자, 날짜형식(yyyyMMdd)
     // 원본 전자세금계산서 작성일자 또는 변경을 원하는 작성일자
-    taxinvoice.setWriteDate("20230102");
+    taxinvoice.setWriteDate("20250711");
 
     // [영수, 청구, 없음] 중 기재
     taxinvoice.setPurposeType("영수");
@@ -103,7 +103,7 @@
      *********************************************************************/
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20230102-BOOT001");
+    taxinvoice.setInvoicerMgtKey("20250711-BOOT001");
 
     // 공급자 사업자번호
     taxinvoice.setInvoicerCorpNum(CorpNum);
@@ -218,7 +218,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1); // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20230102"); // 거래일자
+    detail.setPurchaseDT("20250711"); // 거래일자
     detail.setItemName("품목명"); // 품목명
     detail.setSpec("규격"); // 규격
     detail.setQty("1"); // 수량
@@ -232,7 +232,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2); // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20230102"); // 거래일자
+    detail.setPurchaseDT("20250711"); // 거래일자
     detail.setItemName("품목명2"); // 품목명
     detail.setSpec("규격"); // 규격
     detail.setQty("1"); // 수량

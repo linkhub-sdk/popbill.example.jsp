@@ -44,7 +44,7 @@
     msg1.setReceiverName("수신자1");     // 수신자명
     msg1.setSubject("멀티 메시지 제목"); // 문자제목
     msg1.setContent("메시지 내용1");     // 메시지내용
-    msg1.setInterOPRefKey("20221007-MMS001");     // 파트너 지정키
+    msg1.setInterOPRefKey("20250711-MMS001");     // 파트너 지정키
     messages[0] = msg1;
 
     Message msg2 = new Message();
@@ -54,7 +54,7 @@
     msg2.setReceiverName("수신자2");
     msg2.setSubject("멀티 메시지 제목");
     msg2.setContent("메시지 내용2");
-    msg2.setInterOPRefKey("20221007-MMS002");
+    msg2.setInterOPRefKey("20250711-MMS002");
     messages[1] = msg2;
 
     // 전송할 이미지 파일 경로
@@ -63,7 +63,7 @@
     // 예약전송일시, null인 경우 즉시전송
     Date reserveDT = null;
     // 예약전송시 아래의 코드 참조
-    // String reserveDTtxt ="20220228180000";
+    // String reserveDTtxt ="20250711180000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);
 

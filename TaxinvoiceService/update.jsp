@@ -28,7 +28,7 @@
     MgtKeyType mgtKeyType = MgtKeyType.SELL;
 
     // 세금계산서 문서번호
-    String mgtKey = "20230102-JSP002";
+    String mgtKey = "20250711-JSP002";
 
     /***************************************************************************
      * 세금계산서 정보
@@ -57,7 +57,7 @@
     taxinvoice.setHo((short) 1);
 
     // 작성일자, 날짜형식(yyyyMMdd)
-    taxinvoice.setWriteDate("20230102");
+    taxinvoice.setWriteDate("20250711");
 
     // {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
@@ -222,7 +222,7 @@
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1); // 일련번호, 1부터 순차기재
-    detail.setPurchaseDT("20230102"); // 거래일자
+    detail.setPurchaseDT("20250711"); // 거래일자
     detail.setItemName("품목명"); // 품목명
     detail.setSpec("규격"); // 규격
     detail.setQty("1"); // 수량
@@ -236,7 +236,7 @@
     detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 2);
-    detail.setPurchaseDT("20230102");
+    detail.setPurchaseDT("20250711");
     detail.setItemName("품목명2");
     detail.setSpec("규격");
     detail.setQty("1");
