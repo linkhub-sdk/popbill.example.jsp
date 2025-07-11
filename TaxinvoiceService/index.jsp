@@ -110,9 +110,9 @@
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/paymentRequest.jsp">PaymentRequest</a> - 연동회원 무통장 입금신청</li>
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getSettleResult.jsp">GetSettleResult</a> - 연동회원 무통장 입금신청 정보확인</li>
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPaymentHistory.jsp">GetPaymentHistory</a> - 연동회원 포인트 결제내역 확인</li>
-	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPaymentURL.jsp">getPaymentURL</a> - 연동회원 포인트 결제내역 팝업 URL</li>
+	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPaymentURL.jsp">GetPaymentURL</a> - 연동회원 포인트 결제내역 팝업 URL</li>
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUseHistory.jsp">GetUseHistory</a> - 연동회원 포인트 사용내역 확인</li>
-	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUseHistoryURL.jsp">getUseHistoryURL</a> - 연동회원 포인트 사용내역 팝업 URL</li>
+	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getUseHistoryURL.jsp">GetUseHistoryURL</a> - 연동회원 포인트 사용내역 팝업 URL</li>
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/refund.jsp">Refund</a> - 연동회원 포인트 환불신청</li>
 	        <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getRefundHistory.jsp">GetRefundHistory</a> - 연동회원 포인트 환불내역 확인</li>
             <li><a href="${pageContext.request.contextPath}/TaxinvoiceService/getPartnerBalance.jsp">GetPartnerBalance</a> - 파트너 잔여포인트 확인</li>
