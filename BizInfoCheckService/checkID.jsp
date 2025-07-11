@@ -16,14 +16,14 @@
      * - https://developers.popbill.com/reference/bizinfocheck/java/common-api/member#CheckID
      */
 
-    // 조회할 아이디
-    String userID = "testkorea1234";
+    // 중복여부를 확인할 아이디
+    String checkID = "testkorea";
 
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = bizInfoCheckService.checkID(userID);
+        CheckResponse = bizInfoCheckService.checkID(checkID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage() 로 관련 오류메시지를 확인합니다.

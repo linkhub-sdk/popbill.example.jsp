@@ -16,7 +16,7 @@
      * - https://developers.popbill.com/reference/htcashbill/java/common-api/member#CheckID
      */
 
-    // 조회할 아이디
+    // 중복여부를 확인할 아이디
     String checkID = "testkorea";
 
     Response CheckResponse = null;
