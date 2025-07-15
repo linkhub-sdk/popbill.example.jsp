@@ -21,20 +21,20 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum= "1234567890";
+    String CorpNum= "1234567890";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20250731";
 
-    // 전송상태 배열 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
+    // 전송상태 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
     // └ 1 = 대기 , 2 = 성공 , 3 = 실패 , 4 = 취소
     // - 미입력 시 전체조회
     String[] State = {"1", "2", "3", "4"};
 
-    // 검색대상 배열 ("SMS" , "LMS" , "MMS" 중 선택, 다중 선택 가능)
+    // 검색대상 ("SMS" , "LMS" , "MMS" 중 선택, 다중 선택 가능)
     // └ SMS = 단문 , LMS = 장문 , MMS = 포토문자
     // - 미입력 시 전체조회
     String[] Item = {"SMS", "LMS", "MMS"};
@@ -49,17 +49,17 @@
     // └ false = 전송한 문자 전체 조회 : 기본값
     Boolean SenderOnly = false;
 
-    // 페이지 번호
+    // 목록 페이지번호
     int Page = 1;
 
-    // 페이지당 검색개수, 최대 1000개
+    // 페이지당 표시할 목록 건수 (최대 1000건)
     int PerPage = 20;
 
     // 문자 접수일시를 기준으로 하는 목록 정렬 방향 ("D" , "A" 중 택 1)
     // └ D = 내림차순(기본값) , A = 오름차순
     String Order = "D";
 
-    // 조회하고자 하는 발신자명 또는 수신자명
+    // 조회 검색어(발신자명/수신자명)
     // - 미입력시 전체조회
     String QString = "";
 
@@ -70,7 +70,7 @@
 
     try {
 
-        searchResult = messageService.search(testCorpNum, SDate, EDate, State, Item,
+        searchResult = messageService.search(CorpNum, SDate, EDate, State, Item,
                 ReserveYN, SenderOnly, Page, PerPage, Order, QString, UserID);
 
     } catch (PopbillException pe) {

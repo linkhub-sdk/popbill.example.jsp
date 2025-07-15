@@ -22,12 +22,12 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 팝빌에 등록된 비즈니스 채널 아이디
+    // 검색용 아이디
     String plusFriendID = "@팝빌";
 
-    // 팝빌에 사전 등록된 발신번호
+    // 발신번호
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
@@ -42,7 +42,7 @@
     // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
     String altSubject = "대체문자 동보제목";
 
-    // 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
+    // 대체문자 내용, 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
     // └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     String altContent = "대체문자 내용";
 
@@ -50,7 +50,7 @@
     // null = 미전송, C = 친구톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     String altSendType = "C";
 
-    // 카카오톡 수신정보 배열, 최대 1000건
+    // 전송정보, 최대 1000건
     KakaoReceiver[] receivers = new KakaoReceiver[2];
     for (int i = 0; i < 2; i++) {
         KakaoReceiver message = new KakaoReceiver();
@@ -59,7 +59,7 @@
         receivers[i] = message;
     }
 
-    // 친구톡 버튼 배열, 최대 5개
+    // 버튼 목록, 최대 5개
     KakaoButton[] btns = new KakaoButton[2];
 
     KakaoButton button = new KakaoButton();
@@ -78,7 +78,7 @@
     button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
     btns[1] = button;
 
-    // 예약전송일시, 형태(yyyyMMddHHmmss)
+    // 전송 예약일시, 형태(yyyyMMddHHmmss)
     // - 분단위 전송, 미입력 시 즉시 전송
     String sndDT = "";
 
@@ -87,21 +87,21 @@
     // - 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
-    // 전송요청번호
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
-
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
 
     // 접수번호
     String receiptNum = null;
 
     try {
 
-        receiptNum = kakaoService.sendFTS(testCorpNum, plusFriendID, senderNum, content, altSubject, altContent, 
-                altSendType, receivers, btns, sndDT, adsYN, testUserID, requestNum);
+        receiptNum = kakaoService.sendFTS(CorpNum, plusFriendID, senderNum, content, altSubject, altContent,
+                altSendType, receivers, btns, sndDT, adsYN, UserID, requestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

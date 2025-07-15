@@ -19,7 +19,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 은행 기관코드
     String BankCode = "";
@@ -34,7 +34,7 @@
 
     try {
 
-        saveResponse = easyFinBankService.deleteBankAccount(testCorpNum, BankCode, AccountNumber, UserID);
+        saveResponse = easyFinBankService.deleteBankAccount(CorpNum, BankCode, AccountNumber, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -49,7 +49,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=saveResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=saveResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>
                 </ul>
             </fieldset>

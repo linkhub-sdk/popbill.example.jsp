@@ -11,28 +11,30 @@
 
 <%
     /*
-     * 전자명세서 안내메일의 상세보기 링크 URL을 반환합니다.
-     * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
+     * 전자명세서 발행 안내 메일의 '보기' 버튼 URL을 반환합니다.
+     * - 권장 사이즈 : width = 1,250px (최소 975px) / height = 800px
+     * - 반환되는 URL은 유효기간 제한 없이 사용할 수 있습니다.
+     * - 반환되는 URL에서만 유효한 세션을 포함하고 있습니다.
      * - https://developers.popbill.com/reference/statement/java/api/view#GetMailURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+    // 전자명세서 문서 유형, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int itemCode = 121;
 
-    // 전자명세서 문서번호
-    String mgtKey = "20250711-JSP001";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC001";
 
     // 팝빌회원 아이디
-    String testUserID = "testkorea";
+    String UserID = "testkorea";
 
     String url = null;
 
     try {
 
-        url = statementService.getMailURL(testCorpNum, itemCode, mgtKey, testUserID);
+        url = statementService.getMailURL(CorpNum, itemCode, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

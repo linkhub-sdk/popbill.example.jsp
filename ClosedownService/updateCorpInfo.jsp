@@ -18,25 +18,25 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 회사정보 객체
+    // 회사 객체정보
     CorpInfo corpInfo = new CorpInfo();
 
     // 대표자 성명, 최대 100자
-    corpInfo.setCeoname("대표자명");
+    corpInfo.setCeoname("대표자 성명 수정 테스트");
 
     // 회사명, 최대 200자
-    corpInfo.setCorpName("회사명");
+    corpInfo.setCorpName("회사명 수정 테스트");
 
-    // 사업장 주소, 최대 300자
-    corpInfo.setAddr("주소");
+    // 주소, 최대 300자
+    corpInfo.setAddr("주소 수정 테스트");
 
     // 업태, 최대 100자
-    corpInfo.setBizType("업태_JSP");
+    corpInfo.setBizType("업태 수정 테스트");
 
     // 종목, 최대 100자
-    corpInfo.setBizClass("종목");
+    corpInfo.setBizClass("종목 수정 테스트");
 
     // 팝빌회원 아이디
     String UserID =  "testkorea";
@@ -45,7 +45,7 @@
 
     try {
 
-        CheckResponse = closedownService.updateCorpInfo(testCorpNum, corpInfo, UserID);
+        CheckResponse = closedownService.updateCorpInfo(CorpNum, corpInfo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -60,7 +60,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

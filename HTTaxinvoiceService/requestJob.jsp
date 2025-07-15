@@ -19,18 +19,18 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 전자세금계산서 유형, SELL-매출, BUY-매입, TRUSTEE-수탁
-    QueryType TaxinvoiceType = QueryType.SELL;
+    QueryType queryType = QueryType.SELL;
 
     // 조회할 일자 유형, W-작성일자, I-발행일자, S-전송일자
     String DType = "S";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20250731";
 
     // 팝빌회원 아이디
@@ -40,7 +40,7 @@
 
     try {
 
-        jobID = htTaxinvoiceService.requestJob(testCorpNum, TaxinvoiceType, DType, SDate, EDate, UserID);
+        jobID = htTaxinvoiceService.requestJob(CorpNum, queryType, DType, SDate, EDate, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

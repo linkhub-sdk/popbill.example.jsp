@@ -13,23 +13,22 @@
 
 <%
     /*
-    * 공급자가 요청받은 역발행 세금계산서를 발행하기 전, 공급받는자가 역발행요청을 취소합니다.
-    * - 함수 호출시 상태 값이 "취소"로 변경되고, 해당 역발행 세금계산서는 공급자에 의해 발행 될 수 없습니다.
-    * - [취소]한 세금계산서의 문서번호를 재사용하기 위해서는 삭제 (Delete API) 함수를 호출해야 합니다.
+     * 공급자가 요청받은 역발행 세금계산서를 발행하기 전, 공급받는자가 역발행요청을 취소합니다.
+     * 함수 호출시 "취소" 상태로 변경되고, 해당 역발행 세금계산서는 공급자에 의해 발행 될 수 없습니다.
     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#CancelRequest
     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형, BUY(매입) 입력
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.BUY;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP001";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC004";
 
-    // 메모
-    String memo = "역발행요청 취소 메모";
+    // 세금계산서 상태 이력을 관리하기 위한 메모
+    String memo = "역발행 취소 메모";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -38,7 +37,7 @@
 
     try {
 
-        CheckResponse = taxinvoiceService.cancelRequest(testCorpNum, keyType, mgtKey, memo, UserID);
+        CheckResponse = taxinvoiceService.cancelRequest(CorpNum, keyType, mgtKey, memo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -53,7 +52,7 @@
         <fieldset class="fieldset1">
             <legend><%=request.getRequestURI()%></legend>
             <ul>
-                <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                 <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
             </ul>
         </fieldset>

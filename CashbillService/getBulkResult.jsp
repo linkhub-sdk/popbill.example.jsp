@@ -20,9 +20,9 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    //대량 발행 접수시 기재한 제출아이디
+    // 파트너가 할당한 제출아이디
     String SubmitID = "20250711-JSP-BULK";
 
     // 팝빌회원 아이디
@@ -32,7 +32,7 @@
 
     try {
 
-        bulkResult = cashbillService.getBulkResult(testCorpNum, SubmitID, UserID);
+        bulkResult = cashbillService.getBulkResult(CorpNum, SubmitID, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -49,16 +49,16 @@
                 <ul>
                     <li>code (응답코드) : <%= bulkResult.getCode() %></li>
                     <li>message (응답메시지) : <%= bulkResult.getMessage() %></li>
-                    <li>submitID (제출아이디) : <%= bulkResult.getSubmitID() %></li>
-                    <li>submitCount (발행 접수건수) : <%= bulkResult.getSuccessCount() %></li>
-                    <li>successCount (발행 성공건수) : <%= bulkResult.getSuccessCount() %></li>
-                    <li>failCount (발행 실패건수) : <%= bulkResult.getFailCount() %></li>
+                    <li>submitID (접수 시점에 고객사에서 할당한 제출아이디) : <%= bulkResult.getSubmitID() %></li>
+                    <li>submitCount (현금영수증 접수 건수) : <%= bulkResult.getSuccessCount() %></li>
+                    <li>successCount (현금영수증 발행 성공 건수) : <%= bulkResult.getSuccessCount() %></li>
+                    <li>failCount (현금영수증 발행 실패 건수) : <%= bulkResult.getFailCount() %></li>
                     <li>txState (접수상태) : <%= bulkResult.getTxState() %></li>
                     <li>txResultCode (접수 결과코드) : <%= bulkResult.getTxResultCode() %></li>
                     <li>txStartDT (발행처리 시작일시) : <%= bulkResult.getTxStartDT() %></li>
                     <li>txEndDT (발행처리 완료일시) : <%= bulkResult.getTxEndDT() %></li>
-                    <li>receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
                     <li>receiptDT (접수일시) : <%= bulkResult.getReceiptDT() %></li>
+                    <li>receiptID (접수아이디) : <%= bulkResult.getReceiptID() %></li>
                 </ul>
             </fieldset>
 

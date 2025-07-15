@@ -22,20 +22,20 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20250731";
 
-    // 전송상태 배열 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
+    // 전송상태 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     // └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
     // - 미입력 시 전체조회
     String[] State = {"0", "1", "2", "3", "4", "5"};
 
-    // 검색대상 배열 ("ATS", "FTS", "FMS" 중 선택, 다중 선택 가능)
+    // 검색대상 ("ATS", "FTS", "FMS" 중 선택, 다중 선택 가능)
     // └ ATS = 알림톡 , FTS = 친구톡(텍스트) , FMS = 친구톡(이미지)
     // - 미입력 시 전체조회
     String[] Item = {"ATS", "FTS", "FMS"};
@@ -50,17 +50,17 @@
     // └ false = 전송한 카카오톡 전체 조회 : 기본값
     Boolean SenderOnly = false;
 
-    // 페이지 번호
+    // 목록 페이지번호
     int Page = 1;
 
-    // 페이지당 검색개수, 최대 1000개
+    // 페이지당 표시할 목록 건수, 최대 1000개
     int PerPage = 20;
 
     // 알림톡 / 친구톡 접수일시를 기준으로 하는 목록 정렬 방향 ("D" , "A" 중 택 1)
     // └ D = 내림차순(기본값) , A = 오름차순
     String Order = "D";
 
-    // 조회하고자 하는 수신자명
+    // 조회 검색어(수신자명)
     // - 미입력시 전체조회
     String QString = "";
 
@@ -70,7 +70,7 @@
 
     try {
 
-        searchResult = kakaoService.search(testCorpNum, SDate, EDate, State, Item,
+        searchResult = kakaoService.search(CorpNum, SDate, EDate, State, Item,
                 ReserveYN, SenderOnly, Page, PerPage, Order, userID, QString);
 
     } catch (PopbillException pe) {

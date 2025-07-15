@@ -12,29 +12,30 @@
 
 <%
     /*
-     * 전자세금계산서 안내메일의 상세보기 링크 URL을 반환합니다.
-     * - 함수 호출로 반환 받은 URL에는 유효시간이 없습니다.
+     * 전자세금계산서 발행 안내 메일의 '보기' 버튼 URL을 반환합니다.
+     * - 권장 사이즈 : width = 1,000px (최소 975px) / height = 800px
+     * - 반환되는 URL은 유효기간 제한 없이 사용할 수 있습니다.
+     * - 반환되는 URL에서만 유효한 세션을 포함하고 있습니다.
      * - https://developers.popbill.com/reference/taxinvoice/java/api/view#GetMailURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP001";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC001";
 
     // 팝빌회원 아이디
-    String testUserID = "testkorea";
+    String UserID = "testkorea";
 
     String url = null;
 
     try {
 
-        url = taxinvoiceService.getMailURL(testCorpNum, keyType, mgtKey, testUserID);
+        url = taxinvoiceService.getMailURL(CorpNum, keyType, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

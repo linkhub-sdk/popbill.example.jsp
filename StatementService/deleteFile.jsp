@@ -12,22 +12,22 @@
 
 <%
     /*
-    * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
-    * - 파일 식별을 위해 첨부 시 할당되는 'FileID'는 첨부파일 목록 확인(GetFiles API) 함수를 호출하여 확인합니다.
-    * - https://developers.popbill.com/reference/statement/java/api/etc#DeleteFile
+     * "임시저장" 상태의 전자명세서에 첨부된 1개의 파일을 삭제합니다.
+     * 파일 식별을 위해 첨부시 할당되는 'FileID'는 함수[GetFiles – 첨부파일 목록 확인] 를 호출하여 확인합니다.
+     * - https://developers.popbill.com/reference/statement/java/api/etc#DeleteFile
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 전자명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+    // 전자명세서 문서 유형, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     int itemCode = 121;
 
-    // 전자명세서 문서번호
-    String mgtKey = "20250711-JSP002";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC002";
 
-    // 팝빌이 첨부파일 관리를 위해 할당하는 식별번호
-    // 첨부파일 목록 확인(getFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
+    // 팝빌이 할당한 파일 식별번호
+    // 첨부파일 목록 확인(GetFiles API) 함수의 리턴 값 중 attachedFile 필드값 기재.
     String FileID = "";
 
     // 팝빌회원 아이디
@@ -37,7 +37,7 @@
 
     try {
 
-        CheckResponse = statementService.deleteFile(testCorpNum, itemCode, mgtKey, FileID, UserID);
+        CheckResponse = statementService.deleteFile(CorpNum, itemCode, mgtKey, FileID, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -51,7 +51,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

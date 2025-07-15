@@ -13,12 +13,12 @@
 <%
     /*
      * 문자 발신번호 등록여부를 확인합니다.
-     * - 발신번호 상태가 '승인'인 경우에만 리턴값 'Response'의 변수 'code'가 1로 반환됩니다.
+     * - 발신번호 상태가 '승인'인 경우에만 리턴값 Response 의 변수 'code'가 1로 반환됩니다.
      * - https://developers.popbill.com/reference/sms/java/api/sendnum#CheckSenderNumber
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String corpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 확인할 발신번호
     String senderNumber = "070-4304-2991";
@@ -30,7 +30,7 @@
 
     try {
 
-        CheckResponse = messageService.checkSenderNumber(corpNum, senderNumber, UserID);
+        CheckResponse = messageService.checkSenderNumber(CorpNum, senderNumber, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -45,7 +45,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

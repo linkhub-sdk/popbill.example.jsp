@@ -16,24 +16,23 @@
 
 <%
     /*
-    * 공급받는자가 작성한 세금계산서 데이터를 팝빌에 저장하고 공급자에게 송부하여 발행을 요청합니다.
-    * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두 팝빌에 회원이여야 합니다.
-    * - 발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
-    * - 공급자는 팝빌 사이트의 "매출 문서함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
-    * - 임시저장(Register API) 함수와 역발행 요청(Request API) 함수를 한 번의 프로세스로 처리합니다.
+     * 공급받는자가 작성한 세금계산서 데이터를 팝빌에 저장하고 공급자에게 송부하여 발행을 요청합니다.
+     * 역발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
+     * 공급자는 팝빌 사이트의 "매출 발행 대기함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
+     * - [Register – 임시저장]과 [Request – 역발행 요청]함수 기능을 한 번의 프로세스로 처리합니다.
+     * 역발행 요청시 공급자에게 역발행 요청 메일이 발송됩니다.
+     * 공급자가 역발행 세금계산서 발행시 포인트가 과금되며, 객체 Taxinvoice 의 변수 'chargeDirection' 값에 따라 과금 주체를 변경할 수 있습니다.
+     * - 정과금 : 공급자 과금, 역과금 : 공급받는자 과금
     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#RegistRequest
     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String CorpNum = "1234567890";
 
-    /***************************************************************************
-     * 세금계산서 정보
-     ****************************************************************************/
-
+    // 전자세금계산서 정보
     Taxinvoice taxinvoice = new Taxinvoice();
 
-    // 발행유형, {정발행, 역발행, 위수탁} 중 기재
+    // 발행형태, {정발행, 역발행, 위수탁} 중 기재
     taxinvoice.setIssueType("역발행");
 
     // 과세형태, {과세, 영세, 면세} 중 기재
@@ -47,16 +46,16 @@
     // 일련번호
     taxinvoice.setSerialNum("");
 
-    // 책번호 '권' 항목, 최대값 32767
+    // 책번호 '권' 항목
     taxinvoice.setKwon((short) 1);
 
-    // 책번호 '호' 항목, 최대값 32767
+    // 책번호 '호' 항목
     taxinvoice.setHo((short) 1);
 
     // 작성일자, 날짜형식(yyyyMMdd)
     taxinvoice.setWriteDate("20250711");
 
-    // {영수, 청구, 없음} 중 기재
+    // 영수/청구, {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
 
     // 공급가액 합계
@@ -77,7 +76,7 @@
     // 어음
     taxinvoice.setNote("");
 
-    // 외상미수금
+    // 외상
     taxinvoice.setCredit("");
 
     // 비고
@@ -113,22 +112,25 @@
     taxinvoice.setInvoicerBizType("공급자 업태,업태2");
 
     // 공급자 종목
-    taxinvoice.setInvoicerBizClass("공급자 업종");
+    taxinvoice.setInvoicerBizClass("공급자 종목");
 
     // 공급자 담당자 성명
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
 
+    // 공급자 담당자 부서명
+    taxinvoice.setInvoicerDeptName("공급자 담당자 부서명");
+
     // 공급자 담당자 연락처
     taxinvoice.setInvoicerTEL("070-7070-0707");
 
-    // 공급자 담당자 휴대폰번호
+    // 공급자 담당자 휴대폰
     taxinvoice.setInvoicerHP("010-000-2222");
 
-    // 공급자 담당자 메일주소
+    // 공급자 담당자 메일
     // - 역발행 요청 시 공급자에게 역발행 요청 메일 발송
     taxinvoice.setInvoicerEmail("test@test.com");
 
-    // 발행 안내 문자 전송여부 (true / false 중 택 1)
+    // 공급자 알림문자 전송 여부 (true / false 중 택 1)
     // └ true = 전송 , false = 미전송
     // └ 공급받는자 (주)담당자 휴대폰번호 {invoiceeHP1} 값으로 문자 전송
     // - 전송 시 포인트 차감되며, 전송실패시 환불처리
@@ -139,12 +141,12 @@
      ****************************************************************************/
 
     // [역발행시 필수] 공급받는자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoiceeMgtKey("20250711-JSP003");
+    taxinvoice.setInvoiceeMgtKey("20220218-MVC003");
 
     // 공급받는자 유형, [사업자, 개인, 외국인] 중 기재
     taxinvoice.setInvoiceeType("사업자");
 
-    // 공급받는자 사업자번호
+    // 공급받는자 등록번호
     // - {invoiceeType}이 "사업자" 인 경우, 사업자번호 (하이픈 ('-') 제외 10자리)
     // - {invoiceeType}이 "개인" 인 경우, 주민등록번호 (하이픈 ('-') 제외 13자리)
     // - {invoiceeType}이 "외국인" 인 경우, "9999999999999" (하이픈 ('-') 제외 13자리)
@@ -171,20 +173,23 @@
     // 공급받는자 담당자 성명
     taxinvoice.setInvoiceeContactName1("공급받는자 담당자 성명");
 
+    // 공급받는자 담당자 부서명
+    taxinvoice.setInvoiceeDeptName1("공급받는자 담당자 부서명");
+
     // 공급받는자 담당자 연락처
     taxinvoice.setInvoiceeTEL1("070-111-222");
 
-    // 공급받는자 담당자 휴대폰번호
+    // 공급받는자 담당자 휴대폰
     taxinvoice.setInvoiceeHP1("010-111-222");
 
-    // 공급받는자 담당자 메일주소
+    // 공급받는자 담당자 메일
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
     taxinvoice.setInvoiceeEmail1("test@invoicee.com");
 
-    // 역발행 안내 문자 전송여부 (true / false 중 택 1)
+    // 공급받는자 알림문자 전송 여부 (true / false 중 택 1)
     // └ true = 전송 , false = 미전송
-    // └ 공급자 담당자 휴대폰번호 {invoicerHP} 값으로 문자 전송
+    // └ 공급자 담당자 휴대폰 {invoicerHP} 값으로 문자 전송
     // - 전송 시 포인트 차감되며, 전송실패시 환불처리
     taxinvoice.setInvoiceeSMSSendYN(false);
 
@@ -193,24 +198,24 @@
      * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice#intro]
      ****************************************************************************/
 
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    // 수정 사유코드, 수정사유에 따라 1~6 중 선택기재.
     taxinvoice.setModifyCode(null);
 
-    // 수정세금계산서 작성시 원본세금계산서 국세청승인번호 기재
+    // 수정세금계산서 작성시 당초 국세청승인번호 기재
     taxinvoice.setOrgNTSConfirmNum(null);
 
-    // 사업자등록증 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
 
     /***************************************************************************
-     * 상세항목(품목) 정보
+     * 품목 상세정보
      ****************************************************************************/
     taxinvoice.setDetailList(new ArrayList<TaxinvoiceDetail>());
 
@@ -219,7 +224,7 @@
 
     detail.setSerialNum((short) 1); // 일련번호, 1부터 순차기재
     detail.setPurchaseDT("20250711"); // 거래일자
-    detail.setItemName("품목명"); // 품목명
+    detail.setItemName("품명"); // 품명
     detail.setSpec("규격"); // 규격
     detail.setQty("1"); // 수량
     detail.setUnitCost("50000"); // 단가
@@ -233,7 +238,7 @@
 
     detail.setSerialNum((short) 2);
     detail.setPurchaseDT("20250711");
-    detail.setItemName("품목명2");
+    detail.setItemName("품명2");
     detail.setSpec("규격");
     detail.setQty("1");
     detail.setUnitCost("50000");
@@ -243,7 +248,7 @@
 
     taxinvoice.getDetailList().add(detail);
 
-    // 메모
+    // 세금계산서 상태 이력을 관리하기 위한 메모
     String Memo = "즉시요청 메모";
 
     // 팝빌회원 아이디
@@ -268,7 +273,7 @@
     <fieldset class="fieldset1">
         <legend><%=request.getRequestURI()%></legend>
         <ul>
-            <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+            <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
             <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
         </ul>
     </fieldset>

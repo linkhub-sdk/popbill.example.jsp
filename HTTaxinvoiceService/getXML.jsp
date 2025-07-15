@@ -12,12 +12,12 @@
 
 <%
     /*
-     * 국세청승인번호를 통해 수집한 전자세금계산서 1건의 상세정보를 XML 형태의 문자열로 반환합니다.
+     * 홈택스에서 수집된 전자세금계산서 1건의 상세정보를 XML 데이터 포맷으로 제공합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/search#GetXML
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 전자세금계산서 국세청승인번호
     String ntsConfirmNum = "202507118888888800000109";
@@ -31,7 +31,7 @@
 
     try {
 
-        xmlResponse = htTaxinvoiceService.getXML(testCorpNum, ntsConfirmNum, UserID);
+        xmlResponse = htTaxinvoiceService.getXML(CorpNum, ntsConfirmNum, UserID);
 
         xmlData = xmlResponse.getRetObject();
         xmlData = xmlData.replaceAll("<","&lt;").replaceAll(">", "&gt;");

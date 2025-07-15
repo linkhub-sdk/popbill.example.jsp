@@ -19,21 +19,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
+    // 입금신청 객체정보
     PaymentForm paymentForm = new PaymentForm();
 
     // 담당자명
-    // 미입력 시 기본값 적용 - 팝빌 회원 담당자명.
     paymentForm.setSettlerName("담당자명");
 
-    // 담당자 이메일
-    // 사이트에서 신청하면 자동으로 담당자 이메일.
-    // 미입력 시 공백 처리
+    // 담당자 메일
     paymentForm.setSettlerEmail("test@test.com");
 
     // 담당자 휴대폰
-    // 무통장 입금 승인 알림톡이 전송됩니다.
+    // └ 무통장 입금 승인 알림톡이 전송될 번호
     paymentForm.setNotifyHP("01012341234");
 
     // 입금자명
@@ -49,7 +47,7 @@
 
     try {
 
-        paymentResponse = accountCheckService.paymentRequest(testCorpNum, paymentForm, UserID);
+        paymentResponse = accountCheckService.paymentRequest(CorpNum, paymentForm, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -64,9 +62,9 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=paymentResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=paymentResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=paymentResponse.getMessage()%></li>
-                    <li>정산코드 (Response.settleCode) : <%=paymentResponse.getSettleCode()%></li>
+                    <li>정산코드 (settleCode) : <%=paymentResponse.getSettleCode()%></li>
                 </ul>
             </fieldset>
         </div>

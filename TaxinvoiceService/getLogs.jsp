@@ -18,14 +18,13 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP001";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -34,7 +33,7 @@
 
     try {
 
-        taxinvoiceLogs = taxinvoiceService.getLogs(testCorpNum, keyType, mgtKey, UserID);
+        taxinvoiceLogs = taxinvoiceService.getLogs(CorpNum, keyType, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

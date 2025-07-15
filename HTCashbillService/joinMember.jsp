@@ -17,19 +17,20 @@
      * - https://developers.popbill.com/reference/htcashbill/java/common-api/member#JoinMember
      */
 
+    // 연동회원 객체정보
     JoinForm joinInfo = new JoinForm();
 
     // 아이디, 6자 이상 50자 미만
-    joinInfo.setID("testkorea20161201");
+    joinInfo.setID("testkorea0328");
 
-    // 팝빌회원 비밀번호 (8자 이상 20자 이하) 영문, 숫자 ,특수문자 조합
+    // 비밀번호 (8자 이상 20자 이하) 영문, 숫자, 특수문자 조합
     joinInfo.setPassword("password123!@#");
 
-    // 연동신청 시 팝빌에서 발급받은 링크아이디
-    joinInfo.setLinkID("TESTER");
+    // 파트너 링크아이디
+    joinInfo.setLinkID(LinkID);
 
     // 사업자번호 (하이픈 '-' 제외 10 자리)
-    joinInfo.setCorpNum("0000000013");
+    joinInfo.setCorpNum("1234567890");
 
     // 대표자 성명, 최대 100자
     joinInfo.setCEOName("대표자 성명");
@@ -49,12 +50,11 @@
     // 담당자 성명, 최대 100자
     joinInfo.setContactName("담당자 성명");
 
-    // 담당자 이메일, 최대 100자
-    joinInfo.setContactEmail("test@test.co.kr");
+    // 담당자 메일, 최대 100자
+    joinInfo.setContactEmail("test@test.com");
 
-    // 담당자 연락처, 최대 20자
+    // 담당자 휴대폰, 최대 20자
     joinInfo.setContactTEL("02-999-9999");
-    Response CheckResponse = null;
 
     try {
 
@@ -73,7 +73,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

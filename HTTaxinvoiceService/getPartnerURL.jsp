@@ -15,20 +15,20 @@
      * - 권장 사이즈 : width = 800px / height = 700px
      * - 반환되는 URL은 30초 동안만 사용이 가능합니다.
      * - 반환되는 URL에서만 유효한 세션을 포함하고 있습니다.
-     * - https://developers.popbill.com/reference/httaxinvoice/java/common-api/point#GetPartnerURL
+     * - https://developers.popbill.com/reference/htcashbill/java/common-api/point#GetPartnerURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // CHRG : 포인트 충전
+    // 고정값 : "CHRG"
     String TOGO = "CHRG";
 
     String url = null;
 
     try {
 
-        url = htTaxinvoiceService.getPartnerURL(testCorpNum, TOGO);
+        url = htTaxinvoiceService.getPartnerURL(CorpNum, TOGO);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

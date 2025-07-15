@@ -11,14 +11,14 @@
 
 <%
     /*
-     * 계좌 거래내역을 확인하기 위해 팝빌에 수집요청을 합니다. (조회기간 단위 : 최대 1개월)
-     * - 조회일로부터 최대 3개월 이전 내역까지 조회할 수 있습니다.
-     * - 반환 받은 작업아이디는 함수 호출 시점부터 1시간 동안 유효합니다.
+     * 계좌 거래내역 수집을 팝빌에 요청합니다.
+     * - 최대 1개월 단위로 수집 요청이 가능하며, 조회일로부터 최대 3개월 이전 내역까지 조회가 가능합니다.
+     * - API를 호출하고 반환 받은 작업아이디(JobID)는 수집을 요청한 시점으로부터 1시간 동안만 유효합니다.
      * - https://developers.popbill.com/reference/easyfinbank/java/api/job#RequestJob
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 은행 기관코드
     String BankCode = "";
@@ -26,10 +26,10 @@
     // 계좌번호
     String AccountNumber = "";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 닐짜형식(yyyyMMdd)
+    // 검색 종료일자, 닐짜형식(yyyyMMdd)
     String EDate = "20250731";
 
     // 팝빌회원 아이디
@@ -38,7 +38,7 @@
     String jobID = null;
 
     try {
-        jobID = easyFinBankService.requestJob(testCorpNum, BankCode, AccountNumber, SDate, EDate, UserID);
+        jobID = easyFinBankService.requestJob(CorpNum, BankCode, AccountNumber, SDate, EDate, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

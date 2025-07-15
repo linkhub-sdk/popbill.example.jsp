@@ -17,7 +17,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -26,7 +26,7 @@
 
     try {
 
-        contactInfos = easyFinBankService.listContact(testCorpNum, UserID);
+        contactInfos = easyFinBankService.listContact(CorpNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -36,34 +36,33 @@
 %>
 
     <body>
-    <div id="content">
-        <p class="heading1">Response</p>
-        <br/>
-        <fieldset class="fieldset1">
-            <legend><%=request.getRequestURI()%></legend>
-            <%
-                ContactInfo contactInfo = null;
-
-                for ( int i = 0; i < contactInfos.length; i++ ) {
-                    contactInfo = contactInfos[i];
-            %>
-            <fieldset class="fieldset2">
-                <legend>담당자정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
-                <ul>
-                    <li>id (아이디) : <%= contactInfo.getId()%></li>
-                    <li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>
-                    <li>email (이메일) : <%= contactInfo.getEmail()%></li>
-                    <li>tel (연락처) : <%= contactInfo.getTel()%></li>
-                    <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
-                    <li>searchRole (권한) : <%= contactInfo.getSearchRole()%></li>
-                    <li>mgrYN (역할) : <%= contactInfo.getMgrYN()%></li>
-                    <li>state (상태) : <%= contactInfo.getState()%></li>
-                </ul>
+        <div id="content">
+            <p class="heading1">Response</p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend><%=request.getRequestURI()%></legend>
+                <%
+                    ContactInfo contactInfo = null;
+                    for ( int i = 0; i < contactInfos.length; i++ ) {
+                        contactInfo = contactInfos[i];
+                %>
+                <fieldset class="fieldset2">
+                    <legend>담당자 정보 [<%=i+1%> / <%=contactInfos.length%>]</legend>
+                    <ul>
+                        <li>id (아이디) : <%= contactInfo.getId()%></li>
+                        <li>personName (담당자 성명) : <%= contactInfo.getPersonName()%></li>
+                        <li>tel (담당자 휴대폰) : <%= contactInfo.getTel()%></li>
+                        <li>email (담당자 메일) : <%= contactInfo.getEmail()%></li>
+                        <li>regDT (등록일시) : <%= contactInfo.getRegDT()%></li>
+                        <li>searchRole (권한) : <%= contactInfo.getSearchRole()%></li>
+                        <li>mgrYN (역할) : <%= contactInfo.getMgrYN()%></li>
+                        <li>state (계정상태) : <%= contactInfo.getState()%></li>
+                    </ul>
+                </fieldset>
+                <%
+                    }
+                %>
             </fieldset>
-            <%
-                }
-            %>
-        </fieldset>
-    </div>
+        </div>
     </body>
 </html>

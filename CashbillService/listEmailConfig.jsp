@@ -17,7 +17,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -26,7 +26,7 @@
 
     try {
 
-        emailSendConfigs = cashbillService.listEmailConfig(testCorpNum, UserID);
+        emailSendConfigs = cashbillService.listEmailConfig(CorpNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -35,32 +35,26 @@
     }
 %>
     <body>
-    <div id="content">
-        <p class="heading1">Response </p>
-        <br/>
-        <fieldset class="fieldset1">
-            <legend><%=request.getRequestURI()%></legend>
-            <ul>
-                <%
-                    EmailSendConfig emailSendConfig = null;
-                    for ( int i = 0; i < emailSendConfigs.length; i++ ) {
-                        emailSendConfig = emailSendConfigs[i];
+        <div id="content">
+            <p class="heading1">Response </p>
+            <br/>
+            <fieldset class="fieldset1">
+                <legend><%=request.getRequestURI()%></legend>
+                <ul>
+                    <%
+                        EmailSendConfig emailSendConfig = null;
+                        for ( int i = 0; i < emailSendConfigs.length; i++ ) {
+                            emailSendConfig = emailSendConfigs[i];
 
-                        if (emailSendConfig.getEmailType().equals("CSH_ISSUE")) {
-                %>
-                <li>CSH_ISSUE (메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
-                <%
-                    }
-                    if (emailSendConfig.getEmailType().equals("CSH_CANCEL")) {
-                %>
-                <li>CSH_CANCEL (메일 전송 여부) : <%= emailSendConfig.getSendYN()%></li>
-                <%
+                            if (emailSendConfig.getEmailType().equals("CSH_ISSUE")) {
+                    %>
+                    <li>CSH_ISSUE (전송 여부) : <%= emailSendConfig.getSendYN()%></li>
+                    <%
+                            }
                         }
-                    }
-                %>
-            </ul>
-        </fieldset>
-        <ul>
-    </div>
+                    %>
+                </ul>
+            </fieldset>
+        </div>
     </body>
 </html>

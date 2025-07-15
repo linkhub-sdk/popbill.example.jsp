@@ -17,19 +17,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
-    // 문자전송 유형. SMS(단문), LMS(장문), MMS(포토)
+    // 문자 유형. SMS(단문), LMS(장문), MMS(포토)
     MessageType msgType = MessageType.MMS;
 
     float unitCost;
 
     try {
 
-        unitCost = messageService.getUnitCost(testCorpNum, msgType, UserID);
+        unitCost = messageService.getUnitCost(CorpNum, msgType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

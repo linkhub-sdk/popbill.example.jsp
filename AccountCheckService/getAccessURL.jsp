@@ -11,22 +11,24 @@
 
 <%
     /*
-     * 팝빌 사이트에 로그인 상태로 접근할 수 있는 페이지의 팝업 URL을 반환합니다.
-     * - 반환되는 URL은 보안 정책상 30초 동안 유효하며, 시간을 초과한 후에는 해당 URL을 통한 페이지 접근이 불가합니다.
+     * 팝빌 회원 로그인 상태의 팝업 URL을 반환합니다.
+     * - 권장 사이즈 : width = 1,280px (최소 1,000px) / height = 800px
+     * - 반환되는 URL은 30초 동안만 사용이 가능합니다.
+     * - 반환되는 URL은 팝빌회원의 로그인 세션을 포함하고 있으니 사용에 유의하여 주시기 바랍니다.
      * - https://developers.popbill.com/reference/accountcheck/java/common-api/member#GetAccessURL
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 팝빌회원 아이디
-    String testUserID = "testkorea";
+    String UserID = "testkorea";
 
     String url = null;
 
     try {
 
-        url = accountCheckService.getAccessURL(testCorpNum, testUserID);
+        url = accountCheckService.getAccessURL(CorpNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -18,25 +18,22 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
-
-    // 수집요청(requestJob API) 함수 호출 시 반환받은 작업아이디
+    // 작업아이디
     String jobID = "";
 
-    // 문서형태 배열 ("N" 와 "M" 중 선택, 다중 선택 가능)
+    // 세금계산서 문서형태 ("N" 와 "M" 중 선택, 다중 선택 가능)
     // └ N = 일반 , M = 수정
     // - 미입력 시 전체조회
     String[] Type = {"N", "M"};
 
-    // 과세형태 배열 ("T" , "N" , "Z" 중 선택, 다중 선택 가능)
+    // 과세형태 ("T" , "N" , "Z" 중 선택, 다중 선택 가능)
     // └ T = 과세, N = 면세, Z = 영세
     // - 미입력 시 전체조회
     String[] TaxType = {"T", "Z", "N"};
 
-    // 발행목적 배열 ("R" , "C", "N" 중 선택, 다중 선택 가능)
+    // 영수/청구 ("R" , "C", "N" 중 선택, 다중 선택 가능)
     // └ R = 영수, C = 청구, N = 없음
     // - 미입력 시 전체조회
     String[] PurposeType = {"R", "C", "N"};
@@ -55,7 +52,10 @@
     // - 미입력시 전체조회
     String TaxRegID = "";
 
-    // 거래처 상호 / 사업자번호 (사업자) / 주민등록번호 (개인) / "9999999999999" (외국인) 중 검색하고자 하는 정보 입력
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 조회 검색어, 거래처 상호 / 사업자번호 (사업자) / 주민등록번호 (개인) / "9999999999999" (외국인) 중 검색하고자 하는 정보 입력
     // - 사업자번호 / 주민등록번호는 하이픈('-')을 제외한 숫자만 입력
     // - 미입력시 전체조회
     String searchString = "";
@@ -64,8 +64,8 @@
 
     try {
 
-        result = htTaxinvoiceService.summary(testCorpNum, jobID, Type, TaxType, PurposeType,
-                TaxRegIDYN, TaxRegIDType, TaxRegID, testUserID, searchString);
+        result = htTaxinvoiceService.summary(CorpNum, jobID, Type, TaxType, PurposeType,
+                TaxRegIDYN, TaxRegIDType, TaxRegID, UserID, searchString);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

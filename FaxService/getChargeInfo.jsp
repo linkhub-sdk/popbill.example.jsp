@@ -17,9 +17,9 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    //수신번호 유형, 일반 / 지능 중 택 1
+    // 수신번호 유형, 일반 / 지능 중 택 1
     String receiveNumType = "일반";
 
     // 팝빌회원 아이디
@@ -29,7 +29,7 @@
 
     try {
 
-        chargeInfo = faxService.getChargeInfo(testCorpNum, receiveNumType, UserID);
+        chargeInfo = faxService.getChargeInfo(CorpNum, receiveNumType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

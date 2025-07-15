@@ -13,20 +13,19 @@
 
 <%
     /*
-    * "발행완료" 상태의 전자세금계산서를 국세청에 즉시 전송하며, 함수 호출 후 최대 30분 이내에 전송 처리가 완료됩니다.
-    * - 국세청 즉시전송을 호출하지 않은 세금계산서는 발행일 기준 다음 영업일 오후 3시에 팝빌 시스템에서 일괄적으로 국세청으로 전송합니다.
-    * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#SendToNTS
-    */
+     * "발행완료" 상태의 전자세금계산서를 국세청에 즉시 전송하며, 함수 호출 후 최대 30분 이내에 전송 처리가 완료됩니다.
+     * 함수 [GetInfo – 상태확인] 또는 Webhook을 통해 국세청 전송 결과를 확인 합니다.
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#SendToNTS
+     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP002";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -35,7 +34,7 @@
 
     try {
 
-        CheckResponse = taxinvoiceService.sendToNTS(testCorpNum, keyType, mgtKey, UserID);
+        CheckResponse = taxinvoiceService.sendToNTS(CorpNum, keyType, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -50,7 +49,7 @@
         <fieldset class="fieldset1">
             <legend><%=request.getRequestURI()%></legend>
             <ul>
-                <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                 <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
             </ul>
         </fieldset>

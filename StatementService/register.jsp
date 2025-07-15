@@ -23,34 +23,30 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    /***************************************************************************
-     *                               전자명세서 정보
-     ****************************************************************************/
-
-    // 전자명세서 정보 객체
+    // 전자명세서 정보
     Statement statement = new Statement();
 
-    // 명세서 유형 코드, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
+    // 전자명세서 문서 유형, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표], [126 - 영수증]
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20250711-JSP001");
+    statement.setMgtKey("20250711-MVC002");
 
-    // 맞춤양식코드, 미기재시 기본양식으로 처리
+    // 맞춤양식 코드, 미기재시 기본양식으로 처리
     statement.setFormCode("");
 
     // 작성일자, 형태 yyyyMMdd
     statement.setWriteDate("20250711");
 
-    // {과세, 영세, 면세} 중 기재
+    // 과세형태, {과세, 영세, 면세} 중 기재
     statement.setTaxType("과세");
 
-    // {영수, 청구, 없음} 중 기재
+    // 영수/청구, {영수, 청구, 없음} 중 기재
     statement.setPurposeType("영수");
 
-    // 기재상 일련번호 항목
+    // 일련번호
     statement.setSerialNum("123");
 
     // 세액 합계
@@ -62,7 +58,7 @@
     // 합계금액. 공급가액 + 세액
     statement.setTotalAmount("440000");
 
-    // 기재상 비고 항목
+    // 비고
     statement.setRemark1("비고1");
     statement.setRemark2("비고2");
     statement.setRemark3("비고3");
@@ -80,8 +76,8 @@
     // 발신자 상호
     statement.setSenderCorpName("발신자 상호");
 
-    // 발신자 대표자 성명
-    statement.setSenderCEOName("발신자 대표자 성명");
+    // 발신자 대표자성명
+    statement.setSenderCEOName("발신자 대표자성명");
 
     // 발신자 주소
     statement.setSenderAddr("발신자 주소");
@@ -92,16 +88,19 @@
     // 발신자 종목
     statement.setSenderBizClass("업종");
 
-    // 발신자 담당자 성명
-    statement.setSenderContactName("발신자 담당자 성명");
+    // 발신자 성명
+    statement.setSenderContactName("발신자 성명");
 
-    // 발신자 담당자 연락처
+    // 발신자 부서명
+    statement.setSenderDeptName("발신자 부서명");
+
+    // 발신자 연락처
     statement.setSenderTEL("070-7070-0707");
 
-    // 발신자 담당자 휴대폰번호
+    // 발신자 휴대전화
     statement.setSenderHP("010-000-2222");
 
-    // 발신자 담당자 메일주소
+    // 발신자 메일주소
     statement.setSenderEmail("test@test.com");
 
     /*********************************************************************
@@ -111,11 +110,14 @@
     // 수신자 사업자번호
     statement.setReceiverCorpNum("8888888888");
 
+    // 수신자 종사업장 식별번호
+    statement.setReceiverTaxRegID("");
+
     // 수신자 상호
     statement.setReceiverCorpName("수신자 상호");
 
-    // 수신자 대표자 성명
-    statement.setReceiverCEOName("수신자 대표자 성명");
+    // 수신자 대표자성명
+    statement.setReceiverCEOName("수신자 대표자성명");
 
     // 수신자 주소
     statement.setReceiverAddr("수신자 주소");
@@ -126,20 +128,29 @@
     // 수신자 종목
     statement.setReceiverBizClass("수신자 종목");
 
-    // 수신자 담당자 성명
-    statement.setReceiverContactName("수신자 담당자 성명");
+    // 수신자 성명
+    statement.setReceiverContactName("수신자 성명");
+
+    // 수신자 부서명
+    statement.setReceiverDeptName("수신자 부서명");
+
+    // 수신자 연락처
+    statement.setReceiverTEL("");
+
+    // 수신자 휴대전화
+    statement.setReceiverHP("");
 
     // 수신자 메일주소
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
-    statement.setReceiverEmail("test@receiver.com");
+    statement.setReceiverEmail("");
 
-    // 사업자등록증 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBusinessLicenseYN(false);
 
-    // 통장사본 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     statement.setBankBookYN(false);
@@ -167,7 +178,7 @@
 
     detail.setSerialNum((short) 1);                    // 일련번호, 1부터 순차기재
     detail.setPurchaseDT("20250711");                  // 거래일자
-    detail.setItemName("품명");                         // 품목명
+    detail.setItemName("품명");                         // 품명
     detail.setSpec("규격");                             // 규격
     detail.setQty("1");                                // 수량
     detail.setUnit("200000");                          // 단가
@@ -180,7 +191,7 @@
     detail = new StatementDetail();                    // 상세항목(품목) 배열
     detail.setSerialNum((short) 2);                    // 일련번호 1부터 순차기재
     detail.setPurchaseDT("20250711");                  // 거래일자
-    detail.setItemName("품명");                         // 품목명
+    detail.setItemName("품명");                         // 품명
     detail.setSpec("규격");                             // 규격
     detail.setQty("1");                                // 수량
     detail.setUnit("200000");                          // 단가
@@ -197,7 +208,7 @@
 
     try {
 
-        CheckResponse = statementService.register(testCorpNum, statement, UserID);
+        CheckResponse = statementService.register(CorpNum, statement, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -212,7 +223,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

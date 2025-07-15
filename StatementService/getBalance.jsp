@@ -12,18 +12,17 @@
 <%
     /*
      * 연동회원의 잔여포인트를 확인합니다.
-     * - 과금방식이 파트너과금인 경우 파트너 잔여포인트 확인(GetPartnerBalance API) 함수를 통해 확인하시기 바랍니다.
      * - https://developers.popbill.com/reference/statement/java/common-api/point#GetBalance
      */
 
-    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리), "-" 제외 10자리
-    String testCorpNum = "1234567890";
+    // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
+    String CorpNum = "1234567890";
 
     double remainPoint;
 
     try {
 
-        remainPoint = statementService.getBalance(testCorpNum);
+        remainPoint = statementService.getBalance(CorpNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

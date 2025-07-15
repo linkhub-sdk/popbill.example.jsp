@@ -15,14 +15,14 @@
 <%
     /*
      * 접수시 기재한 SubmitID를 사용하여 세금계산서 접수결과를 확인합니다.
-     * - 개별 세금계산서 처리상태는 접수상태(txState)가 완료(2) 시 반환됩니다.
+     * txState(접수상태)가 2(완료)일 때, 개별 세금계산서 발행결과(성공/실패) 확인이 가능합니다.
      * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#GetBulkResult
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    //대량 발행 접수시 기재한 제출아이디
+    // 파트너가 할당한 제출아이디
     String SubmitID = "20250711-JSP-BULK";
 
     // 팝빌회원 아이디
@@ -32,7 +32,7 @@
 
     try {
 
-        bulkResult = taxinvoiceService.getBulkResult(testCorpNum, SubmitID, UserID);
+        bulkResult = taxinvoiceService.getBulkResult(CorpNum, SubmitID, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

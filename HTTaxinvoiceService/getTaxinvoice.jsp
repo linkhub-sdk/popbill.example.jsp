@@ -12,12 +12,13 @@
 
 <%
     /*
-     * 국세청승인번호를 통해 수집한 전자세금계산서 1건의 상세정보를 반환합니다.
+     * 홈택스에서 수집된 전자세금계산서 1건의 상세정보를 제공합니다.
+     * - 60개 항목과 99개 품목으로 구성된 정보 확인이 가능합니다.
      * - https://developers.popbill.com/reference/httaxinvoice/java/api/search#GetTaxinvoice
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 전자세금계산서 국세청승인번호
     String ntsConfirmNum = "202507118888888800000109";
@@ -29,7 +30,7 @@
 
     try {
 
-        taxinvoiceInfo = htTaxinvoiceService.getTaxinvoice(testCorpNum, ntsConfirmNum, UserID);
+        taxinvoiceInfo = htTaxinvoiceService.getTaxinvoice(CorpNum, ntsConfirmNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -101,7 +102,7 @@
 
                     <li>modifyCode (수정 사유코드) : <%=taxinvoiceInfo.getModifyCode() %> </li>
                     <fieldset class ="fieldset2">
-                        <legend> 품목정보</legend>
+                        <legend>detailList (상세항목)</legend>
                         <%
                             if ( taxinvoiceInfo != null ){
                                 for(int i=0; i < taxinvoiceInfo.getDetailList().size(); i++){

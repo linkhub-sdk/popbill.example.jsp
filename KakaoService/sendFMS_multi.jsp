@@ -24,12 +24,12 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 팝빌에 등록된 비즈니스 채널 아이디
+    // 검색용 아이디
     String plusFriendID = "@팝빌";
 
-    // 팝빌에 사전 등록된 발신번호
+    // 발신번호
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
@@ -39,7 +39,7 @@
     // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     String altSendType = "C";
 
-    // 카카오톡 수신정보 배열, 최대 1000건
+    // 전송정보, 최대 1000건
     KakaoReceiver[] receivers = new KakaoReceiver[3];
 
     for (int i = 0; i < 3; i++) {
@@ -60,7 +60,7 @@
         receivers[i] = message;
     }
 
-    // 버튼 (최대 5개)
+    // 버튼 목록 (최대 5개)
     KakaoButton[] btns = new KakaoButton[3];
 
     for (int i = 0; i < 3 ; i++) {
@@ -72,7 +72,7 @@
         btns[i] = button;
     }
 
-    // 예약전송일시, 형태(yyyyMMddHHmmss)
+    // 전송 예약일시, 형태(yyyyMMddHHmmss)
     // - 분단위 전송, 미입력 시 즉시 전송
     String sndDT = "";
 
@@ -81,7 +81,7 @@
     // - 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
-    // 첨부이미지 파일 경로
+    // 전송 이미지 파일
     // 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
     File file = new File((application.getRealPath("/resources/kakaofmstest.jpg")));
 
@@ -90,21 +90,21 @@
     // 미입력시 첨부된 이미지를 링크 기능 없이 표시
     String imageURL = "http://www.linkhub.co.kr";
 
-    // 전송요청번호
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
-
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
 
     // 접수번호
     String receiptNum = null;
 
     try {
 
-        receiptNum = kakaoService.sendFMS(testCorpNum, plusFriendID, senderNum, altSendType,
-                receivers, btns, sndDT, adsYN, file, imageURL, testUserID, requestNum);
+        receiptNum = kakaoService.sendFMS(CorpNum, plusFriendID, senderNum, altSendType,
+                receivers, btns, sndDT, adsYN, file, imageURL, UserID, requestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

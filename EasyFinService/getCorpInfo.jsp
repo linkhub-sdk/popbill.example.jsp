@@ -17,7 +17,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 팝빌회원 아이디
     String UserID =  "testkorea";
@@ -26,7 +26,7 @@
 
     try {
 
-        corpInfo = easyFinBankService.getCorpInfo(testCorpNum, UserID);
+        corpInfo = easyFinBankService.getCorpInfo(CorpNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -41,11 +41,11 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>Ceoname (대표자명) : <%=corpInfo.getCeoname() %> </li>
-                    <li>CorpName (상호명) : <%=corpInfo.getCorpName() %> </li>
-                    <li>Addr (주소) : <%=corpInfo.getAddr() %> </li>
-                    <li>BizClass (종목) : <%=corpInfo.getBizClass() %> </li>
-                    <li>BizType (업태) : <%=corpInfo.getBizType() %> </li>
+                    <li>ceoname (대표자 성명) : <%=corpInfo.getCeoname() %> </li>
+                    <li>corpName (회사명) : <%=corpInfo.getCorpName() %> </li>
+                    <li>addr (주소) : <%=corpInfo.getAddr() %> </li>
+                    <li>bizType (업태) : <%=corpInfo.getBizType() %> </li>
+                    <li>bizClass (종목) : <%=corpInfo.getBizClass() %> </li>
                 </ul>
             </fieldset>
         </div>

@@ -13,29 +13,30 @@
 
 <%
     /*
-     * "임시저장" 또는 "(역)발행대기" 상태의 세금계산서를 발행(전자서명)하며, "발행완료" 상태로 처리합니다.
-     * - 세금계산서 국세청 전송정책 [https://developers.popbill.com/guide/taxinvoice/java/introduction/policy-of-send-to-nts]
-     * - "발행완료" 된 전자세금계산서는 국세청 전송 이전에 발행취소(CancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
-     * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
-     *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
-     * - 세금계산서 발행 시 공급받는자에게 발행 메일이 발송됩니다.
+     * "임시저장" 또는 "(역)발행대기" 상태의 세금계산서를 발행(전자서명)하며, "발행완료" 상태로 처리합니다. [참고] 팝빌 국세청 전송 정책
+     * "발행완료"된 전자세금계산서는 국세청 전송 이전에 [CancelIssue – 발행취소] 함수로 국세청 신고 대상에서 제외할 수 있습니다.
+     * 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
+     * - 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
+     * 세금계산서 발행시 포인트가 과금되며, 공급받는자에게 발행 메일이 발송됩니다.
      * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Issue
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형 (SELL , BUY , TRUSTEE 중 택 1)
-    // - SELL = 매출 , BUY = 매입 , TRUSTEE = 위수탁
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.SELL;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP002";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC002";
 
-    // 메모
+    // 세금계산서 상태 이력을 관리하기 위한 메모
     String memo = "발행 메모";
 
-    // 지연발행 강제여부  (true / false 중 택 1)
+    // 세금계산서 발행 안내메일 제목
+    String emailSubject = "";
+
+    // 지연발행 가능여부 (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
     // - 미입력 시 기본값 false 처리
     // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
@@ -49,7 +50,7 @@
 
     try {
 
-        CheckResponse = taxinvoiceService.issue(testCorpNum, keyType, mgtKey, memo, forceIssue, UserID);
+        CheckResponse = taxinvoiceService.issue(CorpNum, keyType, mgtKey, memo, emailSubject, forceIssue, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -64,9 +65,9 @@
         <fieldset class="fieldset1">
             <legend><%=request.getRequestURI()%></legend>
             <ul>
-                <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                 <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                <li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
+                <li>국세청승인번호 (ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
             </ul>
         </fieldset>
     </div>

@@ -18,9 +18,9 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 계좌정보 클래스 인스턴스 생성
+    // 계좌 정보
     EasyFinBankAccountForm bankInfo = new EasyFinBankAccountForm();
 
     // 은행 기관코드
@@ -29,7 +29,7 @@
     // 계좌번호 하이픈('-') 제외
     bankInfo.setAccountNumber("");
 
-    // 계좌비밀번호
+    // 계좌 비밀번호
     bankInfo.setAccountPWD("");
 
     // 계좌유형, "법인" / "개인" 중 택 1
@@ -67,7 +67,7 @@
 
     try {
 
-        CheckResponse = easyFinBankService.registBankAccount(testCorpNum, bankInfo, UserID);
+        CheckResponse = easyFinBankService.registBankAccount(CorpNum, bankInfo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -82,7 +82,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

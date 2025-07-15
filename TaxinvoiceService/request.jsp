@@ -13,25 +13,25 @@
 
 <%
     /*
-    * 공급받는자가 저장된 역발행 세금계산서를 공급자에게 송부하여 발행 요청합니다.
-    * - 역발행 세금계산서 프로세스를 구현하기 위해서는 공급자/공급받는자가 모두 팝빌에 회원이여야 합니다.
-    * - 역발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
-    * - 공급자는 팝빌 사이트의 "매출 문서함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
-    * - 역발행 요청시 공급자에게 역발행 요청 메일이 발송됩니다.
-    * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Request
-    */
+     * 공급받는자가 저장된 역발행 세금계산서를 공급자에게 송부하여 발행 요청합니다.
+     * 역발행 요청된 세금계산서는 "(역)발행대기" 상태이며, 공급자가 팝빌 사이트 또는 함수를 호출하여 발행한 경우에만 국세청으로 전송됩니다.
+     * 공급자는 팝빌 사이트의 "매출 발행 대기함"에서 발행대기 상태의 역발행 세금계산서를 확인할 수 있습니다.
+     * 역발행 요청시 공급자에게 역발행 요청 메일이 발송됩니다.
+     * 공급자가 역발행 세금계산서 발행시 포인트가 과금됩니다.
+     * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#Request
+     */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 문서번호 유형, BUY(매입) 입력
+    // 문서번호 유형 (SELL-매출, BUY-매입, TRUSTEE-위수탁)
     MgtKeyType keyType = MgtKeyType.BUY;
 
-    // 세금계산서 문서번호
-    String mgtKey = "20250711-JSP004";
+    // 파트너가 할당한 문서번호
+    String mgtKey = "20250711-MVC004";
 
-    // 메모
-    String memo = "역)발행요청 메모";
+    // 세금계산서 상태 이력을 관리하기 위한 메모
+    String memo = "역발행 요청 메모";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -40,7 +40,7 @@
 
     try {
 
-        CheckResponse = taxinvoiceService.request(testCorpNum, keyType, mgtKey, memo, UserID);
+        CheckResponse = taxinvoiceService.request(CorpNum, keyType, mgtKey, memo, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -55,7 +55,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
                 </ul>
             </fieldset>

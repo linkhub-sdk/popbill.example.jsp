@@ -18,7 +18,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 은행 기관코드
     String BankCode = "";
@@ -26,7 +26,7 @@
     // 계좌번호 하이픈('-') 제외
     String AccountNumber = "";
 
-    // 계좌정보 클래스 인스턴스 생성
+    // 수정할 계좌 정보
     UpdateEasyFinBankAccountForm BankAccountInfo = new UpdateEasyFinBankAccountForm();
 
     // 계좌비밀번호
@@ -54,7 +54,7 @@
 
     try {
 
-        CheckResponse = easyFinBankService.updateBankAccount(testCorpNum, BankCode, AccountNumber, BankAccountInfo,
+        CheckResponse = easyFinBankService.updateBankAccount(CorpNum, BankCode, AccountNumber, BankAccountInfo,
                 UserID);
 
     } catch (PopbillException pe) {
@@ -70,7 +70,7 @@
     <fieldset class="fieldset1">
         <legend><%=request.getRequestURI()%></legend>
         <ul>
-            <li>응답 코드(code) : <%=CheckResponse.getCode()%>
+            <li>응답코드 (code) : <%=CheckResponse.getCode()%>
             </li>
             <li>응답메시지 (message) : <%=CheckResponse.getMessage()%>
             </li>

@@ -17,19 +17,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // TBOX : 임시문서함, SBOX : 발행문서함
+    // 접근 메뉴, TBOX : 임시문서함, SBOX : 발행문서함
     String TOGO = "TBOX";
 
     // 팝빌회원 아이디
-    String testUserID = "testkorea";
+    String UserID = "testkorea";
 
     String url = null;
 
     try {
 
-        url = statementService.getURL(testCorpNum, testUserID, TOGO);
+        url = statementService.getURL(CorpNum, UserID, TOGO);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

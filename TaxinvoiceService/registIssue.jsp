@@ -16,21 +16,19 @@
 
 <%
     /*
-     * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다.
-     * - 세금계산서 국세청 전송 정책 [https://developers.popbill.com/guide/taxinvoice/java/introduction/policy-of-send-to-nts]
-     * - "발행완료"된 전자세금계산서는 국세청 전송 이전에 발행취소(CancelIssue API) 함수로 국세청 신고 대상에서 제외할 수 있습니다.
-     * - 임시저장(Register API) 함수와 발행(Issue API) 함수를 한 번의 프로세스로 처리합니다.
-     * - 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
-     *   └ 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
+     * 작성된 세금계산서 데이터를 팝빌에 저장과 동시에 발행(전자서명)하여 "발행완료" 상태로 처리합니다. [참고] 팝빌 국세청 전송 정책
+     * "발행완료"된 전자세금계산서는 국세청 전송 이전에 [CancelIssue – 발행취소] 함수로 국세청 신고 대상에서 제외할 수 있습니다.
+     * - [Register - 임시저장]과 [Issue - 발행] 함수 기능을 한 번의 프로세스로 처리합니다.
+     * 세금계산서 발행을 위해서 공급자의 인증서가 팝빌 인증서버에 사전등록 되어야 합니다.
+     * - 위수탁발행의 경우, 수탁자의 인증서 등록이 필요합니다.
+     * 세금계산서 발행시 포인트가 과금되며, 공급받는자에게 발행 메일이 발송됩니다.
      * - https://developers.popbill.com/reference/taxinvoice/java/api/issue#RegistIssue
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String CorpNum = "1234567890";
 
-    /***************************************************************************
-     * 세금계산서 정보
-     ****************************************************************************/
+    // 전자세금계산서 정보
     Taxinvoice taxinvoice = new Taxinvoice();
 
     // 발행형태, {정발행, 역발행, 위수탁} 중 기재
@@ -47,16 +45,16 @@
     // 일련번호
     taxinvoice.setSerialNum("123");
 
-    // 책번호 '권' 항목, 최대값 32767
+    // 책번호 '권' 항목
     taxinvoice.setKwon((short) 1);
 
-    // 책번호 '호' 항목, 최대값 32767
+    // 책번호 '호' 항목
     taxinvoice.setHo((short) 1);
 
     // 작성일자, 날짜형식(yyyyMMdd)
     taxinvoice.setWriteDate("20250711");
 
-    // {영수, 청구, 없음} 중 기재
+    // 영수/청구, {영수, 청구, 없음} 중 기재
     taxinvoice.setPurposeType("영수");
 
     // 공급가액 합계
@@ -92,7 +90,7 @@
      ****************************************************************************/
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20250711-JSP001");
+    taxinvoice.setInvoicerMgtKey("20250711-MVC001");
 
     // 공급자 사업자번호 (하이픈 '-' 제외 10 자리)
     taxinvoice.setInvoicerCorpNum(CorpNum);
@@ -118,10 +116,13 @@
     // 공급자 담당자 성명
     taxinvoice.setInvoicerContactName("공급자 담당자 성명");
 
+    // 공급자 담당자 부서명
+    taxinvoice.setInvoicerDeptName("공급자 담당자 부서명");
+
     // 공급자 담당자 연락처
     taxinvoice.setInvoicerTEL("070-7070-0707");
 
-    // 공급자 담당자 휴대폰번호
+    // 공급자 담당자 휴대폰
     taxinvoice.setInvoicerHP("010-000-2222");
 
     // 공급자 담당자 메일
@@ -170,13 +171,16 @@
     // 공급받는자 담당자 성명
     taxinvoice.setInvoiceeContactName1("공급받는자 담당자 성명");
 
+    // 공급받는자 담당자 부서명
+    taxinvoice.setInvoiceeDeptName1("공급받는자 담당자 부서명");
+
     // 공급받는자 담당자 연락처
     taxinvoice.setInvoiceeTEL1("070-111-222");
 
-    // 공급받는자 담당자 휴대폰번호
+    // 공급받는자 담당자 휴대폰
     taxinvoice.setInvoiceeHP1("010-111-222");
 
-    // 공급받는자 담당자 메일주소
+    // 공급받는자 담당자 메일
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
     taxinvoice.setInvoiceeEmail1("test@invoicee.com");
@@ -192,34 +196,33 @@
      * - 수정세금계산서 작성방법 안내 [https://developers.popbill.com/guide/taxinvoice/java/introduction/modified-taxinvoice#intro}
      ****************************************************************************/
 
-    // 수정사유코드, 수정사유에 따라 1~6 중 선택기재.
+    // 수정 사유코드, 수정사유에 따라 1~6 중 선택기재.
     taxinvoice.setModifyCode(null);
 
     // 당초 국세청승인번호
     taxinvoice.setOrgNTSConfirmNum(null);
 
-    // 사업자등록증 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBusinessLicenseYN(false);
 
-    // 통장사본 첨부 여부 (true / false 중 택 1)
+    // 팝빌에 등록된 통장사본 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
     // - 팝빌 사이트 또는 인감 및 첨부문서 등록 팝업 URL (GetSealURL API) 함수를 이용하여 등록
     taxinvoice.setBankBookYN(false);
 
     /***************************************************************************
-     * 상세항목(품목) 정보
+     * 품목 상세정보
      ****************************************************************************/
 
     taxinvoice.setDetailList(new ArrayList<TaxinvoiceDetail>());
 
-    // 상세항목 객체
     TaxinvoiceDetail detail = new TaxinvoiceDetail();
 
     detail.setSerialNum((short) 1); // 일련번호, 1부터 순차기재
     detail.setPurchaseDT("20250711"); // 거래일자
-    detail.setItemName("품목명"); // 품목명
+    detail.setItemName("품명"); // 품명
     detail.setSpec("규격"); // 규격
     detail.setQty("1"); // 수량
     detail.setUnitCost("50000"); // 단가
@@ -233,7 +236,7 @@
 
     detail.setSerialNum((short) 2);
     detail.setPurchaseDT("20250711");
-    detail.setItemName("품목명2");
+    detail.setItemName("품명2");
     detail.setSpec("규격");
     detail.setQty("1");
     detail.setUnitCost("50000");
@@ -244,7 +247,7 @@
     taxinvoice.getDetailList().add(detail);
 
     /***************************************************************************
-     * 추가담당자 정보
+     * 공급받는자 추가담당자 정보
      * - 세금계산서 발행 안내 메일을 수신받을 공급받는자 담당자가 다수인 경우 담당자 정보를
      * - 추가하여 발행 안내메일을 다수에게 전송할 수 있습니다. (최대 5명)
      ****************************************************************************/
@@ -253,9 +256,9 @@
 
     TaxinvoiceAddContact addContact = new TaxinvoiceAddContact();
 
-    addContact.setSerialNum(1); // 일련번호 (1부터 순차적으로 입력 (최대 5))
+    addContact.setSerialNum(1); // 일련번호, (1부터 순차적으로 입력 (최대 5))
     addContact.setContactName("추가 담당자 성명"); // 담당자 성명
-    addContact.setEmail("test2@test.com"); // 이메일
+    addContact.setEmail("test2@test.com"); // 메일
 
     taxinvoice.getAddContactList().add(addContact);
 
@@ -264,17 +267,17 @@
     // - 미입력 시 기본값 false 처리
     Boolean WriteSpecification = false;
 
-    // 메모
+    // 세금계산서 상태 이력을 관리하기 위한 메모
     String Memo = "즉시발행 메모";
 
-    // 지연발행 강제여부 (true / false 중 택 1)
+    // 지연발행 가능여부 (true / false 중 택 1)
     // └ true = 가능 , false = 불가능
     // - 미입력 시 기본값 false 처리
     // - 발행마감일이 지난 세금계산서를 발행하는 경우, 가산세가 부과될 수 있습니다.
     // - 가산세가 부과되더라도 발행을 해야하는 경우에는 forceIssue의 값을 true로 선언하여 발행(Issue API)를 호출하시면 됩니다.
     Boolean ForceIssue = false;
 
-    // {WriteSpecification} = true인 경우, 거래명세서 문서번호 할당
+    // 거래명세서 문서번호, {writeSpecification} = true인 경우, 거래명세서 문서번호 할당
     // - 미입력시 기본값 세금계산서 문서번호와 동일하게 할당
     String DealInvoiceKey = null;
 
@@ -304,9 +307,9 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                    <li>국세청승인번호 (Response.ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
+                    <li>국세청승인번호 (ntsConfirmNum) : <%=CheckResponse.getNtsConfirmNum()%></li>
                 </ul>
             </fieldset>
         </div>

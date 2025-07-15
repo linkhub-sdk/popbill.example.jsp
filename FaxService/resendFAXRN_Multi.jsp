@@ -21,12 +21,9 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
-
-    // 재전송 팩스의 전송요청번호
+    // 요청번호
     // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
@@ -37,11 +34,10 @@
     // 발신자명, 공백처리시 기존전송정보로 재전송
     String senderName = "발신자명";
 
-    // 팩스수신정보를 기존전송정보와 동일하게 재전송하는 경우, receivers 변수 null 처리
+    // 수신자 정보, 팩스수신정보를 기존전송정보와 동일하게 재전송하는 경우, receivers 변수 null 처리
     Receiver[] receivers = null;
 
-
-    // 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1000건)
+    // 수신자 정보, 팩스수신정보를 기존전송정보와 다르게 재전송하는 경우, 아래의 코드 적용 (최대 1000건)
     // Receiver[] receivers = new Receiver[2];
     //
     // Receiver receiver1 = new Receiver();
@@ -56,25 +52,27 @@
     // receiver2.setInterOPRefKey("20250711-reFAXRN001"); // 파트너 지정키
     // receivers[1] = receiver2;
 
-
-    // 예약전송일시, null인 경우 즉시전송
+    // 전송 예약일시, null인 경우 즉시전송
     // String reserveDTtxt = "20141229180000";
     // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
     // reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
 
-    // 팩스전송 제목
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 팩스제목
     String title = "팩스재전송 동보제목";
 
-    // 원본 팩스 전송시 할당한 전송요청번호(requestNum)
+    // 원본 팩스 요청번호
     String orgRequestNum = "20250711-request";
 
     String receiptNum = null;
 
     try {
 
-        receiptNum = faxService.resendFAXRN(testCorpNum, requestNum, sendNum, senderName,
-            receivers, reserveDT, testUserID, title, orgRequestNum);
+        receiptNum = faxService.resendFAXRN(CorpNum, requestNum, sendNum, senderName,
+            receivers, reserveDT, UserID, title, orgRequestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

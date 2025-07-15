@@ -20,60 +20,60 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String corpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 현금영수증 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20250711-JSP005";
+    // 파트너가 할당한 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
+    String MgtKey = "20250711-JSP005";
 
     // 당초 국세청승인번호 - 상태확인(getInfo API) 함수를 통해 confirmNum 값 기재
-    String orgConfirmNum = "TB0000387";
+    String OrgConfirmNum = "TB0000387";
 
     // 당초 거래일자 - 상태확인(getInfo API) 함수를 통해 tradeDate 값 기재
-    String orgTradeDate = "20250711";
+    String OrgTradeDate = "20250711";
 
-    // 안내 문자 전송여부 , true / false 중 택 1
+    // 현금영수증 발행시 알림문자 전송 여부 , true / false 중 택 1
     // └ true = 전송 , false = 미전송
     // └ 당초 승인 현금영수증의 구매자(고객)의 휴대폰번호 문자 전송
-    Boolean smssendYN = false;
+    Boolean SMSSendYN = false;
 
-    // 발행 메모
-    String memo = "취소 현금영수증 발행 메모";
+    // 현금영수증 상태 이력을 관리하기 위한 메모
+    String Memo = "취소 현금영수증 발행 메모";
 
     // 현금영수증 취소유형 , true / false 중 택 1
     // └ true = 부분 취소 , false = 전체 취소
     // └ 미입력시 기본값 false 처리
-    Boolean isPartCancel = false;
+    Boolean IsPartCancel = false;
 
-    // 취소사유 , 1 / 2 / 3 중 택 1
+    // 현금영수증 취소사유 , 1 / 2 / 3 중 택 1
     // └ 1 = 거래취소 , 2 = 오류발급취소 , 3 = 기타
     // └ 미입력시 기본값 1 처리
-    Integer cancelType = 1;
+    Integer CancelType = 1;
 
-    // [취소] 공급가액
+    // 부분 취소 공급가액
     // - 현금영수증 취소유형이 true 인 경우 취소할 공급가액 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String supplyCost = "";
+    String SupplyCost = "";
 
-    // [취소] 부가세
+    // 부분 취소 부가세
     // - 현금영수증 취소유형이 true 인 경우 취소할 부가세 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String tax = "";
+    String Tax = "";
 
-    // [취소] 봉사료
+    // 부분 취소 봉사료
     // - 현금영수증 취소유형이 true 인 경우 취소할 봉사료 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String serviceFee = "";
+    String ServiceFee = "";
 
-    // [취소] 거래금액 (공급가액+부가세+봉사료)
+    // 부분 취소 거래금액 (공급가액+부가세+봉사료)
     // - 현금영수증 취소유형이 true 인 경우 취소할 거래금액 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String totalAmount = "";
+    String TotalAmount = "";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
     // 현금영수증 발행 안내메일 제목
-    String emailSubject = "";
+    String EmailSubject = "";
 
     // 거래일시
     // - 전일부터 당일까지 입력 가능
@@ -84,9 +84,9 @@
 
     try {
 
-        CheckResponse = cashbillService.revokeRegistIssue(corpNum, mgtKey, orgConfirmNum, orgTradeDate,
-                smssendYN, memo, isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount, UserID,
-                emailSubject, TradeDT);
+        CheckResponse = cashbillService.revokeRegistIssue(CorpNum, MgtKey, OrgConfirmNum, OrgTradeDate,
+                SMSSendYN, Memo, IsPartCancel, CancelType, SupplyCost, Tax, ServiceFee, TotalAmount, UserID,
+                EmailSubject, TradeDT);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -101,10 +101,10 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=CheckResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                    <li>Response.confirmNum : <%=CheckResponse.getConfirmNum()%></li>
-                    <li>Response.tradeDate : <%=CheckResponse.getTradeDate()%></li>
+                    <li>국세청승인번호 (confirmNum) : <%=CheckResponse.getConfirmNum()%></li>
+                    <li>거래일자 (tradeDate) : <%=CheckResponse.getTradeDate()%></li>
                 </ul>
             </fieldset>
         </div>

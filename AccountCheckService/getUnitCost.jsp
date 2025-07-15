@@ -16,16 +16,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String corpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 서비스 유형 ("성명" / "실명" 중 택 1 , 성명 = 예금주성명조회, 실명 = 예금주실명조회)
     String ServiceType = "성명";
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     float unitCost;
 
     try {
 
-        unitCost = accountCheckService.getUnitCost(corpNum, ServiceType);
+        unitCost = accountCheckService.getUnitCost(CorpNum, ServiceType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

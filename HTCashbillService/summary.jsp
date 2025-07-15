@@ -12,23 +12,23 @@
 
 <%
     /*
-     * 수집 상태 확인(GetJobState API) 함수를 통해 상태 정보가 확인된 작업아이디를 활용하여 수집된 현금영수증 매입/매출 내역의 요약 정보를 조회합니다.
-     * - 요약 정보 : 현금영수증 수집 건수, 공급가액 합계, 세액 합계, 봉사료 합계, 합계 금액
+     * 홈택스에서 수집된 현금영수증 매입/매출 내역의 합계정보를 제공합니다.
+     * ※ 합계정보 - 수집 건수, 공급가액 합계, 세액 합계, 총계 (공급가액 합계+세액 합계)
      * - https://developers.popbill.com/reference/htcashbill/java/api/search#Summary
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 수집요청(requestJob API) 함수 호출 시 발급받은 작업아이디
+    // 작업아이디
     String jobID = "";
 
-    // 거래구분 배열 ("P" 와 "C" 중 선택, 다중 선택 가능)
+    // 현금영수증 거래구분 ("P" 와 "C" 중 선택, 다중 선택 가능)
     // └ P = 소득공제용 , C = 지출증빙용
     // └ 미입력시 전체조회
     String[] TradeUsage = {"P", "C"};
 
-    // 문서형태 배열 ("N" 와 "C" 중 선택, 다중 선택 가능)
+    // 현금영수증 문서형태 ("N" 와 "C" 중 선택, 다중 선택 가능)
     // └ N = 일반 현금영수증 , C = 취소현금영수증
     // └ 미입력시 전체조회
     String[] TradeType = {"N", "C"};
@@ -40,7 +40,7 @@
 
     try {
 
-        result = htCashbillService.summary(testCorpNum, jobID, TradeUsage, TradeType, UserID);
+        result = htCashbillService.summary(CorpNum, jobID, TradeUsage, TradeType, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

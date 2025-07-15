@@ -19,10 +19,10 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 현금영수증 문서번호 배열 (최대 1000건)
-    String[] mgtKeyList = new String[] {"20250711-001","20250711-JSP001", "20250711-JSP002"};
+    // 문서번호 목록 (최대 1000건)
+    String[] MgtKeyList = new String[] {"20250711-001","20250711-JSP001", "20250711-JSP002"};
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -31,7 +31,7 @@
 
     try {
 
-        cashbillInfos = cashbillService.getInfos(testCorpNum, mgtKeyList, UserID);
+        cashbillInfos = cashbillService.getInfos(CorpNum, MgtKeyList, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -54,7 +54,7 @@
                 <fieldset class="fieldset2">
                     <legend>현금영수증 상태/요약정보</legend>
                     <ul>
-                        <li>itemKey (팝빌번호) : <%= cashbillInfo.getItemKey()%></li>
+                        <li>itemKey (팝빌에서 현금영수증 관리 목적으로 할당한 식별번호) : <%= cashbillInfo.getItemKey()%></li>
                         <li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
                         <li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
                         <li>tradeDT (거래일시) : <%= cashbillInfo.getTradeDT()%></li>

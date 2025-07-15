@@ -23,7 +23,7 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 카카오톡 전송 접수시 파트너가 할당한 전송요청 번호
     String requestNum = "";
@@ -35,7 +35,7 @@
 
     try {
 
-        kakaoSentInfo = kakaoService.getMessagesRN(testCorpNum, requestNum, UserID);
+        kakaoSentInfo = kakaoService.getMessagesRN(CorpNum, requestNum, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

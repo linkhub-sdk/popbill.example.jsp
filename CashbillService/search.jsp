@@ -13,61 +13,61 @@
 
 <%
     /*
-     * 검색조건에 해당하는 현금영수증을 조회합니다. (조회기간 단위 : 최대 6개월)
+     * 검색조건에 해당하는 현금영수증을 조회합니다. (최대 조회기간 : 6개월)
      * 현금영수증 상태코드 [https://developers.popbill.com/reference/cashbill/java/response-code]
      * - https://developers.popbill.com/reference/cashbill/java/api/info#Search
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 일자 유형 ("R" , "T" , "I" 중 택 1)
+    // 검색일자 유형 ("R" , "T" , "I" 중 택 1)
     // └ R = 등록일자 , T = 거래일자 , I = 발행일자
     String DType = "T";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자, 날짜형식(yyyyMMdd)
     String EDate = "20250731";
 
-    // 상태코드 배열 (2,3번째 자리에 와일드카드(*) 사용 가능)
+    // 현금영수증 상태코드 (2,3번째 자리에 와일드카드(*) 사용 가능)
     // - 미입력시 전체조회
     String[] State = { "3**"};
 
-    // 문서형태 배열 ("N" , "C" 중 선택, 다중 선택 가능)
+    // 현금영수증 문서형태 ("N" , "C" 중 선택, 다중 선택 가능)
     // - N = 일반 현금영수증 , C = 취소 현금영수증
     // - 미입력시 전체조회
     String[] TradeType = { "N", "C" };
 
-    // 거래구분 배열 ("P" , "C" 중 선택, 다중 선택 가능)
+    // 거래구분 ("P" , "C" 중 선택, 다중 선택 가능)
     // - P = 소득공제용 , C = 지출증빙용
     // - 미입력시 전체조회
     String[] TradeUsage = { "P", "C" };
 
-    // 거래유형 배열 ("N" , "B" , "T" 중 선택, 다중 선택 가능)
+    // 거래유형 ("N" , "B" , "T" 중 선택, 다중 선택 가능)
     // - N = 일반 , B = 도서공연 , T = 대중교통
     // - 미입력시 전체조회
     String[] TradeOpt = { "N", "B", "T" };
 
-    // 과세형태 배열 ("T" , "N" 중 선택, 다중 선택 가능)
+    // 과세형태 ("T" , "N" 중 선택, 다중 선택 가능)
     // - T = 과세 , N = 비과세
     // - 미입력시 전체조회
     String[] TaxationType = { "T", "N" };
 
-    // 식별번호 조회 (미기재시 전체조회)
+    // 조회 검색어(식별번호) (미기재시 전체조회)
     String QString = "";
 
-    // 페이지 번호
+    // 목록 페이지번호
     int Page = 1;
 
-    // 페이지당 목록개수, 최대 1000건
+    // 페이지당 표시할 목록 건수, 최대 1000건
     int PerPage = 20;
 
-    // 정렬방향, A-오름차순, D-내림차순
+    // 조회 기준일자 유형을 기준으로 하는 목록 정렬 방향, A-오름차순, D-내림차순
     String Order = "D";
 
-    // 가맹점 종사업장 번호
+    // 가맹점 종사업장번호
     // └ 다수건 검색시 콤마(",")로 구분. 예) "1234,1000"
     // └ 미입력시 전제조회
     String FranchiseTaxRegID = "";
@@ -79,7 +79,7 @@
 
     try {
 
-        searchResult = cashbillService.search(testCorpNum, DType, SDate, EDate, State,
+        searchResult = cashbillService.search(CorpNum, DType, SDate, EDate, State,
                 TradeType, TradeUsage, TaxationType, TradeOpt, QString, Page, PerPage, Order, FranchiseTaxRegID, UserID);
 
     } catch (PopbillException pe) {
@@ -98,7 +98,7 @@
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>message (응답메시지) : <%= searchResult.getMessage()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
-                    <li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
+                    <li>perPage (페이지당 목록 건수) : <%= searchResult.getPerPage()%> </li>
                     <li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
                     <li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
                 </ul>
@@ -111,7 +111,7 @@
                 <fieldset class="fieldset2">
                     <legend>현금영수증 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ] </legend>
                     <ul>
-                        <li>itemKey (팝빌번호) : <%= cashbillInfo.getItemKey()%></li>
+                        <li>itemKey (팝빌에서 현금영수증 관리 목적으로 할당한 식별번호) : <%= cashbillInfo.getItemKey()%></li>
                         <li>mgtKey (문서번호) : <%= cashbillInfo.getMgtKey()%></li>
                         <li>tradeDate (거래일자) : <%= cashbillInfo.getTradeDate()%></li>
                         <li>tradeDT (거래일시) : <%= cashbillInfo.getTradeDT()%></li>
@@ -128,7 +128,7 @@
                         <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
                         <li>stateDT (상태 변경일시) : <%= cashbillInfo.getStateDT()%></li>
                         <li>identityNum (식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
-                        <li>itemName (상품명) : <%= cashbillInfo.getItemName()%></li>
+                        <li>itemName (주문상품명) : <%= cashbillInfo.getItemName()%></li>
                         <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
                         <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
                         <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>

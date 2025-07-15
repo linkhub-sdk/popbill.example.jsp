@@ -18,8 +18,9 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
+    // 환불신청 객체정보
     RefundForm refundForm = new RefundForm();
 
     // 담당자명
@@ -31,18 +32,17 @@
     // 환불 신청 포인트
     refundForm.setRequestPoint("10");
 
-    // 환불받은 계좌은행
+    // 은행명
     refundForm.setAccountBank("국민");
 
-    // 환불받은 계좌번호
+    // 계좌번호
     refundForm.setAccountNum("123123123-123");
 
-    // 환불받은 예금주
+    // 예금주명
     refundForm.setAccountName("예금주명");
 
     // 환불사유
     refundForm.setReason("환불사유");
-
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
@@ -50,7 +50,7 @@
 
     try {
 
-        checkResponse = messageService.refund(testCorpNum, refundForm, UserID);
+        checkResponse = messageService.refund(CorpNum, refundForm, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -65,7 +65,7 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답 코드(code) : <%=checkResponse.getCode()%></li>
+                    <li>응답코드 (code) : <%=checkResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=checkResponse.getMessage()%></li>
                     <li>환불코드 (refundCode) : <%=checkResponse.getRefundCode()%></li>
                 </ul>

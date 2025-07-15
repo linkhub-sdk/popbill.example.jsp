@@ -14,56 +14,54 @@
 <%
     /*
      * 최대 2,000byte의 장문(LMS) 메시지 1건 전송을 팝빌에 접수합니다.
+     * 팝빌 서비스의 안정적인 제공을 위하여 동시호출이 제한될 수 있습니다.
+     * 동시에 1,000건 이상 요청하는 경우 동보전송 또는 대량전송 API를 이용하시는 것을 권장합니다.
      * - https://developers.popbill.com/reference/sms/java/api/send#SendLMSOne
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 발신번호
+    // 발신번호 (팝빌에 등록된 발신번호만 이용가능)
     String sender = "07043042991";
 
     // 발신자명
     String senderName = "발신자명";
 
     // 수신번호
-    String receiver = "010111222";
+    String receiver = "000111222";
 
     // 수신자명
-    String receiverName = "수신자명";
+    String receiverName = "수신자";
 
     // 메시지 제목
-    String subject = "장문 문자메시지 제목";
+    String subject = "장문문자 제목";
 
-    // 장문 메시지 내용, 2000byte 초과시 길이가 조정되어 전송
+    // 메시지 내용, 2000byte 초과시 길이가 조정되어 전송
     // └ 한글, 한자, 특수문자 2byte / 영문, 숫자, 공백 1byte
     String content = "장문 문자메시지 내용";
 
-    // 전송예약일시, null인 경우 즉시전송
+    // 전송 예약일시, null인 경우 즉시전송
     Date reserveDT = null;
-    // 예약전송시 아래의 코드 참조
-    // String reserveDTtxt ="20250711180000";
-    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    // reserveDT = formatter.parse(reserveDTtxt);
 
-    // 광고 메시지 여부 ( true , false 중 택 1)
+    // 광고메시지 전송 여부 ( true , false 중 택 1)
     // └ true = 광고 , false = 일반
     Boolean adsYN = false;
 
-    // 전송요청번호
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
+    // 요청번호
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
-
-    // 팝빌회원 아이디
-    String testUserID = "testkorea";
 
     String receiptNum = null;
 
     try {
 
-        receiptNum = messageService.sendLMS(testCorpNum, sender, senderName, receiver, receiverName,
-                subject, content, reserveDT, adsYN, testUserID, requestNum);
+        receiptNum = messageService.sendLMS(CorpNum, sender, senderName, receiver, receiverName,
+                subject, content, reserveDT, adsYN, UserID, requestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

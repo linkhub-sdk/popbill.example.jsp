@@ -20,7 +20,7 @@
     DepositorCheckInfo depositorCheckInfo = null;
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String corpNum = "1234567890";
+    String CorpNum = "1234567890";
 
     // 조회할 기관코드
     String BankCode = "";
@@ -35,7 +35,7 @@
      * 실명번호
      * - IdentityNumType 값이 "B" 인 경우 (사업자번호(10)자리 입력)
      * - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
-     * 하이픈 '-' 제외하고 입력
+     * - 하이픈 '-' 제외하고 입력
      */
     String IdentityNum = "";
 
@@ -43,7 +43,7 @@
     String UserID = "testkorea";
 
     try{
-        depositorCheckInfo = accountCheckService.CheckDepositorInfo(corpNum, BankCode, AccountNumber,
+        depositorCheckInfo = accountCheckService.CheckDepositorInfo(CorpNum, BankCode, AccountNumber,
                 IdentityNumType, IdentityNum, UserID);
 
     } catch (PopbillException pe){

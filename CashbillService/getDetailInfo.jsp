@@ -17,16 +17,16 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 현금영수증 문서번호
-    String mgtKey = "20250711-JSP001";
+    // 파트너가 할당한 문서번호
+    String MgtKey = "20250711-JSP001";
 
     Cashbill cashbill = null;
 
     try {
 
-        cashbill = cashbillService.getDetailInfo(testCorpNum, mgtKey);
+        cashbill = cashbillService.getDetailInfo(CorpNum, MgtKey);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -63,7 +63,7 @@
                         <li>franchiseCorpName (가맹점 상호) : <%=cashbill.getFranchiseCorpName() %></li>
                         <li>franchiseCEOName (가맹점 대표자 성명) : <%=cashbill.getFranchiseCEOName() %></li>
                         <li>franchiseAddr (가맹점 주소) : <%=cashbill.getFranchiseAddr() %></li>
-                        <li>franchiseTEL (가맹점 연락처) : <%=cashbill.getFranchiseTEL() %></li>
+                        <li>franchiseTEL (가맹점 전화번호) : <%=cashbill.getFranchiseTEL() %></li>
                         <li>identityNum (식별번호) : <%=cashbill.getIdentityNum() %></li>
                         <li>customerName (구매자(고객) 성명) : <%=cashbill.getCustomerName() %></li>
                         <li>itemName (주문 상품명) : <%=cashbill.getItemName() %></li>

@@ -18,19 +18,19 @@
      */
 
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
-    String testCorpNum = "1234567890";
+    String CorpNum = "1234567890";
 
-    // 시작일자, 날짜형식(yyyyMMdd)
+    // 검색 시작일자 (형식 : yyyyMMdd)
     String SDate = "20250711";
 
-    // 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자 (형식 : yyyyMMdd)
     String EDate = "20250731";
 
-    // 페이지번호
-    int Page = 1;
+    // 목록 페이지번호 (기본값 1)
+    Integer Page = 1;
 
-    // 페이지당 검색개수, 최대 1000건
-    int PerPage = 30;
+    // 페이지당 표시할 목록 개수 (기본값 500, 최대 1,000)
+    Integer PerPage = 100;
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -38,7 +38,7 @@
     PaymentHistoryResult searchResult = new PaymentHistoryResult();
 
     try {
-        searchResult = accountCheckService.getPaymentHistory(testCorpNum, SDate, EDate, Page, PerPage, UserID);
+        searchResult = accountCheckService.getPaymentHistory(CorpNum, SDate, EDate, Page, PerPage, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -55,7 +55,7 @@
                 <ul>
                     <li>code (응답코드) : <%= searchResult.getCode()%></li>
                     <li>total (총 검색결과 건수) : <%= searchResult.getTotal()%></li>
-                    <li>perPage (페이지당 검색개수) : <%= searchResult.getPerPage()%> </li>
+                    <li>perPage (페이지당 목록 건수) : <%= searchResult.getPerPage()%> </li>
                     <li>pageNum (페이지 번호) : <%= searchResult.getPageNum()%></li>
                     <li>pageCount (페이지 개수) : <%= searchResult.getPageCount()%></li>
                 </ul>
@@ -67,7 +67,7 @@
                     %>
 
                         <fieldset class="fieldset2">
-                            <legend>포인트 결제내역정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
+                            <legend>결제내역 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
                                 <ul>
                                     <li>productType (결제 내용) : <%= paymentHistory.getProductType()%></li>
                                     <li>productName (결제 상품명) : <%= paymentHistory.getProductName()%></li>
