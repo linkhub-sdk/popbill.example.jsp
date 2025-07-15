@@ -23,13 +23,13 @@
     int itemCode = 121;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC001";
+    String mgtKey = "20250711-JSP001";
 
     // 첨부할 전자전자명세서 문서 유형
     int subItemCode = 121;
 
     // 첨부할 전자명세서 문서번호
-    String subMgtKey = "20250711-MVC002";
+    String subMgtKey = "20250711-JSP002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

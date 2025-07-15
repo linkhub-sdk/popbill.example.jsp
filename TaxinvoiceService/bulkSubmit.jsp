@@ -29,7 +29,7 @@
 
     // 제출아이디, 대량 발행 접수를 구별하는 식별키
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String SubmitID = "20250711-MVC-BULK";
+    String SubmitID = "20250711-JSP-BULK";
 
     // 전자세금계산서 목록, 최대 100건.
     List<Taxinvoice> TaxinvoiceList = new ArrayList<Taxinvoice>();

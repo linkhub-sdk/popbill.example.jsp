@@ -27,7 +27,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC002";
+    String mgtKey = "20250711-JSP002";
 
     // 파일명
     String DisplayName = "첨부파일.jpg";

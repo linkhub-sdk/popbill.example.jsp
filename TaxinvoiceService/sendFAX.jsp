@@ -25,7 +25,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC001";
+    String mgtKey = "20250711-JSP001";
 
     // 발신번호
     String Sender = "07043042991";

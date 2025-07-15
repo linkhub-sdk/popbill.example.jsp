@@ -28,7 +28,7 @@
     int itemCode = 121;
 
     // 파트너가 할당한 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20250711-MVC002";
+    String mgtKey = "20250711-JSP002";
 
     // 전자명세서 정보
     Statement statement = new Statement();
@@ -37,7 +37,7 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20250711-MVC002");
+    statement.setMgtKey("20250711-JSP002");
 
     // 맞춤양식 코드, 미기재시 기본양식으로 처리
     statement.setFormCode("");

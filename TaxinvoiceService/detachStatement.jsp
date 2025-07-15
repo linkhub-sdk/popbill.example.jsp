@@ -24,14 +24,14 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC001";
+    String mgtKey = "20250711-JSP001";
 
     // 첨부해제할 전자명세서 문서 유형, [121 - 거래명세서], [122 - 청구서], [123 - 견적서], [124 - 발주서], [125 - 입금표],
     // [126 - 영수증]
     int subItemCode = 121;
 
     // 첨부해제할 전자명세서 문서번호
-    String subMgtKey = "20250711-MVC002";
+    String subMgtKey = "20250711-JSP002";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

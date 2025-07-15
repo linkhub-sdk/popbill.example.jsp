@@ -28,7 +28,7 @@
     MgtKeyType keyType = MgtKeyType.SELL;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC002";
+    String mgtKey = "20250711-JSP002";
 
     // 수정할 전자세금계산서 정보
     Taxinvoice taxinvoice = new Taxinvoice();
@@ -92,7 +92,7 @@
      ****************************************************************************/
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합하여 사업자별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20250711-MVC002");
+    taxinvoice.setInvoicerMgtKey("20250711-JSP002");
 
     // 공급자 사업자번호
     taxinvoice.setInvoicerCorpNum(CorpNum);

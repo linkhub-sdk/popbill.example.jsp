@@ -23,7 +23,7 @@
     int itemCode = 121;
 
     // 파트너가 할당한 문서번호
-    String mgtKey = "20250711-MVC001";
+    String mgtKey = "20250711-JSP001";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

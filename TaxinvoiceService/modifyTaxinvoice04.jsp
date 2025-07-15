@@ -101,7 +101,7 @@
      *********************************************************************/
 
     // 공급자 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    taxinvoice.setInvoicerMgtKey("20250711-BOOT001");
+    taxinvoice.setInvoicerMgtKey("20250711-JSP001");
 
     // 공급자 사업자번호
     taxinvoice.setInvoicerCorpNum(CorpNum);
