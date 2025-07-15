@@ -33,11 +33,11 @@
     // - 미입력 시 전체조회
     String[] TradeType = {"N", "C"};
 
-    // 목록 페이지번호
+    // 목록 페이지번호 (기본값 = 1)
     int Page = 1;
 
-    // 페이지당 표시할 목록 건수
-    int PerPage = 15;
+    // 페이지당 표시할 목록 건수 (기본값 = 500 , 최대 = 1000)
+    int PerPage = 10;
 
     // 목록 정렬 방향, "D" / "A" 중 택 1
     // └ D = 내림차순(기본값) , A = 오름차순
@@ -78,7 +78,7 @@
                 for ( int i = 0; i < result.getList().size(); i++ ) {
             %>
               <fieldset class="fieldset2">
-              <legend> 현금영수증 정보 [ <%=(i+1) %> ] </legend>
+              <legend>현금영수증 정보 [ <%=(i+1) %> ] </legend>
               <ul>
                   <li>ntsconfirmNum (국세청승인번호) : <%= result.getList().get(i).getNtsconfirmNum() %></li>
                   <li>tradeDate (거래일자) : <%= result.getList().get(i).getTradeDate() %></li>

@@ -49,7 +49,7 @@
                 <ul>
                     <li>code (응답코드) : <%= bulkResult.getCode() %></li>
                     <li>message (응답메시지) : <%= bulkResult.getMessage() %></li>
-                    <li>submitID (제출아이디) : <%= bulkResult.getSubmitID() %></li>
+                    <li>submitID (접수 시점에 고객사에서 할당한 제출아이디) : <%= bulkResult.getSubmitID() %></li>
                     <li>submitCount (세금계산서 접수 건수) : <%= bulkResult.getSuccessCount() %></li>
                     <li>successCount (세금계산서 발행 성공 건수) : <%= bulkResult.getSuccessCount() %></li>
                     <li>failCount (세금계산서 발행 실패 건수) : <%= bulkResult.getFailCount() %></li>

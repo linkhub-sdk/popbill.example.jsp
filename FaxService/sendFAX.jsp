@@ -37,11 +37,8 @@
     files[0] = new File((application.getRealPath("/resources/test.jpg")));
     files[1] = new File((application.getRealPath("/resources/test.jpg")));
 
-    // 예약전송일시, null인 경우 즉시전송
+    // 전송 예약일시, null인 경우 즉시전송
     Date reserveDT = null;
-    // String reserveDTtxt = "20180726120000";
-    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    // reserveDT = formatter.parse(reserveDTtxt);
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -52,10 +49,10 @@
     Boolean adsYN = false;
 
     // 팩스제목
-    String title = "팩스제목";
+    String title = "팩스 제목";
 
     // 요청번호
-    // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
+    // 파트너가 접수 단위를 식별하기 위해 할당하는 관리번호
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

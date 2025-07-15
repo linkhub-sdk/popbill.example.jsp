@@ -77,8 +77,8 @@
                 <ul>
                     <li>n (버튼명) : <%=btns.get(j).getN()%></li>
                     <li>t (버튼유형) : <%=btns.get(j).getT()%></li>
-                    <li>u1 (버튼링크1) : <%=btns.get(j).getU1()%></li>
-                    <li>u2 (버튼링크2) : <%=btns.get(j).getU2()%></li>
+                    <li>u1 (버튼링크) : <%=btns.get(j).getU1()%></li>
+                    <li>u2 (버튼링크) : <%=btns.get(j).getU2()%></li>
                     <% if(btns.get(j).getTg() != null) {  %>
                         <li>tg (아웃링크) : <%=btns.get(j).getTg()%></li>
                     <% } %>
@@ -93,7 +93,7 @@
                 List<KakaoSentDetail> msgs = kakaoSentInfo.getMsgs();
                     for (int j = 0; j < msgs.size(); j++) { %>
             <fieldset class="fieldset3">
-                <legend>전송결과 정보 배열 [<%= j + 1 %>]</legend>
+                <legend>전송결과 정보 [<%= j + 1 %>]</legend>
                 <ul>
                     <li>state (상태코드) : <%=msgs.get(j).getState()%></li>
                     <li>sendDT (전송일시) : <%=msgs.get(j).getSendDT()%></li>

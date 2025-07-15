@@ -52,7 +52,7 @@
                 <li>accountName (계좌 별칭) : <%=bankAccountInfo.getAccountName() %> </li>
                 <li>accountType (계좌 유형) : <%=bankAccountInfo.getAccountType() %> </li>
                 <li>state (계좌 상태) : <%=bankAccountInfo.getState() %> </li>
-                <li>regDT (등록일시) : <%=bankAccountInfo.getRegDT() %> </li>
+                <li>regDT (팝빌에 계좌를 등록한 일시) : <%=bankAccountInfo.getRegDT() %> </li>
                 <li>contractDT (정액제 서비스 시작일시) : <%=bankAccountInfo.getContractDT() %> </li>
                 <li>useEndDate (정액제 서비스 만료일자) : <%=bankAccountInfo.getUseEndDate() %> </li>
                 <li>baseDate (자동연장 결제일) : <%=bankAccountInfo.getBaseDate() %> </li>

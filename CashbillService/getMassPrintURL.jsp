@@ -23,7 +23,7 @@
     String CorpNum = "1234567890";
 
     // 인쇄할 현금영수증 문서번호, 최대 100건
-    String[] MgtKeyList = new String[] {"20250711-JSP001", "20250711-JSP002"};
+    String[] mgtKeyList = new String[] { "20250711-MVC001", "20250711-MVC003", "20250711-MVC004" };
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -32,7 +32,7 @@
 
     try {
 
-        url = cashbillService.getMassPrintURL(CorpNum, MgtKeyList, UserID);
+        url = cashbillService.getMassPrintURL(CorpNum, mgtKeyList, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

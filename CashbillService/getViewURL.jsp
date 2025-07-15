@@ -23,7 +23,7 @@
     String CorpNum = "1234567890";
 
     // 파트너가 할당한 문서번호
-    String MgtKey = "20250711-001";
+    String mgtKey = "20250711-MVC001";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -32,7 +32,7 @@
 
     try {
 
-        url = cashbillService.getViewURL(CorpNum, MgtKey, UserID);
+        url = cashbillService.getViewURL(CorpNum, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

@@ -39,17 +39,16 @@
     String[] PurposeType = {"R", "C", "N"};
 
     // 종사업장번호 유무 (null , "0" , "1" 중 택 1)
-    // - null = 전체 , 0 = 없음, 1 = 있음
+    // - null = 전체조회 , 0 = 없음, 1 = 있음
     String TaxRegIDYN = null;
 
     // 종사업장번호의 주체 ("S" , "B" , "T" 중 택 1)
-    // └ S = 공급자 , B = 공급받는자 , T = 수탁자
-    // - 미입력시 전체조회
+    // - S = 공급자 , B = 공급받는자 , T = 수탁자
     String TaxRegIDType = "S";
 
     // 종사업장번호
-    // 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
-    // - 미입력시 전체조회
+    // - 다수기재 시 콤마(",")로 구분. ex) "0001,0002"
+    // - 미입력 시 전체조회
     String TaxRegID = "";
 
     // 목록 페이지번호 (기본값 = 1)
@@ -103,9 +102,9 @@
                     for(int i=0; i < result.getList().size(); i++){
             %>
             <fieldset class="fieldset2">
-                <legend> 전자세금계산서 정보 [ <%=(i+1) %> ] </legend>
+                <legend> 세금계산서 요약정보 [ <%=(i+1) %> ] </legend>
                 <ul>
-                    <li>ntsconfirmNum (국세청승인번호) <%= result.getList().get(i).getNtsconfirmNum() %></li>
+                    <li>ntsconfirmNum (전자세금계산서 국세청승인번호) <%= result.getList().get(i).getNtsconfirmNum() %></li>
                     <li>writeDate (작성일자) : <%= result.getList().get(i).getWriteDate()  %> </li>
                     <li>issueDate (발행일자) : <%= result.getList().get(i).getIssueDate()  %> </li>
                     <li>sendDate (전송일자) : <%= result.getList().get(i).getSendDate()  %> </li>
@@ -141,6 +140,7 @@
                     <li>invoiceeCorpName (공급받는자 상호) : <%= result.getList().get(i).getInvoiceeCorpName()  %> </li>
                     <li>invoiceeCEOName (공급받는자 대표자 성명) : <%= result.getList().get(i).getInvoiceeCEOName()  %> </li>
                     <li>invoiceeEmail1 (공급받는자 담당자 메일) : <%= result.getList().get(i).getInvoiceeEmail1()  %> </li>
+                    <li>invoiceeEmail2 (공급받는자 ASP 연계사업자 메일) : <%= result.getList().get(i).getInvoiceeEmail2()  %> </li>
 
                     <li>trusteeCorpNum (수탁자 사업자번호) : <%= result.getList().get(i).getTrusteeCorpNum()  %> </li>
                     <li>trusteeTaxRegID (수탁자 종사업장 식별번호) : <%= result.getList().get(i).getTrusteeTaxRegID()  %> </li>

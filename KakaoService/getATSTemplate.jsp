@@ -63,8 +63,9 @@
                                 <ul>
                                     <li>n (버튼명) : <%=btns.get(i).getN()%></li>
                                     <li>t (버튼유형) : <%=btns.get(i).getT()%></li>
-                                    <li>u1 (버튼링크1) : <%=btns.get(i).getU1()%></li>
-                                    <li>u2 (버튼링크2) : <%=btns.get(i).getU2()%></li>
+                                    <li>u1 (버튼링크) : <%=btns.get(i).getU1()%></li>
+                                    <li>u2 (버튼링크) : <%=btns.get(i).getU2()%></li>
+                                    <li>tg (아웃 링크) : <%=btns.get(i).getTg()%></li>
                                 </ul>
                             </fieldset>
                 <%

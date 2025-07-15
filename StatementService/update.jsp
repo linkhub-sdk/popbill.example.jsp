@@ -37,7 +37,7 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20250711-JSP002");
+    statement.setMgtKey("20250711-MVC001");
 
     // 맞춤양식 코드, 미기재시 기본양식으로 처리
     statement.setFormCode("");
@@ -108,6 +108,9 @@
     // 발신자 메일주소
     statement.setSenderEmail("test@test.com");
 
+    // 발신자 팩스번호
+    statement.setSenderFAX("");
+
     /*********************************************************************
      *                            수신자 정보
      *********************************************************************/
@@ -149,6 +152,9 @@
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
     statement.setReceiverEmail("");
+
+    // 수신자 팩스번호
+    statement.setReceiverFAX("");
 
     // 팝빌에 등록된 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)

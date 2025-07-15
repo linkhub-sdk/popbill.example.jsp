@@ -22,33 +22,30 @@
     String CorpNum = "1234567890";
 
     // 요청번호
-    // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
+    // 파트너가 접수 단위를 식별하기 위해 할당하는 관리번호
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 
-    // 발신번호, 공백처리시 기존전송정보로 전송
+    // 발신번호, 공백처리시 기존전송정보로 재전송
     String sendNum = "07043042991";
 
-    // 발신자명, 공백처리시 기존전송정보로 전송
+    // 발신자명, 공백처리시 기존전송정보로 재전송
     String senderName = "발신자명";
 
-    // 수신번호, 공백처리시 기존전송정보로 전송
-    String receiveNum = "070111222";
+    // 수신번호, 공백처리시 기존전송정보로 재전송
+    String receiveNum = "";
 
-    // 수신자명, 공백처리시 기존전송정보로 전송
+    // 수신자명, 공백처리시 기존전송정보로 재전송
     String receiveName = "";
 
     // 전송 예약일시, null인 경우 즉시전송
-    // String reserveDTtxt = "20141230180000";
-    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    // reserveDT = formatter.parse(reserveDTtxt);
     Date reserveDT = null;
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
-    // 팩스제목
-    String title = "팩스전송 제목";
+    // 팩스 제목
+    String title = "팩스 재전송 제목";
 
     // 원본 팩스 요청번호
     String orgRequestNum = "";
@@ -57,8 +54,8 @@
 
     try {
 
-        receiptNum = faxService.resendFAXRN(CorpNum, requestNum, sendNum, senderName,
-                receiveNum, receiveName, reserveDT, UserID, title, orgRequestNum);
+        receiptNum = faxService.resendFAXRN(CorpNum, requestNum, sendNum, senderName, receiveNum, receiveName,
+                reserveDT, UserID, title, orgRequestNum);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

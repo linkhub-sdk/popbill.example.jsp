@@ -58,8 +58,8 @@
                 <li>result (결과코드) : <%=faxResult.getResult()%></li>
                 <li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
                 <li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
-                <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                 <li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
+                <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                 <li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
                 <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                 <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
@@ -83,8 +83,8 @@
                     }
                 %>
                 <li>fileNames (전송 파일명 리스트) : <%=fileNames%></li>
-                <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
-                <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+                <li>receiptNum (팩스 전송요청시 팝빌로부터 반환 받은 접수번호) : <%=faxResult.getReceiptNum()%></li>
+                <li>requestNum (팩스 전송요청시 파트너가 할당한 요청번호) : <%=faxResult.getRequestNum()%></li>
                 <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
                 <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
                 <li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>

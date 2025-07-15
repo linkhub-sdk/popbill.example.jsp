@@ -92,12 +92,12 @@
                     %>
 
                         <fieldset class="fieldset2">
-                            <legend>StatementInfo [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
+                            <legend>전자명세서 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
                             <ul>
                                 <li>itemCode (전자명세서 문서 유형) : <%= statementInfo.getItemCode()%></li>
                                 <li>itemKey (팝빌번호) : <%= statementInfo.getItemKey()%></li>
                                 <li>invoiceNum (팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
-                                <li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
+                                <li>mgtKey (파트너가 할당한 문서번호) : <%= statementInfo.getMgtKey()%></li>
                                 <li>taxType (과세형태) : <%= statementInfo.getTaxType()%></li>
                                 <li>writeDate (작성일자) : <%= statementInfo.getWriteDate()%></li>
                                 <li>regDT (임시저장일시) : <%= statementInfo.getRegDT()%></li>
@@ -112,7 +112,7 @@
                                 <li>purposeType (영수/청구) : <%= statementInfo.getPurposeType()%></li>
                                 <li>issueDT (발행일시) : <%= statementInfo.getIssueDT()%></li>
                                 <li>stateCode (상태코드) : <%= statementInfo.getStateCode()%></li>
-                                <li>stateDT (상태변경 일시) : <%= statementInfo.getStateDT()%></li>
+                                <li>stateDT (상태 변경일시) : <%= statementInfo.getStateDT()%></li>
                                 <li>stateMemo (상태메모) : <%= statementInfo.getStateMemo()%></li>
                                 <li>openYN (개봉여부) : <%= statementInfo.isOpenYN()%></li>
                                 <li>openDT (개봉 일시) : <%= statementInfo.getOpenDT()%></li>

@@ -65,7 +65,7 @@
                         <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
                         <li>stateDT (상태 변경일시) : <%= cashbillInfo.getStateDT()%></li>
                         <li>identityNum (식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
-                        <li>itemName (상품명) : <%= cashbillInfo.getItemName()%></li>
+                        <li>itemName (주문상품명) : <%= cashbillInfo.getItemName()%></li>
                         <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
                         <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
                         <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>

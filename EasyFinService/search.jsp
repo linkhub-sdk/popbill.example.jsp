@@ -19,19 +19,19 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String CorpNum = "1234567890";
 
-    // 수집 요청시 발급받은 작업아이디
-    String jobID = "023011317000000006";
+    // 작업아이디
+    String jobID = "023011310000000008";
 
     // 거래유형 ("I" 와 "O" 중 선택, 다중 선택 가능)
     // └ I = 입금 , O = 출금
     // - 미입력 시 전체조회
-    String[] TradeType = {"I", "O"};
+    String[] TradeType = { "I", "O" };
 
     // 조회 검색어, "입·출금액" / "거래내역 메모" / "비고" 중 검색하고자 하는 값 입력
-    // - 거래내역 메모 = 거래내역 메모저장(SaveMemo)을 사용하여 저장한 값
+    // - 거래내역 메모 = 거래내역 메모저장(SaveMemo API) 함수를 사용하여 저장한 값
     // - 비고 = EasyFinBankSearchDetail의 remark1, remark2, remark3 값
     // - 미입력시 전체조회
-    String searchString = "";
+    String SearchString = "";
 
     // 목록 페이지번호
     int Page = 1;
@@ -39,7 +39,7 @@
     // 페이지당 표시할 목록 건수
     int PerPage = 10;
 
-    // 목록 정렬 방향, A-오름차순, D-내림차순
+    // 목록 정렬 방향, D-내림차순, A-오름차순
     String Order = "D";
 
     // 팝빌회원 아이디
@@ -48,7 +48,7 @@
     EasyFinBankSearchResult result = null;
 
     try {
-        result = easyFinBankService.search(CorpNum, jobID, TradeType, searchString,
+        result = easyFinBankService.search(CorpNum, jobID, TradeType, SearchString,
             Page, PerPage, Order, UserID);
 
     } catch (PopbillException pe) {
@@ -71,7 +71,7 @@
                 <li>pageNum (페이지 번호) : <%= result.getPageNum() %></li>
                 <li>pageCount (페이지 개수) : <%= result.getPageCount() %></li>
                 <li>lastScrapDT (최종 조회일시) : <%= result.getLastScrapDT() %></li>
-                <li>balance (현재잔액) : <%= result.getBalance() %></li>
+                <li>balance (현재 잔액) : <%= result.getBalance() %></li>
             </ul>
             <%
                 if ( result != null ){

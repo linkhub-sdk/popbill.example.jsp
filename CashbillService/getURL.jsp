@@ -24,8 +24,8 @@
     // 팝빌회원 아이디
     String UserID = "testkorea";
 
-    // 접근 메뉴, TBOX : 임시문서함, PBOX : 발행문서함, WRITE : 현금영수증 작성
-    String TOGO = "PBOX";
+    // 접근 메뉴, TBOX : 임시문서함 , PBOX : 발행문서함, WRITE : 현금영수증 작성
+    String TOGO = "WRITE";
 
     String url = null;
 

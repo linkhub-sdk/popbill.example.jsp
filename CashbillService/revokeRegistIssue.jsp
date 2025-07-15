@@ -13,7 +13,10 @@
 
 <%
     /*
-     * 취소 현금영수증 데이터를 팝빌에 저장과 동시에 발행하여 "발행완료" 상태로 처리합니다.
+     * 당초 승인 현금영수증의 취소거래 발행 API 입니다.
+     * 작성된 취소 현금영수증 데이터를 팝빌에 저장과 동시에 발행하여 "발행완료" 상태로 처리합니다.
+     * 부분 취소 현금영수증을 발행하는 경우 'IsPartCancel' 값을 true 로 설정하여 주시기 바랍니다.
+     * 당초 국세청승인번호와 거래일자는 [GetInfo – 상태확인]함수를 통해 확인 가능합니다.
      * - 현금영수증 국세청 전송 정책 [https://developers.popbill.com/guide/cashbill/java/introduction/policy-of-send-to-nts]
      * - 취소 현금영수증 발행 시 구매자 메일주소로 발행 안내 베일이 전송되니 유의하시기 바랍니다.
      * - https://developers.popbill.com/reference/cashbill/java/api/issue#RevokeRegistIssue
@@ -23,51 +26,51 @@
     String CorpNum = "1234567890";
 
     // 파트너가 할당한 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String MgtKey = "20250711-JSP005";
+    String mgtKey = "20250711-MVC005";
 
     // 당초 국세청승인번호 - 상태확인(getInfo API) 함수를 통해 confirmNum 값 기재
-    String OrgConfirmNum = "TB0000387";
+    String orgConfirmNum = "TB0000009";
 
     // 당초 거래일자 - 상태확인(getInfo API) 함수를 통해 tradeDate 값 기재
-    String OrgTradeDate = "20250711";
+    String orgTradeDate = "20250711";
 
     // 현금영수증 발행시 알림문자 전송 여부 , true / false 중 택 1
     // └ true = 전송 , false = 미전송
     // └ 당초 승인 현금영수증의 구매자(고객)의 휴대폰번호 문자 전송
-    Boolean SMSSendYN = false;
+    Boolean smssendYN = false;
 
     // 현금영수증 상태 이력을 관리하기 위한 메모
-    String Memo = "취소 현금영수증 발행 메모";
+    String memo = "취소 현금영수증 발행 메모";
 
     // 현금영수증 취소유형 , true / false 중 택 1
     // └ true = 부분 취소 , false = 전체 취소
     // └ 미입력시 기본값 false 처리
-    Boolean IsPartCancel = false;
+    Boolean isPartCancel = false;
 
     // 현금영수증 취소사유 , 1 / 2 / 3 중 택 1
     // └ 1 = 거래취소 , 2 = 오류발급취소 , 3 = 기타
     // └ 미입력시 기본값 1 처리
-    Integer CancelType = 1;
+    Integer cancelType = 1;
 
     // 부분 취소 공급가액
     // - 현금영수증 취소유형이 true 인 경우 취소할 공급가액 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String SupplyCost = "";
+    String supplyCost = "";
 
     // 부분 취소 부가세
     // - 현금영수증 취소유형이 true 인 경우 취소할 부가세 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String Tax = "";
+    String tax = "";
 
     // 부분 취소 봉사료
     // - 현금영수증 취소유형이 true 인 경우 취소할 봉사료 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String ServiceFee = "";
+    String serviceFee = "";
 
     // 부분 취소 거래금액 (공급가액+부가세+봉사료)
     // - 현금영수증 취소유형이 true 인 경우 취소할 거래금액 입력
     // - 현금영수증 취소유형이 false 인 경우 미입력
-    String TotalAmount = "";
+    String totalAmount = "";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -84,8 +87,8 @@
 
     try {
 
-        CheckResponse = cashbillService.revokeRegistIssue(CorpNum, MgtKey, OrgConfirmNum, OrgTradeDate,
-                SMSSendYN, Memo, IsPartCancel, CancelType, SupplyCost, Tax, ServiceFee, TotalAmount, UserID,
+        CheckResponse = cashbillService.revokeRegistIssue(CorpNum, mgtKey, orgConfirmNum, orgTradeDate,
+                smssendYN, memo, isPartCancel, cancelType, supplyCost, tax, serviceFee, totalAmount, UserID,
                 EmailSubject, TradeDT);
 
     } catch (PopbillException pe) {

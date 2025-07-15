@@ -56,8 +56,8 @@
                     <li>taxType (과세형태) : <%=taxinvoice.getTaxType() %></li>
                     <li>chargeDirection (과금방향) : <%=taxinvoice.getChargeDirection() %></li>
                     <li>serialNum (일련번호) : <%=taxinvoice.getSerialNum() %></li>
-                    <li>kwon (권) : <%=taxinvoice.getKwon() %></li>
-                    <li>ho (호)  : <%=taxinvoice.getHo() %></li>
+                    <li>kwon (책번호 "권" 항목) : <%=taxinvoice.getKwon() %></li>
+                    <li>ho (책번호 "호" 항목)  : <%=taxinvoice.getHo() %></li>
                     <li>writeDate (작성일자) : <%=taxinvoice.getWriteDate() %></li>
                     <li>purposeType (영수/청구) : <%=taxinvoice.getPurposeType() %></li>
                     <li>supplyCostTotal (공급가액 합계) : <%=taxinvoice.getSupplyCostTotal() %></li>
@@ -121,8 +121,8 @@
 
                     <li>modifyCode (수정 사유코드) : <%=taxinvoice.getModifyCode() %></li>
                     <li>orgNTSConfirmNum (당초 국세청승인번호) : <%=taxinvoice.getOrgNTSConfirmNum() %></li>
-                    <li>businessLicenseYN (사업자등록증 첨부 여부) : <%=taxinvoice.getBusinessLicenseYN() %></li>
-                    <li>bankBookYN (통장사본 첨부 여부) : <%=taxinvoice.getBankBookYN() %></li>
+                    <li>businessLicenseYN (팝빌에 등록된 사업자등록증 첨부 여부) : <%=taxinvoice.getBusinessLicenseYN() %></li>
+                    <li>bankBookYN (팝빌에 등록된 통장사본 첨부 여부) : <%=taxinvoice.getBankBookYN() %></li>
                     <%
                         if(taxinvoice.getDetailList() != null ){
                             for(int i=0; i<taxinvoice.getDetailList().size(); i++){

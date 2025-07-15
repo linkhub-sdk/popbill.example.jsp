@@ -28,10 +28,10 @@
 
     // 발신번호
     // 팝빌에 등록되지 않은 번호를 입력하는 경우 '원발신번호'로 팩스 전송됨
-    String sendNum = "07043042991";
+    String sendNum = "07043042995";
 
     // 수신번호
-    String receiveNum = "070111222";
+    String receiveNum = "010111222";
 
     // 수신자명
     String receiveName = "수신자명";
@@ -49,18 +49,16 @@
     FaxUploadFile[] fileList = new FaxUploadFile[1];
     FaxUploadFile uf = new FaxUploadFile();
 
-    // 파일명
-    uf.fileName = "test.jpg";
+    // 팩스로 전송할 파일명
+    uf.fileName = "test.pdf";
 
-    // 파일의 바이너리 데이터
+    // 팩스로 전송할 파일의 바이너리 데이터
     uf.fileData = targetStream;
+
     fileList[0] = uf;
 
     // 전송 예약일시, null인 경우 즉시전송
     Date reserveDT = null;
-    // String reserveDTtxt = "20180726120000";
-    // SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-    // reserveDT = formatter.parse(reserveDTtxt);
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -71,10 +69,10 @@
     Boolean adsYN = false;
 
     // 팩스제목
-    String title = "팩스제목";
+    String title = "팩스 제목";
 
     // 요청번호
-    // 파트너가 전송 건에 대해 관리번호를 생성하여 관리하는 경우 사용.
+    // 파트너가 접수 단위를 식별하기 위해 할당하는 관리번호
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
 

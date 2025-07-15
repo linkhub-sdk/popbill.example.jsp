@@ -49,7 +49,7 @@
     msg1.setReceiver("010111222");       // 수신번호
     msg1.setReceiverName("수신자1");     // 수신자명
     msg1.setContent("메시지 내용1");     // 메시지내용
-    msg1.setSubject("멀티 메시지 제목"); // 문자제목
+    msg1.setSubject("멀티 메시지 제목"); // 메시지 제목
     msg1.setInterOPRefKey("20250711-MMS001");    // 파트너 지정키
     messages[0] = msg1;
 
@@ -85,7 +85,6 @@
     // 팝빌이 접수 단위를 식별할 수 있도록 파트너가 할당한 식별번호.
     // 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     String requestNum = "";
-
 
     String receiptNum = null;
 

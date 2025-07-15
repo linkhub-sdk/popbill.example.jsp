@@ -29,7 +29,7 @@
     // 수정할 계좌 정보
     UpdateEasyFinBankAccountForm BankAccountInfo = new UpdateEasyFinBankAccountForm();
 
-    // 계좌비밀번호
+    // 계좌 비밀번호
     BankAccountInfo.setAccountPWD("");
 
     // 계좌 별칭
@@ -38,10 +38,10 @@
     // 인터넷뱅킹 아이디 (국민은행 필수)
     BankAccountInfo.setBankID("");
 
-    // 조회전용 계정 아이디 (대구은행, 신협, 신한은행 필수)
+    // 조회전용 계정 아이디 (아이엠뱅크, 신한은행, 신협중앙회 필수)
     BankAccountInfo.setFastID("");
 
-    // 조회전용 계정 비밀번호 (대구은행, 신협, 신한은행 필수)
+    // 조회전용 계정 비밀번호 (아이엠뱅크, 신한은행, 신협중앙회 필수)
     BankAccountInfo.setFastPWD("");
 
     // 메모

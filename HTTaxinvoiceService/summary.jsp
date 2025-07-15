@@ -39,17 +39,16 @@
     String[] PurposeType = {"R", "C", "N"};
 
     // 종사업장번호 유무 (null , "0" , "1" 중 택 1)
-    // - null = 전체 , 0 = 없음, 1 = 있음
+    // - null = 전체조회 , 0 = 없음, 1 = 있음
     String TaxRegIDYN = null;
 
     // 종사업장번호의 주체 ("S" , "B" , "T" 중 택 1)
-    // └ S = 공급자 , B = 공급받는자 , T = 수탁자
-    // - 미입력시 전체조회
+    // - S = 공급자 , B = 공급받는자 , T = 수탁자
     String TaxRegIDType = "S";
 
     // 종사업장번호
-    // 다수기재시 콤마(",")로 구분하여 구성 ex ) "0001,0002"
-    // - 미입력시 전체조회
+    // - 다수기재 시 콤마(",")로 구분. ex) "0001,0002"
+    // - 미입력 시 전체조회
     String TaxRegID = "";
 
     // 팝빌회원 아이디
@@ -83,7 +82,7 @@
                 <li>count (수집 건수) : <%= result.getCount() %></li>
                 <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
                 <li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
-                <li>amountTotal (총계) : <%= result.getAmountTotal() %></li>
+                <li>amountTotal (총계 (공급가액 합계+세액 합계)) : <%= result.getAmountTotal() %></li>
             </ul>
         </fieldset>
     </div>

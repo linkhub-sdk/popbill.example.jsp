@@ -48,7 +48,7 @@
                     <li>state (정액제 서비스 상태) : <%=flatRateInfo.getState()%> </li>
                     <li>closeRequestYN (정액제 서비스 해제신청 여부) : <%=flatRateInfo.getCloseRequestYN()%> </li>
                     <li>useRestrictYN (정액제 서비스 사용제한 여부) : <%=flatRateInfo.getUseRestrictYN()%> </li>
-                    <li>closeOnExpired (정액제 만료시 해제 여부) : <%=flatRateInfo.getCloseOnExpired()%> </li>
+                    <li>closeOnExpired (정액제 서비스 해지 구분) : <%=flatRateInfo.getCloseOnExpired()%> </li>
                     <li>unPaidYN (미수금 보유 여부) : <%=flatRateInfo.getUnPaidYN()%> </li>
                 </ul>
             </fieldset>

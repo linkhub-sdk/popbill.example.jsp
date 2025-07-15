@@ -45,8 +45,8 @@
                     for ( int i = 0; i < jobList.length; i++ ) {
             %>
             <fieldset class="fieldset2">
-                <legend>jobID (작업아이디) :  <%= jobList[i].getJobID() %> </legend>
                 <ul>
+                    <li>jobID (작업아이디) : <%=jobList[i].getJobID() %> </li>
                     <li>jobState (수집상태) : <%=jobList[i].getJobState() %> </li>
                     <li>queryType (수집유형) : <%=jobList[i].getQueryType() %> </li>
                     <li>queryDateType (일자유형) : <%=jobList[i].getQueryDateType() %> </li>

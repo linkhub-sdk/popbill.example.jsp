@@ -42,7 +42,7 @@
                 <legend><%=request.getRequestURI()%></legend>
                 <fieldset class="fieldset2">
                     <ul>
-                        <li>smsdenyNumber (수신거부번호) : <%= checkAutoDeny.getSmsdenyNumber() %></li>
+                        <li>smsdenyNumber (전용 080 번호) : <%= checkAutoDeny.getSmsdenyNumber() %></li>
                         <li>regDT (등록일시) : <%= checkAutoDeny.getRegDT() %></li>
                     </ul>
                 </fieldset>

@@ -48,7 +48,6 @@
                 <ul>
                     <li>url : <%=url%> </li>
                 </ul>
-
             </fieldset>
         </div>
     </body>

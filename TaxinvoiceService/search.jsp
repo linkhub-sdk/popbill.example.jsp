@@ -147,7 +147,7 @@
                         <fieldset class="fieldset2">
                             <legend>세금계산서 상태/요약정보 [ <%=i+1%> / <%=searchResult.getList().size()%> ]</legend>
                                 <ul>
-                                    <li>itemKey (팝빌번호) : <%= taxinvoiceInfo.getItemKey()%></li>
+                                    <li>itemKey (팝빌에서 할당한 식별번호) : <%= taxinvoiceInfo.getItemKey()%></li>
                                     <li>taxType (과세형태) : <%= taxinvoiceInfo.getTaxType()%></li>
                                     <li>writeDate (작성일자) : <%= taxinvoiceInfo.getWriteDate()%></li>
                                     <li>regDT (임시저장 일시) : <%= taxinvoiceInfo.getRegDT()%> </li>
@@ -167,7 +167,7 @@
                                     <li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
                                     <li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
                                     <li>ntssendErrCode (결과코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
-                                    <li>modifyCode (수정사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
+                                    <li>modifyCode (수정세금계산서 발행시 입력한 사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
                                     <li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
                                     <li>invoicerCorpName (공급자 상호) : <%= taxinvoiceInfo.getInvoicerCorpName()%></li>
                                     <li>invoicerCorpNum (공급자 사업자번호) : <%= taxinvoiceInfo.getInvoicerCorpNum() %> </li>

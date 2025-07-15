@@ -30,7 +30,7 @@
     // 검색 시작일자, 날짜형식(yyyyMMdd)
     String SDate = "20250711";
 
-    // 검색 종료일자, 날짜형식(yyyyMMdd)
+    // 검색 종료일자, 닐짜형식(yyyyMMdd)
     String EDate = "20250731";
 
     // 팝빌회원 아이디

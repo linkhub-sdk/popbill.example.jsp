@@ -59,7 +59,7 @@
                     <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
                     <li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
                     <li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
-                    <li>amountTotal (총계) : <%= result.getAmountTotal() %></li>
+                    <li>amountTotal (총계 (공급가액 합계+세액 합계)) : <%= result.getAmountTotal() %></li>
                 </ul>
             </fieldset>
         </div>

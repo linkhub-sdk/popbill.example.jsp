@@ -19,11 +19,11 @@
     // 팝빌회원 사업자번호 (하이픈 '-' 제외 10 자리)
     String CorpNum = "1234567890";
 
-    // 팝빌회원 아이디
-    String UserID = "testkorea";
-
     // 문자 유형. SMS(단문), LMS(장문), MMS(포토)
     MessageType msgType = MessageType.MMS;
+
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
 
     float unitCost;
 

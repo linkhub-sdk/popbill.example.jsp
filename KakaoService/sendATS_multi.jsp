@@ -49,29 +49,32 @@
         message.setReceiverName("수신자명" + i); // 수신자명
         message.setMessage("[ 팝빌 ]\n" + "신청하신 #{템플릿코드}에 대한 심사가 완료되어 승인 처리되었습니다.\n" + "해당 템플릿으로 전송 가능합니다.\n\n"
                 + "문의사항 있으시면 파트너센터로 편하게 연락주시기 바랍니다.\n\n" + "팝빌 파트너센터 : 1600-8536\n" + "support@linkhub.co.kr"
-                + "To. 수신자" + i); // 알림톡 템플릿 내용, 최대 1000자
+                + "To. 수신자" + i); // 알림톡/친구톡 내용, 최대 1000자
         message.setAltSubject("대체문자 개별제목입니다." + i); // 대체문자 제목
         message.setAltMessage("대체문자 개별내용입니다." + i); // 대체문자 내용
 
-        // 수신자별 개별 버튼정보
+        // 버튼 목록
         // KakaoButton button = new KakaoButton();
         // button.setN("타입1 버튼명"+i); // 버튼명
-        // button.setT("WL"); // 버튼타입
-        // button.setU1("http://"+i+"popbill.com"); // 버튼링크1
-        // button.setU2("http://"+i+"test.popbill.com"); // 버튼링크2
-        // button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
+        // button.setT("WL"); // 버튼 유형
+        // button.setU1("http://"+i+"popbill.com"); // 버튼링크
+        // button.setU2("http://"+i+"test.popbill.com"); // 버튼링크
+        // button.setTg("out"); // 아웃 링크, 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
 
         // KakaoButton button02 = new KakaoButton();
         // button02.setN("타입2 버튼명"+i); // 버튼명
-        // button02.setT("WL"); // 버튼타입
-        // button02.setU1("http://"+i+"popbill.com"); // 버튼링크1
-        // button02.setU2("http://"+i+"test.popbill.com"); // 버튼링크2
-        // button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
+        // button02.setT("WL"); // 버튼 유형
+        // button02.setU1("http://"+i+"popbill.com"); // 버튼링크
+        // button02.setU2("http://"+i+"test.popbill.com"); // 버튼링크
+        // button.setTg("out"); // 아웃 링크,디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
 
         // 수신자별로 각기다른 버튼정보 추가.
         // message.setBtns(new ArrayList<KakaoButton>());
         // message.getBtns().add(button);
         // message.getBtns().add(button02);
+
+        // 파트너 지정키
+        // message.setInterOPRefKey("");
         receivers[i] = message;
     }
 
@@ -90,15 +93,15 @@
     // 버튼 목록, 알림톡 버튼정보를 템플릿 신청시 기재한 버튼정보와 동일하게 전송하는 경우 null 처리.
     KakaoButton[] btns = null;
 
-    // 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
+    // 버튼 목록, 알림톡 버튼 URL에 #{템플릿변수}를 기재한경우 템플릿변수 영역을 변경하여 버튼정보 구성
     // KakaoButton[] btns = new KakaoButton[1];
 
     // KakaoButton button = new KakaoButton();
     // button.setN("버튼명"); // 버튼명
-    // button.setT("WL"); // 버튼타입
-    // button.setU1("https://www.popbill.com"); // 버튼링크1
-    // button.setU2("http://test.popbill.com"); // 버튼링크2
-    // button.setTg("out"); // 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
+    // button.setT("WL"); // 버튼 유형
+    // button.setU1("https://www.popbill.com"); // 버튼링크
+    // button.setU2("http://test.popbill.com"); // 버튼링크
+    // button.setTg("out"); // 아웃 링크, 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
     // btns[0] = button;
 
     // 접수번호

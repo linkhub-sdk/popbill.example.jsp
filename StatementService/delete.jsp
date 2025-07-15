@@ -14,7 +14,6 @@
     /*
      * 삭제 가능한 상태의 전자명세서를 삭제합니다.
      * - 삭제 가능한 상태: "임시저장", "취소", "승인거부", "발행취소"
-     * - 전자명세서를 삭제하면 사용된 문서번호(mgtKey)를 재사용할 수 있습니다.
      * - https://developers.popbill.com/reference/statement/java/api/issue#Delete
      */
 
@@ -27,11 +26,14 @@
     // 파트너가 할당한 문서번호
     String mgtKey = "20250711-JSP002";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     Response CheckResponse = null;
 
     try {
 
-        CheckResponse = statementService.delete(CorpNum, itemCode, mgtKey);
+        CheckResponse = statementService.delete(CorpNum, itemCode, mgtKey, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.

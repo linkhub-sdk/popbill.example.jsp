@@ -58,7 +58,7 @@
                         <li>writeDate (작성일자) : <%= statement.getWriteDate()%></li>
                         <li>taxType (과세형태) : <%= statement.getTaxType ()%></li>
                         <li>purposeType (영수/청구) : <%= statement.getPurposeType()%></li>
-                        <li>serialNum (기재상 일련번호) : <%= statement.getSerialNum()%></li>
+                        <li>serialNum (일련번호) : <%= statement.getSerialNum()%></li>
                         <li>supplyCostTotal (공급가액 합계) : <%= statement.getSupplyCostTotal()%></li>
                         <li>taxTotal (세액 합계) : <%= statement.getTaxTotal()%></li>
                         <li>totalAmount (합계금액) : <%= statement.getTotalAmount()%></li>
@@ -71,27 +71,31 @@
                         <li>senderCorpName (발신자 상호) : <%= statement.getSenderCEOName()%></li>
                         <li>senderCEOName (발신자 대표자성명) : <%= statement.getSenderCEOName()%></li>
                         <li>senderAddr (발신자 주소) : <%= statement.getSenderAddr()%></li>
-                        <li>senderBizClass (발신자 종목) : <%= statement.getSenderBizClass()%></li>
                         <li>senderBizType (발신자 업태) : <%= statement.getSenderBizType()%></li>
-                        <li>senderContactName (발신자 담당자성명) : <%= statement.getSenderContactName()%></li>
+                        <li>senderBizClass (발신자 종목) : <%= statement.getSenderBizClass()%></li>
+                        <li>senderContactName (발신자 성명) : <%= statement.getSenderContactName()%></li>
+                        <li>senderDeptName (발신자 부서명) : <%= statement.getSenderDeptName()%></li>
                         <li>senderTEL (발신자 연락처) : <%= statement.getSenderTEL()%></li>
-                        <li>senderHP (발신자 휴대폰번호) : <%= statement.getSenderHP()%></li>
+                        <li>senderHP (발신자 휴대전화) : <%= statement.getSenderHP()%></li>
                         <li>senderEmail (발신자 메일주소) : <%= statement.getSenderEmail()%></li>
+                        <li>senderFAX (발신자 팩스번호) : <%= statement.getSenderFAX()%></li>
 
                         <li>receiverCorpNum (수신자 사업자번호) : <%= statement.getReceiverCorpNum()%></li>
                         <li>receiverTaxRegID (수신자 종사업장 식별번호) : <%= statement.getReceiverTaxRegID()%></li>
                         <li>receiverCorpName (수신자 상호) : <%= statement.getReceiverCorpName()%></li>
                         <li>receiverCEOName (수신자 대표자성명) : <%= statement.getReceiverCEOName()%></li>
                         <li>receiverAddr (수신자 주소) : <%= statement.getReceiverAddr()%></li>
-                        <li>receiverBizClass (수신자 종목) : <%= statement.getReceiverBizClass()%></li>
                         <li>receiverBizType (수신자 업태) : <%= statement.getReceiverBizType()%></li>
+                        <li>receiverBizClass (수신자 종목) : <%= statement.getReceiverBizClass()%></li>
                         <li>receiverContactName (수신자 성명) : <%= statement.getReceiverContactName()%></li>
+                        <li>receiverDeptName (수신자 부서명) : <%= statement.getReceiverDeptName()%></li>
                         <li>receiverTEL (수신자 연락처) : <%= statement.getReceiverTEL()%></li>
                         <li>receiverHP (수신자 휴대전화) : <%= statement.getReceiverHP()%></li>
                         <li>receiverEmail (수신자 메일주소) : <%= statement.getReceiverEmail()%></li>
+                        <li>receiverFAX (수신자 팩스번호) : <%= statement.getReceiverFAX()%></li>
 
-                        <li>businessLicenseYN (사업자등록증 첨부여부) : <%= statement.getBusinessLicenseYN()%></li>
-                        <li>bankBookYN (통장사본 첨부여부) : <%= statement.getBankBookYN()%></li>
+                        <li>businessLicenseYN (팝빌에 등록된 사업자등록증 첨부 여부) : <%= statement.getBusinessLicenseYN()%></li>
+                        <li>bankBookYN (팝빌에 등록된 통장사본 첨부 여부) : <%= statement.getBankBookYN()%></li>
                         <li>smssendYN (알림문자 전송여부) : <%= statement.getSmssendYN()%></li>
 
                         <fieldset class="fieldset3">
@@ -114,7 +118,7 @@
                                     StatementDetail detail = statement.getDetailList().get(i);
                         %>
                         <fieldset class="fieldset3">
-                            <legend>detailList</legend>
+                            <legend>거래 물품 상세정보</legend>
                             <ul>
                                 <li>SerialNum (일련번호) :  <%= detail.getSerialNum() %> </li>
                                 <li>purchaseDT (거래일자) : <%= detail.getPurchaseDT() %> </li>

@@ -41,9 +41,9 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>unitCost (월정액 요금) : <%=chargeInfo.getUnitCost() %> </li>
+                    <li>unitCost (요금) : <%=chargeInfo.getUnitCost() %> </li>
                     <li>chargeMethod (과금유형) : <%=chargeInfo.getChargeMethod() %> </li>
-                    <li>rateSystem (과금제도) : <%=chargeInfo.getRateSystem() %> </li>
+                    <li>rateSystem (요금제도) : <%=chargeInfo.getRateSystem() %> </li>
                 </ul>
             </fieldset>
         </div>

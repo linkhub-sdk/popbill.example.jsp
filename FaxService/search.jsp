@@ -42,15 +42,15 @@
     // 사용자권한별 조회
     // └ true = 팝빌회원 아이디(UserID)로 전송한 팩스만 조회
     // └ false = 전송한 팩스 전체 조회 : 기본값
-    Boolean SenderOnlyYN = false;
+    Boolean SenderOnly = false;
 
     // 목록 페이지번호
     int Page = 1;
 
-    // 페이지당 표시할 목록 건수, 최대 1000건
-    int PerPage = 10;
+    // 페이지당 표시할 목록 개수 (최대 1000)
+    int PerPage = 100;
 
-    // 팩스 접수일시를 기준으로 하는 목록 정렬 방향, A-오름차순, D-내림차순
+    // 팩스 접수일시를 기준으로 하는 목록 정렬 방향, D-내림차순, A-오름차순
     String Order = "D";
 
     // 조회 검색어(발신자명/수신자명)
@@ -65,7 +65,7 @@
     try {
 
         searchResult = faxService.search(CorpNum, SDate, EDate, State, ReserveYN,
-                SenderOnlyYN, Page, PerPage, Order, QString, UserID);
+                SenderOnly, Page, PerPage, Order, QString, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -96,14 +96,14 @@
                 %>
 
                 <fieldset class="fieldset2">
-                    <legend>개별 전송 내역 : [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
+                    <legend>전송결과 정보 [ <%=i+1%> / <%=searchResult.getList().size()%>]</legend>
                     <ul>
                         <li>state (상태코드) : <%=faxResult.getState()%></li>
                         <li>result (결과코드) : <%=faxResult.getResult()%></li>
                         <li>sendNum (발신번호) : <%=faxResult.getSendNum()%></li>
                         <li>senderName (발신자명) : <%=faxResult.getSenderName()%></li>
-                        <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                         <li>receiveNum (수신번호) : <%=faxResult.getReceiveNum()%></li>
+                        <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                         <li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
                         <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
                         <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
@@ -127,8 +127,8 @@
                             }
                         %>
                         <li>fileNames (전송 파일명 리스트) : <%=fileNames%></li>
-                        <li>receiptNum (접수번호) : <%=faxResult.getReceiptNum()%></li>
-                        <li>requestNum (요청번호) : <%=faxResult.getRequestNum()%></li>
+                        <li>receiptNum (팩스 전송요청시 팝빌로부터 반환 받은 접수번호) : <%=faxResult.getReceiptNum()%></li>
+                        <li>requestNum (팩스 전송요청시 파트너가 할당한 요청번호) : <%=faxResult.getRequestNum()%></li>
                         <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
                         <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
                         <li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>

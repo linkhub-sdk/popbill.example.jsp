@@ -18,7 +18,7 @@
 <%
     /*
      * 작성된 전자명세서 데이터를 팝빌에 저장과 동시에 발행하여, "발행완료" 상태로 처리합니다.
-     * - 팝빌 사이트 [전자명세서] > [관리] > [환경설정] 메뉴의 발행 시 자동승인 옵션 설정을 통해 전자명세서를 "발행완료" 상태가 아닌 "승인대기" 상태로 발행 처리 할 수 있습니다.
+     * 팝빌 사이트 [ 전자명세서 > 관리 > 환경설정 ] 메뉴의 "발행시 자동승인" 옵션 설정을 통해 전자명세서를 "발행완료" 상태가 아닌 "승인대기" 상태로 발행 처리 할 수 있습니다.
      * - https://developers.popbill.com/reference/statement/java/api/issue#RegistIssue
      */
 
@@ -32,7 +32,7 @@
     statement.setItemCode((short) 121);
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    statement.setMgtKey("20250711-JSP001");
+    statement.setMgtKey("20250711-MVC001");
 
     // 맞춤양식 코드, 미기재시 기본양식으로 처리
     statement.setFormCode("");
@@ -103,6 +103,9 @@
     // 발신자 메일주소
     statement.setSenderEmail("test@test.com");
 
+    // 발신자 팩스번호
+    statement.setSenderFAX("");
+
     /*********************************************************************
      *                            수신자 정보
      *********************************************************************/
@@ -144,6 +147,9 @@
     // 팝빌 개발환경에서 테스트하는 경우에도 안내 메일이 전송되므로,
     // 실제 거래처의 메일주소가 기재되지 않도록 주의
     statement.setReceiverEmail("");
+
+    // 수신자 팩스번호
+    statement.setReceiverFAX("");
 
     // 팝빌에 등록된 사업자등록증 첨부 여부 (true / false 중 택 1)
     // └ true = 첨부 , false = 미첨부(기본값)
@@ -208,7 +214,7 @@
     String UserID = "testkorea";
 
     // 발행 안내 메일 제목
-    // - 미입력 시 팝빌에서 지정한  이메일 제목으로 전송
+    // - 미입력 시 팝빌에서 지정한  메일 제목으로 전송
     String emailSubject = "";
 
     SMTIssueResponse CheckResponse = null;
@@ -232,7 +238,7 @@
                 <ul>
                     <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
                     <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                    <li>Response.invoiceNum : <%=CheckResponse.getInvoiceNum()%></li>
+                    <li>팝빌 승인번호 (invoiceNum) : <%=CheckResponse.getInvoiceNum()%></li>
                 </ul>
             </fieldset>
         </div>

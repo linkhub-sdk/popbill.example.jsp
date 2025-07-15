@@ -53,7 +53,7 @@
                         <li>itemCode (전자명세서 문서 유형) : <%= statementInfo.getItemCode()%></li>
                         <li>itemKey (팝빌번호) : <%= statementInfo.getItemKey()%></li>
                         <li>invoiceNum (팝빌 승인번호) : <%= statementInfo.getInvoiceNum()%></li>
-                        <li>mgtKey (문서번호) : <%= statementInfo.getMgtKey()%></li>
+                        <li>mgtKey (파트너가 할당한 문서번호) : <%= statementInfo.getMgtKey()%></li>
                         <li>taxType (과세형태) : <%= statementInfo.getTaxType()%></li>
                         <li>writeDate (작성일자) : <%= statementInfo.getWriteDate()%></li>
                         <li>regDT (임시저장일시) : <%= statementInfo.getRegDT()%></li>

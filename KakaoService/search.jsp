@@ -33,12 +33,12 @@
     // 전송상태 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     // └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
     // - 미입력 시 전체조회
-    String[] State = {"0", "1", "2", "3", "4", "5"};
+    String[] State = { "0", "1", "2", "3", "4" };
 
     // 검색대상 ("ATS", "FTS", "FMS" 중 선택, 다중 선택 가능)
     // └ ATS = 알림톡 , FTS = 친구톡(텍스트) , FMS = 친구톡(이미지)
     // - 미입력 시 전체조회
-    String[] Item = {"ATS", "FTS", "FMS"};
+    String[] Item = { "ATS", "FTS", "FMS" };
 
     // 전송유형별 조회 (null , "0" , "1" 중 택 1)
     // └ null = 전체 , 0 = 즉시전송건 , 1 = 예약전송건
@@ -53,25 +53,26 @@
     // 목록 페이지번호
     int Page = 1;
 
-    // 페이지당 표시할 목록 건수, 최대 1000개
+    // 페이지당 표시할 목록 건수 (최대 1000건)
     int PerPage = 20;
 
     // 알림톡 / 친구톡 접수일시를 기준으로 하는 목록 정렬 방향 ("D" , "A" 중 택 1)
     // └ D = 내림차순(기본값) , A = 오름차순
     String Order = "D";
 
+    // 팝빌회원 아이디
+    String UserID = "testkorea";
+
     // 조회 검색어(수신자명)
     // - 미입력시 전체조회
     String QString = "";
-
-    String userID = "testkorea";
 
     KakaoSearchResult searchResult = null;
 
     try {
 
         searchResult = kakaoService.search(CorpNum, SDate, EDate, State, Item,
-                ReserveYN, SenderOnly, Page, PerPage, Order, userID, QString);
+                ReserveYN, SenderOnly, Page, PerPage, Order, UserID, QString);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -98,7 +99,7 @@
             KakaoSentDetail sentMsg = searchResult.getList().get(i);
         %>
         <fieldset class="fieldset3">
-            <legend>카카오톡 전송내역 조회 결과 : [ <%=i + 1%> / <%=searchResult.getList().size() %> ]</legend>
+            <legend>전송결과 정보 : [ <%=i + 1%> / <%=searchResult.getList().size() %> ]</legend>
             <ul>
                 <li>state (상태코드) : <%=sentMsg.getState()%></li>
                 <li>sendDT (전송일시) : <%=sentMsg.getSendDT()%></li>

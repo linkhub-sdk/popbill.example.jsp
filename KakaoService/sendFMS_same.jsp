@@ -33,15 +33,12 @@
     // altSendType = 'C' / 'A' 일 경우, 대체문자를 전송할 발신번호
     // altSendType = '' 일 경우, null 또는 공백 처리
     // ※ 대체문자를 전송하는 경우에는 사전에 등록된 발신번호 입력 필수
-    String senderNum = "070-4304-2991";
+    String senderNum = "07043042991";
 
     // 친구톡 내용 (최대 400자)
-    String content = "[친구톡 이미지 테스트]\n\n"
-                   + "친구톡 이미지 동보내용입니다.\n"
-                   + "대체문자를 친구톡 메시지 내용 그대로 전송할 수 있습니다.\n"
-                   + "또는 대체문자 내용을 작송하여 전송할 수도 있습니다.\n"
-                   + "하지만 대체문자 내용이 길어지게 되면 LMS 로 전송될 수 있습니다.\n\n"
-                   + "수신을 원치 않으시면 1600-9854로 전화주시길 바랍니다.\n";
+    String content = "[친구톡 이미지 테스트]\n\n" + "친구톡 이미지 동보내용입니다.\n" + "대체문자를 친구톡 메시지 내용 그대로 전송할 수 있습니다.\n"
+            + "또는 대체문자 내용을 작송하여 전송할 수도 있습니다.\n" + "하지만 대체문자 내용이 길어지게 되면 LMS 로 전송될 수 있습니다.\n\n"
+            + "수신을 원치 않으시면 1600-9854로 전화주시길 바랍니다.\n";
 
     // 대체문자 제목
     // - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
@@ -52,46 +49,57 @@
     String altContent = "대체문자 내용";
 
     // 대체문자 유형 (null , "C" , "A" 중 택 1)
-    // null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    // null = 미전송, C = 친구톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     String altSendType = "C";
 
     // 전송정보, 최대 1000건
     KakaoReceiver[] receivers = new KakaoReceiver[2];
-
     for (int i = 0; i < 2; i++) {
         KakaoReceiver message = new KakaoReceiver();
-        message.setReceiverNum("010111222" + i);
-        message.setReceiverName("수신자명" + i);
+        message.setReceiverNum("010111222"); // 수신번호
+        message.setReceiverName("수신자명" + i); // 수신자명
+        // message.setInterOPRefKey(""); // 파트너 지정키
         receivers[i] = message;
     }
 
-    // 버튼 목록 (최대 5개)
-    KakaoButton[] btns = new KakaoButton[5];
+    // 수신자별 동일 버튼 정보
+    // 버튼 목록, 최대 5개
+    KakaoButton[] btns = new KakaoButton[2];
 
-    for (int i = 0; i < 5; i++) {
-        KakaoButton button = new KakaoButton();
-        button.setN("버튼명" + i);
-        button.setT("WL");
-        button.setU1("http://www.popbill.com");
-        button.setU2("http://test.popbill.com");
-        btns[i] = button;
-    }
+    KakaoButton button = new KakaoButton();
+    button.setN("버튼명"); // 버튼명
+    button.setT("WL"); // 버튼 유형
+    button.setU1("http://www.popbill.com"); // 버튼링크
+    button.setU2("http://test.popbill.com"); // 버튼링크
+    button.setTg("out"); // 아웃 링크, 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
+    btns[0] = button;
 
+    button = new KakaoButton();
+    button.setN("버튼명2");
+    button.setT("WL");
+    button.setU1("http://www.popbill.com");
+    button.setU2("http://test.popbill.com");
+    button.setTg("out"); // 아웃 링크, 디바이스 기본 브라우저 사용 (공백(기본값) : 카카오톡 인앱 브라우저 사용)
+    btns[1] = button;
 
-    // 예약일시 (작성형식 : yyyyMMddHHmmss)
+    // 전송 예약일시, 형태(yyyyMMddHHmmss)
+    // - 분단위 전송, 미입력 시 즉시 전송
     String sndDT = "";
 
-    // 광고여부
+    // 광고성 메시지 여부 ( true , false 중 택 1)
+    // └ true = 광고 , false = 일반
+    // - 미입력 시 기본값 false 처리
     Boolean adsYN = false;
 
     // 전송 이미지 파일
-    // 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
+    // - 이미지 파일 규격: 전송 포맷 – JPG 파일 (.jpg, .jpeg), 용량 – 최대 500 Kbyte, 크기 – 가로 500px
+    // 이상, 가로 기준으로 세로 0.5~1.3배 비율 가능
     File file = new File((application.getRealPath("/resources/kakaofmstest.jpg")));
 
     // 이미지 링크 URL
     // └ 수신자가 친구톡 상단 이미지 클릭시 호출되는 URL
-    // 미입력시 첨부된 이미지를 링크 기능 없이 표시
-    String imageURL = "http://www.linkhub.co.kr";
+    // - 미입력시 첨부된 이미지를 링크 기능 없이 표시
+    String imageURL = "http://test.popbill.com";
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

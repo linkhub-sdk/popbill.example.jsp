@@ -70,7 +70,9 @@
                     <li>invoicerCEOName (공급자 대표자 성명) : <%=taxinvoiceInfo.getInvoicerCEOName() %> </li>
                     <li>invoicerAddr (공급자 주소) : <%=taxinvoiceInfo.getInvoicerAddr() %> </li>
                     <li>invoicerBizType (공급자 업태) : <%=taxinvoiceInfo.getInvoicerBizType() %> </li>
+                    <li>invoicerBizClass (공급자 종목) : <%=taxinvoiceInfo.getInvoicerBizClass() %> </li>
                     <li>invoicerContactName (공급자 담당자 성명) : <%=taxinvoiceInfo.getInvoicerContactName() %> </li>
+                    <li>invoicerDeptName (공급자 담당자 부서명) : <%=taxinvoiceInfo.getInvoicerDeptName() %> </li>
                     <li>invoicerTEL (공급자 담당자 연락처) : <%=taxinvoiceInfo.getInvoicerTEL() %> </li>
                     <li>invoicerEmail (공급자 담당자 메일) : <%=taxinvoiceInfo.getInvoicerEmail() %> </li>
 
@@ -83,9 +85,14 @@
                     <li>invoiceeAddr (공급받는자 주소) : <%=taxinvoiceInfo.getInvoiceeAddr() %> </li>
                     <li>invoiceeBizType (공급받는자 업태) : <%=taxinvoiceInfo.getInvoiceeBizType() %> </li>
                     <li>invoiceeBizClass (공급받는자 종목) : <%=taxinvoiceInfo.getInvoiceeBizClass() %> </li>
-                    <li>invoiceeContactName1 (공급받는자 담당자 성명) : <%=taxinvoiceInfo.getInvoiceeContactName1() %> </li>
-                    <li>invoiceeTEL1 (공급받는자 담당자 연락처) : <%=taxinvoiceInfo.getInvoiceeTEL1() %> </li>
-                    <li>invoiceeEmail1 (공급받는자 담당자 메일) : <%=taxinvoiceInfo.getInvoiceeEmail1() %> </li>
+                    <li>invoiceeContactName1 (공급받는자 주 담당자 성명) : <%=taxinvoiceInfo.getInvoiceeContactName1() %> </li>
+                    <li>invoiceeDeptName1 (공급받는자 주 담당자 부서명) : <%=taxinvoiceInfo.getInvoiceeDeptName1() %> </li>
+                    <li>invoiceeTEL1 (공급받는자 주 담당자 연락처) : <%=taxinvoiceInfo.getInvoiceeTEL1() %> </li>
+                    <li>invoiceeEmail1 (공급받는자 주 담당자 메일) : <%=taxinvoiceInfo.getInvoiceeEmail1() %> </li>
+                    <li>invoiceeContactName2 (공급받는자 부 담당자 성명) : <%=taxinvoiceInfo.getInvoiceeContactName2() %> </li>
+                    <li>invoiceeDeptName2 (공급받는자 부 담당자 부서명) : <%=taxinvoiceInfo.getInvoiceeDeptName2() %> </li>
+                    <li>invoiceeTEL2 (공급받는자 부 담당자 연락처) : <%=taxinvoiceInfo.getInvoiceeTEL2() %> </li>
+                    <li>invoiceeEmail2 (공급받는자 부 담당자 메일) : <%=taxinvoiceInfo.getInvoiceeEmail2() %> </li>
 
                     <li>trusteeCorpNum (수탁자 사업자번호) : <%=taxinvoiceInfo.getTrusteeCorpNum() %> </li>
                     <li>trusteeMgtKey (수탁자 문서번호) : <%=taxinvoiceInfo.getTrusteeMgtKey() %> </li>

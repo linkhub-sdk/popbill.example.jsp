@@ -22,7 +22,7 @@
     String CorpNum = "1234567890";
 
     // 문서번호 목록 (최대 1000건)
-    String[] MgtKeyList = new String[] {"20250711-001","20250711-JSP001", "20250711-JSP002"};
+    String[] mgtKeyList = new String[] { "20250711-MVC003", "20250711-MVC004", "20250711-MVC005" };
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -31,7 +31,7 @@
 
     try {
 
-        cashbillInfos = cashbillService.getInfos(CorpNum, MgtKeyList, UserID);
+        cashbillInfos = cashbillService.getInfos(CorpNum, mgtKeyList, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
@@ -71,7 +71,7 @@
                         <li>stateCode (상태코드) : <%= cashbillInfo.getStateCode()%></li>
                         <li>stateDT (상태 변경일시) : <%= cashbillInfo.getStateDT()%></li>
                         <li>identityNum (식별번호) : <%= cashbillInfo.getIdentityNum()%></li>
-                        <li>itemName (상품명) : <%= cashbillInfo.getItemName()%></li>
+                        <li>itemName (주문상품명) : <%= cashbillInfo.getItemName()%></li>
                         <li>orderNumber (주문번호) : <%= cashbillInfo.getOrderNumber()%></li>
                         <li>email (구매자 이메일) : <%= cashbillInfo.getEmail()%></li>
                         <li>hp (구매자 휴대폰) : <%= cashbillInfo.getHp()%></li>

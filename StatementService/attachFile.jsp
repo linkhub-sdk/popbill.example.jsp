@@ -32,7 +32,7 @@
     String displayName = "첨부파일.jpg";
 
     // 파일 데이터
-    InputStream stream = new FileInputStream(application.getRealPath("/resources/test.jpg"));
+    InputStream fileData = new FileInputStream(application.getRealPath("/resources/test.jpg"));
 
     // 팝빌회원 아이디
     String UserID = "testkorea";
@@ -41,16 +41,16 @@
 
     try {
 
-        CheckResponse = statementService.attachFile(CorpNum, itemCode, mgtKey, displayName, stream, UserID);
+        CheckResponse = statementService.attachFile(CorpNum, itemCode, mgtKey, displayName, fileData, UserID);
 
     } catch (PopbillException pe) {
         // 적절한 오류 처리를 합니다. pe.getCode() 로 오류코드를 확인하고, pe.getMessage()로 관련 오류메시지를 확인합니다.
         // 예제에서는 exception.jsp 페이지에서 오류를 표시합니다.
         throw pe;
     } finally {
-        if ( stream != null ) {
+        if ( fileData != null ) {
             try {
-                stream.close();
+                fileData.close();
             } catch(IOException e) {}
         }
     }
