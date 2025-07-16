@@ -238,7 +238,7 @@
                 <ul>
                     <li>code (응답코드) : <%=CheckResponse.getCode()%></li>
                     <li>message (응답메시지) : <%=CheckResponse.getMessage()%></li>
-                    <li>팝빌 승인번호 (invoiceNum) : <%=CheckResponse.getInvoiceNum()%></li>
+                    <li>invoiceNum (팝빌 승인번호) : <%=CheckResponse.getInvoiceNum()%></li>
                 </ul>
             </fieldset>
         </div>
