@@ -300,9 +300,9 @@
     <fieldset class="fieldset1">
         <legend><%=request.getRequestURI()%></legend>
         <ul>
-            <li>응답코드 (code) : <%=issueResponse.getCode()%></li>
-                    <li>응답메시지 (message) : <%=issueResponse.getMessage()%></li>
-                    <li>국세청승인번호 (ntsConfirmNum) : <%=issueResponse.getNtsConfirmNum()%></li>
+            <li>code (응답코드) : <%=issueResponse.getCode()%></li>
+                    <li>message (응답메시지) : <%=issueResponse.getMessage()%></li>
+                    <li>ntsConfirmNum (국세청승인번호) : <%=issueResponse.getNtsConfirmNum()%></li>
         </ul>
     </fieldset>
 </div>

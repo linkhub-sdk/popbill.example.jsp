@@ -51,9 +51,9 @@
     <fieldset class="fieldset1">
         <legend><%=request.getRequestURI()%></legend>
         <ul>
-            <li>응답코드 (code) : <%=Response.getCode()%>
+            <li>code (응답코드) : <%=Response.getCode()%>
             </li>
-            <li>응답메시지 (message) : <%=Response.getMessage()%>
+            <li>message (응답메시지) : <%=Response.getMessage()%>
             </li>
         </ul>
     </fieldset>

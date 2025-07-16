@@ -236,8 +236,8 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
-                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
+                    <li>code (응답코드) : <%=CheckResponse.getCode()%></li>
+                    <li>message (응답메시지) : <%=CheckResponse.getMessage()%></li>
                     <li>팝빌 승인번호 (invoiceNum) : <%=CheckResponse.getInvoiceNum()%></li>
                 </ul>
             </fieldset>

@@ -104,10 +104,10 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답코드 (code) : <%=CheckResponse.getCode()%></li>
-                    <li>응답메시지 (message) : <%=CheckResponse.getMessage()%></li>
-                    <li>국세청승인번호 (confirmNum) : <%=CheckResponse.getConfirmNum()%></li>
-                    <li>거래일자 (tradeDate) : <%=CheckResponse.getTradeDate()%></li>
+                    <li>code (응답코드) : <%=CheckResponse.getCode()%></li>
+                    <li>message (응답메시지) : <%=CheckResponse.getMessage()%></li>
+                    <li>confirmNum (국세청승인번호) : <%=CheckResponse.getConfirmNum()%></li>
+                    <li>tradeDate (거래일자) : <%=CheckResponse.getTradeDate()%></li>
                 </ul>
             </fieldset>
         </div>

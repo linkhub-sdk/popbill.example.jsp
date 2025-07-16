@@ -47,8 +47,8 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답코드 (code) : <%=saveResponse.getCode()%></li>
-                    <li>응답메시지 (message) : <%=saveResponse.getMessage()%></li>
+                    <li>code (응답코드) : <%=saveResponse.getCode()%></li>
+                    <li>message (응답메시지) : <%=saveResponse.getMessage()%></li>
                 </ul>
             </fieldset>
         </div>

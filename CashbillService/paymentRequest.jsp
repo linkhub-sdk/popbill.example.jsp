@@ -62,8 +62,8 @@
             <fieldset class="fieldset1">
                 <legend><%=request.getRequestURI()%></legend>
                 <ul>
-                    <li>응답코드 (code) : <%=paymentResponse.getCode()%></li>
-                    <li>응답메시지 (message) : <%=paymentResponse.getMessage()%></li>
+                    <li>code (응답코드) : <%=paymentResponse.getCode()%></li>
+                    <li>message (응답메시지) : <%=paymentResponse.getMessage()%></li>
                     <li>정산코드 (settleCode) : <%=paymentResponse.getSettleCode()%></li>
                 </ul>
             </fieldset>
