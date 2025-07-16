@@ -25,7 +25,7 @@
     Cashbill cashbill = new Cashbill();
 
     // 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    cashbill.setMgtKey("20250711-MVC001");
+    cashbill.setMgtKey("20250711-JSP001");
 
     // 거래일시, 날짜(yyyyMMddHHmmss)
     // 당일, 전일만 가능

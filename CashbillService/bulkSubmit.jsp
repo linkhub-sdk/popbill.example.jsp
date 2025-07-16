@@ -24,7 +24,7 @@
 
     // 제출아이디
     // └ 최대 36자리 영문, 숫자, '-' 조합으로 구성
-    String SubmitID = "20250711-MVC-BULK";
+    String SubmitID = "20250711-JSP-BULK";
 
     // 현금영수증 목록, 최대 100건.
     List<Cashbill> cashbillList = new ArrayList<Cashbill>();

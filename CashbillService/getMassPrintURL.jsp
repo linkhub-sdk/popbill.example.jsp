@@ -23,7 +23,7 @@
     String CorpNum = "1234567890";
 
     // 인쇄할 현금영수증 문서번호, 최대 100건
-    String[] mgtKeyList = new String[] { "20250711-MVC001", "20250711-MVC003", "20250711-MVC004" };
+    String[] mgtKeyList = new String[] { "20250711-JSP001", "20250711-JSP003", "20250711-JSP004" };
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

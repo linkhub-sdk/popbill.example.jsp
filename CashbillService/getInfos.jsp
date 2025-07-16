@@ -22,7 +22,7 @@
     String CorpNum = "1234567890";
 
     // 문서번호 목록 (최대 1000건)
-    String[] mgtKeyList = new String[] { "20250711-MVC003", "20250711-MVC004", "20250711-MVC005" };
+    String[] mgtKeyList = new String[] { "20250711-JSP003", "20250711-JSP004", "20250711-JSP005" };
 
     // 팝빌회원 아이디
     String UserID = "testkorea";

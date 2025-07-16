@@ -26,7 +26,7 @@
     String CorpNum = "1234567890";
 
     // 파트너가 할당한 문서번호, 1~24자리 (숫자, 영문, '-', '_') 조합으로 사업자 별로 중복되지 않도록 구성
-    String mgtKey = "20250711-MVC005";
+    String mgtKey = "20250711-JSP005";
 
     // 당초 국세청승인번호 - 상태확인(getInfo API) 함수를 통해 confirmNum 값 기재
     String orgConfirmNum = "TB0000009";
