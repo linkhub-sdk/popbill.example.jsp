@@ -13,7 +13,7 @@
 <%
     /*
      * 홈택스에서 수집된 현금영수증 매입/매출 내역의 합계정보를 제공합니다.
-     * ※ 합계정보 - 수집 건수, 공급가액 합계, 세액 합계, 총계 (공급가액 합계+세액 합계)
+     * - 합계정보 - 수집 건수, 공급가액 합계, 부가세 합계, 봉사료 합계, 거래금액 합계 (공급가액 합계+부가세 합계+봉사료 합계)
      * - https://developers.popbill.com/reference/htcashbill/java/api/search#Summary
      */
 
@@ -57,9 +57,9 @@
                 <ul>
                     <li>count (수집 건수) : <%= result.getCount() %></li>
                     <li>supplyCostTotal (공급가액 합계) : <%= result.getSupplyCostTotal() %></li>
-                    <li>taxTotal (세액 합계) : <%= result.getTaxTotal() %></li>
+                    <li>taxTotal (부가세 합계) : <%= result.getTaxTotal() %></li>
                     <li>serviceFeeTotal (봉사료 합계) : <%= result.getServiceFeeTotal() %></li>
-                    <li>amountTotal (총계 (공급가액 합계+세액 합계)) : <%= result.getAmountTotal() %></li>
+                    <li>amountTotal (거래금액 합계 (공급가액 합계+부가세 합계+봉사료 합계)) : <%= result.getAmountTotal() %></li>
                 </ul>
             </fieldset>
         </div>
