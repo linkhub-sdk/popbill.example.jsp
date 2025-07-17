@@ -49,7 +49,7 @@
                 <li>plusFriendID (검색용 아이디) : <%=plusFriendIDs[i].getPlusFriendID()%></li>
                 <li>plusFriendName (채널명) : <%=plusFriendIDs[i].getPlusFriendName()%></li>
                 <li>regDT (등록일시) : <%=plusFriendIDs[i].getRegDT()%></li>
-                <li>state (등록상태) : <%=plusFriendIDs[i].getState()%></li>
+                <li>state (채널 상태) : <%=plusFriendIDs[i].getState()%></li>
                 <li>stateDT (채널 상태 일시) : <%=plusFriendIDs[i].getStateDT()%></li>
             </ul>
         </fieldset>
