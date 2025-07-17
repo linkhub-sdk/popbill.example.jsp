@@ -81,8 +81,8 @@
                         <li>orgTradeDate (당초 거래일자) : <%= cashbillInfo.getOrgTradeDate()%></li>
                         <li>ntssendDT (국세청 전송일시) : <%= cashbillInfo.getNtssendDT()%></li>
                         <li>ntsresultDT (국세청 처리결과 수신일시) : <%= cashbillInfo.getNtsresultDT()%></li>
-                        <li>ntsresultCode (결과코드) : <%= cashbillInfo.getNtsresultCode()%></li>
-                        <li>ntsresultMessage (결과메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
+                        <li>ntsresultCode (국세청 결과코드) : <%= cashbillInfo.getNtsresultCode()%></li>
+                        <li>ntsresultMessage (국세청 결과메시지) : <%= cashbillInfo.getNtsresultMessage()%></li>
                         <li>printYN (인쇄여부) : <%= cashbillInfo.isPrintYN()%></li>
                         <li>interOPYN (연동문서 여부) : <%= cashbillInfo.isInterOPYN()%></li>
                     </ul>
