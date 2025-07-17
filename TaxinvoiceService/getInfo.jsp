@@ -71,7 +71,7 @@
                         <li>ntsresult (국세청 전송결과) : <%= taxinvoiceInfo.getNTSResult() %></li>
                         <li>ntssendDT (국세청 전송일시) : <%= taxinvoiceInfo.getNTSSendDT() %></li>
                         <li>ntsresultDT (국세청 결과 수신일시) : <%= taxinvoiceInfo.getNTSResultDT() %></li>
-                        <li>ntssendErrCode (결과코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
+                        <li>ntssendErrCode (국세청 결과코드) : <%= taxinvoiceInfo.getNTSSendErrCode() %></li>
                         <li>modifyCode (수정세금계산서 발행시 입력한 사유코드) : <%= taxinvoiceInfo.getModifyCode() %></li>
                         <li>interOPYN (연동문서 여부) : <%= taxinvoiceInfo.getInterOPYN() %></li>
 
