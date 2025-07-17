@@ -62,10 +62,6 @@
                 <li>receiveNumType (수신번호 유형) : <%=faxResult.getReceiveNumType()%></li>
                 <li>receiveName (수신자명) : <%=faxResult.getReceiveName()%></li>
                 <li>title (팩스제목) : <%=faxResult.getTitle()%></li>
-                <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
-                <li>successPageCnt (성공 페이지수) : <%=faxResult.getSuccessPageCnt()%></li>
-                <li>failPageCnt (실패 페이지수) : <%=faxResult.getFailPageCnt()%></li>
-                <li>cancelPageCnt (취소 페이지수) : <%=faxResult.getCancelPageCnt()%></li>
                 <li>reserveDT (예약일시) : <%=faxResult.getReserveDT()%></li>
                 <li>receiptDT (접수일시) : <%=faxResult.getReceiptDT()%></li>
                 <li>sendDT (전송일시) : <%=faxResult.getSendDT()%></li>
@@ -86,6 +82,10 @@
                 <li>receiptNum (팩스 전송요청시 팝빌로부터 반환 받은 접수번호) : <%=faxResult.getReceiptNum()%></li>
                 <li>requestNum (팩스 전송요청시 파트너가 할당한 요청번호) : <%=faxResult.getRequestNum()%></li>
                 <li>interOPRefKey (파트너 지정키) : <%=faxResult.getInterOPRefKey()%></li>
+                <li>sendPageCnt (전체 페이지수) : <%=faxResult.getSendPageCnt()%></li>
+                <li>successPageCnt (성공 페이지수) : <%=faxResult.getSuccessPageCnt()%></li>
+                <li>failPageCnt (실패 페이지수) : <%=faxResult.getFailPageCnt()%></li>
+                <li>cancelPageCnt (취소 페이지수) : <%=faxResult.getCancelPageCnt()%></li>
                 <li>chargePageCnt (과금 페이지수) : <%=faxResult.getChargePageCnt()%></li>
                 <li>refundPageCnt (환불 페이지수) : <%=faxResult.getRefundPageCnt()%></li>
                 <li>tiffFileSize (변환파일용량 (단위:byte) ) : <%=faxResult.getTiffFileSize()%></li>
