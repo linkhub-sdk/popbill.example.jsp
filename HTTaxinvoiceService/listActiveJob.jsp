@@ -56,7 +56,7 @@
                     <li>errorReason (오류메시지) : <%=jobList[i].getErrorReason() %> </li>
                     <li>jobStartDT (작업 시작일시) : <%=jobList[i].getJobStartDT() %> </li>
                     <li>jobEndDT (작업 종료일시) : <%=jobList[i].getJobEndDT() %> </li>
-                    <li>collectCount (수집개수) : <%=jobList[i].getCollectCount() %> </li>
+                    <li>collectCount (수집건수) : <%=jobList[i].getCollectCount() %> </li>
                     <li>regDT (수집 요청일시) : <%=jobList[i].getRegDT() %> </li>
                 </ul>
             </fieldset>
