@@ -107,7 +107,7 @@
                     <li>altContent (대체문자 내용) : <%=msgs.get(j).getAltContent()%></li>
                     <li>altContentType (대체문자 전송타입) : <%=msgs.get(j).getAltContentType()%></li>
                     <li>altSendDT (대체문자 전송일시) : <%=msgs.get(j).getAltSendDT()%></li>
-                    <li>altResult (통신사 결과코드) : <%=msgs.get(j).getAltResult()%></li>
+                    <li>altResult (대체문자 통신사 결과코드) : <%=msgs.get(j).getAltResult()%></li>
                     <li>altResultDT (대체문자 전송결과 수신일시) : <%=msgs.get(j).getAltResultDT()%></li>
                     <li>receiptNum (접수번호) : <%=msgs.get(j).getReceiptNum()%></li>
                     <li>requestNum (요청번호) : <%=msgs.get(j).getRequestNum()%></li>
