@@ -3,7 +3,7 @@
 * 팝빌 홈택스 전자세금계산서 API Java SDK JSP Example
 * JSP 연동 튜토리얼 안내 : https://developers.popbill.com/guide/httaxinvoice/java/getting-started/tutorial?fwn=jsp
 *
-* 업데이트 일자 : 2025-07-14
+* 업데이트 일자 : 2025-08-28
 * 연동기술지원 연락처 : 1600-9854
 * 연동기술지원 이메일 : code@linkhubcorp.com
 *         
